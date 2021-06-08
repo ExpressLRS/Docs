@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+  docs:
+    build:
+      context: .
+    dns_search: ''
+    networks:
+      - net
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/docs:cached
+
+networks:
+  net:
+    driver: bridge
