@@ -62,8 +62,10 @@ Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU
 ```
 #-DHYBRID_SWITCHES_8
 ```
-Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in [Switch Modes](https://github.com/ExpressLRS/ExpressLRS/wiki/Switch-Modes), but
+Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in the <!--          href="{{ page.next_page.url | url }}"--> <a href="/software/switch-config/">Switch Modes</a> page.
+
   1. If only two position switches are needed, and they must be updated as fast as possible: Normal Mode
+
   2. Almost everyone: Hybrid Mode (Put ARM on AUX1)
 
 ## Output Power Limit

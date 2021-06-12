@@ -109,8 +109,11 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Quick Start:
+      - Getting Started: quick-start/getting-started.md
       - Installing Configurator: quick-start/installing-configurator.md
-      - User Defines: quick-start/user-defines.md
+      - Selecting Target: quick-start/your-target.md
+      - Installing Bootloader: quick-start/installing-bootloader.md
+      - Setting Defines: quick-start/user-defines.md
       - Flashing ExpressLRS: quick-start/flashing-elrs.md
   - Software:
       - Switch Configs: software/switch-config.md

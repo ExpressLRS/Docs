@@ -1,12 +1,8 @@
 ---
 template: main.html
----s
+---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
-
-## Void of Warranty 
-
-👾👾👾 You are __voiding any warranty__ on a product that did not originally include ExpressLRS firmware. This is **at your own risk**, but it's absolutely worth the work. 
 
 ## Non-ELRS Hardware
 ### FrSky TXes  

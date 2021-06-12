@@ -4,16 +4,15 @@ template: main.html
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-There are two ways to build & flash ExpressLRS. The recommended way is to use ExpressLRS Configurator.  
-For advanced users who want to modify the code, you can setup the development toolchain.
+There are two ways to build & flash ExpressLRS. The recommended way is to use ExpressLRS Configurator. For advanced users who want to modify the code, you can setup the development toolchain.
 
 ## Configurator Setup
 
 [Download](https://github.com/ExpressLRS/ExpressLRS-Configurator/releases) the latest ExpressLRS Configurator application for your platform, following the instructions written by [jurgelenas](https://github.com/jurgelenas/).
 
-Go to the [supported hardware](https://github.com/ExpressLRS/ExpressLRS/wiki/Supported-Hardware) page to find the correct target for your hardware.
-
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Configurator/master/docs/readme/screenshots/main_screen.jpg" width="70%" />
+
+Go to the [supported hardware](https://github.com/ExpressLRS/ExpressLRS/wiki/Supported-Hardware) page to find the correct target for your hardware.
 
 ## Toolchain Setup
 
@@ -49,11 +48,6 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 * Then, enter ExpressLRS Repo URL -> `https://github.com/AlessandroAU/ExpressLRS.git` 💻 
 * Choose a folder for ExpressLRS. 📂 
 
-
-### PlatformIO Building
-
-Once you had the time of your life setting up your toolchain 🧰 you are **ready** to Flash ⚡ ExpressLRS to supported [hardware](https://github.com/AlessandroAU/ExpressLRS/wiki/Supported-Off-The-Shelf-Hardware).
-
 ### Selecting the Latest Release
 Before we can do any building, you need to select a release build of ELRS. For example, release [0.1.0-RC1](https://github.com/AlessandroAU/ExpressLRS/releases/tag/0.1.0-RC1). In Visual Studio Code select that tag. The location of the selector is shown below. 🖱️ 
 
@@ -61,6 +55,10 @@ Before we can do any building, you need to select a release build of ELRS. For e
 <img src="https://cdn.discordapp.com/attachments/738450139693449258/796510905605029918/Screen_Shot_2021-01-06_at_2.49.52_PM.png" width=38.5%>
 
 Click the selector, and then type in the name of the tag, in this case `0.1.0-RC1`. 
+
+### PlatformIO Building
+
+Once you had the time of your life setting up your toolchain 🧰 you are **ready** to Flash ⚡ ExpressLRS to supported [hardware](https://github.com/AlessandroAU/ExpressLRS/wiki/Supported-Off-The-Shelf-Hardware).
 
 ### Building Targets using PlatformIO
 
