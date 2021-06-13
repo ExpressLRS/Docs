@@ -32,6 +32,7 @@ Next, flash the `.frk` via the `S.port` flashing option in `OpenTX`. :zap: (It h
   * Flash the frk file by holding OK and selecting "Flash external module"
 
 Unplug the receiver, and your bootloader is flashed. **Continue to the next page to set up your user defines.**
+<<<<<<< HEAD
 
 ### R9Slim
 This RX requires an StLink v2 to be flashed. 
@@ -39,6 +40,8 @@ This RX requires an StLink v2 to be flashed.
 Wire up the RX to the STLink using `+ = 3v3`, `- = GND`, `C = CLK` and `D = DIO`. 
 
  Then, **Continue to the next page to set up your user defines.**
+=======
+>>>>>>> 0852442 (QuickStart Initial Tweaks)
 
 
 ## FrSky Transmitters
