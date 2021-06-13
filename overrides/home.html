@@ -2,7 +2,7 @@
 
 <!-- Render hero under tabs -->
 {% block tabs %}
-<!--{{ super() }}-->
+{{ super() }}
 
 <!-- Additional styles for landing page -->
 <style>
@@ -66,16 +66,16 @@
         <p>{{ config.site_description }}</p>
         <!--          href="{{ page.next_page.url | url }}"-->
         <a
-          href="https://github.com/ExpressLRS/ExpressLRS/wiki"
+          href="quick-start/installing-configurator/"
           title="{{ page.next_page.title | e }}"
           class="md-button md-button--primary"
           target="_blank"
         >
-          Quick start
+          Quick Start
         </a>
         <a
           href="https://github.com/ExpressLRS/ExpressLRS-Configurator/releases/latest"
-          title="Material for MkDocs Insiders"
+          title="Download ExpressLRS Configurator"
           class="md-button"
           target="_blank"
         >
