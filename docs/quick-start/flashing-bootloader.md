@@ -9,22 +9,28 @@ For hardware that requires STLink v2 flashing, this guide simply explains how to
 ## FrSky Recievers
 This guide applies for the R9mm, R9mini, R9mx, R9Slim, R9Slim+, R9Slim+ OTA, if you have a `OpenTX` transmitter with a `SmartPort` output, you can flash your RXes bootloader.
 
-Download the bootloader `.frk` file for your respective reciever. The files are as follows:
+Download the bootloader `.frk` file for your respective receiver. The files are as follows:
 
-- R9mm/mini: [`r9mm_elrs_bl.frk`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/bootloader/r9mm_elrs_bl.frk?raw=true) or [`r9mm_no_btn_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/raw/master/src/bootloader/r9mm_no_btn_elrs_bl.frk)
-- R9mx: [`r9mx_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9mx_elrs_bl.frk?raw=true)
-- R9Slim+ (ACCST): [`r9slim_plus_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9slim_plus_elrs_bl.frk?raw=true)
-- R9Slim+ (ACCESS/OTA): [`r9slim_plus_ota_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9slim_plus_ota_elrs_bl.frk?raw=true)
+- R9mm/mini: [`r9mm_elrs_bl.frk`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/bootloader/r9mm_elrs_bl.frk?raw=true) (14kb) or [`r9mm_no_btn_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/raw/master/src/bootloader/r9mm_no_btn_elrs_bl.frk?raw=true) (14kb) (no_btn bootloader is only used if your bind/boot button on the receiver is faulty or has gone bad, and is indicated by both LEDs (red and green) being constantly illuminated.)
+- R9mx: [`r9mx_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9mx_elrs_bl.frk?raw=true) (20kb)
+- R9Slim+ (ACCST): [`r9slim_plus_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9slim_plus_elrs_bl.frk?raw=true) (14kb)
+- R9Slim+ (ACCESS/OTA): [`r9slim_plus_ota_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9slim_plus_ota_elrs_bl.frk?raw=true) (18kb)
 
-Copy the relevant file to your handset's SD card 
+Copy the relevant file to your handset's SD card (You can put it inside `/FIRMWARE` folder for easy access).
 
-Wire the reciever to your radio's smartport, as shown (r9mm/r9mx/r9slim):
+Wire the receiver to your radio's Smart Port, as shown:
 
- <img src = "https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/r9mm-to-tx.jpeg" width = "20%"> <img src = "https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/r9mx-to-tx.png" width = "20%"> <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/wiki-from-discord/r9slim-to-tx.jpeg" width = "20%">
+<img src="../../assets/images/Bootloader-Flashing.jpg" width="100%" />
 
- Next, flash the `.frk` via the `S.port` flashing option in `OpenTX` :zap:
+<br />
 
- Unplug the reciever, and your bootloader is flashed. **Continue to the next page to set up your user defines.**
+Next, flash the `.frk` via the `S.port` flashing option in `OpenTX`. :zap: (It helps if the External RF module is set to `PPM` mode.) 
+
+  * Navigate in OpenTX to the TOOLS menu (hold SYS button)
+  * Page to the SD-HC CARD page, then the `FIRMWARE` folder
+  * Flash the frk file by holding OK and selecting "Flash external module"
+
+Unplug the receiver, and your bootloader is flashed. **Continue to the next page to set up your user defines.**
 
 
 ## FrSky Transmitters
@@ -38,14 +44,15 @@ To do this you need a new version of OpenTX - you can either use the ELRS fork o
 
 - Currently, the most stable version of OpenTX to use with ExpressLRS is 2.3.10 ExpressLRS version found here: [ExpressLRS OpenTX 2.3.10](https://github.com/ExpressLRS/ExpressLRS/tree/250-500-race-modes/OpenTX)
 - If your radio isn't supported by the 2.3.10 ExpressLRS Binaries, your next best option at the moment is the OpenTX Nightly. Using the [OpenTX Nightly Companion Software](https://www.open-tx.org/2019/05/17/2.3-nightlies), download the .bin file
-- Flash the bin to your radio using normal OpenTX updating protocols (remember to back everything up!)
 
-Then, with your new version of OpenTX, copy [`r9m_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9m_elrs_bl.frk?raw=true) onto the SD card of your radio, in the `/FIRMWARE/` folder.
+Flash the bin to your radio using normal OpenTX updating protocols (remember to back everything up!)
 
-Flash `r9m_elrs_bl.frk` to your TX module:
+Then, with your new version of OpenTX, copy [`r9m_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9m_elrs_bl.frk?raw=true) onto the SD card of your radio, in the `/FIRMWARE` folder.
 
-  * Navigate in OpenTX to the TOOLS menu (hold MENU)
-  * Page to the SD-HC CARD page, then the FIRMWARE folder
+Flash `r9m_elrs_bl.frk` (14kb) to your TX module:
+
+  * Navigate in OpenTX to the TOOLS menu (hold SYS button)
+  * Page to the SD-HC CARD page, then the `FIRMWARE` folder
   * Flash the frk file by holding OK and selecting "Flash external module"
 
 **Done! Continue to the next page to set up your user defines.**

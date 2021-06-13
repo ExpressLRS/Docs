@@ -7,7 +7,7 @@ template: main.html
 With more features being added consistently, [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/user_defines.txt) has gotten complicated 🤷‍♂️. So we will break it down! 🔨 
 
 - To enable/disable anything in the user defines, simply add or remove a `#` in front of anything that has a `-D`.
-- In the configurator, use the checkbox for the given define.
+- In the configurator, use the checkbox for the given define. Info for each option is given via the `?` icon. Just put your pointer over the icon and the info will pop up.
 - We recommend reading this page **in its entirety** before first flashing ⚡ to have a better sense of the options.
 
 ## Binding Phrase
@@ -25,7 +25,7 @@ This step is simple but **important**. Both the TX and RX NEED to have the same 
 #-DRegulatory_Domain_FCC_915
 #-DRegulatory_Domain_ISM_2400
 ```
-This is a relatively simple one - enable whatever regulatory domain you are in. `EU 868` 🇪🇺  is compliant to the frequency but **is not** LBT compliant 👂 . Every other band is near compliant 👿  but may not be fully compliant for your regulatory domain. 
+This is a relatively simple one - enable whatever regulatory domain you are in. `EU 868` is compliant to the frequency but **is not** LBT compliant 👂 . Every other band is near compliant 👿  but may not be fully compliant for your regulatory domain. 
 
 ## Telemetry
 
@@ -41,9 +41,7 @@ Enable advanced telemetry support. This option must be enabled on both **TX** an
 * FLIGHT_MODE
 * MSP_RESP
 
-**Note #1**: Increase the telemetry rate with the
-ExpressLRS lua script. Increase the rate until the sensor lost
-warnings go away. It is normal to set it up to 1:16 with 200 Hz
+**Note #1**: Increase the telemetry rate with the ExpressLRS lua script. Increase the rate until the sensor lost warnings go away. It is normal to set it up to 1:16 with 200 Hz
 refresh rate.
 
 **Note #2**: It must be enabled together with **HYBRID_SWITCHES_8**.
@@ -61,7 +59,7 @@ Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU
 ```
 #-DHYBRID_SWITCHES_8
 ```
-Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in the <!--          href="{{ page.next_page.url | url }}"--> <a href="/software/switch-config/">Switch Modes</a> page.
+Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in the <a href="/software/switch-config/">Switch Modes</a> page.
 
   1. If only two position switches are needed, and they must be updated as fast as possible: Normal Mode
 

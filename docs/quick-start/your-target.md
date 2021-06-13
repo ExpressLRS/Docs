@@ -15,11 +15,11 @@ So what are each of these?
 - `DFU`: can be used to flash the SIYI FM30.
 - `STLink`: generally deprecated, used to fully flash hardware that did not originally support ELRS, requires soldering.
 
- If your hardware is officially ELRS hardware (HappyModel, NamimnoRC, NeutronRC, etc), simply select the target in the dropdown as shown below and skip to the <!--          href="{{ page.next_page.url | url }}"--> <a href="/quick-start/user-defines/">user defines page</a>. If the hardware is not (R9, SIYI, GHOST, DIY), select the target in the dropdown and then go to the <!--          href="{{ page.next_page.url | url }}"--> <a href="/quick-start/installing-bootloader/">bootloader installation page</a>. If the hardware is DIY, skip to !--          href="{{ page.next_page.url | url }}"--> <a href="/quick-start/user-defines/">user defines page</a> as well.
+ If your hardware is officially ELRS hardware (HappyModel, NamimnoRC, NeutronRC, etc), simply select the target in the dropdown as shown below and skip to the <a href="/quick-start/user-defines/">user defines page</a>. If the hardware is not (R9, SIYI, GHOST, DIY), select the target in the dropdown and then go to the <a href="/quick-start/flashing-bootloader/">bootloader installation page</a>. If the hardware is DIY, skip to <a href="/quick-start/user-defines/">user defines page</a> as well.
 
 ## ELRS Hardware
 ### Happymodel Hardware
-- Happymodel EP(1/2) RX: `HappyModel_EP_2400_RX_via_XYZ`
+- Happymodel EP RXs: `HappyModel_EP_2400_RX_via_XYZ`
 - Happymodel PP RX: `HappyModel_PP_2400_RX_via_XYZ`
 - Happymodel ES24TX: `HappyModel_ES24TX_2400_TX_via_XYZ`
 - Happymodel ES915TX: `HappyModel_ES915TX_via_XYZ`
@@ -33,7 +33,7 @@ So what are each of these?
 - Namimno Flash ESP RX: `NamimnoRC_FLASH_2400_ESP_RX_via_XYZ`
 - Namimno Flash RX: `NamimnoRC_FLASH_2400_RX_via_XYZ`
 
-## Non-ELRS Hardware
+## Non-ELRS-specific Hardware
 ### FrSky R9 Hardware
 - FrSky R9M: `FrSky_TX_R9M_via_XYZ`
 - FrSky R9M Lite: `FrSky_TX_R9M_LITE_via_XYZ`
