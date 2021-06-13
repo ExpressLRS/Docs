@@ -116,8 +116,14 @@ nav:
       - Flashing Bootloader: quick-start/flashing-bootloader.md
       - Setting User Defines: quick-start/user-defines.md
       - Flashing ExpressLRS: quick-start/flashing-elrs.md
+      - Configuring OpenTX: quick-start/otx-cfg.md
+      - Configuring Betaflight: quick-start/bf-cfg.md
+      - Binding ExpressLRS: quick-start/binding.md
   - Software:
       - Switch Configs: software/switch-config.md
+  - Info:
+      - Signal Health: info/signal-health.md
+      - Telemetry Bandwith: info/telem-bandwidth.md
   - FAQ: faq.md
 
 # Google Analytics

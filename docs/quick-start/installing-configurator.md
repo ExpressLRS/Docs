@@ -14,7 +14,10 @@ There are two ways to build & flash ExpressLRS. The recommended way is to use Ex
 
 Go to the [supported hardware](https://github.com/ExpressLRS/ExpressLRS/wiki/Supported-Hardware) page to find the correct target for your hardware.
 
+
 ## Toolchain Setup
+
+**Note:** The following section is intended for advanced users who intend to dabble with the source code directly. If you're not familiar with Programming and Development Environments, **STOP** and proceed to the next step.
 
 `ExpressLRS` is written in C++ using the Arduino framework. 
 
