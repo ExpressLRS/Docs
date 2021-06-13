@@ -49,6 +49,7 @@ plugins:
   #  - redirects:
   - minify:
       minify_html: true
+      
 
 extra_css:
   - assets/stylesheets/main.css
@@ -99,7 +100,7 @@ markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
-          class: mermaid
+          class: mermaid-experimental
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.tasklist:
@@ -111,12 +112,13 @@ nav:
   - Quick Start:
       - Getting Started: quick-start/getting-started.md
       - Installing Configurator: quick-start/installing-configurator.md
-      - Selecting Target: quick-start/your-target.md
-      - Installing Bootloader: quick-start/installing-bootloader.md
-      - Setting Defines: quick-start/user-defines.md
+      - Selecting Your Target: quick-start/your-target.md
+      - Flashing Bootloader: quick-start/flashing-bootloader.md
+      - Setting User Defines: quick-start/user-defines.md
       - Flashing ExpressLRS: quick-start/flashing-elrs.md
   - Software:
       - Switch Configs: software/switch-config.md
+  - FAQ: faq.md
 
 # Google Analytics
 google_analytics:

@@ -6,7 +6,6 @@ template: main.html
 
 With more features being added consistently, [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/user_defines.txt) has gotten complicated 🤷‍♂️. So we will break it down! 🔨 
 
-## Defines 101
 - To enable/disable anything in the user defines, simply add or remove a `#` in front of anything that has a `-D`.
 - In the configurator, use the checkbox for the given define.
 - We recommend reading this page **in its entirety** before first flashing ⚡ to have a better sense of the options.
@@ -149,6 +148,4 @@ This enables communication with the **[ESP Backpack](https://github.com/Alessand
 ```
 This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have to give up 25Hz mode to add 500Hz mode. It requires [OpenTX `2.3` Nightly builds](https://www.open-tx.org/downloads) starting from the N473 build or above. It also will be supported in OpenTX 2.4 and above. In order to install it, you will have to use OpenTX companion application.
 
-## Obsolete user_defines
-
-See [Obsolete user_defines](Obsolete-user_defines)
+**Done! It's time to flash the firmware on your transmitter**
