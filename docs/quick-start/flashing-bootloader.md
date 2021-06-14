@@ -31,7 +31,11 @@ Next, flash the `.frk` via the `S.port` flashing option in `OpenTX`. :zap: (It h
   * Page to the SD-HC CARD page, then the `FIRMWARE` folder
   * Flash the frk file by holding OK and selecting "Flash external module"
 
-Unplug the receiver, and your bootloader is flashed. **Continue to the next page to set up your user defines.**
+Unplug the receiver, and your bootloader is flashed. Now, wire the RX to your flight controller as shown below:
+<img src="../../assets/images/FC-Wiring.jpg" width ="100%"/>
+
+
+**Continue to the next page to set up your user defines.**
 
 ### R9Slim
 This RX requires an StLink v2 to be flashed. 
