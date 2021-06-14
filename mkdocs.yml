@@ -13,7 +13,7 @@ repo_url: https://github.com/ExpressLRS/ExpressLRS
 edit_uri: "https://github.com/ExpressLRS/Website/tree/master/docs"
 
 # Copyright
-copyright: Copyright &copy; 2021 All rights reserved Team ExpressLRS
+copyright: Copyright &copy; 2021 Team ExpressLRS
 
 # Configuration
 theme:
