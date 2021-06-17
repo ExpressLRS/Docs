@@ -6,7 +6,7 @@ template: main.html
 
 For hardware that requires STLink v2 flashing, this guide simply explains how to wire the given piece of hardware to the StLink before that flashing.
 
-## FrSky Recievers
+## FrSky Receivers
 ### R9mm/mini, R9mx, R9Slim+
 This guide applies for the R9mm, R9mini, R9mx, R9Slim+, R9Slim+ OTA, if you have a `OpenTX` transmitter with a `SmartPort` output, you can flash your RXes bootloader.
 
@@ -21,7 +21,7 @@ Copy the relevant file to your handset's SD card (You can put it inside `/FIRMWA
 
 Wire the receiver to your radio's Smart Port, as shown:
 
-<img src="../../assets/images/Bootloader-Flashing.jpg" width="100%" />
+![BL Flashing](/assets/images/Bootloader-Flashing.jpg)
 
 <br />
 
@@ -32,8 +32,8 @@ Next, flash the `.frk` via the `S.port` flashing option in `OpenTX`. :zap: (It h
   * Flash the frk file by holding OK and selecting "Flash external module"
 
 Unplug the receiver, and your bootloader is flashed. Now, wire the RX to your flight controller as shown below:
-<img src="../../assets/images/FC-Wiring.jpg" width ="100%"/>
-
+![FC Wiring](/assets/images/FC-Wiring.jpg" width ="100%")
+*Note: This will be the same wiring you'll use for flying and the next firmware updates (via Passthrough). Forget the factory wiring guide!*
 
 **Continue to the next page to set up your user defines.**
 
@@ -55,7 +55,7 @@ Here is a quick 2 minute demo if you would rather watch a video than read the st
 To do this you need a new version of OpenTX - you can either use the ELRS fork or a nightly build: <a href="/faq/#why-do-i-need-to-update-opentx">FAQ: Why do I need a custom version of OpenTX?</a>
 
 - Currently, the most stable version of OpenTX to use with ExpressLRS is 2.3.10 ExpressLRS version found here: [ExpressLRS OpenTX 2.3.10](https://github.com/ExpressLRS/ExpressLRS/tree/250-500-race-modes/OpenTX)
-- If your radio isn't supported by the 2.3.10 ExpressLRS Binaries, your next best option at the moment is the OpenTX Nightly. Using the [OpenTX Nightly Companion Software](https://www.open-tx.org/2019/05/17/2.3-nightlies), download the .bin file
+- If your radio isn't supported by the 2.3.10 ExpressLRS Binaries, your next best option at the moment is the OpenTX 2.3.12. Using the [OpenTX Companion Software](https://www.open-tx.org/2021/06/14/opentx-2.3.12), download the .bin file for your Radio.
 
 Flash the bin to your radio using normal OpenTX updating protocols (remember to back everything up!)
 

@@ -6,8 +6,7 @@ template: main.html
 
 Now that you've installed the bootloader on your non-ELRS hardware and have set up your user defines it's time to flash your hardware. Your configurator window should look something like this:
 
-<img src = "https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/wiki/configurator%20setup.png" width="75%">
-
+![Configurator](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/wiki/configurator%20setup.png)
 
 ## Non-ELRS Hardware
 ### FrSky TXes  
