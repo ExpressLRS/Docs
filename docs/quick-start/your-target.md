@@ -15,7 +15,7 @@ So what are each of these?
 - `DFU`: can be used to flash the SIYI FM30.
 - `STLink`: generally deprecated, used to fully flash hardware that did not originally support ELRS, requires soldering.
 
- If your hardware is officially ELRS hardware (HappyModel, NamimnoRC, NeutronRC, etc), simply select the target in the dropdown as shown below and skip to the <a href="/quick-start/user-defines/">user defines page</a>. If the hardware is not (R9, SIYI, GHOST, DIY), select the target in the dropdown and then go to the <a href="/quick-start/flashing-bootloader/">bootloader installation page</a>. If the hardware is DIY, skip to <a href="/quick-start/user-defines/">user defines page</a> as well.
+ If your hardware is officially ELRS hardware (HappyModel, NamimnoRC, NeutronRC, etc), simply select the target in the dropdown as shown below and skip to the <a href="/quick-start/firmware-options/">user defines page</a>. If the hardware is not (R9, SIYI, GHOST, DIY), select the target in the dropdown and then go to the <a href="/quick-start/flashing-bootloader/">bootloader installation page</a>. If the hardware is DIY, skip to <a href="/quick-start/firmware-options/">user defines page</a> as well.
 
 ## ELRS Hardware
 ### Happymodel Hardware

@@ -5,7 +5,7 @@ template: main.html
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
 ## OpenTX Version
-We recommend [OpenTX-2.3.12 nightlies](https://www.open-tx.org/2019/05/17/2.3-nightlies), which allow for use of `.elrs` files and contain `crsfshot`, which allows for 500Hz+ rates.
+We recommend [OpenTX-2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12), which allow for use of `.elrs` files and contain `crsfshot`, which allows for 500Hz+ rates.
 
 ## CRSF Protocol
 
