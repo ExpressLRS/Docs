@@ -114,7 +114,6 @@ nav:
       - Installing Configurator: quick-start/installing-configurator.md
       - Selecting Your Target: quick-start/your-target.md
       - Flashing Bootloader: quick-start/flashing-bootloader.md
-      - Setting User Defines: quick-start/user-defines.md
       - Setting Firmware Options: quick-start/firmware-options.md
       - Flashing ExpressLRS: quick-start/flashing-elrs.md
       - Configuring OpenTX: quick-start/otx-cfg.md

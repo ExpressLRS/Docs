@@ -4,9 +4,9 @@ template: main.html
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-This page aims to explain which options to set on the ExpressLRS Configurator for a particular Hardware. Which Options should you enable for your purposes or which options should be leave at default.
+This page aims to explain which options to set on the ExpressLRS Configurator for a particular Hardware. It helps guide you through which options you should enable for your purposes or which options should be leave at default.
 
-Some of these options are present on both the Transmitter Module Target and Receiver Target. `team2400` and `team900` also shares a few options and some options are unique to that frequency band.
+Some of these options are present on both the Tx and Rx Target. `team2400` and `team900` also shares a few options and some options are unique to that frequency band. Shown below are common options available on `team2400` and `team900` TXes respectively.
 
 ![2400 TX Options](/assets/images/ConfigurationOptions2400tx.jpg)
 
@@ -106,7 +106,7 @@ UART_INVERTED
 ```
 This **only works** with ESP based TXes (will not work with modules without built-in inversion/uninversion), but enables compatibility with radios that output inverted CRSF, such as the FrSky QX7, TBS Tango 2, RadioMaster TX16S. You want to keep this enabled in most of the cases. If your radio is T8SG V2 or you use Deviation firmware turn this setting off.
 
-## Receiver Options ##
+## Receiver Only Options ##
 
 ![2400 RX Options](/assets/images/ConfigurationOptions2400rx.jpg)
 
@@ -114,7 +114,7 @@ This **only works** with ESP based TXes (will not work with modules without buil
 
 *Note: Configuration of the Receivers should match the configuration of the Transmitter Module for Sync/Binding to happen between devices.*
 
-The explanation of the Options for the Transmitter Modules also apply for the Receivers.
+The explanation of the options for the Transmitter Modules also apply for the Receivers.
 
 But here's a few Receiver-specific Options you can configure:
 
