@@ -21,7 +21,7 @@ Copy the relevant file to your handset's SD card (You can put it inside `/FIRMWA
 
 Wire the receiver to your radio's Smart Port, as shown:
 
-![BL Flashing](/assets/images/Bootloader-Flashing.jpg)
+![BL Flashing](/Website/assets/images/Bootloader-Flashing.jpg)
 
 <br />
 
@@ -32,7 +32,7 @@ Next, flash the `.frk` via the `S.port` flashing option in `OpenTX`. :zap: (It h
   * Flash the frk file by holding OK and selecting "Flash external module"
 
 Unplug the receiver, and your bootloader is flashed. Now, wire the RX to your flight controller as shown below:
-![FC Wiring](/assets/images/FC-Wiring.jpg" width ="100%")
+![FC Wiring](/Website/assets/images/FC-Wiring.jpg" width ="100%")
 *Note: This will be the same wiring you'll use for flying and the next firmware updates (via Passthrough). Forget the factory wiring guide!*
 
 **Continue to the next page to set up your user defines.**
