@@ -1,5 +1,5 @@
 site_name: ExpressLRS
-site_url: https://expresslrs.github.io/Website/
+site_url: https://expresslrs.github.io/Docs/
 #site_url: https://www.expresslrs.org/
 site_author: ExpressLRS
 site_description: >-
@@ -10,7 +10,7 @@ site_description: >-
 # Repository
 repo_name: ExpressLRS/ExpressLRS
 repo_url: https://github.com/ExpressLRS/ExpressLRS
-edit_uri: "https://github.com/ExpressLRS/Website/tree/master/docs"
+edit_uri: "https://github.com/ExpressLRS/Docs/tree/master/docs"
 
 # Copyright
 copyright: Copyright &copy; 2021 Team ExpressLRS
