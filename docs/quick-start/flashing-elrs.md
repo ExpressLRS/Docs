@@ -53,7 +53,7 @@ Connect your STLink to the receiver as shown in the wiring guides below. You'll 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/Doc/r9mm_mini_pinout.png" width="60%" alt="r9mm/r9mini STLink connection" />
 
 <small>r9mx</small>
-<img src="/Website/assets/images/r9mxstlink.png" alt="r9mx STLink connection" />
+<img src="../assets/images/r9mxstlink.png" alt="r9mx STLink connection" />
 
 Using the correct target specific for your receiver, hit "Build & Flash".
 
