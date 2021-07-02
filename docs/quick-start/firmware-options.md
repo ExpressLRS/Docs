@@ -110,6 +110,8 @@ This **only works** with ESP based TXes (will not work with modules without buil
 
 ![2400 RX Options](../assets/images/ConfigurationOptions2400rx.jpg)
 
+TESTING
+
 ![900 RX Options](/assets/images/ConfigurationOptions900rx.jpg)
 
 *Note: Configuration of the Receivers should match the configuration of the Transmitter Module for Sync/Binding to happen between devices.*
