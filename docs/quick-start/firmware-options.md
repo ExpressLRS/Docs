@@ -108,7 +108,7 @@ This **only works** with ESP based TXes (will not work with modules without buil
 
 ## Receiver Only Options ##
 
-![2400 RX Options](/assets/images/ConfigurationOptions2400rx.jpg)
+![2400 RX Options](../assets/images/ConfigurationOptions2400rx.jpg)
 
 ![900 RX Options](/assets/images/ConfigurationOptions900rx.jpg)
 
