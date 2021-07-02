@@ -18,7 +18,7 @@ When your radio does not have crsfshot working, this often shows in your Express
 The Lua script top bar will show inconsistent numbers like 0:63 or is stuck at 0:250 at every packet rate rate you select.
 **The Lua script top bar should always show a stable 0:[user selected packet rate]**
 For example: 0:50, 0:150, 0:250, 0:500, ...
-When that is the case your radio has crsfshot working and you're good to go. Click [here](/quick-start/otx-cfg) to read more on OpenTX.
+When that is the case your radio has crsfshot working and you're good to go. Click [here](./quick-start/otx-cfg) to read more on OpenTX.
 
 ## What's the difference between the different Happymodel 2.4GHz receivers (PP, EP1, EP2)?
 
@@ -31,7 +31,7 @@ Any Receiver and TX Module from the same Band (2.4GHz or 900Mhz) will work toget
 
 ## How do I flash the R9M module?
 
-[Flashing R9M TX](/quick-start/flashing-elrs/#flashing-via-opentx-requires-opentx-2312). Overview: flash our bootloader using OpenTX, then our firmware also using OpenTX.
+[Flashing R9M TX](./quick-start/flashing-elrs/#flashing-via-opentx-requires-opentx-2312). Overview: flash our bootloader using OpenTX, then our firmware also using OpenTX.
 
 ## How do I flash the receiver?
 
@@ -48,7 +48,7 @@ To confirm your update rate is working as intended, you can use the ExpressLRS L
   * 4x full-resolution (10-bit) channels for sticks (CH1-4)
   * Either:
     * **Standard Mode** 4x 2-position channels sent every frame (increased to 8x in 1.0), OR
-    * **HYBRID_SWITCHES_8 Mode** 8x 3-position channels, where CH5 (AUX1/ARM) is sent every frame, and the other 7 are sent round-robin (7 frames to send all channels) also changed in 1.0, see [Switch Modes](/software/switch-config)
+    * **HYBRID_SWITCHES_8 Mode** 8x 3-position channels, where CH5 (AUX1/ARM) is sent every frame, and the other 7 are sent round-robin (7 frames to send all channels) also changed in 1.0, see [Switch Modes](./software/switch-config)
 
 ## Is my binding phrase a secret?
 

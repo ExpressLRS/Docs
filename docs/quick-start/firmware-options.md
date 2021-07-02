@@ -10,7 +10,7 @@ Some of these options are present on both the Tx and Rx Target. `team2400` and `
 
 ![2400 TX Options](../assets/images/ConfigurationOptions2400tx.jpg)
 
-![900 TX Options](/Website/assets/images/ConfigurationOptions900tx.jpg)
+![900 TX Options](../assets/images/ConfigurationOptions900tx.jpg)
 
 ## Regulatory Domains
 ```
@@ -108,7 +108,7 @@ This **only works** with ESP based TXes (will not work with modules without buil
 
 ## Receiver Only Options ##
 
-![2400 RX Options](/assets/images/ConfigurationOptions2400rx.jpg)
+![2400 RX Options](../assets/images/ConfigurationOptions2400rx.jpg)
 
 ![900 RX Options](../assets/images/ConfigurationOptions900rx.jpg)
 

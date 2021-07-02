@@ -25,7 +25,7 @@ With the module connected as described in [Flashing Bootloader](../flashing-boot
 Verification can be done using the ELRS.lua script. It should show the Version Hash at the top, as well as the options you can set. If it's showing "Connecting", check if External Module is set to CRSF for the selected model in your radio, and that internal RF module is set to off. See general Troubleshooting section for other ways to determine your module is flashed and ready for flying.
 
 ### FrSky RXes  
-![FC Wiring](/assets/images/FC-Wiring.jpg)
+![FC Wiring](../assets/images/FC-Wiring.jpg)
 *Note: This will be the same wiring you'll use for flying and the next firmware updates (via Passthrough). Forget the factory wiring guide!*
 
 #### Passthrough Flashing (works with Betaflight, iNav)
@@ -114,8 +114,8 @@ As it rebooted, the connection to the Webserver got terminated. Check via the Lu
 
 This method requires you move two jumpers into specific pins in the module board. See the following image for the jumper location and which pin should be bridged for this method to work.
 
-![JumperFS](/assets/images/Jumper.jpg)
-![JumperLite](/assets/images/Jumper-Lite.jpg)
+![JumperFS](../assets/images/Jumper.jpg)
+![JumperLite](../assets/images/Jumper-Lite.jpg)
 
 The jumpers should be moved into the USB/UART (Green) position from the image above. Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
 
@@ -128,8 +128,8 @@ Assemble the module back together and attach it to your radio module bay and ver
 TODO
 
 #### Happymodel EP RXes
-![EP1 connection](/assets/images/ep1boot.png)
-![EP2 connection](/assets/images/ep2boot.png)
+![EP1 connection](../assets/images/ep1boot.png)
+![EP2 connection](../assets/images/ep2boot.png)
 
 - Flashing via Wifi (Recommended as first-flash method)
 
