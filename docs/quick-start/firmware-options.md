@@ -8,7 +8,7 @@ This page aims to explain which options to set on the ExpressLRS Configurator fo
 
 Some of these options are present on both the Tx and Rx Target. `team2400` and `team900` also shares a few options and some options are unique to that frequency band. Shown below are common options available on `team2400` and `team900` TXes respectively.
 
-![2400 TX Options](/Website/assets/images/ConfigurationOptions2400tx.jpg)
+![2400 TX Options](../assets/images/ConfigurationOptions2400tx.jpg)
 
 ![900 TX Options](/Website/assets/images/ConfigurationOptions900tx.jpg)
 
@@ -108,11 +108,9 @@ This **only works** with ESP based TXes (will not work with modules without buil
 
 ## Receiver Only Options ##
 
-![2400 RX Options](../assets/images/ConfigurationOptions2400rx.jpg)
+![2400 RX Options](/assets/images/ConfigurationOptions2400rx.jpg)
 
-TESTING
-
-![900 RX Options](/assets/images/ConfigurationOptions900rx.jpg)
+![900 RX Options](../assets/images/ConfigurationOptions900rx.jpg)
 
 *Note: Configuration of the Receivers should match the configuration of the Transmitter Module for Sync/Binding to happen between devices.*
 
