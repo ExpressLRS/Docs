@@ -12,48 +12,48 @@ Now that you've installed the bootloader on your non-ELRS hardware and have set 
 
 ## Non-ELRS Hardware
 ### FrSky TXes 
-- Flashing via OpenTX (Requires OpenTX 2.3.12)
+#### Flashing via OpenTX (Requires OpenTX 2.3.12)
 
 Using **Build** in the ExpressLRS Configurator, wait for the firmware to be compiled. After that's done, ExpressLRS Configurator Log should show the Success Message, and it will automatically open the folder where the **firmware.elrs** can be found. Put (copy-paste) the firmware.elrs to your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access). Once on your radio, navigate to the `/FIRMWARE` folder, select the firmware.elrs and click-hold the Enter button and select "Flash External ELRS".
 
 By this point, the bootloader (r9m_elrs_bl.frk) should've been flashed already. Wait for the flashing to finish, and if your module is equipped with a speaker (full size R9Ms), you should hear the tune and two beeps (if external module is now set to CRSF protocol).
 
-- Flashing using STLink
+#### Flashing using STLink
 
 With the module connected as described in [Flashing Bootloader](../flashing-bootloader), and your configuration set, hit **Build & Flash** in the ExpressLRS Configurator and wait for the process to finish. Once that's done, and the Success Message showing, you can now remove/unsolder the STLink, and re-assemble the module, and put it into your Radio's Module Bay. The ExpressLRS tune should play and then two beeps after that can be heard, for units that has a speaker (R9Ms) and if the External Module is set to CRSF Protocol.
 
 Verification can be done using the ELRS.lua script. It should show the Version Hash at the top, as well as the options you can set. If it's showing "Connecting", check if External Module is set to CRSF for the selected model in your radio, and that internal RF module is set to off. See general Troubleshooting section for other ways to determine your module is flashed and ready for flying.
 
 ### FrSky RXes  
-![FC Wiring](/Website/assets/images/FC-Wiring.jpg)
+![FC Wiring](/assets/images/FC-Wiring.jpg)
 *Note: This will be the same wiring you'll use for flying and the next firmware updates (via Passthrough). Forget the factory wiring guide!*
 
-- Passthrough Flashing (works with Betaflight, iNav)
+#### Passthrough Flashing (works with Betaflight, iNav)
 
 Make sure the correct [Bootloader](../flashing-bootloader) has been flashed to the receiver prior to wiring it up to your flight controller. Using the wiring guide above, find a free, uninverted UART in your FC. You can use your FC's wiring guide for a Crossfire or Ghost receiver.
 
 Once wired to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
 
-If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your Options set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX uart (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
+If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your Options set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
 
 If `Retry... ` lines appear, connect a LiPo if your receiver isn't powered by the USB (i.e. power up your receiver and FC).
 
 Wait for this process to finish. It's done once the "Success" prompt is shown.
 
-- Flashing via STLink (only recommended as last resort)
+#### Flashing via STLink (only recommended as last resort)
 
 This method is irreversible. It will remove the ability to reflash back to Frsky firmware. You have been warned!
 Make sure your STLink dongle is properly recognized by your System as such (Drivers are installed, etc.).
 
-Disable 'Readout Protection'. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). Or alternatively under linux you can use [openocd](https://github.com/ExpressLRS/ExpressLRS/wiki/Using-openocd-to-disable-Readout-Protection-on-an-R9M-or-an-R9MM). 
+Disable 'Readout Protection'. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). Or alternatively under linux you can use <a href="/software/open-ocd">OpenOCD</a>. 
 
-Connect your STLink to the receiver using these wiring guides. You'd need the GND, DIO (Data), CLK (Clock) and 3.3v.
+Connect your STLink to the receiver as shown in the wiring guides below. You'll need the GND, DIO (Data), CLK (Clock) and 3.3v.
 
 <small>r9mm/r9mini</small>
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/Doc/r9mm_mini_pinout.png" width="60%" alt="r9mm/r9mini stLink connection" />
+<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/Doc/r9mm_mini_pinout.png" width="60%" alt="r9mm/r9mini STLink connection" />
 
 <small>r9mx</small>
-<img src="/Website/assets/images/r9mxstlink.png" alt="r9mx stLink connection" />
+<img src="/Website/assets/images/r9mxstlink.png" alt="r9mx STLink connection" />
 
 Using the correct target specific for your receiver, hit "Build & Flash".
 
@@ -61,7 +61,14 @@ Once done, wire your receiver to your Flight Controller. Passthrough flashing ca
 
 
 ### Jumper RX  
-TODO
+Disable 'Readout Protection'. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). Or alternatively under linux you can use <a href="/software/open-ocd">OpenOCD</a>.
+
+Using the correct target specific for your receiver, hit "Build & Flash".
+
+<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/r900mini-rx/r900mini-side2-closeup.jpg" width = "60%" alt = "R900 wiring diagram">
+
+After the flash is successful, desolder the STLink and connect RX2 and TX2 (you will need to solder on the STM32 pins, see picture) to a flight controller and setting up the receiver with the CRSF serial protocol, the `env:Jumper_RX_R900MINI_via_Passthrough` target may now be used for future uploads through Betaflight Passthrough.
+
 
 ### ImmersionRC RXes  
 TODO
@@ -84,7 +91,7 @@ TODO
 TODO
 
 #### ES24TX (inc. Lite)
-- Flashing via Wifi
+##### Flashing via WiFi
 
 **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `firmware.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
@@ -103,12 +110,12 @@ Once the file is uploaded, the webserver should load a White page, with the mess
 
 As it rebooted, the connection to the Webserver got terminated. Check via the Lua Script whether you have successfully updated the TX module. The first line of the lua script should show a 6-character hash that corresponds to the Git commit hash for the firmware version you have on the module. There should be no more "Mismatch" messages as well.
 
-- Flashing via USB/UART
+##### Flashing via USB/UART
 
 This method requires you move two jumpers into specific pins in the module board. See the following image for the jumper location and which pin should be bridged for this method to work.
 
-![JumperFS](/Website/assets/images/Jumper.jpg)
-![JumperLite](/Website/assets/images/Jumper-Lite.jpg)
+![JumperFS](/assets/images/Jumper.jpg)
+![JumperLite](/assets/images/Jumper-Lite.jpg)
 
 The jumpers should be moved into the USB/UART (Green) position from the image above. Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
 
@@ -121,8 +128,8 @@ Assemble the module back together and attach it to your radio module bay and ver
 TODO
 
 #### Happymodel EP RXes
-![EP1 connection](/Website/assets/images/ep1boot.png)
-![EP2 connection](/Website/assets/images/ep2boot.png)
+![EP1 connection](/assets/images/ep1boot.png)
+![EP2 connection](/assets/images/ep2boot.png)
 
 - Flashing via Wifi (Recommended as first-flash method)
 

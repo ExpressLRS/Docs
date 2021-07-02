@@ -121,6 +121,11 @@ nav:
       - Binding ExpressLRS: quick-start/binding.md
   - Software:
       - Switch Configs: software/switch-config.md
+      - Obsolete Defines: software/obsolete-defines.md
+      - OpenOCD for STLink: software/open-ocd.md
+      - Updating: 
+        - Betaflight Passthrough: software/updating/betaflight-passthrough.md
+        - Wifi Updating: software/updating/wifi-updating.md
   - Info:
       - Signal Health: info/signal-health.md
       - Telemetry Bandwith: info/telem-bandwidth.md
