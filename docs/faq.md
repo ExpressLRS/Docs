@@ -18,7 +18,7 @@ When your radio does not have crsfshot working, this often shows in your Express
 The Lua script top bar will show inconsistent numbers like 0:63 or is stuck at 0:250 at every packet rate rate you select.
 **The Lua script top bar should always show a stable 0:[user selected packet rate]**
 For example: 0:50, 0:150, 0:250, 0:500, ...
-When that is the case your radio has crsfshot working and you're good to go. Click [here](quick-start/otx-cfg) to read more on OpenTX.
+When that is the case your radio has crsfshot working and you're good to go. Click [here](/quick-start/otx-cfg) to read more on OpenTX.
 
 ## What's the difference between the different Happymodel 2.4GHz receivers (PP, EP1, EP2)?
 
