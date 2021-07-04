@@ -124,6 +124,7 @@ nav:
       - Obsolete Defines: software/obsolete-defines.md
       - OpenOCD for STLink: software/open-ocd.md
       - PlatformIO STLink Fix: software/stlink-fix.md
+      - Toolchain Setup: software/toolchain-setup.md
       - Updating: 
         - Betaflight Passthrough: software/updating/betaflight-passthrough.md
         - Wifi Updating: software/updating/wifi-updating.md
@@ -131,7 +132,8 @@ nav:
       - Navigation Guide: hardware/supported-hardware.md
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
-      - ESP Backpack: hardware/esp-backpack.md  
+      - ESP Backpack: hardware/esp-backpack.md
+      - SMD Antenna: hardware/smd-antenna.md
       - DIY Reciever: hardware/diy-rx.md
       - DIY Transmitter: hardware/diy-tx.md
   - Info:
