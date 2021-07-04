@@ -112,13 +112,16 @@ nav:
   - Quick Start:
       - Getting Started: quick-start/getting-started.md
       - Installing Configurator: quick-start/installing-configurator.md
-      - Selecting Your Target: quick-start/your-target.md
-      - Flashing Bootloader: quick-start/flashing-bootloader.md
-      - Setting Firmware Options: quick-start/firmware-options.md
-      - Flashing ExpressLRS: quick-start/flashing-elrs.md
-      - Configuring OpenTX: quick-start/otx-cfg.md
-      - Configuring Betaflight: quick-start/bf-cfg.md
+      - TX Module:
+          - Preparing your Radio: quick-start/tx-prep.md
+          - Flashing Firmware: quick-start/tx-supportedtx.md
+      - Receivers:
+          - Flashing Bootloader: quick-start/rx-bootloader.md
+          - Preparing for Passthrough Flashing: quick-start/rx-fcprep.md
+          - Preparing for STLink Flashing: quick-start/rx-stlink.md
+          - Flashing Firmware: quick-start/rx-supportedrx.md
       - Binding ExpressLRS: quick-start/binding.md
+      - Pre-first Flight Checks: quick-start/pre-1stflight.md
   - Software:
       - Switch Configs: software/switch-config.md
       - Obsolete Defines: software/obsolete-defines.md
