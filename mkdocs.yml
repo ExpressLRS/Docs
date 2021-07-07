@@ -112,6 +112,7 @@ nav:
   - Quick Start:
       - Getting Started: quick-start/getting-started.md
       - Installing Configurator: quick-start/installing-configurator.md
+      - Firmware Options: quick-start/firmware-options.md
       - TX Module:
           - Preparing your Radio: quick-start/tx-prep.md
           - Flashing Firmware: quick-start/tx-supportedtx.md

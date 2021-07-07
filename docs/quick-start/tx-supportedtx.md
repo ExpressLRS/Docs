@@ -23,12 +23,12 @@ Valid Targets:
 
 [Happymodel ES900TX](../quick-start/tx-es900tx.md)
 
-Valid Targets (new Version ES900TX):
+Valid Targets for newer version ES900TX:
 
 - HappyModel_TX_ES900TX_via_UART
 - HappyModel_TX_ES900TX_via_WIFI
 
-Valid Targets (older Version ES915TX/ES868TX):
+Valid Targets for older version ES915TX/ES868TX:
 
 - HappyModel_TX_ES915TX_via_STLINK
 - HappyModel_TX_ES915TX_via_stock_BL
