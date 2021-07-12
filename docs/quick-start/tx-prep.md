@@ -59,8 +59,16 @@ e.g. if you have set the Packet Rate to 200Hz, 0:200 means 0 bad packets and 200
 
 The value should match the selected packet rate (200 for 200Hz, 500 for 500Hz, etc..)
 
-If it doesn't and is stuck at 250 that means `CRSFshot` isn't working.
+If it doesn't and is stuck at 250 that means `CRSFshot` isn't working. Go back to the top of this page and verify you've done all the steps above correctly.
 
 ![Lua3](../assets/images/lua3.jpg)
+
+### Troubleshooting Lua Script
+
+"Connecting" showing on the Lua Script would mean the Protocol set for the External Module is incorrect or that the module is not properly connected to the pins of the jr bay of the radio. The latter could mean that the module's PCB has gotten loose, common with the first batches of the ES24TX modules from Happymodel.
+
+If the number up top the lua script is showing 0:142, etc., have a look at your model settings and make sure the internal RF module is set to off.
+
+The "33e2a6" from the photo above is the Commit Hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases).
 
 **Now that your radio is set, you can now proceed with flashing ExpressLRS!**

@@ -4,9 +4,9 @@ template: main.html
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-This page aims to explain which options to set on the ExpressLRS Configurator for a particular Hardware. It helps guide you through which options you should enable for your purposes or which options should be leave at default.
+This page aims to explain which options to set on the ExpressLRS Configurator for a particular Hardware. It helps guide you through which options you should enable for your purposes or which options should be left at default.
 
-Some of these options are present on both the Tx and Rx Target. `team2400` and `team900` also shares a few options and some options are unique to that frequency band. Shown below are common options available on `team2400` and `team900` TXes respectively.
+Some of these options are present on both the Tx and Rx Targets. It is important that these options match to both the TX module and receiver in order for them to bind. `team2400` and `team900` also share a few options and some options are unique to that frequency band. Shown below are common options available on `team2400` and `team900` TXes respectively.
 
 ![2400 TX Options](../assets/images/ConfigurationOptions2400tx.jpg)
 
@@ -41,7 +41,7 @@ This option enables **lower latency** 🏃‍♂️ from the OpenTX radio to the
 ```
 USE-500HZ
 ```
-This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have to give up 25Hz mode to add 500Hz mode. It requires [OpenTX `2.3` Nightly builds](https://www.open-tx.org/downloads) starting from the N473 build or above. It also will be supported in OpenTX 2.4 and above. In order to install it, you will have to use OpenTX companion application.
+This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have to give up 25Hz mode to add 500Hz mode. It requires [OpenTX 2.3.12 or Newer](https://www.open-tx.org/2021/06/14/opentx-2.3.12), [EdgeTX](https://github.com/EdgeTX/edgetx) or a Radio firmware that has CRSFShot or Mixer Sync. **Note: Since version 1.0.0-RC9, this option is now always enabled and in turn, 25Hz has been dropped/removed.**
 
 ## Extra Data
 
