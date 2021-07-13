@@ -6,6 +6,11 @@ template: main.html
 
 ##Flashing Ghost Modules via STLink
 
+Targets:
+
+- GHOST_2400_TX_via_STLINK
+- GHOST_2400_TX_LITE_via_STLINK
+
 Here is a 10 minute video, showing the steps required to both flash the bootloader and the ELRS firmware itself.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fHxx2Cc3Hz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
