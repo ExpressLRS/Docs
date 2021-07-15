@@ -149,6 +149,7 @@ nav:
       - Obsolete Defines: software/obsolete-defines.md
       - OpenOCD for STLink: software/open-ocd.md
       - Toolchain Setup: software/toolchain-install.md
+      - PIO STLink Fix: software/stlink-fix.md
       - Updating: 
         - Betaflight Passthrough: software/updating/betaflight-passthrough.md
         - Wifi Updating: software/updating/wifi-updating.md
