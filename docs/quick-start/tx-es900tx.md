@@ -8,7 +8,7 @@ template: main.html
 
 ### Flashing via Wifi
 
-Target: HappyModel_TX_ES900TX_via_WIFI
+Target: `HappyModel_TX_ES900TX_via_WIFI`
 
 **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `firmware.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
@@ -31,7 +31,7 @@ As it rebooted, the connection to the Webserver got terminated. Check via the Lu
 
 ### Flashing via USB
 
-Target: HappyModel_TX_ES900TX_via_UART
+Target: `HappyModel_TX_ES900TX_via_UART`
 
 This method requires you move two jumpers into specific pins in the module board. See the following image for the jumper location and which pin should be bridged for this method to work.
 
@@ -47,13 +47,13 @@ Assemble the module back together and attach it to your radio module bay and ver
 
 ### Flashing via OpenTX
 
-Target: HappyModel_TX_ES915TX_via_stock_BL
+Target: `HappyModel_TX_ES915TX_via_stock_BL`
 
 Using **Build** in the ExpressLRS Configurator, wait for the firmware to be compiled. After that's done, ExpressLRS Configurator Log should show the Success Message, and it will automatically open the folder where the **firmware.elrs** can be found. Put (copy-paste) the firmware.elrs to your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access). Once on your radio, navigate to the `/FIRMWARE` folder, select the firmware.elrs and click-hold the Enter button and select "Flash External ELRS".
 
 ### Flashing via STLink
 
-Target: HappyModel_TX_ES915TX_via_STLINK
+Target: `HappyModel_TX_ES915TX_via_STLINK`
 
 Connect your STLink v2 to the pads shown on the image below.
 

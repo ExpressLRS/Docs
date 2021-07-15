@@ -6,5 +6,5 @@ template: main.html
 
 Valid Targets:
 
-- NamimnoRC_FLASH_2400_TX_via_STLINK
-- NamimnoRC_FLASH_2400_TX_via_WIFI
+- `NamimnoRC_FLASH_2400_TX_via_STLINK`
+- `NamimnoRC_FLASH_2400_TX_via_WIFI`

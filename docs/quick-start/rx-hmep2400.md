@@ -8,7 +8,7 @@ template: main.html
 
 **(Recommended as first-flash method)**
 
-Target: HappyModel_EP_2400_RX_via_WIFI
+Target: `HappyModel_EP_2400_RX_via_WIFI`
 
 [Wire up your receiver](../quick-start/rx-fcprep.md) to a free uart in your Flight Controller. The image above shows the pinouts for these receivers. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
 
@@ -24,7 +24,7 @@ A white page should load momentarily with the message **Update Success! Rebootin
 
 ## Flashing via Passthrough
 
-Target: HappyModel_EP_2400_RX_via_BetaflightPassthrough
+Target: `HappyModel_EP_2400_RX_via_BetaflightPassthrough`
 
 [Wire up your receiver](../quick-start/rx-fcprep.md) to a free uart in your Flight Controller. The image above shows the pinouts for these receivers. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
 
@@ -40,8 +40,8 @@ Unplug USB and LiPo, and removed the solder on the bridged `Boot` pads. You no l
 
 ## Flashing via FTDI
 
-Target: HappyModel_EP_2400_RX_via_UART
+Target: `HappyModel_EP_2400_RX_via_UART`
 
-Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the FTDI, and RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. 
+Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the FTDI, and RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Short the boot pad while powering the RX on, and release - the LED should now be solid. Select the `_UART` target and flash.
 
 Select the target and set your Firmware Options. Once done, click on **Build and Flash**.

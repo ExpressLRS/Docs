@@ -6,5 +6,5 @@ template: main.html
 
 Valid Targets:
 
-- DIY_900_RX_ESP8285_SX127x_via_BetaflightPassthrough 
-- DIY_900_RX_ESP8285_SX127x_via_UART
+- `DIY_900_RX_ESP8285_SX127x_via_BetaflightPassthrough `
+- `DIY_900_RX_ESP8285_SX127x_via_UART`

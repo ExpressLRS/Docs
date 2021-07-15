@@ -29,8 +29,8 @@ Flash `r9m_elrs_bl.frk` (14kb) to your TX module:
 
 Targets: 
 
-- Frsky_TX_R9M_via_stock_BL
-- Frsky_TX_R9M_LITE_via_stock_BL
+- `Frsky_TX_R9M_via_stock_BL`
+- `Frsky_TX_R9M_LITE_via_stock_BL`
 
 Using **Build** in the ExpressLRS Configurator, wait for the firmware to be compiled. After that's done, ExpressLRS Configurator Log should show the Success Message, and it will automatically open the folder where the **firmware.elrs** can be found. Put (copy-paste) the firmware.elrs to your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access). Once on your radio, navigate to the `/FIRMWARE` folder, select the firmware.elrs and click-hold the Enter button and select "Flash External ELRS".
 
@@ -40,9 +40,9 @@ By this point, the bootloader (r9m_elrs_bl.frk) should've been flashed already. 
 
 Targets:
 
-- Frsky_TX_R9M_via_STLINK
-- Frsky_TX_R9M_LITE_via_STLINK
-- Frsky_TX_R9M_LITE_PRO_via_STLINK
+- `Frsky_TX_R9M_via_STLINK`
+- `Frsky_TX_R9M_LITE_via_STLINK`
+- `Frsky_TX_R9M_LITE_PRO_via_STLINK`
 
 This method is an **irreversible** one. You will not be able to go back to Frsky firmwares with this method. You have been warned!
 

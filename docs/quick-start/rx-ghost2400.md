@@ -6,7 +6,7 @@ template: main.html
 
 # Flashing Ghost Atto/Zepto RX's
 
-Target: GHOST_ATTO_2400_RX_via_STLINK
+Target: `GHOST_ATTO_2400_RX_via_STLINK`
 
 Flashing the Ghost RX's is currently a **1 WAY** flash once you flash ExpressLRS to these RX's you **will not** be able to use them with Ghost TX.  You will need a `StLink V2` to flash the RX's
 

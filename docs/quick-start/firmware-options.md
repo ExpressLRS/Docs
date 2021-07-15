@@ -91,10 +91,10 @@ MY_STARTUP_MELODY="<music string>|<bpm>|<semitone offset>"
 ```
 For TXes like the R9M, this sets if the TX only beeps one-time, not beep at all or play custom a startup song. By default it is set to play the ExpressLRS Startup Tune 🎼 , but if you don't prefer it, or simply want to go stealthy, enable any of these options. ✖️
  
-For all your customization needs, use `MY_STARTUP_MELODY` to define your own startup melody using the BlHeli32 syntax. The parameters `music string` and `bpm` are required, whereas `semitone offset` is optional to transpose the entire melody up or down by the defined amount of semitones.
-Example BlHeli32 melodies are available on [Rox Wolfs youtube channel](https://www.youtube.com/playlist?list=PL_O0XT_1mZinetucKyuBUvkju8P7DEg-v), some experimentation may be required though. :musical_note:
- 
-To write your own melody, **[this (Sheet Music 101)](https://github.com/nseidle/AxelF_DoorBell/wiki/How-to-convert-sheet-music-into-an-Arduino-Sketch)** and **[this (BLHeli Piano)](https://dra6n.github.io/blhelikeyboard.github.io/)** are useful resources.
+For all your customization needs, use `MY_STARTUP_MELODY` to define your own startup melody using either the BlHeli32 syntax or RTTL. 
+The BlHeli32 Synatax has the required parameters `music string` and `bpm`, and `semitone offset` is optional to transpose the entire melody up or down by the defined amount of semitones. Example BlHeli32 melodies are available on [Rox Wolfs youtube channel](https://www.youtube.com/playlist?list=PL_O0XT_1mZinetucKyuBUvkju8P7DEg-v), some experimentation may be required though. :musical_note: To write your own melody, **[this (Sheet Music 101)](https://github.com/nseidle/AxelF_DoorBell/wiki/How-to-convert-sheet-music-into-an-Arduino-Sketch)** and **[this (BLHeli Piano)](https://dra6n.github.io/blhelikeyboard.github.io/)** are useful resources.
+
+The RTTL Syntax is the same as used in old mobil phones for ringtones and some examples of it can be found [here](http://esctunes.com/), where you can search through many existing RTTL melodies.
 
 ```
 UNLOCK_HIGHER_POWER 

@@ -9,7 +9,7 @@ site_description: >-
 
 # Repository
 repo_name: ExpressLRS/ExpressLRS
-repo_url: https://github.com/ExpressLRS/ExpressLRS
+repo_url: https://github.com/ExpressLRS/ExpressLRS/releases/
 edit_uri: "https://github.com/ExpressLRS/Docs/tree/master/docs"
 
 # Copyright
@@ -148,6 +148,7 @@ nav:
       - Switch Configs: software/switch-config.md
       - Obsolete Defines: software/obsolete-defines.md
       - OpenOCD for STLink: software/open-ocd.md
+      - Toolchain Setup: software/toolchain-install.md
       - Updating: 
         - Betaflight Passthrough: software/updating/betaflight-passthrough.md
         - Wifi Updating: software/updating/wifi-updating.md

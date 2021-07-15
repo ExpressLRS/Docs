@@ -8,7 +8,7 @@ template: main.html
 
 ### Flashing via Passthrough
 
-Target: HappyModel_RX_ES900RX_via_BetaflightPassthrough
+Target: `HappyModel_RX_ES900RX_via_BetaflightPassthrough`
 
 ![ES900RX](../assets/images/es900rx-conn.png)
 

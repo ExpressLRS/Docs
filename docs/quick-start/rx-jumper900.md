@@ -8,8 +8,8 @@ template: main.html
 
 Targets: 
 
-- Jumper_RX_R900MINI_via_STLINK
-- Jumper_RX_R900MINI_via_BetaflightPassthrough
+- `Jumper_RX_R900MINI_via_STLINK`
+- `Jumper_RX_R900MINI_via_BetaflightPassthrough`
 
 Disable 'Readout Protection'. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). Or alternatively under linux you can use <a href="/software/open-ocd">OpenOCD</a>.
 

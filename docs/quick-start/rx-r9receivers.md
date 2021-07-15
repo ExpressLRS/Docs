@@ -10,13 +10,13 @@ template: main.html
 
 #### Passthrough Flashing (works with Betaflight, iNav)
 
-Valid Targets for R9mm/R9mini:
+Valid Targets:
 
-- Frsky_RX_R9MM_R9MINI_via_BetaflightPassthrough
-- Frsky_RX_R9MX_via_BetaflightPassthrough
-- Frsky_RX_R9SLIM_via_BetaflightPassthrough
-- Frsky_RX_R9SLIMPLUS_via_BetaflightPassthrough
-- Frsky_RX_R9SLIMPLUS_OTA_via_BetaflightPassthrough
+- `Frsky_RX_R9MM_R9MINI_via_BetaflightPassthrough`
+- `Frsky_RX_R9MX_via_BetaflightPassthrough`
+- `Frsky_RX_R9SLIM_via_BetaflightPassthrough`
+- `Frsky_RX_R9SLIMPLUS_via_BetaflightPassthrough`
+- `Frsky_RX_R9SLIMPLUS_OTA_via_BetaflightPassthrough`
 
 Make sure the correct [Bootloader](../flashing-bootloader) has been flashed to the receiver prior to wiring it up to your flight controller. Using the wiring guide above, find a free, uninverted UART in your FC. You can use your FC's wiring guide for a Crossfire or Ghost receiver.
 
@@ -32,11 +32,11 @@ Wait for this process to finish. It's done once the "Success" prompt is shown.
 
 Valid Targets:
 
-- Frsky_RX_R9MM_R9MINI_via_STLINK
-- Frsky_RX_R9MX_via_STLINK
-- Frsky_RX_R9SLIM_via_STLINK
-- Frsky_RX_R9SLIMPLUS_via_STLINK
-- Frsky_RX_R9SLIMPLUS_OTA_via_STLINK
+- `Frsky_RX_R9MM_R9MINI_via_STLINK`
+- `Frsky_RX_R9MX_via_STLINK`
+- `Frsky_RX_R9SLIM_via_STLINK`
+- `Frsky_RX_R9SLIMPLUS_via_STLINK`
+- `Frsky_RX_R9SLIMPLUS_OTA_via_STLINK`
 
 This method is irreversible. It will remove the ability to reflash back to Frsky firmware. You have been warned!
 Make sure your STLink dongle is properly recognized by your System as such (Drivers are installed, etc.).
