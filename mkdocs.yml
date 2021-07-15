@@ -152,7 +152,16 @@ nav:
       - Updating: 
         - Betaflight Passthrough: software/updating/betaflight-passthrough.md
         - Wifi Updating: software/updating/wifi-updating.md
+  - Hardware:
+      - Navigation Guide: hardware/supported-hardware.md
+      - R9M Inverter Mod: hardware/inverter-mod.md
+      - R9M Fan Mod: hardware/fan-mod.md
+      - ESP Backpack: hardware/esp-backpack.md
+      - SMD Antenna: hardware/smd-antenna.md
+      - DIY Reciever: hardware/diy-rx.md
+      - DIY Transmitter: hardware/diy-tx.md
   - Info:
+      - Glossary: info/glossary.md
       - Signal Health: info/signal-health.md
       - Telemetry Bandwith: info/telem-bandwidth.md
   - FAQ: faq.md
