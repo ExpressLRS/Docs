@@ -1,0 +1,19 @@
+---
+template: main.html
+---
+
+![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
+
+## ESP32 Targets
+Valid Targets:
+- `DIY_900_TX_ESP32_SX127x_E19_via_UART`
+- `DIY_900_TX_ESP32_SX127x_RFM95_via_UART`
+
+Plug the ESP32 of the DIY TX into the USB of your computer. Then select the correct target given the RF chip you chose and press **Build & Flash**. Further updates can be performed by building and flashing the `.bin` file to the external module using OpenTX.
+
+## TTGo Targets
+Valid Targets:
+- `DIY_900_TX_TTGO_V1_SX127x_via_UART`
+- `DIY_900_TX_TTGO_V2_SX127x_via_UART`
+
+Plug the TTGo into the USB of your computer. Then select the correct target given the version you have and press **Build & Flash**. Further updates can be performed by building and flashing the `.bin` file to the external module using OpenTX.
