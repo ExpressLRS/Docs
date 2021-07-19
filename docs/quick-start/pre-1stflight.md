@@ -84,8 +84,8 @@ This requires the telemetry feature enabled for the RX+TX. If the telemetry page
 
 Mavlink is **not supported** and currently **not planned** to be added.
 
-To get a responsive UI configure ExpressLRS for fast data transfer so make sure to use something like `200Hz/250Hz` with `1:2` tlm and 
-a serial baud rate of `400000`. Currently MSP is limited to `50Hz` on `11520` Baud and does not work with `500 Hz` refresh rate.
+To get a responsive UI configure ExpressLRS for fast data transfer so make sure to use something like `200Hz/500Hz` with `1:2` tlm and 
+a serial baud rate of `400000`. Currently MSP is limited to `50Hz` on `11520` Baud.
 The initial VTX tables download does take long - but is cached after that. 
 
 If you get a "retrying" message while saving changes it means that the lua script did not receive a response fast enough. But the change usually still goes through so try reloading the page to check if the change was saved. With the recommended settings this does not happen but with slower settings it could happen.
