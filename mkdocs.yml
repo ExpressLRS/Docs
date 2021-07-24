@@ -143,6 +143,7 @@ nav:
       - Post-Flash:
         - Binding ExpressLRS: quick-start/binding.md
         - Pre-first Flight Checks: quick-start/pre-1stflight.md
+      - Troubleshooting: quick-start/troubleshooting.md
   - Software:
       - Switch Configs: software/switch-config.md
       - Obsolete Defines: software/obsolete-defines.md

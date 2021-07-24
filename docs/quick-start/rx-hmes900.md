@@ -28,9 +28,7 @@ A white page should load momentarily with the message **Update Success! Rebootin
 
 ### Flashing via Passthrough
 
-Target:
-
-- HappyModel_RX_ES915RX_via_BetaflightPassthrough
+Target: `HappyModel_RX_ES915RX_via_BetaflightPassthrough`
 
 Once [wired properly](../quick-start/rx-fcprep.md) to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
 
@@ -42,9 +40,7 @@ Wait for this process to finish. It's done once the "Success" prompt is shown.
 
 ### Flashing via STLink
 
-Target:
-
-- HappyModel_RX_ES915RX_via_STLINK
+Target: `HappyModel_RX_ES915RX_via_STLINK`
 
 Using the correct target specific for your receiver, set your Firmware Options and hit **Build & Flash** on the ExpressLRS Configurator.
 
