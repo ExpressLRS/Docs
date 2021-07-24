@@ -19,6 +19,29 @@ To get RSSI and Link Quality displayed in the OSD, set RSSI Channel to "Disabled
 
 If you wish to enable the rssi dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm). If using DJI Goggles, you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab. More information about signal metrics is found in <a href="/info/signal-health"> this article on signal health </a>.
 
+## Bench Test
+
+![Bench Testing](../assets/images/BenchTest.jpg)
+
+Shown above is a Bench Test to determine if you're getting a good signal from your radio. This aims to provide you information on whether you should check your antennas (particularly the R9's Super 8) or you have good hardware overall. 
+
+- Set your ExpressLRS module to just 10mW using the Lua script. The packet rate doesn't matter much here.
+- Put your radio 1m (3ft) from your receiver and power it up. Make sure the receiver and TX module antennas are oriented in the same way. (You might want to disconnect your vtx/air unit temporarily, put vtx on pit mode or have a fan blowing on it).
+- Using your OSD or the Telemetry Page of your radio, take note of the RSSI dbm or the 1RSS telemetry data.
+
+On the 900Mhz hardware, a -20dbm or thereabouts is a good indication your hardware is in working order. On the 2.4Ghz hardware, around -40dbm to -30dbm should be good. If you're getting lower numbers than these, here are a few things you could check:
+
+- The ExpressLRS module antenna could be loose. On some 3D printed module cases, the print may be too thick at the part where the pigtail's RP-SMA/SMA end would be attached; if so, tighten the nut on the RP-SMA/SMA to give the antenna some more space to get tightened up.
+- The antenna pigtail may be damaged or not connected properly to the module's mainboard.
+- On receivers using an SMD antennas, expect lower values than those equipped with wire antennas. If the receiver with the SMD antenna has heat shrink, enclosed in a whoop canopy, surrounded with carbon parts or buried inside a plane/fixed wing, expect some more attenuation of the signal.
+- The Super 8 antenna from Frsky, which most of the R9Ms came with, are notorious for being faulty or would degrade from just a few weeks use. Replace it or as a temporary fix, solder all around the junction where the coax shielding and the RP-SMA meet.
+- Check if there aren't any missing components in your receivers, like the RF filter (can be found near the antenna or ufl). Also check if the SMD antenna is not broken or damaged and it's soldered in properly.
+- Some DIY modules require moving the 0 ohm resistor on the E28 from the PCB antenna side towards the UFL side. A solder bridge will work just fine as well, but make sure it is on the correct pads.
+
+![NotSuper8](../assets/images/super8notsuper.jpg)
+
+<small>Super8 Antenna's common point of failure</small>
+
 ## Blackbox
 
 Blackbox is handy for evaluating the performance of the RF link for a flight. Set your BB to debug mode `RC_SMOOTHING_RATE`, which will capture the rate that Betaflight is receiving RC Packets from the RX.

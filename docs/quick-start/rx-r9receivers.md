@@ -24,7 +24,7 @@ Once wired to your FC, connect USB. Did your receiver powered up too (with both 
 
 If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your Options set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
 
-Once `Retry... ` lines appear, connect a LiPo if your receiver isn't powered by the USB (i.e. power up your receiver and FC). On subsequent flash, you can have the LiPo plugged in and receiver powered up from the start.
+Once `Retry... ` lines appear, connect a LiPo if your receiver isn't powered by the USB (i.e. power up your FC and receiver). On subsequent flash, you can have the LiPo plugged in and receiver powered up from the start prior to connecting the USB.
 
 Wait for this process to finish. It's done once the "Success" prompt is shown.
 
