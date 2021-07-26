@@ -26,7 +26,9 @@ Make sure your Serial RX on the Ports Tab of your FC Firmware configurator is se
 
 ### No CLI Available
 
-This message can be seen on the ExpressLRS Configurator Log while using the Passthrough method and can be caused by a busy Com Port. Make sure any other Configurator Apps were closed and unplug-replug your FC to USB. You might also want to use a different USB port or cable (unless the cable is what you're using with your FC Configurator).
+This message can be seen on the ExpressLRS Configurator Log while using the Passthrough method and can be caused by a busy Com Port. Make sure any other Configurator Apps were closed and unplug-replug your FC to USB. You might also want to use a different USB port or cable.
+
+This could also mean that the FC cannot be detected by the script. This could also due to the FC being in DFU mode, which for passthrough flashing, is not needed.
 
 ### 10 Retries but no joy
 
@@ -42,7 +44,7 @@ This can be due to several things:
 
 This is a sign that the Wifi flashing didn't go through properly due to premature power cycle. To fix this, you will have to bridge the boot pads (see [here](/quick-start/rx-fcprep.md)) and reflash using the Passthrough method or using an FTDI adapter.
 
-This video shows the steps albeit using vscode development environment but the ExpressLRS Configurator will work just fine.
+This video shows the steps albeit using vscode development environment but the ExpressLRS Configurator will work just fine. You might also want to disable Telemetry in Betaflight/emuflight/iNav before attempting recovery.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SShMaLnqZr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
