@@ -2,8 +2,6 @@
 template: main.html
 ---
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
-# DIY Transmitters
-
 ## Custom ESP 2.4 GHz TX (for JR module bay)
 
 All of the info on this topic can be found 👉[Here](https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/TX_SX1280)

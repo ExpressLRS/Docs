@@ -47,6 +47,20 @@ If your receiver is not powered via USB, connect a LiPo to power it up and turn 
 
 TODO
 
+### BetaFPV Receivers
+
+<small >BetaFPV 900MHz ExpressLRS Receiver</small>
+
+![betafpv 900Mhz](../assets/images/betaFPVrx900.png)
+
+<small>BetaFPV 2.4GHz ExpressLRS Receiver</small>
+
+![betafpv 2.4Ghz](../assets/images/betaFPVrx2400.jpg)
+
+Shown above are the pinouts and various components of the receivers. Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. 
+
+Updating via WiFi is supported by these receivers.
+
 ## Serial RX Setup
 
 As with any serial-based receiver, you need to attach the TX/RX pads to a UART on your flight controller, then enable the corresponding UART as a serial receiver in Betaflight:
@@ -64,3 +78,5 @@ Similar to in OpenTX, we use the CRSF protocol to communicate between the Expres
 The CRSF Protocol requires a full UART pair, uninverted and in full-duplex mode. Using the CLI, check if `serialrx_inverted` is OFF and `serialrx_halfduplex` is OFF.
 
 You can't use an RX pad that is shared to an SBUS pad, unless you remove the inversion or reroute the line (by bridging pads in the FC). The easiest way to determine which UART can be used with ExpressLRS is to check which UART the manufacturer suggests you wire a Crossfire/Ghost receiver to.
+
+**Use the Navigation Menu to proceed to the Flashing Guides for these Receivers (under the section `Flashing Receivers`).**

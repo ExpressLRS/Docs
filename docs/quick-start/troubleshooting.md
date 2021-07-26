@@ -12,6 +12,8 @@ You most likely updated your receiver via WiFi, but you have wired your receiver
 
 Also make sure that the UART where you connected the receiver to doesn't have inversion and it's in full duplex mode. You can also try a different UART.
 
+*Section is a Work-in-Progress.*
+
 ## Flashing/Updating
 
 ### Invalid serial RX configuration detected

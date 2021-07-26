@@ -1,10 +1,7 @@
 ---
 template: main.html
 ---
-# DIY Recievers
-
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
-
 Possibly one of the biggest benefits from using `ExpressLRS` is custom hardware!
 
 - 📶 [Custom ESP 2.4 GHz RX](#custom-esp-24-ghz-rx)
@@ -21,7 +18,7 @@ Possibly one of the biggest benefits from using `ExpressLRS` is custom hardware!
 
 - The `ELRS Nano` RX is 18mm x 11mm and uses the same pinout as the `Crossfire Nano` RX. This allows for direct mounting to compatible flight controllers. ⚠️ This PCB uses 0402 SMD components and will require a hot air rework station and probably a microscope. 🔬 
 
-# Custom ESP 900 MHz RX
+## Custom ESP 900 MHz RX
 
 <img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/900MHz/RX_Mini_v0.1/img/front.jpg?raw=true" width="20%" alt="Mini_Rx_v0.1">
 <img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/900MHz/RX_20x20_0805_SMD/img/populated_side_1.jpg?raw=true" width="20%" alt="20x20_RX_0805_SMD">

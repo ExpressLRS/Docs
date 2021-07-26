@@ -146,6 +146,7 @@ nav:
       - Troubleshooting: quick-start/troubleshooting.md
   - Software:
       - Switch Configs: software/switch-config.md
+      - User Defines: software/user-defines.md
       - Obsolete Defines: software/obsolete-defines.md
       - OpenOCD for STLink: software/open-ocd.md
       - Toolchain Setup: software/toolchain-install.md
@@ -157,9 +158,10 @@ nav:
       - Navigation Guide: hardware/supported-hardware.md
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
+      - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
       - ESP Backpack: hardware/esp-backpack.md
       - SMD Antenna: hardware/smd-antenna.md
-      - DIY Reciever: hardware/diy-rx.md
+      - DIY Receiver: hardware/diy-rx.md
       - DIY Transmitter: hardware/diy-tx.md
   - Info:
       - Glossary: info/glossary.md

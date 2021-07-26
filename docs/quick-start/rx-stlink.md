@@ -36,3 +36,5 @@ Because those pins are so small one option is to only solder a wire on the `CLK`
 ![ES915RX](../assets/images/ES915rx.jpg)
 
 Connect your STLink into `GND`, `DIO`, `CLK`, `3V3` of the receiver. These pads are marked clearly as in the image above.
+
+**Use the Navigation Menu to proceed to the Flashing Guides for these Receivers (under the section `Flashing Receivers`).**
