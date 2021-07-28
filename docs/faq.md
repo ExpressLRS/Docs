@@ -4,7 +4,7 @@ Below, we have a list of frequently asked questions about ELRS
 
 ## Why ExpressLRS?
 
-ExpressLRS is competing with some of the best commercial solutions out there, but all are expensive 🙁. Well, ELRS is not 😄, it can be set up for around 60$ (Using second-hand r9 hardware). It also is better than many (higher sensitivity, lower latency👌)
+ExpressLRS is competing with some of the best commercial solutions out there, but all are expensive 🙁. Well, ELRS is not 😄, it can be set up for around 60$ (Using second-hand r9 hardware). It also is better than many (higher sensitivity, lower latency👌).
 
 ## Is it better than the commercial solutions?
 

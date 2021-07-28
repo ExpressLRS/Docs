@@ -48,15 +48,11 @@ Blackbox is handy for evaluating the performance of the RF link for a flight. Se
 
 ## Telemetry
 
-Initially ExpressLRS had very limited telemetry support but with Version `1.0.0-RC1` this changed and **full telemetry was added as optional feature**.
-The default setting only includes the link status message that includes the RSSI and Link quality.
+Initially ExpressLRS had very limited telemetry support but with Version `1.0.0-RC1` this changed and **full telemetry was added as optional feature**. The default setting only includes the link status message that includes the RSSI and Link quality.
 
-To receive all messages the feature telemetry has to be enabled in the <a href="/quick-start/user-defines/#telemetry"> user defines </a>
-It's possible to flash your TX module *with telemetry support enabled* and use it with a RX *without telemetry enabled*.
-So you can flash certain receivers with telemetry support and others without it and use it with the same TX module.
+To receive all messages the feature telemetry has to be enabled in the <a href="/quick-start/user-defines/#telemetry">user defines</a>. It's possible to flash your TX module *with telemetry support enabled* and use it with a RX *without telemetry enabled*. So you can flash certain receivers with telemetry support and others without it and use it with the same TX module.
 
-The RX transmits a subset of telemetry it receives from the flight controller. Disabling certain messages only works if the flight controller
-firmware does support it. For Betaflight this is possible with the telemetry_disabled_* cli settings:
+The RX transmits a subset of telemetry it receives from the flight controller. Disabling certain messages only works if the flight controller firmware does support it. For Betaflight this is possible with the telemetry_disabled_* cli settings:
 
 ```
 # Disable Attitude telemetry item
@@ -78,15 +74,11 @@ set telemetry_disabled_mode = ON
 
 Since telemetry messages are sent with low priority it takes some time to transmit the data. The telemetry rate in the lua settings script controls how often a telemetry message should be sent. So a ratio of 1:2 means that every second message is a telemetry message, so the telemetry data is transferred very fast. A ratio 1:64 means that only one of 64 messages is a telemetry message and so the transfer happens much slower.
 
-The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 200 Hz. So if you need fast a fast telemetry update rate
-choose high refresh rate, and a ratio that favors telemetry messages e.g. 200 Hz and 1:16 usually works good. For detailed information on telemetry bandwidth at different rates and ratios, see <a href="/info/telem-bandwidth/"> this page on telemetry bandwidth </a>.
+The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 200 Hz. So if you need fast a fast telemetry update rate choose high refresh rate, and a ratio that favors telemetry messages e.g. 200 Hz and 1:16 usually works good. For detailed information on telemetry bandwidth at different rates and ratios, see <a href="/info/telem-bandwidth/"> this page on telemetry bandwidth </a>.
 
-To finish the telemetry setup open the telemetry page on your transmitter and select "Discover new sensors" and wait for the list to fill.
-You will notice that there is a * sign for each row. This star indicates that this telemetry sensor was just updated. 
-If you see a row that does not change, and the name of the row is in square brackets it means that this sensor was not updated for some time.
+To finish the telemetry setup open the telemetry page on your transmitter and select "Discover new sensors" and wait for the list to fill. You will notice that there is a * sign for each row. This star indicates that this telemetry sensor was just updated.  If you see a row that does not change, and the name of the row is in square brackets it means that this sensor was not updated for some time.
 
-The first values (including RSSI and link quality) should always be updated (flashing stars). If this does not happen multiple times per second 
-the transmitter will issue a "telemetry warning". To prevent this warning use the setting TLM_REPORT_INTERVAL_MS.
+The first values (including RSSI and link quality) should always be updated (flashing stars). If this does not happen multiple times per second the transmitter will issue a "telemetry warning". To prevent this warning use the setting TLM_REPORT_INTERVAL_MS.
 
 It should look like this (and if it does not there is something wrong with your setup):
 
@@ -107,9 +99,7 @@ This requires the telemetry feature enabled for the RX+TX. If the telemetry page
 
 Mavlink is **not supported** and currently **not planned** to be added.
 
-To get a responsive UI configure ExpressLRS for fast data transfer so make sure to use something like `200Hz/250Hz` with `1:2` tlm and 
-a serial baud rate of `400000`. Currently MSP is limited to `50Hz` on `11520` Baud and does not work with `500 Hz` refresh rate.
-The initial VTX tables download does take long - but is cached after that. 
+To get a responsive UI configure ExpressLRS for fast data transfer so make sure to use something like `200Hz/500Hz` with `1:2` tlm and a serial baud rate of `400000`. Currently MSP is limited to `50Hz` on `115200` Baud and does not work with `500 Hz` refresh rate. The initial VTX tables download does take long - but is cached after that. 
 
 If you get a "retrying" message while saving changes it means that the lua script did not receive a response fast enough. But the change usually still goes through so try reloading the page to check if the change was saved. With the recommended settings this does not happen but with slower settings it could happen.
 
