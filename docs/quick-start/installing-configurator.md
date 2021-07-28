@@ -12,7 +12,6 @@ There are two ways to build & flash ExpressLRS. The recommended way is to use Ex
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Configurator/master/docs/readme/screenshots/main_screen.jpg" width="70%" />
 
-Go to the [supported hardware](https://github.com/ExpressLRS/ExpressLRS/wiki/Supported-Hardware) page to find the correct target for your hardware.
+The targets for each of the supported hardware can be seen on the individual device pages. Use the navigation menu on the left to get to the specific hardware page.
 
-
-
+On the next page, you will find the different Firmware Options you can set along with their explanations.

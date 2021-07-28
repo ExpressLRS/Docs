@@ -11,6 +11,8 @@ template: main.html
 ![FC Wiring](../assets/images/FC-Wiring.jpg" width ="100%")
 *Note: This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!*
 
+After you've flashed the bootloader and wired your receiver as shown, proceed to setting up your Flight Controller firmware shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+
 ### Happymodel EP1, EP2, PP
 
 ![HM2400 connection](../assets/images/hm2400.png)
@@ -21,15 +23,9 @@ There are certain FCs that puts their Receiver UART's RX pads Low, which in turn
 
 Also of note is that the EP receivers require their Boot pads (see figure above) be bridged on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the bridge needs to be removed, and is no longer needed for subsequent passthrough flashing.
 
-Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode and will not activate the wifi hotspot.
+Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode and won't activate the wifi hotspot.
 
-If your receiver is not powered via USB, connect a LiPo to power it up and turn it on.
-
-### Happymodel ES915/868RX (Discontinued)
-
-![ES915RX](../assets/images/ES915rx.jpg)
-
-Labels in the receiver show the pinouts. Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
+Connect your FC to USB and configure your FC firmware as [below](/quick-start/rx-fcprep/#serial-rx-setup).
 
 ### Happymodel ES900RX
 
@@ -39,9 +35,17 @@ Shown above is the pinouts for the ES900RX receivers. Connect Rx to a Tx pad on 
 
 As this is an ESP-based receiver, be aware that there are certain FCs that puts their Receiver UART's RX pads Low, which in turn, puts the receiver to Bootloader mode unintentionally. One remedy is to wire them into a different UART, or wire a pull-up resistor (300-1k ohm) into the RX pad (FC Rx pad -> Resistor -> 3v3 pad).
 
-Should you be updating via Wifi, the bridging of the boot pads is not needed.
+Should you be updating via Wifi, the bridging of the boot pads is not needed. 
 
-If your receiver is not powered via USB, connect a LiPo to power it up and turn it on.
+Connect your FC to USB and configure your FC firmware as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+
+### Happymodel ES915/868RX (Discontinued)
+
+![ES915RX](../assets/images/ES915rx.jpg)
+
+Labels in the receiver show the pinouts. Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
+
+Connect your FC to USB and configure your FC firmware as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
 
 ### NamimnoRC Voyager & Flash
 
@@ -57,19 +61,21 @@ TODO
 
 ![betafpv 2.4Ghz](../assets/images/betaFPVrx2400.jpg)
 
-Shown above are the pinouts and various components of the receivers. Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. 
+Shown above are the pinouts and various components of the receivers. Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Don't forget to also wire up 5v(VCC) and Gnd.
 
 Updating via WiFi is supported by these receivers.
 
+Connect your FC to USB and configure your FC firmware as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+
 ## Serial RX Setup
 
-As with any serial-based receiver, you need to attach the TX/RX pads to a UART on your flight controller, then enable the corresponding UART as a serial receiver in Betaflight:
+As with any serial-based receiver, you need to attach the TX/RX pads to a UART on your flight controller, then enable the corresponding UART as a serial receiver in your FC firmware (Betaflight/iNav/emuflight):
 
 ![](https://icantfly.xyz/wp-content/uploads/2019/01/image-58.png)
 
 ## Protocol
 
-Similar to in OpenTX, we use the CRSF protocol to communicate between the ExpressLRS receiver and Betaflight, so on the "Configuration" tab, you need to select "Serial-based receiver" on the "Receiver" panel, and select "CRSF" as the protocol. Telemetry is optional here and will reduce your stick update rate due to those transmit slots being used for telemetry.
+Similar to your OpenTX Radio, we are using the CRSF protocol to communicate between the ExpressLRS receiver and the FC Firmware (Betaflight/iNav/emuflight), so on the "Configuration" tab, you need to select "Serial-based receiver" on the "Receiver" panel, and select "CRSF" as the protocol. Telemetry is optional here and will reduce your stick update rate due to those transmit slots being used for telemetry.
 
 ![](https://icantfly.xyz/wp-content/uploads/2019/01/image-59.png)
 
