@@ -10,9 +10,13 @@ Target: `BETAFPV_900_RX_via_BetaflightPassthrough`
 
 Make sure you have [wired](/quick-start/rx-fcprep/#betafpv-receivers) your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
 
-Connect your FC to USB and power your receiver.
+If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
 
-Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options](/quick-start/firmware-options) and then click **Build and Flash**. For first time flashing/updating, it would normally take a while.
+If the receiver needs a LiPo attached to get powered up, then Press and Hold the button on the receiver, attach a LiPo, then let go once the LED in the receiver stopped blinking and goes SOLID. Then connect your FC to USB.
+
+These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
+
+Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options](/quick-start/firmware-options) and then click **Build and Flash**. For first time flashing/updating, it would normally take a while. 
 
 A `Success` message will be shown once the process is complete.
 
