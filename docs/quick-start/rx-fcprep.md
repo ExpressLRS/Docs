@@ -11,7 +11,7 @@ template: main.html
 ![FC Wiring](../assets/images/FC-Wiring.jpg" width ="100%")
 *Note: This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!*
 
-After you've flashed the bootloader and wired your receiver as shown, proceed to setting up your Flight Controller firmware shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+After you've flashed the bootloader and wired your receiver as shown, proceed to configure up your flight controller as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
 
 ### Happymodel EP1, EP2, PP
 

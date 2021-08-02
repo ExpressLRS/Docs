@@ -10,7 +10,7 @@ template: main.html
 
 Target: `HappyModel_EP_2400_RX_via_WIFI`
 
-[Wire up your receiver](/quick-start/rx-fcprep/#happymodel-ep1-ep2-pp) to a free uart in your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
+[Wire up your receiver](/quick-start/rx-fcprep/#happymodel-ep1-ep2-pp) to a free UART on your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
 
 *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
 
@@ -20,7 +20,7 @@ Power your Flight Controller by either connecting a LiPo or attaching the USB ca
 
 Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same `expresslrs` password as the TX Module Hotspot. Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `firmware.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
 
-A white page should load momentarily with the message **Update Success! Rebooting...**. You should wait until the LED on the receiver starts to blink slowly (waiting some more will put the receiver into WiFi mode). Power cycle your FC and turn on your radio to verify you are bound and has connection.
+A white page should load momentarily with the message **Update Success! Rebooting...**. You should wait until the LED on the receiver starts to blink slowly (waiting some more will put the receiver into WiFi mode). Power cycle your FC and turn on your radio to verify you are bound and have connection.
 
 ## Flashing via Passthrough
 

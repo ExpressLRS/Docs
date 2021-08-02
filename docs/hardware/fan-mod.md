@@ -1,6 +1,8 @@
 ---
 template: main.html
 ---
+# R9M Fan Mod
+
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
 
 Initially this mod is brought to life by [Niklas Voigt](https://discordapp.com/users/773143572354039828) and Seba112PL as beta tester and is still a work in progress.. if you have suggestions don't hesitate to contact.

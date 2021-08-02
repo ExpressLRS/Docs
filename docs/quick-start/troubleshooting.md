@@ -6,7 +6,7 @@ template: main.html
 
 ## General Troubleshooting
 
-### My Radio and Receiver is bound, only getting 10 Telemetry sensors, but no stick movements in the Receiver Tab and can't arm
+### My RX and TX are bound, but Betaflight is not responding to inputs
 
 You most likely updated your receiver via WiFi, but you have wired your receiver wrong or that you have an incorrect receiver configuration. You might want to revisit the [FC Preparation](/quick-start/rx-fcprep.md) page for the Flight Controller setup.
 
@@ -30,7 +30,7 @@ This message can be seen on the ExpressLRS Configurator Log while using the Pass
 
 This could also mean that the FC cannot be detected by the script. This could also due to the FC being in DFU mode, which for passthrough flashing, is not needed.
 
-### 10 Retries but no joy
+### 10 Retries but no Success
 
 This can be due to several things:
 

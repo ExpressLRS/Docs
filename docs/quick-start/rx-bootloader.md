@@ -32,8 +32,8 @@ Unplug the receiver, and your bootloader is flashed.
 
 ## Troubleshooting No Sync
 
-- Setting the External RF module to PPM mode helps.
-- Check if the receiver have its LED lighting up or if it's powered.
-- Check whether you've set your Max Bauds to 115200, specially if you're using a QX7 or an X9D (on OneBit Firmwares or EdgeTX). If so, put it back to 400k and try again.
+- Setting the External RF module to `PPM` mode helps.
+- Check if the receiver has its LED lit up or if it's powered.
+- Check whether you've set your `Max Bauds` to `115200`, especially if you're using a **QX7** or an **X9D** (on OneBit Firmwares or EdgeTX). If so, put it back to 400k and try again.
 
 **You can now proceed to the next step!**
