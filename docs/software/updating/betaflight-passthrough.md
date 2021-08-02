@@ -7,7 +7,8 @@ template: main.html
 
 ## General Instructions
 
-Once you have Flashed ELRS onto your receivers they can be conveniently updating using the passthrough feature of Betaflight (and similar FC FW). This is a relatively simple process.  
+Once you have Flashed ELRS onto your receivers they can be conveniently updating using the passthrough feature of Betaflight (and similar FC FW). This is a relatively simple process.
+  
 1. Open VS Code or the configurator and prepare to compile and upload.  
 2. Plug in your FC to your computer, but do NOT connect to betaflight configurator.  
 3. Select `env:YOUR_RX_via_Betaflight_Passthrough` and hit upload.  
@@ -16,6 +17,7 @@ Once you have Flashed ELRS onto your receivers they can be conveniently updating
 ## ESP-Specific Instructions
 
 Since 1.0.0, ESP receivers can be updated via passthrough without using the boot button as long as the firmware is not corrupted. If you're unable to get it to work, your firmware might be corrupted, in which case you'll need to temporarily turn off the telemetry feature in betaflight. If it still doesn't work, the bootloader might be messed up and the following steps should work.
+
 1. Open VS Code or the configurator and prepare to compile and upload.  
 2. Plug in your FC to your computer, but do NOT connect to betaflight configurator and no NOT power the RX. If your RX gets powered from USB, desolder the power wire so that you can manually power it up independently of the flight controller.  
 3. Hold the boot button of the RX or jump the boot jumper.  
