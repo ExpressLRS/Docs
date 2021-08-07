@@ -39,7 +39,13 @@ The ADC filter is enabled by default in OpenTX and is known to cause issues with
 
 ## Lua Script
 
-For faster access to the Lua script, save the `ELRS.lua` File from this link: [ExLRS Lua Script](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS/master/src/lua/ELRS.lua) onto the radio's SD Card in the `Scripts/Tools` folder and Long Press the "SYS" button (for T16 or similar Radios) or the "Menu" button (for Taranis X9D or similar Radios) to access the Tools Menu where you can find ELRS script ready to run with only one click.
+For faster access to the Lua script, use the Crossfire Configuration Tools in `Menu -> Tools`. For Higher bad:good packets refresh rate and also less RC command interuption, save the `ELRS.lua` File from this link: [ExLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/tree/master/src/lua) onto the radio's SD Card in the `Scripts/Tools` folder and Long Press the "SYS" button (for T16 or similar Radios) or the "Menu" button (for Taranis X9D or similar Radios) to access the Tools Menu where you can find ELRS script ready to run with only one click.
+
+if your handset has the black and white display and your handset is NOT X9D or X9D+, use the telemetry script in the black_and_white_display_128x64 folder.
+
+if your handset is the X9D or X9D+, use the telemetry script in the x9d_212x64 folder.
+
+if your handset has the colored screen display, use the telemetry script in the color_display_480x272 folder.
 
 Another way to get the ELRS Lua Script is via the ExpressLRS Configurator.
 
@@ -52,22 +58,30 @@ Here's how it looks in the Tools Menu:
 
 **Note: The following section will not yet work for you if your TX module is not yet flashed with ExpressLRS**
 
-The Lua script has an important feature that's highly valuable with troubleshooting. On the first line, after the 6-character version hash, it shows an indicator 0:nnn which tells you how many bad UART packets and how many good UART packets per second it's getting from the radio. It can be used to confirm the communication between the Radio and the TX module is working properly. 
+The Lua script has an important feature that's highly valuable with troubleshooting. It tells you how many bad UART packets and how many good UART packets per second it's getting from the radio. It can be used to confirm the communication between the Radio and the TX module is working properly. 
 
-e.g. if you have set the Packet Rate to 200Hz, 0:200 means 0 bad packets and 200 good packets (per second). 
+e.g. if you have set the Packet Rate to 200Hz, 0/200 means 0 bad packets and 200 good packets (per second).
+
+![Lua3](../assets/images/lua3.jpg)
+with crossfire Tools you can see them as the Bad and Good parameters as in the picture above.
+
+
+![Lua4](../assets/images/lua4.jpg)
+with the ELRS.lua you will see them also at the top of the page where the value will be updated in a consistent and faster rate. (picture above)
+
+bonus tips : ELRS.lua also works as TELEMETRY Script.
 
 The value should match the selected packet rate (200 for 200Hz, 500 for 500Hz, etc..)
 
 If it doesn't and is stuck at 250 that means `CRSFshot` isn't working. Go back to the top of this page and verify you've done all the steps above correctly.
 
-![Lua3](../assets/images/lua3.jpg)
 
 ### Troubleshooting Lua Script
 
-"Connecting" showing on the Lua Script would mean the Protocol set for the External Module is incorrect or that the module is not properly connected to the pins of the jr bay of the radio. The latter could mean that the module's PCB has gotten loose, common with the first batches of the ES24TX modules from Happymodel.
+when no parameter is shown for a long time in the Lua Script, that would means the Protocol set for the External Module is incorrect or that the module is not properly connected to the pins of the jr bay of the radio. The latter could mean that the module's PCB has gotten loose, common with the first batches of the ES24TX modules from Happymodel.
 
-If the number up top the lua script is showing 0:142, etc., have a look at your model settings and make sure the internal RF module is set to off.
+If the value of bad:good packet from the lua script is showing 0/142, etc., have a look at your model settings and make sure the internal RF module is set to off.
 
-The "33e2a6" from the photo above is the Commit Hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases).
+The "96bf63" from the photo above is the Commit Hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases).
 
 **Now that your radio is set, you can now proceed with flashing ExpressLRS!**
