@@ -13,6 +13,8 @@ template: main.html
 
 After you've flashed the bootloader and wired your receiver as shown, proceed to configure up your flight controller as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
 
+*Note: R9 Slim requires flashing via STLink first. Passthrough should work for updates.*
+
 ### Happymodel EP1, EP2, PP
 
 ![HM2400 connection](../assets/images/hm2400.png)
