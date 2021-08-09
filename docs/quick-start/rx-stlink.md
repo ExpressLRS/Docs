@@ -22,7 +22,11 @@ Connect the STLink V2 into the pads shown below: `3v3`, `GND`, `C = CLK` and `D 
 ## R9Slim
 This RX requires an StLink v2 to be flashed. 
 
-Wire up the RX to the STLink using `+ = 3v3`, `- = GND`, `C = CLK` and `D = DIO`. 
+Wire up the RX to the STLink using `3v3`, `GND`, `CLK` and `DIO`. 
+
+![r9slim STLINK connection](../assets/images/r9slim-stlink.jpg)
+
+*Wiring the R9 Slim+ for STLink flashing will be the same*
 
 ## Jumper R900 Mini
 This also requires an STLink, so the wiring is as follows: 
