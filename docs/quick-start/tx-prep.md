@@ -39,7 +39,7 @@ The ADC filter is enabled by default in OpenTX and is known to cause issues with
 
 ## Lua Script
 
-For faster access to the Lua script, save the `ELRS.lua` File from this link: [ExLRS Lua Script](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS/master/src/lua/ELRS.lua) onto the radio's SD Card in the `Scripts/Tools` folder and Long Press the "SYS" button (for T16 or similar Radios) or the "Menu" button (for Taranis X9D or similar Radios) to access the Tools Menu where you can find ELRS script ready to run with only one click.
+For faster access to the Lua script, save the `ELRS.lua` File from this link: [ExLRS Lua Script](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS/1.0.x-maintenance/src/lua/ELRS.lua) onto the radio's SD Card in the `Scripts/Tools` folder and Long Press the "SYS" button (for T16 or similar Radios) or the "Menu" button (for Taranis X9D or similar Radios) to access the Tools Menu where you can find ELRS script ready to run with only one click.
 
 Another way to get the ELRS Lua Script is via the ExpressLRS Configurator.
 
