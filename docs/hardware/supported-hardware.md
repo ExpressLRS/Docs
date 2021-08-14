@@ -4,9 +4,9 @@ template: main.html
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
-Wecome to the Hardware section!
+This is the hardware landing page! Welcome in. To navigate through this (large) subsection, use the sidebar on the **left**.
 
-The section covers information regarding ExpressLRS-supported Hardware. More and more manufacturers are coming up with their own take of the ExpressLRS Hardware and the list keeps growing.
+These pages show information on certain modifications to hardware, and certain ELRS specific hardware. More and more manufacturers are coming up with their own take of the ExpressLRS Hardware and the list keeps growing.
 
 At the time of writing, here are the ExpressLRS-supported Transmitter Modules and Receivers, along with a few Flight Controllers and AIO boards.
 
@@ -132,7 +132,7 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/2021/05/19/happymodel-elrs-f4-2g4-aio-5in1-flight-controller-built-in-spi-2-4ghz-elrs-rx/)
 
-*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates.*
+*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates. See this [page](/hardware/spi-receivers) for more info.*
 
 ### Happymodel CrazyF4 ELRS AIO 900Mhz
 
@@ -150,7 +150,7 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 [Manufacturer Website](http://seriouslypro.com/spracingh7rf)
 
-*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates.*
+*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates. See this [page](/hardware/spi-receivers) for more info.*
 
 ## DIY TX Modules
 
