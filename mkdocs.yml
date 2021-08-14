@@ -159,7 +159,7 @@ nav:
         - Betaflight Passthrough: software/updating/betaflight-passthrough.md
         - Wifi Updating: software/updating/wifi-updating.md
   - Hardware:
-      - Navigation Guide: hardware/supported-hardware.md
+      - Supported Hardware: hardware/supported-hardware.md
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
       - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
