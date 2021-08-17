@@ -4,8 +4,6 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-### Jumper RX 
-
 Targets: 
 
 - `Jumper_RX_R900MINI_via_STLINK`

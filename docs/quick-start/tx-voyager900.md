@@ -4,7 +4,7 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-### Flashing via Wifi
+## Flashing via Wifi
 
 Target: `NamimnoRC_Voyager_900_TX_via_WiFi`
 
@@ -27,7 +27,7 @@ Once the file is uploaded, the webserver should load a White page, with the mess
 
 As it rebooted, the connection to the Webserver got terminated. Check via the Lua Script whether you have successfully updated the TX module. The first line of the lua script should show a 6-character hash that corresponds to the Git commit hash for the firmware version you have on the module. There should be no more "Mismatch" messages as well.
 
-### Flashing via StLink
+## Flashing via STLink
 
 Target: `NamimnoRC_Voyager_900_TX_via_STLINK`
 
