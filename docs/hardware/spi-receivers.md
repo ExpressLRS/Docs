@@ -36,7 +36,7 @@ Set passphrase in the TX. When building via ExpressLRS configurator, or via VS C
 
 ![UID String](/assets/images/UIDsource.png)
 
-Go to betaflight cli and type (in example):
+Go to betaflight cli and type (for example):
 
 `set expresslrs_uid = 172,123,235,247,1,122`
 
