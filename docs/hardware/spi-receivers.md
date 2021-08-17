@@ -6,11 +6,11 @@ template: main.html
 
 A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano longrange rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
-Because these are SPI-based, the ExpressLRS Code came baked-in in the Betaflight 4.3.0-based custom-built firmware. These usually *doesn't* need to be updated. These Flight Controllers **will work** with any of the released ExpressLRS firmware.
+Because these are SPI-based, the ExpressLRS Code came baked-in in the Betaflight 4.3.0-based custom-built firmware. These usually *don't* need to be updated. These Flight Controllers **will work** with any released ExpressLRS firmware.
 
 ## Binding Procedure
 
-There are two ways to bind the receiver:
+There are two ways to bind the receiver, as shown below
 
 ### Standard bind procedure.
 
