@@ -33,6 +33,15 @@ theme:
     - navigation.tabs
   palette:
     - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: expresslrs
+      accent: expresslrs
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
       primary: expresslrs
       accent: expresslrs
   font:
