@@ -8,24 +8,39 @@ template: main.html
 
 Target: `NamimnoRC_Voyager_900_TX_via_WiFi`
 
+### Method 1
+
 With the correct target selected and [Firmware Options](/quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `firmware.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
-The next steps will require the [ELRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/ELRS.lua?raw=true) (right-click, save as). Download the ELRS.lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's proper connection with the radio. Execute the ELRS.lua script by pressing "System Menu" in your radio and then under Tools, select ELRS.lua.
+These Tx Modules are STM32-based so they require a separate ESP "backpack" device for Wifi Flashing/Updating. The `Wifi Update` option in the ExpressLRS Lua script will not work with these devices. The steps that follow will be used instead.
 
-![Lua Script](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/lua1.jpeg)
-![Lua Script T16](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/lua2)
+Attach the module to your JR Bays and power it up. Connect to the `ESP Wifi Manager` Hotspot that the device will activate. Once connected, navigate to http://elrs_tx.local/ (IP: 192.168.4.1). 
 
-At first, it will show "Mismatch"; it's normal. Tap `Enter` once on your radio to "Force Use" the script. If it's showing a "Connecting" message, then recheck the connection of the module to your radio.
+![Wifi Manager](../assets/images/WifiManager.png)
 
-![Lua3](../assets/images/lua3.jpg)
+Press `Configure WiFi` and set your home network SSID and password. This will enable your Tx Module to connect to your local home network.
 
-Select "Wifi Update" from the lua script. The Lua script will instruct you to go to a specific Ip Address, but you have to first connect to the Wifi Hotspot it created. It will show up in your network as `ExpressLRS TX Module`, and the password is simply `expresslrs`.
+On your browser, refresh the http://elrs_tx.local/ and scroll towards the STM32 Firmware Update section, as shown below:
 
-Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the firmware.bin file from the folder that ExpressLRS Configurator opened for you, or you can manually navigate to it via the `Browse` or `Choose File` button on the Upload form. Click on `Update` once and the update process should commence. Take note that you should be taking a **TX** `firmware.bin` file. The folder name where you can get this file is the same as the Target you have selected in the ExpressLRS Configurator.
+![STM32 Firmware Update](../assets/images/STM32-updater.png)
 
-Once the file is uploaded, the webserver should load a White page, with the message **Update Success! Rebooting...**
+Drag-and-drop the `firmware.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the Choose File button. Once the correct file is selected, click the `Upload and Flash STM32`. Wait for the process to complete, and the module will reboot (~2-3min). Using the [ELRS.lua](/quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
 
-As it rebooted, the connection to the Webserver got terminated. Check via the Lua Script whether you have successfully updated the TX module. The first line of the lua script should show a 6-character hash that corresponds to the Git commit hash for the firmware version you have on the module. There should be no more "Mismatch" messages as well.
+### Method 2
+
+These Tx Modules are STM32-based so they require a separate ESP "backpack" device for Wifi Flashing/Updating. The `Wifi Update` option in the ExpressLRS Lua script will not work with these devices. The steps that follow will be used instead.
+
+Attach the module to your JR Bays and power it up. Connect to the `ESP Wifi Manager` Hotspot that the device will activate. Once connected, navigate to http://elrs_tx.local/ (IP: 192.168.4.1). 
+
+![Wifi Manager](../assets/images/WifiManager.png)
+
+Press `Configure WiFi` and set your home network SSID and password. This will enable your Tx Module to connect to your local home network.
+
+Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options](/quick-start/firmware-options). Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
+
+![Wifi Update Log](../assets/images/WifiUpdateLog.png)
+
+Using the [ELRS.lua](/quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
 
 ## Flashing via STLink
 
