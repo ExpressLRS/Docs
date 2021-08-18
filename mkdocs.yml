@@ -42,8 +42,8 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: expresslrs
-      accent: expresslrs
+      primary: expresslrs-dark
+      accent: expresslrs-dark
   font:
     text: Roboto
     code: Roboto Mono
