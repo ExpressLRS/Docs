@@ -51,7 +51,13 @@ Connect your FC to USB and configure your FC firmware as shown [below](/quick-st
 
 ### NamimnoRC Voyager & Flash
 
-TODO
+<small>Namimno Voyager ExpressLRS Reciever</small>
+
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/Voyager%20Pinout.png?raw=true" width="70%">
+
+<small>Namimno Flash ExpressLRS Reciever</small>
+
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/Flash%20Pinout.png?raw=true" width="70%">
 
 ### BetaFPV Receivers
 
