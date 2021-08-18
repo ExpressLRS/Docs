@@ -66,6 +66,8 @@ extra:
       link: https://twitter.com/expresslrs
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/expresslrs
+  version:
+    provider: mike
 
 markdown_extensions:
   - admonition
@@ -173,8 +175,3 @@ nav:
       - Signal Health: info/signal-health.md
       - Telemetry Bandwith: info/telem-bandwidth.md
   - FAQ: faq.md
-
-# Google Analytics
-google_analytics:
-  - !!python/object/apply:os.getenv [ "GOOGLE_ANALYTICS_KEY" ]
-  - auto
