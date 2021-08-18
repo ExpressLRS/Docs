@@ -77,17 +77,15 @@ The ESP module is wired:
 
 Updating the ELRS915TX over wifi is supported from 1.0.0 RC8 onwards.
 
-![ELRS915TX pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/es915%20pinout.jpeg)
-![completed mod by qubic](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/quibic%20mod.jpeg)
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/es915%20pinout.jpeg?raw=true" width = "30%">
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/quibic%20mod.jpeg?raw=true" width = "30%">
 
 ## Connect via WiFi
 
-Initially, the module will open an accesspoint for you to connect and change the settings to your desire.
+Initially, the module will open an accesspoint for you to connect and change the settings to your desire. This accesspoint is available at the `ESP Wifi Manager` wifi network. Then navigate to http://elrs_tx.local/, and after building your firmware, upload the file to the website and flash.
 
-**WORK IN PROGRESS**
-
-![web frontend](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/web%20fronted.png)
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/web%20fronted.png?raw=true" width = "30%">
 
 ## Why does the ES24TX have a wifi AP, is there any way to turn it off?
 
-No there is no way to disable it, HappyModel should not have put any firmware on it. You're welcome to wipe it with esptool.
+No, there is no way to disable it, HappyModel should not have put any firmware on it. You're welcome to wipe it with esptool.
