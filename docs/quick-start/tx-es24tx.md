@@ -29,7 +29,7 @@ Once the file is uploaded, the webserver should load a White page, with the mess
 
 As it rebooted, the connection to the Webserver got terminated. Verify with the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script if you have successfully updated your module using the Git commit hash for the firmware version you have on the module.
 
-#### Method 2
+### Method 2
 
 With the correct target selected and [Firmware Options](/quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `HappyModel_ES24TX_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
@@ -41,7 +41,7 @@ Using your browser, navigate to http://elrs_tx.local and the WiFi Update page sh
 
 Drag-and-drop the `HappyModel_ES24TX_2400_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and the module will reboot (~2-3min). Using the [ELRS.lua](/quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
 
-#### Method 3
+### Method 3
 
 Using the [ELRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/ELRS.lua?raw=true) (right-click, save as), select `Wifi Update` and if you have flashed your Tx Module with your Home WiFi Network details, it will connect to the network automatically.
 
