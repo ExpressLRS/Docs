@@ -62,7 +62,7 @@ If it doesn't and is stuck at 250 that means `CRSFshot` isn't working. Go back t
 
 ![Lua3](../assets/images/lua3.jpg)
 
-### Troubleshooting
+### Troubleshooting Lua Script
 
 "Connecting" showing on the Lua Script would mean the Protocol set for the External Module is incorrect or that the module is not properly connected to the pins of the jr bay of the radio. The latter could mean that the module's PCB has gotten loose, common with the first batches of the ES24TX modules from Happymodel.
 
