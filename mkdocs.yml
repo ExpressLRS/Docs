@@ -174,5 +174,8 @@ nav:
       - Glossary: info/glossary.md
       - Signal Health: info/signal-health.md
       - Telemetry Bandwith: info/telem-bandwidth.md
-      - RX Scoreboard: info/rx-scoreboard.md
+      - Testing:
+        - Unit Testing: info/unit-testing.md
+        - CRC Testing: info/crc-testing.md
+        - RX Scoreboard: info/rx-scoreboard.md
   - FAQ: faq.md
