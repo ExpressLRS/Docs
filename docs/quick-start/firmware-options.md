@@ -56,6 +56,16 @@ Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU
 
 *Tip: only check this if you're changing the value. No need to enable it if you'll be using the default 320LU value*
 
+## Network Options
+
+```
+HOME_WIFI_SSID
+HOME_WIFI_PASSWORD
+```
+*New since 1.1.0*
+
+These options set Home Network Access for your Wifi-enabled hardware. With these set, the devices will connect to your WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time (Receivers). Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, in any device in the same network. Tx Module Wifi update page can be reached using the address http://elrs_tx.local, while receivers' update page can be reached via http://elrs_rx.local.
+
 ## Other Options
 
 ```
@@ -79,14 +89,6 @@ Majority of the ExpressLRS modules maxes out at 250mW. With this option, higher 
 UART_INVERTED
 ```
 This **only works** with ESP based TXes (will not work with modules without built-in inversion/uninversion), but enables compatibility with radios that output inverted CRSF, such as the FrSky QX7, TBS Tango 2, RadioMaster TX16S. You want to keep this enabled in most of the cases. If your radio is T8SG V2 or you use Deviation firmware turn this setting off.
-
-## Network Options
-
-```
-HOME_WIFI_SSID
-HOME_WIFI_PASSWORD
-```
-These options set Home Network Access for your Wifi-enabled hardware. With these set, the devices will connect to your WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time (Receivers). Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, in any device in the same network. Tx Module Wifi update page can be reached using the address http://elrs_tx.local, while receivers' update page can be reached via http://elrs_rx.local.
 
 ## Receiver Only Options ##
 
