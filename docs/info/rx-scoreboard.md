@@ -45,13 +45,13 @@ RRRRRRRRTRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRTRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRTRRRRRR
 
 ## Character Legend
 
-Character | Meaning | Description
+Character | Meaning | Description |
 |---|---|---|
-| R | Receive | ✔️ A valid RC sticks or MSP packet was received which passes all validation
-| T | Telemetry | ✔️ Telemetry was successfully transmitted
-| s | SYNC | ✔️ A valid SYNC packet was received. Sync packets come about once every 4 seconds, or more frequently around a telemetry ratio or packet rate change
-| _ | Missing | ❌ No packet was received at all yet one was expected 👻 
-| . | CRC | ❌ A packet was received but failed CRC check
+| R | Receive | ✔️ A valid RC sticks or MSP packet was received which passes all validation |
+| T | Telemetry | ✔️ Telemetry was successfully transmitted |
+| s | SYNC | ✔️ A valid SYNC packet was received. Sync packets come about once every 4 seconds, or more frequently around a telemetry ratio or packet rate change |
+| _ | Missing | ❌ No packet was received at all yet one was expected 👻 |
+| . | CRC | ❌ A packet was received but failed CRC check |
 
 ## Name Origin
 
