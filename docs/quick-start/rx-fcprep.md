@@ -11,7 +11,7 @@ template: main.html
 ![FC Wiring](../assets/images/FC-Wiring.jpg" width ="100%")
 *Note: This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!*
 
-After you've flashed the bootloader and wired your receiver as shown, proceed to configure up your flight controller as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+After you've flashed the [bootloader](/quick-start/rx-bootloader) and wired your receiver as above, proceed to configure up your flight controller as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
 
 *Note: R9 Slim requires flashing via STLink first. Passthrough should work for updates.*
 
@@ -51,13 +51,17 @@ Connect your FC to USB and configure your FC firmware as shown [below](/quick-st
 
 ### NamimnoRC Voyager & Flash
 
-<small>Namimno Voyager ExpressLRS Reciever</small>
+<small>Namimno Voyager ExpressLRS Receiver</small>
 
 <img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/Voyager%20Pinout.png?raw=true" width="70%">
 
-<small>Namimno Flash ExpressLRS Reciever</small>
+<small>Namimno Flash ExpressLRS Receiver</small>
 
 <img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/Flash%20Pinout.png?raw=true" width="70%">
+
+Labels in the receiver show the pinouts. Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
+
+Connect your FC to USB and configure your FC firmware as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
 
 ### BetaFPV Receivers
 
