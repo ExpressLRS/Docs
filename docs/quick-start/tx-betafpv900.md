@@ -36,3 +36,9 @@ Attach a USB Data Cable to your module and Computer. Windows users might have to
 Using the ExpressLRS Configurator with the correct Target selected and [options](/quick-start/firmware-options) set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
 Verify with the [ELRS.lua](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/ELRS.lua?raw=true) script if you have successfully updated your module using the Git commit hash for the firmware version you have on the module.
+
+## Can't flash?
+
+If you've followed any of the steps above and still can't get your devices flashed and updated, see this video for the explanation why and the fix to get your devices flashed and updated.
+
+<iframe width="688" height="387" src="https://www.youtube.com/embed/Pt5rMp7Zs8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

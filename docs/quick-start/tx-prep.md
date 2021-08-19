@@ -27,7 +27,7 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 
 On some transmitters, the baud rate for comms between the opentx and the ExpressLRS module can be changed. The two rates available are 115200 and 400000. ExpressLRS supports both rates (auto switches to the correct rate on power-up), however, we have found that on the R9M 2018 modules, the inverter IC's that are used are not capable of reliably handling 400k baud. If you're using an R9M 2018 module, select 115200 baud in OpenTX, or do the resistor mod described on the [R9M 2018 Resistor Mod](https://github.com/ExpressLRS/ExpressLRS/wiki/Inverter-Mod-for-R9M-2018) page.
 
-The QX7, X10/S, X12 will also going to require the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) if you're going to use 400k baud rates for use with higher packet rates, particularly with the 2.4G ExpressLRS Modules. Alternatively, EdgeTX can be flashed into these Radios and have OneBit enabled. See below for info regarding the X9D(plus).
+The QX7, X10/S, X12 will also going to require the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) if you're going to use 400k baud rates for use with higher packet rates, particularly with the 2.4G ExpressLRS Modules. Alternatively, EdgeTX can be flashed into these Radios and have OneBit enabled.
 
 The X9D(plus) can't change its Max Bauds settings, but it has been found to be finicky, causing unstable packet transfers, and constant Telemetry Lost/Recovered messages from OpenTX. One fix for this is the use of the OneBit firmware or EdgeTX. Click [here](/hardware/x9d-troubleshooting) for more info.
 
@@ -50,13 +50,13 @@ Here's how it looks in the Tools Menu:
 ![Lua1](../assets/images/lua1.jpg)
 ![Lua2](../assets/images/lua2.jpg)
 
-**Note: The following section will not yet work for you if your TX module is not yet flashed with ExpressLRS**
+**Note: For devices not yet flashed with ExpressLRS, the section below will not work.**
 
 The Lua script has an important feature that's highly valuable with troubleshooting. On the first line, after the 6-character version hash, it shows an indicator 0:nnn which tells you how many bad UART packets and how many good UART packets per second it's getting from the radio. It can be used to confirm the communication between the Radio and the TX module is working properly. 
 
-e.g. if you have set the Packet Rate to 200Hz, 0:200 means 0 bad packets and 200 good packets (per second). 
+e.g. if you have set the Packet Rate to 200Hz, 0:200 means 0 bad packets and 200 good packets. 
 
-The value should match the selected packet rate (200 for 200Hz, 500 for 500Hz, etc..)
+The second number should match the selected packet rate (200 for 200Hz, 500 for 500Hz, etc..)
 
 If it doesn't and is stuck at 250 that means `CRSFshot` isn't working. Go back to the top of this page and verify you've done all the steps above correctly.
 
@@ -68,6 +68,6 @@ If it doesn't and is stuck at 250 that means `CRSFshot` isn't working. Go back t
 
 If the number up top the lua script is showing 0:142, etc., have a look at your model settings and make sure the internal RF module is set to off.
 
-The "33e2a6" from the photo above is the Commit Hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases).
+The "33e2a6" from the photo above is the Commit Hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). If you can't find the commit hash from the Releases page, this could mean you are using firmware from the manufacturer's own fork of the ExpressLRS code.
 
 **Now that your radio is set, you can now proceed with flashing ExpressLRS!**
