@@ -32,9 +32,21 @@ theme:
     - navigation.sections
     - navigation.tabs
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
       primary: expresslrs
       accent: expresslrs
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+      default: expresslrs-dark
+      primary: expresslrs-dark
+      accent: expresslrs-dark
   font:
     text: Roboto
     code: Roboto Mono
