@@ -4,7 +4,7 @@ template: main.html
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
 
-**Note:** The following section is intended for advanced users who intend to dabble with the source code directly. If you're not familiar with Programming and Development Environments, **STOP** and proceed to the next step.
+**Note:** The following section is intended for advanced users who intend to dabble with the source code directly.
 
 ## Toolchain Setup (Advanced)
 
