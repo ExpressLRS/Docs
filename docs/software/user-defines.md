@@ -32,27 +32,6 @@ This step is simple but **important**. Both the TX and RX NEED to have the same 
 ```
 This is a relatively simple one - enable whatever regulatory domain you are in. `EU 868` 🇪🇺  is compliant to the frequency but **is not** LBT compliant 👂 . Every other band is near compliant 👿  but may not be fully compliant for your regulatory domain. 
 
-## Telemetry
-
-```
-#-DENABLE_TELEMETRY
-```
-Enable advanced telemetry support. This option must be enabled on both **TX** and **RX**. The following telemetry messages are supported:
-
-* GPS
-* BATTERY_SENSOR
-* ATTITUDE
-* DEVICE_INFO
-* FLIGHT_MODE
-* MSP_RESP
-
-**Note 1**: Increase the telemetry rate with the
-ExpressLRS lua script. Increase the rate until the sensor lost
-warnings go away. It is normal to set it up to 1:16 with 200 Hz
-refresh rate.
-
-**Note 2**: It must be enabled together with **HYBRID_SWITCHES_8**.
-
 ```
 #-DTLM_REPORT_INTERVAL_MS=320LU
 ```
@@ -61,14 +40,6 @@ It makes the TX module send the telemetry data to the OpenTX every 320 ms by def
 Default value is **320LU**. If you want to change that you have to suffix your milliseconds value with **LU**. For example, in order to specify 100 ms telemetry update rate you have to enter it like this: **100LU**.
 
 Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU** for ErskyTx ones.
-
-## Switches
-```
-#-DHYBRID_SWITCHES_8
-```
-Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in [Switch Modes](../../software/switch-config/), but
-  1. If only two position switches are needed, and they must be updated as fast as possible: Normal Mode
-  2. Almost everyone: Hybrid Mode (Put ARM on AUX1)
 
 ## Output Power Limit
 There has been some reports of the R9M modules showing instability at >250mw with stock cooling. This in part because the ELRS uses a higher duty cycle for transmission compared to stock firmware. By default the power of any TX is limited to 250mw but you can unlock up to 1000mw (for hardware that supports it) by enabling the following option. Do this at your own risk if you make no cooling modifications-- R9M modules will burn themselves out without cooling.
