@@ -83,3 +83,7 @@
 .md-header__title {
   font-size: 1rem;
 }
+
+.md-announce { /* Hiding it for now */
+  display: none;
+}

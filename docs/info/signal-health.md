@@ -30,7 +30,7 @@ RSSI and LQI are included already in the protocol used to communicate to the fli
 ## Available RSSI OSD Fields
 
 * **RSSI dBm** - This is the true RSSI value we've talked about here, and is available on Betaflight after 4.1 (?) and iNav after 2.6 (?)
-* **Link Quality** - This is LQI discussed here, and has the same version requirements. Betaflight adds the RF Mode to this as well, e.g. `7:100` means mode 7 = 500Hz and 100% LQI.
+* **Link Quality** - This is LQI discussed here, and has the same version requirements. Betaflight and iNav (LQ TYPE2 option) display add the RF Mode to this as well, e.g. `7:100` means mode 7 = 500Hz and 100% LQI.
 * **RSSI Value** - Or sometimes just **RSSI**. This is the old undefined units of Signal Strength value that everyone is used to with no idea what value is good or what value is too bad. What value you'll actually see here varies, even on ExpressLRS, and is covered in the [RSSI Value OSD field](#RSSI-Value-OSD-field) section. It is not recommended to use this field unless you have to (e.g. DJI).
 
 ## RSSI Value OSD field

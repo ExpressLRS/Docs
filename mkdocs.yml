@@ -32,9 +32,21 @@ theme:
     - navigation.sections
     - navigation.tabs
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
       primary: expresslrs
       accent: expresslrs
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+      default: expresslrs-dark
+      primary: expresslrs-dark
+      accent: expresslrs-dark
   font:
     text: Roboto
     code: Roboto Mono
@@ -66,6 +78,8 @@ extra:
       link: https://twitter.com/expresslrs
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/expresslrs
+  version:
+    provider: mike
 
 markdown_extensions:
   - admonition
@@ -147,6 +161,7 @@ nav:
       - Post-Flash:
         - Binding ExpressLRS: quick-start/binding.md
         - Pre-first Flight Checks: quick-start/pre-1stflight.md
+        - Ardupilot Setup: quick-start/ardupilot-setup.md
       - Troubleshooting: quick-start/troubleshooting.md
   - Software:
       - Switch Configs: software/switch-config.md
@@ -166,15 +181,16 @@ nav:
       - ESP Backpack: hardware/esp-backpack.md
       - SMD Antenna: hardware/smd-antenna.md
       - SPI Receivers: hardware/spi-receivers.md
-      - DIY Receiver: hardware/diy-rx.md
-      - DIY Transmitter: hardware/diy-tx.md
+      - Special Targets:
+        - DIY Receiver: hardware/diy-rx.md
+        - DIY Transmitter: hardware/diy-tx.md
+        - Nuclear Targets: hardware/nuclear-hardware.md
   - Info:
       - Glossary: info/glossary.md
       - Signal Health: info/signal-health.md
       - Telemetry Bandwith: info/telem-bandwidth.md
+      - Testing:
+        - Unit Testing: info/unit-testing.md
+        - CRC Testing: info/crc-testing.md
+        - RX Scoreboard: info/rx-scoreboard.md
   - FAQ: faq.md
-
-# Google Analytics
-google_analytics:
-  - !!python/object/apply:os.getenv [ "GOOGLE_ANALYTICS_KEY" ]
-  - auto
