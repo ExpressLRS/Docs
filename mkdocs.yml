@@ -181,8 +181,10 @@ nav:
       - ESP Backpack: hardware/esp-backpack.md
       - SMD Antenna: hardware/smd-antenna.md
       - SPI Receivers: hardware/spi-receivers.md
-      - DIY Receiver: hardware/diy-rx.md
-      - DIY Transmitter: hardware/diy-tx.md
+      - Special Targets:
+        - DIY Receiver: hardware/diy-rx.md
+        - DIY Transmitter: hardware/diy-tx.md
+        - Nuclear Targets: hardware/nuclear-hardware.md
   - Info:
       - Glossary: info/glossary.md
       - Signal Health: info/signal-health.md
