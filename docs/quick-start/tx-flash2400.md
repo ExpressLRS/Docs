@@ -46,7 +46,7 @@ Using the [ELRS.lua](/quick-start/tx-prep/#troubleshooting-lua-script) script, v
 
 *Note: The `NamimnoRC_Flash_2400_TX_via_WiFi` Target will work for this method too!*
 
-With the correct target selected and [Firmware Options](/quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `firmware.elrs` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+With the correct target selected and [Firmware Options](/quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `firmware.elrs` file is. Do not close this window so you can easily locate the correct file to copy to your Radio SD Card.
 
 Copy the `firmware.elrs` file into your radio's SD Card `/FIRMWARE` folder.
 
