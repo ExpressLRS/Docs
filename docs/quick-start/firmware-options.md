@@ -46,32 +46,6 @@ This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have
 ## Extra Data
 
 ```
-HYBRID_SWITCHES_8
-```
-Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet; while in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the **TX** and **RX**. A detailed explanation of the differences between the two options can be found in the [Switch Modes](../../software/switch-config/) page.
-
-```
-ENABLE_TELEMETRY
-```
-Enable advanced telemetry support. This option must be enabled on both **TX** and **RX**. The following telemetry messages are supported:
-
-* GPS
-* BATTERY_SENSOR
-* ATTITUDE
-* DEVICE_INFO
-* FLIGHT_MODE
-* MSP_RESP
-
-**Note 1**: Increase the telemetry rate with the ExpressLRS lua script. Increase the rate until the sensor lost warnings go away. It is normal to set it up to 1:16 with a 200 Hz
-refresh rate.
-
-**Note 2**: It must be enabled together with **HYBRID_SWITCHES_8**.
-
-With this unchecked/disabled, you will only get the basic RC Link Telemetry like 1RRS (RSSI dbm), RQLY (LQ) etc.
-
-*Tip. You can have this option enabled in the Firmware Configuration, but set TLM Ratio to OFF in the ELRS Lua Script when you don't need advanced telemetry (like when racing). Should you need the telemetry (freestyle or medium-to-long-range flying), flip TLM Ratio back to your favorite ratio, like 1:16 or 1:8.*
-
-```
 TLM_REPORT_INTERVAL_MS
 ```
 It makes the TX module send the telemetry data to OpenTX to the interval you set. This stops the telemetry lost warnings when running a high telemetry ratio, or low rates like 50hz.

@@ -123,4 +123,4 @@ This enables communication with the **[ESP Backpack](../../hardware/esp-backpack
 
 ## Obsolete user_defines
 
-See [Obsolete user_defines](../../software/obsolete-defines)
+See [Obsolete user_defines](Obsolete-user_defines)
