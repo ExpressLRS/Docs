@@ -6,6 +6,8 @@ template: main.html
 
 ## Flashing via Wifi 
 
+Target: `HappyModel_EP_2400_RX_via_WIFI`
+
 ### Method 1
 
 **(Recommended as first-flash method)**
