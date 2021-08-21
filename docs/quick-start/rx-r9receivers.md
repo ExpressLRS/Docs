@@ -22,7 +22,7 @@ Make sure the correct [Bootloader](/quick-start/rx-bootloader/) has been flashed
 
 Once wired to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
 
-If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your Options set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
+If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your [Firmware Options](/quick-start/firmware-options) set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
 
 Once `Retry... ` lines appear, connect a LiPo if your receiver isn't powered by the USB (i.e. power up your FC and receiver). On subsequent flash, you can have the LiPo plugged in and receiver powered up from the start prior to connecting the USB.
 
@@ -44,6 +44,6 @@ Disable 'Readout Protection'. To do this download the [ST-LINK Utility](https://
 
 After doing so, Disconnect from STLink Utility.
 
-Using the correct target specific for your receiver, set your Firmware Options and hit **Build & Flash** on the ExpressLRS Configurator.
+Using the correct target specific for your receiver, set your [Firmware Options](/quick-start/firmware-options) and hit **Build & Flash** on the ExpressLRS Configurator.
 
 Once done, wire your receiver to your Flight Controller. Passthrough flashing can now be used for updating the receiver.

@@ -33,7 +33,7 @@ Target: `BETAFPV_900_TX_via_UART`
 
 Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
 
-Using the ExpressLRS Configurator with the correct Target selected and [options](/quick-start/firmware-options) set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
+Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options](/quick-start/firmware-options) set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
 Verify with the [ELRS.lua](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/ELRS.lua?raw=true) script if you have successfully updated your module using the Git commit hash for the firmware version you have on the module.
 
