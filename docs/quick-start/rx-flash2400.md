@@ -38,6 +38,12 @@ Connect to the Wifi Network the receiver has created. It should be named somethi
 
 A white page should load momentarily with the message **Update Success! Rebooting...** Wait a little bit (you can wait until the LED on the Receiver starts to blink slowly again) and the receiver should be updated. Power cycle and your module and receiver should now be bound (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
 
+**Update for version 1.1.0**
+
+Once you have updated to firmware version 1.1.0 or newer, the Web Update page on the Hotspot will get a few updates of its own. It will get the Update progress bar, and a Popup will be shown for Success or Error messages. Additionally, you can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the two methods below.
+
+![JoinNetwork](../assets/images/web-joinnetwork.png)
+
 ### Method 2
 
 *Note: This method will only work once the Home Network SSID and Password has been configured with the receiver*
@@ -46,7 +52,7 @@ With the receiver [wired properly](/quick-start/rx-fcprep/#namimnorc-voyager-fla
 
 **Build** the firmware. Once done, it should open a new window where the `NamimnoRC_FLASH_2400_ESP_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
-Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Mode.
+Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi AP Mode. The fast blink will pause and flash fast once again, indicating connection to your Home Network.
 
 Using your browser, navigate to http://elrs_rx.local/. The Wifi Update page should load. It should show your device target along with the version of the firmware it currently has.
 
