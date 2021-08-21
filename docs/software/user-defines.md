@@ -7,7 +7,7 @@ template: main.html
 # User Defines Explained
 With more features being added consistently, [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/user_defines.txt) has gotten complicated 🤷‍♂️. So we will break it down! 🔨 
 
-*Note: This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](/software/toolchain-install/).
+*Note: This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](/software/toolchain-install/) or Manual Mode on the ExpressLRS Configurator.
 
 ## Defines 101
 - To enable/disable anything in the user defines, simply add or remove a `#` in front of anything that has a `-D`.
@@ -17,8 +17,9 @@ With more features being added consistently, [`./src/user_defines.txt`](https://
 ```
 -DMY_BINDING_PHRASE="default ExpressLRS binding phrase"
 ```
-This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional binding method. 📜 
-<sub><sup>This phrase gets md5 hashed and gets built into the binary you will be flashing.</sup></sub>
+This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet<sup>*</sup>. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional binding method. 📜 
+
+<small><sup>*</sup> This phrase gets md5 hashed and gets built into the binary you will be flashing.</small>
 
 ## Regulatory Domain
 ```
@@ -64,7 +65,9 @@ AUX1 is the channel ExpressLRS uses to detect "ARMED", and this feature assumes 
 ```
 These features enable **lower latency** 🏃‍♂️ and **offset** from the OpenTX radio to the TX. The first lowers latency and should be kept enabled. The second is more experimental and can lower the offset from the radio by tuning it as close as possible to `0`, but is experimental (even in 1.0) and is best left disabled. 
 
-Both require [OpenTX `2.3.12`](https://www.open-tx.org/) or above. In order to install it, you will have to use OpenTX companion application.
+Both require [OpenTX `2.3.12`](https://www.open-tx.org/) or above. In order to install it, you will have to use OpenTX companion application. 
+
+You can also use [EdgeTX](https://github.com/EdgeTX/edgetx).
 
 ```
 -DLOCK_ON_FIRST_CONNECTION
@@ -116,8 +119,8 @@ The build process also supports RTTTL-formatted ringtone strings. RTTTL melodies
 ```
 -DUSE_ESP8266_BACKPACK
 ```
-This enables communication with the **[ESP Backpack](https://github.com/AlessandroAU/ExpressLRS/wiki/ESP-Backpack-Addon)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
+This enables communication with the **[ESP Backpack](/hardware/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
 
 ## Obsolete user_defines
 
-See [Obsolete user_defines](Obsolete-user_defines)
+See [Obsolete user_defines](/software/obsolete-defines)

@@ -34,7 +34,7 @@ You will need to bridge the `Boot` pads on the receiver the first time you'll be
 
 Bridging the `Boot` pads is no longer needed past 1.0.0-RC6. 
 
-Power your FC with a LiPo, or if receiver is powered via USB (receiver is connected to a 4v5 pad), connect the FC to your USB port. Using the ExpressLRS Configurator, with the correct Target selected and options set, click on **Build & Flash**. Wait for the process to finish and you should be greeted with the "Success" banner.
+Power your FC with a LiPo, or if receiver is powered via USB (receiver is connected to a 4v5 pad), connect the FC to your USB port. Using the ExpressLRS Configurator, with the correct Target selected and [Firmware Options](/quick-start/firmware-options) set, click on **Build & Flash**. Wait for the process to finish and you should be greeted with the "Success" banner.
 
 Unplug USB and LiPo, and removed the solder on the bridged `Boot` pads. You no longer need it (past 1.0.0-RC6). Power your TX Module and then your FC to verify you are bound and has connection.
 
@@ -44,4 +44,4 @@ Target: `HappyModel_EP_2400_RX_via_UART`
 
 Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the FTDI, and RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Short the boot pad while powering the RX on, and release - the LED should now be solid.
 
-Select the target and set your Firmware Options and once done, click on **Build and Flash**.
+Select the target and set your [Firmware Options](/quick-start/firmware-options) and once done, click on **Build and Flash**.
