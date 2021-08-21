@@ -16,6 +16,6 @@ The PP **doesn't** have a `Boot` pad either so there's no need to bridge any pad
 
 Once wired, power up your FC by connecting a LiPo or, if the receiver is getting powered via USB, connect your USB cable to a vacant port.
 
-Using the ExpressLRS Configurator, with the correct Target selected and options set, hit **Build & Flash**. Wait a bit for the process to finish and you should see a "Success" banner. 
+Using the ExpressLRS Configurator, with the correct Target selected and [Firmware Options](/quick-start/firmware-options) set, hit **Build & Flash**. Wait a bit for the process to finish and you should see a "Success" banner. 
 
 Power-cycle the FC and verify receiver connects to the Tx module (power up the Tx first, then the Receiver).
