@@ -52,7 +52,7 @@ Copy the `firmware.elrs` file into your radio's SD Card `/FIRMWARE` folder.
 
 Once copied, navigate to the `/FIRMWARE` Folder on your Radio and select/highlight the `firmware.elrs` file, long-press the Enter key and select `Flash external ELRS`. Radio should show a `Flash Successful` message and you're done!
 
-Verify with the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script if you have successfully updated your module using the Git commit hash for the firmware version you have on the module.
+Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
 
 ## Flashing via STLink
 
