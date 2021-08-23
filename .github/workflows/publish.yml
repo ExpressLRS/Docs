@@ -24,7 +24,7 @@ jobs:
           mike deploy 1.0 release
           mike set-default release
       - run: |
-          git checkout v1.1-docs
+          git checkout development
           mike deploy 1.1 development
       - run: |
           git checkout gh-pages
