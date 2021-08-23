@@ -8,7 +8,7 @@ template: main.html
 
 Target: `BETAFPV_900_RX_via_BetaflightPassthrough`
 
-Make sure you have [wired](/quick-start/rx-fcprep/#betafpv-receivers) your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
+Make sure you have [wired](../..//quick-start/rx-fcprep/#betafpv-receivers) your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
 
 If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
 
@@ -16,7 +16,7 @@ If the receiver needs a LiPo attached to get powered up, then Press and Hold the
 
 These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
 
-Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options](/quick-start/firmware-options) and then click **Build and Flash**. For first time flashing/updating, it would normally take a while. 
+Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options](../../quick-start/firmware-options) and then click **Build and Flash**. For first time flashing/updating, it would normally take a while. 
 
 A `Success` message will be shown once the process is complete.
 
@@ -24,7 +24,7 @@ A `Success` message will be shown once the process is complete.
 
 Target: `BETAFPV_900_RX_via_WIFI`
 
-With the receiver [wired](/quick-start/rx-fcprep/#betafpv-receivers) properly to your FC, select the correct target and set the [Firmware Options](/quick-start/firmware-options) in the ExpressLRS Configurator.
+With the receiver [wired](../../quick-start/rx-fcprep/#betafpv-receivers) properly to your FC, select the correct target and set the [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the firmware.bin is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
@@ -40,4 +40,4 @@ Target: `BETAFPV_900_RX_via_UART`
 
 Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the FTDI, and RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Press the button while powering the RX on, and release - the LED should now be solid.
 
-Select the target and set your [Firmware Options](/quick-start/firmware-options) and once done, click on **Build and Flash**.
+Select the target and set your [Firmware Options](../../quick-start/firmware-options) and once done, click on **Build and Flash**.

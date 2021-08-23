@@ -24,11 +24,11 @@ ExpressLRS needs your radio to support crsfshot (a.k.a. Mixersync) to work prope
 
 For example: 0:50, 0:150, 0:250, 0:500, ...
 
-When that is the case your radio has crsfshot working and you're good to go. Click [here](/quick-start/tx-prep) to read more on OpenTX.
+When that is the case your radio has crsfshot working and you're good to go. Click [here](../../quick-start/tx-prep/) to read more on OpenTX.
 
 ## How can I flash/update x receiver/module?
 
-See [Getting Started](/quick-start/getting-started) page
+See [Getting Started](../../quick-start/getting-started/) page
 
 ## Will x Receiver work with y TX Module from z Manufacturer?
 
@@ -50,7 +50,7 @@ To confirm your update rate is working as intended, you can use the ExpressLRS L
   * 4x full-resolution (10-bit) channels for sticks (CH1-4)
   * Either:
     * **Standard Mode** 4x 2-position channels sent every frame (increased to 8x in 1.0), OR
-    * **HYBRID_SWITCHES_8 Mode** 8x 3-position channels, where CH5 (AUX1/ARM) is sent every frame, and the other 7 are sent round-robin (7 frames to send all channels) also changed in 1.0, see [Switch Modes](/software/switch-config)
+    * **HYBRID_SWITCHES_8 Mode** 8x 3-position channels, where CH5 (AUX1/ARM) is sent every frame, and the other 7 are sent round-robin (7 frames to send all channels) also changed in 1.0, see [Switch Modes](../../software/switch-config/)
 
 ## Is my binding phrase a secret?
 

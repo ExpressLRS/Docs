@@ -7,7 +7,7 @@ template: main.html
 # User Defines Explained
 With more features being added consistently, [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/user_defines.txt) has gotten complicated 🤷‍♂️. So we will break it down! 🔨 
 
-*Note: This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](/software/toolchain-install/) or Manual Mode on the ExpressLRS Configurator.
+*Note: This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](../../software/toolchain-install/) or Manual Mode on the ExpressLRS Configurator.
 
 ## Defines 101
 - To enable/disable anything in the user defines, simply add or remove a `#` in front of anything that has a `-D`.
@@ -66,7 +66,7 @@ Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU
 ```
 #-DHYBRID_SWITCHES_8
 ```
-Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in [Switch Modes](https://github.com/ExpressLRS/ExpressLRS/wiki/Switch-Modes), but
+Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in [Switch Modes](../../software/switch-config/), but
   1. If only two position switches are needed, and they must be updated as fast as possible: Normal Mode
   2. Almost everyone: Hybrid Mode (Put ARM on AUX1)
 
@@ -76,7 +76,7 @@ There has been some reports of the R9M modules showing instability at >250mw wit
 ````
 #-DUNLOCK_HIGHER_POWER 
 ````
-We published [R9M Fan Mod Cover](https://github.com/AlessandroAU/ExpressLRS/wiki/R9M-Fan-Mod-Cover), a custom 3d printed backplate with room for a fan and extra cooling to allow for maximum power (1-2W depending on the mod).
+We published [R9M Fan Mod Cover](../../hardware/fan-mod/), a custom 3d printed backplate with room for a fan and extra cooling to allow for maximum power (1-2W depending on the mod).
  
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" width="20%" height="auto" /><img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottom.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottompng" width="20%" height="auto" />
 
@@ -148,8 +148,8 @@ The build process also supports RTTTL-formatted ringtone strings. RTTTL melodies
 ```
 -DUSE_ESP8266_BACKPACK
 ```
-This enables communication with the **[ESP Backpack](/hardware/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
+This enables communication with the **[ESP Backpack](../../hardware/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
 
 ## Obsolete user_defines
 
-See [Obsolete user_defines](/software/obsolete-defines)
+See [Obsolete user_defines](../../software/obsolete-defines)
