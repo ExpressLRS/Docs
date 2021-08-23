@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master
+      - development
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -11,5 +14,21 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install "mkdocs-material==7.2.4" mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0"
-      - run: mkdocs gh-deploy --force
+      - run: pip install "mkdocs-material==7.2.4" mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike
+      - run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull
+          git checkout master
+      - run: | 
+          mike deploy 1.0 release
+          mike set-default release
+      - run: |
+          git checkout v1.1-docs
+          mike deploy 1.1 development
+      - run: |
+          git checkout gh-pages
+      - run: git remote set-url --push origin https://actions:$GITHUB_TOKEN@github.com/ExpressLRS/Docs
+      - run: git push -f origin gh-pages
+
+      

@@ -62,7 +62,7 @@ Enable advanced telemetry support. This option must be enabled on both **TX** an
 * FLIGHT_MODE
 * MSP_RESP
 
-**Note 1**: Increase the telemetry rate with the ExpressLRS lua script. Increase the rate until the sensor lost warnings go away. It is normal to set it up to 1:16 with 200 Hz
+**Note 1**: Increase the telemetry rate with the ExpressLRS lua script. Increase the rate until the sensor lost warnings go away. It is normal to set it up to 1:16 with a 200 Hz
 refresh rate.
 
 **Note 2**: It must be enabled together with **HYBRID_SWITCHES_8**.
