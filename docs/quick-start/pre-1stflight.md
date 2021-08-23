@@ -50,7 +50,7 @@ Blackbox is handy for evaluating the performance of the RF link for a flight. Se
 
 Initially ExpressLRS had very limited telemetry support but with Version `1.0.0-RC1` this changed and **full telemetry was added as optional feature**. The default setting only includes the link status message that includes the RSSI and Link quality.
 
-To receive all messages the feature telemetry has to be enabled in the [user defines](../../quick-start/user-defines/#telemetry). It's possible to flash your TX module *with telemetry support enabled* and use it with a RX *without telemetry enabled*. So you can flash certain receivers with telemetry support and others without it and use it with the same TX module.
+To receive all messages the feature telemetry has to be enabled in the [user defines](../../software/user-defines/#telemetry). It's possible to flash your TX module *with telemetry support enabled* and use it with a RX *without telemetry enabled*. So you can flash certain receivers with telemetry support and others without it and use it with the same TX module.
 
 The RX transmits a subset of telemetry it receives from the flight controller. Disabling certain messages only works if the flight controller firmware does support it. For Betaflight this is possible with the telemetry_disabled_* cli settings:
 
