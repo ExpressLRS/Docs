@@ -8,7 +8,7 @@ template: main.html
 
 Target: `BETAFPV_900_RX_via_BetaflightPassthrough`
 
-Make sure you have [wired](../..//quick-start/rx-fcprep/#betafpv-receivers) your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
+Make sure you have [wired](../../quick-start/rx-fcprep/#betafpv-receivers) your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
 
 If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
 
