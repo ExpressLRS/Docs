@@ -16,12 +16,12 @@ There are two ways to bind the receiver, as shown below
 
 Put the receiver into bind mode using any of these procedures:
 
-- "Bind" button in the Betaflight Configurator, Receiver Page (if can't be found, [update](/hardware/spi-receivers/#updating) the Betaflight firmware).
+- "Bind" button in the Betaflight Configurator, Receiver Page (if can't be found, [update](../../hardware/spi-receivers/#updating) the Betaflight firmware).
 - using the CLI, type in `bind_rx` and press enter once.
 - press the bind button on the flight controller.
 - using the CLI, type in `set expresslrs_uid = 0`, press enter once, then save and reboot
 
-Enter [elrs.lua](/quick-start/tx-prep/#lua-script) in your handset and press the `Bind` button. The RX and TX should be now bound.
+Execute [elrs.lua](../../quick-start/tx-prep/#lua-script) in your handset and press the `Bind` button. The RX and TX should be now bound.
 
 **Please mind the order, RX first, TX second.**
 
