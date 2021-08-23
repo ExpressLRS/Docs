@@ -8,7 +8,7 @@ template: main.html
 
 ExpressLRS stores unique configurations based on the CRSF Recevier number configured in OpenTX/EdgeTX. This can be used with or without model matching - for example a single drone being used for longrange and freestyle can have it's RF params switched quickly by changing the model on the radio. The value is shown highlighted below on a TX16s.
 
-<img src="/assets/images/modelcfg.jpg" width="50%">
+<img src="../../assets/images/modelcfg.jpg" width="50%">
 
 The parameters that are unique to a configuration are as follows:
 
