@@ -16,9 +16,9 @@ Targets:
 - `NamimnoRC_VOYAGER_900_ESP_RX_via_BetaflightPassthrough` 
 - `NamimnoRC_VOYAGER_900_RX_via_BetaflightPassthrough`
 
-Once [wired properly](/quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
+Once [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
 
-If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your [Firmware Options](/quick-start/firmware-options) set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
+If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your [Firmware Options](../../quick-start/firmware-options) set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
 
 Once `Retry... ` lines appear, connect a LiPo if your receiver isn't powered by the USB (i.e. power up your receiver and FC). On subsequent flash, you can have the LiPo plugged in and receiver powered up from the start.
 
@@ -28,7 +28,7 @@ Wait for this process to finish. It's done once the "Success" prompt is shown.
 
 Target: `NamimnoRC_VOYAGER_900_ESP_RX_via_WIFI`
 
-With the receiver [wired properly](/quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](/quick-start/firmware-options) in the ExpressLRS Configurator.
+With the receiver [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the `firmware.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
@@ -43,11 +43,11 @@ Target: `NamimnoRC_VOYAGER_900_ESP_RX_via_UART`
 
 Wire the receiver into the FTDI, with the TX on receiver connected to the Rx on the FTDI, and the RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Press the button while powering the RX on, and release - the LED should now be solid.
 
-Select the target and set your [Firmware Options](/quick-start/firmware-options) and once done, click on **Build and Flash**.
+Select the target and set your [Firmware Options](../../quick-start/firmware-options) and once done, click on **Build and Flash**.
 
 ## STLink Updating (STM32 Only)
 Target: `NamimnoRC_VOYAGER_900_RX_via_STLINK`
 
 The units provided to the documentation team did not have STM32 chips due to the chip shortage, however, the following should apply. Wire CLK, 3v3, GND and DIO to the recievers STLink pins.
 
-Select the target and set your [Firmware Options](/quick-start/firmware-options) and once done, click on **Build and Flash**.
+Select the target and set your [Firmware Options](../../quick-start/firmware-options) and once done, click on **Build and Flash**.

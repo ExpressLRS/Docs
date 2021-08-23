@@ -7,7 +7,7 @@ template: main.html
 # User Defines Explained
 With more features being added consistently, [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/user_defines.txt) has gotten complicated 🤷‍♂️. So we will break it down! 🔨 
 
-*Note: This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](/software/toolchain-install/) or Manual Mode on the ExpressLRS Configurator.
+*Note: This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](../../software/toolchain-install/) or Manual Mode on the ExpressLRS Configurator.
 
 ## Defines 101
 - To enable/disable anything in the user defines, simply add or remove a `#` in front of anything that has a `-D`.
@@ -47,7 +47,7 @@ There has been some reports of the R9M modules showing instability at >250mw wit
 ````
 #-DUNLOCK_HIGHER_POWER 
 ````
-We published [R9M Fan Mod Cover](https://github.com/AlessandroAU/ExpressLRS/wiki/R9M-Fan-Mod-Cover), a custom 3d printed backplate with room for a fan and extra cooling to allow for maximum power (1-2W depending on the mod).
+We published [R9M Fan Mod Cover](../../hardware/fan-mod/), a custom 3d printed backplate with room for a fan and extra cooling to allow for maximum power (1-2W depending on the mod).
  
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" width="20%" height="auto" /><img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottom.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottompng" width="20%" height="auto" />
 
@@ -119,8 +119,8 @@ The build process also supports RTTTL-formatted ringtone strings. RTTTL melodies
 ```
 -DUSE_ESP8266_BACKPACK
 ```
-This enables communication with the **[ESP Backpack](/hardware/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
+This enables communication with the **[ESP Backpack](../../hardware/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
 
 ## Obsolete user_defines
 
-See [Obsolete user_defines](/software/obsolete-defines)
+See [Obsolete user_defines](../../software/obsolete-defines)

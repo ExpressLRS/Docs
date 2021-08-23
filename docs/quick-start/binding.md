@@ -4,11 +4,11 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)
 
-Binding can be done with either a hard coded unique binding phrase or in a more traditional way where you put the receiver and transmitter into bind mode, and they link up. There is no reason to use traditional binding if you're flashing both your TX and RX firmware anyway. If you used a bind phrase in your user defines, there is no need to read this article. Proceed to the [next section](/quick-start/pre-1stflight). If not, here is how to bind an ELRS TX and RX.
+Binding can be done with either a hard coded unique binding phrase or in a more traditional way where you put the receiver and transmitter into bind mode, and they link up. There is no reason to use traditional binding if you're flashing both your TX and RX firmware anyway. If you used a bind phrase in your user defines, there is no need to read this article. Proceed to the [next section](../../quick-start/pre-1stflight/). If not, here is how to bind an ELRS TX and RX.
 
 ## Unique Phrase
 
-You need to have a **unique** binding phrase in the [`user_defines.txt`](https://github.com/ExpressLRS/ExpressLRS/wiki/User-Defines#binding-phrase) file or entered in the "Custom Binding Phrase" box in the Configurator.  After flashing your TX and RX, they will bind automatically. [Is my binding phrase a secret?](https://github.com/ExpressLRS/ExpressLRS/wiki/FAQ#is-my-binding-phrase-a-secret)
+You need to have a **unique** binding phrase in the [`user_defines.txt`](../../software/user-defines/#binding-phrase) file or entered in the "Custom Binding Phrase" box in the Configurator.  After flashing your TX and RX, they will bind automatically. [Is my binding phrase a secret?](../../faq/#is-my-binding-phrase-a-secret)
 
 ```
 -DMY_BINDING_PHRASE="default ExpressLRS binding phrase"

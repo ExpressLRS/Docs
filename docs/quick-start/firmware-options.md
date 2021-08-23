@@ -23,7 +23,7 @@ This is a relatively simple one - enable whatever regulatory domain you are in. 
 
 ## Binding Phrase
 
-This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional [binding method](../binding/). 📜 
+This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional [binding method](../../quick-start/binding/). 📜 
 
 ## Performance Options
 ```
@@ -73,7 +73,7 @@ The RTTL Syntax is the same as used in old mobil phones for ringtones and some e
 ```
 UNLOCK_HIGHER_POWER 
 ```
-Majority of the ExpressLRS modules maxes out at 250mW. With this option, higher power levels can be unlocked on the modules that supports it. However, it is imperative that you have taken measures to provide ample cooling to the module's internals through the use of a [Fan Mod](https://github.com/AlessandroAU/ExpressLRS/wiki/R9M-Fan-Mod-Cover). This specifically applies to the R9M, which, from factory, supports a higher power level up to 1W; but because ExpressLRS runs at a much higher duty cycle, it taxes the circuity and thus produces heat much earlier. To keep it stable, cooling should be implemented. Without any cooling, you run the risk of ending up with a red paperweight.
+Majority of the ExpressLRS modules maxes out at 250mW. With this option, higher power levels can be unlocked on the modules that supports it. However, it is imperative that you have taken measures to provide ample cooling to the module's internals through the use of a [Fan Mod](../../hardware/fan-mod/). This specifically applies to the R9M, which, from factory, supports a higher power level up to 1W; but because ExpressLRS runs at a much higher duty cycle, it taxes the circuity and thus produces heat much earlier. To keep it stable, cooling should be implemented. Without any cooling, you run the risk of ending up with a red paperweight.
 
 ```
 UART_INVERTED
@@ -113,6 +113,6 @@ USE_R9MM_R9MINI_SBUS
 ```
 **This does not turn on SBUS protocol** it simply changes the pin used for communication from those two side pins (A9 and A10) to use the pin labeled "SBUS" on the RX, which is inverted. This is useful for F4 FCs which only have an inverted receiver input UART RX. 🔼. This is only one way, so you lose the telemetry downlink to your radio as well as passthrough flashing. Enabling this turns on CRSF protocol output on the S.BUS 🚌 pin on your R9MM/R9Mini. set serialrx_inverted = ON may also be needed within Betaflight 🐝 for compatibility
 
-*For a complete list of User Defines, head over to the [User Defines page](/software/user-defines.md).*
+*For a complete list of User Defines, head over to the [User Defines page](../../software/user-defines/).*
 
 **Done! It's time to flash the firmware on your transmitter**
