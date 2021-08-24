@@ -56,6 +56,23 @@ Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU
 
 *Tip: only check this if you're changing the value. No need to enable it if you'll be using the default 320LU value*
 
+## Network Options
+
+```
+AUTO_WIFI_ON_INTERVAL
+```
+*Note: In version 1.1, this option is now available for TX Modules as well*
+
+⚠️ Must be defined if you plan to update your RX over wifi without using a button on the RX ⚠️ This will automatically turn the wifi 📶 ON for any module that has an ESP8285 on it if no TX connection is established after N seconds from boot (Factory Firmware of the HappyModel receivers set this to the previous default of 20s. RC8 has increased the interval to 30s). This enables pushing firmware updates to the RX by connecting to its wifi network and visiting http://10.0.0.1.
+
+```
+HOME_WIFI_SSID
+HOME_WIFI_PASSWORD
+```
+*New in 1.1.0*
+
+These options set Home Network Access for your Wifi-enabled hardware. With these set, the devices will connect to your WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time (Receivers). Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, in any device in the same network. Tx Module Wifi update page can be reached using the address http://elrs_tx.local, while receivers' update page can be reached via http://elrs_rx.local.
+
 ## Other Options
 
 ```
@@ -97,11 +114,6 @@ LOCK_ON_FIRST_CONNECTION
 ```
 RF Mode Locking - When the RX is waiting for a connection, it cycles through all available rates waiting for a connection on each one. By default, ExpressLRS will go back to this mode after a disconnect (failsafe). If LOCK_ON_FIRST_CONNECTION is used, ELRS will not cycle after a disconnect, but instead just stay on whatever rate the last connection was. This makes connection re-establishment quick, because the RX is always listening at the proper rate. This is generally what everyone wants, but there is utility in being able to switch the TX to the lowest rate to get more range to re-establish a link with a downed model, which can't happen if the RX is locked at the previous rate.
 When cycling through the rates, the RX starts with the fastest packet rate and works down to the slowest, then repeats. It waits PACKET_INTERVAL * PACKS_PER_HOP * HOP_COUNT * 1.1 at each rate. Example: 4ms * 4 * 80 * 1.1 = 1.408s for 250Hz. The duration is extended 10x if a valid packet is received during that time. Even with LOCK_ON_FIRST_CONNECTION, the rate can be changed by changing the TX rate using ELRS.lua while connected, or by power cycling the RX.
-
-```
-AUTO_WIFI_ON_INTERVAL
-```
-⚠️ Must be defined if you plan to update your RX over wifi without using a button on the RX ⚠️ This will automatically turn the wifi 📶 on for any module that has an ESP8285 on it if no TX connection is established after N seconds from boot (Factory Firmware of the HappyModel receivers set this to the previous default of 20s. RC8 has increased the interval to 30s). This enables pushing firmware updates to the RX by connecting to its wifi network and visiting http://10.0.0.1.
 
 ```
 USE_DIVERSITY
