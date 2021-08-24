@@ -24,6 +24,8 @@ A `Success` message will be shown once the process is complete.
 
 Target: `BETAFPV_900_RX_via_WIFI`
 
+### Method 1
+
 With the receiver [wired](../../quick-start/rx-fcprep/#betafpv-receivers) properly to your FC, select the correct target and set the [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the `BETAFPV_900_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
@@ -44,7 +46,7 @@ Once you have updated to firmware version 1.1.0 or newer, the Web Update page on
 
 *Note: This method will only work once the Home Network SSID and Password has been configured with the receiver*
 
-With the receiver [wired properly](/quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](/quick-start/firmware-options) in the ExpressLRS Configurator.
+With the receiver [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the `BETAFPV_900_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
@@ -64,7 +66,7 @@ You can now power down your Flight Controller along with the receiver.
 
 *Note: This method will only work once the Home Network SSID and Password has been configured with the receiver*
 
-With the receiver [wired properly](/quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](/quick-start/firmware-options) in the ExpressLRS Configurator.
+With the receiver [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 
 Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Mode.
 
