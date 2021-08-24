@@ -44,7 +44,7 @@ Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) scri
 
 ## Flashing via OpenTX Radio
 
-*Note: The `NamimnoRC_Flash_2400_TX_via_WiFi` Target will work for this method too!*
+*Note: The `NamimnoRC_Flash_900_TX_via_WiFi` Target will work for this method too!*
 
 With the correct target selected and [Firmware Options](../../quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `NamimnoRC_Voyager_900_TX-<version>.elrs` file is. Do not close this window so you can easily locate the correct file to copy to your Radio SD Card.
 
