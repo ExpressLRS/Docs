@@ -86,6 +86,6 @@ The "96bf63" from the photo above is the Commit Hash of the firmware version tha
 
 ### Model Configurations
 
-Model Configurations can also be added using the CRSF Model Number for per reciever settings customizability and lowered risk of accidentally connecting to multiple recievers at the same time. For more information on configurign this this up check out [this page](/software/model-config-match).
+Model Configurations can also be added using the CRSF Model Number for per reciever settings customizability and lowered risk of accidentally connecting to multiple recievers at the same time. For more information on configurign this this up check out [this page](../../software/model-config-match/).
 
 **Now that your radio is set, you can now proceed with flashing ExpressLRS!**
