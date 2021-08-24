@@ -85,7 +85,7 @@ If the value of bad:good packet from the lua script is showing 0/142, etc., have
 
 The "96bf63" from the photo above is the Commit Hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases).
 
-### Model Configurations
+## Model Configurations
 
 Model Configurations can also be added using the CRSF Model Number for per reciever settings customizability and lowered risk of accidentally connecting to multiple recievers at the same time. For more information on configurign this this up check out [this page](../../software/model-config-match/).
 
