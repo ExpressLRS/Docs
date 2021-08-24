@@ -34,7 +34,7 @@ Video Tutorial (thanks to @JyeSmith):
 
 Set passphrase in the TX. When building via ExpressLRS configurator, or via VS Code note down and copy below numbers from the build log:
 
-![UID String](/assets/images/UIDsource.png)
+![UID String](../assets/images/UIDsource.png)
 
 Go to betaflight cli and type (for example):
 
