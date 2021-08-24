@@ -24,7 +24,7 @@ On your browser, refresh the http://elrs_tx.local/ and scroll towards the STM32 
 
 ![STM32 Firmware Update](../assets/images/STM32-updater.png)
 
-Drag-and-drop the `firmware.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the Choose File button. Once the correct file is selected, click the `Upload and Flash STM32`. Wait for the process to complete, and the module will reboot (~2-3min). Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
+Drag-and-drop the `firmware.elrs` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the Choose File button. You can also upload the `firmware.bin` file but change the offset to *0x4000*. Once the correct file is selected, click the `Upload and Flash STM32`. Wait for the process to complete, and the module will reboot (~2-3min). Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
 
 ### Method 2
 
