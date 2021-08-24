@@ -8,6 +8,8 @@ template: main.html
 
 Target: `BETAFPV_2400_TX_via_WIFI`
 
+### Method 1
+
 With the correct target selected and [Firmware Options](../../quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `firmware.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 The next steps will require the [ELRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/ELRS.lua?raw=true) (right-click, save as). Download the ELRS.lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's proper connection with the radio. Execute the ELRS.lua script by pressing "System Menu" in your radio and then under Tools, select ELRS.lua.
@@ -35,7 +37,7 @@ Once you have updated to firmware version 1.1.0 or newer, the Web Update page on
 
 ### Method 2
 
-With the correct target selected and [Firmware Options](/quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX-<version>` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+With the correct target selected and [Firmware Options](../../quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX-<version>` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 Using the [ELRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/ELRS.lua?raw=true) (right-click, save as), select `Wifi Update` and if you have flashed your Tx Module with your Home WiFi Network details, it will connect to the network automatically.
 
@@ -43,17 +45,17 @@ Using your browser, navigate to http://elrs_tx.local and the WiFi Update page sh
 
 ![Firmware Update](../assets/images/web-firmwareupdate.png)
 
-Drag-and-drop the `BETAFPV_2400_TX-<version>` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and the module will reboot (~2-3min). Using the [ELRS.lua](/quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
+Drag-and-drop the `BETAFPV_2400_TX-<version>` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and the module will reboot (~2-3min). Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
 
 ### Method 3
 
 Using the [ELRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/ELRS.lua?raw=true) (right-click, save as), select `Wifi Update` and if you have flashed your Tx Module with your Home WiFi Network details, it will connect to the network automatically.
 
-Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options](/quick-start/firmware-options). Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
+Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options](../../quick-start/firmware-options). Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
 
 ![Wifi Update Log](../assets/images/WifiUpdateLog.png)
 
-Using the [ELRS.lua](/quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
+Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
 
 ## Flashing via USB/UART
 
