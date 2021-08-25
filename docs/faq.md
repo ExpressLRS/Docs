@@ -24,11 +24,11 @@ ExpressLRS needs your radio to support crsfshot (a.k.a. Mixersync) to work prope
 
 For example: 0:50, 0:150, 0:250, 0:500, ...
 
-When that is the case your radio has crsfshot working and you're good to go. Click [here](../../quick-start/tx-prep/) to read more on OpenTX.
+When that is the case your radio has crsfshot working and you're good to go. Click [here](../quick-start/tx-prep/) to read more on OpenTX.
 
 ## How can I flash/update x receiver/module?
 
-See [Getting Started](../../quick-start/getting-started/) page
+See [Getting Started](../quick-start/getting-started/) page
 
 ## Will x Receiver work with y TX Module from z Manufacturer?
 
