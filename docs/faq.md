@@ -50,7 +50,7 @@ To confirm your update rate is working as intended, you can use the ExpressLRS L
   * 4x full-resolution (10-bit) channels for sticks (CH1-4)
   * Either:
     * **Standard Mode** 4x 2-position channels sent every frame (increased to 8x in 1.0), OR
-    * **HYBRID_SWITCHES_8 Mode** 8x 3-position channels, where CH5 (AUX1/ARM) is sent every frame, and the other 7 are sent round-robin (7 frames to send all channels) also changed in 1.0, see [Switch Modes](../../software/switch-config/)
+    * **HYBRID_SWITCHES_8 Mode** 8x 3-position channels, where CH5 (AUX1/ARM) is sent every frame, and the other 7 are sent round-robin (7 frames to send all channels) also changed in 1.0, see [Switch Modes](../software/switch-config)
 
 ## Is my binding phrase a secret?
 
