@@ -8,7 +8,7 @@ template: main.html
 
 Target: `HappyModel_PP_2400_RX_via_BetaflightPassthrough`
 
-The PP receivers do not have Wifi, and so, it can only be updated via Passthrough.
+The PP receivers do not have Wifi, and so, it can only be updated via Passthrough or STLink or STLink(see below).
 
 Follow the same wiring as that of the EP receivers shown [here](../../quick-start/rx-fcprep/#happymodel-ep1-ep2-pp). The PP has a silkscreened "RT5G" on one of its side indicating the order of the pads, with R = Rx, T = Tx, 5 = 5v and G = Gnd,  respectively. Connect the Rx pad to a Tx pad on the FC, and the Tx pad to an RX pad on the FC, with 5v and Gnd to their usual connections.
 
