@@ -2,312 +2,312 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.expresslrs.org/1.0/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/faq/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/license/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/diy-rx/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/diy-tx/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/esp-backpack/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/fan-mod/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/inverter-mod/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/nuclear-hardware/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/smd-antenna/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/spi-receivers/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/supported-hardware/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/hardware/x9d-troubleshooting/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/info/crc-testing/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/info/glossary/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/info/rx-scoreboard/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/info/signal-health/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/info/telem-bandwidth/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/info/unit-testing/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/ardupilot-setup/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/binding/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/firmware-options/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/getting-started/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/installing-configurator/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/pre-1stflight/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-betafpv2400/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-betafpv900/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-bootloader/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-diyreceivers/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-diyreceivers900/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-fcprep/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-flash2400/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-ghost2400/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-hmep2400/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-hmes900/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-hmpp2400/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-jumper900/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-r9receivers/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-siyiFRmini/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-stlink/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/rx-voyager900/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/troubleshooting/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-betafpv2400/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-betafpv900/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-diy/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-diy900/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-es24tx/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-es900tx/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-flash2400/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-ghost2400/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-prep/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-r9m/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-siyifm30/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-voyager900/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/software/obsolete-defines/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/software/open-ocd/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/software/stlink-fix/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/software/switch-config/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/software/toolchain-install/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/software/user-defines/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/software/updating/betaflight-passthrough/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/software/updating/wifi-updating/</loc>
-         <lastmod>2021-08-24</lastmod>
+         <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
