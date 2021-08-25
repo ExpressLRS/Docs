@@ -48,9 +48,7 @@ Targets:
 
 This method is an **irreversible** one. You will not be able to go back to Frsky firmwares with this method. You have been warned!
 
-This method also involves taking apart your module and soldering wires directly into its board. If you're not comfortable doing this, `STOP' now.
-
-Before flashing, disable `'Readout Protection'`. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). After such, you can now disconnect from the ST-Link Utility.
+This method also involves taking apart your module and soldering wires directly into its board. If you're not comfortable doing this, **STOP** now.
 
 ![R9M-stlink](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/FrSky%20R9M%20(2018%20model)%20st%20link%20connection.png)
 
@@ -64,6 +62,10 @@ Before flashing, disable `'Readout Protection'`. To do this download the [ST-LIN
 
 <small>R9M Lite Pro STLink Connection</small>
 
-With the module connected shown above, and your [Firmware Options](../../quick-start/firmware-options) set, hit **Build & Flash** in the ExpressLRS Configurator and wait for the process to finish. Once that's done, and the Success Message showing, you can now remove/unsolder the STLink, and re-assemble the module, and put it into your Radio's Module Bay. The ExpressLRS tune should play and then two beeps after that can be heard, for units that has a speaker (R9Ms) and if the External Module is set to CRSF Protocol.
+Wire up your module as shown above to your STLink device. This is important before any of the steps below.
 
-Verification can be done using the ELRS.lua script. It should show the Version Hash at the top, as well as the options you can set. If it's showing "Connecting", check if External Module is set to CRSF for the selected model in your radio, and that internal RF module is set to off. See general Troubleshooting section for other ways to determine your module is flashed and ready for flying.
+Before flashing, disable `'Readout Protection'`. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). After such, you can now disconnect (Target -> Disconnect) and close the ST-Link Utility.
+
+With the module still connected to the STLink, and your [Firmware Options](../../quick-start/firmware-options) set, hit **Build & Flash** in the ExpressLRS Configurator and wait for the process to finish. Once that's done, and the Success Message showing, you can now remove/unsolder the STLink, and re-assemble the module, and put it into your Radio's Module Bay. The ExpressLRS tune should play and then two beeps after that can be heard, for units that has a speaker (R9Ms) and if the External Module is set to CRSF Protocol.
+
+Verification can be done using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script. It should show the Version Hash at the top, as well as the options you can set. If it's showing "Connecting", check if External Module is set to CRSF for the selected model in your radio, and that internal RF module is set to off. See general Troubleshooting section for other ways to determine your module is flashed and ready for flying.
