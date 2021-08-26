@@ -21,7 +21,7 @@ The parameters that are unique to a configuration are as follows:
 
 ## Model Match
 
-If the `Model Match` flag is **disabled**, then recievers with model number 0 can be bound (any other number can not connect due to how the code functions). In this mode you can have different settings for the transmitter module irregardles of RX e.g. different switch mode, power settings for different situations.
+If the `Model Match` flag is **disabled**, then recievers with model number 0 can be bound (any other number can not connect due to how the code functions). In this mode you can have different settings for the transmitter module regardles of RX e.g. different switch mode, power settings for different situations.
 
 If the `Model Match` flag **is enabled**, then the receiver number configured in the external module configuration (as shown in the image above) must match the model number stored on the receiver module for the receiver and transmitter to connect.
 
