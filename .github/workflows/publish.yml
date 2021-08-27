@@ -10,25 +10,38 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - name: Checkout latest push
+        uses: actions/checkout@v2
+      
+      - name: Setup Python environment
+        uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install "mkdocs-material==7.2.4" mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike
-      - run: |
+          
+      - name: Install MkDocs and Dependencies
+        run: pip install "mkdocs-material==7.2.4" mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike
+        
+      - name: Setup Github
+        run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
           git checkout master
-      - run: | 
+          
+      - name: Deploy release version
+        run: | 
           mike deploy 1.0 release
           mike set-default release
-      - run: |
+       
+      - name: Deploy development version       
+        run: |
           git checkout development
           mike deploy 1.1 development
-      - run: |
+          
+      - name: Push latest updates to server
+        run: |
           git checkout gh-pages
-      - run: git remote set-url --push origin https://actions:$GITHUB_TOKEN@github.com/ExpressLRS/Docs
-      - run: git push -f origin gh-pages
+          git remote set-url --push origin https://actions:$GITHUB_TOKEN@github.com/ExpressLRS/Docs
+          git push -f origin gh-pages
 
       
