@@ -4,9 +4,9 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing the Latest OpenTX or EdgeTX for CRSFShot/Mixer Sync
+## Radio Firmware with CRSFShot/Mixer Sync
 
-ExpressLRS requires CRSFShot or Mixer Sync to ensure full support for high packet rates. Starting with [OpenTX-2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12), `CRSFshot` has been fully implemented, and thus you will have to update your OpenTX radio to these newer versions.
+ExpressLRS **requires** CRSFShot or Mixer Sync to ensure full support for high packet rates. Starting with [OpenTX-2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12), `CRSFshot` has been fully implemented, and thus you will have to update your OpenTX radio to these [newer](https://www.open-tx.org/downloads.html#Releases23-ref) versions.
 
 Another alternative is [EdgeTX](https://github.com/EdgeTX/edgetx/releases), the bleeding edge fork of OpenTX.
 
@@ -25,11 +25,11 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 
 ## Serial Baud Rate
 
-On some transmitters, the baud rate for comms between the opentx and the ExpressLRS module can be changed. The two rates available are 115200 and 400000. ExpressLRS supports both rates (auto switches to the correct rate on power-up), however, we have found that on the R9M 2018 modules, the inverter IC's that are used are not capable of reliably handling 400k baud. If you're using an R9M 2018 module, select 115200 baud in OpenTX, or do the resistor mod described on the [R9M 2018 Resistor Mod](https://github.com/ExpressLRS/ExpressLRS/wiki/Inverter-Mod-for-R9M-2018) page.
+On some transmitters, the baud rate for comms between the opentx and the ExpressLRS module can be changed. The two rates available are 115200 and 400000. ExpressLRS supports both rates (auto switches to the correct rate on power-up), however, we have found that on the R9M 2018 modules, the inverter IC's that are used are not capable of reliably handling 400k baud. If you're using an R9M 2018 module, select 115200 baud in OpenTX, or do the resistor mod described on the [R9M 2018 Resistor Mod](../../hardware/inverter-mod/) page.
 
 The QX7, X10/S, X12 will also going to require the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) if you're going to use 400k baud rates for use with higher packet rates, particularly with the 2.4G ExpressLRS Modules. Alternatively, EdgeTX can be flashed into these Radios and have OneBit enabled.
 
-The X9D(plus) can't change its Max Bauds settings, but it has been found to be finicky, causing unstable packet transfers, and constant Telemetry Lost/Recovered messages from OpenTX. One fix for this is the use of the OneBit firmware or EdgeTX. Click [here](/hardware/x9d-troubleshooting) for more info.
+The X9D(plus) can't change its Max Bauds settings, but it has been found to be finicky, causing unstable packet transfers, and constant Telemetry Lost/Recovered messages from OpenTX. One fix for this is the use of the OneBit firmware or EdgeTX. Click [here](../../hardware/x9d-troubleshooting) for more info.
 
 ![Baud Rate](https://fpvfrenzy.com/wp-content/uploads/2017/11/baud-rate.jpg)
 
@@ -46,7 +46,6 @@ if your handset has the black and white display and your handset is NOT X9D or X
 if your handset is the X9D or X9D+, use the telemetry script in the x9d_212x64 folder.
 
 if your handset has the colored screen display, use the telemetry script in the color_display_480x272 folder.
-
 
 Another way to get the ELRS Lua Script is via the ExpressLRS Configurator.
 
@@ -66,7 +65,6 @@ e.g. if you have set the Packet Rate to 200Hz, 0/200 means 0 bad packets and 200
 ![Lua3](../assets/images/lua3.jpg)
 with crossfire Tools you can see them as the Bad and Good parameters as in the picture above.
 
-
 ![Lua4](../assets/images/lua4.jpg)
 with the ELRS.lua you will see them also at the top of the page where the value will be updated in a consistent and faster rate. (picture above)
 
@@ -84,5 +82,9 @@ when no parameter is shown for a long time in the Lua Script, that would means t
 If the value of bad:good packet from the lua script is showing 0/142, etc., have a look at your model settings and make sure the internal RF module is set to off.
 
 The "96bf63" from the photo above is the Commit Hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases).
+
+## Model Configurations
+
+Model Configurations can also be added using the CRSF Model Number for per reciever settings customizability and lowered risk of accidentally connecting to multiple recievers at the same time. For more information on configurign this this up check out [this page](../../software/model-config-match/).
 
 **Now that your radio is set, you can now proceed with flashing ExpressLRS!**

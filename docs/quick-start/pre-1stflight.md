@@ -8,7 +8,7 @@ Prior to your first ExpressLRS flight, you may want to do a few tweaks to your s
 
 ## Modes
 
-By default, ExpressLRS uses one-bit switches for the AUX channels. This means a three-position switch will only send two positions (fully off, or 1000, and fully on, or 2000) to Betaflight/iNav on the AUX channels. Set your modes appropriately if you are using one-bit switches, or enable HYBRID_SWITCHES_8 for expanded position options. For more information, read the <a href="/software/switch-config"> switch modes page </a>.
+By default, ExpressLRS uses one-bit switches for the AUX channels. This means a three-position switch will only send two positions (fully off, or 1000, and fully on, or 2000) to Betaflight/iNav on the AUX channels. Set your modes appropriately if you are using one-bit switches, or enable HYBRID_SWITCHES_8 for expanded position options. For more information, read the [switch modes page](../../software/switch-config/).
 ![Modes](../assets/images/Modes.jpg)
 
 ## RSSI and Link Quality
@@ -17,7 +17,7 @@ To get RSSI and Link Quality displayed in the OSD, set RSSI Channel to "Disabled
 
 ![OSD](../assets/images/OSD.jpg)
 
-If you wish to enable the rssi dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm). If using DJI Goggles, you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab. More information about signal metrics is found in <a href="/info/signal-health"> this article on signal health </a>.
+If you wish to enable the rssi dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm). If using DJI Goggles, you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab. More information about signal metrics is found in this great [article on signal health](../../info/signal-health/).
 
 ## Bench Test
 
@@ -50,7 +50,7 @@ Blackbox is handy for evaluating the performance of the RF link for a flight. Se
 
 Initially ExpressLRS had very limited telemetry support but with Version `1.0.0-RC1` this changed and **full telemetry was added as optional feature**. The default setting only includes the link status message that includes the RSSI and Link quality.
 
-To receive all messages the feature telemetry has to be enabled in the <a href="/quick-start/user-defines/#telemetry">user defines</a>. It's possible to flash your TX module *with telemetry support enabled* and use it with a RX *without telemetry enabled*. So you can flash certain receivers with telemetry support and others without it and use it with the same TX module.
+To receive all messages the feature telemetry has to be enabled in the [user defines](../../software/user-defines/#telemetry). It's possible to flash your TX module *with telemetry support enabled* and use it with a RX *without telemetry enabled*. So you can flash certain receivers with telemetry support and others without it and use it with the same TX module.
 
 The RX transmits a subset of telemetry it receives from the flight controller. Disabling certain messages only works if the flight controller firmware does support it. For Betaflight this is possible with the telemetry_disabled_* cli settings:
 
@@ -74,7 +74,7 @@ set telemetry_disabled_mode = ON
 
 Since telemetry messages are sent with low priority it takes some time to transmit the data. The telemetry rate in the lua settings script controls how often a telemetry message should be sent. So a ratio of 1:2 means that every second message is a telemetry message, so the telemetry data is transferred very fast. A ratio 1:64 means that only one of 64 messages is a telemetry message and so the transfer happens much slower.
 
-The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 200 Hz. So if you need fast a fast telemetry update rate choose high refresh rate, and a ratio that favors telemetry messages e.g. 200 Hz and 1:16 usually works good. For detailed information on telemetry bandwidth at different rates and ratios, see <a href="/info/telem-bandwidth/"> this page on telemetry bandwidth </a>.
+The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 200 Hz. So if you need fast a fast telemetry update rate choose high refresh rate, and a ratio that favors telemetry messages e.g. 200 Hz and 1:16 usually works good. For detailed information on telemetry bandwidth at different rates and ratios, see [this page on telemetry bandwidth](../../info/telem-bandwidth/).
 
 To finish the telemetry setup open the telemetry page on your transmitter and select "Discover new sensors" and wait for the list to fill. You will notice that there is a * sign for each row. This star indicates that this telemetry sensor was just updated.  If you see a row that does not change, and the name of the row is in square brackets it means that this sensor was not updated for some time.
 

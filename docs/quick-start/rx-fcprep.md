@@ -11,7 +11,7 @@ template: main.html
 ![FC Wiring](../assets/images/FC-Wiring.jpg" width ="100%")
 *Note: This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!*
 
-After you've flashed the [bootloader](/quick-start/rx-bootloader) and wired your receiver as above, proceed to configure up your flight controller as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+After you've flashed the [bootloader](../../quick-start/rx-bootloader) and wired your receiver as above, proceed to configure up your flight controller as shown [below](../../quick-start/rx-fcprep/#serial-rx-setup).
 
 *Note: R9 Slim requires flashing via STLink first. Passthrough should work for updates.*
 
@@ -27,7 +27,7 @@ Also of note is that the EP receivers require their Boot pads (see figure above)
 
 Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode and won't activate the wifi hotspot.
 
-Connect your FC to USB and configure your FC firmware as [below](/quick-start/rx-fcprep/#serial-rx-setup).
+Connect your FC to USB and configure your FC firmware as [below](../../quick-start/rx-fcprep/#serial-rx-setup).
 
 ### Happymodel ES900RX
 
@@ -39,7 +39,7 @@ As this is an ESP-based receiver, be aware that there are certain FCs that puts 
 
 Should you be updating via Wifi, the bridging of the boot pads is not needed. 
 
-Connect your FC to USB and configure your FC firmware as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+Connect your FC to USB and configure your FC firmware as shown [below](../../quick-start/rx-fcprep/#serial-rx-setup).
 
 ### Happymodel ES915/868RX (Discontinued)
 
@@ -47,7 +47,7 @@ Connect your FC to USB and configure your FC firmware as shown [below](/quick-st
 
 Labels in the receiver show the pinouts. Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
 
-Connect your FC to USB and configure your FC firmware as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+Connect your FC to USB and configure your FC firmware as shown [below](../../quick-start/rx-fcprep/#serial-rx-setup).
 
 ### NamimnoRC Voyager & Flash
 
@@ -61,7 +61,7 @@ Connect your FC to USB and configure your FC firmware as shown [below](/quick-st
 
 Labels in the receiver show the pinouts. Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
 
-Connect your FC to USB and configure your FC firmware as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+Connect your FC to USB and configure your FC firmware as shown [below](../../quick-start/rx-fcprep/#serial-rx-setup).
 
 ### BetaFPV Receivers
 
@@ -77,7 +77,7 @@ Shown above are the pinouts and various components of the receivers. Connect Rx 
 
 Updating via WiFi is supported by these receivers.
 
-Connect your FC to USB and configure your FC firmware as shown [below](/quick-start/rx-fcprep/#serial-rx-setup).
+Connect your FC to USB and configure your FC firmware as shown [below](../../quick-start/rx-fcprep/#serial-rx-setup).
 
 ## Serial RX Setup
 

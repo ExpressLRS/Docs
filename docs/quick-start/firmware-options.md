@@ -23,7 +23,7 @@ This is a relatively simple one - enable whatever regulatory domain you are in. 
 
 ## Binding Phrase
 
-This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional [binding method](../binding/). 📜 
+This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional [binding method](../../quick-start/binding/). 📜 
 
 ## Performance Options
 ```
@@ -46,32 +46,6 @@ This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have
 ## Extra Data
 
 ```
-HYBRID_SWITCHES_8
-```
-Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet; while in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the **TX** and **RX**. A detailed explanation of the differences between the two options can be found in the <a href="/software/switch-config/">Switch Modes</a> page.
-
-```
-ENABLE_TELEMETRY
-```
-Enable advanced telemetry support. This option must be enabled on both **TX** and **RX**. The following telemetry messages are supported:
-
-* GPS
-* BATTERY_SENSOR
-* ATTITUDE
-* DEVICE_INFO
-* FLIGHT_MODE
-* MSP_RESP
-
-**Note 1**: Increase the telemetry rate with the ExpressLRS lua script. Increase the rate until the sensor lost warnings go away. It is normal to set it up to 1:16 with 200 Hz
-refresh rate.
-
-**Note 2**: It must be enabled together with **HYBRID_SWITCHES_8**.
-
-With this unchecked/disabled, you will only get the basic RC Link Telemetry like 1RRS (RSSI dbm), RQLY (LQ) etc.
-
-*Tip. You can have this option enabled in the Firmware Configuration, but set TLM Ratio to OFF in the ELRS Lua Script when you don't need advanced telemetry (like when racing). Should you need the telemetry (freestyle or medium-to-long-range flying), flip TLM Ratio back to your favorite ratio, like 1:16 or 1:8.*
-
-```
 TLM_REPORT_INTERVAL_MS
 ```
 It makes the TX module send the telemetry data to OpenTX to the interval you set. This stops the telemetry lost warnings when running a high telemetry ratio, or low rates like 50hz.
@@ -81,6 +55,23 @@ Default value is **320LU**. If you want to change that you have to suffix your m
 Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU** for ErskyTx ones.
 
 *Tip: only check this if you're changing the value. No need to enable it if you'll be using the default 320LU value*
+
+## Network Options
+
+```
+AUTO_WIFI_ON_INTERVAL
+```
+*Note: In version 1.1, this option is now available for TX Modules as well*
+
+⚠️ Must be defined if you plan to update your RX over wifi without using a button on the RX ⚠️ This will automatically turn the wifi 📶 ON for any module that has an ESP8285 on it if no TX connection is established after N seconds from boot (Factory Firmware of the HappyModel receivers set this to the previous default of 20s. RC8 has increased the interval to 30s). This enables pushing firmware updates to the RX by connecting to its wifi network and visiting http://10.0.0.1.
+
+```
+HOME_WIFI_SSID
+HOME_WIFI_PASSWORD
+```
+*New in 1.1.0*
+
+These options set Home Network Access for your Wifi-enabled hardware. With these set, the devices will connect to your WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time (Receivers). Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, in any device in the same network. Tx Module Wifi update page can be reached using the address http://elrs_tx.local, while receivers' update page can be reached via http://elrs_rx.local.
 
 ## Other Options
 
@@ -99,7 +90,7 @@ The RTTL Syntax is the same as used in old mobil phones for ringtones and some e
 ```
 UNLOCK_HIGHER_POWER 
 ```
-Majority of the ExpressLRS modules maxes out at 250mW. With this option, higher power levels can be unlocked on the modules that supports it. However, it is imperative that you have taken measures to provide ample cooling to the module's internals through the use of a [Fan Mod](https://github.com/AlessandroAU/ExpressLRS/wiki/R9M-Fan-Mod-Cover). This specifically applies to the R9M, which, from factory, supports a higher power level up to 1W; but because ExpressLRS runs at a much higher duty cycle, it taxes the circuity and thus produces heat much earlier. To keep it stable, cooling should be implemented. Without any cooling, you run the risk of ending up with a red paperweight.
+Majority of the ExpressLRS modules maxes out at 250mW. With this option, higher power levels can be unlocked on the modules that supports it. However, it is imperative that you have taken measures to provide ample cooling to the module's internals through the use of a [Fan Mod](../../hardware/fan-mod/). This specifically applies to the R9M, which, from factory, supports a higher power level up to 1W; but because ExpressLRS runs at a much higher duty cycle, it taxes the circuity and thus produces heat much earlier. To keep it stable, cooling should be implemented. Without any cooling, you run the risk of ending up with a red paperweight.
 
 ```
 UART_INVERTED
@@ -125,11 +116,6 @@ RF Mode Locking - When the RX is waiting for a connection, it cycles through all
 When cycling through the rates, the RX starts with the fastest packet rate and works down to the slowest, then repeats. It waits PACKET_INTERVAL * PACKS_PER_HOP * HOP_COUNT * 1.1 at each rate. Example: 4ms * 4 * 80 * 1.1 = 1.408s for 250Hz. The duration is extended 10x if a valid packet is received during that time. Even with LOCK_ON_FIRST_CONNECTION, the rate can be changed by changing the TX rate using ELRS.lua while connected, or by power cycling the RX.
 
 ```
-AUTO_WIFI_ON_INTERVAL
-```
-⚠️ Must be defined if you plan to update your RX over wifi without using a button on the RX ⚠️ This will automatically turn the wifi 📶 on for any module that has an ESP8285 on it if no TX connection is established after N seconds from boot (Factory Firmware of the HappyModel receivers set this to the previous default of 20s. RC8 has increased the interval to 30s). This enables pushing firmware updates to the RX by connecting to its wifi network and visiting http://10.0.0.1.
-
-```
 USE_DIVERSITY
 ```
 Enable antenna-switching diversity for Receivers that support it.
@@ -139,6 +125,6 @@ USE_R9MM_R9MINI_SBUS
 ```
 **This does not turn on SBUS protocol** it simply changes the pin used for communication from those two side pins (A9 and A10) to use the pin labeled "SBUS" on the RX, which is inverted. This is useful for F4 FCs which only have an inverted receiver input UART RX. 🔼. This is only one way, so you lose the telemetry downlink to your radio as well as passthrough flashing. Enabling this turns on CRSF protocol output on the S.BUS 🚌 pin on your R9MM/R9Mini. set serialrx_inverted = ON may also be needed within Betaflight 🐝 for compatibility
 
-*For a complete list of User Defines, head over to the [User Defines page](/software/user-defines.md).*
+*For a complete list of User Defines, head over to the [User Defines page](../../software/user-defines/).*
 
 **Done! It's time to flash the firmware on your transmitter**

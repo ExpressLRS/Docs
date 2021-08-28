@@ -7,7 +7,7 @@ template: main.html
 # User Defines Explained
 With more features being added consistently, [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/user_defines.txt) has gotten complicated 🤷‍♂️. So we will break it down! 🔨 
 
-*Note: This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](/software/toolchain-install/).
+*Note: This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](../../software/toolchain-install/) or Manual Mode on the ExpressLRS Configurator.
 
 ## Defines 101
 - To enable/disable anything in the user defines, simply add or remove a `#` in front of anything that has a `-D`.
@@ -17,8 +17,9 @@ With more features being added consistently, [`./src/user_defines.txt`](https://
 ```
 -DMY_BINDING_PHRASE="default ExpressLRS binding phrase"
 ```
-This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional binding method. 📜 
-<sub><sup>This phrase gets md5 hashed and gets built into the binary you will be flashing.</sup></sub>
+This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet<sup>*</sup>. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional binding method. 📜 
+
+<small><sup>*</sup> This phrase gets md5 hashed and gets built into the binary you will be flashing.</small>
 
 ## Regulatory Domain
 ```
@@ -31,27 +32,6 @@ This step is simple but **important**. Both the TX and RX NEED to have the same 
 ```
 This is a relatively simple one - enable whatever regulatory domain you are in. `EU 868` 🇪🇺  is compliant to the frequency but **is not** LBT compliant 👂 . Every other band is near compliant 👿  but may not be fully compliant for your regulatory domain. 
 
-## Telemetry
-
-```
-#-DENABLE_TELEMETRY
-```
-Enable advanced telemetry support. This option must be enabled on both **TX** and **RX**. The following telemetry messages are supported:
-
-* GPS
-* BATTERY_SENSOR
-* ATTITUDE
-* DEVICE_INFO
-* FLIGHT_MODE
-* MSP_RESP
-
-**Note #1**: Increase the telemetry rate with the
-ExpressLRS lua script. Increase the rate until the sensor lost
-warnings go away. It is normal to set it up to 1:16 with 200 Hz
-refresh rate.
-
-**Note #2**: It must be enabled together with **HYBRID_SWITCHES_8**.
-
 ```
 #-DTLM_REPORT_INTERVAL_MS=320LU
 ```
@@ -61,21 +41,13 @@ Default value is **320LU**. If you want to change that you have to suffix your m
 
 Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU** for ErskyTx ones.
 
-## Switches
-```
-#-DHYBRID_SWITCHES_8
-```
-Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in [Switch Modes](https://github.com/ExpressLRS/ExpressLRS/wiki/Switch-Modes), but
-  1. If only two position switches are needed, and they must be updated as fast as possible: Normal Mode
-  2. Almost everyone: Hybrid Mode (Put ARM on AUX1)
-
 ## Output Power Limit
 There has been some reports of the R9M modules showing instability at >250mw with stock cooling. This in part because the ELRS uses a higher duty cycle for transmission compared to stock firmware. By default the power of any TX is limited to 250mw but you can unlock up to 1000mw (for hardware that supports it) by enabling the following option. Do this at your own risk if you make no cooling modifications-- R9M modules will burn themselves out without cooling.
 
 ````
 #-DUNLOCK_HIGHER_POWER 
 ````
-We published [R9M Fan Mod Cover](https://github.com/AlessandroAU/ExpressLRS/wiki/R9M-Fan-Mod-Cover), a custom 3d printed backplate with room for a fan and extra cooling to allow for maximum power (1-2W depending on the mod).
+We published [R9M Fan Mod Cover](../../hardware/fan-mod/), a custom 3d printed backplate with room for a fan and extra cooling to allow for maximum power (1-2W depending on the mod).
  
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" width="20%" height="auto" /><img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottom.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottompng" width="20%" height="auto" />
 
@@ -93,7 +65,9 @@ AUX1 is the channel ExpressLRS uses to detect "ARMED", and this feature assumes 
 ```
 These features enable **lower latency** 🏃‍♂️ and **offset** from the OpenTX radio to the TX. The first lowers latency and should be kept enabled. The second is more experimental and can lower the offset from the radio by tuning it as close as possible to `0`, but is experimental (even in 1.0) and is best left disabled. 
 
-Both require [OpenTX `2.3.12`](https://www.open-tx.org/) or above. In order to install it, you will have to use OpenTX companion application.
+Both require [OpenTX `2.3.12`](https://www.open-tx.org/) or above. In order to install it, you will have to use OpenTX companion application. 
+
+You can also use [EdgeTX](https://github.com/EdgeTX/edgetx).
 
 ```
 -DLOCK_ON_FIRST_CONNECTION
@@ -122,12 +96,24 @@ This enables integration with Jye's **[FENIX rx5805 pro-diversity module](https:
 ```
 **This does not turn on SBUS protocol** it simply changes the pin used for communication from those two side pins (A9 and A10) to use the pin labeled "SBUS" on the RX, which is inverted. This is useful for `F4 FCs` which only have an inverted receiver input UART RX. 🔼. This is only one way, so you lose the telemetry downlink to your radio as well as passthrough flashing. Enabling this turns on CRSF protocol output on the `S.BUS` 🚌 pin on your `R9MM/R9Mini`. `set serialrx_inverted = ON` may also be needed within Betaflight 🐝 for compatibility
 
-## Other Options
+## Network Options
 
 ```
 -DAUTO_WIFI_ON_INTERVAL=30
 ```
 ⚠️ Must be defined if you plan to update your RX over wifi without using a button on the RX ⚠️ This will automatically turn the wifi 📶 on for **any module** that has an `ESP8285` on it if no TX connection is established after N seconds from boot (the 30 is the time). This enables pushing firmware updates to the RX by connecting to its wifi network and visiting `http://10.0.0.1`.
+
+```
+HOME_WIFI_SSID
+HOME_WIFI_PASSWORD
+```
+
+*New in version 1.1*
+
+These options set Home Network Access for your Wifi-enabled hardware. With these set, the devices will connect to your WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time (Receivers). Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, in any device in the same network. Tx Module Wifi update page can be reached using the address http://elrs_tx.local, while receivers' update page can be reached via http://elrs_rx.local.
+
+
+## Other Options
 
 ```
 #-DJUST_BEEP_ONCE
@@ -145,7 +131,7 @@ The build process also supports RTTTL-formatted ringtone strings. RTTTL melodies
 ```
 -DUSE_ESP8266_BACKPACK
 ```
-This enables communication with the **[ESP Backpack](https://github.com/AlessandroAU/ExpressLRS/wiki/ESP-Backpack-Addon)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
+This enables communication with the **[ESP Backpack](../../hardware/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
 
 ## Obsolete user_defines
 
