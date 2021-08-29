@@ -3,7 +3,7 @@ template: main.html
 ---
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
 
-Addon for **R9M modules**, **HappyModel ELRS915TX**, and **HappyModel ES24TX** to allow:
+Addon for **R9M modules** and **HappyModel ELRS915TX** to allow:
 
 * Logging to Browser and via Websocket
 * Flashing ESP Backpack (self)
@@ -11,6 +11,7 @@ Addon for **R9M modules**, **HappyModel ELRS915TX**, and **HappyModel ES24TX** t
 * Possibly more.. wireless trainer mode? Please contribute 🥇 
 
 This is a convenience feature for development purposes and "power users" - soldering can be tricky - please be careful. 👮 
+This feature is built into most off-the-shelf ELRS TXes now too.
 
 ## Parts
 
