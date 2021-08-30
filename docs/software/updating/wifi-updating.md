@@ -8,12 +8,12 @@ template: main.html
 
 ## Method 1: Hotspot
 
-**Build** your firmware file, either via the ExpressLRS Configurator or PlatformIO. The ExpressLRS Configurator will open a folder for you where the correct firmware file was created and should be named like `<target name>-<version>.bin` (e.g. for the Happymodel ES24TX, the file will be `HappyModel_ES24TX_2400_TX-1.1.0.bin`). Meanwhile, PlatformIO should create the file within the `\src\.pio\build\<target name>\`.
+**Build** your firmware file, either via the ExpressLRS Configurator or PlatformIO. The ExpressLRS Configurator will open a folder for you where the correct firmware file was created and should be named like `<target name>-<version>.bin` (e.g. for the Happymodel ES24TX, the file will be `HappyModel_ES24TX_2400_TX-1.1.0.bin`). Meanwhile, PlatformIO should create the file within the `\src\.pio\build\<target name>\` folder.
 
 Put your device in WiFi Updating mode. For TX modules, this is accomplished using the ExpressLRS Lua Script. Simply select `WiFi Update` from the script and it should start the Update Hotspot. For receivers, power the receiver and wait until `AUTO_WIFI_ON_INTERVAL` time has elapsed and that the LED on the receiver is blinking fast.
 
-Connect to the hotspot the device has created. For Tx modules, this hotspot should show up as **ExpressLRS TX Module** while for receivers, the hotspot will have a name such as **ExpressLRS RX**. They have the same password: `expresslrs`. 
-*Note: The receivers, due to their respective sizes, doesn't have robust WiFi antennas and you will have to bring them closer to the device you're connecting from. The window that opens can easily be closed*
+Connect to the hotspot that the device has created. For Tx modules, this hotspot should show up as **ExpressLRS TX Module** while for receivers, the hotspot will have a name such as **ExpressLRS RX**. They have the same password: `expresslrs`. 
+*Note: The receivers, due to their respective sizes, doesn't have robust WiFi antennas and you will have to bring them closer to the device you're connecting from. The window that opens can easily be closed.*
 
 Navigate your browser to `http://10.0.0.1/` and the WiFi Update Page should show up.
 
@@ -37,7 +37,7 @@ Additionally, using this same Wifi Update page, you can also configure the recei
 
 ## Method 2: Home Network
 
-This method will only work if the device has been configured to connect to the local Wifi Network, either via the Join Network section in the Hotspot, or it's flashed with a firmware with configured Home WiFi Network SSID and Password.
+This method will only work if the device has been configured to connect to the local Wifi Network, either via the Join Network section in the Hotspot, or it's flashed with a firmware with the Home WiFi Network SSID and Password options set.
 
 **Build** your firmware file, either via the ExpressLRS Configurator or PlatformIO. The ExpressLRS Configurator will open a folder for you where the correct firmware file was created and should be named like `<target name>-<version>.bin` (e.g. for the Happymodel ES24TX, the file will be `HappyModel_ES24TX_2400_TX-1.1.0.bin`). Meanwhile, PlatformIO should create the file within the `\src\.pio\build\<target name>\`.
 
@@ -61,7 +61,7 @@ Once the Update process completes, a Popup should show the result of the Update.
 
 ## Method 3: Build and Flash
 
-This method will only work if the device has been configured to connect to the local Wifi Network, either via the Join Network section in the Hotspot, or it's flashed with a firmware with configured Home WiFi Network SSID and Password.
+This method will only work if the device has been configured to connect to the local Wifi Network, either via the Join Network section in the Hotspot, or it's flashed with a firmware with the Home WiFi Network SSID and Password options set.
 
 Put your device in WiFi Updating mode. For TX modules, this is accomplished using the ExpressLRS Lua Script. Simply select `WiFi Update` from the script and it should start the Update Hotspot. For receivers, power the receiver and wait until `AUTO_WIFI_ON_INTERVAL` time has elapsed and that the LED on the receiver is blinking fast. 
 
