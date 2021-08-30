@@ -4,7 +4,7 @@ template: main.html
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
 
-**Starting with v1.1.0, there will be a total of 3 Methods to flash your devices via WiFi**
+**With the release of v1.1.0, there will be a total of 3 Methods to flash your devices via WiFi**
 
 ## Method 1: Hotspot
 
