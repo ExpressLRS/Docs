@@ -140,6 +140,7 @@ nav:
             - Flashing Siyi FM30: quick-start/tx-siyifm30.md
             - Flashing DIY 900TX: quick-start/tx-diy900.md
             - Flashing DIY 2400TX: quick-start/tx-diy.md
+          - Using The Lua Script: quick-start/lua-howto.md
       - Receivers:
           - Flashing Bootloader: quick-start/rx-bootloader.md
           - Preparing for Passthrough Flashing: quick-start/rx-fcprep.md
@@ -170,10 +171,12 @@ nav:
       - OpenOCD for STLink: software/open-ocd.md
       - Toolchain Setup: software/toolchain-install.md
       - PIO STLink Fix: software/stlink-fix.md
-      - Model Matching: software/model-config-match.md
       - Updating: 
         - Betaflight Passthrough: software/updating/betaflight-passthrough.md
         - Wifi Updating: software/updating/wifi-updating.md
+      - Features:
+        - Model Matching: software/model-config-match.md
+        - Dynamic Transmit Power: software/dynamic-transmit-power.md
   - Hardware:
       - Supported Hardware: hardware/supported-hardware.md
       - R9M Inverter Mod: hardware/inverter-mod.md
