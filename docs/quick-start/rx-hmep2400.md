@@ -16,7 +16,7 @@ Target: `HappyModel_EP_2400_RX_via_WIFI`
 
 *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
 
-**Build** the firmware using the ExpressLRS Configurator using the correct Target and [options](../../quick-start/firmware-options). Once done, it should open a new window where the `firmware.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware using the ExpressLRS Configurator using the correct Target and [options](../../quick-start/firmware-options). Once done, it should open a new window where the `HappyModel_EP_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 Power your Flight Controller by either connecting a LiPo or attaching the USB cable (if receiver gets powered from USB via a 4v5 pad). Receiver's LED will blink slow at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Hotspot Mode.
 
