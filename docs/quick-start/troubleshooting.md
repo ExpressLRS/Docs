@@ -40,10 +40,10 @@ This can be due to several things:
 
 ### I updated via WiFi but now receiver won't work and has SOLID LED
 
-This is a sign that the Wifi flashing didn't go through properly due to premature power cycle. To fix this, you will have to bridge the boot pads (see [here](../../quick-start/rx-fcprep/)) and reflash using the Passthrough method or using an FTDI adapter.
+This is a sign that the Wifi flashing didn't go through properly due to premature power cycle. To fix this, you will have to bridge the boot pads (see [here](../../quick-start/rx-fcprep/)) and reflash using the Passthrough method (**Telemetry** option on Betaflight/iNav set to `OFF`. This is important!) or using an FTDI adapter.
 
-This video shows the steps albeit using vscode development environment but the ExpressLRS Configurator will work just fine. You might also want to disable Telemetry in Betaflight/emuflight/iNav before attempting recovery.
+This video shows the steps albeit using vscode development environment but the ExpressLRS Configurator will work just fine.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SShMaLnqZr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-To ensure that the WiFi flashing finished properly, wait until the LED on the receiver blinks slow (indicating it's looking for a TX bind) before pulling off power.
+To ensure that the WiFi flashing finished properly, **wait until the LED on the receiver blinks slow** (indicating it's looking for a TX bind) before pulling off power.
