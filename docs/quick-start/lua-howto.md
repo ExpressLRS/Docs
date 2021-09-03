@@ -6,7 +6,7 @@ template: main.html
 
 Now that you have flashed your TX it is time to learn how to use the ELRS lua script!
 
-*If you flashed via WiFi you need a different version of the lua than you already installed.*
+*If you flashed via WiFi or were on a version previous to 2.x you need a different version of the lua than you already installed.*
 
 ## Installing the Lua Script
 
@@ -31,7 +31,7 @@ Enter the Lua Script by short pressing it in the Tools menu. The next section is
 
 If no parameter is shown for a long time in the Lua Script, that would means the Protocol set for the External Module is incorrect or that the module is not properly connected to the pins of the jr bay of the radio. The latter could mean that the module's PCB has gotten loose, common with the first batches of the ES24TX modules from Happymodel.
 
-If a parameter does show up, but the Bad/Good section on the right of the header from the lua script is showing 0/142, etc., have a look at your model settings and make sure the internal RF module is set to off.
+If a parameter does show up, but the Bad/Good section on the right of the header from the lua script is showing an unstable value, etc., have a look at your model settings and make sure the internal RF module is set to off.
 
 If the Bad/Good persists to be something different than `0/your packet rate` that means `CRSFshot` is not working - verify that you properly followed the [Radio Preparation](./../tx-prep) Guide.
 
