@@ -37,7 +37,7 @@ To enable the dynamic power feature using a switch instead of always being enabl
 Because dynamic power relies on information coming back from the RX to know how to adjust the power, dynamic power is only available if the "Telemetry Ratio" is not set to Off. Any ratio will allow it to operate, but the algorithm is optimized around having at least 2x Link Statistics telemetry packets per second.
 
 | Packet Air Rate | Minimum Ratio |
-|---|---|---|
+|---|---|
 | 500Hz | 1:128 |
 | 250Hz | 1:64 |
 | 200Hz | 1:64 |
