@@ -87,7 +87,7 @@ Pressing the `[Bind]` button activates binding mode for traditional binding. For
 ### Wifi Update (ESP32 TXes Only)
 <img src="../../assets/images/lua/wifirm.jpg" width = "30%">
 
-Pressing the `[Wifi Update]` selection activates Wifi Update mode on ESP32 TXes. Visit [this page](../../software/updating/wifi-updating.md) for instructions on how the updating process works. Reboot or change models to exit this mode.
+Pressing the `[Wifi Update]` selection activates Wifi Update mode ESP32 TXes. Visit [this page](../../software/updating/wifi-updating) for instructions on how the updating process works. Reboot or change models to exit this mode.
 
 ### BLE Joystick (ESP32 TXes Only)
 <img src="../../assets/images/lua/blerm.jpg" width = "30%">
