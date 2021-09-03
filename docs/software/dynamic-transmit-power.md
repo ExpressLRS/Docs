@@ -2,6 +2,8 @@
 template: main.html
 ---
 
+<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+
 ## Description
 
 Dynamic Power allows the TX module to *lower* its output power from the configured power level using the telemetry from the RX. The TX will lower power if the RSSI dBm is far enough above the sensitivity limit and will raise power if it is not, has a low LQ, or has a sudden drop in LQ. Advanced telemetry is not required for this feature, just a non-zero Telemetry Ratio.
@@ -24,8 +26,6 @@ In addition to the slow power ramp up, there are two LQ-based conditions that wi
 
 1. If the LQ ever drops below a hard limit. Example: LQ of 50% is received by the TX, the power will jump to max.
 2. If the LQ drops suddenly in a single telemetry update compared to the moving average. This is intended to react to flying behind a structure where the LQ suddenly takes a hit and is expected to drop further. Example: LQ is running 100% (as ExpressLRS do) and the TX receives a telemetry packet with 80% LQ, the power will jump to max.
-
-Also, to help with recovering failsafes, power will be automatically boosted to the max configured power when armed when no telemetry packets are recieved.
 
 ### Enabled via AUX Switch
 
