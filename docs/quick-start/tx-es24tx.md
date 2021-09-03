@@ -6,7 +6,10 @@ template: main.html
 
 ## Flashing via WiFi
 
-Target: `HappyModel_ES24TX_2400_TX_via_WIFI`
+Targets:
+
+- `HappyModel_ES24TX_2400_TX_via_WIFI`
+- `HappyModel_ES24TX_Slim_Pro_2400_TX_via_WIFI`
 
 With the correct target selected and [Firmware Options](../../quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `HappyModel_ES24TX_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
@@ -29,7 +32,10 @@ As it rebooted, the connection to the Webserver got terminated. Verify with the 
 
 ## Flashing via USB/UART
 
-Target: `HappyModel_ES24TX_2400_TX_via_UART`
+Targets:
+
+- `HappyModel_ES24TX_2400_TX_via_UART`
+- `HappyModel_ES24TX_Slim_Pro_2400_TX_via_UART`
 
 This method requires you move two jumpers into specific pins in the module board. See the following image for the jumper location and which pin should be bridged for this method to work.
 
@@ -40,6 +46,8 @@ This method requires you move two jumpers into specific pins in the module board
 ![JumperSlim](../assets/images/Jumper-slim.jpg)
 
 The jumpers should be moved into the USB/UART (Green) position from the images above. Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
+
+*Note: The new Slim Pro doesn't have jumpers or dip switches that you need to move in order to flash via USB. Just connect USB and make sure your computer has recognized the device as a USB-to-UART Bridge (i.e. install the needed CP210x drivers).*
 
 Using the ExpressLRS Configurator with the correct Target selected and [options](../../quick-start/firmware-options) set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
