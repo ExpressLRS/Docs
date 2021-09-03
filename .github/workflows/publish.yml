@@ -36,7 +36,7 @@ jobs:
       - name: Deploy development version       
         run: |
           git checkout development
-          mike deploy 1.1 development
+          mike deploy 2.0 development
           
       - name: Push latest updates to server
         run: |
