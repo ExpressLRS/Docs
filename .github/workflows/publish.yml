@@ -36,9 +36,9 @@ jobs:
       - name: Deploy development version       
         run: |
           git checkout development
-          mike deploy 1.1 development
+          mike deploy 2.0 development
           
-      - name: Push latest updates to server
+      - name: Push changes to server
         run: |
           git checkout gh-pages
           git remote set-url --push origin https://actions:$GITHUB_TOKEN@github.com/ExpressLRS/Docs
