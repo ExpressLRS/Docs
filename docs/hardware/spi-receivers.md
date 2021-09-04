@@ -4,7 +4,7 @@ template: main.html
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
-A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano longrange rig without the need for an external receiver. More of these flight controllers are coming into stores.
+A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano long range rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
 Because these are SPI-based, the ExpressLRS Code came baked-in in the Betaflight 4.3.0-based custom-built firmware. These usually *don't* need to be updated. These Flight Controllers **will work** with any released ExpressLRS firmware.
 
@@ -32,7 +32,7 @@ Video Tutorial (thanks to @JyeSmith):
 
 ### Passphrase
 
-Set passphrase in the TX. When building via ExpressLRS configurator, or via VS Code note down and copy below numbers from the build log:
+Set passphrase in the TX. When building via ExpressLRS Configurator, or via VS Code note down and copy below numbers from the build log:
 
 ![UID String](../assets/images/UIDsource.png)
 
@@ -41,6 +41,23 @@ Go to betaflight cli and type (for example):
 `set expresslrs_uid = 172,123,235,247,1,122`
 
 `save`
+
+## RF Mode Adjustment
+
+These AIOs with ExpressLRS SPI Receivers are set to use 500Hz as default. To adjust it, you will need to go into Betaflight CLI and use the following commands:
+
+`set expresslrs_rate_index = [your index]`
+
+`save`
+
+Where `[your index]` corresponds to the following   :
+
+- 500Hz = 0
+- 250Hz = 1
+- 150Hz = 2
+- 50Hz = 3
+
+With the [Updated](../../hardware/spi-receivers/#updating) Betaflight firmware, adjusting your packet rate from the Lua Script will also adjust the packet rate in the AIO.
 
 ## Updating
 
