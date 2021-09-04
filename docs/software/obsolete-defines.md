@@ -40,6 +40,13 @@ refresh rate.
 **REMOVED** 2.0 development, ENABLE_TELEMETRY is always enabled. Advanced Telemetry will only be sent if telemetry messages are received from the FC.
 
 ```
+-DUSE_500HZ
+```
+This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have to give up 25Hz mode to add 500Hz mode. It requires [OpenTX 2.3.12 or Newer](https://www.open-tx.org/2021/06/14/opentx-2.3.12), [EdgeTX](https://github.com/EdgeTX/edgetx) or a Radio firmware that has CRSFShot or Mixer Sync. 
+
+**REMOVED** 1.0.0-RC9, this option is now always enabled and in turn, 25Hz has been dropped/removed.
+
+```
 -DFAST_SYNC
 ```
 Option that adds faster initial syncing, by changing how long the receiver waits for a connection in each mode while not connected. This option is now the default, but disabling it can help syncing at lower packet rates (50Hz and below).
@@ -71,10 +78,3 @@ NB This feature assumes that a low value of the arm switch is disarmed, and a hi
 -DAUTO_WIFI_ON_BOOT
 ```
 **REMOVED** 1.0.0-RC1 replaced with `-DAUTO_WIFI_ON_INTERVAL=X`
-
-```
--DUSE_500HZ
-```
-This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have to give up 25Hz mode to add 500Hz mode. It requires [OpenTX 2.3.12 or Newer](https://www.open-tx.org/2021/06/14/opentx-2.3.12), [EdgeTX](https://github.com/EdgeTX/edgetx) or a Radio firmware that has CRSFShot or Mixer Sync. 
-
-**REMOVED** 1.0.0-RC9, this option is now always enabled and in turn, 25Hz has been dropped/removed.
