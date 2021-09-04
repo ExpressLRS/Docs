@@ -4,11 +4,11 @@ template: main.html
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
 
-**With the release of v1.1.0, there will be a total of 3 Methods to flash your devices via WiFi**
+**With the release of v2.0.0, there will be a total of 3 different Methods to flash your devices via WiFi**
 
 ## Method 1: Hotspot
 
-**Build** your firmware file, either via the ExpressLRS Configurator or PlatformIO. The ExpressLRS Configurator will open a folder for you where the correct firmware file was created and should be named like `<target name>-<version>.bin` (e.g. for the Happymodel ES24TX, the file will be `HappyModel_ES24TX_2400_TX-1.1.0.bin`). Meanwhile, PlatformIO should create the file within the `\src\.pio\build\<target name>\` folder.
+**Build** your firmware file, either via the ExpressLRS Configurator or PlatformIO. The ExpressLRS Configurator will open a folder for you where the correct firmware file was created and should be named like `<target name>-<version>.bin` (e.g. for the Happymodel ES24TX, the file will be `HappyModel_ES24TX_2400_TX-2.0.0.bin`). Meanwhile, PlatformIO should create the file within the `\src\.pio\build\<target name>\` folder.
 
 Put your device in WiFi Updating mode. For TX modules, this is accomplished using the ExpressLRS Lua Script. Simply select `WiFi Update` from the script and it should start the Update Hotspot. For receivers, power the receiver and wait until `AUTO_WIFI_ON_INTERVAL` time has elapsed and that the LED on the receiver is blinking fast.
 
@@ -31,7 +31,7 @@ Once the Update process completes, a Popup should show the result of the Update.
 
 **DO NOT** unplug/turn off the device yet. For Tx Modules, wait for the Lua Script to return to its Main Screen, indicating that the Tx Module has rebooted. For receivers, wait until the LED started blinking again, or you can even wait for it to activate WiFi Mode again for good measure.
 
-Additionally, using this same Wifi Update page, you can also configure the receiver to connect to your local Wifi Network, in preparation for the other methods.
+Additionally, using this same Wifi Update page, you can also configure the receiver to connect to your local Wifi Network, in preparation for the other (better) methods.
 
 ![Web Update Join](../../assets/images/web-joinnetwork.png)
 
@@ -39,7 +39,7 @@ Additionally, using this same Wifi Update page, you can also configure the recei
 
 This method will only work if the device has been configured to connect to the local Wifi Network, either via the Join Network section in the Hotspot, or it's flashed with a firmware with the Home WiFi Network SSID and Password options set.
 
-**Build** your firmware file, either via the ExpressLRS Configurator or PlatformIO. The ExpressLRS Configurator will open a folder for you where the correct firmware file was created and should be named like `<target name>-<version>.bin` (e.g. for the Happymodel ES24TX, the file will be `HappyModel_ES24TX_2400_TX-1.1.0.bin`). Meanwhile, PlatformIO should create the file within the `\src\.pio\build\<target name>\`.
+**Build** your firmware file, either via the ExpressLRS Configurator or PlatformIO. The ExpressLRS Configurator will open a folder for you where the correct firmware file was created and should be named like `<target name>-<version>.bin` (e.g. for the Happymodel ES24TX, the file will be `HappyModel_ES24TX_2400_TX-2.0.0.bin`). Meanwhile, PlatformIO should create the file within the `\src\.pio\build\<target name>\`.
 
 Put your device in WiFi Updating mode. For TX modules, this is accomplished using the ExpressLRS Lua Script. Simply select `WiFi Update` from the script and it should connect to your WiFi Network. For receivers, power the receiver and wait until `AUTO_WIFI_ON_INTERVAL` time has elapsed and that the LED on the receiver is blinking fast.
 
