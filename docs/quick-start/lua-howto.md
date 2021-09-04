@@ -33,7 +33,8 @@ If the parameter list does not populate after a few seconds, first verify the Ex
 
 If parameters do show up, but the Bad/Good section on the right side of the header is showing an unstable value, have a look at your model settings and make sure the Internal RF module is set to Off. If the Bad/Good indciates something other than `0/your packet rate` this means `CRSFshot` is not working-- verify that you properly followed the [Radio Preparation](./../tx-prep) Guide.
 
-<img src="../../assets/images/lua3.jpg" width = "50%"> ![Lua Config BW](../../assets/images/lua/config-bw.png)
+<img src="../../assets/images/lua3.jpg" width = "40%">
+<img src="../../assets/images/lua/config-bw.png" width = "40%">
 
 The `simplify-serial-out   0519fd` from the photo above is the git commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases).
 
@@ -41,6 +42,7 @@ The `simplify-serial-out   0519fd` from the photo above is the git commit hash o
 Now, we can explore the complexities of the lua script, and how to interpret each of its many sections. ExpressLRS supports multiple configuration profiles, and the configuration profile is selected by setting the "Receiver" property in handset Model Setup -> External Module -> Receiver (number).
 
 ### Packet Rate and Telemetry Ratio
+
 These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allow you to change your performance parameters. 
 
 * `Packet Rate` sets how fast data packets are sent, higher rates send packets more frequently and have lower latency, but have reduced range. The options for Team2.4 are: `50, 150, 250 & 500` Hz and the options for Team900 are `25, 50, 100 & 200` Hz. The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health) for more information about the sensitivity limit.
@@ -48,6 +50,7 @@ These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allo
 * `Telem Ratio` sets the telemetry ratio, how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data. For information on telemetry setup, see [First Flight: Telemetry](./../pre-1stflight/#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth/).
 
 ### Switch Mode
+
 The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver (the 4 main channels are always 10-bit). The options are `Hybrid & Wide`. Hybrid mode is 6x 2/3/6-position + 1x 16-position, and Wide is 7x 64 or 128-position. For detail about the differences, see the [Switch Configs](../../software/switch-config/) documentation.
 
 ### Model Match
@@ -55,7 +58,8 @@ The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver
 Model Match is used to prevent accidentally connecting to multiple recievers at the same time, or using selecting the wrong model in the handset. For more information on configuring this check out [this page](../../software/model-config-match/).
 
 ### TX Power
-<img src="../../assets/images/lua/pwrrm.jpg" width = "30%"> ![TX Power BW](../../assets/images/lua/power-bw.png)
+<img src="../../assets/images/lua/pwrrm.jpg" width = "30%"> 
+<img src="../../assets/images/lua/power-bw.png" width = "30%"> 
 
 TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXIT to exit the folder.
 
@@ -64,7 +68,8 @@ TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXI
 * `Dynamic` enables the Dynamic Power feature. `Off` means that the TX will transmit at Max Power at all times. `On` means the TX will dynamically _lower_ power to save energy when maximum power is not needed. The options `AUX9, AUX10, AUX11, AUX12` indicate that the TX can be changed from max power to dynamic power by changing the position of a switch. where switch HIGH (>1500us) = dynamic power, switch LOW (<1500us) = max power. For more information, [Dynamic Transmit Power](../../software/dynamic-transmit-power) provides a deeper dive on the algorithm and usage.
 
 ### VTX Administrator
-<img src="../../assets/images/lua/vtxrm.jpg" width = "30%"> ![VTX BW](../../assets/images/lua/vtx-bw.png)
+<img src="../../assets/images/lua/vtxrm.jpg" width = "30%">
+<img src="../../assets/images/lua/vtx-bw.png" width = "30%">
 
 VTX Administrator allows you to change your VTX settings directly from your radio, and have those VTX settings be applied to any receiver you connect to. The VTX settings are sent every time a new connection is acquired, or when `[Send VTX]` is pressed. **VTX Administrator will only send data when disarmed**
 
@@ -79,16 +84,19 @@ VTX Administrator allows you to change your VTX settings directly from your radi
 * Finally pressing the `[Send VTX]` button sends the configured settings to the receiver and on to the VTX. These settings are also sent every time a connection is established.
 
 ### Bind
-<img src="../../assets/images/lua/bindrm.jpg" width = "30%"> ![Bind BW](../../assets/images/lua/bind-bw.png)
+<img src="../../assets/images/lua/bindrm.jpg" width = "30%">
+<img src="../../assets/images/lua/bind-bw.png" width = "30%">
 
 Pressing the `[Bind]` button activates binding mode for traditional binding. This does nothing for users who have configured a bind phrase and is not needed. For more information check out this page on [binding](./../binding).
 
 ### Wifi Update (ESP32 TXes Only)
-<img src="../../assets/images/lua/wifirm.jpg" width = "30%"> ![Wifi BW](../../assets/images/lua/wifi-bw.png)
+<img src="../../assets/images/lua/wifirm.jpg" width = "30%">
+<img src="../../assets/images/lua/wifi-bw.png" width = "30%">
 
 Pressing the `[Wifi Update]` selection activates Wifi Update mode ESP32 TXes. Visit [this page](../../software/updating/wifi-updating) for instructions on how the updating process works. Reboot or change models to exit this mode.
 
 ### BLE Joystick (ESP32 TXes Only)
-<img src="../../assets/images/lua/blerm.jpg" width = "30%"> ![BLE Joystick BW](../../assets/images/lua/blejoystick-bw.png)
+<img src="../../assets/images/lua/blerm.jpg" width = "30%">
+<img src="../../assets/images/lua/blejoystick-bw.png" width = "30%">
 
 Pressing the `[BLE Joystick]` selection activates BluetoothLE Joystick mode which allows connection to simulators through the bluetooth of your computer. Reboot or change models to exit this mode.
