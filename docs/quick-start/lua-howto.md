@@ -47,6 +47,9 @@ These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allo
 
 * `Telem Ratio` sets the telemetry ratio, how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data. For information on telemetry setup, see [First Flight: Telemetry](./../pre-1stflight/#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth/).
 
+### Switch Mode
+The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver (the 4 main channels are always 10-bit). The options are `Hybrid & Wide`. Hybrid mode is 6x 2/3/6-position + 1x 16-position, and Wide is 7x 64 or 128-position. For detail about the differences, see the [Switch Configs](../../software/switch-config/) documentation.
+
 ### Model Match
 
 Model Match is used to prevent accidentally connecting to multiple recievers at the same time, or using selecting the wrong model in the handset. For more information on configuring this check out [this page](../../software/model-config-match/).
