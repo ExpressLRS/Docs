@@ -38,11 +38,6 @@ FEATURE_OPENTX_SYNC
 ```
 This option enables **lower latency** 🏃‍♂️ from the OpenTX radio to the TX and should be kept enabled. To get the full benefit of the option, you should be running an OpenTX version with CRSFShot or Mixer Sync enabled.
 
-```
-USE-500HZ
-```
-This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have to give up 25Hz mode to add 500Hz mode. It requires [OpenTX 2.3.12 or Newer](https://www.open-tx.org/2021/06/14/opentx-2.3.12), [EdgeTX](https://github.com/EdgeTX/edgetx) or a Radio firmware that has CRSFShot or Mixer Sync. **Note: Since version 1.0.0-RC9, this option is now always enabled and in turn, 25Hz has been dropped/removed.**
-
 ## Extra Data
 
 ```
@@ -61,7 +56,7 @@ Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU
 ```
 AUTO_WIFI_ON_INTERVAL
 ```
-*Note: In version 1.1, this option is now available for TX Modules as well*
+*Note: In version 2.0, this option became available for Transmitter Modules.*
 
 ⚠️ Must be defined if you plan to update your RX over wifi without using a button on the RX ⚠️ This will automatically turn the wifi 📶 ON for any module that has an ESP8285 on it if no TX connection is established after N seconds from boot (Factory Firmware of the HappyModel receivers set this to the previous default of 20s. RC8 has increased the interval to 30s). This enables pushing firmware updates to the RX by connecting to its wifi network and visiting http://10.0.0.1.
 
@@ -69,7 +64,7 @@ AUTO_WIFI_ON_INTERVAL
 HOME_WIFI_SSID
 HOME_WIFI_PASSWORD
 ```
-*New in 1.1.0*
+*New in 2.0*
 
 These options set Home Network Access for your Wifi-enabled hardware. With these set, the devices will connect to your WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time (Receivers). Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, in any device in the same network. Tx Module Wifi update page can be reached using the address http://elrs_tx.local, while receivers' update page can be reached via http://elrs_rx.local.
 

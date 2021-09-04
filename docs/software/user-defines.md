@@ -110,7 +110,7 @@ HOME_WIFI_SSID
 HOME_WIFI_PASSWORD
 ```
 
-*New in version 1.1*
+*New in version 2.0*
 
 These options set Home Network Access for your Wifi-enabled hardware. With these set, the devices will connect to your WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time (Receivers). Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, in any device in the same network. Tx Module Wifi update page can be reached using the address http://elrs_tx.local, while receivers' update page can be reached via http://elrs_rx.local.
 

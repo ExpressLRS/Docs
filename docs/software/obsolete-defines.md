@@ -43,13 +43,20 @@ NB This feature assumes that a low value of the arm switch is disarmed, and a hi
 **REMOVED** 1.0.0-RC1 replaced with `-DAUTO_WIFI_ON_INTERVAL=X`
 
 ```
+-DUSE_500HZ
+```
+This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have to give up 25Hz mode to add 500Hz mode. It requires [OpenTX 2.3.12 or Newer](https://www.open-tx.org/2021/06/14/opentx-2.3.12), [EdgeTX](https://github.com/EdgeTX/edgetx) or a Radio firmware that has CRSFShot or Mixer Sync. 
+
+**Note: Since version 1.0.0-RC9, this option is now always enabled and in turn, 25Hz has been dropped/removed.**
+
+```
 #-DHYBRID_SWITCHES_8
 ```
 Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in [Switch Modes](https://github.com/ExpressLRS/ExpressLRS/wiki/Switch-Modes), but
   1. If only two position switches are needed, and they must be updated as fast as possible: Normal Mode
   2. Almost everyone: Hybrid Mode (Put ARM on AUX1)
 
-**REMOVED** 1.1 replaced with ability to change modes in the lua script.
+**REMOVED** 2.0 replaced with ability to change modes in the lua script.
 
 ```
 #-DENABLE_TELEMETRY
@@ -70,4 +77,4 @@ refresh rate.
 
 **Note #2**: It must be enabled together with **HYBRID_SWITCHES_8**.
 
-**REMOVED** after 1.1 it is enabled by default
+**REMOVED** after 2.0 it is enabled by default
