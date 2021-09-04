@@ -35,7 +35,7 @@ If a parameter does show up, but the Bad/Good section on the right of the header
 
 If the Bad/Good persists to be something different than `0/your packet rate` that means `CRSFshot` is not working - verify that you properly followed the [Radio Preparation](./../tx-prep) Guide.
 
-<img src="../../assets/images/lua3.jpg" width = "50%">
+<img src="../../assets/images/lua3.jpg" width = "50%"> ![Lua Config BW](../../assets/images/lua/config-bw.png)
 
 The `simplify-serial-out   0519fd` from the photo above is the git commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases).
 
@@ -54,7 +54,7 @@ For `Telem Ratio`: the options are: `1/2, 1/4, 1/8, 1/16, 1/32, 1/64, 1/128 & of
 Model Configurations can also be added using the CRSF Model Number for per-reciever settings customizability and lowered risk of accidentally connecting to multiple recievers at the same time. For more information on configuring this check out [this page](../../software/model-config-match/).
 
 ### TX Power
-<img src="../../assets/images/lua/pwrrm.jpg" width = "30%">
+<img src="../../assets/images/lua/pwrrm.jpg" width = "30%"> ![TX Power BW](../../assets/images/lua/power-bw.png)
 
 This is the first folder in the LUA script and allows to set your Max Power level and Dynamic Power. Pressing it enters the folder, If you want to exit the folder, press RTN.
 
@@ -63,7 +63,7 @@ For `Max Power`: the options are `10, 25, 50, 100, 250, 500, 1000 & 2000` mW. Wi
 For `Dynamic`: the options are `Off, On, AUX9, AUX10, AUX11, AUX12`. `Off` means that the TX will transmit at Max Power constantly. `On` means the TX will dynamically lower power below max to preserve energy. `AUX9-12` means that the TX can be changed from max power to dynamic power by changing the position of the switch where switch ON = dynamic power, switch OFF = max power. For more information, [this](../../software/dynamic-transmit-power) provides a deeper dive on the algorithm and usage.
 
 ### VTX Administrator
-<img src="../../assets/images/lua/vtxrm.jpg" width = "30%">
+<img src="../../assets/images/lua/vtxrm.jpg" width = "30%"> ![VTX BW](../../assets/images/lua/vtx-bw.png)
 
 This is the second folder in the LUA script and allows you to change your VTX settings directly from your radio. This requires some initial setup, but after that allows for quick VTX setting changes. Pressing it enters the folder, and if you want to exit the folder, press RTN.
 
@@ -80,16 +80,16 @@ For `Pitmode`: the options are `On & Off` which allow you to quickly switch into
 Finally pressing the `[Send VTX]` button sends your configuration and changes the VTXes settings.
 
 ### Bind
-<img src="../../assets/images/lua/bindrm.jpg" width = "30%">
+<img src="../../assets/images/lua/bindrm.jpg" width = "30%"> ![Bind BW](../../assets/images/lua/bind-bw.png)
 
 Pressing the `[Bind]` button activates binding mode for traditional binding. For  more information check out this page on [binding](./../binding).
 
 ### Wifi Update (ESP32 TXes Only)
-<img src="../../assets/images/lua/wifirm.jpg" width = "30%">
+<img src="../../assets/images/lua/wifirm.jpg" width = "30%"> ![Wifi BW](../../assets/images/lua/wifi-bw.png)
 
 Pressing the `[Wifi Update]` selection activates Wifi Update mode ESP32 TXes. Visit [this page](../../software/updating/wifi-updating) for instructions on how the updating process works. Reboot or change models to exit this mode.
 
 ### BLE Joystick (ESP32 TXes Only)
-<img src="../../assets/images/lua/blerm.jpg" width = "30%">
+<img src="../../assets/images/lua/blerm.jpg" width = "30%"> ![BLE Joystick BW](../../assets/images/lua/blejoystick-bw.png)
 
 Pressing the `[BLE Joystick]` selection activates Bluetooth mode which allows connection to most flight simulators through the bluetooth of your computer. Reboot or change models to exit this mode.
