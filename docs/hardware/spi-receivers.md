@@ -42,6 +42,21 @@ Go to betaflight cli and type (for example):
 
 `save`
 
+## RF Mode Adjustment
+
+These AIO, with ExpressLRS SPI Receiver, were set to use 500Hz as default. To adjust it, you will need to go into Betaflight CLI and use the following command:
+
+`set expresslrs_rate_index = 0`
+
+`save`
+
+- 0 = 500Hz
+- 1 = 250Hz
+- 2 = 150Hz
+- 3 = 50Hz
+
+With the [Updated](../../hardware/spi-receivers/#updating) Betaflight firmware, adjusting your packet rate from the Lua Script will also adjust the packet rate in the AIO.
+
 ## Updating
 
 As mentioned, there's little need to update, but should you still want to, the update will mean you will reflash your Betaflight firmware into your Flight Controller.
