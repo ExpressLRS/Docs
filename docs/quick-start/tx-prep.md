@@ -70,4 +70,6 @@ If the number up top the lua script is showing 0:142, etc., have a look at your 
 
 The "33e2a6" from the photo above is the Commit Hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). If you can't find the commit hash from the Releases page, this could mean you are using firmware from the manufacturer's own fork of the ExpressLRS code.
 
+*Note: on version 1.1.0 onwards pre v2.0, the version display has changed to show the format `{Major}{Minor}{Patch}`. Version 1.1.0 will show as `010100` instead of the hash e7cbb6.*
+
 **Now that your radio is set, you can now proceed with flashing ExpressLRS!**
