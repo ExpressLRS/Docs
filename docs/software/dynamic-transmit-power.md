@@ -14,13 +14,13 @@ Dynamic Power allows the TX module to *lower* its output power from the configur
 
 ### Lowering Power
 
-The algorithm averages the last few RSSI dBm readings from the RX and will compare the average with the sensitivity limit for the current packet rate. If the RSSI is far enough from the limit, the TX output power is lowered one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is above -78dBm, the power will be lowered. This can only occur once every few seconds. The `DYNPOWER_THRESH_DN` user_define can be used to adjust this threshold.
+The algorithm averages the last few RSSI dBm readings from the RX and will compare the average with the sensitivity limit for the current packet rate. If the RSSI is far enough from the limit, the TX output power is lowered one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is above -87dBm, the power will be lowered. This can only occur once every few seconds. The `DYNPOWER_THRESH_DN` user_define can be used to adjust this threshold (default 21dBm).
 
 ### Raising Power
 
 The output power will never exceed the configured power output level in any situation.
 
-The opposite of the "lower power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. When the average RSSI is too close to the sensitivity limit for the current packet rate, the TX power is raised one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is less than -93dBm, the power will be raised. This can only occur once every few seconds. The `DYNPOWER_THRESH_UP` user_define can be used to adjust this threshold.
+The opposite of the "lower power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. When the average RSSI is too close to the sensitivity limit for the current packet rate, the TX power is raised one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is less than -93dBm, the power will be raised. This can only occur once every few seconds. The `DYNPOWER_THRESH_UP` user_define can be used to adjust this threshold (default 15dBm).
 
 In addition to the slow power ramp up, there are two LQ-based conditions that will raise the power immediately to the maximum configured value.
 
