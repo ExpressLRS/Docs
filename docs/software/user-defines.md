@@ -94,6 +94,12 @@ Change the RSSI thresholds used by the Dynamic Power algorithm. If the RSSI movi
 -DUART_INVERTED
 ```
 This **only works** with `ESP32` based TXes (will not work with modules without built-in inversion/uninversion), but enables compatibility with radios that output inverted CRSF, such as the FrSky QX7, TBS Tango 2, RadioMaster TX16S. You want to keep this enabled in most of the cases. If your radio is T8SG V2 or you use Deviation firmware turn this setting off.
+
+```
+-DRCVR_INVERT_TX
+```
+This **only works** with `ESP8266/ESP8285` based RXes. Invert the TX pin in the receiver code to allow an inverted RX pin on the flight controller to be used (usually labeled SBUS input or RXI). Inverted CRSF output. RX pin (telemetry) is unaffected. Update via_BetaflightPassthrough will not work, only via_Wifi. Note that just because this description includes the word SBUS, it doesn't mean the RX will output SBUS. It is still CRSF protocol, only inverted.
+
 ```
 -DUSE_UART2
 ```
