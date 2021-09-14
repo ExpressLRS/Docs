@@ -85,7 +85,7 @@ Enable antenna-switching diversity for RX that support it.
 
 ```
 -DDYNPOWER_THRESH_UP=15
--DDYNPOWER_THRESH_DN=30
+-DDYNPOWER_THRESH_DN=21
 ```
 Change the RSSI thresholds used by the Dynamic Power algorithm. If the RSSI moving average is below `DYNPOWER_THRESH_UP` dBm from the sensitivity limit, the algorithm will increase the power output by one step. Similarly, if the RSSI is above `DYNPOWER_THRESH_DN` from the sensitivity limit, the power will be decreased one step.
 
