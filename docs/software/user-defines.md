@@ -101,11 +101,6 @@ This **only works** with `ESP32` based TXes (will not work with modules without 
 This **only works** with `ESP8266/ESP8285` based RXes. Invert the TX pin in the receiver code to allow an inverted RX pin on the flight controller to be used (usually labeled SBUS input or RXI). Inverted CRSF output. RX pin (telemetry) is unaffected. Update via_BetaflightPassthrough will not work, only via_Wifi. Note that just because this description includes the word SBUS, it doesn't mean the RX will output SBUS. It is still CRSF protocol, only inverted.
 
 ```
--DUSE_UART2
-```
-This enables integration with Jye's **[FENIX rx5805 pro-diversity module](https://github.com/JyeSmith/FENIX-rx5808-pro-diversity)** 👷 
-
-```
 #-DUSE_R9MM_R9MINI_SBUS
 ```
 **This does not turn on SBUS protocol** it simply changes the pin used for communication from those two side pins (A9 and A10) to use the pin labeled "SBUS" on the RX, which is inverted. This is useful for `F4 FCs` which only have an inverted receiver input UART RX. 🔼. This is only one way, so you lose the telemetry downlink to your radio as well as passthrough flashing. Enabling this turns on CRSF protocol output on the `S.BUS` 🚌 pin on your `R9MM/R9Mini`. `set serialrx_inverted = ON` may also be needed within Betaflight 🐝 for compatibility

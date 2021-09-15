@@ -47,6 +47,13 @@ This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have
 **REMOVED** 1.0.0-RC9, this option is now always enabled and in turn, 25Hz has been dropped/removed.
 
 ```
+-DUSE_UART2
+```
+This enables integration with Jye's **[FENIX rx5805 pro-diversity module](https://github.com/JyeSmith/FENIX-rx5808-pro-diversity)**
+
+**REMOVED** Somewhere in the 1.0.0-RC cycle. Feature removed.
+
+```
 -DFAST_SYNC
 ```
 Option that adds faster initial syncing, by changing how long the receiver waits for a connection in each mode while not connected. This option is now the default, but disabling it can help syncing at lower packet rates (50Hz and below).
