@@ -116,6 +116,11 @@ USE_DIVERSITY
 Enable antenna-switching diversity for Receivers that support it.
 
 ```
+RCVR_INVERT_TX
+```
+ESP-based receivers only, invert the TX pin output to generate inverted CRSF. For connecting to a flight controller that only has an RXI / SBUS (RX inverted) pad.
+
+```
 USE_R9MM_R9MINI_SBUS
 ```
 **This does not turn on SBUS protocol** it simply changes the pin used for communication from those two side pins (A9 and A10) to use the pin labeled "SBUS" on the RX, which is inverted. This is useful for F4 FCs which only have an inverted receiver input UART RX. 🔼. This is only one way, so you lose the telemetry downlink to your radio as well as passthrough flashing. Enabling this turns on CRSF protocol output on the S.BUS 🚌 pin on your R9MM/R9Mini. set serialrx_inverted = ON may also be needed within Betaflight 🐝 for compatibility
