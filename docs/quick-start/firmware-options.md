@@ -67,7 +67,13 @@ USE_R9MM_R9MINI_SBUS
 ```
 On the R9MM/R9Mini only, this changes the pin used to output CRSF from the receiver the two side pins (A9 and A10) to the pin labeled "SBUS" on the RX, which is inverted. Similar to `RCVR_INVERT_TX` this does not convert the output to SBUS protocol, so CRSF should still be the receiver protocol selected in the flight controller software.
 
-### Should I turn these off?
+### Should I turn these off/on?
+
+```
+NO_SYNC_ON_ARM
+```
+Sync packets are one packet out of every 5 seconds when armed. Leave this off unless running telemetry ratio Off because you won't be able to reconnect after a failsafe while armed if this is on.
+
 ```
 LOCK_ON_FIRST_CONNECTION
 ```
