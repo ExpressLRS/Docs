@@ -65,7 +65,7 @@ No, just like what channel your VTX is on is not a secret. The binding phrase is
 | 2RSS | Uplink - received signal strength antenna 2 (RSSI)   |           | Second antenna RSSI, used in diversity mode |
 | ANT  | RX active antenna                                    | 0 - 1     | Active antenna for diversity RX |
 | RSNR | Uplink - signal-to-noise ratio                       |           | SNR reported by the RX. Value varies mostly by radio chip and gets lower with distance (once the agc hits its limit)|
-| RFMD | Uplink - packet rate                                 | 0 - 7     | [RF Mode Indexes](../info/signal-health.md#rf-mode-indexes-rfmd) |
+| RFMD | Uplink - packet rate                                 | 0 - 7     | [RF Mode Indexes](../info/signal-health/#rf-mode-indexes-rfmd) |
 | TPWR | Uplink - transmitting power                          |           | 50mW reported as 0, as CRSF/OpenTX do not have this option |
 | TQly | Downlink - link quality (valid packets)              |  0 - 100  | An LQ indicator of telemetry packets received RX → TX |
 | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX |
