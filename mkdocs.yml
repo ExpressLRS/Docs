@@ -160,6 +160,7 @@ nav:
             - Flashing DIY 900RX: quick-start/rx-diyreceivers900.md
             - Flashing DIY 2400RX: quick-start/rx-diyreceivers.md
       - Post-Flash:
+        - LED Status: quick-start/led-status.md
         - Binding ExpressLRS: quick-start/binding.md
         - Pre-first Flight Checks: quick-start/pre-1stflight.md
         - Ardupilot Setup: quick-start/ardupilot-setup.md
