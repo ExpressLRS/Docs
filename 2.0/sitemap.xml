@@ -121,6 +121,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/2.0/quick-start/led-status/</loc>
+         <lastmod>2021-09-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/2.0/quick-start/lua-howto/</loc>
          <lastmod>2021-09-20</lastmod>
          <changefreq>daily</changefreq>
