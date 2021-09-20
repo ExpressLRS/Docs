@@ -63,13 +63,13 @@ No, just like what channel your VTX is on is not a secret. The binding phrase is
 | RQly | Uplink - link quality (valid packets)                |  0 - 100  | The number of successful packets out of the last 100 from TX → RX |
 | 1RSS | Uplink - received signal strength antenna 1 (RSSI)   | -128 - 0  | RSSI dBm as reported by the RX. Values vary depending on mode, antenna quality, output power and distance |
 | 2RSS | Uplink - received signal strength antenna 2 (RSSI)   |           | Second antenna RSSI, used in diversity mode |
-| ANT  | RX active Antenna                                    |           | Not populated currently |
+| ANT  | RX active antenna                                    | 0 - 1     | Active antenna for diversity RX |
 | RSNR | Uplink - signal-to-noise ratio                       |           | SNR reported by the RX. Value varies mostly by radio chip and gets lower with distance (once the agc hits its limit)|
-| RFMD | Uplink - update rate                                 |           |  |
+| RFMD | Uplink - packet rate                                 | 0 - 7     | [RF Mode Indexes](../info/signal-health/#rf-mode-indexes-rfmd) |
 | TPWR | Uplink - transmitting power                          |           | 50mW reported as 0, as CRSF/OpenTX do not have this option |
 | TQly | Downlink - link quality (valid packets)              |  0 - 100  | An LQ indicator of telemetry packets received RX → TX |
 | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX |
-| TSNR | Downlink - signal-to-noise ratio                     |           | SNR reported by the radio in the TX module when receiving telemetry packets |
+| TSNR | Downlink - signal-to-noise ratio                     |           | SNR reported by the TX for telemetry packets |
 
 
 ## Is it normal to get "RF Signal Critical" when plugging in?
