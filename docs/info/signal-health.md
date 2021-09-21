@@ -43,6 +43,21 @@ What appears in the RSSI Value field is based on what is selected as the RSSI Ch
 
 In iNAV, the RSSI Value on the OSD is called RSSI (Signal Strength), and will always display 0. To show a filtered (by iNav) LQI in that field, set the rssi_source to protocol using the CLI with `set rssi_source = PROTOCOL`.
 
+## RF Mode Indexes (RFMD)
+OSDs report the packet rate using an index instead of the actual rate, either as a `RATE:LQ%` or with rate in the hundreds digit such as `799` where 7 is the RATE and 99 is the LQ%. Handsets display the rate using the RFMD telemetry item.
+
+![OSD RFMD](https://cdn.discordapp.com/attachments/738450139693449258/886313969638334484/unknown.png)
+
+| RFMD | Packet Rate | Sensitivity Limit | TX duration (us) | TX Interval (us) |
+|---|---|---|---|---|
+| 7 | 500Hz | -105dBm | 1665 | 2000 |
+| 6 | 250Hz | -108dBm | 3300 | 4000 |
+| 5 | 200Hz | -112dBm | 4380 | 5000 |
+| 4 | 150Hz | -112dBm | 5871 | 6000 |
+| 3 | 100Hz | -117dBm | 8770 | 10000 |
+| 2 | 50Hz | -120dBm (900) / -117dBm (2.4) | 17540 (900) / 18443 (2.4) | 20000 |
+| 1 | 25Hz | -123dBm | 19732 | 40000 |
+
 ## What about SNR?
 
 Wow look at you smarty pants! SNR stands for Signal to Noise ratio and compares RSSI dBm to the RF background noise level and is in dB units (not dBm). Notice it compares the background noise level and not the Sensitivity Limit. The value is of limited usefulness because the RF chip can only approximate the noise level and can only register a value so high above it leading to this value getting clipped. Add to that, LoRa modulation can actually receive data **below the noise floor** to some degree, so just ignore this number really, but positive values are better.
