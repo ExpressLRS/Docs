@@ -59,3 +59,42 @@ Click the `Open Project` button. Navigate to the `ExpressLRS` repo directory. Na
 2. ✏️ Edit the file [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master-dev/src/user_defines.txt) to define user specific variabls. 😈 Please make sure you did edit the file according to __your__ needs! 
 3. 📊 In the toolbar on the left, click the PlatformIO icon, which will show the list of tasks. Now, select Project Tasks, expand your desired target and select Build/Upload (depending on the method). You should see the result in the terminal.
 4. 🙃 If something went wrong - please check the `Terminal`, too. It will contain at least a hint on what the issue is. Please ask the [community](https://github.com/AlessandroAU/ExpressLRS/wiki#community) for further help🧑‍🔧!
+
+## Updating your Local Repo
+
+You've cloned the repository and are now wondering how to get new updates down the line? Then this document is meant for you!
+Here's a primer on how to keep your local copy of the repository up-to-date.
+
+### Method 1: The Clean Way - Fetch & Reset
+
+Probably the **easiest and least troublesome method**, however, it'll overwrite any changes you've made to your local copy. :warning:
+
+1. Open the terminal
+
+    You can either straight up open `bash/cmd` and navigate to your project folder or open an integrated terminal in VSCode:
+
+    - Open the `command pallete` (using `Cmd+Shift+P` on MacOS or `Ctrl+Shift+P` on Windows)
+    - Enter: `Create New Integrated Terminal`
+
+        ![Terminal](../assets/images/vscodeTerminal.png)
+
+2. In the terminal, type: `git fetch -pu && git reset --hard origin/master`
+
+    This will get you the latest version and destroy any local changes you've made.
+
+### Method 2: The lazy way - Commit, Pull & Merge
+
+The advantage this method has over the first method is that all your changes to the user_defines.txt (or any other file, for that matter) will get merged together with any new updates. There's a possibility that, if changes are too big, you could end up with a merge conflict. If that doesn't appeal to you, stick to the first method.
+
+1. Commit your changes to your local repository
+
+    - In VSCode open the `command pallete` (using `Cmd+Shift+P` on MacOS or `Ctrl+Shift+P` on Windows)
+    - Enter: `Git: Commit`
+
+        VSCode will tell you that there are unstaged changes and ask if you want to add them to the commit. Confirm this! This will just commit your changes to the user_defines.txt to your local repository. No worries, you're not overwriting anything on github! :octocat:
+
+2. Open the terminal, how-to is detailed in method 1
+
+3. In the terminal, type: `git pull -f`
+
+    This will pull a new revision of the remote repository to your own local repository and automatically merge it with your own changes.
