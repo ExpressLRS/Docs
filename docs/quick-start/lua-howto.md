@@ -55,7 +55,8 @@ The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver
 
 ### Model Match
 
-Model Match is used to prevent accidentally connecting to multiple recievers at the same time, or using selecting the wrong model in the handset. For more information on configuring this check out [this page](../../software/model-config-match/).
+Model Match is used to prevent accidentally selecting the wrong model in the handset and flying with an unexpected handset or ELRS configuration. Setting this to "On" while a receiver is connected will make that receiver only connect with the current Receiver ID. Setting it to "Off" will allow a connection with any bound receiver (including those using a Bind Phrase). Both sides of the connection must agree on their Model Match setting. For a detailed explanation of how this restricts connections see [Model Match](../../software/model-config-match/#model-match).
+
 
 ### TX Power
 <img src="../../assets/images/lua/pwrrm.jpg" width = "30%"> 
