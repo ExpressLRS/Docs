@@ -24,18 +24,19 @@ function uidBytesFromText(text) {
 
 function setOutput(text) {
   const uidBytes = uidBytesFromText(text);
+  const output = document.querySelector("#__code_0 code");
+  const bfOutput = document.querySelector("#__code_1 code");
 
   output.textContent = uidBytes;
-  bfOutput.innerHTML = `set expresslrs_uid = ${uidBytes}<br>save`;
+  bfOutput.textContent = `set expresslrs_uid = ${uidBytes}\nsave`;
 }
 
 function updateValue(e) {
   setOutput(e.target.value);
 }
 
-const input = document.querySelector(".bp-input");
-const output = document.querySelector(".bp-output");
-const bfOutput = document.querySelector(".bp-bf-output");
-
-input.addEventListener("input", updateValue);
-setOutput("");
+window.addEventListener("load", (event) => {
+  const input = document.querySelector(".bp-input");
+  input.addEventListener("input", updateValue);
+  setOutput("");
+});

@@ -39,52 +39,27 @@ When building via ExpressLRS Configurator or via VS Code, note down the UID byte
 
 ![UID String](../assets/images/UIDsource.png)
 
-#### Setting Binding Phrase
-Go to Betaflight CLI and enter (for example):
-```
-set expresslrs_uid = 172,123,235,247,1,122
-save
-```
-
 #### UID Byte Generator
 
 <style>
-.bp-highlight > .bp-code {
-  font-size: .85em;
-  padding: .7720588235em 1.1764705882em;
-  color: rgb(213, 215, 226);
-  background-color: rgb(33, 34, 44);
-  border-bottom-left-radius: 2.2px;
-  border-bottom-right-radius: 2.2px;
-  border-top-left-radius: 2.2px;
-  border-top-right-radius: 2.2px;
-}
-
 .bp-input {
   color: #000;
 }
 </style>
 
+Binding Phrase
 <div class="bp-wrapper">
-  Binding Phrase
-  <div>
-    <input class="md-input bp-input" type="text" placeholder="..." />
-  </div>
-
-  <br>
-
-  UID Bytes
-  <div class="bp-highlight">
-    <div class="bp-code bp-output"></div>
-  </div>
-
-  <br>
-
-  Betaflight CLI Command
-  <div class="bp-highlight">
-    <div class="bp-code bp-bf-output"></div>
-  </div>
+  <input class="md-input bp-input" type="text" placeholder="..." />
 </div>
+
+UID Bytes
+```
+```
+
+#### Setting Binding Phrase
+Go to Betaflight CLI and enter the following commands. (Enter your binding phrase above)
+```
+```
 
 <script type="text/javascript" src="//unpkg.com/crypto-js@4.1.1/crypto-js.js"></script>
 <script type="text/javascript" src="/assets/javascripts/binding-phrase.js"></script>
