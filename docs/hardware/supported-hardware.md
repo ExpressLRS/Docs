@@ -132,7 +132,7 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/2021/05/19/happymodel-elrs-f4-2g4-aio-5in1-flight-controller-built-in-spi-2-4ghz-elrs-rx/)
 
-*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates. See this [page](../hardware/spi-receivers/) for more info.*
+*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates. See this [page](../../hardware/spi-receivers/) for more info.*
 
 ### Happymodel CrazyF4 ELRS AIO 900Mhz
 
