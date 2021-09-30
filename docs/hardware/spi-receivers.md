@@ -62,7 +62,11 @@ Go to Betaflight CLI and enter the following commands. (Enter your binding phras
 ```
 
 <script type="text/javascript" src="//unpkg.com/crypto-js@4.1.1/crypto-js.js"></script>
-<script type="text/javascript" src="/assets/javascripts/binding-phrase.js"></script>
+<script type="text/javascript">
+  window.addEventListener("load", (event) => {
+    initBindingPhraseGen();
+  });
+</script>
 
 ## RF Mode Adjustment
 

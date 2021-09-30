@@ -22,21 +22,37 @@ function uidBytesFromText(text) {
   return uidBytes;
 }
 
-function setOutput(text) {
-  const uidBytes = uidBytesFromText(text);
-  const output = document.querySelector("#__code_0 code");
-  const bfOutput = document.querySelector("#__code_1 code");
+function initBindingPhraseGen() {
+  const codeTags = document.getElementsByTagName("code");
+  const codeTagsArr = [...codeTags];
 
-  output.textContent = uidBytes;
-  bfOutput.textContent = `set expresslrs_uid = ${uidBytes}\nsave`;
-}
+  const emptyCodeTags = codeTagsArr.filter((codeTag) => {
+    return codeTag.innerText.trim() === "";
+  });
 
-function updateValue(e) {
-  setOutput(e.target.value);
-}
+  if (emptyCodeTags.length !== 2) {
+    return;
+  }
 
-window.addEventListener("load", (event) => {
+  const [output, bfOutput] = emptyCodeTags;
+
+  function setOutput(text) {
+    const uidBytes = uidBytesFromText(text);
+
+    output.textContent = uidBytes;
+    bfOutput.textContent = `set expresslrs_uid = ${uidBytes}\nsave`;
+  }
+
+  function updateValue(e) {
+    setOutput(e.target.value);
+  }
+
   const input = document.querySelector(".bp-input");
+
+  if (!input) {
+    return;
+  }
+
   input.addEventListener("input", updateValue);
   setOutput("");
-});
+}
