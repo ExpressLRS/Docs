@@ -62,9 +62,10 @@ Go to Betaflight CLI and enter the following commands. (Enter your binding phras
 
 These AIOs with ExpressLRS SPI Receivers are set to use 500Hz as default. To adjust it, you will need to go into Betaflight CLI and use the following commands:
 
-`set expresslrs_rate_index = [your index]`
-
-`save`
+```
+set expresslrs_rate_index = [your index]
+save
+```
 
 Where `[your index]` corresponds to the following   :
 
