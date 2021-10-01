@@ -29,18 +29,34 @@ Video Tutorial (thanks to @JyeSmith):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U2sxqx2oT4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+#### UID Byte Generator
 
-### Passphrase
+<style>
+.bp-input {
+  color: #000;
+}
+</style>
 
-Set passphrase in the TX. When building via ExpressLRS Configurator, or via VS Code note down and copy below numbers from the build log:
+Binding Phrase
+<div class="bp-wrapper">
+  <input class="md-input bp-input" type="text" placeholder="..." />
+</div>
 
-![UID String](../assets/images/UIDsource.png)
+UID Bytes
+```
+```
 
-Go to betaflight cli and type (for example):
+#### Setting Binding Phrase
+Go to Betaflight CLI and enter the following commands. (Enter your binding phrase above)
+```
+```
 
-`set expresslrs_uid = 172,123,235,247,1,122`
-
-`save`
+<script type="text/javascript" src="//unpkg.com/crypto-js@4.1.1/crypto-js.js"></script>
+<script type="text/javascript">
+  window.addEventListener("load", (event) => {
+    initBindingPhraseGen();
+  });
+</script>
 
 ## RF Mode Adjustment
 
