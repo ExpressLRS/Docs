@@ -55,6 +55,11 @@ UID Bytes
 ```
 ```
 
+#### Setting Binding Phrase
+Go to Betaflight CLI and enter the following commands. (Enter your binding phrase above)
+```
+```
+
 <script type="text/javascript" src="//unpkg.com/crypto-js@4.1.1/crypto-js.js"></script>
 <script type="text/javascript">
   window.addEventListener("load", (event) => {
