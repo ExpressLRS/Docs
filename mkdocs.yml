@@ -194,3 +194,6 @@ nav:
         - CRC Testing: info/crc-testing.md
         - RX Scoreboard: info/rx-scoreboard.md
   - FAQ: faq.md
+
+extra_javascript:
+  - assets/javascripts/binding-phrase.js
