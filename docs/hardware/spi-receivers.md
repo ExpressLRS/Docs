@@ -30,25 +30,52 @@ Video Tutorial (thanks to @JyeSmith):
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U2sxqx2oT4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### Passphrase
+### Binding Phrase
 
-Set passphrase in the TX. When building via ExpressLRS configurator, or via VS Code note down and copy below numbers from the build log:
+The binding phrase is hashed into 6 bytes represented as numbers. These 6 bytes are referred to as the UID bytes. 
+UID bytes are entered into the Betaflight CLI for binding. Please [look below](#setting-binding-phrase) for instructions. 
+When building via ExpressLRS Configurator or via VS Code, note down the UID bytes from the build log. You can also use the 
+[generator below](#uid-byte-generator) to retrieve your UID bytes from your binding phrase.
 
 ![UID String](../assets/images/UIDsource.png)
 
-Go to betaflight cli and type (for example):
+#### UID Byte Generator
 
-`set expresslrs_uid = 172,123,235,247,1,122`
+<style>
+.bp-input {
+  color: #000;
+}
+</style>
 
-`save`
+Binding Phrase
+<div class="bp-wrapper">
+  <input class="md-input bp-input" type="text" placeholder="..." />
+</div>
+
+UID Bytes
+```
+```
+
+#### Setting Binding Phrase
+Go to Betaflight CLI and enter the following commands. (Enter your binding phrase above)
+```
+```
+
+<script type="text/javascript" src="//unpkg.com/crypto-js@4.1.1/crypto-js.js"></script>
+<script type="text/javascript">
+  window.addEventListener("load", (event) => {
+    initBindingPhraseGen();
+  });
+</script>
 
 ## RF Mode Adjustment
 
 These AIOs with ExpressLRS SPI Receivers are set to use 500Hz as default. To adjust it, you will need to go into Betaflight CLI and use the following commands:
 
-`set expresslrs_rate_index = [your index]`
-
-`save`
+```
+set expresslrs_rate_index = [your index]
+save
+```
 
 Where `[your index]` corresponds to the following   :
 
