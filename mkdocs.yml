@@ -60,7 +60,7 @@ plugins:
   #  - redirects:
   - minify:
       minify_html: true
-      
+
 
 extra_css:
   - assets/stylesheets/main.css
@@ -170,7 +170,7 @@ nav:
       - OpenOCD for STLink: software/open-ocd.md
       - Toolchain Setup: software/toolchain-install.md
       - PIO STLink Fix: software/stlink-fix.md
-      - Updating: 
+      - Updating:
         - Betaflight Passthrough: software/updating/betaflight-passthrough.md
         - Wifi Updating: software/updating/wifi-updating.md
   - Hardware:
@@ -194,3 +194,6 @@ nav:
         - CRC Testing: info/crc-testing.md
         - RX Scoreboard: info/rx-scoreboard.md
   - FAQ: faq.md
+
+extra_javascript:
+  - assets/javascripts/binding-phrase.js

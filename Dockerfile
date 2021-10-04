@@ -10,4 +10,4 @@ EXPOSE 8000
 
 # Start development server by default
 ENTRYPOINT ["mkdocs"]
-CMD ["serve", "--livereload", "--dev-addr=8000:8000"]
+CMD ["serve", "--livereload", "--dev-addr=0.0.0.0:8000"]
