@@ -62,6 +62,12 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-receiver?variant=39416095408262)
 
+### MatekSys 2.4GHz Receivers
+
+[Flashing Guide](../../quick-start/rx-matek2400/)
+
+[Manufacturer Website](http://www.mateksys.com/?portfolio=elrs-r24)
+
 ### Ghost Atto Receivers
 
 [Flashing Guide](../../quick-start/rx-ghost2400/)

@@ -79,6 +79,22 @@ Updating via WiFi is supported by these receivers.
 
 Connect your FC to USB and configure your FC firmware as shown [below](../../quick-start/rx-fcprep/#serial-rx-setup).
 
+### MatekSys R24-D and R24-S
+
+<small>R24-D</small>
+
+![mateksys r24-d](../assets/images/ELRS-R24-D.jpg)
+
+<small>R24-S</small>
+
+![mateksys r24-d](../assets/images/ELRS-R24-S.jpg)
+
+Shown above are the pinouts and dimensions of the receivers. Connect Rx/R to a Tx pad on the FC and Tx/T to an Rx pad on the FC. Don't forget to also wire up 5v and Gnd.
+
+Updating via WiFi is supported by these receivers.
+
+Connect your FC to USB and configure your FC firmware as shown [below](../../quick-start/rx-fcprep/#serial-rx-setup).
+
 ## Serial RX Setup
 
 Once wired up to our Flight Controller, we need to setup the UART for Serial RX. In the example below, the Receiver is wired to a Tx1/Rx1 (UART1) Pad, and so the Serial RX column should be activated on UART1.
