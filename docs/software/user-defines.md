@@ -103,6 +103,11 @@ RCVR_INVERT_TX
 This **only works** with `ESP8266/ESP8285` based RXes. Invert the TX pin in the receiver code to allow an inverted RX pin on the flight controller to be used (usually labeled SBUS input or RXI). Inverted CRSF output. RX pin (telemetry) is unaffected. Update via_BetaflightPassthrough will not work, only via_Wifi. Note that just because this description includes the word SBUS, it doesn't mean the RX will output SBUS. It is still CRSF protocol, only inverted, so CRSF should still be the receiver protocol selected in the flight controller software.
 
 ```
+RCVR_UART_BAUD=420000
+```
+Use a custom baud rate on the receiver instead of the default 420000 baud. This is useful for a KISS v1 FC (which runs at 400000) or any other oddball baud, like 115200 for interfacing with an Arduino.
+
+```
 USE_R9MM_R9MINI_SBUS
 ```
 **This does not turn on SBUS protocol** it simply changes the pin used for communication from those two side pins (A9 and A10) to use the pin labeled "SBUS" on the RX, which is inverted. This is useful for `F4 FCs` which only have an inverted receiver input UART RX. 🔼. This is only one way, so you lose the telemetry downlink to your radio as well as passthrough flashing. Enabling this turns on CRSF protocol output on the `S.BUS` 🚌 pin on your `R9MM/R9Mini`. `set serialrx_inverted = ON` may also be needed within Betaflight 🐝 for compatibility
