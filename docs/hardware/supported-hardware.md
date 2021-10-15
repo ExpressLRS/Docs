@@ -40,6 +40,8 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 ## 2.4GHz Receivers
 
+To help find the right receiver for your needs, see the [Receiver Selection](../receiver-selection/) page.
+
 ### Happymodel EP1 & EP2
 
 [Flashing Guide](../../quick-start/rx-hmep2400/)

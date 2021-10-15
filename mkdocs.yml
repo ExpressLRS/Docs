@@ -181,6 +181,7 @@ nav:
         - Dynamic Transmit Power: software/dynamic-transmit-power.md
   - Hardware:
       - Supported Hardware: hardware/supported-hardware.md
+      - Receiver Selection: hardware/receiver-selection.md
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
       - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
