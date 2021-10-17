@@ -32,6 +32,7 @@ The terms Receiver number (set in OpenTX/EdgeTX) and Model Match number (set in 
 If the `Model Match` option is **Off**, then only recievers with no Model Match number (255) can be connected to. If the `Model Match` option is **On**, then the Receiver number configured in the external module configuration (as shown in the image above) must match the Model Match number stored on the receiver module for the receiver and transmitter to fully connect.
 
 The implementation follows this set of rules for handling half connections / full connections
+
 | TX ModelMatch | TX Receiver ID | RX Model ID | Result |
 |---|---|---|---|
 | Off | Any | Off | **Connects / Communicates as usual** |
