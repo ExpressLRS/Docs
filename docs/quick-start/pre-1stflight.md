@@ -34,13 +34,18 @@ On the 900Mhz hardware, a -20dbm or thereabouts is a good indication your hardwa
 - The ExpressLRS module antenna could be loose. On some 3D printed module cases, the print may be too thick at the part where the pigtail's RP-SMA/SMA end would be attached; if so, tighten the nut on the RP-SMA/SMA to give the antenna some more space to get tightened up.
 - The antenna pigtail may be damaged or not connected properly to the module's mainboard.
 - On receivers using an SMD antennas, expect lower values than those equipped with wire antennas. If the receiver with the SMD antenna has heat shrink, enclosed in a whoop canopy, surrounded with carbon parts or buried inside a plane/fixed wing, expect some more attenuation of the signal.
-- The Super 8 antenna from Frsky, which most of the R9Ms came with, are notorious for being faulty or would degrade from just a few weeks use. Replace it or as a temporary fix, solder all around the junction where the coax shielding and the RP-SMA meet.
-- Check if there aren't any missing components in your receivers, like the RF filter (can be found near the antenna or ufl). Also check if the SMD antenna is not broken or damaged and it's soldered in properly.
-- Some DIY modules require moving the 0 ohm resistor on the E28 from the PCB antenna side towards the UFL side. A solder bridge will work just fine as well, but make sure it is on the correct pads.
+- The Super 8 antenna from Frsky, which most of the R9Ms came with, are notorious for being faulty or would degrade from just a few weeks use. Replace it or as a temporary fix, solder all around the junction where the coax shielding and the RP-SMA meet. Another failure point is the connection of the coax to the active elements itself. It would seem okay, but due to twisting of the antenna, the connection could be severed.
 
 ![NotSuper8](../assets/images/super8notsuper.jpg)
 
 <small>Super8 Antenna's common point of failure</small>
+
+- Check if there aren't any missing components in your receivers, like the RF filter (can be found near the antenna or ufl). Also check if the SMD antenna is not broken or damaged and it's soldered in properly.
+
+![missing filter](https://cdn.discordapp.com/attachments/899260365555249192/899263539951304714/WhatsApp_Image_2021-07-09_at_1.png)
+
+- Most DIY modules require moving the 0 ohm resistor on the E28 from the PCB antenna side towards the UFL side. A solder bridge will work just fine as well, but make sure it is on the correct pads.
+- Swap out antennas on receiver and/or the TX module; Most ExpressLRS receiver antennas use IPEX 1/UFL connectors and as long as the frequency tuning of the antenna is appropriate for the frequency you're in, it should work. You can also use old 2.4GHz WiFi Router antennas for your 2.4GHz modules, but avoid those that are dual-band. Also make sure that the connector on the antenna is the appropriate one (RP-SMA on R9 modules; SMA on most off-the-shelf ExpressLRS modules)
 
 ## Blackbox
 

@@ -48,6 +48,16 @@ If it's still not fixed with that, check if you have RSSI ADC enabled. If so, se
 
 Move your LQ OSD element around as it could be being obstructed by another element or it's too far to the right of the preview.
 
+### I am getting Telemetry Lost/Recovered and is getting annoying
+
+There's a handful of reasons why this is occuring, and if you have newer handset/radio, it shouldn't happen at all unless you're flying very far away using a receiver without an amplifier on its Telemetry signal (e.g. the EP receivers).
+
+- You're on an X9D(+) or a QX7 with subpar inverter chips. Check [this page](../../hardware/x9d-troubleshooting/) on how to remedy it.
+- You're on an early version of the Happymodel Slim Pro. Check [this FB post](https://www.facebook.com/groups/636441730280366/permalink/835603713697499/) for the fix from manufacturer.
+- You're using a 2018 ACCST R9M, while also using a Radio with 400k or higher Baud rate. You will either have to lower the Baud rate on your radio to 115200 (QX7) or do the Resistor mod on the module as described [here](../../hardware/inverter-mod/).
+- Your module is getting loose inside its enclosure, most common on the first batches of the Happymodel ES24TX (white 3D-Printed enclosure; although the black one is only marginally better having 4 screw points instead of 2). You either have to print your own enclosure (search Thingiverse for "expresslrs") or find a way to tighten or snug the enclosure with the module board.
+- Check the S.Port pin and connection in your module and bay, and make sure they have a solid physical connection. On the DIY modules, particularly the full size module, the round hole/via for the Molex connector's flat pin isn't getting good connection due to cold solder joint, or insufficient solder.
+
 ### Betaflight Lua is stuck at Initializing
 
 Increase the TLM Ratio via the ExpressLRS Lua script to values like 1:4 or even 1:2 and retry the Betaflight Lua script.
@@ -61,6 +71,8 @@ See [MSP Section](../../quick-start/pre-1stflight/#msp) for more info.
 Make sure you have disabled ADC Filter in your Radio Hardware settings.
 
 ## Flashing/Updating
+
+**Note: Individual hardware Flashing and Updating guide can be found by using the menu on the left sidebar.**
 
 ### Invalid serial RX configuration detected
 
@@ -85,6 +97,18 @@ This can be due to several things:
 - Receiver is OFF. Check whether the LED on the receiver is lit, indicating it's powered and in working state.
 - The UART has hardware inversion. Make sure that the UART you've connected the receiver to is not an SBUS UART that's usually have hardware inversion (most common among F4 Flight Controllers). There are Flight controllers that require you bridge a pair of pads to enable or disable the Hardware inversion of an Rx pad. You can simply try a different UART.
 - The LED on the receiver is SOLID, while radio is off, could only mean that the Rx pad in the FC is being pulled LOW, putting the ESP-based receiver (EPs, ES900Rx, etc.) into Bootloader mode unintentionally, which will hinder normal passthrough operations. Feel free to try a different UART.
+
+### Failed to connect to ESP8266: Timed out waiting for packet header.
+
+This can be due to several things:
+
+- Receiver is wired incorrectly. Please check if the Rx and Tx wires isn't swapped and connected Rx to Rx and Tx to Tx on the FC. Revisit the FC preparation page [here](../../quick-start/rx-fcprep/).
+- The receiver's "boot" pads aren't bridged (or the button wasn't pressed and held during power up) for passthrough flashing. This is required for Passthrough flashing if the receiver is fresh from the packet and has a firmware version before 1.0.0-RC6.
+- The receiver uart is putting it in Bootloader mode and is interfering with passthrough flashing. Move it into another UART.
+
+You can also attempt the update the via UART using an FTDI Adapter (or a USB to UART Bridge).
+
+Please see the Flashing guide for your particular receiver using the Sidebar on the Left.
 
 ### I updated via WiFi but now receiver won't work and has SOLID LED
 
