@@ -58,7 +58,11 @@ There's a handful of reasons why this is occuring, and if you have newer handset
 - Your module is getting loose inside its enclosure, most common on the first batches of the Happymodel ES24TX (white 3D-Printed enclosure; although the black one is only marginally better having 4 screw points instead of 2). You either have to print your own enclosure (search Thingiverse for "expresslrs") or find a way to tighten or snug the enclosure with the module board.
 - Check the S.Port pin and connection in your module and bay, and make sure they have a solid physical connection. On the DIY modules, particularly the full size module, the round hole/via for the Molex connector's flat pin isn't getting good connection due to cold solder joint, or insufficient solder.
 
-### Betaflight Lua is stuck at Initializing
+### I need to plug my FC a second/third time before I get a bind. LED on receiver is dim when I power it up.
+
+Update to the latest firmware as soon as you can. A batch of HM receivers have reached the market with Voltage regulators (marked SDG) that were insufficient and wasn't able to handle the higher current draw during boot up. To learn more of this issue and the fix, please check out this [PR](https://github.com/ExpressLRS/ExpressLRS/pull/928).
+
+### Betaflight Lua is stuck at "Initializing"
 
 Increase the TLM Ratio via the ExpressLRS Lua script to values like 1:4 or even 1:2 and retry the Betaflight Lua script.
 
