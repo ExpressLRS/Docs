@@ -1,49 +1,55 @@
----
-template: main.html
----
+This feature is in development in `master` branch starting with #724 for ExpressLRS 2.0. To use this feature, select "Git Branch" in the Configurator and select the "master" branch. 
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+You can set Dynamic Power via elrsV2.lua script. 
+Select `TX Power` menu, and set the `Max Power` to be the capped power level you'd like to use. Then assign `Dynamic` to be `On`, or an AUX channel you'd like to use to turn on and off the dynamic power feature on the fly (explained later).
 
 ## Description
 
-Dynamic Power allows the TX module to *lower* its output power from the configured power level using the telemetry from the RX. The TX will lower power if the RSSI dBm is far enough above the sensitivity limit and will raise power if it is not, has a low LQ, or has a sudden drop in LQ. Advanced telemetry is not required for this feature, just a non-zero Telemetry Ratio.
+Dynamic power allows the TX module to *lower* its output power from the configured power level using the telemetry from the RX. The TX will lower power if the RSSI dBm is far enough above the sensitivity limit and will raise power if it is not, has a low LQ, or has a sudden drop in LQ. Advanced telemetry is not required for this feature, just a non-zero Telemetry Ratio.
 
-⚠️ Dynamic Power relies on telemetry. If no telemetry is received by the TX while armed, tx power will adjust its power to max configured power. ⚠️ 
+⚠️ Dynamic Power relies on telemetry. If no telemetry is received by the TX while armed, then the power level will be kicked up to the maximum configured power level. ⚠️
+
+### Feature DEMO
+* Lowering/Raising power on a long-range flight: https://www.youtube.com/watch?v=Ah6h-QqM6Xs
+* LQ-based power boost: https://www.youtube.com/watch?v=SMOfxdzQIJY
+
+Note: These videos were taken with a test version. The power lowering/raising thresholds are different from the current implementation.
 
 ## Details
 
 ### Lowering Power
 
-The algorithm averages the last few RSSI dBm readings from the RX and will compare the average with the sensitivity limit for the current packet rate. If the RSSI is far enough from the limit, the TX output power is lowered one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is above -87dBm, the power will be lowered. This can only occur once every few seconds. The `DYNPOWER_THRESH_DN` user_define can be used to adjust this threshold (default 21dBm).
+The algorithm averages the last few RSSI dBm readings from the RX and will compare the average with the sensitivity limit for the current packet rate. If the RSSI is far enough from the limit, the TX output power is lowered one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is above -78dBm, the power will be lowered. This can only occur once every few seconds.
 
 ### Raising Power
 
 The output power will never exceed the configured power output level in any situation.
 
-The opposite of the "lower power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. When the average RSSI is too close to the sensitivity limit for the current packet rate, the TX power is raised one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is less than -93dBm, the power will be raised. This can only occur once every few seconds. The `DYNPOWER_THRESH_UP` user_define can be used to adjust this threshold (default 15dBm).
+The opposite of the "lower power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. When the average RSSI is too close to the sensitivity limit for the current packet rate, the TX power is raised one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is less than -93dBm, the power will be raised. This can only occur once every few seconds.
 
 In addition to the slow power ramp up, there are two LQ-based conditions that will raise the power immediately to the maximum configured value.
 
 1. If the LQ ever drops below a hard limit. Example: LQ of 50% is received by the TX, the power will jump to max.
 2. If the LQ drops suddenly in a single telemetry update compared to the moving average. This is intended to react to flying behind a structure where the LQ suddenly takes a hit and is expected to drop further. Example: LQ is running 100% (as ExpressLRS do) and the TX receives a telemetry packet with 80% LQ, the power will jump to max.
 
-### Enabled via AUX Switch
+### Override via AUX Channel
+When this channel is HIGH (>1500us) the dynamic power feature will be disabled and the output power will be set to the configured power level. AUX channels between AUX9-AUX12 (CH13-CH16) is supported.
 
-To enable the dynamic power feature using a switch instead of always being enabled, configure Dynamic Power to the preferred AUX switch. When this channel is LOW (<1500us) the dynamic power feature will be disabled and the output power will be set to the configured power level. AUX9-AUX12 (CH13-CH16) is supported.
+* Switch feature demo: https://www.youtube.com/watch?v=wdPWw2xu8Ig
 
 ## Notes
 
 ### Minimum Recommended Telemetry Ratio
-Because dynamic power relies on information coming back from the RX to know how to adjust the power, dynamic power is only available if the "Telemetry Ratio" is not set to Off. Any ratio will allow it to operate, but the algorithm is optimized around having at least 2x Link Statistics telemetry packets per second.
+Because dynamic power relies on information coming back from the RX to know how to adjust the power, dynamic power is only available if the "Telemetry Ratio" is not set to Off. Any ratio will allow it to operate, but the algorithm is optimized around having at least 2x Link Statistics telemetry packets per second. Link telemetry is always available regardless of if the `ENABLE_TELEMETRY` option is used. Minimum recommended Telemetry Ratio per packet rate:
 
-| Packet Air Rate | Minimum Ratio |
-|---|---|
-| 500Hz | 1:128 |
-| 250Hz | 1:64 |
-| 200Hz | 1:64 |
-| 150Hz | 1:32 |
-| 100Hz | 1:32 |
-| 50Hz | 1:16 |
+| Packet Air Rate | ENABLE_TELEMETRY = Off | ENABLE_TELEMETRY = On |
+|---|---|---|
+| 500Hz | 1:128 | 1:128 |
+| 250Hz | 1:128 | 1:64 |
+| 200Hz | 1:128 | 1:64 |
+| 150Hz | 1:64 | 1:32 |
+| 100Hz | 1:64 | 1:32 |
+| 50Hz | 1:32 | 1:16 |
 
 On startup, the output power will be set to the max configured value until telemetry is received to be able to lower it. If telemetry is lost, the output power will stay at the current value until telemetry is received again. This is intended to prevent everyone's TX from blasting to max power when swapping batteries. To return to max configured power, restart the transmitter.
 
