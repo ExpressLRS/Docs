@@ -1,3 +1,9 @@
+---
+template: main.html
+---
+
+<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+
 This feature is in development in `master` branch starting with #724 for ExpressLRS 2.0. To use this feature, select "Git Branch" in the Configurator and select the "master" branch. 
 
 You can set Dynamic Power via elrsV2.lua script. 
@@ -5,7 +11,7 @@ Select `TX Power` menu, and set the `Max Power` to be the capped power level you
 
 ## Description
 
-Dynamic power allows the TX module to *lower* its output power from the configured power level using the telemetry from the RX. The TX will lower power if the RSSI dBm is far enough above the sensitivity limit and will raise power if it is not, has a low LQ, or has a sudden drop in LQ. Advanced telemetry is not required for this feature, just a non-zero Telemetry Ratio.
+Dynamic Power allows the TX module to *lower* its output power from the configured power level using the telemetry from the RX. The TX will lower power if the RSSI dBm is far enough above the sensitivity limit and will raise power if it is not, has a low LQ, or has a sudden drop in LQ. Advanced telemetry is not required for this feature, just a non-zero Telemetry Ratio.
 
 ⚠️ Dynamic Power relies on telemetry. If no telemetry is received by the TX while armed, then the power level will be kicked up to the maximum configured power level. ⚠️
 
