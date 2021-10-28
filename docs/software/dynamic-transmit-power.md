@@ -8,7 +8,7 @@ template: main.html
 
 Dynamic Power allows the TX module to *lower* its output power from the configured power level using the telemetry from the RX. The TX will lower power if the RSSI dBm is far enough above the sensitivity limit and will raise power if it is not, has a low LQ, or has a sudden drop in LQ. Advanced telemetry is not required for this feature, just a non-zero Telemetry Ratio.
 
-⚠️ Dynamic Power relies on telemetry. If no telemetry is received by the TX, then the power level will never change ⚠️ Keep this in mind that a sudden loss of telemetry or exceeding the RX's telemetry transmit range could limit output power to below the configured maximum.
+⚠️ Dynamic Power relies on telemetry. If no telemetry is received by the TX while armed, tx power will adjust its power to max configured power. ⚠️ 
 
 ## Details
 
