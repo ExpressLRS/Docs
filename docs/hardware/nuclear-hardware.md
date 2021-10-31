@@ -43,19 +43,16 @@ If you ordered a Nuclear TX that wasn't fully assembled, these steps should help
 
 #### Print a case
 
-The latest version of the Nuclear TX STL files can be found [here](https://github.com/SpencerGraffunder/ExpressLRS/tree/nuclear-hardware/PCB/2400MHz/TX_SX1280_Super_Slim/stl). Print the pieces in the orientation in the image and use support. Tree support in Cura works great. Keep in mind that PLA may melt if left in a hot car or in direct sunlight.  
-<img src="https://github.com/SpencerGraffunder/ExpressLRS/blob/nuclear-hardware/PCB/2400MHz/TX_SX1280_Super_Slim/img/printlayout.png?raw=true?width=910&height=682" width="40%">
+The latest version of the Nuclear TX STL files can be found [here](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/TX_SX1280_Super_Slim/stl). Print the pieces in the orientation in the image and use support. Tree support in Cura works great. Keep in mind that PLA may melt if left in a hot car or in direct sunlight.  
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/printlayout.png?raw=true" width="40%">
 
 #### Assemble
 
 Slap it together as seen below. Solder the wires to the pin header in the order in the picture, then slide it in from the outside. The header should press in with a little force. Add some glue on the inside to keep it from sliding out when removing it from your handset. Put the SMA pigtail in the hole in the top and screw it down. Use a wrench to make sure it doesn't come loose when you screw on your antenna. Plug the U.FL in to the module and route it under, and looping up around the side.  
-<img src="https://github.com/SpencerGraffunder/ExpressLRS/blob/nuclear-hardware/PCB/2400MHz/TX_SX1280_Super_Slim/img/exploded.jpg?raw=true?width=910&height=682" width="40%">
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/exploded.jpg?raw=true" width="40%">
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/compacted.jpg?raw=true" width="40%">
 
 #### Upload firmware
 
 When you get your Nuclear RX, it will likely be on the latest release firmware. You'll probably have to update it to work with the RX you have. To update, follow the steps in the [Wi-Fi updating](../../software/updating/wifi-updating/) page. If your transmitter module ever becomes bricked from a bad upload, connect it with a serial adapter as shown here. **MAKE SURE THE ADAPTER IS SET TO 3.3V; 5V WILL KILL THE MODULE!** Use tweezers or solder to bridge the boot jumper while you power on the module to put it in boot mode. Use the target `DIY_2400_TX_ESP32_SX1280_E28_via_UART`.  
-<img src="https://github.com/SpencerGraffunder/ExpressLRS/blob/nuclear-hardware/PCB/2400MHz/TX_SX1280_Super_Slim/img/ftdi.png?raw=true?raw=true?width=910&height=682" width="40%">
-
-Note: The version of the boards with the 6-pad layout for programming has the TX and RX named backwards. The actual order of the pins is TX, RX, 3V3, GND, GND.
-
-If you're unable to compile code, you can use the prebuilt binaries from [here](https://github.com/SpencerGraffunder/ExpressLRS/tree/built-binaries/bin) for wifi updates.
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/brd.png?raw=true" width="40%">
