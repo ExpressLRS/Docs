@@ -80,6 +80,8 @@ To help find the right receiver for your needs, see the [Receiver Selection](../
 
 [Flashing Guide](../../quick-start/rx-siyiFRmini/)
 
+*Note: only guaranteed to work on the v3.0 of the receiver*
+
 ## 900Mhz Transmitter Modules
 
 ### Frsky R9M (inc. Lite & Lite Pro)

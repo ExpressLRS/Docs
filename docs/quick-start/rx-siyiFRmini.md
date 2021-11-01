@@ -9,6 +9,8 @@ Targets:
 - `FM30_RX_MINI_via_STLINK` (First-time Flash)
 - `FM30_RX_MINI_via_BetaflightPassthrough` (Updates)
 
+**Note: only guaranteed to work on the v3.0 of the receiver.**
+
 ## Initial Flashing
 
 The only way to flash the FR Mini is using STLINK. Note this is a one-way process, there is no returning to the stock firmware after flashing.
