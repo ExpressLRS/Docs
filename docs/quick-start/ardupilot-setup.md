@@ -12,7 +12,10 @@ In mission planner, you will need to go to the ```config tab -> parameter tree``
 ```
 SERIALx_PROTOCOL = 23 (RCIN)
 RSSI_TYPE = 3 (ReceiverProtocol)
-RC_OPTIONS = 9
+```
+Crossfire rate's enum is different with elrs enum, Since Ardupilot doesn't have a way to differentiate ELRS from Crossfire yet, when the telemetry count differs from the reported packet rate's enum, Ardupilot will notify ("CRSF Packet rate is X, telemetry Rate is X"). Currently Ardupilot provide a way to suppress this notification with the parameter below. (this will not cause any effect to RC link or telemetry Link.)
+```
+RC_OPTIONS turn on Bit 9th which is  "Suppress CRSF mode/rate message for ELRS systems".
 ```
 
 Once you have set the parameter above, power-cycle the flight controller by disconnecting and reconnecting your battery and USB. Ardupilot should automatically run with ELRS, but if it fails, set the other parameter as below:
