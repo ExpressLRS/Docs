@@ -78,6 +78,8 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 [Flashing Guide](../../quick-start/rx-siyiFRmini/)
 
+*Note: only guaranteed to work on the v3.0 of the receiver*
+
 ## 900Mhz Transmitter Modules
 
 ### Frsky R9M (inc. Lite & Lite Pro)
