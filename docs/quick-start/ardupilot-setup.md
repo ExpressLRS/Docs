@@ -13,7 +13,7 @@ In mission planner, you will need to go to the ```config tab -> parameter tree``
 SERIALx_PROTOCOL = 23 (RCIN)
 RSSI_TYPE = 3 (ReceiverProtocol)
 ```
-Crossfire rate's enum is different with elrs enum, Since Ardupilot doesn't have a way to differentiate ELRS from Crossfire yet, when the telemetry count differs from the reported packet rate's enum, Ardupilot will notify ("CRSF Packet rate is X, telemetry Rate is X"). Currently Ardupilot provide a way to suppress this notification with the parameter below. (this will not cause any effect to RC link or telemetry Link.)
+our packet rate is different than CRSF packet rate, and ardupilot will keep on reporting the missmatch, but recently they have an option to suppress the report. Currently Ardupilot provide a way to suppress this notification with the parameter below. (this will not cause any effect to RC link or telemetry Link.)
 ```
 RC_OPTIONS turn on Bit 9th which is  "Suppress CRSF mode/rate message for ELRS systems".
 ```
