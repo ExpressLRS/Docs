@@ -195,6 +195,7 @@ nav:
       - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
       - ESP Backpack: hardware/esp-backpack.md
       - SMD Antenna: hardware/smd-antenna.md
+      - PWM Receivers: hardware/pwm-receivers.md
       - SPI Receivers: hardware/spi-receivers.md
       - Special Targets:
         - DIY Receiver: hardware/diy-rx.md
