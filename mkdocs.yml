@@ -79,10 +79,10 @@ extra:
       name: Join the Facebook Group
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/expresslrs
-      name: We're in Twitter too!
+      name: We're on Twitter too!
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/expresslrs
-      name: Follow us in Instagram
+      name: Follow us on Instagram
     - icon: fontawesome/brands/paypal
       link: https://www.paypal.com/donate?hosted_button_id=FLHGG9DAFYQZU
       name: Send a Donation!
