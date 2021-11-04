@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/2.0/hardware/pwm-receivers/</loc>
+         <lastmod>2021-11-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/2.0/hardware/receiver-selection/</loc>
          <lastmod>2021-11-04</lastmod>
          <changefreq>daily</changefreq>
