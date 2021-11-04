@@ -9,6 +9,8 @@ Targets:
 - `FM30_RX_MINI_via_STLINK` (First-time Flash)
 - `FM30_RX_MINI_via_BetaflightPassthrough` (Updates)
 
+**Note: only guaranteed to work on the v3.0 of the receiver.**
+
 The STLink solderpads on the FRmini RX are very tiny and very close together. The picture below is very enlarged.
 Solder 5  (preferable Silicon) wires to the GND-RST-VDD-CLK-DIO pads. Solder the open ends to a female 2.54 mm pin connector. (Use 3.3V NOT 5V :fire:).
 
