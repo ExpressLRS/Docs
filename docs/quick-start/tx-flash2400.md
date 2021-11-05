@@ -12,9 +12,9 @@ Target: `NamimnoRC_Flash_2400_TX_via_WiFi`
 
 With the correct target selected and [Firmware Options](../../quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `firmware.elrs` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
-These Tx Modules are STM32-based so they require a separate ESP "backpack" device for Wifi Flashing/Updating. The `Wifi Update` option in the ExpressLRS Lua script will not work with these devices. The steps that follow will be used instead.
+These Tx Modules are STM32-based so they require a separate ESP "backpack" device for Wifi Flashing/Updating. 
 
-Attach the module to your JR Bays and power it up. Connect to the `ESP Wifi Manager` Hotspot that the device will activate. Once connected, navigate to http://elrs_tx.local/ (IP: 192.168.4.1). 
+Attach the module to your JR Bays and power it up. Connect to the `ESP Wifi Manager` Hotspot that the device will activate. Once connected, navigate to http://elrs_tx.local/.
 
 ![Wifi Manager](../assets/images/WifiManager.png)
 
@@ -24,13 +24,13 @@ On your browser, refresh the http://elrs_tx.local/ and scroll towards the STM32 
 
 ![STM32 Firmware Update](../assets/images/STM32-updater.png)
 
-Drag-and-drop the `firmware.elrs` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the Choose File button. You can also upload the `firmware.bin` file but change the offset to *0x4000*.Once the correct file is selected, click the `Upload and Flash STM32`. Wait for the process to complete, and the module will reboot (~2-3min). Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
+Drag-and-drop the `firmware.elrs` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the Choose File button. You can also upload the `firmware.bin` file but change the offset to *0x4000*.Once the correct file is selected, click the `Upload and Flash STM32`. Wait for the process to complete, and the module will reboot (~1min). Using the [ExpressLRS lua](../../quick-start/lua-howto/) script, verify that you have the latest version.
 
 ### Method 2
 
-These Tx Modules are STM32-based so they require a separate ESP "backpack" device for Wifi Flashing/Updating. The `Wifi Update` option in the ExpressLRS Lua script will not work with these devices. The steps that follow will be used instead.
+These Tx Modules are STM32-based so they require a separate ESP "backpack" device for Wifi Flashing/Updating. 
 
-Attach the module to your JR Bays and power it up. Connect to the `ESP Wifi Manager` Hotspot that the device will activate. Once connected, navigate to http://elrs_tx.local/ (IP: 192.168.4.1). 
+Attach the module to your JR Bays and power it up. Connect to the `ESP Wifi Manager` Hotspot that the device will activate. Once connected, navigate to http://elrs_tx.local/.
 
 ![Wifi Manager](../assets/images/WifiManager.png)
 
@@ -40,7 +40,7 @@ Using the ExpressLRS Configurator, select the correct Target and set your [Firmw
 
 ![Wifi Update Log](../assets/images/WifiUpdateLog.png)
 
-Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
+Using the [ExpressLRS lua](../../quick-start/lua-howto/) script, verify that you have the latest version.
 
 ## Flashing via OpenTX Radio
 
@@ -50,9 +50,9 @@ With the correct target selected and [Firmware Options](../../quick-start/firmwa
 
 Copy the `NamimnoRC_Flash_2400_TX-<version>.elrs` file into your radio's SD Card `/FIRMWARE` folder.
 
-Once copied, navigate to the `/FIRMWARE` Folder on your Radio and select/highlight the `NamimnoRC_Flash_2400_TX-<version>.elrs` file, long-press the Enter key and select `Flash external ELRS`. Radio should show a `Flash Successful` message and you're done!
+Once copied, navigate to the `/FIRMWARE` Folder on your Radio and select/highlight the `NamimnoRC_Flash_2400_TX-<version>.elrs` file, long-press the Enter key and select `Flash external ELRS`. Flashing will then commence and after a few seconds, radio should show a `Flash Successful` message and you're done!
 
-Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
+Using the [ExpressLRS lua](../../quick-start/lua-howto/) script, verify that you have the latest version.
 
 ## Flashing via STLink
 
@@ -71,4 +71,4 @@ Wire your `STLink v2` to the module's pins as show below:
 
 With the module connected shown above, and your configuration set, hit **Build & Flash** in the ExpressLRS Configurator and wait for the process to finish. Once that's done, and the Success Message showing, you can now remove/unsolder the STLink, and re-assemble the module, and put it into your Radio's Module Bay. If the Radio has CRSF selected, the light should turn green meaning the module has communication with your radio.
 
-Verification can be done using the ELRS.lua script. It should show the Version Hash at the top, as well as the options you can set. If it's showing "Connecting", check if External Module is set to CRSF for the selected model in your radio, and that internal RF module is set to off. See general Troubleshooting section for other ways to determine your module is flashed and ready for flying.
+Verification can be done using the [ExpressLRS lua](../../quick-start/lua-howto/) script. It should show the Version Number and Hash at the bottom, as well as the options you can set. If it's showing "Loading" at the top, check if External Module is set to CRSF for the selected model in your radio, and that internal RF module is set to off. See [General Troubleshooting](../../quick-start/troubleshooting/#general-troubleshooting) section for other ways to determine your module is flashed and ready for flying.

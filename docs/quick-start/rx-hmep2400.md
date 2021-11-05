@@ -14,7 +14,8 @@ Target: `HappyModel_EP_2400_RX_via_WIFI`
 
 [Wire up your receiver](../../quick-start/rx-fcprep/#happymodel-ep1-ep2-pp) to a free UART on your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
 
-*Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
+!!! attention ""
+    *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
 
 **Build** the firmware using the ExpressLRS Configurator using the correct Target and [options](../../quick-start/firmware-options). Once done, it should open a new window where the `HappyModel_EP_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
@@ -32,7 +33,8 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 ### Method 2
 
-*Note: This method will only work once the Home Network SSID and Password has been configured with the receiver*
+!!! note ""
+    Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
 
 With the receiver [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 
@@ -54,7 +56,8 @@ You can now power down your Flight Controller along with the receiver.
 
 ### Method 3
 
-*Note: This method will only work once the Home Network SSID and Password has been configured with the receiver*
+!!! note ""
+    Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
 
 With the receiver [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 
@@ -72,7 +75,8 @@ Target: `HappyModel_EP_2400_RX_via_BetaflightPassthrough`
 
 You will need to bridge the `Boot` pads on the receiver the first time you'll be updating via this method. The [wiring guide](../../quick-start/rx-fcprep/#happymodel-ep1-ep2-pp) shows where the `Boot` pads are. A solid LED indicates the receiver is in `Bootloader` mode when the TX module is OFF (Solid LED also indicates Radio+module & Receiver is bound and has connection). 
 
-*Note: if you haven't bridged the `Boot` pads but the receiver has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead*
+!!! attention ""
+    Note: if you haven't bridged the `Boot` pads but the receiver has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
 
 Bridging the `Boot` pads is no longer needed past 1.0.0-RC6. 
 

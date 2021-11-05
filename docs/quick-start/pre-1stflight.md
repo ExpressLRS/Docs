@@ -37,8 +37,9 @@ On the 900Mhz hardware, a -20dbm or thereabouts is a good indication your hardwa
 - The Super 8 antenna from Frsky, which most of the R9Ms came with, are notorious for being faulty or would degrade from just a few weeks use. Replace it or as a temporary fix, solder all around the junction where the coax shielding and the RP-SMA meet. Another failure point is the connection of the coax to the active elements itself. It would seem okay, but due to twisting of the antenna, the connection could be severed.
 
 ![NotSuper8](../assets/images/super8notsuper.jpg)
+![NotSuper8 for sure](../assets/images/super8notsuper2.jpg)
 
-<small>Super8 Antenna's common point of failure</small>
+<small>Super8 Antenna's common points of failure</small>
 
 - Check if there aren't any missing components in your receivers, like the RF filter (can be found near the antenna or ufl). Also check if the SMD antenna is not broken or damaged and it's soldered in properly.
 

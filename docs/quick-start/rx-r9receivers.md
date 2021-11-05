@@ -6,7 +6,9 @@ template: main.html
 
 ### FrSky RXes  
 ![FC Wiring](../assets/images/FC-Wiring.jpg)
-*Note: This will be the same wiring you'll use for flying and the next firmware updates (via Passthrough). Forget the factory wiring guide!*
+
+!!! attention ""
+    Note: This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!
 
 #### Passthrough Flashing (works with Betaflight, iNav)
 
