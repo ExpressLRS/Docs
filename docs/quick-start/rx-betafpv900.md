@@ -14,6 +14,9 @@ If the receiver gets powered up when you connect the FC to USB, you will need to
 
 If the receiver needs a LiPo attached to get powered up, then Press and Hold the button on the receiver, attach a LiPo, then let go once the LED in the receiver stopped blinking and goes SOLID. Then connect your FC to USB.
 
+!!! attention ""
+    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
+
 These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
 
 Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options](../../quick-start/firmware-options) and then click **Build and Flash**. For first time flashing/updating, it would normally take a while. 
