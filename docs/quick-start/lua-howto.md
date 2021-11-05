@@ -10,15 +10,7 @@ Now that you have flashed your TX it is time to learn how to use the ELRS lua sc
 
 ## Installing the Lua Script
 
-Download the [ELRSv2 Lua Script](https://github.com/ExpressLRS/ExpressLRS/tree/master/src/lua) for your specific radio type onto the radio's SD Card in the `Scripts/Tools` folder and Long Press the "SYS" button (for T16 or similar Radios) or the "Menu" button (for Taranis X9D or similar Radios) to access the Tools Menu where you can find ELRS script ready to run with only one click.
-
-Which version?
-
-* if your handset has the black and white display and your handset is NOT an X9D or X9D+, use: **black_and_white_display_128x64**
-
-* if your handset is the X9D or X9D+, use: **x9d_212x64**
-
-* if your handset has the colored screen display, use: **color_display_480x272**
+Download the [ELRSv2 Lua Script](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS/master/src/lua/elrsv2.lua)(you can simply right-click, save-as) into your radio's SD Card under the `Scripts/Tools` folder and Long Press the "SYS" button (for T16 or similar Radios) or the "Menu" button (for Taranis X9D or similar Radios) to access the Tools Menu where you can find the ExpressLRS script ready to run with only one click.
 
 Here's how it looks in the Tools menu (X9D+ and T16 Shown):
 
@@ -31,7 +23,7 @@ Enter the Lua script by selecting "ExpressLRS" in the Tools menu and pressing EN
 
 If the parameter list does not populate after a few seconds, first verify the ExpressLRS module has power by checking its LED. If there is no power, it is possible the Protocol set for the External Module is incorrect or that the module is not properly connected to the pins of the JR bay of the radio. The latter could mean that the module's PCB has gotten loose, common with the first batches of the ES24TX modules from HappyModel.
 
-If parameters do show up, but the Bad/Good section on the right side of the header is showing an unstable value, have a look at your model settings and make sure the Internal RF module is set to Off. If the Bad/Good indciates something other than `0/your packet rate` this means `CRSFshot` is not working-- verify that you properly followed the [Radio Preparation](./../tx-prep) Guide.
+If parameters do show up, but the Bad/Good section on the right side of the header is showing an unstable value, have a look at your model settings and make sure the Internal RF module is set to Off. If the Bad/Good indicates something other than `0/your packet rate` this means `CRSFshot` is not working-- verify that you properly followed the [Radio Preparation](./../tx-prep) Guide.
 
 <img src="../../assets/images/lua3.jpg" width = "40%">
 <img src="../../assets/images/lua/config-bw.png" width = "40%">
@@ -59,6 +51,7 @@ Model Match is used to prevent accidentally selecting the wrong model in the han
 
 
 ### TX Power
+
 <img src="../../assets/images/lua/pwrrm.jpg" width = "30%"> 
 <img src="../../assets/images/lua/power-bw.png" width = "30%"> 
 
@@ -69,6 +62,7 @@ TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXI
 * `Dynamic` enables the Dynamic Power feature. `Off` means that the TX will transmit at Max Power at all times. `On` means the TX will dynamically _lower_ power to save energy when maximum power is not needed. The options `AUX9, AUX10, AUX11, AUX12` indicate that the TX can be changed from max power to dynamic power by changing the position of a switch. where switch HIGH (>1500us) = dynamic power, switch LOW (<1500us) = max power. For more information, [Dynamic Transmit Power](../../software/dynamic-transmit-power) provides a deeper dive on the algorithm and usage.
 
 ### VTX Administrator
+
 <img src="../../assets/images/lua/vtxrm.jpg" width = "30%">
 <img src="../../assets/images/lua/vtx-bw.png" width = "30%">
 
@@ -84,17 +78,26 @@ VTX Administrator allows you to change your VTX settings directly from your radi
 
 * Finally pressing the `[Send VTX]` button sends the configured settings to the receiver and on to the VTX. These settings are also sent every time a connection is established.
 
+### WiFi Connectivity
+
+This section contains all the WiFi-related functions.
+
+* `Enable WiFi` will activate Tx module WiFi mode for updating via WiFi. Visit [this page](../../software/updating/wifi-updating) for instructions on how the updating process works.
+
+<img src="../../assets/images/lua/wifirm.jpg" width = "30%">
+<img src="../../assets/images/lua/wifi-bw.png" width = "30%">
+
+* `Enable Rx WiFi` will put the bound and connected receiver into WiFi mode to facilitate updating via WiFi.
+
+* `Enable Backpack WiFi` will put the Tx Backpack into WiFi mode (available only to TX modules with backpacks connected and updated to the new Backpack firmwares).
+
+* `Enable VRx WiFi` will put the VRx Backpack that is bound and connected to the onboard TX Backpack into WiFi mode to facilitate updating via WiFi.
+
 ### Bind
 <img src="../../assets/images/lua/bindrm.jpg" width = "30%">
 <img src="../../assets/images/lua/bind-bw.png" width = "30%">
 
 Pressing the `[Bind]` button activates binding mode for traditional binding. This does nothing for users who have configured a bind phrase and is not needed. For more information check out this page on [binding](./../binding).
-
-### Wifi Update (ESP32 TXes Only)
-<img src="../../assets/images/lua/wifirm.jpg" width = "30%">
-<img src="../../assets/images/lua/wifi-bw.png" width = "30%">
-
-Pressing the `[Wifi Update]` selection activates Wifi Update mode ESP32 TXes. Visit [this page](../../software/updating/wifi-updating) for instructions on how the updating process works. Reboot or change models to exit this mode.
 
 ### BLE Joystick (ESP32 TXes Only)
 <img src="../../assets/images/lua/blerm.jpg" width = "30%">
