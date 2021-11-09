@@ -9,11 +9,14 @@ template: main.html
 ### R9MM/mini, R9mx, R9Slim+
 
 ![FC Wiring](../assets/images/FC-Wiring.jpg" width ="100%")
-*Note: This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!*
+
+!!! attention ""
+    Note: This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!
 
 After you've flashed the [bootloader](../../quick-start/rx-bootloader) and wired your receiver as above, proceed to configure up your flight controller as shown [below](../../quick-start/rx-fcprep/#serial-rx-setup).
 
-*Note: R9 Slim requires flashing via STLink first. Passthrough should work for updates.*
+!!! note ""
+    Note: R9 Slim requires flashing via STLink first. Passthrough should work for updates.
 
 ### Happymodel EP1, EP2, PP
 

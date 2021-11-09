@@ -38,7 +38,8 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 #### Method 2
 
-*Note: This method will only work once the Home Network SSID and Password has been configured with the receiver*
+!!! note ""
+    Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
 
 With the receiver [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 
@@ -60,7 +61,8 @@ You can now power down your Flight Controller along with the receiver.
 
 #### Method 3
 
-*Note: This method will only work once the Home Network SSID and Password has been configured with the receiver*
+!!! note ""
+    Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
 
 With the receiver [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 

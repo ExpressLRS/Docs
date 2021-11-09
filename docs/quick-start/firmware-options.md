@@ -21,6 +21,9 @@ Regulatory_Domain_ISM_2400
 ```
 This is a relatively simple one - enable whatever regulatory domain you are in to select the frequency range to be used. `EU 868` is compliant to the frequency but **is not** LBT compliant 👂.
 
+!!! note "Regulatory_Domain_ISM_2400"
+    This option is now set automatically for 2.4GHz devices and the Regulatory Domain section has been removed for these devices.
+
 ## Binding Phrase
 
 Entering a binding phrase allows you to skip the binding step with your receivers-- you want this set. Any transmitter using the same binding phrase will connect to any receiver with the same binding phrase, so be unique. Limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will require traditional [binding method](../../quick-start/binding/).
@@ -51,9 +54,10 @@ This **only works** with ESP32 based TXes. **Almost all handsets** require `UART
 
 ![900 RX Options](../assets/images/ConfigurationOptions900rx.jpg)
 
-*Note: Configuration of Receivers should match the configuration of the Transmitter Module for Sync/Binding to happen between devices.*
+!!! attention ""
+    Note: Configuration of Receivers should match the configuration of the Transmitter Module for Sync/Binding to happen between devices.
 
-Most of the options listed above also apply to Receivers, receivers have a few extra options that you may need.
+Most of the options listed above also apply to Receivers. The following are options specific to receivers that you might need.
 
 ### Output Inverting
 
