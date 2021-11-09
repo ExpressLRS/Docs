@@ -68,7 +68,7 @@ Verify the version and hash in the main screen of ExpressLRS Lua script.
 
 ## Flashing via USB/UART
 
-Target:
+Targets:
 
 - `BETAFPV_900_TX_via_UART`
 - `BETAFPV_900_TX_MICRO_via_UART`
