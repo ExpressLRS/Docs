@@ -83,7 +83,7 @@ Target: `NamimnoRC_FLASH_2400_OLED_TX_via_WIFI`
 
 ### Method 1
 
-With the correct target selected and [Firmware Options](../../quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `HappyModel_ES24TX_2400_TX-<version>.bin` or `HappyModel_ES24TX_Slim_Pro_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+With the correct target selected and [Firmware Options](../../quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `NamimnoRC_FLASH_2400_OLED_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 The next steps will require the [ELRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/ELRS.lua?raw=true) (right-click, save as). Download the ELRS.lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's proper connection with the radio. Execute the ELRS.lua script by pressing "System Menu" in your radio and then under Tools, select ELRS.lua.
 
@@ -96,7 +96,7 @@ At first, it will show "Mismatch"; it's normal. Tap `Enter` once on your radio t
 
 Select "Wifi Update" from the lua script. The Lua script will instruct you to go to a specific Ip Address, but you have to first connect to the Wifi Hotspot it created. It will show up in your network as `ExpressLRS TX Module`, and the password is simply `expresslrs`.
 
-Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `HappyModel_ES24TX_2400_TX-<version>.bin` or `HappyModel_ES24TX_Slim_Pro_2400_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
+Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `NamimnoRC_FLASH_2400_OLED_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
 
 Once the file is uploaded, the webserver should load a White page, with the message **Update Success! Rebooting...**
 
@@ -110,7 +110,7 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 ### Method 2
 
-With the correct target selected and [Firmware Options](../../quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `HappyModel_ES24TX_2400_TX-<version>.bin` or `HappyModel_ES24TX_Slim_Pro_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+With the correct target selected and [Firmware Options](../../quick-start/firmware-options) set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `NamimnoRC_FLASH_2400_OLED_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 Using the [ELRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/ELRS.lua?raw=true) (right-click, save as), select `Wifi Update` and if you have flashed your Tx Module with your Home WiFi Network details, it will connect to the network automatically.
 
@@ -118,7 +118,7 @@ Using your browser, navigate to http://elrs_tx.local and the WiFi Update page sh
 
 ![Firmware Update](../assets/images/web-firmwareupdate.png)
 
-Drag-and-drop the `HappyModel_ES24TX_2400_TX-<version>.bin` or `HappyModel_ES24TX_Slim_Pro_2400_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and the module will reboot (~2-3min). Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
+Drag-and-drop the `NamimnoRC_FLASH_2400_OLED_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and the module will reboot (~2-3min). Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) script, verify that you have the latest version.
 
 ### Method 3
 
@@ -132,22 +132,9 @@ Using the [ELRS.lua](../../quick-start/tx-prep/#troubleshooting-lua-script) scri
 
 ## Flashing via USB/UART
 
-Targets:
+Target: `NamimnoRC_FLASH_2400_OLED_TX_via_UART`
 
-- `HappyModel_ES24TX_2400_TX_via_UART`
-- `HappyModel_ES24TX_Slim_Pro_2400_TX_via_UART`
-
-This method requires you move two jumpers into specific pins in the module board. See the following image for the jumper location and which pin should be bridged for this method to work.
-
-![JumperFS](../assets/images/Jumper.jpg)
-
-![JumperLite](../assets/images/Jumper-Lite.jpg)
-
-![JumperSlim](../assets/images/Jumper-slim.jpg)
-
-The jumpers should be moved into the USB/UART (Green) position from the images above. Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
-
-*Note: The new Slim Pro doesn't have jumpers or dip switches that you need to move in order to flash via USB. Just connect USB and make sure your computer has recognized the device as a USB-to-UART Bridge (i.e. install the needed CP210x drivers).*
+Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
 
 Using the ExpressLRS Configurator with the correct Target selected and [options](../../quick-start/firmware-options) set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
