@@ -5,9 +5,10 @@ template: main.html
 
 Addon for **R9M modules** and **HappyModel ELRS915TX** to allow:
 
-* Logging to Browser and via Websocket
+* Wireless firmware update via ExpressLRS Configurtor
 * Flashing ESP Backpack (self)
-* Flashing R9M TX
+* Flashing R9M TX locally via browser
+* Logging to Browser and via Websocket
 * Possibly more.. wireless trainer mode? Please contribute 🥇 
 
 This is a convenience feature for development purposes and "power users" - soldering can be tricky - please be careful. 👮 
@@ -36,25 +37,12 @@ This module needs a more complex circuit to get flashed:
 
 ![](https://image.easyeda.com/histories/61110e5f31b344acaa668114f65cce9a.png)
 
-## PlatformIO
+## ESP module firmware
 
-The platformio sub-project is in [`src/ESPbackpack`](https://github.com/ExpressLRS/ExpressLRS/tree/master/src/ESPbackpack), please get into there first.
+Before connecting the ESP module to the TX module, you need to [flash the ESP module with the latest TX Backpack firmware.](https://github.com/ExpressLRS/Backpack/wiki/Flashing-the-TX-Backpack-Firmware)
+To transfer the ESP module to the firmware mode, it is necessary to connect the `IO0` and `GND` pins before connecting the programmer to the computer.
 
-Now, please call
-
-```shell
-pio run -e ESP_BACKPACK_ESP8266 -t upload
-```
-
-or optionally specify the serial adapter to be used
-
-```shell
-pio run -e ESP_BACKPACK_ESP8266 -t upload --upload-port /dev/cu.SLAB_USBtoUART
-```
-
-For 8285 please set the value of parameter `-e` to `ESP_BACKPACK_ESP8285`.
-
-## Connecting to R9M Module
+## Connecting to R9M 2018 (Old version) Module
 
 Let's get together:
 
@@ -64,6 +52,26 @@ Let's get together:
 
 ![solder map](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/r9m_backpack_pins.jpg)
 ![alessandros version](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/sandro%20backpack.jpeg)
+
+## Connecting to R9M 2019 Module
+
+The ESP module is wired:
+
+* GPIO5 -> ESP IO5
+* GPIO4 -> ESP IO4
+* GPIO0 -> ESP IO0 (It is necessary to cut the wiring leading to the button.)
+* GPIO16 -> ESP IO16 (If desired, an LED and a current-limiting resistor of 0.5-1.5kOm must be added to the circuit.)
+* TX -> ESP RX
+* RX -> ESP TX
+* 3.3v -> ESP 3.3v
+* GND -> ESP GND
+
+* The button is required to enable the access point mode on the ESP.
+* The LED is required to indicate the operation of the ESP access point mode. If it is not needed, it can be omitted.
+
+![R9M2019BackpackMod1](https://user-images.githubusercontent.com/32848699/141538176-e2d33228-cc60-4fe7-989e-6928974daf55.png)
+![R9M2019BackpackMod2](https://user-images.githubusercontent.com/32848699/141538188-6c18b2d9-c925-47cf-8d4f-9a4fbbbe5fb7.png)
+
 
 ## Connecting to Happymodel ELRS915TX
 
