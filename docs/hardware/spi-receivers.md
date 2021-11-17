@@ -4,6 +4,9 @@ template: main.html
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
+!!! warning ""
+	ExpressLRS version 2.0 Release Candidates are **NOT** compatible with the current (Nov. 2021) ExpressLRS SPI Receiver code. Once ExpressLRS v2.0 is released, the SPI Receiver implementation will follow and gets the same update.
+
 A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano longrange rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
 Because these are SPI-based, the ExpressLRS Code came baked-in in the Betaflight 4.3.0-based custom-built firmware. These usually *don't* need to be updated. These Flight Controllers **will work** with any released ExpressLRS firmware.
