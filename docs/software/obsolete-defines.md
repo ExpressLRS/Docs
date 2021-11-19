@@ -9,6 +9,14 @@ This page contains old user_defines.txt that have been removed or superseded by 
 New items should be added to the top of the list so the last entry here is the oldest. The order of each entry should be [code]definename[/code] followed by the original text of the documentation, ending with a separate paragraph "**REMOVED** [version] [replacement or reason for removal]".
 
 ## Obsolete Defines
+
+```
+USE_ESP8266_BACKPACK
+```
+This enables communication with the **[ESP Backpack](../../hardware/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
+
+**REMOVED** 2.0 development. Replaced with USE_TX_BACKPACK.
+
 ```
 #-DHYBRID_SWITCHES_8
 ```

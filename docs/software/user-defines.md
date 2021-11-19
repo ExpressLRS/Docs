@@ -147,10 +147,10 @@ Example BlHeli32 melodies are available on [Rox Wolfs youtube channel](https://w
 The build process also supports RTTTL-formatted ringtone strings. RTTTL melodies are delimited by colons `:` and start with a description versus the BLHeli style with have pipes `|`. e.g. `Mario:d=4,o=5,b=100:32p,16e6,16e6,16p,16e6,16p,16c6,16e6,16p,16g6,8p,16p,16g`
 
 ```
-USE_ESP8266_BACKPACK
+USE_TX_BACKPACK
 ```
-This enables communication with the **[ESP Backpack](../../hardware/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
+Enables code for talking to a connected [ESP8266 backpack](https://github.com/ExpressLRS/Backpack) on the TX module, and associated Lua params. The device target should enable this automatically for devices that come with this built-in, but can be added to any device. The TX backpack allows wireless integration with VRx modules and planned telemetry mirroring over wifi.
 
 ## Obsolete user_defines
 
-See [Obsolete user_defines](Obsolete-user_defines)
+See [Obsolete user_defines](obsolete-defines)
