@@ -140,10 +140,10 @@ nav:
             - Flashing Frsky R9 Modules: quick-start/tx-r9m.md
             - Flashing Happymodel ES900TX: quick-start/tx-es900tx.md
             - Flashing NamimnoRC Voyager: quick-start/tx-voyager900.md
-            - Flashing BetaFPV Nano 900Mhz: quick-start/tx-betafpv900.md
+            - Flashing BetaFPV 900Mhz TX: quick-start/tx-betafpv900.md
             - Flashing Happymodel ES24TX: quick-start/tx-es24tx.md
             - Flashing NamimnoRC Flash: quick-start/tx-flash2400.md
-            - Flashing BetaFPV Nano 2.4Ghz: quick-start/tx-betafpv2400.md
+            - Flashing BetaFPV 2.4Ghz TX: quick-start/tx-betafpv2400.md
             - Flashing Ghost TX: quick-start/tx-ghost2400.md
             - Flashing Siyi TXes: quick-start/tx-siyifm30.md
             - Flashing DIY 900TX: quick-start/tx-diy900.md
