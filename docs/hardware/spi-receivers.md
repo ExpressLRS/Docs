@@ -6,7 +6,7 @@ template: main.html
 
 A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano long range rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
-Because these are SPI-based, the ExpressLRS Code came baked-in in the Betaflight 4.3.0-based custom-built firmware. These usually *don't* need to be updated. These Flight Controllers **will work** with any released ExpressLRS firmware.
+Because the ExpressLRS code is "baked-in" to the flight controller firmware instead of a second microcontroller, these can not be updated the same way external receivers are. These SPI receivers will work always work with the ExpressLRS firmware of the same major version. That is, ExpressLRS 1.x.x and ExpressLRS 2.x.x need different **Flight Controller** firmware (Betaflight builds).
 
 ## Binding Procedure
 
@@ -87,7 +87,7 @@ With the [Updated](../../hardware/spi-receivers/#updating) Betaflight firmware, 
 
 ## Updating
 
-As mentioned, there's little need to update, but should you still want to, the update will mean you will reflash your Betaflight firmware into your Flight Controller.
+As mentioned, you must flash a Betaflight firmware that's compatible with the ExpressLRS major version on your transmitter. ExpressLRS 1.x.x TX only works with Betaflight firmware for ExpressLRS 1.x.x, and upgrading the transmitter to ExpressLRS 2.x.x means flashing the flight controller with a different Betaflight version. If upgrading minor versions, such as from ExpressLRS 1.1.0 to 1.2.0 on the transmitter, no changes to the flight controller are needed although there may be bug fixes to the ExpressLRS Betaflight implementation as well.
 
 In preparation for this, you should save a copy of your `diff all` dump.
 
