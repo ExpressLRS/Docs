@@ -153,4 +153,4 @@ Enables code for talking to a connected [ESP8266 backpack](https://github.com/Ex
 
 ## Obsolete user_defines
 
-See [Obsolete user_defines](obsolete-defines)
+See [Obsolete user_defines](../obsolete-defines/)
