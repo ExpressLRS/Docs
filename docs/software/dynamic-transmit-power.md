@@ -18,6 +18,10 @@ Note: These videos were taken with a test version. The power lowering/raising th
 
 ## Details
 
+### Starting Power
+
+On module powerup with Dynmaic Power is enabled, power is set to the minumum supported power.
+
 ### Lowering Power
 
 The algorithm averages the last few RSSI dBm readings from the RX and will compare the average with the sensitivity limit for the current packet rate. If the RSSI is far enough from the limit, the TX output power is lowered one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is above -78dBm, the power will be lowered. This can only occur once every few seconds.
@@ -28,10 +32,11 @@ The output power will never exceed the configured power output level in any situ
 
 The opposite of the "lower power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. When the average RSSI is too close to the sensitivity limit for the current packet rate, the TX power is raised one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is less than -93dBm, the power will be raised. This can only occur once every few seconds.
 
-In addition to the slow power ramp up, there are two LQ-based conditions that will raise the power immediately to the maximum configured value.
+In addition to the slow power ramp up, there are three LQ-based conditions that will raise the power immediately to the maximum configured value.
 
 1. If the LQ ever drops below a hard limit. Example: LQ of 50% is received by the TX, the power will jump to max.
 2. If the LQ drops suddenly in a single telemetry update compared to the moving average. This is intended to react to flying behind a structure where the LQ suddenly takes a hit and is expected to drop further. Example: LQ is running 100% (as ExpressLRS do) and the TX receives a telemetry packet with 80% LQ, the power will jump to max.
+3. If telemetry is lost entirely with the arm switch high. Any time the TX is "disconnected" while armed, the power will jump to max.
 
 ### Override via AUX Channel
 When this channel is HIGH (>1500us) the dynamic power feature will be disabled and the output power will be set to the configured power level. AUX channels between AUX9-AUX12 (CH13-CH16) is supported.
