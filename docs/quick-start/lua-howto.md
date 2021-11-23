@@ -39,6 +39,8 @@ Now, we can explore the complexities of the lua script, and how to interpret eac
 
 <img src="../../assets/images/modelcfg.jpg" width = "60%" />
 
+**WARNING: Do not change parameters while ARMED. When a parameter is changed, the module goes into Parameter Commit mode, interrupting the normal loop. This could result on a desync on some hardware combination which would result in a FAILSAFE.**
+
 ### Packet Rate and Telemetry Ratio
 
 These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allow you to change your performance parameters. 
