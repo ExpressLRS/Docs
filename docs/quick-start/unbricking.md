@@ -20,6 +20,10 @@ Next, we must activate the ROM bootloader. On every ESP82585 based RX there is a
 
 If you have a receiver with a button, just hold it down while you apply power to enter the bootloader. However, if you have an EP1/EP2 you have to short the boot pad which is located just above GND to GND with solder. 
 
+### Happymodel EP1, EP2 boot pads
+
+![HM2400 connection](../assets/images/hm2400.png)
+
 One the receiver is in bootloader mode, all you need to do is configure the RX in the configurator as per normal and then upload with the ‘via_BetaflightPassthrough’ method. If all goes well, you should see it upload successfully. 
 
 If you’ve still got the boot pad bridged with solder, you’ll need to remove the solder before it will work again. Congratulations! You’ve unbricked your receiver. 
