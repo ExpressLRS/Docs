@@ -57,6 +57,9 @@ These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allo
 
 The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver (the 4 main channels are always 10-bit). The options are `Hybrid & Wide`. **Hybrid** mode is 6x 2/3/6-position + 1x 16-position, and **Wide** is 7x 64 or 128-position. For detail about the differences, see the [Switch Configs](../../software/switch-config/) documentation.
 
+!!! hint "Hot Tip"
+	Before you can change the Switch Mode, ensure your module is NOT connected to a receiver. The top right corner of the lua script will show a `-` if you're not connected.
+
 ### Model Match
 
 Model Match is used to prevent accidentally selecting the wrong model in the handset and flying with an unexpected handset or ELRS configuration. Setting this to `On` while a receiver is connected will make that receiver only connect with the current Receiver ID. Setting it to `Off` will allow a connection with any bound receiver (including those using a Bind Phrase). Both sides of the connection must agree on their Model Match setting. For a detailed explanation of how this restricts connections see [Model Match](../../software/model-config-match/#model-match).
