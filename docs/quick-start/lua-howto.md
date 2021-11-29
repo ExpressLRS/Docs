@@ -39,17 +39,26 @@ Now, we can explore the complexities of the lua script, and how to interpret eac
 
 <img src="../../assets/images/modelcfg.jpg" width = "60%" />
 
+!!! warning "WARNING"
+	Do not change parameters while ARMED. When a parameter is changed, the module goes into Parameter Commit mode, interrupting the normal loop. This could result on a desync on some hardware combination which would result in a FAILSAFE.
+
 ### Packet Rate and Telemetry Ratio
 
 These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allow you to change your performance parameters. 
 
 * `Packet Rate` sets how fast data packets are sent, higher rates send packets more frequently and have lower latency, but have reduced range. The options for Team2.4 are: `50, 150, 250 & 500` Hz and the options for Team900 are `25, 50, 100 & 200` Hz. The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health) for more information about the sensitivity limit.
 
+!!! warning "WARNING"
+	NEVER change the packet rate while flying as this FORCES A DISCONNECT between the TX and RX. 
+
 * `Telem Ratio` sets the telemetry ratio, how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data. For information on telemetry setup, see [First Flight: Telemetry](./../pre-1stflight/#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth/).
 
 ### Switch Mode
 
 The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver (the 4 main channels are always 10-bit). The options are `Hybrid & Wide`. **Hybrid** mode is 6x 2/3/6-position + 1x 16-position, and **Wide** is 7x 64 or 128-position. For detail about the differences, see the [Switch Configs](../../software/switch-config/) documentation.
+
+!!! hint "Hot Tip"
+	The Switch Mode can only be changed when not connected to a receiver. The top right corner of the lua script will show a `-` if you're not connected.
 
 ### Model Match
 
