@@ -6,15 +6,28 @@ template: main.html
 
 ## Description
 
-Dynamic Power allows the TX module to *lower* its output power from the configured power level using the telemetry from the RX. The TX will lower power if the RSSI dBm is far enough above the sensitivity limit and will raise power if it is not, has a low LQ, or has a sudden drop in LQ. Advanced telemetry is not required for this feature, just a non-zero Telemetry Ratio.
+Dynamic Power allows the TX module to *adjust* its output power up to the configured power level using the telemetry from the RX. The TX will lower power if the RSSI dBm is far enough above the sensitivity limit and will raise power if it is not, has a low LQ, or has a sudden drop in LQ. Advanced telemetry is not required for this feature, just a non-zero Telemetry Ratio.
 
-⚠️ Dynamic Power relies on telemetry. If no telemetry is received by the TX while armed, then the power level will be kicked up to the maximum configured power level. ⚠️
+⚠️ Dynamic Power relies on telemetry. If no telemetry is received while armed, then the power level will be kicked up to the maximum configured power level. ⚠️
 
 ### Feature DEMO
 * Lowering/Raising power on a long-range flight: https://www.youtube.com/watch?v=Ah6h-QqM6Xs
 * LQ-based power boost: https://www.youtube.com/watch?v=SMOfxdzQIJY
+* AUX Switch feature demo: https://www.youtube.com/watch?v=wdPWw2xu8Ig
 
-Note: These videos were taken with a test version. The power lowering/raising thresholds are different from the current implementation.
+Note: These videos were taken with a test version. The power lowering/raising thresholds are different from the deployed version.
+
+### How to configure Dynamic Power
+
+On the ELRS Lua script v2, Select `> TX Power`. There are three configurable elements.
+* `Max Power`: The output power will never exceed this power output level in any situation.
+* `Dynamic`: Three options are available.
+  - `Off`: Fixed power, always set to the configure `Max Power` output.
+  - `On`: Dynamic power is enabled, following the logic described below.
+  - `AUX9`-`AUX12`: Dynamic power is *disabled* and fixed to the `Max Power` when `high` value is assigned to this aux channel.
+* `Fan Thresh`: Fan threshold. If a module has a fan, it will blow air from the power level configured here.
+
+Another important setting is to make sure your craft is **armed** on AUX1=`high`. ELRS never knows the craft arming state, instead it monitors the value of `AUX1` for arming detection.
 
 ## Details
 
@@ -28,8 +41,6 @@ The algorithm averages the last few RSSI dBm readings from the RX and will compa
 
 ### Raising Power
 
-The output power will never exceed the configured power output level in any situation.
-
 The opposite of the "lower power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. When the average RSSI is too close to the sensitivity limit for the current packet rate, the TX power is raised one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is less than -93dBm, the power will be raised. This can only occur once every few seconds.
 
 In addition to the slow power ramp up, there are three LQ-based conditions that will raise the power immediately to the maximum configured value.
@@ -38,10 +49,6 @@ In addition to the slow power ramp up, there are three LQ-based conditions that 
 2. If the LQ drops suddenly in a single telemetry update compared to the moving average. This is intended to react to flying behind a structure where the LQ suddenly takes a hit and is expected to drop further. Example: LQ is running 100% (as ExpressLRS do) and the TX receives a telemetry packet with 80% LQ, the power will jump to max.
 3. If telemetry is lost entirely with the arm switch high. Any time the TX is "disconnected" while armed, the power will jump to max.
 
-### Override via AUX Channel
-When this channel is HIGH (>1500us) the dynamic power feature will be disabled and the output power will be set to the configured power level. AUX channels between AUX9-AUX12 (CH13-CH16) is supported.
-
-* Switch feature demo: https://www.youtube.com/watch?v=wdPWw2xu8Ig
 
 ## Notes
 
