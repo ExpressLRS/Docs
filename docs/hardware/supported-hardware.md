@@ -38,6 +38,8 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 [Flashing Guide](../../quick-start/tx-siyifm30/)
 
+Max output power: 100mW default, 250mW with `UNLOCK_HIGHER_POWER`
+
 ## 2.4GHz Receivers
 
 To help find the right receiver for your needs, see the [Receiver Selection](../receiver-selection/) page.
@@ -80,6 +82,8 @@ To help find the right receiver for your needs, see the [Receiver Selection](../
 
 [Flashing Guide](../../quick-start/rx-siyiFRmini/)
 
+Max telemetry power: 100mW default, 250mW with `UNLOCK_HIGHER_POWER`
+
 *Note: only guaranteed to work on the v3.0 of the receiver*
 
 ## 900Mhz Transmitter Modules
@@ -88,11 +92,17 @@ To help find the right receiver for your needs, see the [Receiver Selection](../
 
 [Flashing Guide](../../quick-start/tx-r9m/)
 
+[Fan Mod](https://www.expresslrs.org/2.0/hardware/fan-mod/)
+
+Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
+
 ### Happymodel ES900TX
 
 [Flashing Guide](../../quick-start/tx-es900tx/)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
+
+Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
 
 ### NamimnoRC Voyager
 

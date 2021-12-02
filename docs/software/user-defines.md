@@ -44,14 +44,11 @@ Default value is **320LU**. If you want to change that you have to suffix your m
 Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU** for ErskyTx ones.
 
 ## Output Power Limit
-There has been some reports of the R9M modules showing instability at >250mw with stock cooling. This in part because the ELRS uses a higher duty cycle for transmission compared to stock firmware. By default the power of any TX is limited to 250mw but you can unlock up to 1000mw (for hardware that supports it) by enabling the following option. Do this at your own risk if you make no cooling modifications-- R9M modules will burn themselves out without cooling.
+By default the max power of hardware is limited to what it can safely output without extra cooling. Some hardware supports increasing the power by enabling the following option. Check the [supported hardware](https://www.expresslrs.org/2.0/hardware/supported-hardware/) page to see if this is available and what cooling modifications can be made. By enabling this, you are risking perminant damage to your hardware, sometimes even when you add extra cooling. For example, R9M modules will burn out without cooling.
 
 ````
 UNLOCK_HIGHER_POWER 
 ````
-We published [R9M Fan Mod Cover](../../hardware/fan-mod/), a custom 3d printed backplate with room for a fan and extra cooling to allow for maximum power (1-2W depending on the mod).
- 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" width="20%" height="auto" /><img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottom.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottompng" width="20%" height="auto" />
 
 ## Performance Options
 ```

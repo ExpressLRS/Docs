@@ -13,20 +13,19 @@ Some of these options are present on both the Tx and Rx Targets. It is important
 ![900 TX Options](../assets/images/ConfigurationOptions900tx.jpg)
 
 ## Regulatory Domains
+!!! note "Only available for 900MHz devices"
+    This option is now set automatically for 2.4GHz devices.
 ```
 Regulatory_Domain_AU_915
 Regulatory_Domain_EU_868
 Regulatory_Domain_FCC_915
-Regulatory_Domain_ISM_2400
 ```
 This is a relatively simple one - enable whatever regulatory domain you are in to select the frequency range to be used. `EU 868` is compliant to the frequency but **is not** LBT compliant 👂.
 
-!!! note "Regulatory_Domain_ISM_2400"
-    This option is now set automatically for 2.4GHz devices and the Regulatory Domain section has been removed for these devices.
 
 ## Binding Phrase
 
-Entering a binding phrase allows you to skip the binding step with your receivers-- you want this set. Any transmitter using the same binding phrase will connect to any receiver with the same binding phrase, so be unique. Limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will require traditional [binding method](../../quick-start/binding/).
+Entering a binding phrase allows you to skip the binding step with your receivers-- you want this set. Any transmitter using the same binding phrase will connect to any receiver with the same binding phrase, so be unique. Limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will require binding with the traditional [binding method](../../quick-start/binding/).
 
 ## Network Options
 
@@ -34,7 +33,7 @@ Entering a binding phrase allows you to skip the binding step with your receiver
 HOME_WIFI_SSID
 HOME_WIFI_PASSWORD
 ```
-Set these to have the "Wifi Update" mode try to connect to an existing wifi network first using these credentials before creating an access point. Configure them with the wifi settings for where you'll be flashing your firmware, to save the step of switching wifi networks during the flashing process.
+Set these to have the "Wifi Update" mode try to connect to an existing wifi network using these credentials. Configure them with the wifi settings for where you'll be flashing your firmware, to save the step of switching wifi networks on your computer or phone during the flashing process. If the device is unable to connect to this network, it will create its own network.
 
 ## Other Options
 
