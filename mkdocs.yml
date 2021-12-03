@@ -88,6 +88,7 @@ extra:
       name: Send a Donation!
   version:
     provider: mike
+  generator: true
 
 markdown_extensions:
   - admonition
