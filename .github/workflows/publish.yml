@@ -19,7 +19,7 @@ jobs:
           python-version: 3.x
           
       - name: Install MkDocs and Dependencies
-        run: pip install "mkdocs-material==7.2.4" mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike
+        run: pip install "mkdocs-material==8.0.3" mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike
         
       - name: Setup Github
         run: |
