@@ -61,4 +61,4 @@ Antennas are where the invisible waves come and go from the receiver. Ceramic an
 Many ExpressLRS receivers have integrated wifi with a short range. This is not active during flight, but the receiver can go into wifi mode to allow firmware updates which is pretty convenient.
 
 ### Ready To Fly
-Ready To Fly (RTF) here means that it comes with ExpressLRS from the factory and you don't have to convert it from its existing software system (like Ghost or FrSky). Sometimes this can be a detriment due to needing to solder to tiny pads or buy flashing dongles.
+Ready To Fly (RTF) here means that it comes with ExpressLRS from the factory and you don't have to convert it from its existing software system (like Ghost or FrSky), which can be a detriment due to needing to solder to tiny pads or buy flashing dongles.
