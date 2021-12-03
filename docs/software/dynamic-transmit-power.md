@@ -54,16 +54,16 @@ In addition to the slow power ramp up, there are three LQ-based conditions that 
 ## Notes
 
 ### Minimum Recommended Telemetry Ratio
-Because dynamic power relies on information coming back from the RX to know how to adjust the power, dynamic power is only available if the "Telemetry Ratio" is not set to Off. Any ratio will allow it to operate, but the algorithm is optimized around having at least 2x Link Statistics telemetry packets per second. Link telemetry is always available regardless of if the `ENABLE_TELEMETRY` option is used. Minimum recommended Telemetry Ratio per packet rate:
+Because dynamic power relies on information coming back from the RX to know how to adjust the power, dynamic power is only available if the "Telemetry Ratio" is not set to Off. Any ratio will allow it to operate, but the algorithm is optimized around having at least 2x Link Statistics telemetry packets per second.
 
-| Packet Air Rate | ENABLE_TELEMETRY = Off | ENABLE_TELEMETRY = On |
-|---|---|---|
-| 500Hz | 1:128 | 1:128 |
-| 250Hz | 1:128 | 1:64 |
-| 200Hz | 1:128 | 1:64 |
-| 150Hz | 1:64 | 1:32 |
-| 100Hz | 1:64 | 1:32 |
-| 50Hz | 1:32 | 1:16 |
+| Packet Air Rate | Telemetry Ratio |
+|---|---|
+| 500Hz | 1:128 |
+| 250Hz | 1:64 |
+| 200Hz | 1:64 |
+| 150Hz | 1:32 |
+| 100Hz | 1:32 |
+| 50Hz | 1:16 |
 
 On startup, the output power will be set to the max configured value until telemetry is received to be able to lower it. If telemetry is lost, the output power will stay at the current value until telemetry is received again. This is intended to prevent everyone's TX from blasting to max power when swapping batteries. To return to max configured power, restart the transmitter.
 
