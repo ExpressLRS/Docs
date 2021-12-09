@@ -7,6 +7,10 @@ template: main.html
 
 Initially this mod is brought to life by [Niklas Voigt](https://discordapp.com/users/773143572354039828) and Seba112PL as beta tester and is still a work in progress.. if you have suggestions don't hesitate to contact.
 
+*Disclaimer: Users have experienced temperature issues on R9M that degrades the link quality. We recommend you use the lowest power setting required for your flight and turn on dynamic power at all times (ELRS v2.0+).* [Heat Issue](https://github.com/ExpressLRS/ExpressLRS/issues/429)
+
+*It might seem counterintuitive, but using less power might help for longer flight times and more range by reducing the heat. ELRS does not require a lot of energy and looking at the long-range* [leader board](https://github.com/ExpressLRS/ExpressLRS#current-leaderboard), *they did not use 1w for any of those flights*.
+
 ## 1W Mod
 ⚠️**With this mod your R9M can handle 1W max**
 
