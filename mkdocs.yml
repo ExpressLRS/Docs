@@ -194,10 +194,13 @@ nav:
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
       - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
-      - ESP Backpack: hardware/esp-backpack.md
       - SMD Antenna: hardware/smd-antenna.md
       - PWM Receivers: hardware/pwm-receivers.md
       - SPI Receivers: hardware/spi-receivers.md
+      - Backpack: 
+        - Backpack Intro: hardware/esp-backpack.md
+        - TX Backpack: hardware/backpack-tx-setup.md
+        - VRX Backpack: hardware/backpack-vrx-setup.md
       - Special Targets:
         - DIY Receiver: hardware/diy-rx.md
         - DIY Transmitter: hardware/diy-tx.md
