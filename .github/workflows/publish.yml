@@ -30,7 +30,6 @@ jobs:
           
       - name: Deploy old version
         run: | 
-          mike delete --all
           mike deploy 1.0 v1
        
       - name: Deploy release version       
