@@ -47,6 +47,7 @@ To confirm your update rate is working as intended, you can use the ExpressLRS L
 
 ## How many channels does ELRS support?
 12 channels(suspicious asterisk). There is not enough bandwidth to support all full-resolution channels (e.g. for pan/tilt servos). It is possible that future versions could include some tricks to expand this by sending extra channel data in a slow upload, but it is not a priority for development. Therefore, ELRS provides:
+
   * 4x full-resolution (10-bit) channels for sticks (CH1-4)
   * Either:
     * **Standard Mode** 4x 2-position channels sent every frame (increased to 8x in 1.0), OR
