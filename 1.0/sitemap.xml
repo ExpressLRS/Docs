@@ -46,16 +46,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.expresslrs.org/1.0/hardware/pwm-receivers/</loc>
-         <lastmod>2021-12-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.expresslrs.org/1.0/hardware/receiver-selection/</loc>
-         <lastmod>2021-12-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://www.expresslrs.org/1.0/hardware/smd-antenna/</loc>
          <lastmod>2021-12-12</lastmod>
          <changefreq>daily</changefreq>
@@ -127,16 +117,6 @@
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/installing-configurator/</loc>
-         <lastmod>2021-12-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.expresslrs.org/1.0/quick-start/led-status/</loc>
-         <lastmod>2021-12-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.expresslrs.org/1.0/quick-start/lua-howto/</loc>
          <lastmod>2021-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -292,16 +272,6 @@
     </url>
     <url>
          <loc>https://www.expresslrs.org/1.0/quick-start/tx-voyager900/</loc>
-         <lastmod>2021-12-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.expresslrs.org/1.0/software/dynamic-transmit-power/</loc>
-         <lastmod>2021-12-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.expresslrs.org/1.0/software/model-config-match/</loc>
          <lastmod>2021-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
