@@ -27,14 +27,9 @@ jobs:
           git config --local user.name "GitHub Action"
           git pull
           git checkout master
-          
-      - name: Deploy old version
-        run: | 
-          mike deploy 1.0 v1
        
       - name: Deploy release version       
         run: |
-          git checkout development
           mike deploy 2.0 release
           mike set-default release
           
