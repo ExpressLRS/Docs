@@ -37,7 +37,7 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 <img src="https://cdn.discordapp.com/attachments/738450139693449258/771844893642457128/Screen_Shot_2020-10-30_at_2.15.56_PM.png" width=100%>
 
 * Click that! 👈 
-* Then, enter ExpressLRS Repo URL -> `https://github.com/AlessandroAU/ExpressLRS.git` 💻 
+* Then, enter ExpressLRS Repo URL -> `https://github.com/ExpressLRS/ExpressLRS.git` 💻 
 * Choose a folder for ExpressLRS. 📂 
 
 ### Selecting the Latest Release
