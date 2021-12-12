@@ -28,15 +28,15 @@ jobs:
           git pull
           git checkout master
           
-      - name: Deploy release version
+      - name: Deploy old version
         run: | 
-          mike deploy 1.0 release
-          mike set-default release
+          mike deploy 1.0 v1
        
-      - name: Deploy development version       
+      - name: Deploy release version       
         run: |
           git checkout development
-          mike deploy 2.0 development
+          mike deploy 2.0 release
+          mike set-default release
           
       - name: Push changes to server
         run: |
