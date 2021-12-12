@@ -2,8 +2,7 @@ name: publish
 on:
   push:
     branches:
-      - master
-      - development
+      - v1
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
@@ -26,17 +25,11 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
-          git checkout master
+          git checkout v1
           
       - name: Deploy old version
         run: | 
           mike deploy 1.0 v1
-       
-      - name: Deploy release version       
-        run: |
-          git checkout development
-          mike deploy 2.0 release
-          mike set-default release
           
       - name: Push changes to server
         run: |
