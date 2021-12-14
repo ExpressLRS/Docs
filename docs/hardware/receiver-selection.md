@@ -6,7 +6,7 @@ template: main.html
 
 ExpressLRS is hashtag blessed with the benefit of there being many receivers available from a variety of manufacturers. This begs the question "Which receiver is best?" There is no best receiver, there is only which one has the features you want for the price you want to pay in the size you want it. ExpressLRS does not recommend a specific brand or model, but provide the information to help you select the right receiver for your needs.
 
-# Team2.4
+## Team2.4
 | Model | Price | Size | LNA | PA | Antenna | WiFi | RTF |
 |---|---|---|---|---|---|---|---|
 | BetaFPV Nano 2.4 | :moneybag::moneybag: | :scale::scale: | :heavy_check_mark: | 20dBm | :whale::whale: | :heavy_check_mark: | :checkered_flag: |
@@ -27,7 +27,7 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 | QuadKopters Nano | :moneybag::moneybag:? | :scale::scale: | :x: | :x: | :whale:/:whale::whale: | :heavy_check_mark: | :checkered_flag: |
 | SIYI FR Mini | :moneybag::moneybag::moneybag: | :scale::scale::scale: | :heavy_check_mark: | 23dBm | :whale::whale::metal: | :x: | :x: |
 
-# Team900
+## Team900
 | Model | Price | Size | LNA | PA | Antenna | WiFi | RTF |
 |---|---|---|---|---|---|---|---|
 | BetaFPV Nano 900 | :moneybag::moneybag: | :scale::scale: | :heavy_check_mark: | :heavy_check_mark: | :whale::whale: | :x: | :heavy_check_mark: |
