@@ -31,7 +31,7 @@ It takes 8 packets to send the complete set of switches before cycling back to A
 
 ## AUX 1 (All Modes)
 
-:warning: Put your arm switch on AUX1 :warning:. AUX1 is the low-latency switch, sent with every packet, and only supports on/off (2-position) operation. ExpressLRS uses AUX1 to determine if your model is armed, and should set up on the transmitter so that ~1000 is disarmed, ~2000 is armed.
+:warning: **Put your arm switch on AUX1** :warning:. AUX1 is the low-latency switch, sent with every packet, and only supports on/off (2-position) operation. ExpressLRS uses AUX1 to determine if your model is armed, and should set up on the transmitter so that :warning: **~1000 is disarmed, ~2000 is armed** :warning:.
 
 ## AUX 2-7 (Hybrid)
 
