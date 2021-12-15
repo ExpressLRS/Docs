@@ -11,6 +11,8 @@ Prior to your first ExpressLRS flight, you may want to do a few tweaks to your s
 By default, ExpressLRS uses one-bit switches for the AUX channels. This means a three-position switch will only send two positions (fully off, or 1000, and fully on, or 2000) to Betaflight/iNav on the AUX channels. Set your modes appropriately if you are using one-bit switches, or enable HYBRID_SWITCHES_8 for expanded position options. For more information, read the [switch modes page](../../software/switch-config/).
 ![Modes](../assets/images/Modes.jpg)
 
+Please make sure your ARM mode is on the AUX1 channel, and the armed state is set on the HIGH side (=2000) of the channel.
+
 ## RSSI and Link Quality
 
 To get RSSI and Link Quality displayed in the OSD, set RSSI Channel to "Disabled" in the Receiver tab of the Betaflight/iNav Configurator, and RSSI_ADC should be disabled on the Configuration tab. Both of these are the default. On the OSD menu, use the **Link Quality** and **RSSI dBm value** elements (not "RSSI Value"). iNav have put this in the `CRSF RX Statistics` section.
