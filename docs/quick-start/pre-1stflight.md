@@ -8,7 +8,7 @@ Prior to your first ExpressLRS flight, you may want to do a few tweaks to your s
 
 ## Modes
 
-By default, ExpressLRS uses one-bit switches for the AUX channels. This means a three-position switch will only send two positions (fully off, or 1000, and fully on, or 2000) to Betaflight/iNav on the AUX channels. Set your modes appropriately if you are using one-bit switches, or enable HYBRID_SWITCHES_8 for expanded position options. For more information, read the [switch modes page](../../software/switch-config/). 
+By default, ExpressLRS uses limited bits for AUX switches (1-bit for AUX1, and 3-4 bits for other AUX channels), which results in very coarse resolutions up to 8 or 16 positions to Betaflight/iNav on the AUX channels. In most cases, it is enough (especially on a multirotor), but if you need finer resolution, enabling **WideHybrid** option expands the resolution of AUX2-AUX8 up to 128 positions. For more information, read the [switch modes page](../../software/switch-config/). 
 
 !!! warning "WARNING" 
     Please make sure your **ARM mode is on the AUX1 channel, and the armed state is set ~2000.**
