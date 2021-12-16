@@ -4,7 +4,8 @@ template: main.html
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
 
-***:warning: Put your arm switch on AUX1 :warning:***
+!!! warning "WARNING" 
+    Put your arm switch on AUX1
 
 ExpressLRS has two options for how switches are transmitted: Hybrid and WideHybrid. **The switch mode can only be changed when a receiver is not connnected.** Switch mode is changed using Lua configuration, the user_define setting is no longer needed.
 
@@ -31,7 +32,10 @@ It takes 8 packets to send the complete set of switches before cycling back to A
 
 ## AUX 1 (All Modes)
 
-:warning: **Put your arm switch on AUX1** :warning:. AUX1 is the low-latency switch, sent with every packet, and only supports on/off (2-position) operation. ExpressLRS uses AUX1 to determine if your model is armed, and should set up on the transmitter so that :warning: **~1000 is disarmed, ~2000 is armed** :warning:.
+!!! warning "WARNING" 
+    **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
+    
+AUX1 is the low-latency switch, sent with every packet, and only supports on/off (2-position) operation. ExpressLRS uses AUX1 to determine if your model is armed, and should set up on the transmitter as armed at high values.
 
 ## AUX 2-7 (Hybrid)
 
