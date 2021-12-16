@@ -18,7 +18,7 @@ our packet rate is different than CRSF packet rate, and ardupilot will keep on r
 RC_OPTIONS turn on Bit 9th which is  "Suppress CRSF mode/rate message for ELRS systems".
 ```
 
-Once you have set the parameter above, power-cycle the flight controller by disconnecting and reconnecting your battery and USB. Ardupilot should automatically run with ELRS, but if it fails, set RC_PROTOCOL parameter 9th bit to 1 (CRSF option)
+Once you have set the parameter above, power-cycle the flight controller by disconnecting and reconnecting your battery and USB. Ardupilot should automatically run with ELRS, but if it fails, set ``RC_PROTOCOL`` parameter 9th bit to 1 (CRSF option)
  and set the other parameter as below:
 ```
 SERIALx_PROTOCOL = 23 (RCIN)
