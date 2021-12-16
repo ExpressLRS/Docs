@@ -18,20 +18,20 @@ our packet rate is different than CRSF packet rate, and ardupilot will keep on r
 RC_OPTIONS turn on Bit 9th which is  "Suppress CRSF mode/rate message for ELRS systems".
 ```
 
-Once you have set the parameter above, power-cycle the flight controller by disconnecting and reconnecting your battery and USB. Ardupilot should automatically run with ELRS, but if it fails, set the other parameter as below:
+Once you have set the parameter above, power-cycle the flight controller by disconnecting and reconnecting your battery and USB. Ardupilot should automatically run with ELRS, but if it fails, set ``RC_PROTOCOL`` parameter 9th bit to 1 (CRSF option)
+ and set the other parameter as below:
 ```
 SERIALx_PROTOCOL = 23 (RCIN)
 SERIALx_BAUDRATE = 115
-RC_PROTOCOL = 9 (CRSF)
 RSSI_TYPE = 3 (ReceiverProtocol)
 ```
 
 ## Ardupilot Flightmodes
-Ardupilot default flightmodes channel is channel 8, but ELRS 8 position channel is on channel 12. you will need to set your handset to use channel 12 as flightmodes and set Ardupilot parameter:
+Ardupilot default flightmodes channel is channel 8, but ELRS 8 position channel is on channel 12 (in hybrid switchMode). you will need to set your handset to use channel 12 as flightmodes and set Ardupilot parameter:
 ```
 FLTMODE_CH=12
 ```
-
+if you are using WideSwitch mode (only available in elrs V2 and above), you can use any channel for your 8 flightmode selection (beside channel 15 which is LQ and channel 16 which is RSSI).
 ## Ardupilot RSSI and Link Quality
 To get RSSI and LQ shown in OSD (in %) set:
 ```
