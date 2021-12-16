@@ -8,7 +8,10 @@ Prior to your first ExpressLRS flight, you may want to do a few tweaks to your s
 
 ## Modes
 
-By default, ExpressLRS uses one-bit switches for the AUX channels. This means a three-position switch will only send two positions (fully off, or 1000, and fully on, or 2000) to Betaflight/iNav on the AUX channels. Set your modes appropriately if you are using one-bit switches, or enable HYBRID_SWITCHES_8 for expanded position options. For more information, read the [switch modes page](../../software/switch-config/). Please make sure your :warning: **ARM mode is on the AUX1 channel, and the armed state is set ~2000.** :warning:
+By default, ExpressLRS uses one-bit switches for the AUX channels. This means a three-position switch will only send two positions (fully off, or 1000, and fully on, or 2000) to Betaflight/iNav on the AUX channels. Set your modes appropriately if you are using one-bit switches, or enable HYBRID_SWITCHES_8 for expanded position options. For more information, read the [switch modes page](../../software/switch-config/). 
+
+!!! warning "WARNING" 
+    Please make sure your **ARM mode is on the AUX1 channel, and the armed state is set ~2000.**
 
 ![Modes](../assets/images/Modes.jpg)
 
