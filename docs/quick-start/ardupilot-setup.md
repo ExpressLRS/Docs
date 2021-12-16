@@ -32,7 +32,7 @@ Ardupilot default flightmodes channel is channel 8, but ELRS 8 position channel 
 FLTMODE_CH=12
 ```
 
-if you are using WideSwitch mode, you can use any channel for your 8 flightmode selection.
+if you are using WideSwitch mode (only available in elrs V2 and above), you can use any channel for your 8 flightmode selection (beside channel 15 which is LQ and channel 16 which is RSSI).
 ## Ardupilot RSSI and Link Quality
 To get RSSI and LQ shown in OSD (in %) set:
 ```
