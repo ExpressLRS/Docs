@@ -1,6 +1,6 @@
-FROM squidfunk/mkdocs-material:7.2.4
+FROM squidfunk/mkdocs-material:8.0.3
 RUN apk add build-base
-RUN pip install mkdocs-extra-sass-plugin mkdocs-static-i18n
+RUN pip install mkdocs-static-i18n
 RUN python3 localize.py
 
 # Set working directory
