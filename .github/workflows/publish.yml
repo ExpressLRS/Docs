@@ -18,7 +18,8 @@ jobs:
           python-version: 3.x
           
       - name: Install MkDocs and Dependencies
-        run: pip install "mkdocs-material==8.0.3" mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike
+        run: pip install "mkdocs-material==8.0.3" 
+        run: pip install mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike mkdocs-static-i18n
         
       - name: Setup Github
         run: |
@@ -26,6 +27,10 @@ jobs:
           git config --local user.name "GitHub Action"
           git pull
           git checkout master
+      
+      - name: Localize assets
+        run: |
+          python3 localize.py
        
       - name: Deploy release version       
         run: |

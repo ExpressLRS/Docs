@@ -4,7 +4,7 @@ template: main.html
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-There are two ways to build & flash ExpressLRS. The recommended way is to use ExpressLRS Configurator. For advanced users who want to modify the code, follow the [development toolchain setup](https://www.expresslrs.org/2.0/software/toolchain-install/).
+There are two ways to build & flash ExpressLRS. The recommended way is to use ExpressLRS Configurator. For advanced users who want to modify the code, follow the [development toolchain setup](../../software/toolchain-install).
 
 ## Configurator Setup
 
