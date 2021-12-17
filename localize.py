@@ -11,7 +11,7 @@ for subdir, dirs, files in os.walk(assetDir):
     for file in files:
         infilename = os.path.join(subdir, file)
         if not os.path.isfile(infilename): continue
-        print(infilename)
         for lang in langs:
-            newname = infilename.replace('.', '.'+lang+'.')
-            shutil.copy(infilename, newname)
+            if '.' + lang + '.' not in infilename:
+                newname = infilename.replace('.', '.'+lang+'.')
+                shutil.copy(infilename, newname)
