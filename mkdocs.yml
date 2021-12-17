@@ -60,6 +60,10 @@ plugins:
   #  - redirects:
   - minify:
       minify_html: true
+  - i18n:
+      default_language: en
+      languages:
+        en: english
 
 
 extra_css:
@@ -89,6 +93,10 @@ extra:
   version:
     provider: mike
   generator: true
+  alternate:
+    - name: English
+      link: ./en/ 
+      lang: en
 
 markdown_extensions:
   - admonition
@@ -130,87 +138,87 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - Home: index.md
+  - Home: index.en.md
   - Quick Start:
-      - Getting Started: quick-start/getting-started.md
-      - Installing Configurator: quick-start/installing-configurator.md
-      - Firmware Options: quick-start/firmware-options.md
+      - Getting Started: quick-start/getting-started.en.md
+      - Installing Configurator: quick-start/installing-configurator.en.md
+      - Firmware Options: quick-start/firmware-options.en.md
       - TX Modules:
-          - Preparing your Radio: quick-start/tx-prep.md
+          - Preparing your Radio: quick-start/tx-prep.en.md
           - Flashing TX Modules:
-            - Flashing Frsky R9 Modules: quick-start/tx-r9m.md
-            - Flashing Happymodel ES900TX: quick-start/tx-es900tx.md
-            - Flashing NamimnoRC Voyager: quick-start/tx-voyager900.md
-            - Flashing BetaFPV 900Mhz TX: quick-start/tx-betafpv900.md
-            - Flashing Happymodel ES24TX: quick-start/tx-es24tx.md
-            - Flashing NamimnoRC Flash: quick-start/tx-flash2400.md
-            - Flashing BetaFPV 2.4Ghz TX: quick-start/tx-betafpv2400.md
-            - Flashing Ghost TX: quick-start/tx-ghost2400.md
-            - Flashing Siyi TXes: quick-start/tx-siyifm30.md
-            - Flashing DIY 900TX: quick-start/tx-diy900.md
-            - Flashing DIY 2400TX: quick-start/tx-diy.md
-          - Using The Lua Script: quick-start/lua-howto.md
+            - Flashing Frsky R9 Modules: quick-start/tx-r9m.en.md
+            - Flashing Happymodel ES900TX: quick-start/tx-es900tx.en.md
+            - Flashing NamimnoRC Voyager: quick-start/tx-voyager900.en.md
+            - Flashing BetaFPV 900Mhz TX: quick-start/tx-betafpv900.en.md
+            - Flashing Happymodel ES24TX: quick-start/tx-es24tx.en.md
+            - Flashing NamimnoRC Flash: quick-start/tx-flash2400.en.md
+            - Flashing BetaFPV 2.4Ghz TX: quick-start/tx-betafpv2400.en.md
+            - Flashing Ghost TX: quick-start/tx-ghost2400.en.md
+            - Flashing Siyi TXes: quick-start/tx-siyifm30.en.md
+            - Flashing DIY 900TX: quick-start/tx-diy900.en.md
+            - Flashing DIY 2400TX: quick-start/tx-diy.en.md
+          - Using The Lua Script: quick-start/lua-howto.en.md
       - Receivers:
-          - Flashing Bootloader: quick-start/rx-bootloader.md
-          - Preparing for Passthrough Flashing: quick-start/rx-fcprep.md
-          - Preparing for STLink Flashing: quick-start/rx-stlink.md
+          - Flashing Bootloader: quick-start/rx-bootloader.en.md
+          - Preparing for Passthrough Flashing: quick-start/rx-fcprep.en.md
+          - Preparing for STLink Flashing: quick-start/rx-stlink.en.md
           - Flashing Receivers:
-            - Flashing Frsky R9 Receivers: quick-start/rx-r9receivers.md
-            - Flashing Jumper R9 Mini: quick-start/rx-jumper900.md
-            - Flashing Happymodel ES900RX: quick-start/rx-hmes900.md
-            - Flashing NamimnoRC Voyager: quick-start/rx-voyager900.md
-            - Flashing BetaFPV Nano 900Mhz: quick-start/rx-betafpv900.md
-            - Flashing Happymodel EPs: quick-start/rx-hmep2400.md
-            - Flashing Happymodel PP: quick-start/rx-hmpp2400.md
-            - Flashing NamimnoRC Flash: quick-start/rx-flash2400.md
-            - Flashing BetaFPV Nano 2.4G: quick-start/rx-betafpv2400.md
-            - Flashing Matek R24: quick-start/rx-matek2400.md
-            - Flashing Ghost Receiver: quick-start/rx-ghost2400.md
-            - Flashing Siyi FR Mini: quick-start/rx-siyiFRmini.md
-            - Flashing DIY 900RX: quick-start/rx-diyreceivers900.md
-            - Flashing DIY 2400RX: quick-start/rx-diyreceivers.md
+            - Flashing Frsky R9 Receivers: quick-start/rx-r9receivers.en.md
+            - Flashing Jumper R9 Mini: quick-start/rx-jumper900.en.md
+            - Flashing Happymodel ES900RX: quick-start/rx-hmes900.en.md
+            - Flashing NamimnoRC Voyager: quick-start/rx-voyager900.en.md
+            - Flashing BetaFPV Nano 900Mhz: quick-start/rx-betafpv900.en.md
+            - Flashing Happymodel EPs: quick-start/rx-hmep2400.en.md
+            - Flashing Happymodel PP: quick-start/rx-hmpp2400.en.md
+            - Flashing NamimnoRC Flash: quick-start/rx-flash2400.en.md
+            - Flashing BetaFPV Nano 2.4G: quick-start/rx-betafpv2400.en.md
+            - Flashing Matek R24: quick-start/rx-matek2400.en.md
+            - Flashing Ghost Receiver: quick-start/rx-ghost2400.en.md
+            - Flashing Siyi FR Mini: quick-start/rx-siyiFRmini.en.md
+            - Flashing DIY 900RX: quick-start/rx-diyreceivers900.en.md
+            - Flashing DIY 2400RX: quick-start/rx-diyreceivers.en.md
       - Post-Flash:
-        - LED Status: quick-start/led-status.md
-        - Binding ExpressLRS: quick-start/binding.md
-        - Pre-first Flight Checks: quick-start/pre-1stflight.md
-        - Ardupilot Setup: quick-start/ardupilot-setup.md
-      - Troubleshooting: quick-start/troubleshooting.md
+        - LED Status: quick-start/led-status.en.md
+        - Binding ExpressLRS: quick-start/binding.en.md
+        - Pre-first Flight Checks: quick-start/pre-1stflight.en.md
+        - Ardupilot Setup: quick-start/ardupilot-setup.en.md
+      - Troubleshooting: quick-start/troubleshooting.en.md
   - Software:
-      - Switch Configs: software/switch-config.md
-      - User Defines: software/user-defines.md
-      - Obsolete Defines: software/obsolete-defines.md
-      - OpenOCD for STLink: software/open-ocd.md
-      - Toolchain Setup: software/toolchain-install.md
-      - PIO STLink Fix: software/stlink-fix.md
+      - Switch Configs: software/switch-config.en.md
+      - User Defines: software/user-defines.en.md
+      - Obsolete Defines: software/obsolete-defines.en.md
+      - OpenOCD for STLink: software/open-ocd.en.md
+      - Toolchain Setup: software/toolchain-install.en.md
+      - PIO STLink Fix: software/stlink-fix.en.md
       - Updating:
-        - Betaflight Passthrough: software/updating/betaflight-passthrough.md
-        - Wifi Updating: software/updating/wifi-updating.md
+        - Betaflight Passthrough: software/updating/betaflight-passthrough.en.md
+        - Wifi Updating: software/updating/wifi-updating.en.md
       - Features:
-        - Model Matching: software/model-config-match.md
-        - Dynamic Transmit Power: software/dynamic-transmit-power.md
+        - Model Matching: software/model-config-match.en.md
+        - Dynamic Transmit Power: software/dynamic-transmit-power.en.md
   - Hardware:
-      - Supported Hardware: hardware/supported-hardware.md
-      - Receiver Selection: hardware/receiver-selection.md
-      - R9M Inverter Mod: hardware/inverter-mod.md
-      - R9M Fan Mod: hardware/fan-mod.md
-      - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
-      - ESP Backpack: hardware/esp-backpack.md
-      - SMD Antenna: hardware/smd-antenna.md
-      - PWM Receivers: hardware/pwm-receivers.md
-      - SPI Receivers: hardware/spi-receivers.md
+      - Supported Hardware: hardware/supported-hardware.en.md
+      - Receiver Selection: hardware/receiver-selection.en.md
+      - R9M Inverter Mod: hardware/inverter-mod.en.md
+      - R9M Fan Mod: hardware/fan-mod.en.md
+      - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.en.md
+      - ESP Backpack: hardware/esp-backpack.en.md
+      - SMD Antenna: hardware/smd-antenna.en.md
+      - PWM Receivers: hardware/pwm-receivers.en.md
+      - SPI Receivers: hardware/spi-receivers.en.md
       - Special Targets:
-        - DIY Receiver: hardware/diy-rx.md
-        - DIY Transmitter: hardware/diy-tx.md
-        - Nuclear Targets: hardware/nuclear-hardware.md
+        - DIY Receiver: hardware/diy-rx.en.md
+        - DIY Transmitter: hardware/diy-tx.en.md
+        - Nuclear Targets: hardware/nuclear-hardware.en.md
   - Info:
-      - Glossary: info/glossary.md
-      - Signal Health: info/signal-health.md
-      - Telemetry Bandwith: info/telem-bandwidth.md
+      - Glossary: info/glossary.en.md
+      - Signal Health: info/signal-health.en.md
+      - Telemetry Bandwith: info/telem-bandwidth.en.md
       - Testing:
-        - Unit Testing: info/unit-testing.md
-        - CRC Testing: info/crc-testing.md
-        - RX Scoreboard: info/rx-scoreboard.md
-  - FAQ: faq.md
+        - Unit Testing: info/unit-testing.en.md
+        - CRC Testing: info/crc-testing.en.md
+        - RX Scoreboard: info/rx-scoreboard.en.md
+  - FAQ: faq.en.md
 
 extra_javascript:
   - assets/javascripts/binding-phrase.js
