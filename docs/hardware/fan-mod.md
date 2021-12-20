@@ -7,8 +7,15 @@ template: main.html
 
 Initially this mod is brought to life by [Niklas Voigt](https://discordapp.com/users/773143572354039828) and Seba112PL as beta tester and is still a work in progress.. if you have suggestions don't hesitate to contact.
 
+!!! warning "DISCLAIMER"
+    Users have experienced [temperature issues](https://github.com/ExpressLRS/ExpressLRS/issues/429) on R9M that degrades the link quality. We recommend you use the lowest power setting required for your flight and turn on dynamic power at all times (ELRS v2.0+)
+
+!!! hint "Hot Tip"
+    It might seem counterintuitive, but using less power might help for longer flight times and more range by reducing the heat. ELRS does not require a lot of energy and looking at the [long-range leader board](https://github.com/ExpressLRS/ExpressLRS#current-leaderboard)
+
 ## 1W Mod
-⚠️**With this mod your R9M can handle 1W max**
+!!! warning "WARNING" 
+    With this mod your R9M is still limited to 1W
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-top.png" width="40%"/><img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottom.png" data-canonical-src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottom.png" width="40%" />
 
@@ -34,18 +41,20 @@ or from [Thingiverse](https://www.thingiverse.com/thing:4829360)
 ## Controllable Fan Mod
 Additionally to the fan you'll need one NPN Transistor (e.g. `2N4401`) or N-Channel MOSFET (e.g. `BS170` has built-in Shotky-Diode) and a resistor (200-3k7)
 
-<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/n-channel-mosfet.png?raw=true" width="auto" height="400px" />
-<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/npn-transistor.png?raw=true" width="auto" height="400px" />
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/n-channel-mosfet.png?raw=true" width="40%" />
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/npn-transistor.png?raw=true" width="40%" />
 
 ### R9M2019 Build notice
 
 The PB9 pad location on the R9M2019 module is a bit different. Please see the photo.
 
-<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/R9M2019.png?raw=true" width="auto" height="400px" />
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/R9M2019.png?raw=true" width="50%" />
 
 ***
 
-## 2W Mod (⚠️Only do this if you know what you are doing!⚠️)
+## 2W Mod 
+!!! warning "WARNING"
+    Only do this if you are comfortable with modding hardware
 
 In addition to the [3D printed Cover](../../hardware/fan-mod/) & the [**Controllable Fan Mod**](../../hardware/fan-mod/#controllable-fan-mod) you'll need:
 
@@ -54,17 +63,16 @@ In addition to the [3D printed Cover](../../hardware/fan-mod/) & the [**Controll
 
 The screw heads are cut off to reduce height.
 
-<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/heatsink.jpeg?raw=true" width="20%" />
-<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/heatsink2.jpeg?raw=true" width="20%" />
-<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/heatsink3.jpeg?raw=true" width="20%" />
-<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/heatsink4.jpeg?raw=true" width="20%" />>
-<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/heatsink5.jpeg?raw=true" width="20%" />
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/heatsink.jpeg?raw=true" width="40%" />
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/heatsink2.jpeg?raw=true" width="40%" />
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/heatsink4.jpeg?raw=true" width="40%" />
+<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/heatsink5.jpeg?raw=true" width="40%" />
 
 If you can see in picture 3, the 5v fan is connected to the power source of the module, so the fan is used with some overvoltage and spins with higher rpm... tested for a long time and should not be a problem for the fan.
 If you don't know how to allow the 2W in the firmware, don't do this mod!🤦‍♂️
 
 ***
-# Here are some makes:
+# Here are some makes:  
 <img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/STL/R9M-Fan-Mod-Case/view-real.jpg" width="20%">
 <img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/make2.jpeg?raw=true" width="20%">
 <img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/make3.jpeg?raw=true" width="20%">
