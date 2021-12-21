@@ -1,6 +1,7 @@
 ---
 template: main.html
 ---
+# TX Backpack Setup
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
 
 ## Preparing the TX Module for Backpack Firmware Flashing
@@ -25,11 +26,18 @@ For the AxisFlying Thor modules, these should also come flashed with a ready-to-
 
 Flashing Backpack firmware is supported by the ExpressLRS Configurator since v1.2.0. 
 
+Targets:
+
+- `HappyModel TX Backpack`
+- `AXIS THOR TX Backpack`
+- `FrSky TX Backpack`
+- `Namimno TX Backpack`
+
 ### via USB/UART
 
-For the Happymodel TX modules, connect it via USB to your computer. As stated above, module should be detected as a `USB to UART Bridge`.
+For the Happymodel TX modules, connect it via USB to your computer. As stated above, module should be detected as a `USB to UART Bridge` and the jumper/dipswitches are set in the correct position (middle pins/switches should be On).
 
-On the ExpressLRS Configurator, select your Target and elect your binding phrase which will be used to bind the Backpacks together. It can be different from your usual binding phrase, but there's no issue if you want to use the same.
+On the ExpressLRS Configurator, select your Target and elect your binding phrase which will be used to bind the Backpacks together. It can be different from your usual binding phrase, but there's no issue if you want to use the same. You can also set the Home Network SSID and Password (version 0.2.0).
 
 Once set, click **Build and Flash** on the ExpressLRS Configurator.
 
@@ -56,14 +64,19 @@ Using the ExpressLRS v2.0 Lua script, navigate to `WiFi Connectivity` and select
 
 ### via WiFi (NamimnoRC Gen1 TX Modules)
 
-!!! warning "WARNING"
-    0.1.0 version of the Backpack Firmware doesn't support these modules yet. You can build the `master` branch of the firmware for these, but the vrx backpack firmware should also use that branch
-
 For the First Generation NamimnoRC TX modules (No OLED), you will have to first **Build** the Backpack firmware. Once built, grab the `backpack.bin` file from the folder that the ExpressLRS Configurator opened. Open the URL http://elrs_tx.local on your browser and scroll down to where the **WiFi Backpack Firmware Update** section is (shown in the image below). If the page isn't loading, make sure you have followed the Wifi Flashing guide for these modules(see [Flashing Guide](../../quick-start/tx-flash2400/#flashing-via-wifi)).
 
 ![Wifi Backpack](../../assets/images/backpackwifi.png)
 
 Wait for a bit (~10s) after the message "Update Success! Rebooting..." appear before you power-cycle the module. Your TX Backpack should now be ready.
+
+## Starting 0.2.0, you can Update via your Home Network via WiFi
+
+With your Home Network SSID and Password set, when you activate the WiFi mode via the lua script (`WiFi Connectivity` -> `Enabled Backpack WiFi`), the Backpack will try to connect to your Home WiFi Network. Once connected, you can access the Web Update page via http://elrs_txbp.local/ and upload your firmware there.
+
+The ExpressLRS Configurator will also detect the device after it has connected. It will be listed in the "Device List" section, and you can press `SELECT`, so that the correct target is automatically selected for **Build**.
+
+Alternatively, you can also **Build and Flash** via the Configurator through WiFi without having to access the Web Update page (just like any ESP-based ExpressLRS receiver).
 
 ## How to check you have updated the TX Backpack Firmware?
 

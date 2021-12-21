@@ -78,9 +78,9 @@ See the tables below for the list of supported devices:
 
 If you're TX module is already equipped with a TX backpack (see list above), your next step is to update the firmware of the backpack. Proceed to the [next page](../../hardware/backpack-tx-setup/) for more details.
 
-If you're using a DIY module and want to add a backpack into it, proceed to the [Backpack Wiki](https://github.com/ExpressLRS/Backpack/wiki).
+If you're using a DIY TX module and want to add a backpack into it, proceed to the [Backpack Wiki](https://github.com/ExpressLRS/Backpack/wiki).
 
-For the VRX Backpack, you will need to first update the firmware on the device. The firmware will highly depend on which VRX module you will use it on. Proceed to [this page](../../hardware/backpack-vrx-setup/) for more info.
+For the VRX Backpack, you will need to first update the firmware on the ESP device. The firmware will highly depend on which VRX module you will use it on. Proceed to [this page](../../hardware/backpack-vrx-setup/) for more info.
 
 [TX Backpack Setup](../../hardware/backpack-tx-setup/){.md-button} 
 
