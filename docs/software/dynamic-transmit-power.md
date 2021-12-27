@@ -34,7 +34,7 @@ Another important setting is to make sure your craft is **armed** on AUX1=`high`
 
 ### Starting Power
 
-On module powerup with Dynmaic Power is enabled, power is set to the minumum supported power.
+On module powerup with Dynmaic Power is enabled, power is set to the minimum supported power.
 
 ### Lowering Power
 

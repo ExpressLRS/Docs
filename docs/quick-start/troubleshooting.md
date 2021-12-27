@@ -20,6 +20,10 @@ This is due to a [model mismatch](../../software/model-config-match/) between re
 
 To "fix" this, you might want to turn On Model Matching. Please see [Model Matching](../../software/model-config-match/) for more info.
 
+Another thing to check is whether you have enabled **RCVR_INVERT_TX** option for your receiver firmware. This option is intended for FCs that doesn't have any other UARTs available (AIOs) other than an SBUS pad. See this section for more details: [Output Inverting](../../quick-start/firmware-options/#output-inverting).
+
+For the R9mm/mini receivers, make sure you didn't enable **USE_R9MM_R9MINI_SBUS** in your firmware option. See [Output Inverting](../../quick-start/firmware-options/#output-inverting) for what this option do.
+
 ### My RX and TX are bound, and I'm getting stick inputs, but I can only get 10 Telemetry sensors
 
 Check if you have Telemetry Feature enabled in your FC Configuration.
@@ -28,20 +32,20 @@ Also verify the Rx pad from receiver is connected properly to a Tx pad in the FC
 
 Also make sure you have deleted and rediscovered the sensors. It's good to increase the TLM Ratio so the acquisition of the sensors will be faster.
 
+This could also mean you'll have to update your FC Firmware to a more recent version that supports at least CRSFv2 protocol.
+
 ### I think my Reciever and Transmitter are bound as the LED on the Receiver is solid. But I don't have stick inputs or RSSI on radio.
 
 You are not bound. Your Receiver is probably in bootloader mode.
 
 * Make sure you have unbridged the boot pads if you flashed it via passthrough.
 
-* Turn off your Radio and if the LED is still solid, but boot pads aren't bridged, the UART where the receiver is on is putting it into bootloader mode unintentionally. Best to move it to another UART. To verify it is the case with the UART, disconnect the Rx and Tx wires from the UART, and it should start blinking slow.
+* Turn off your Radio and if the LED is still solid, but boot pads aren't bridged, the UART where the receiver is on is putting it into bootloader mode unintentionally. This is primarily caused by pull-down resistor on the RX pad to aid with SBUS line inversion. To verify it is the case with the UART, disconnect the Rx and Tx wires from the FC UART, and it should start blinking slow then after the set interval (20s - 30s by default), it will blink fast indicating it's on WiFi Mode. To "fix" the issue, you have two options:
+
+    - Move the receiver into another free UART.
+    - If there's no other UART, wire up a resistor with a value between 300 Ohm to 1k Ohm between a 3.3v pad and the FC's RX pad (where the TX from the receiver connects to).
 
 * If, however, despite unsoldering the Tx and Rx wires, the LED is still solid, you probably have a soft-bricked receiver due to a failed WiFi flash as a result of not letting the receiver reboot normally. See [this section](../../quick-start/troubleshooting/#i-updated-via-wifi-but-now-receiver-wont-work-and-has-solid-led) for the fix.
-
-* Another possibility is that the TX UART line is pulled low, forcing the reciever into bootloader mode on startup (this is a hardware problem with ESP based recievers). This can be fixed by two possible solutions:
-
-    * Move the UART that your reciever is wired to, some FC's only have this issues on a single UART
-    * Solder a small resistor (300 Ohm - 1 kOhm) from 3v3 on the FC to the TX wire of the reciever
 
 ### My OSD is showing LQ 0:0 and RSSI dbm at -130 dbm, but I have stick inputs and more than 10 Telemetry sensors
 
@@ -61,11 +65,19 @@ There's a handful of reasons why this is occuring, and if you have newer handset
 - You're on an early version of the Happymodel Slim Pro. Check [this FB post](https://www.facebook.com/groups/636441730280366/permalink/835603713697499/) for the fix from manufacturer.
 - You're using a 2018 ACCST R9M, while also using a Radio with 400k or higher Baud rate. You will either have to lower the Baud rate on your radio to 115200 (QX7) or do the Resistor mod on the module as described [here](../../hardware/inverter-mod/).
 - Your module is getting loose inside its enclosure, most common on the first batches of the Happymodel ES24TX (white 3D-Printed enclosure; although the black one is only marginally better having 4 screw points instead of 2). You either have to print your own enclosure (search Thingiverse for "expresslrs") or find a way to tighten or snug the enclosure with the module board.
-- Check the S.Port pin and connection in your module and bay, and make sure they have a solid physical connection. On the DIY modules, particularly the full size module, the round hole/via for the Molex connector's flat pin isn't getting good connection due to cold solder joint, or insufficient solder.
+- Check the S.Port pin and connection in your module and module bay, and make sure they have a solid physical connection. On the DIY modules, particularly the full size module, the round hole/via for the Molex connector's flat pin might not be getting good connection due to cold solder joint, or insufficient solder.
 
 ### I need to plug my FC a second/third time before I get a bind. LED on receiver is dim when I power it up.
 
 Update to the latest firmware as soon as you can. A batch of HM receivers have reached the market with Voltage regulators (marked SDG) that were insufficient and wasn't able to handle the higher current draw during boot up. To learn more of this issue and the fix, please check out this [PR](https://github.com/ExpressLRS/ExpressLRS/pull/928).
+
+### ExpressLRS Lua Script is stuck at `Loading...`
+
+Go back to the [Radio Setup Guide](../../quick-start/tx-prep/) and make sure your radio is prepped up for ExpressLRS.
+
+Also make sure your module has been flashed with v2.0 firmware. V2 Lua for V2.0-flashed modules, V1 Lua for v1.x-flashed modules (including modules fresh from factory; except the new OLED-equipped NamimnoRC modules and the Happymodel ES24TX Pro full-size module).
+
+For newly-acquired ExpressLRS modules, flashing via USB is the recommended update method.
 
 ### Betaflight Lua is stuck at "Initializing"
 
@@ -85,7 +97,7 @@ Make sure you have disabled ADC Filter in your Radio Hardware settings.
 
 ### Invalid serial RX configuration detected
 
-This is often caused by incorrect Serial RX protocol (should be CRSF), or serialrx_inverted = on (should be off) or serialrx_halfduplex=on (should be off). The Passthrough Init section of the log will show you which setting should be corrected. See this [page](../../quick-start/rx-fcprep/) for setting up your Flight Controller.
+This is often caused by incorrect Serial RX protocol (should be CRSF), or `serialrx_inverted = on` (should be off) or `serialrx_halfduplex=on` (should be off). The **Passthrough Init** section of the log will show you which setting should be corrected. See the [FC Preparation Guide](../../quick-start/rx-fcprep/) for the correct settings.
 
 ### RX Serial not found !!!!
 
