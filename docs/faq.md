@@ -20,9 +20,9 @@ It is faster than most links out there with a latency of 6.5ms (at 200hz). At 25
 
 ExpressLRS needs your radio to support crsfshot (a.k.a. Mixersync) to work properly. This will give you the lowest possible latency and optimal consistency of the RC link. When your radio does not have crsfshot working, this often shows in your ExpressLRS Lua script. The Lua script top bar will show inconsistent numbers like 0:63 or is stuck at 0:250 at every packet rate rate you select.
 
-**The Lua script top bar should always show a stable 0:[user selected packet rate]**
+**The Lua script top bar should always show a stable 0/[user selected packet rate]**
 
-For example: 0:50, 0:150, 0:250, 0:500, ...
+For example: 0/50, 0/150, 0/250, 0/500, ...
 
 When that is the case your radio has crsfshot working and you're good to go. Click [here](../quick-start/tx-prep/) to read more on OpenTX.
 
@@ -39,19 +39,23 @@ Any Receiver and TX Module from the same Band (2.4GHz or 900Mhz) will work toget
 The difference between the PP and the EP1/EP2 is only the processor. The PP is the original design and uses an STM32 while the EP1/EP2 use an ESP82xx. Both offer firmware update through Betaflight passthrough, but the EPx also support firmware upload over wifi. The EP1 is the same as the EP2 except it has a U.FL/IPEX1 connector for an external antenna. The wifi capability of the ESP is not used apart from the update procedure, and the wifi is only enabled shortly after power-up if no TX connection is received (`AUTO_WIFI_ON_INTERVAL` if bound, 60s otherwise). Receiver performance should be identical between the two.
 If you're confused by the PP being more expensive, it's because there is a shortage of the STM part.
 
-## What is required to achieve a 500hz update rate on 2.4ghz on OpenTX?
+## What is required to achieve a 500hz update rate on 2.4ghz?
 
-Make sure to enable the "Use_500hz" option when you flash the TX and RX. You must also be on a version of OpenTX that supports Mixer Sync (TBS Nightly, ELRS Nightly, OpenTX 2.3.12 or newer, or EdgeTX). USE_500Hz option is now enabled be default starting with 1.0.0-RC9 (6358aa).
+Make sure that your radio is set to use 400K Baud Rate and you're running at least OpenTX 2.3.12 or EdgeTX 2.4.0. These firmware versions have Mixer Sync or CRSFShot.
 
-To confirm your update rate is working as intended, you can use the ExpressLRS Lua script to check the current update rate and confirm you are getting 500hz.
+To confirm your update rate is working as intended, you can use the ExpressLRS Lua script to check the current update rate and confirm you are getting 500hz. See [Using the Lua Script](../../quick-start/lua-howto/).
 
 ## How many channels does ELRS support?
-12 channels(suspicious asterisk). There is not enough bandwidth to support all full-resolution channels (e.g. for pan/tilt servos). It is possible that future versions could include some tricks to expand this by sending extra channel data in a slow upload, but it is not a priority for development. Therefore, ELRS provides:
+12 channels(suspicious asterisk). There is not enough bandwidth to support all full-resolution channels. It is possible that future versions would further expand this by sending extra channel data in a slow upload, but it is not a priority for development. Therefore, ELRS provides:
 
   * 4x full-resolution (10-bit) channels for sticks (CH1-4)
   * Either:
-    * **Standard Mode** 4x 2-position channels sent every frame (increased to 8x in 1.0), OR
-    * **HYBRID_SWITCHES_8 Mode** 8x 3-position channels, where CH5 (AUX1/ARM) is sent every frame, and the other 7 are sent round-robin (7 frames to send all channels) also changed in 1.0, see [Switch Modes](../software/switch-config/)
+    * **Standard Mode** 4x 2-position channels sent every frame (increased to 8x in 1.0; dropped in 2.x), OR
+    * **HYBRID_SWITCHES_8 Mode** 1x 2-position channel, AUX1 (CH5; Must be used for Arming), 6x 2-position/3-position/6-position (AUX2-7) and 1x 16-position (AUX8), OR
+    * **WIDE HYBRID Mode** 1x 2-position channel, AUX1 (CH5; Must be used for Arming), 7x 64 or 128-position channels (AUX2-8). Available via the Lua Script since 2.0.
+    
+  See [Switch Modes](../software/switch-config/) more more details.
+
 
 ## Is my binding phrase a secret?
 
@@ -72,6 +76,3 @@ No, just like what channel your VTX is on is not a secret. The binding phrase is
 | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX |
 | TSNR | Downlink - signal-to-noise ratio                     |           | SNR reported by the TX for telemetry packets |
 
-
-## Is it normal to get "RF Signal Critical" when plugging in?
-Yes. When the connection is first established, the link quality starts at 0 and climbs as packets are received. Expect low RF Signal warnings until enough packets are reported received to pass your warning threshold set in OpenTX -> Telemetry -> RSSI -> Low alarm / Critical alarm.
