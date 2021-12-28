@@ -22,14 +22,14 @@ Here's how it looks in the Tools menu (X9D+ and T16 Shown):
 
 Enter the Lua script by selecting "ExpressLRS" in the Tools menu and pressing ENTER.
 
-If the parameter list does not populate after a few seconds, first verify the ExpressLRS module has power by checking its LED. If there is power, it is possible the Protocol set for the External Module is incorrect (should be set to CRSF) or that the module is not properly connected to the pins of the JR bay of the radio. Another possible reason is that you haven't updated the firmware of the module to version 2.x.
+If the parameter list does not populate after a few seconds, and it's stuck at `Loading...`, first verify the ExpressLRS module has power by checking its LED. If there is no LED lit up, it is possible the Protocol set for the External Module is incorrect (should be set to CRSF) or that the module is not properly connected to the pins of the JR bay of the radio. Another possible reason is that you haven't updated the firmware of the module to version 2.x.
 
-If parameters do show up, but the Bad/Good section on the right side of the header is showing an unstable value, have a look at your model settings and make sure the Internal RF module is set to Off. If the Bad/Good indicates something other than `0/your packet rate` this means `CRSFshot` is not working-- verify that you properly followed the [Radio Preparation](./../tx-prep) Guide.
+If parameters do show up, but the Bad/Good section on the right side of the header is showing an unstable value, have a look at your model settings and make sure the Internal RF module is set to Off. If the Bad/Good indicates something other than `0/<your selected packet rate>` this means `CRSFshot` is not working-- verify that you properly followed the [Radio Preparation](./../tx-prep) Guide.
 
 <img src="../../assets/images/lua3.jpg" width = "40%">
 <img src="../../assets/images/lua/config-bw.png" width = "45%">
 
-The `master   942c40` from the photo above is the git commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). On the first photo above, `master` means the module is flashed with the Master branch with the git commit `942c40`. If you're on a Released version or a Release Candidate, this will read something like `2.0` or `2.0-RC1` plus the commit hash of the release.
+The `master   942c40` from the photo above is the git branch and commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). On the first photo above, `master` means the module is flashed with the `Master Branch` with the git commit `942c40`. If you're on a Released version or a Release Candidate, this will read something like `2.0` or `2.0-RC1` plus the commit hash of the release.
 
 !!! note ""
     Colors may differ from Handset to Handset, depending on the current theme in use.
