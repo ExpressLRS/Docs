@@ -28,21 +28,21 @@ On the ELRS Lua script v2, Select `> TX Power`. There are three configurable ele
   - `AUX9`-`AUX12`: Dynamic power is *disabled* and fixed to the `Max Power` when `high` value is assigned to this aux channel.
 * `Fan Thresh`: Fan threshold. If a module has a fan, it will blow air from the power level configured here.
 
-Another important setting is to make sure your craft is **armed** on AUX1=`high`. ELRS never knows the craft arming state, instead it monitors the value of `AUX1` for arming detection.
+Another important setting is to make sure your craft is **armed** on AUX1=`high` (~2000us). ELRS never knows the craft arming state. Instead it monitors the value of `AUX1` for arming detection. See [Switch Modes](../../software/switch-config/) for more information about AUX channels.
 
 ## Details
 
 ### Starting Power
 
-On module powerup with Dynmaic Power is enabled, power is set to the minumum supported power.
+On module powerup with Dynamic Power enabled, transmit power is set to the minimum supported power.
 
 ### Lowering Power
 
-The algorithm averages the last few RSSI dBm readings from the RX and will compare the average with the sensitivity limit for the current packet rate. If the RSSI is far enough from the limit, the TX output power is lowered one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is above -78dBm, the power will be lowered. This can only occur once every few seconds.
+The algorithm averages the last few RSSI dBm readings from the RX and will compare the average with the sensitivity limit for the current packet rate. If the RSSI is far enough from the limit, the transmit power is lowered one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is above -78dBm, the power will be lowered. This can only occur once every few seconds.
 
 ### Raising Power
 
-The opposite of the "lower power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. When the average RSSI is too close to the sensitivity limit for the current packet rate, the TX power is raised one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is less than -93dBm, the power will be raised. This can only occur once every few seconds.
+The opposite of the "lowering power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. When the average RSSI is too close to the sensitivity limit for the current packet rate, the transmit power is raised one level. Example: 250Hz = -108dBm sensitivity limit, if the current RSSI average is less than -93dBm, the power will be raised. This can only occur once every few seconds.
 
 In addition to the slow power ramp up, there are three LQ-based conditions that will raise the power immediately to the maximum configured value.
 
@@ -65,10 +65,10 @@ Because dynamic power relies on information coming back from the RX to know how 
 | 100Hz | 1:32 |
 | 50Hz | 1:16 |
 
-On startup, the output power will be set to the max configured value until telemetry is received to be able to lower it. If telemetry is lost, the output power will stay at the current value until telemetry is received again. This is intended to prevent everyone's TX from blasting to max power when swapping batteries. To return to max configured power, restart the transmitter.
+On startup, the output power will be set to the lowest possible value. If telemetry is lost, the output power will stay at the current value until telemetry is received again. This is intended to prevent everyone's TX from blasting to max power when swapping batteries.
 
 ### OpenTX Power Readout
-The TX power telemetry is not transferred from/to RX, so there's no way to display it on OSD. Instead, readout TPWR from your radio is probably a practical workaround to check the working status of the dynamic power, as shown in the demo video.
+Depending on your FC Firmware version, TX Power telemetry (TPWR) may not be recognized and will not be displayed on your OSD. You can instead use OpenTX/EdgeTX Telemetry readout special function so you get notified when changes in the power level has happened, as in the demo video.
 
 1. Firstly, set a logical switch to `|Δ|>x` / `TPWR` / `1mW` as shown in L04 in the picture. 
 ![OpenTX logical switch page, L04 is set to absolute delta equal or larger than x, TPWR, 1mW](https://cdn.discordapp.com/attachments/738450139693449258/872521918446714920/IMG_9220.JPG)
@@ -76,4 +76,5 @@ The TX power telemetry is not transferred from/to RX, so there's no way to displ
 2. Next, for a readout when the power changes, set a special function triggered from the logical switch previously set, and assign `Play Value` / `TPWR` / `1x` (SF10 in the picture). When you want a readout periodically throughout a flight, choose a switch to trigger another special function, and assign `Play Value` / `TPWR` / [an interval you want] (SF11 in the picture, with 10s interval).
 ![OpenTX Special function page, SF10 is set to L04, Play Value, TPWR, 1x. SF11 is set to SB1 down, Play Value, TPWR, 10s](https://cdn.discordapp.com/attachments/738450139693449258/872521921382744074/IMG_9221.JPG)
 
-Note: OpenTX has no value for 50mW power in the CRSF telemetry protocol. When TPWR displays 0mW, it is actually 50mW TX power.
+!!! note ""
+    OpenTX has no value for 50mW in the CRSF Telemetry protocol and instead will be read as 0mW. EdgeTX starting 2.5.0 have the proper 50mW readout.

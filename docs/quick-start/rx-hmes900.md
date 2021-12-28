@@ -20,6 +20,8 @@ Target: `HappyModel_RX_ES900RX_via_Wifi`
 
 #### Method 1
 
+**(Recommended as first-flash method)**
+
 With the receiver [wired properly](../../quick-start/rx-fcprep/#happymodel-es900rx) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the `HappyModel_RX_ES900RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.

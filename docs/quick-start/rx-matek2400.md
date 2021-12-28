@@ -10,6 +10,8 @@ Target: `MATEK_2400_RX_via_WIFI`
 
 ### Method 1
 
+**(Recommended as first-flash method)**
+
 [Wire up your receiver](../../quick-start/rx-fcprep/#mateksys-r24-d-and-r24-s) to a free UART on your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
 
 !!! attention ""

@@ -22,14 +22,14 @@ Here's how it looks in the Tools menu (X9D+ and T16 Shown):
 
 Enter the Lua script by selecting "ExpressLRS" in the Tools menu and pressing ENTER.
 
-If the parameter list does not populate after a few seconds, first verify the ExpressLRS module has power by checking its LED. If there is power, it is possible the Protocol set for the External Module is incorrect (should be set to CRSF) or that the module is not properly connected to the pins of the JR bay of the radio. Another possible reason is that you haven't updated the firmware of the module to version 2.x.
+If the parameter list does not populate after a few seconds, and it's stuck at `Loading...`, first verify the ExpressLRS module has power by checking its LED. If there is no LED lit up, it is possible the Protocol set for the External Module is incorrect (should be set to CRSF) or that the module is not properly connected to the pins of the JR bay of the radio. Another possible reason is that you haven't updated the firmware of the module to version 2.x.
 
-If parameters do show up, but the Bad/Good section on the right side of the header is showing an unstable value, have a look at your model settings and make sure the Internal RF module is set to Off. If the Bad/Good indicates something other than `0/your packet rate` this means `CRSFshot` is not working-- verify that you properly followed the [Radio Preparation](./../tx-prep) Guide.
+If parameters do show up, but the Bad/Good section on the right side of the header is showing an unstable value, have a look at your model settings and make sure the Internal RF module is set to Off. If the Bad/Good indicates something other than `0/<your selected packet rate>` this means `CRSFshot` is not working-- verify that you properly followed the [Radio Preparation](./../tx-prep) Guide.
 
 <img src="../../assets/images/lua3.jpg" width = "40%">
 <img src="../../assets/images/lua/config-bw.png" width = "45%">
 
-The `master   942c40` from the photo above is the git commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). On the first photo above, `master` means the module is flashed with the Master branch with the git commit `942c40`. If you're on a Released version or a Release Candidate, this will read something like `2.0` or `2.0-RC1` plus the commit hash of the release.
+The `master   942c40` from the photo above is the git branch and commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). On the first photo above, `master` means the module is flashed with the `Master Branch` with the git commit `942c40`. If you're on a Released version or a Release Candidate, this will read something like `2.0` or `2.0-RC1` plus the commit hash of the release.
 
 !!! note ""
     Colors may differ from Handset to Handset, depending on the current theme in use.
@@ -41,6 +41,20 @@ Now, we can explore the complexities of the lua script, and how to interpret eac
 
 !!! warning "WARNING"
 	Do not change parameters while ARMED. When a parameter is changed, the module goes into Parameter Commit mode, interrupting the normal loop. This could result on a desync on some hardware combination which would result in a FAILSAFE.
+
+### The Header
+
+The first line, "Header", will show you some information about your ExpressLRS link. 
+
+The first part will show you the current ExpressLRS TX Module ID, followed by the current status of the link.
+
+The `0/nnn` is your Packet Counter. The second set of numbers should match with your currently selected Packet Rate. e.g. If you've set your Packet Rate to 500Hz, the Packet Counter should show 0/500, which means you're not getting any Bad Packets ( 0 Bad Packets ) and only getting Good Packets ( 500 Good Packets ). Any small fluctuation is normal and often goes back to 100% Good Packets, especially when you change a setting and it's commited into memory. 
+
+Should the indicator starts showing Bad Packets, and Good Packets goes down, it isn't a good situation. Make sure your module is not overheating and it's still getting good connection with the radio. This is most dangerous when you're armed and flying several kilometers/miles out, as this could mean a sudden Failsafe.
+
+The `Connection Status` indicator shows your current RC link status. When not connected to any receiver, it will show a dash (`-`); while a `C` shows up when bound and connected.
+
+The `Model Mismatched` message will also show up to indicate your are connected to a receiver, but the model selected in your radio is incorrect. See the [Model Match](../../software/model-config-match/) page for more info about Model Matching.
 
 ### Packet Rate and Telemetry Ratio
 
@@ -62,7 +76,7 @@ The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver
 
 ### Model Match
 
-Model Match is used to prevent accidentally selecting the wrong model in the handset and flying with an unexpected handset or ELRS configuration. Setting this to `On` while a receiver is connected will make that receiver only connect with the current Receiver ID. Setting it to `Off` will allow a connection with any bound receiver (including those using a Bind Phrase). Both sides of the connection must agree on their Model Match setting. For a detailed explanation of how this restricts connections see [Model Match](../../software/model-config-match/#model-match).
+Model Match is used to prevent accidentally selecting the wrong model in the handset and flying with an unexpected handset or ELRS configuration. Setting this to `On` while a receiver is connected will make that receiver only connect with the current Receiver ID. Setting it to `Off` will allow a connection with any bound receiver (including those using a Bind Phrase). Both sides of the connection must agree on their Model Match setting. For a detailed explanation of how this restricts connections see [Model Match](../../software/model-config-match/).
 
 
 ### TX Power
@@ -121,3 +135,19 @@ Pressing the `[Bind]` button activates binding mode for traditional binding. Thi
 <img src="../../assets/images/lua/blejoystick-bw.png" width = "40%">
 
 Pressing the `[BLE Joystick]` selection activates BluetoothLE Joystick mode which allows connection to simulators through the bluetooth of your computer. Reboot or change models to exit this mode.
+
+## Troubleshooting the Lua Script
+
+### ExpressLRS Lua Script is stuck at `Loading...`
+
+Go back to the [Radio Setup Guide](../../quick-start/tx-prep/) and make sure your radio is prepped up for ExpressLRS.
+
+Also make sure your module has been flashed with v2.0 firmware. V2 Lua for V2.0-flashed modules, V1 Lua for v1.x-flashed modules (including modules fresh from factory; except the new OLED-equipped NamimnoRC modules and the Happymodel ES24TX Pro full-size module).
+
+For newly-acquired ExpressLRS modules, flashing via USB is the recommended update method.
+
+### On v1.x, I can choose 2W on the Lua, but I cannot do that anymore. What gives?
+
+This means your module cannot go that high or that low. The power levels you can select on the new Lua script is based off the power levels your module supports.
+
+This also applies to other options like `Enable Backpack WiFi` or `BLE Joystick`. If your module doesn't support any of these features, it won't show up on the Lua Script.
