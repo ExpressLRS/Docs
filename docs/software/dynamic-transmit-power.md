@@ -77,4 +77,4 @@ Depending on your FC Firmware version, TX Power telemetry (TPWR) may not be reco
 ![OpenTX Special function page, SF10 is set to L04, Play Value, TPWR, 1x. SF11 is set to SB1 down, Play Value, TPWR, 10s](https://cdn.discordapp.com/attachments/738450139693449258/872521921382744074/IMG_9221.JPG)
 
 !!! note ""
-    OpenTX have no value for 50mW in the CRSF Telemetry protocol and instead will be read as 0mW. EdgeTX starting 2.5.0 have the proper 50mW readout.
+    OpenTX has no value for 50mW in the CRSF Telemetry protocol and instead will be read as 0mW. EdgeTX starting 2.5.0 have the proper 50mW readout.
