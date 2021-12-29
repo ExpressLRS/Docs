@@ -78,7 +78,7 @@ See the tables below for the list of supported devices:
 
 ## I'm Ready to Proceed. What do I do next?
 
-If you're TX module is already equipped with a TX backpack (see list above), your next step is to update the firmware of the backpack. Proceed to the [next page](../../hardware/backpack-tx-setup/) for more details.
+If your TX module is already equipped with a TX backpack (see list above), your next step is to update the firmware of the backpack. Proceed to the [next page](../../hardware/backpack-tx-setup/) for more details.
 
 If you're using a DIY TX module and want to add a backpack into it, proceed to the [Backpack Wiki](https://github.com/ExpressLRS/Backpack/wiki).
 
