@@ -17,6 +17,8 @@ You are setting up to fly with others and your favorite video channel is already
 
 You already have the majority of the hardware needed. Most of the ESP-based ExpressLRS modules come with the TX Backpack. For the VRX Backpack, you can reuse any ESP-based ExpressLRS receiver (recommended are the EP1/EP2 receivers as they have boot pads, instead of boot buttons), or for a complete DIY route, you'll need an ESP-01F module.
 
+An off-the-shelf VRX Backpack has also appeared from Happymodel: the [EP82](https://www.happymodel.cn/index.php/2021/11/10/ep82-vrx-backpack-module-for-control-rapidfire-vrx-with-elrs-tx-module/)
+
 See the tables below for the list of supported devices:
 
 ### Supported TX-Backpack Targets
