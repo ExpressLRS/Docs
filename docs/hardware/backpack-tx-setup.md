@@ -70,7 +70,7 @@ For the First Generation NamimnoRC TX modules (No OLED), you will have to first 
 
 Wait for a bit (~10s) after the message "Update Success! Rebooting..." appear before you power-cycle the module. Your TX Backpack should now be ready.
 
-## Starting 0.2.0, you can Update via your Home Network via WiFi
+## Starting 0.2.0, you can Update via your Home WiFi Network
 
 With your Home Network SSID and Password set, when you activate the WiFi mode via the lua script (`WiFi Connectivity` -> `Enabled Backpack WiFi`), the Backpack will try to connect to your Home WiFi Network. Once connected, you can access the Web Update page via http://elrs_txbp.local/ and upload your firmware there.
 
@@ -80,4 +80,18 @@ Alternatively, you can also **Build and Flash** via the Configurator through WiF
 
 ## How to check you have updated the TX Backpack Firmware?
 
-Navigate to the `WiFi Connectivity` folder of the ExpressLRS v2 Lua script and select `Enable Backpack WiFi`. Scan for Access Points and **ExpressLRS TX Backpack** Should appear. 
+Navigate to the `WiFi Connectivity` folder of the ExpressLRS v2 Lua script and select `Enable Backpack WiFi`. Scan for Access Points and **ExpressLRS TX Backpack** should appear. Connect into it and point your browser to http://10.0.0.1/.
+
+If you have set your Home Network SSID and Password, point your browser to http://elrs_txbp.local/.
+
+The main banner will show you what kind of device it is and the firmware version that's flashed into it.
+
+## Setup your VRx Backpack
+
+[VRx Backpack Setup](../../hardware/backpack-vrx-setup/){.md-button}
+
+## Operation
+
+The [Backpack Usage](../../hardware/esp-backpack/#backpack-usage) section will discuss the Operation of the Backpacks in detail, including Binding, LED Status codes and more.
+
+[Backpack Usage](../../hardware/esp-backpack/#backpack-usage){.md-button}

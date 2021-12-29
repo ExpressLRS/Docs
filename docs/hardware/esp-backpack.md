@@ -82,7 +82,34 @@ If you're using a DIY TX module and want to add a backpack into it, proceed to t
 
 For the VRX Backpack, you will need to first update the firmware on the ESP device. The firmware will highly depend on which VRX module you will use it on. Proceed to [this page](../../hardware/backpack-vrx-setup/) for more info.
 
-[TX Backpack Setup](../../hardware/backpack-tx-setup/){.md-button} 
+[TX Backpack Setup](../../hardware/backpack-tx-setup/){.md-button}      [VRx Backpack Setup](../../hardware/backpack-vrx-setup/){.md-button}
 
-[VRx Backpack Setup](../../hardware/backpack-vrx-setup/){.md-button}
+## Backpack Usage
 
+### LED Status codes
+
+* Solid - Backpack is powered up and ready to receive packets.
+* Fast Continious Blinking - WiFi Mode is active and either the Access Point is ready for connection or the Backpack has connected to your Local WiFi Network (0.2.0; Home Network SSID and Password have been set).
+* Double Blink, Pause - Backpack is in Binding Mode. Using the ExpressLRS Lua Script, press `Bind` and the TX Backpack should bind with the VRx Backpack.
+
+### Button Operation (If present)
+
+* Pressing and Holding down the button during Power Up puts the device into Bootloader mode. From here, you can flash the firmware via UART using an FTDI dongle (USB to UART Bridge). LED on the Backpack device will be SOLID when in this mode.
+* Single Press during Normal or Binding mode will put the device into WiFi Mode.
+* Single Press during WiFi Mode will put back the device into Normal Mode.
+
+### Binding
+
+Just like any ExpressLRS device, you can set a **Binding Phrase** for both the TX Backpack and VRx Backpack so they automatically bind with each other during power up. This Binding Phrase can be the same as what you used with your other ExpressLRS devices, or can be entirely different. The concept is the same.
+
+Should you choose to bind manually, the procedure is as follows:
+
+1. Make sure you didn't flash the VRx firmware with a Binding Phrase.
+2. Power Cycle the VRx Backpack 3 times every ~30s. This interval gives ample time for your googles and VRx module to power up and down more gracefully. If your VRx Backpack has a button, it can also be used to power-cycle the device by cycling between WiFi Mode and Normal mode 3x (as WiFi mode reboots the device).
+3. The LED on the Backpack should now blink twice followed by a brief pause, then repeats, indicating it is in Binding Mode.
+4. Using the ExpressLRS Lua script, navigate into the `Bind` option. Press it once and the LED on both Backpacks should blink once and stay SOLID thereafter.
+5. Your Backpacks are now bound and connected and you can now use **VTX Administrator** on the ExpressLRS Lua script to sync your VTX and VRx modules.
+
+### Timeouts
+
+When in Binding Mode (Double Blink & Pause) and no Bind packets have been received within 120s, the VRx Backpack will switch into WiFi Mode. This provides the users a means to enter WiFi Mode when their VRx Backpack doesn't have a Button.
