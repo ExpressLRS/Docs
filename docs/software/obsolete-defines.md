@@ -13,7 +13,7 @@ New items should be added to the top of the list so the last entry here is the o
 ```
 USE_ESP8266_BACKPACK
 ```
-This enables communication with the **[ESP Backpack](../../hardware/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
+This enables communication with the **[ESP Backpack](../../hardware/backpack/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
 
 **REMOVED** 2.0 development. Replaced with USE_TX_BACKPACK.
 

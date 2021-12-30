@@ -11,7 +11,7 @@ A Backpack is an add-on device that facilitates wireless communication between a
 
 ## Usage Scenario
 
-You are setting up to fly with others and your favorite video channel is already in use. You're asked to use R2 as that's the vacant one. Using the [ExpressLRS lua script](../../quick-start/lua-howto/#vtx-administrator), you change the setting into R2 (this while your aircraft is still unpowered). You power up your goggles equipped with a VRX Backpack. Then plug in your aircraft. Upon establishment of the connection, the VTX and the VRX are automatically set into R2. You're now ready to fly. No fiddling of channels on the OSD or on your goggles.
+You are setting up to fly with others and your favorite video channel is already in use. You're asked to use R2 as that's the vacant one. Using the [ExpressLRS lua script](../../../quick-start/lua-howto/#vtx-administrator), you change the setting into R2 (this while your aircraft is still unpowered). You power up your goggles equipped with a VRX Backpack. Then plug in your aircraft. Upon establishment of the connection, the VTX and the VRX are automatically set into R2. You're now ready to fly. No fiddling of channels on the OSD or on your goggles.
 
 ## Okay, I'm sold. What do I need to get this working?
 
@@ -78,13 +78,13 @@ See the tables below for the list of supported devices:
 
 ## I'm Ready to Proceed. What do I do next?
 
-If your TX module is already equipped with a TX backpack (see list above), your next step is to update the firmware of the backpack. Proceed to the [next page](../../hardware/backpack-tx-setup/) for more details.
+If your TX module is already equipped with a TX backpack (see list above), your next step is to update the firmware of the backpack. Proceed to the [next page](../../backpack/backpack-tx-setup/) for more details.
 
 If you're using a DIY TX module and want to add a backpack into it, proceed to the [Backpack Wiki](https://github.com/ExpressLRS/Backpack/wiki).
 
-For the VRX Backpack, you will need to first update the firmware on the ESP device. The firmware will highly depend on which VRX module you will use it on. Proceed to [this page](../../hardware/backpack-vrx-setup/) for more info.
+For the VRX Backpack, you will need to first update the firmware on the ESP device. The firmware will highly depend on which VRX module you will use it on. Proceed to [this page](../../backpack/backpack-vrx-setup/) for more info.
 
-[TX Backpack Setup](../../hardware/backpack-tx-setup/){.md-button}      [VRx Backpack Setup](../../hardware/backpack-vrx-setup/){.md-button}
+[TX Backpack Setup](../../backpack/backpack-tx-setup/){.md-button}      [VRx Backpack Setup](../../backpack/backpack-vrx-setup/){.md-button}
 
 ## Backpack Usage
 

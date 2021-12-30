@@ -107,10 +107,10 @@ The main banner will show you what kind of device it is and the firmware version
 
 ## Setup your TX Backpack
 
-[TX Backpack Setup](../../hardware/backpack-tx-setup/){.md-button} 
+[TX Backpack Setup](../backpack-tx-setup/){.md-button} 
 
 ## Operation
 
-The [Backpack Usage](../../hardware/esp-backpack/#backpack-usage) section will discuss the Operation of the Backpacks in detail, including Binding, LED Status codes and more.
+The [Backpack Usage](../esp-backpack/#backpack-usage) section will discuss the Operation of the Backpacks in detail, including Binding, LED Status codes and more.
 
-[Backpack Usage](../../hardware/esp-backpack/#backpack-usage){.md-button}
+[Backpack Usage](../esp-backpack/#backpack-usage){.md-button}
