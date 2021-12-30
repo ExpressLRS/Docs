@@ -6,7 +6,10 @@ template: main.html
 
 A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano longrange rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
-Because the ExpressLRS code is "baked-in" to the flight controller firmware instead of a second microcontroller, these can not be updated the same way external receivers are. These SPI receivers will work always work with the ExpressLRS firmware of the same major version. That is, ExpressLRS 1.x.x and ExpressLRS 2.x.x need different **Flight Controller** firmware (Betaflight builds).
+Because the ExpressLRS code is "baked-in" to the flight controller firmware instead of a second microcontroller, these can not be updated the same way external receivers are. These SPI receivers always work with the ExpressLRS firmware of the same major version. That is, ExpressLRS 1.x.x and ExpressLRS 2.x.x need different **Flight Controller** firmware (Betaflight builds).
+
+!!! info "NOTE"
+    You cannot use the ExpressLRS Configurator to update these FCs. See the [updating](../../hardware/spi-receivers/#updating) section below.
 
 ## Binding Procedure
 
@@ -21,7 +24,7 @@ Put the receiver into bind mode using any of these procedures:
 - press the bind button on the flight controller.
 - using the CLI, type in `set expresslrs_uid = 0`, press enter once, then save and reboot
 
-Execute [elrs.lua](../../quick-start/tx-prep/#lua-script) in your handset and press the `Bind` button. The RX and TX should be now bound.
+Execute [ExpressLRS](../../quick-start/lua-howto/) Lua Script in your handset and press the `Bind` button. The RX and TX should be now bound (indicated by a SOLID LED on the Flight Controller).
 
 **Please mind the order, RX first, TX second.**
 
@@ -88,16 +91,21 @@ With the [Updated](../../hardware/spi-receivers/#updating) Betaflight firmware, 
 
 ## Updating
 
-As mentioned, you must flash a Betaflight firmware that's compatible with the ExpressLRS major version on your transmitter. ExpressLRS 1.x.x TX only works with Betaflight firmware for ExpressLRS 1.x.x, and upgrading the transmitter to ExpressLRS 2.x.x means flashing the flight controller with a different Betaflight version. If upgrading minor versions, such as from ExpressLRS 1.1.0 to 1.2.0 on the transmitter, no changes to the flight controller are needed although there may be bug fixes to the ExpressLRS Betaflight implementation as well.
+As mentioned, you must flash a Betaflight firmware that's compatible with the ExpressLRS major version on your transmitter. ExpressLRS 1.x.x TX only works with Betaflight firmware for ExpressLRS 1.x.x, and upgrading the transmitter to ExpressLRS 2.x.x means flashing the flight controller with a different Betaflight version (e.g. Betaflight 4.3-RC1 5933d96). You don't need to update the FC firmware whenever there's minor updates on the main ExpressLRS codebase, unless there's any update on the Betaflight codebase itself for the SPI ExpressLRS receivers.
 
-In preparation for this, you should save a copy of your `diff all` dump.
+In preparation for updating, you should save a copy of your `diff all` dump.
 
-Download the necessary binaries (zipped) from this [Betaflight PR page](https://github.com/betaflight/betaflight/pull/10788). Extract the Hex File and, using Betaflight Configurator 10.8.0 (Nightly), flash the binary using the Load Firmware [Local] button found at the bottom right of the Firmware Flasher (Flight Controller in DFU Mode).
+Using the latest [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator/releases), navigate into `Firmware Flasher` and select the latest Betaflight release (at the time of writing, it should be set to Release and Release Candidate; and use 4.3.0-RC1). Depending on your AIO board, the target will differ:
 
-Once flashed, you will need to paste in the `diff all` you have saved. Don't forget to type in `save` and press enter once done. Power cycle your flight controller, and you should be set. Review your Betaflight settings, and check your RC link.
+* Happymodel AIO: CRAZYBEEF4SX1280
+* BetaFPV AIO: BETAFPVF4SX1280
+* SPRacing SPH7RF: Coming soon!
 
-This procedure will only apply while Betaflight 4.3.0 is not yet released. Section will be updated appropriately for any changes in procedures.
+!!! warning ""
+    The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../../quick-start/rx-hmes900/#es915868rx-discontinued) instead.
 
-For more information, head over to the [Betaflight PR page](https://github.com/betaflight/betaflight/pull/10788). We can also help out over at [Discord](https://discord.gg/dS6ReFY)!
+Once flashed, you will need to paste in the `diff all` you have saved. Don't forget to type in `save` and press enter once done. Power cycle your flight controller, and you should be set. You may need to set your Binding Phrase once again if you pasted in Factory Diff All. Review your Betaflight settings (no changes needed for the Receiver Type and Protocol; should already be set with `SPI Receiver`, with Provider as `ExpressLRS`), and check your RC link in the Receiver Tab (were sticks moving?).
+
+For more information, head over to the already merged [Betaflight PR page](https://github.com/betaflight/betaflight/pull/10788). We can also help out over at [Discord](https://discord.gg/dS6ReFY)!
 
 *Content taken from the PR page c/o of [@phobos-](https://github.com/phobos-)*
