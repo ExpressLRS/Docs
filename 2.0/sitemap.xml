@@ -16,32 +16,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.expresslrs.org/2.0/hardware/diy-rx/</loc>
-         <lastmod>2021-12-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.expresslrs.org/2.0/hardware/diy-tx/</loc>
-         <lastmod>2021-12-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.expresslrs.org/2.0/hardware/esp-backpack/</loc>
-         <lastmod>2021-12-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://www.expresslrs.org/2.0/hardware/fan-mod/</loc>
          <lastmod>2021-12-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/2.0/hardware/inverter-mod/</loc>
-         <lastmod>2021-12-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.expresslrs.org/2.0/hardware/nuclear-hardware/</loc>
          <lastmod>2021-12-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -72,6 +52,36 @@
     </url>
     <url>
          <loc>https://www.expresslrs.org/2.0/hardware/x9d-troubleshooting/</loc>
+         <lastmod>2021-12-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/hardware/backpack/backpack-tx-setup/</loc>
+         <lastmod>2021-12-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/hardware/backpack/backpack-vrx-setup/</loc>
+         <lastmod>2021-12-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/hardware/backpack/esp-backpack/</loc>
+         <lastmod>2021-12-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/hardware/special-targets/diy-rx/</loc>
+         <lastmod>2021-12-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/hardware/special-targets/diy-tx/</loc>
+         <lastmod>2021-12-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/hardware/special-targets/nuclear-hardware/</loc>
          <lastmod>2021-12-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
