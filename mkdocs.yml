@@ -175,6 +175,7 @@ nav:
         - Pre-first Flight Checks: quick-start/pre-1stflight.md
         - Ardupilot Setup: quick-start/ardupilot-setup.md
       - Troubleshooting: quick-start/troubleshooting.md
+      - Unbricking: quick-start/unbricking.md
   - Software:
       - Switch Configs: software/switch-config.md
       - User Defines: software/user-defines.md
