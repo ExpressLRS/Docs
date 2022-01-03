@@ -8,13 +8,13 @@ template: main.html
 
 For the Happymodel TX Modules, you will need to move the jumpers or dipswitches into the correct position before flashing the firmware. Please see the USB/UART Flashing section of your particular TX Module for the jumper or dipswitch position. You need to activate the `Backpack Flashing` jumper or dipswitch (middle pair). Opening up the module enclosure will be needed as well to access the Buttons on the modules.
 
-[ES24TX Jumpers](../../../quick-start/tx-es24tx/#flashing-via-usbuart){.md-button}
+[ES24TX Jumpers](../../quick-start/transmitters/tx-es24tx.md#flashing-via-usbuart){.md-button}
 
-[ES900TX Jumpers](../../../quick-start/tx-es900tx/#flashing-via-usb){.md-button}
+[ES900TX Jumpers](../../quick-start/transmitters/tx-es900tx.md#flashing-via-usb){.md-button}
 
 Make sure your computer recognizes your TX module as a `USB to UART Bridge`. Windows drivers are linked on the Flashing Guides.
 
-For the NamimnoRC Flash and Voyager TX Modules without an OLED screen (Gen 1 STM-based), make sure you're able to access the Backpack Web Update page(see [Flashing Guide](../../../quick-start/tx-flash2400/)) via WiFi.
+For the NamimnoRC Flash and Voyager TX Modules without an OLED screen (Gen 1 STM-based), make sure you're able to access the Backpack Web Update page(see [Flashing Guide](../../quick-start/transmitters/tx-flash2400.md)) via WiFi.
 
 For the NamimnoRC OLED-equipped TX Modules, these should already have a ready-to-use Backpack firmwares.
 
@@ -64,7 +64,7 @@ Using the ExpressLRS v2.0 Lua script, navigate to `WiFi Connectivity` and select
 
 ### via WiFi (NamimnoRC Gen1 TX Modules)
 
-For the First Generation NamimnoRC TX modules (No OLED), you will have to first **Build** the Backpack firmware. Once built, grab the `backpack.bin` file from the folder that the ExpressLRS Configurator opened. Open the URL http://elrs_tx.local on your browser and scroll down to where the **WiFi Backpack Firmware Update** section is (shown in the image below). If the page isn't loading, make sure you have followed the Wifi Flashing guide for these modules(see [Flashing Guide](../../quick-start/tx-flash2400/#flashing-via-wifi)).
+For the First Generation NamimnoRC TX modules (No OLED), you will have to first **Build** the Backpack firmware. Once built, grab the `backpack.bin` file from the folder that the ExpressLRS Configurator opened. Open the URL http://elrs_tx.local on your browser and scroll down to where the **WiFi Backpack Firmware Update** section is (shown in the image below). If the page isn't loading, make sure you have followed the Wifi Flashing guide for these modules(see [Flashing Guide](../../quick-start/transmitters/tx-flash2400.md#flashing-via-wifi)).
 
 ![Wifi Backpack](../../assets/images/backpackwifi.png)
 
@@ -88,10 +88,10 @@ The main banner will show you what kind of device it is and the firmware version
 
 ## Setup your VRx Backpack
 
-[VRx Backpack Setup](../backpack-vrx-setup/){.md-button}
+[VRx Backpack Setup](backpack-vrx-setup.md){.md-button}
 
 ## Operation
 
-The [Backpack Usage](../esp-backpack/#backpack-usage) section will discuss the Operation of the Backpacks in detail, including Binding, LED Status codes and more.
+The [Backpack Usage](esp-backpack.md#backpack-usage) section will discuss the Operation of the Backpacks in detail, including Binding, LED Status codes and more.
 
-[Backpack Usage](../esp-backpack/#backpack-usage){.md-button}
+[Backpack Usage](esp-backpack.md#backpack-usage){.md-button}

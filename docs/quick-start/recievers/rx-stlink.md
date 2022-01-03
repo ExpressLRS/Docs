@@ -17,14 +17,14 @@ Connect the STLink V2 into the pads shown below: `3v3`, `GND`, `C = CLK` and `D 
 
 Connect the STLink V2 into the pads shown below: `3v3`, `GND`, `C = CLK` and `D = DIO`. 
 
-![r9mx STLink connection](../assets/images/r9mxstlink.png)
+![r9mx STLink connection](../../assets/images/r9mxstlink.png)
 
 ## R9Slim
 This RX requires an StLink v2 to be flashed. 
 
 Wire up the RX to the STLink using `3v3`, `GND`, `CLK` and `DIO`. 
 
-![r9slim STLINK connection](../assets/images/r9slim-stlink.jpg)
+![r9slim STLINK connection](../../assets/images/r9slim-stlink.jpg)
 
 *Wiring the R9 Slim+ for STLink flashing will be the same*
 
@@ -37,7 +37,7 @@ Because those pins are so small one option is to only solder a wire on the `CLK`
 
 ## ES915RX (Discontinued)
 
-![ES915RX](../assets/images/ES915rx.jpg)
+![ES915RX](../../assets/images/ES915rx.jpg)
 
 Connect your STLink into `GND`, `DIO`, `CLK`, `3V3` of the receiver. These pads are marked clearly as in the image above.
 

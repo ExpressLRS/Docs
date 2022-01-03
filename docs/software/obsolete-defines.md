@@ -13,14 +13,14 @@ New items should be added to the top of the list so the last entry here is the o
 ```
 USE_ESP8266_BACKPACK
 ```
-This enables communication with the **[ESP Backpack](../../hardware/backpack/esp-backpack)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
+This enables communication with the **[ESP Backpack](../hardware/backpack/esp-backpack.md)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
 
 **REMOVED** 2.0 development. Replaced with USE_TX_BACKPACK.
 
 ```
 #-DHYBRID_SWITCHES_8
 ```
-Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in [Switch Modes](../../software/switch-config/), but
+Changes how the AUX channels are sent over the air. The default option is Normal Mode with 8x 2-position low-latency switches. Enabling `HYBRID_SWITCHES_8` changes this to 1x 2-pos + 6x 7-pos + 1x 16-pos, with only the 2-position being low-latency. In Normal Mode, all switches are sent with every packet, in Hybrid Mode, only AUX1 is sent with every packet and the rest are rotated through. Note: The switch mode MUST match between the RX and TX. A detailed explanation of the differences between the two options can be found in [Switch Modes](switch-config.md), but
   1. If only two position switches are needed, and they must be updated as fast as possible: Normal Mode
   2. Almost everyone: Hybrid Mode (Put ARM on AUX1)
 

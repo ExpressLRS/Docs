@@ -21,7 +21,7 @@ Initially this mod is brought to life by [Niklas Voigt](https://discordapp.com/u
 
 You need a **20x20mm** or **25x25mm** **fan** in **5V** version. 
 Both sizes are supported. To secure the fan into the cover you can use **2x M2 screws**, a thread is already in the print.
-U can solder the pins of the fan directly to the **5v port of the R9M** or use the [**Controllable Fan Mod**](../../hardware/fan-mod/#controllable-fan-mod) which can control the fan out of software (fan blows only at >250mw). 
+U can solder the pins of the fan directly to the **5v port of the R9M** or use the [**Controllable Fan Mod**](#controllable-fan-mod) which can control the fan out of software (fan blows only at >250mw). 
 
 R9M Fan Mod Cover is build out of four Parts and a Sticker:
 
@@ -56,7 +56,7 @@ The PB9 pad location on the R9M2019 module is a bit different. Please see the ph
 !!! warning "WARNING"
     Only do this if you are comfortable with modding hardware
 
-In addition to the [3D printed Cover](../../hardware/fan-mod/) & the [**Controllable Fan Mod**](../../hardware/fan-mod/#controllable-fan-mod) you'll need:
+In addition to the [3D printed Cover](#download) & the [**Controllable Fan Mod**](#controllable-fan-mod) you'll need:
 
 * Fan + Heatsink ` "2507 25MM 25x25x13MM Hydraulic bearing Graphics card Cooling fan with heat sink 5V 12V m.2 SSD Fan with 2pin"`
 * Thermalpad 0.5mm ` "1pc 100mmx100mmx0.5mm GPU Northbridge IC LED Chipset Heatsink Cooling Conductive Silicone Thermal Pad,100x100x0.5mm w/ 3.2W/M-K"`

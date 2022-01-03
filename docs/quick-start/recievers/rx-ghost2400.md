@@ -14,7 +14,7 @@ Flashing the Ghost RX's is currently a **1 WAY** flash once you flash ExpressLRS
 
 1. Wire `3.3v`, `GND`, `CLK`, and `DIO` to their respective pins on the RX from the StLink.
 2. Select the `GHOST_ATTO_2400_via_STLINK` target.
-3. Set your [Firmware Options](../../quick-start/firmware-options) and click on `Build and Flash`.
+3. Set your [Firmware Options](../firmware-options.md) and click on `Build and Flash`.
 4. Connect your receiver to your Flight Controller as normal (i.e. Rx to Tx, and Tx to Rx);
 
 Subsequent Firmware Updates can now be done using `via_BetaflightPassthrough` target.

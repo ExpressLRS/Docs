@@ -4,7 +4,7 @@ template: main.html
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-This page aims to explain only the key options in ExpressLRS Configurator you may need for your initial setup. For a full description of **all** the options available, see the [User Defines page](../../software/user-defines/).
+This page aims to explain only the key options in ExpressLRS Configurator you may need for your initial setup. For a full description of **all** the options available, see the [User Defines page](../software/user-defines.md).
 
 Some of these options are present on both the Tx and Rx Targets. It is important that these options match to both the TX module and receiver in order for them to bind. `team2400` and `team900` also share a few options and some options are unique to that frequency band. Shown below are common options available on `team2400` and `team900` TXes respectively.
 
@@ -25,7 +25,7 @@ This is a relatively simple one - enable whatever regulatory domain you are in t
 
 ## Binding Phrase
 
-Entering a binding phrase allows you to skip the binding step with your receivers-- you want this set. Any transmitter using the same binding phrase will connect to any receiver with the same binding phrase, so be unique. Limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will require binding with the traditional [binding method](../../quick-start/binding/).
+Entering a binding phrase allows you to skip the binding step with your receivers-- you want this set. Any transmitter using the same binding phrase will connect to any receiver with the same binding phrase, so be unique. Limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will require binding with the traditional [binding method](binding.md).
 
 ## Network Options
 
@@ -89,6 +89,6 @@ Enable diversity for Receivers that support it, but safe to leave on for hardwar
 
 ## Full List
 
-*For a complete list of User Defines, head over to the [User Defines page](../../software/user-defines/).*
+*For a complete list of User Defines, head over to the [User Defines page](../software/user-defines.md).*
 
 **Done! It's time to flash the firmware on your transmitter**

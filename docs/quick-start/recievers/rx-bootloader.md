@@ -18,7 +18,7 @@ Copy the relevant file to your handset's SD card (You can put it inside `/FIRMWA
 
 Wire the receiver to your radio's Smart Port, as shown:
 
-![BL Flashing](../assets/images/Bootloader-Flashing.jpg)
+![BL Flashing](../../assets/images/Bootloader-Flashing.jpg)
 
 <br />
 

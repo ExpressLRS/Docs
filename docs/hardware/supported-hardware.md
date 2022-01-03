@@ -14,73 +14,73 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 ### Happymodel ES24Tx
 
-[Flashing Guide](../../quick-start/tx-es24tx/)
+[Flashing Guide](../quick-start/transmitters/tx-es24tx.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
 ### NamimnoRC Flash
 
-[Flashing Guide](../../quick-start/tx-flash2400/)
+[Flashing Guide](../quick-start/transmitters/tx-flash2400.md)
 
 ### BetaFPV Nano 2.4GHz
 
-[Flashing Guide](../../quick-start/tx-betafpv2400/)
+[Flashing Guide](../quick-start/transmitters/tx-betafpv2400.md)
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-tx-module?variant=39416993382534)
 
 ### Ghost TX
 
-[Flashing Guide](../../quick-start/tx-ghost2400/)
+[Flashing Guide](../quick-start/transmitters/tx-ghost2400.md)
 
 *Note: STLink first time flash, irreversible*
 
 ### Siyi FM30
 
-[Flashing Guide](../../quick-start/tx-siyifm30/)
+[Flashing Guide](../quick-start/transmitters/tx-siyifm30.md)
 
 Max output power: 100mW default, 250mW with `UNLOCK_HIGHER_POWER`
 
 ## 2.4GHz Receivers
 
-To help find the right receiver for your needs, see the [Receiver Selection](../receiver-selection/) page.
+To help find the right receiver for your needs, see the [Receiver Selection](receiver-selection.md) page.
 
 ### Happymodel EP1 & EP2
 
-[Flashing Guide](../../quick-start/rx-hmep2400/)
+[Flashing Guide](../quick-start/recievers/rx-hmep2400.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
 ### Happymodel PP
 
-[Flashing Guide](../../quick-start/rx-hmpp2400/)
+[Flashing Guide](../quick-start/recievers/rx-hmpp2400.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
 ### NamimnoRC Flash
 
-[Flashing Guide](../../quick-start/rx-flash2400/)
+[Flashing Guide](../quick-start/recievers/rx-flash2400.md)
 
 ### BetaFPV Nano 2.4GHz
 
-[Flashing Guide](../../quick-start/rx-betafpv2400/)
+[Flashing Guide](../quick-start/recievers/rx-betafpv2400.md)
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-receiver?variant=39416095408262)
 
 ### MatekSys 2.4GHz Receivers
 
-[Flashing Guide](../../quick-start/rx-matek2400/)
+[Flashing Guide](../quick-start/recievers/rx-matek2400.md)
 
 [Manufacturer Website](http://www.mateksys.com/?portfolio=elrs-r24)
 
 ### Ghost Atto Receivers
 
-[Flashing Guide](../../quick-start/rx-ghost2400/)
+[Flashing Guide](../quick-start/recievers/rx-ghost2400.md)
 
 *Note: STLink first time flash, irreversible*
 
 ### Siyi FR Mini
 
-[Flashing Guide](../../quick-start/rx-siyiFRmini/)
+[Flashing Guide](../quick-start/recievers/rx-siyiFRmini.md)
 
 Max telemetry power: 100mW default, 250mW with `UNLOCK_HIGHER_POWER`
 
@@ -90,7 +90,7 @@ Max telemetry power: 100mW default, 250mW with `UNLOCK_HIGHER_POWER`
 
 ### Frsky R9M (inc. Lite & Lite Pro)
 
-[Flashing Guide](../../quick-start/tx-r9m/)
+[Flashing Guide](../quick-start/transmitters/tx-r9m.md)
 
 [Fan Mod](https://www.expresslrs.org/2.0/hardware/fan-mod/)
 
@@ -98,7 +98,7 @@ Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
 
 ### Happymodel ES900TX
 
-[Flashing Guide](../../quick-start/tx-es900tx/)
+[Flashing Guide](../quick-start/transmitters/tx-es900tx.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
@@ -106,11 +106,11 @@ Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
 
 ### NamimnoRC Voyager
 
-[Flashing Guide](../../quick-start/tx-voyager900/)
+[Flashing Guide](../quick-start/transmitters/tx-voyager900.md)
 
 ### BetaFPV Nano 900Mhz
 
-[Flashing Guide](../../quick-start/tx-betafpv900/)
+[Flashing Guide](../quick-start/transmitters/tx-betafpv900.md)
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-tx-module?variant=39416993415302)
 
@@ -124,25 +124,25 @@ Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
 - R9 Slim
 - R9 Slim+
 
-[Flashing Guide](../../quick-start/rx-bootloader/)
+[Flashing Guide](../quick-start/recievers/rx-bootloader.md)
 
 ### Jumper R9 Mini
 
-[Flashing Guide](../../quick-start/rx-jumper900/)
+[Flashing Guide](../quick-start/recievers/rx-jumper900.md)
 
 ### Happymodel ES900RX
 
-[Flashing Guide](../../quick-start/rx-hmes900/)
+[Flashing Guide](../quick-start/recievers/rx-hmes900.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
 ### NamimnoRC Voyager
 
-[Flashing Guide](../../quick-start/rx-voyager900/)
+[Flashing Guide](../quick-start/recievers/rx-voyager900.md)
 
 ### BetaFPV Nano 900Mhz
 
-[Flashing Guide](../../quick-start/rx-betafpv900/)
+[Flashing Guide](../quick-start/recievers/rx-betafpv900.md)
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-receiver?variant=39416095441030)
 
@@ -152,30 +152,30 @@ Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/2021/05/19/happymodel-elrs-f4-2g4-aio-5in1-flight-controller-built-in-spi-2-4ghz-elrs-rx/)
 
-*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates. See this [page](../../hardware/spi-receivers/) for more info.*
+*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates. See this [page](spi-receivers.md) for more info.*
 
 ### Happymodel CrazyF4 ELRS AIO 900Mhz
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/2021/04/22/happymodel-crazyf4-elrs-aio-5in1-flight-controller-built-in-900mhz-elrs-rx/)
 
-*Note: Receiver firmware can be updated using the [ES915/868RX](../../quick-start/rx-hmes900/#es915868rx-discontinued/) methods.*
+*Note: Receiver firmware can be updated using the [ES915/868RX](../quick-start/recievers/rx-hmes900.md#es915868rx-discontinued/) methods.*
 
 ### BetaFPV F4 1S 12A AIO
 
 [Manufacturer Website](https://betafpv.com/products/f4-1s-12a-flight-controller?variant=39409298768006)
 
-*Note: Receiver firmware can be updated using the [Beta FPV Nano 2.4GHz](../../quick-start/rx-betafpv2400/) methods*
+*Note: Receiver firmware can be updated using the [Beta FPV Nano 2.4GHz](../quick-start/recievers/rx-betafpv2400.md) methods*
 
 ### SPRacing H7RF
 
 [Manufacturer Website](http://seriouslypro.com/spracingh7rf)
 
-*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates. See this [page](../../hardware/spi-receivers) for more info.*
+*Note: SPI-based receiver. Doesn't need the ExpressLRS Configurator for updates. See this [page](spi-receivers.md) for more info.*
 
 ## DIY TX Modules
 
-See this page [here](../../hardware/diy-tx/)
+See this page [here](special-targets/diy-tx.md)
 
 ## DIY Receivers
 
-See this page [here](../../hardware/diy-rx/)
+See this page [here](special-targets/diy-rx.md)
