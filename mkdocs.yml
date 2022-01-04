@@ -83,8 +83,8 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/expresslrs
       name: Follow us on Instagram
-    - icon: fontawesome/brands/paypal
-      link: https://www.paypal.com/donate?hosted_button_id=FLHGG9DAFYQZU
+    - icon: fontawesome/solid/donate
+      link: https://opencollective.com/expresslrs
       name: Send a Donation!
   version:
     provider: mike
