@@ -85,7 +85,7 @@
 }
 
 .md-announce { /* Hiding it for now */
-  display: none;
+  /*display: none; */
 }
 
 .md-version__current {
