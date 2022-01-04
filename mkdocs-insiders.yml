@@ -6,3 +6,4 @@ plugins:
 theme:
   features:
     - announce.dismiss
+    - navigation.tabs
