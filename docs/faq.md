@@ -1,3 +1,9 @@
+---
+template: main.html
+hide:
+  - navigation
+---
+
 ![FAQ-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/faq.png)
 
 Below, we have a list of frequently asked questions about ELRS
