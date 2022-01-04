@@ -1,0 +1,8 @@
+INHERIT: mkdocs.yml
+plugins:
+  - search
+  - social
+  - tags
+theme:
+  features:
+    - announce.dismiss

@@ -17,8 +17,14 @@ jobs:
         with:
           python-version: 3.x
           
-      - name: Install MkDocs and Dependencies
-        run: pip install "mkdocs-material==8.0.3" mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike
+      - name: Install Dependencies
+        run: pip install mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike
+
+      - name: Install MkDocs Insiders
+        if: github.event.repository.fork == false
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
         
       - name: Setup Github
         run: |
@@ -29,7 +35,7 @@ jobs:
           
       - name: Deploy old version
         run: | 
-          mike deploy 1.0 v1
+          mike deploy --config-file mkdocs-insiders.yml 1.0 v1
           
       - name: Push changes to server
         run: |
