@@ -84,7 +84,7 @@ If you're using a DIY TX module and want to add a backpack into it, proceed to t
 
 For the VRX Backpack, you will need to first update the firmware on the ESP device. The firmware will highly depend on which VRX module you will use it on. Proceed to [this page](backpack-vrx-setup.md) for more info.
 
-[TX Backpack Setup](backpack-tx-setup.md){.md-button}      [VRx Backpack Setup](backpack-vrx-setup.md*){.md-button}
+[TX Backpack Setup](backpack-tx-setup.md){.md-button}      [VRx Backpack Setup](backpack-vrx-setup.md){.md-button}
 
 ## Backpack Usage
 
