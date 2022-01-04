@@ -84,6 +84,10 @@
   font-size: 1rem;
 }
 
+.md-announce { /* Hiding it for now */
+  display: none;
+}
+
 .md-version__current {
   line-height: 2.4rem;
 }
