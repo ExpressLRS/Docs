@@ -80,6 +80,11 @@ Alternatively, you can also **Build and Flash** via the Configurator through WiF
 
 ## How to check you have updated the TX Backpack Firmware?
 
+Make sure you set the jumpers or dipswitches on your modules (if yours have one; present on the Happymodel TX Modules) to the `Normal Operations` position (refer to the top of this page). This allows the main ESP32 chip to talk to the Backpack chip. The Backpack will **NOT** work properly without setting those dipswitches or jumper pins.
+
+!!! info "Attention"
+    Change the position of the dipswitches or jumper pins to the `Normal Operations` positions if you have the Happymodel TX modules.
+
 Navigate to the `WiFi Connectivity` folder of the ExpressLRS v2 Lua script and select `Enable Backpack WiFi`. Scan for Access Points and **ExpressLRS TX Backpack** should appear. Connect into it and point your browser to http://10.0.0.1/.
 
 If you have set your Home Network SSID and Password, point your browser to http://elrs_txbp.local/.
