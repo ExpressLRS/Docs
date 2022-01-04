@@ -28,7 +28,7 @@ On the ELRS Lua script v2, Select `> TX Power`. There are three configurable ele
   - `AUX9`-`AUX12`: Dynamic power is *disabled* and fixed to the `Max Power` when `high` value is assigned to this aux channel.
 * `Fan Thresh`: Fan threshold. If a module has a fan, it will blow air from the power level configured here.
 
-Another important setting is to make sure your craft is **armed** on AUX1=`high` (~2000us). ELRS never knows the craft arming state. Instead it monitors the value of `AUX1` for arming detection. See [Switch Modes](../../software/switch-config/) for more information about AUX channels.
+Another important setting is to make sure your craft is **armed** on AUX1=`high` (~2000us). ELRS never knows the craft arming state. Instead it monitors the value of `AUX1` for arming detection. See [Switch Modes](switch-config.md) for more information about AUX channels.
 
 ## Details
 

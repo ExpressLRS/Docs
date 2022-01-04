@@ -61,7 +61,6 @@ plugins:
   - minify:
       minify_html: true
 
-
 extra_css:
   - assets/stylesheets/main.css
   - assets/stylesheets/colors.css
@@ -136,39 +135,39 @@ nav:
       - Installing Configurator: quick-start/installing-configurator.md
       - Firmware Options: quick-start/firmware-options.md
       - TX Modules:
-          - Preparing your Radio: quick-start/tx-prep.md
+          - Preparing your Radio: quick-start/transmitters/tx-prep.md
           - Flashing TX Modules:
-            - Flashing Frsky R9 Modules: quick-start/tx-r9m.md
-            - Flashing Happymodel ES900TX: quick-start/tx-es900tx.md
-            - Flashing NamimnoRC Voyager: quick-start/tx-voyager900.md
-            - Flashing BetaFPV 900Mhz TX: quick-start/tx-betafpv900.md
-            - Flashing Happymodel ES24TX: quick-start/tx-es24tx.md
-            - Flashing NamimnoRC Flash: quick-start/tx-flash2400.md
-            - Flashing BetaFPV 2.4Ghz TX: quick-start/tx-betafpv2400.md
-            - Flashing Ghost TX: quick-start/tx-ghost2400.md
-            - Flashing Siyi TXes: quick-start/tx-siyifm30.md
-            - Flashing DIY 900TX: quick-start/tx-diy900.md
-            - Flashing DIY 2400TX: quick-start/tx-diy.md
-          - Using The Lua Script: quick-start/lua-howto.md
+            - Flashing Frsky R9 Modules: quick-start/transmitters/tx-r9m.md
+            - Flashing Happymodel ES900TX: quick-start/transmitters/tx-es900tx.md
+            - Flashing NamimnoRC Voyager: quick-start/transmitters/tx-voyager900.md
+            - Flashing BetaFPV 900Mhz TX: quick-start/transmitters/tx-betafpv900.md
+            - Flashing Happymodel ES24TX: quick-start/transmitters/tx-es24tx.md
+            - Flashing NamimnoRC Flash: quick-start/transmitters/tx-flash2400.md
+            - Flashing BetaFPV 2.4Ghz TX: quick-start/transmitters/tx-betafpv2400.md
+            - Flashing Ghost TX: quick-start/transmitters/tx-ghost2400.md
+            - Flashing Siyi TXes: quick-start/transmitters/tx-siyifm30.md
+            - Flashing DIY 900TX: quick-start/transmitters/tx-diy900.md
+            - Flashing DIY 2400TX: quick-start/transmitters/tx-diy.md
+          - Using The Lua Script: quick-start/transmitters/lua-howto.md
       - Receivers:
-          - Flashing Bootloader: quick-start/rx-bootloader.md
-          - Preparing for Passthrough Flashing: quick-start/rx-fcprep.md
-          - Preparing for STLink Flashing: quick-start/rx-stlink.md
+          - Flashing Bootloader: quick-start/recievers/rx-bootloader.md
+          - Preparing for Passthrough Flashing: quick-start/recievers/rx-fcprep.md
+          - Preparing for STLink Flashing: quick-start/recievers/rx-stlink.md
           - Flashing Receivers:
-            - Flashing Frsky R9 Receivers: quick-start/rx-r9receivers.md
-            - Flashing Jumper R9 Mini: quick-start/rx-jumper900.md
-            - Flashing Happymodel ES900RX: quick-start/rx-hmes900.md
-            - Flashing NamimnoRC Voyager: quick-start/rx-voyager900.md
-            - Flashing BetaFPV Nano 900Mhz: quick-start/rx-betafpv900.md
-            - Flashing Happymodel EPs: quick-start/rx-hmep2400.md
-            - Flashing Happymodel PP: quick-start/rx-hmpp2400.md
-            - Flashing NamimnoRC Flash: quick-start/rx-flash2400.md
-            - Flashing BetaFPV Nano 2.4G: quick-start/rx-betafpv2400.md
-            - Flashing Matek R24: quick-start/rx-matek2400.md
-            - Flashing Ghost Receiver: quick-start/rx-ghost2400.md
-            - Flashing Siyi FR Mini: quick-start/rx-siyiFRmini.md
-            - Flashing DIY 900RX: quick-start/rx-diyreceivers900.md
-            - Flashing DIY 2400RX: quick-start/rx-diyreceivers.md
+            - Flashing Frsky R9 Receivers: quick-start/recievers/rx-r9receivers.md
+            - Flashing Jumper R9 Mini: quick-start/recievers/rx-jumper900.md
+            - Flashing Happymodel ES900RX: quick-start/recievers/rx-hmes900.md
+            - Flashing NamimnoRC Voyager: quick-start/recievers/rx-voyager900.md
+            - Flashing BetaFPV Nano 900Mhz: quick-start/recievers/rx-betafpv900.md
+            - Flashing Happymodel EPs: quick-start/recievers/rx-hmep2400.md
+            - Flashing Happymodel PP: quick-start/recievers/rx-hmpp2400.md
+            - Flashing NamimnoRC Flash: quick-start/recievers/rx-flash2400.md
+            - Flashing BetaFPV Nano 2.4G: quick-start/recievers/rx-betafpv2400.md
+            - Flashing Matek R24: quick-start/recievers/rx-matek2400.md
+            - Flashing Ghost Receiver: quick-start/recievers/rx-ghost2400.md
+            - Flashing Siyi FR Mini: quick-start/recievers/rx-siyiFRmini.md
+            - Flashing DIY 900RX: quick-start/recievers/rx-diyreceivers900.md
+            - Flashing DIY 2400RX: quick-start/recievers/rx-diyreceivers.md
       - Post-Flash:
         - LED Status: quick-start/led-status.md
         - Binding ExpressLRS: quick-start/binding.md

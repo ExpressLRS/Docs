@@ -8,7 +8,7 @@ Prior to your first ExpressLRS flight, you may want to do a few tweaks to your s
 
 ## Modes
 
-By default, ExpressLRS uses limited bits for AUX switches (1-bit for AUX1, and 3-4 bits for other AUX channels), which results in very coarse resolutions up to 8 or 16 positions to Betaflight/iNav on the AUX channels. In most cases, it is enough (especially on a multirotor), but if you need finer resolution, enabling **WideHybrid** option expands the resolution of AUX2-AUX8 up to 128 positions. For more information, read the [switch modes page](../../software/switch-config/). 
+By default, ExpressLRS uses limited bits for AUX switches (1-bit for AUX1, and 3-4 bits for other AUX channels), which results in very coarse resolutions up to 8 or 16 positions to Betaflight/iNav on the AUX channels. In most cases, it is enough (especially on a multirotor), but if you need finer resolution, enabling **WideHybrid** option expands the resolution of AUX2-AUX8 up to 128 positions. For more information, read the [switch modes page](../software/switch-config.md). 
 
 !!! warning "WARNING" 
     Please make sure your **ARM mode is on the AUX1 channel, and the armed state is set ~2000.**
@@ -22,7 +22,7 @@ To get RSSI and Link Quality displayed in the OSD, set RSSI Channel to "Disabled
 
 ![OSD](../assets/images/OSD.jpg)
 
-If you wish to enable the rssi dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm). If using DJI Goggles, you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab. More information about signal metrics is found in this great [article on signal health](../../info/signal-health/).
+If you wish to enable the rssi dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm). If using DJI Goggles, you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab. More information about signal metrics is found in this great [article on signal health](../info/signal-health.md).
 
 ## Bench Test
 
@@ -81,7 +81,7 @@ set telemetry_disabled_mode = ON
 
 Since telemetry messages are sent with low priority it may take some time to transmit the data. The telemetry rate in the lua settings script controls how often a telemetry message should be sent. So a ratio of 1:2 means that every second message is a telemetry message, so the telemetry data is transferred very fast. A ratio 1:64 means that only one of 64 messages is a telemetry message and so the transfer happens much slower.
 
-The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 200 Hz. So if you need fast a fast telemetry update rate choose high refresh rate, and a ratio that favors telemetry messages e.g. 200 Hz and 1:16 usually works good. For detailed information on telemetry bandwidth at different rates and ratios, see [this page on telemetry bandwidth](../../info/telem-bandwidth/).
+The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 200 Hz. So if you need fast a fast telemetry update rate choose high refresh rate, and a ratio that favors telemetry messages e.g. 200 Hz and 1:16 usually works good. For detailed information on telemetry bandwidth at different rates and ratios, see [this page on telemetry bandwidth](../info/telem-bandwidth.md).
 
 To finish the telemetry setup open the telemetry page on your transmitter and select "Discover new sensors" and wait for the list to fill. You will notice that there is a * sign for each row. This star indicates that this telemetry sensor was just updated.  If you see a row that does not change, and the name of the row is in square brackets it means that this sensor was not updated for some time.
 

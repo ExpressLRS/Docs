@@ -10,9 +10,9 @@ template: main.html
 
 Target: `HappyModel_RX_ES900RX_via_BetaflightPassthrough`
 
-![ES900RX](../assets/images/es900rx-conn.png)
+![ES900RX](../../assets/images/es900rx-conn.png)
 
-With the receiver [wired properly](../../quick-start/rx-fcprep/#happymodel-es900rx) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator, then click on **Build and Flash**. First time Compile naturally takes a while but if you do the [prep work](../../quick-start/rx-fcprep/#happymodel-es900rx) properly, you'll be greeted with the `Success` message soon enough!
+With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator, then click on **Build and Flash**. First time compiles naturally takes a while but if you do the prep work properly, you'll be greeted with the `Success` message soon enough!
 
 ### Flashing via Wifi
 
@@ -22,7 +22,7 @@ Target: `HappyModel_RX_ES900RX_via_Wifi`
 
 **(Recommended as first-flash method)**
 
-With the receiver [wired properly](../../quick-start/rx-fcprep/#happymodel-es900rx) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
+With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the `HappyModel_RX_ES900RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
@@ -36,14 +36,14 @@ A white page should load momentarily with the message **Update Success! Rebootin
 
 Once you have updated to firmware version 2.0 or newer, the Web Update page on the Hotspot will get a few updates of its own. It will get the Update progress bar, and a Popup will be shown for Success or Error messages. Additionally, you can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the two methods below.
 
-![JoinNetwork](../assets/images/web-joinnetwork.png)
+![JoinNetwork](../../assets/images/web-joinnetwork.png)
 
 #### Method 2
 
 !!! note ""
     Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
 
-With the receiver [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
+With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the `HappyModel_RX_ES900RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
@@ -53,7 +53,7 @@ Using your browser, navigate to http://elrs_rx.local/. The Wifi Update page shou
 
 Scroll down to the Firmware Update section, shown below:
 
-![Firmware Update](../assets/images/web-firmwareupdate.png)
+![Firmware Update](../../assets/images/web-firmwareupdate.png)
 
 Drag-and-drop the `HappyModel_RX_ES900RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
 
@@ -66,13 +66,13 @@ You can now power down your Flight Controller along with the receiver.
 !!! note ""
     Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
 
-With the receiver [wired properly](../../quick-start/rx-fcprep/#namimnorc-voyager-flash) to your FC, select the right target and set your [Firmware Options](../../quick-start/firmware-options) in the ExpressLRS Configurator.
+With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
 Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Mode.
 
 **Build & Flash** the firmware using the ExpressLRS Configurator. Wait for the process to complete, indicated by the "Success" prompt and the Receiver LED has gone back to the Slow Blink mode. You can now power down the Flight Controller.
 
-![RXUpload Log](../assets/images/RXWifiUpdateLog.png)
+![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
 
 ## ES915/868RX (Discontinued)
 
@@ -80,11 +80,11 @@ Power up your Flight Controller by either connecting a LiPo or attaching the USB
 
 Target: `HappyModel_RX_ES915RX_via_BetaflightPassthrough`
 
-![ES915RX](../assets/images/ES915rx.jpg)
+![ES915RX](../../assets/images/ES915rx.jpg)
 
-Once [wired properly](../../quick-start/rx-fcprep/#happymodel-es915868rx-discontinued) to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
+Once [wired properly](rx-fcprep.md#happymodel-es915868rx-discontinued) to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
 
-If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your [Firmware Options](../../quick-start/firmware-options) set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
+If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your [Firmware Options] set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
 
 Once `Retry... ` lines appear, connect a LiPo if your receiver isn't powered by the USB (i.e. power up your receiver and FC). On subsequent flash, you can have the LiPo plugged in and receiver powered up from the start.
 
@@ -94,8 +94,11 @@ Wait for this process to finish. It's done once the "Success" prompt is shown.
 
 Target: `HappyModel_RX_ES915RX_via_STLINK`
 
-Wire up your receiver to your STLink, shown [here](../../quick-start/rx-stlink/#es915rx-discontinued).
+Wire up your receiver to your STLink, shown [here](rx-fcprep.md#happymodel-es915868rx-discontinued).
 
-Using the correct target specific for your receiver, set your [Firmware Options](../../quick-start/firmware-options) and hit **Build & Flash** on the ExpressLRS Configurator.
+Using the correct target specific for your receiver, set your [Firmware Options] and hit **Build & Flash** on the ExpressLRS Configurator.
 
 Once done, wire your receiver to your Flight Controller. Passthrough flashing can now be used for updating the receiver.
+
+[Firmware Options]: ../firmware-options.md
+[wired properly]: rx-fcprep.md#happymodel-es900rx

@@ -7,7 +7,9 @@ template: main.html
 # User Defines Explained
 With more features being added consistently, [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/user_defines.txt) has gotten complicated 🤷‍♂️. So we will break it down! 🔨 
 
-*Note: This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](../../software/toolchain-install/) or Manual Mode on the ExpressLRS Configurator.
+!!! info
+
+    This is the full list of currently supported User Defines and would help you should you intend to compile the firmware using the [Toolchain](toolchain-install.md) or manual mode on the ExpressLRS Configurator.
 
 ## Defines 101
 - If these are used in Configurator Manual Mode or user_defines.txt, the value must begin with `-D`. Example: `NO_SYNC_ON_ARM` would be `-DNO_SYNC_ON_ARM`.
@@ -19,7 +21,7 @@ MY_BINDING_PHRASE="default ExpressLRS binding phrase"
 ```
 This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet<sup>*</sup>. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional binding method. 📜
 
-This feature can, but should not be used as a model match feature (to lock a single specific transmitter to a single specific receiver). For that use, the [Model Match option](../model-config-match/#model-match).
+This feature can, but should not be used as a model match feature (to lock a single specific transmitter to a single specific receiver). For that use, the [Model Match option](model-config-match.md#model-match).
 
 <small><sup>*</sup> This phrase gets md5 hashed and gets built into the binary you will be flashing.</small>
 
@@ -44,7 +46,7 @@ Default value is **320LU**. If you want to change that you have to suffix your m
 Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU** for ErskyTx ones.
 
 ## Output Power Limit
-By default the max power of hardware is limited to what it can safely output without extra cooling. Some hardware supports increasing the power by enabling the following option. Check the [supported hardware](https://www.expresslrs.org/2.0/hardware/supported-hardware/) page to see if this is available and what cooling modifications can be made. By enabling this, you are risking perminant damage to your hardware, sometimes even when you add extra cooling. For example, R9M modules will burn out without cooling.
+By default the max power of hardware is limited to what it can safely output without extra cooling. Some hardware supports increasing the power by enabling the following option. Check the [supported hardware](../hardware/supported-hardware.md) page to see if this is available and what cooling modifications can be made. By enabling this, you are risking perminant damage to your hardware, sometimes even when you add extra cooling. For example, R9M modules will burn out without cooling.
 
 ````
 UNLOCK_HIGHER_POWER 
@@ -161,4 +163,4 @@ Enables code for talking to a connected [ESP8266 backpack](https://github.com/Ex
 
 ## Obsolete user_defines
 
-See [Obsolete user_defines](../obsolete-defines/)
+See [Obsolete user_defines](obsolete-defines.md)

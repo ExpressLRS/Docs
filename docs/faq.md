@@ -28,7 +28,7 @@ When that is the case your radio has crsfshot working and you're good to go. Cli
 
 ## How can I flash/update x receiver/module?
 
-See [Getting Started](../quick-start/getting-started/) page
+See [Getting Started](quick-start/getting-started.md) page
 
 ## Will x Receiver work with y TX Module from z Manufacturer?
 
@@ -43,7 +43,7 @@ If you're confused by the PP being more expensive, it's because there is a short
 
 Make sure that your radio is set to use 400K Baud Rate and you're running at least OpenTX 2.3.12 or EdgeTX 2.4.0. These firmware versions have Mixer Sync or CRSFShot.
 
-To confirm your update rate is working as intended, you can use the ExpressLRS Lua script to check the current update rate and confirm you are getting 500hz. See [Using the Lua Script](../../quick-start/lua-howto/).
+To confirm your update rate is working as intended, you can use the ExpressLRS Lua script to check the current update rate and confirm you are getting 500hz. See [Using the Lua Script](quick-start/transmitters/lua-howto.md).
 
 ## How many channels does ELRS support?
 12 channels(suspicious asterisk). There is not enough bandwidth to support all full-resolution channels. It is possible that future versions would further expand this by sending extra channel data in a slow upload, but it is not a priority for development. Therefore, ELRS provides:
@@ -54,7 +54,7 @@ To confirm your update rate is working as intended, you can use the ExpressLRS L
     * **HYBRID_SWITCHES_8 Mode** 1x 2-position channel, AUX1 (CH5; Must be used for Arming), 6x 2-position/3-position/6-position (AUX2-7) and 1x 16-position (AUX8), OR
     * **WIDE HYBRID Mode** 1x 2-position channel, AUX1 (CH5; Must be used for Arming), 7x 64 or 128-position channels (AUX2-8). Available via the Lua Script since 2.0.
     
-  See [Switch Modes](../software/switch-config/) more more details.
+  See [Switch Modes](software/switch-config.md) more more details.
 
 
 ## Is my binding phrase a secret?
@@ -70,7 +70,7 @@ No, just like what channel your VTX is on is not a secret. The binding phrase is
 | 2RSS | Uplink - received signal strength antenna 2 (RSSI)   |           | Second antenna RSSI, used in diversity mode |
 | ANT  | RX active antenna                                    | 0 - 1     | Active antenna for diversity RX |
 | RSNR | Uplink - signal-to-noise ratio                       |           | SNR reported by the RX. Value varies mostly by radio chip and gets lower with distance (once the agc hits its limit)|
-| RFMD | Uplink - packet rate                                 | 0 - 7     | [RF Mode Indexes](../info/signal-health/#rf-mode-indexes-rfmd) |
+| RFMD | Uplink - packet rate                                 | 0 - 7     | [RF Mode Indexes](info/signal-health.md#rf-mode-indexes-rfmd) |
 | TPWR | Uplink - transmitting power                          |           | 50mW reported as 0, as CRSF/OpenTX do not have this option |
 | TQly | Downlink - link quality (valid packets)              |  0 - 100  | An LQ indicator of telemetry packets received RX → TX |
 | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX |

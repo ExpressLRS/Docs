@@ -9,7 +9,7 @@ A few Flight Controllers and AIOs have been released with ExpressLRS receivers o
 Because the ExpressLRS code is "baked-in" to the flight controller firmware instead of a second microcontroller, these can not be updated the same way external receivers are. These SPI receivers always work with the ExpressLRS firmware of the same major version. That is, ExpressLRS 1.x.x and ExpressLRS 2.x.x need different **Flight Controller** firmware (Betaflight builds).
 
 !!! info "NOTE"
-    You cannot use the ExpressLRS Configurator to update these FCs. See the [updating](../../hardware/spi-receivers/#updating) section below.
+    You cannot use the ExpressLRS Configurator to update these FCs. See the [updating](#updating) section below.
 
 ## Binding Procedure
 
@@ -19,12 +19,12 @@ There are two ways to bind the receiver, as shown below
 
 Put the receiver into bind mode using any of these procedures:
 
-- "Bind" button in the Betaflight Configurator, Receiver Page (if can't be found, [update](../../hardware/spi-receivers/#updating) the Betaflight firmware).
+- "Bind" button in the Betaflight Configurator, Receiver Page (if can't be found, [update](#updating) the Betaflight firmware).
 - using the CLI, type in `bind_rx` and press enter once.
 - press the bind button on the flight controller.
 - using the CLI, type in `set expresslrs_uid = 0`, press enter once, then save and reboot
 
-Execute [ExpressLRS](../../quick-start/lua-howto/) Lua Script in your handset and press the `Bind` button. The RX and TX should be now bound (indicated by a SOLID LED on the Flight Controller).
+Execute the [ExpressLRS](../quick-start/transmitters/lua-howto.md) lua script in your handset and press the `Bind` button. The RX and TX should be now bound (indicated by a SOLID LED on the Flight Controller).
 
 **Please mind the order, RX first, TX second.**
 
@@ -87,7 +87,7 @@ Where `[your index]` corresponds to the following   :
 - 150Hz = 2
 - 50Hz = 3
 
-With the [Updated](../../hardware/spi-receivers/#updating) Betaflight firmware, adjusting your packet rate from the Lua Script will also adjust the packet rate in the AIO.
+With the [Updated](#updating) Betaflight firmware, adjusting your packet rate from the Lua Script will also adjust the packet rate in the AIO.
 
 ## Updating
 
@@ -102,7 +102,7 @@ Using the latest [Betaflight Configurator](https://github.com/betaflight/betafli
 * SPRacing SPH7RF: Coming soon!
 
 !!! warning ""
-    The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../../quick-start/rx-hmes900/#es915868rx-discontinued) instead.
+    The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../quick-start/recievers/rx-hmes900.md#es915868rx-discontinued) instead.
 
 Once flashed, you will need to paste in the `diff all` you have saved. Don't forget to type in `save` and press enter once done. Power cycle your flight controller, and you should be set. You may need to set your Binding Phrase once again if you pasted in Factory Diff All. Review your Betaflight settings (no changes needed for the Receiver Type and Protocol; should already be set with `SPI Receiver`, with Provider as `ExpressLRS`), and check your RC link in the Receiver Tab (were sticks moving?).
 

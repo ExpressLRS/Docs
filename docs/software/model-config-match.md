@@ -21,7 +21,7 @@ The parameters stored per-Receiver number are:
 | Max Power | Transmitter output power level |
 | Dynamic Power | Enable Dynamic Power switching |
 
-All other configuration parameters are global across all Receiver numbers. Note: not "per receiver" but "per Receiver number". For details about the configurable parameters, see [Lua Configuration](../../quick-start/lua-howto/#understanding-and-using-the-lua-script).
+All other configuration parameters are global across all Receiver numbers. Note: not "per receiver" but "per Receiver number". For details about the configurable parameters, see [Lua Configuration](../quick-start/transmitters/lua-howto.md#understanding-and-using-the-lua-script).
 
 ## Model Match
 
