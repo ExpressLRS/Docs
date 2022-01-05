@@ -210,6 +210,7 @@ nav:
       - Glossary: info/glossary.md
       - Signal Health: info/signal-health.md
       - Telemetry Bandwith: info/telem-bandwidth.md
+      - Long Range Leaderboard: info/long-range.md
       - Testing:
         - Unit Testing: info/unit-testing.md
         - CRC Testing: info/crc-testing.md
