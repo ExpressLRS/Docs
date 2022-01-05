@@ -86,11 +86,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.expresslrs.org/2.0/info/crc-testing/</loc>
-         <lastmod>2022-01-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://www.expresslrs.org/2.0/info/glossary/</loc>
          <lastmod>2022-01-05</lastmod>
          <changefreq>daily</changefreq>
@@ -101,22 +96,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.expresslrs.org/2.0/info/rx-scoreboard/</loc>
-         <lastmod>2022-01-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://www.expresslrs.org/2.0/info/signal-health/</loc>
          <lastmod>2022-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.expresslrs.org/2.0/info/telem-bandwidth/</loc>
-         <lastmod>2022-01-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.expresslrs.org/2.0/info/unit-testing/</loc>
          <lastmod>2022-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -352,6 +337,21 @@
     </url>
     <url>
          <loc>https://www.expresslrs.org/2.0/software/user-defines/</loc>
+         <lastmod>2022-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/software/testing/crc-testing/</loc>
+         <lastmod>2022-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/software/testing/rx-scoreboard/</loc>
+         <lastmod>2022-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/software/testing/unit-testing/</loc>
          <lastmod>2022-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
