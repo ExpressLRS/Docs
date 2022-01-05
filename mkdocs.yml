@@ -56,8 +56,6 @@ theme:
     logo: logo
 
 plugins:
-  - search
-  #  - redirects:
   - minify:
       minify_html: true
 
@@ -189,6 +187,10 @@ nav:
       - Features:
         - Model Matching: software/model-config-match.md
         - Dynamic Transmit Power: software/dynamic-transmit-power.md
+      - Testing:
+        - CRC Testing: software/testing/crc-testing.md
+        - Unit Testing: software/testing/unit-testing.md
+        - RX Testing: software/testing/rx-scoreboard.md
   - Hardware:
       - Supported Hardware: hardware/supported-hardware.md
       - Receiver Selection: hardware/receiver-selection.md
@@ -210,11 +212,7 @@ nav:
       - Glossary: info/glossary.md
       - Signal Health: info/signal-health.md
       - Telemetry Bandwith: info/telem-bandwidth.md
-      - Long Range Leaderboard: info/long-range.md
-      - Testing:
-        - Unit Testing: info/unit-testing.md
-        - CRC Testing: info/crc-testing.md
-        - RX Scoreboard: info/rx-scoreboard.md
+      - Long Range Competition: info/long-range.md
   - FAQ: faq.md
 
 extra_javascript:
