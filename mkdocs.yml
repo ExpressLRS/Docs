@@ -28,7 +28,7 @@ theme:
 
   language: en
   features:
-    # - navigation.instant
+    - navigation.instant
     - navigation.sections
     - navigation.tabs
   palette:
