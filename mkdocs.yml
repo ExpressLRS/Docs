@@ -95,6 +95,7 @@ markdown_extensions:
   - footnotes
   - meta
   - md_in_html
+  - tables
   - toc:
       permalink: true
   - pymdownx.arithmatex:
@@ -217,3 +218,5 @@ nav:
 
 extra_javascript:
   - assets/javascripts/binding-phrase.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - assets/javascripts/tablesort.js
