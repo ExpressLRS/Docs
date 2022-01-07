@@ -129,6 +129,19 @@ These options set Home Network Access for your Wifi-enabled hardware. With these
 
 Wifi mode will first try to connect to the network specified before falling back and creating a new wifi network. The Home Network can also be modified from the webui.
 
+## Thermal Options
+*New in version 2.1*
+
+
+For TX devices with fans, FAN_MIN_RUNTIME keeps the fan running even after the power level has
+dropped below the configured Fan Threshold. This prevents the fan from turning on and off every
+few seconds if the power level is constantly changing.
+
+Default is 30 seconds if not defined, value can be 0-254.
+
+```
+FAN_MIN_RUNTIME
+```
 
 ## Other Options
 
