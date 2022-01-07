@@ -123,8 +123,6 @@ HOME_WIFI_SSID
 HOME_WIFI_PASSWORD
 ```
 
-*New in version 2.0*
-
 These options set Home Network Access for your Wifi-enabled hardware. With these set, the devices will try connecting to your existing WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time. Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, from any device on the same network. Tx Module Wifi update page can be reached using the address http://elrs_tx.local, while receivers' update page can be reached via http://elrs_rx.local.
 
 Wifi mode will first try to connect to the network specified before falling back and creating a new wifi network. The Home Network can also be modified from the webui.
@@ -134,10 +132,8 @@ Wifi mode will first try to connect to the network specified before falling back
 
 
 For TX devices with fans, FAN_MIN_RUNTIME keeps the fan running even after the power level has
-dropped below the configured Fan Threshold. This prevents the fan from turning on and off every
-few seconds if the power level is constantly changing.
-
-Default is 30 seconds if not defined, value can be 0-254.
+dropped below the configured fan threshold. This prevents the fan from turning on and off every
+few seconds if the power level is constantly changing. Default is 30 seconds if not defined, value can be 0-254 (in seconds).
 
 ```
 FAN_MIN_RUNTIME

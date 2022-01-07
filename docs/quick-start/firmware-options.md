@@ -43,6 +43,13 @@ UNLOCK_HIGHER_POWER
 Enables higher output power for devices that support it but will possibly melt themselves to give it to you. Do not enable it without first updating your cooling setup or verifying the device isn't overheating when running at your chosen power.
 
 ```
+FAN_MIN_RUNTIME
+```
+For TX devices with fans, FAN_MIN_RUNTIME keeps the fan running even after the power level has
+dropped below the configured fan threshold. This prevents the fan from turning on and off every
+few seconds if the power level is constantly changing. The default value is 30 seconds if not defined, where the value can be 0-254 seconds.
+
+```
 UART_INVERTED
 ```
 This **only works** with ESP32 based TXes. **Almost all handsets** require `UART_INVERTED` on, such as the FrSky QX7, TBS Tango 2, and RadioMaster TX16S. For T8SG V2 or Deviation firmware turn this setting off.
