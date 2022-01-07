@@ -102,7 +102,7 @@ Using the latest [Betaflight Configurator](https://github.com/betaflight/betafli
 * SPRacing SPH7RF: Coming soon!
 
 !!! warning ""
-    The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../quick-start/recievers/rx-hmes900.md#es915868rx-discontinued) instead.
+    The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../quick-start/receivers/rx-hmes900.md#es915868rx-discontinued) instead.
 
 Once flashed, you will need to paste in the `diff all` you have saved. Don't forget to type in `save` and press enter once done. Power cycle your flight controller, and you should be set. You may need to set your Binding Phrase once again if you pasted in Factory Diff All. Review your Betaflight settings (no changes needed for the Receiver Type and Protocol; should already be set with `SPI Receiver`, with Provider as `ExpressLRS`), and check your RC link in the Receiver Tab (were sticks moving?).
 
