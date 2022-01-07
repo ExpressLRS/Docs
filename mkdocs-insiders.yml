@@ -6,6 +6,9 @@ plugins:
         fill: "#4361AA"
       cards_font: PT Sans
   - tags
+  - minify:
+      minify_html: true
+
 theme:
   features:
     - announce.dismiss
