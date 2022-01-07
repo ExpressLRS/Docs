@@ -91,5 +91,5 @@ Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the 
 Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
 
 [Firmware Options]: ../firmware-options.md
-[wired properly]: rx-fcprep.md#mateksys-r24-d-and-r24-s
-[Wire up your receiver]: rx-fcprep.md#mateksys-r24-d-and-r24-s
+[wired properly]: rx-fcprep.md#mateksys-receivers
+[Wire up your receiver]: rx-fcprep.md#mateksys-receivers

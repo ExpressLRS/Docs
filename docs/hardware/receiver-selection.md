@@ -9,6 +9,7 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 ## Team2.4
 | Model | Price | Size | LNA | PA | Antenna | WiFi | RTF |
 |---|---|---|---|---|---|---|---|
+| Axis Thor RX | :moneybag::moneybag: | :scale::scale: | :x: | :x: |  :whale::whale: | :heavy_check_mark: | :checkered_flag: | 
 | BetaFPV Nano 2.4 | :moneybag::moneybag: | :scale::scale: | :heavy_check_mark: | 20dBm | :whale::whale: | :heavy_check_mark: | :checkered_flag: |
 | DIY Nano 2.4 | :moneybag: | :scale::scale: | :x: | :x: | :whale:/:whale::whale:/:whale::whale::metal: | :heavy_check_mark: | :x: |
 | Flywoo EL24E | :moneybag: | :scale: | :x: | :x: | :whale: | :heavy_check_mark: | :checkered_flag: |

@@ -22,6 +22,14 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 [Flashing Guide](../quick-start/transmitters/tx-flash2400.md)
 
+### Axis Thor TX
+
+Includes Color TFT display, built in motion sensor and thermally controlled fan
+
+[Flashing Guide](../quick-start/transmitters/tx-axis-thor.md)
+
+[Manufacturer Website](https://www.axisflying.com/product/axisflying-elrs-2-4g-module-thor-tx-pro-10-1000mw/)
+
 ### BetaFPV Nano 2.4GHz
 
 [Flashing Guide](../quick-start/transmitters/tx-betafpv2400.md)
@@ -59,6 +67,12 @@ To help find the right receiver for your needs, see the [Receiver Selection](rec
 ### NamimnoRC Flash
 
 [Flashing Guide](../quick-start/recievers/rx-flash2400.md)
+
+### Axis Thor RX
+
+[Flashing Guide](../quick-start/recievers/rx-axis-thor.md)
+
+[Manufacturer Website](https://www.axisflying.com/product/axisflying-elrs-2-4g-module-thor-tx-pro-10-1000mw/)
 
 ### BetaFPV Nano 2.4GHz
 

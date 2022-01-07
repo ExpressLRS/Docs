@@ -82,7 +82,7 @@ Updating via WiFi is supported by these receivers.
 
 Connect your FC to USB and configure your FC firmware as shown [below].
 
-### MatekSys R24-D and R24-S
+### MatekSys Receivers
 
 <small>R24-D</small>
 
@@ -95,6 +95,15 @@ Connect your FC to USB and configure your FC firmware as shown [below].
 Shown above are the pinouts and dimensions of the receivers. Connect Rx/R to a Tx pad on the FC and Tx/T to an Rx pad on the FC. Don't forget to also wire up 5v and Gnd.
 
 Updating via WiFi is supported by these receivers.
+
+Connect your FC to USB and configure your FC firmware as shown [below].
+
+### Axis Receivers
+
+<small>Thor RX</small>
+![Axis Thor RX](../../assets/images/rx-axis-thor.jpg)
+
+Labels in the receiver show the pinouts. Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
 
 Connect your FC to USB and configure your FC firmware as shown [below].
 
