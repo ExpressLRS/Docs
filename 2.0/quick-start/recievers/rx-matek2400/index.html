@@ -273,6 +273,10 @@
     
       
     
+      
+    
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
     
@@ -2717,7 +2721,7 @@ You can now support ExpressLRS development on <a href="https://opencollective.co
 <p>Target: <code>MATEK_2400_RX_via_WIFI</code></p>
 <h3 id="method-1">Method 1<a class="headerlink" href="#method-1" title="Permanent link">&para;</a></h3>
 <p><strong>(Recommended as first-flash method)</strong></p>
-<p><a href="../rx-fcprep/#mateksys-r24-d-and-r24-s">Wire up your receiver</a> to a free UART on your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).</p>
+<p><a href="../rx-fcprep/#mateksys-receivers">Wire up your receiver</a> to a free UART on your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).</p>
 <div class="admonition attention">
 <p><em>Note: There are Flight Controllers that will pull the RX pads <code>LOW</code> which will put the ESP-based receivers into <code>Bootloader Mode</code> unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.</em></p>
 </div>
@@ -2732,7 +2736,7 @@ You can now support ExpressLRS development on <a href="https://opencollective.co
 <div class="admonition note">
 <p>Note: This method will only work once the Home Network SSID and Password has been configured with the receiver</p>
 </div>
-<p>With the receiver <a href="../rx-fcprep/#mateksys-r24-d-and-r24-s">wired properly</a> to your FC, select the right target and set your <a href="../../firmware-options/">Firmware Options</a> in the ExpressLRS Configurator.</p>
+<p>With the receiver <a href="../rx-fcprep/#mateksys-receivers">wired properly</a> to your FC, select the right target and set your <a href="../../firmware-options/">Firmware Options</a> in the ExpressLRS Configurator.</p>
 <p><strong>Build</strong> the firmware. Once done, it should open a new window where the <code>MATEK_2400_RX-&lt;version&gt;.bin</code> is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.</p>
 <p>Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using <code>AUTO_WIFI_ON_INTERVAL</code>), it should blink fast indicating it's on Wifi AP Mode. The fast blink will pause and flash fast once again, indicating connection to your Home Network.</p>
 <p>Using your browser, navigate to <a href="http://elrs_rx.local/">http://elrs_rx.local/</a>. The Wifi Update page should load. It should show your device target along with the version of the firmware it currently has.</p>
@@ -2745,13 +2749,13 @@ You can now support ExpressLRS development on <a href="https://opencollective.co
 <div class="admonition note">
 <p>Note: This method will only work once the Home Network SSID and Password has been configured with the receiver</p>
 </div>
-<p>With the receiver <a href="../rx-fcprep/#mateksys-r24-d-and-r24-s">wired properly</a> to your FC, select the right target and set your <a href="../../firmware-options/">Firmware Options</a> in the ExpressLRS Configurator.</p>
+<p>With the receiver <a href="../rx-fcprep/#mateksys-receivers">wired properly</a> to your FC, select the right target and set your <a href="../../firmware-options/">Firmware Options</a> in the ExpressLRS Configurator.</p>
 <p>Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using <code>AUTO_WIFI_ON_INTERVAL</code>), it should blink fast indicating it's on Wifi Mode.</p>
 <p><strong>Build &amp; Flash</strong> the firmware using the ExpressLRS Configurator. Wait for the process to complete, indicated by the "Success" prompt and the Receiver LED has gone back to the Slow Blink mode. You can now power down the Flight Controller.</p>
 <p><img alt="RXUpload Log" src="../../../assets/images/RXWifiUpdateLog.png" /></p>
 <h2 id="flashing-via-passthrough">Flashing via Passthrough<a class="headerlink" href="#flashing-via-passthrough" title="Permanent link">&para;</a></h2>
 <p>Target: <code>MATEK_2400_RX_via_BetaflightPassthrough</code></p>
-<p><a href="../rx-fcprep/#mateksys-r24-d-and-r24-s">Wire up your receiver</a> to a free uart in your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).</p>
+<p><a href="../rx-fcprep/#mateksys-receivers">Wire up your receiver</a> to a free uart in your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).</p>
 <p>Power your FC with a LiPo, or if receiver is powered via USB (receiver is connected to a 4v5 pad), connect the FC to your USB port.</p>
 <div class="admonition attention">
 <p>Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad <code>LOW</code> which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.</p>

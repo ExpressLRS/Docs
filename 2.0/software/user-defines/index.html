@@ -273,6 +273,10 @@
     
       
     
+      
+    
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
     
@@ -1752,6 +1756,13 @@ You can now support ExpressLRS development on <a href="https://opencollective.co
 </li>
       
         <li class="md-nav__item">
+  <a href="#thermal-options" class="md-nav__link">
+    Thermal Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#other-options" class="md-nav__link">
     Other Options
   </a>
@@ -2708,6 +2719,13 @@ You can now support ExpressLRS development on <a href="https://opencollective.co
 </li>
       
         <li class="md-nav__item">
+  <a href="#thermal-options" class="md-nav__link">
+    Thermal Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#other-options" class="md-nav__link">
     Other Options
   </a>
@@ -2821,9 +2839,15 @@ Use a custom baud rate on the receiver instead of the default 420000 baud. This 
 <div class="highlight"><pre><span></span><code>HOME_WIFI_SSID
 HOME_WIFI_PASSWORD
 </code></pre></div>
-<p><em>New in version 2.0</em></p>
 <p>These options set Home Network Access for your Wifi-enabled hardware. With these set, the devices will try connecting to your existing WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time. Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, from any device on the same network. Tx Module Wifi update page can be reached using the address <a href="http://elrs_tx.local">http://elrs_tx.local</a>, while receivers' update page can be reached via <a href="http://elrs_rx.local">http://elrs_rx.local</a>.</p>
 <p>Wifi mode will first try to connect to the network specified before falling back and creating a new wifi network. The Home Network can also be modified from the webui.</p>
+<h2 id="thermal-options">Thermal Options<a class="headerlink" href="#thermal-options" title="Permanent link">&para;</a></h2>
+<p><em>New in version 2.1</em></p>
+<p>For TX devices with fans, FAN_MIN_RUNTIME keeps the fan running even after the power level has
+dropped below the configured fan threshold. This prevents the fan from turning on and off every
+few seconds if the power level is constantly changing. Default is 30 seconds if not defined, value can be 0-254 (in seconds).</p>
+<div class="highlight"><pre><span></span><code>FAN_MIN_RUNTIME
+</code></pre></div>
 <h2 id="other-options">Other Options<a class="headerlink" href="#other-options" title="Permanent link">&para;</a></h2>
 <p><div class="highlight"><pre><span></span><code>JUST_BEEP_ONCE
 MY_STARTUP_MELODY=&quot;&lt;music string&gt;|&lt;bpm&gt;|&lt;semitone offset&gt;&quot; -or-

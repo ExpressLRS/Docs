@@ -273,6 +273,10 @@
     
       
     
+      
+    
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
     
@@ -1189,8 +1193,15 @@ You can now support ExpressLRS development on <a href="https://opencollective.co
 </li>
         
           <li class="md-nav__item">
-  <a href="#mateksys-r24-d-and-r24-s" class="md-nav__link">
-    MatekSys R24-D and R24-S
+  <a href="#mateksys-receivers" class="md-nav__link">
+    MatekSys Receivers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axis-receivers" class="md-nav__link">
+    Axis Receivers
   </a>
   
 </li>
@@ -2725,8 +2736,15 @@ You can now support ExpressLRS development on <a href="https://opencollective.co
 </li>
         
           <li class="md-nav__item">
-  <a href="#mateksys-r24-d-and-r24-s" class="md-nav__link">
-    MatekSys R24-D and R24-S
+  <a href="#mateksys-receivers" class="md-nav__link">
+    MatekSys Receivers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axis-receivers" class="md-nav__link">
+    Axis Receivers
   </a>
   
 </li>
@@ -2823,13 +2841,18 @@ You can now support ExpressLRS development on <a href="https://opencollective.co
 <p>Shown above are the pinouts and various components of the receivers. Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Don't forget to also wire up 5v(VCC) and Gnd.</p>
 <p>Updating via WiFi is supported by these receivers.</p>
 <p>Connect your FC to USB and configure your FC firmware as shown <a href="#serial-rx-setup">below</a>.</p>
-<h3 id="mateksys-r24-d-and-r24-s">MatekSys R24-D and R24-S<a class="headerlink" href="#mateksys-r24-d-and-r24-s" title="Permanent link">&para;</a></h3>
+<h3 id="mateksys-receivers">MatekSys Receivers<a class="headerlink" href="#mateksys-receivers" title="Permanent link">&para;</a></h3>
 <p><small>R24-D</small></p>
 <p><img alt="mateksys r24-d" src="../../../assets/images/ELRS-R24-D.jpg" /></p>
 <p><small>R24-S</small></p>
 <p><img alt="mateksys r24-d" src="../../../assets/images/ELRS-R24-S.jpg" /></p>
 <p>Shown above are the pinouts and dimensions of the receivers. Connect Rx/R to a Tx pad on the FC and Tx/T to an Rx pad on the FC. Don't forget to also wire up 5v and Gnd.</p>
 <p>Updating via WiFi is supported by these receivers.</p>
+<p>Connect your FC to USB and configure your FC firmware as shown <a href="#serial-rx-setup">below</a>.</p>
+<h3 id="axis-receivers">Axis Receivers<a class="headerlink" href="#axis-receivers" title="Permanent link">&para;</a></h3>
+<p><small>Thor RX</small>
+<img alt="Axis Thor RX" src="../../../assets/images/rx-axis-thor.jpg" /></p>
+<p>Labels in the receiver show the pinouts. Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.</p>
 <p>Connect your FC to USB and configure your FC firmware as shown <a href="#serial-rx-setup">below</a>.</p>
 <h2 id="serial-rx-setup">Serial RX Setup<a class="headerlink" href="#serial-rx-setup" title="Permanent link">&para;</a></h2>
 <p>Once wired up to our Flight Controller, we need to setup the UART for Serial RX. In the example below, the Receiver is wired to a Tx1/Rx1 (UART1) Pad, and so the Serial RX column should be activated on UART1.</p>
