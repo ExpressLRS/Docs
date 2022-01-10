@@ -71,7 +71,11 @@ Targets:
 
 - `AXIS_THOR_2400_TX_via_UART`
 
-Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
+Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized. 
+
+!!! note
+
+    To flash the TX itself, the switch on the back side of the module must be set to the **leftmost** position. To flash the TX backpack, the switch must be set to the **rightmost** position. For normal operation the switch must be **centered**. 
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
