@@ -67,7 +67,7 @@ Verify the version and hash in the main screen of ExpressLRS Lua script.
 
 Target: `NamimnoRC_FLASH_2400_OLED_TX_via_UART`
 
-Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
+Attach your USB cable into the module and your computer. [CH340 Drivers](https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip) will have to be downloaded (Right-click, Save-as) and installed (Unzip the contents of the file; Run the executable installer) for this to work properly (Windows). Make sure your computer recognizes the module as a USB-SERIAL CH340 device, otherwise, this method will not work. 
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
