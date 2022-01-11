@@ -20,22 +20,19 @@ Anyone can add an entry to the table, and entries should include the:
 - The pilot name
 - A link to your DVR on youtube
 
-### Current Leaderboard
-| Max Dist. | Freq | Pkt Rate | TX Power | Failsafe at Max Range? | Pilot Handle | Link to DVR |
-| ---- | -------- | -------- | --------- | ---------------------- | ------------ | ----------- |
-| 40Km | 900M | 50HZ | 10mW | No | Snipes | https://www.youtube.com/watch?v=0QWN9qWoSYY |
-| 35Km | 2.4G | 250HZ | 100mW | No | Snipes | https://youtu.be/dBmTRhgVcyY |
-| 20Km | 2.4G | 150HZ | 100mW | Yes | Pairan | https://youtu.be/B9-AItJ9WS0 |
-| 10Km | 2.4G | 500HZ | 10mW | Yes | mrscythe | https://youtu.be/IpiPEZrCGtg |
-| 11Km | 900M | 50HZ | 100mW | No | Taufik |https://youtu.be/ySBvXENS33s |
-| 10Km | 2.4G | 250HZ | 100mW | No | Snipes | https://youtu.be/dJYfWLtXVg8 |
-| 6Km | 900M | 100HZ | 50mW | No | Snipes | https://youtu.be/kN89mINbmQc?t=58 |
-| 6Km | 2.4G | 500HZ | 250mW | No | Spec | https://www.youtube.com/watch?v=bVJaiqJq8gY |
-| 4.77Km | 900M | 200HZ | 250mW | No | DaBit | https://www.youtube.com/watch?v=k0lY0XwB6Ko |
-| 3Km | 2.4G (ceramic chip antenna RX) | 500HZ | 100mW | No | Spec | https://www.youtube.com/watch?v=kfa6ugX46n8 |
+### Range-Ranking
+| Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
+| ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
+| 40Km | 900M | 50HZ | 10mW | Wing | No | Snipes | https://www.youtube.com/watch?v=0QWN9qWoSYY |
+| 35Km | 2.4G | 250HZ | 100mW | Wing | No | Snipes | https://youtu.be/dBmTRhgVcyY |
+| 20Km | 2.4G | 150HZ | 100mW | Wing | Yes | Pairan | https://youtu.be/B9-AItJ9WS0 |
+| 10Km | 2.4G | 500HZ | 10mW | Quad | Yes | mrscythe | https://youtu.be/IpiPEZrCGtg |
+| 11Km | 900M | 50HZ | 100mW | Quad | No | Taufik |https://youtu.be/ySBvXENS33s |
+| 10Km | 2.4G | 250HZ | 100mW | Wing | No | Snipes | https://youtu.be/dJYfWLtXVg8 |
+| 6Km | 900M | 100HZ | 50mW | Wing | No | Snipes | https://youtu.be/kN89mINbmQc?t=58 |
+| 6Km | 2.4G | 500HZ | 250mW | Wing | No | Spec | https://www.youtube.com/watch?v=bVJaiqJq8gY |
+| 4.77Km | 900M | 200HZ | 250mW | Quad | No | DaBit | https://www.youtube.com/watch?v=k0lY0XwB6Ko |
+| 3Km | 2.4G (ceramic chip antenna RX) | 500HZ | 100mW | Quad | No | Spec | https://www.youtube.com/watch?v=kfa6ugX46n8 |
+| 10Km | 900M | 50HZ | 100mW | Quad | Yes | Taufik | https://youtu.be/Pi2j17T2dSk |
+| 2.28Km | 900M | 50HZ | 10mW | Quad | No | Mike Malagoli | https://www.youtube.com/watch?v=qi4OygUAZxA&t=75s |
 
-### Broken Records
-| Max Dist. | Freq | Pkt Rate | TX Power | Failsafe at Max Range? | Pilot Handle | Link to DVR |
-| ---- | -------- | -------- | --------- | ---------------------- | ------------ | ----------- |
-| 10Km | 900M | 50HZ | 100mW | Yes | Taufik | https://youtu.be/Pi2j17T2dSk |
-| 2.28Km | 900M | 50HZ | 10mW | No | Mike Malagoli | https://www.youtube.com/watch?v=qi4OygUAZxA&t=75s |
