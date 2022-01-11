@@ -27,4 +27,6 @@ Next, we must activate the ROM bootloader. On every ESP8285 based RX there is a 
 
 Once the receiver is in bootloader mode, all you need to do is configure the RX in the configurator as per normal and then upload with the ‘via_BetaflightPassthrough’ method. If all goes well, you should see it upload successfully. 
 
+> If the flashing process still fails try to move the 5V RX wire to the pin that requires LiPo to power it on. You need to power up the receiver only during the "Passthrough Done" stage or the "Connecting ..." stage.
+
 If you’ve still got the boot pad bridged with solder, you’ll need to remove the solder before it will work again. Congratulations! You’ve unbricked your receiver, go fly!
