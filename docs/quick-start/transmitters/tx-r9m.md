@@ -4,6 +4,10 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
+!!! warning
+
+The R9M Lite Pro **can not** be flashed via OpenTx or EdgeTX, and therefore requires an STLink v2 to flash. See the guide [below](#flashing-using-stlink)
+
 ## Flashing via OpenTX (Requires OpenTX 2.3.12 or newer)
 
 ### Flashing the Bootloader
