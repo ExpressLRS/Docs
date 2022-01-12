@@ -84,13 +84,15 @@ This method requires you move two jumpers or dipswitches into specific pins or p
 
 ![DipswitchSlim](../../assets/images/dipswitch-es24slim.png)
 
+![DipswitchSlimPro](../../assets/images/dipswitch-es24slimPro.png)
+
 ![DipswitchPro](../../assets/images/dipswitch-Pro.png)
 
 Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device (check Device Manager; or the Actions section of the ExpressLRS Configurator should show another Com Port with Silabs CP210x designation), otherwise, this method will not work.
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
-Assemble the module back together and attach it to your radio module bay and verify the version and hash in the main screen of ExpressLRS Lua script.
+Assemble the module back together (ensure the module PCB is not loose from its mounting points) and attach it to your radio module bay and verify the version and hash in the main screen of ExpressLRS Lua script.
 
 [Firmware Options]: ../firmware-options.md
 [Radio Preparation]: tx-prep.md
