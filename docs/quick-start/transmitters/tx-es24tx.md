@@ -76,21 +76,23 @@ Targets:
 - `HappyModel_ES24TX_2400_TX_via_UART`
 - `HM_ES24TX_Pro_Series_2400_TX_via_UART`
 
-This method requires you move two jumpers into specific pins in the module board. See the following image for the jumper location and which pin should be bridged for this method to work.
+This method requires you move two jumpers or dipswitches into specific pins or positions in the module board. See the following images for the jumper or dipswitch location and which pin/switches should be toggled for this method to work.
 
-![JumperFS](../../assets/images/Jumper.jpg)
+![JumperFS](../../assets/images/jumper-es24Micro.png)
 
-![JumperLite](../../assets/images/Jumper-Lite.jpg)
+![JumperLite](../../assets/images/jumper-es24Lite.png)
 
-![JumperSlim](../../assets/images/Jumper-slim.jpg)
+![DipswitchSlim](../../assets/images/dipswitch-es24slim.png)
 
-The jumpers should be moved into the USB/UART (Green) position from the images above. Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
+![DipswitchSlimPro](../../assets/images/dipswitch-es24slimPro.png)
 
-*Note: The new Slim Pro doesn't have jumpers or dip switches that you need to move in order to flash via USB. Just connect USB and make sure your computer has recognized the device as a USB-to-UART Bridge (i.e. install the needed CP210x drivers).*
+![DipswitchPro](../../assets/images/dipswitch-Pro.png)
+
+Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device (check Device Manager; or the Actions section of the ExpressLRS Configurator should show another Com Port with Silabs CP210x designation), otherwise, this method will not work.
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
-Assemble the module back together and attach it to your radio module bay and verify the version and hash in the main screen of ExpressLRS Lua script.
+Assemble the module back together (ensure the module PCB is not loose from its mounting points) and attach it to your radio module bay and verify the version and hash in the main screen of ExpressLRS Lua script.
 
 [Firmware Options]: ../firmware-options.md
 [Radio Preparation]: tx-prep.md
