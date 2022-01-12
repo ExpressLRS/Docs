@@ -76,7 +76,7 @@ Targets:
 - `HappyModel_ES24TX_2400_TX_via_UART`
 - `HM_ES24TX_Pro_Series_2400_TX_via_UART`
 
-This method requires you move two jumpers or dipswitches into specific pins or positions in the module board. See the following image for the jumper or dipswitch location and which pin/switches should be toggled for this method to work.
+This method requires you move two jumpers or dipswitches into specific pins or positions in the module board. See the following images for the jumper or dipswitch location and which pin/switches should be toggled for this method to work.
 
 ![JumperFS](../../assets/images/jumper-es24Micro.png)
 
