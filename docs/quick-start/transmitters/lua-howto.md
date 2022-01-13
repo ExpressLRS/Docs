@@ -90,7 +90,7 @@ TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXI
 
 * `Dynamic` enables the Dynamic Power feature. `Off` means that the TX will transmit at Max Power at all times. `On` means the TX will dynamically _lower_ power to save energy when maximum power is not needed. The options `AUX9, AUX10, AUX11, AUX12` indicate that the TX can be changed from max power to dynamic power by changing the position of a switch. where switch HIGH (>1500us) = dynamic power, switch LOW (<1500us) = max power. For more information, [Dynamic Transmit Power](../../software/dynamic-transmit-power.md) provides a deeper dive on the algorithm and usage.
 
-* `Fan Thresh` sets the power level the Fan in your module should activate. Note that not all modules have a Fan header that benefits from the setting. If this is set to 100mW, then the fan should spin up if you set `Max Power` to 100mW with `Dynamic` set to OFF. Default fan threshold is 250mW.
+* `Fan Thresh` sets the power level the Fan should activate, e.g. if set to 100mW, then the fan should spin up if you set `Max Power` to 100mW with `Dynamic` set to OFF after a short delay. The fan will continue running for some time even after the power level goes below the threshold. Not all modules have a Fan header that benefits from the setting. . Default fan threshold is 250mW.
 
 ### VTX Administrator
 
