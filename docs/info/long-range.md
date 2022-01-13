@@ -12,6 +12,7 @@ To enter, press the pencil in upper left corner of this page, and enter your rec
 
 ## Rules
 Anyone can add an entry to the table, and entries should include the:
+
 - Max distance from home
 - RF freq (900 / 2.4)
 - Packet rate
