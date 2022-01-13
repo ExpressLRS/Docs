@@ -90,6 +90,11 @@ DYNPOWER_THRESH_DN=21
 ```
 Change the RSSI thresholds used by the Dynamic Power algorithm. If the RSSI moving average is below `DYNPOWER_THRESH_UP` dBm from the sensitivity limit, the algorithm will increase the power output by one step. Similarly, if the RSSI is above `DYNPOWER_THRESH_DN` from the sensitivity limit, the power will be decreased one step.
 
+```
+FAN_MIN_RUNTIME=30
+```
+For TX devices with fans, FAN_MIN_RUNTIME keeps the fan running even after the power level has dropped below the configured Fan Threshold. This prevents the fan from turning on and off every few seconds if the power level is constantly changing. Default is 30 seconds if not defined, value can be 0-254. There is always a short delay before the fan is activated, which can not be disabled. 
+
 ## Compatability Options
 ```
 UART_INVERTED
