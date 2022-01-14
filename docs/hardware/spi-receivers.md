@@ -73,6 +73,9 @@ Go to Betaflight CLI and enter the following commands. (Enter your binding phras
 
 ## RF Mode Adjustment
 
+!!! info "NOTICE"
+    Recent Betaflight 4.3 firmwares for these AIOs no longer needs the following CLI command. Adjustments from the Lua script propagates into the FCs.
+
 These AIOs with ExpressLRS SPI Receivers are set to use 500Hz as default. To adjust it, you will need to go into Betaflight CLI and use the following commands:
 
 ```
@@ -95,7 +98,7 @@ As mentioned, you must flash a Betaflight firmware that's compatible with the Ex
 
 In preparation for updating, you should save a copy of your `diff all` dump.
 
-Using the latest [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator/releases), navigate into `Firmware Flasher` and select the latest Betaflight release (at the time of writing, it should be set to Release and Release Candidate; and use 4.3.0-RC1). Depending on your AIO board, the target will differ:
+Using the latest [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator/releases), navigate into `Firmware Flasher` and select the latest Betaflight release (at the time of writing, it should be set to Release and Release Candidate; and use the latest 4.3.0 Release Candidate). Depending on your AIO board, the target will differ:
 
 * Happymodel AIO: CRAZYBEEF4SX1280
 * BetaFPV AIO: BETAFPVF4SX1280

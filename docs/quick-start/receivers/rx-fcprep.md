@@ -6,6 +6,14 @@ template: main.html
 
 ## Wiring your Receiver
 
+!!! tip "Hot Tip"
+    Manufacturer-suggested Receiver UARTs, or UARTs alloted for Receivers usually have a pull-down resistor to aid with SBUS (RX pad inversion) which will result into SOLID LEDs on the ESP-based ExpressLRS Receivers. It is best to avoid those UARTs unless you know your UARTs.
+
+    > When in doubt, avoid that UART. --deadbyte
+
+!!! tip "Hint!"
+    KISS FCs may label its UARTs differently. You might have to wire up the Rx pin into an RX pad, and the Tx pin into a TX pad. Always check your FC wiring guide/manual.
+
 ### R9MM/mini, R9mx, R9Slim+
 
 ![FC Wiring](../../assets/images/FC-Wiring.jpg" width ="100%")
@@ -101,11 +109,17 @@ Connect your FC to USB and configure your FC firmware as shown [below].
 ### Axis Receivers
 
 <small>Thor RX</small>
+
 ![Axis Thor RX](../../assets/images/rx-axis-thor.jpg)
 
 Labels in the receiver show the pinouts. Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
 
 Connect your FC to USB and configure your FC firmware as shown [below].
+
+<hr />
+
+!!! tip "Hint!"
+    KISS FCs may label its UARTs differently. You might have to wire up the Rx pin into an RX pad, and the Tx pin into a TX pad. Always check your FC wiring guide/manual.
 
 ## Serial RX Setup
 
