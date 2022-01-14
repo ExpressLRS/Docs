@@ -18,11 +18,11 @@ You need to have a **unique** binding phrase in the [`user_defines.txt`](../../s
 
 For traditional binding, the binding phrase must be commented out in user_defines on the RX.
 
-1. Power off your transmitter
-2. Plug in and unplug your receiver three times
-3. Make sure the LED is doing a quick double blink, which indicates the receiver is in bind mode
-4. Use the [BIND] button on the Lua script, which sends out a binding pulse
-5. If the receiver has a solid light, it's bound!
+1. Power off your transmitter/radio.
+2. Powercycle the receiver 3 times (unplug-replug LiPo).
+3. Make sure the LED is doing a quick double blink, which indicates the receiver is in bind mode.
+4. Power up your transmitter/radio and use the [BIND] button on the ExpressLRS Lua script, which sends out a binding pulse.
+5. If the receiver LED turned into a solid light, it's bound!
 
 Important: If the RX firmware has a bind phrase, the RX will never enter binding mode using the above procedure. It must be flashed without a binding phrase to do traditional binding. Why would you not use a bind phrase though if you're already having to flash the RX anyway? :grin:
 
