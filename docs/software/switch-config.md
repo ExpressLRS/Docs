@@ -72,7 +72,7 @@ In Wide switch mode, AUX2-AUX8 are 7-bit (128 position) for telemetry ratios 1:1
 
 Wide switch mode also sends current transmitter power to the flight controller to display in the OSD. TPwr is only available at the flight controller in this mode.
 
-Ardupilot Modes don't line up very well with the standard -100% (988us) to +100% (1012us) output range in OpenTX when using a 6-position selector as input. Both the first two and the last two positions get binned into Mode 1 and Mode 6 respectively. To get the full 6 Ardupilot modes, go to the Outputs page on the OpenTX model setup and set the min / max for the channels to -75% / +75%.
+Ardupilot Modes don't line up very well with the standard -100% (988us) to +100% (2012us) output range in OpenTX when using a 6-position selector as input. Both the first two and the last two positions get binned into Mode 1 and Mode 6 respectively. To get the full 6 Ardupilot modes, go to the Outputs page on the OpenTX model setup and set the min / max for the channels to -75% / +75%.
 
 ## FAQ
 
