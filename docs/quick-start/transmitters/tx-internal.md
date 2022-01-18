@@ -64,18 +64,21 @@ Verify the version and hash in the main screen of ExpressLRS Lua script.
 
 ## Flashing via EdgeTX Passthrough
 
-With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` in the option that pop up.
+With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` in the option window that pops up.
 
-![usb picture]
+![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
 
-![Debug option]
+![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
 
 Using the ExpressLRS Configurator, select the latest version (v2.1.0 or newer) and the correct Device Target and set the Flashing method to `via ETX Passthrough`.
 
-![configurator]
-
-Set your Binding Phrase (optional) and other relevant options like Local WiFi Network SSID and password.
+Set your Binding Phrase (optional) and other relevant [Firmware Options] like Local WiFi Network SSID and password.
 
 Once that's done, click **Build and Flash** and wait for the Success banner from the Configurator.
 
 Unplug the USB and verify with the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as) you have a working internal module and that you have updated to the version you have selected.
+
+![Lua Running](../../assets/images/tx-internalLuaCheck.jpg)
+
+[Firmware Options]: ../firmware-options.md
+[Radio Preparation]: tx-prep.md
