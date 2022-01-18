@@ -33,7 +33,9 @@ Anyone can add an entry to the table, and entries should include the:
 | 2.28Km | 900M | 50HZ | 10mW | Quad | No | Mike Malagoli | [Link](https://www.youtube.com/watch?v=qi4OygUAZxA&t=75s) |
 
 ### 25mW
-Submit your result to start competition in this category!
+| Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
+| ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
+| 3Km | 2.4G | 50HZ | 25mW | Quad | No | Taufik | [Link](https://www.youtube.com/watch?v=vG_hxHndXdI&ab_channel=CauSiang) |
 
 ### 50mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
