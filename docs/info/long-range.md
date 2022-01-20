@@ -47,6 +47,7 @@ Anyone can add an entry to the table, and entries should include the:
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
 | 35Km | 2.4G | 250HZ | 100mW | Wing | No | Snipes | [Link](https://youtu.be/dBmTRhgVcyY) |
 | 20Km | 2.4G | 150HZ | 100mW | Wing | Yes | Pairan | [Link](https://youtu.be/B9-AItJ9WS0) |
+| 12Km | 900M | 50HZ | 100mW | Quad | Yes | Taufik | [Link](https://www.youtube.com/watch?v=dlpwG76BGs8&ab_channel=CauSiang) |
 | 11Km | 900M | 50HZ | 100mW | Quad | No | Taufik | [Link](https://youtu.be/ySBvXENS33s) |
 | 10Km | 2.4G | 250HZ | 100mW | Wing | No | Snipes | [Link](https://youtu.be/dJYfWLtXVg8) |
 | 3Km | 2.4G (ceramic chip antenna RX) | 500HZ | 100mW | Quad | No | Spec | [Link](https://www.youtube.com/watch?v=kfa6ugX46n8) |
