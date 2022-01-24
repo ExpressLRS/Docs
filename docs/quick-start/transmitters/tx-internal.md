@@ -11,7 +11,7 @@ template: main.html
 
 Targets:
 
-- `Radiomaster_Internal_via_WIFI`
+- `RadioMaster_Zorro_2400_TX_via_WIFI`
 - `Jumper_Internal_via_WIFI`
 
 ### Method 1
@@ -69,7 +69,7 @@ Verify the version and hash in the main screen of ExpressLRS Lua script.
 
 Targets:
 
-- `Radiomaster_Internal_via_ETX`
+- `RadioMaster_Zorro_2400_TX_via_ETX`
 - `Jumper_Internal_via_ETX`
 
 With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` in the option window that pops up.
