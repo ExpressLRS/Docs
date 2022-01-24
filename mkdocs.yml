@@ -69,7 +69,7 @@ extra:
       link: https://github.com/ExpressLRS/
       name: See the Github Repo
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/ExpressLRS
+      link: https://discord.gg/dS6ReFY
       name: Check out the Discord
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/groups/636441730280366
@@ -123,7 +123,7 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
