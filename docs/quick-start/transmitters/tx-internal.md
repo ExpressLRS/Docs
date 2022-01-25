@@ -18,10 +18,10 @@ With the correct target selected and [Firmware Options] set, **Build** your firm
 The next steps will require the [ExpressRLS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as). Download the ExpressLRS lua script and save it to your Radio's `/Scripts/Tools` folder. Execute the ExpressLRS lua script by pressing "System Menu" in your radio and then under Tools, select `ExpressLRS`.
 
 ![Lua Script](../../assets/images/lua1.jpg)
-![Lua Script T16](../../assets/images/lua2.jpg)
-![Lua3](../../assets/images/lua3.jpg)
 
 Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**. Press OK once more to activate the WiFi on the Tx Module. Connect to the Access Point the module will create called `ExpressLRS TX Module`, with the password being `expresslrs`.
+
+![Lua3](../../assets/images/lua/wifi-bw.png)
 
 Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `RadioMaster_Zorro_2400_TX-<version>.bin` or `Jumper_AION_T-Pro_2400_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
 
@@ -45,7 +45,7 @@ Using your browser, navigate to http://elrs_tx.local and the WiFi Update page sh
 
 ![Firmware Update](../../assets/images/web-firmwareupdate.png)
 
-Drag-and-drop the `RadioMaster_Zorro_2400_TX-<version>.bin` or `Jumper_AION_T-Pro_2400_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and the module will reboot (~1min).
+Drag-and-drop the `RadioMaster_Zorro_2400_TX-<version>.bin` or `Jumper_AION_T-Pro_2400_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and once the file is uploaded, a pop-up confirmation will show up.
 
 Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
 
@@ -66,7 +66,7 @@ Verify the version and hash in the main screen of ExpressLRS Lua script (you wil
 ## Flashing via EdgeTX Passthrough
 
 !!! note ""
-    Due to missing pin connections on the internal AION modules with the Jumper T-Pro, this method is unsupported at the moment.
+    Due to missing pin connections on the internal AION modules with the Jumper T-Pro, this method is unsupported by the handset at the moment.
 
 Target:
 
