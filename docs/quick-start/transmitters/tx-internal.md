@@ -78,7 +78,7 @@ With your handset turned on, connect a USB data cable on the USB data port of th
 
 ![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
 
-Using the ExpressLRS Configurator, select the latest version (v2.1.0 or newer) and the correct Device Target and set the Flashing method to `via ETX Passthrough`.
+Using the ExpressLRS Configurator, select the latest version (v2.1.0 or newer) and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
 
 Set your Binding Phrase (optional) and other relevant [Firmware Options] like Local WiFi Network SSID and password.
 
