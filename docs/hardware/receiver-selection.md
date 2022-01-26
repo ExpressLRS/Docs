@@ -31,7 +31,7 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 ## Team900
 | Model | Price | Size | LNA | PA | Antenna | WiFi | RTF |
 |---|---|---|---|---|---|---|---|
-| BetaFPV Nano 900 | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | :thumbsup_tone3:  | :whale::whale: | :thumbsdown_tone3: | :thumbsup_tone3:  |
+| BetaFPV Nano 900 | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | :thumbsup_tone3:  | :whale::whale: | :thumbsup_tone3: | :thumbsup_tone3:  |
 | FrSky R9 | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | :thumbsup_tone3:  | :whale::whale: | :thumbsdown_tone3: | :thumbsdown_tone3: |
 | HappyModel ES900RX | :moneybag::moneybag: | :straight_ruler: | :thumbsup_tone3:  | :thumbsup_tone3:  | :whale::whale: | :thumbsup_tone3:  | :thumbsup_tone3:  |
 | Jumper R9 Mini | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | :thumbsup_tone3:  | :whale::whale: | :thumbsdown_tone3: | :thumbsdown_tone3: |
