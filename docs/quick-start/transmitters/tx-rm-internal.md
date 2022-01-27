@@ -7,7 +7,7 @@ template: main.html
 ## Flashing via EdgeTX Passthrough
 
 !!! info ""
-    This method is the result of the collaborative effort between EdgeTX, Radiomaster and ExpressLRS.
+    This method is the result of the collaborative effort between EdgeTX, RadioMaster and ExpressLRS.
 
 Target: `RadioMaster_Zorro_2400_TX_via_ETX`
 

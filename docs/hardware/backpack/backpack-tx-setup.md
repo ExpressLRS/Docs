@@ -70,12 +70,12 @@ For the First Generation NamimnoRC TX modules (No OLED), you will have to first 
 
 Wait for a bit (~10s) after the message "Update Success! Rebooting..." appear before you power-cycle the module. Your TX Backpack should now be ready.
 
-### via ETX Passthrough (Radiomaster Zorro)
+### via ETX Passthrough (RadioMaster Zorro)
 
 Target: `RadioMaster Zorro TX Backpack`
 
 !!! info ""
-    This method is the result of the collaborative effort between EdgeTX, Radiomaster and ExpressLRS.
+    This method is the result of the collaborative effort between EdgeTX, RadioMaster and ExpressLRS.
 
 With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` in the option window that pops up.
 
