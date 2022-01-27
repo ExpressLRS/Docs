@@ -236,6 +236,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/2.0/quick-start/receivers/rx-vantac-2400/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/2.0/quick-start/receivers/rx-voyager900/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
@@ -307,6 +312,11 @@
     </url>
     <url>
          <loc>https://www.expresslrs.org/2.0/quick-start/transmitters/tx-siyifm30/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/quick-start/transmitters/tx-vantac-2400/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
