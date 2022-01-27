@@ -26,9 +26,15 @@ Alternatively, you can use the ExpressLRS Configurator to create your binaries f
 ### Flashing via UART/FTDI
 
 !!! note ""
-    This method is best used for the DIY ESP01F VRx Backpacks, as these devices do not have any firmware from factory.
+    This method is best used for the DIY ESP01F VRx Backpacks, as these devices do not have any firmware from factory. 
 
 Connect your FTDI Rx pin into the Tx pad of your VRx Device, and the FTDI Tx pin into the Rx pad of the VRx Device; then the 5v and Gnd pads. The Boot pad needs to be bridged with the Ground pad. Connect your FTDI, with the connected VRx device, into a free USB port (VRx Device's LED should light up SOLID). Using the ExpressLRS Configurator, select your VRx module, select the `via UART` method and set your `binding phrase` (Optional) and the Home Network SSID and Password (Optional; Available starting 0.2.0). Click **Build and Flash** and the compiling and flashing should commence. If done right, the Success bar should appear and your VRx Backpack should now be ready for wiring into your selected VRx Module.
+
+### Flashing TBS Fusion for the First Time
+
+You will need an FTDI dongle (USB to UART Bridge) to flash the VRx Backpack firmware into your TBS Fusion module for the first time. You will also have to follow the TBS Fusion [WiFi Module Unbricking Guide](https://team-blacksheep.freshdesk.com/support/solutions/articles/4000153255-tbs-cloud-unbrick-the-wifi-module?fbclid=IwAR0LlQEbzJ0kd7iG-W6yli3Ng90PlYGFLlkun7lFB5pcNIfGGNFvYFUuY5Q) but instead of uploading the WiFi Firmware file from TBS, you will upload the VRx Backpack Firmware that the ExpressLRS Configurator compiled from **Build**.
+
+Any subsequent firmware updates can be done via WiFi.
 
 ## Starting 0.2.0, you can Update via your Home WiFi
 
