@@ -11,6 +11,7 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 |---|---|---|---|---|---|---|---|
 | Axis Thor RX | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: |  :whale::whale: | :thumbsup_tone3: | :checkered_flag: | 
 | Jumper AION Mini RX | :moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3: | :checkered_flag:|
+| Vantac RX | :moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3: | :checkered_flag:|
 | BetaFPV Nano 2.4 | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | 20dBm | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | DIY Nano 2.4 | :moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale:/:whale::whale:/:whale::whale::metal: | :thumbsup_tone3:  | :thumbsdown_tone3: |
 | Flywoo EL24E | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale: | :thumbsup_tone3:  | :checkered_flag: |

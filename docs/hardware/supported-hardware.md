@@ -40,6 +40,10 @@ Includes Color TFT display, built in motion sensor and thermally controlled fan
 
 [Flashing Guide](../quick-start/transmitters/tx-jumper-aion.md)
 
+### Vantac Lite TX
+
+[Flashing Guide](../quick-start/transmitters/tx-vantac-2400.md)
+
 ### Ghost TX
 
 [Flashing Guide](../quick-start/transmitters/tx-ghost2400.md)
@@ -93,6 +97,10 @@ To help find the right receiver for your needs, see the [Receiver Selection](rec
 ### Jumper AION Mini 2.4GHz Recievers
 
 [Flashing Guide](../quick-start/receivers/rx-jumper-aion.md)
+
+### Vantac RX
+
+[Flashing Guide](../quick-start/receivers/rx-vantac-2400.md)
 
 ### Ghost Atto Receivers
 
