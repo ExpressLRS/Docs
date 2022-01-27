@@ -36,6 +36,10 @@ Includes Color TFT display, built in motion sensor and thermally controlled fan
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-tx-module?variant=39416993382534)
 
+### Jumper AION Nano TX
+
+[Flashing Guide](../quick-start/transmitters/tx-jumper-aion.md)
+
 ### Ghost TX
 
 [Flashing Guide](../quick-start/transmitters/tx-ghost2400.md)
@@ -85,6 +89,10 @@ To help find the right receiver for your needs, see the [Receiver Selection](rec
 [Flashing Guide](../quick-start/receivers/rx-matek2400.md)
 
 [Manufacturer Website](http://www.mateksys.com/?portfolio=elrs-r24)
+
+### Jumper AION Mini 2.4GHz Recievers
+
+[Flashing Guide](../quick-start/receivers/rx-jumper-aion.md)
 
 ### Ghost Atto Receivers
 

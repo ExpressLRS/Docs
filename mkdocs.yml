@@ -141,6 +141,7 @@ nav:
             - Flashing NamimnoRC Flash: quick-start/transmitters/tx-flash2400.md
             - Flashing BetaFPV 2.4Ghz TX: quick-start/transmitters/tx-betafpv2400.md
             - Flashing Axis Thor TX: quick-start/transmitters/tx-axis-thor.md
+            - Flashing Jumper Aion Nano TX: quick-start/transmitters/tx-jumper-aion.md
             - Flashing Ghost TX: quick-start/transmitters/tx-ghost2400.md
             - Flashing Siyi TXes: quick-start/transmitters/tx-siyifm30.md
             - Flashing Frsky R9 Modules: quick-start/transmitters/tx-r9m.md
@@ -161,6 +162,7 @@ nav:
             - Flashing BetaFPV Nano 2.4G: quick-start/receivers/rx-betafpv2400.md
             - Flashing Matek R24: quick-start/receivers/rx-matek2400.md
             - Flashing Axis Thor RX: quick-start/receivers/rx-axis-thor.md
+            - Flashing Jumper Aion Nano RX: quick-start/receivers/rx-jumper-aion.md
             - Flashing Ghost Receiver: quick-start/receivers/rx-ghost2400.md
             - Flashing Siyi FR Mini: quick-start/receivers/rx-siyiFRmini.md
             - Flashing Frsky R9 Receivers: quick-start/receivers/rx-r9receivers.md
