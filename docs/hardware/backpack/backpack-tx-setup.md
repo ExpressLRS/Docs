@@ -70,6 +70,29 @@ For the First Generation NamimnoRC TX modules (No OLED), you will have to first 
 
 Wait for a bit (~10s) after the message "Update Success! Rebooting..." appear before you power-cycle the module. Your TX Backpack should now be ready.
 
+### via ETX Passthrough (RadioMaster Zorro)
+
+Target: `RadioMaster Zorro TX Backpack`
+
+!!! info ""
+    This method is the result of the collaborative effort between EdgeTX, RadioMaster and ExpressLRS.
+
+With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` in the option window that pops up.
+
+![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
+
+![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
+
+Using the ExpressLRS Configurator, select the appropriate version and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
+
+Set your Binding Phrase and your Home WiFi SSID and Password (Optional).
+
+Click **Build and Flash** on the ExpressLRS Configurator.
+
+Wait for the process to complete and you should see the green `Success` notification.
+
+Unplug the usb from the handset and you're set!
+
 ## Starting in 0.2.0, you can Update via your Home WiFi Network
 
 With your Home Network SSID and Password set, when you activate the WiFi mode via the lua script (`WiFi Connectivity` -> `Enabled Backpack WiFi`), the Backpack will try to connect to your Home WiFi Network. Once connected, you can access the Web Update page via http://elrs_txbp.local/ and upload your firmware there.

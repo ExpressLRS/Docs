@@ -1,5 +1,3 @@
-<link rel="icon" href="https://avatars.githubusercontent.com/u/77287864?s=200&v=4">
-
 {% extends "base.html" %}
 
 <!-- Custom front matter -->
@@ -10,7 +8,7 @@
 {% if page and page.title and not page.is_homepage %}
 {% set title = config.site_name ~ " - " ~ page.title | striptags %}
 {% endif %}
-
+<link rel="icon" href="https://avatars.githubusercontent.com/u/77287864?s=200&v=4">
 <!-- The image needs to have an absolute URL -->
 {% set image = config.site_url ~ '/assets/images/banner.png' %}
 
