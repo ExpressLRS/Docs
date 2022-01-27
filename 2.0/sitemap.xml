@@ -251,6 +251,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/2.0/quick-start/transmitters/tx-aion-internal/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/2.0/quick-start/transmitters/tx-axis-thor/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
@@ -307,6 +312,11 @@
     </url>
     <url>
          <loc>https://www.expresslrs.org/2.0/quick-start/transmitters/tx-r9m/</loc>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/quick-start/transmitters/tx-rm-internal/</loc>
          <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
