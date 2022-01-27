@@ -30,3 +30,7 @@ Once the receiver is in bootloader mode, all you need to do is configure the RX 
 > If the flashing process still fails try to move the 5V RX wire to the pin that requires LiPo to power it on. You need to power up the receiver only during the "Passthrough Done" stage or the "Connecting ..." stage.
 
 If you’ve still got the boot pad bridged with solder, you’ll need to remove the solder before it will work again. Congratulations! You’ve unbricked your receiver, go fly!
+
+## Wall of Text? Here's a vid!
+
+<iframe width="640" height="390" src="https://www.youtube.com/embed/jYLwaWBkM_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
