@@ -35,11 +35,13 @@ Anyone can add an entry to the table, and entries should include the:
 ### 25mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
-| 3Km | 2.4G | 50HZ | 25mW | Quad | No | Taufik | [Link](https://www.youtube.com/watch?v=vG_hxHndXdI&ab_channel=CauSiang) |
+| 4.5Km | 2.4G | 50HZ | 25mW | Quad | No | Taufik | [Link](https://youtu.be/j2MqtfiM7eo) |
+| 3Km | 2.4G | 150HZ | 25mW | Quad | No | Taufik | [Link](https://www.youtube.com/watch?v=vG_hxHndXdI&ab_channel=CauSiang) |
 
 ### 50mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
+| 7Km | 2.4G | 150HZ | 50mW | Quad | No | Taufik | [Link](https://youtu.be/bUlUGCup48I) |
 | 6Km | 900M | 100HZ | 50mW | Wing | No | Snipes | [Link](https://youtu.be/kN89mINbmQc?t=58) |
 
 ### 100mW
