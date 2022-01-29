@@ -22,6 +22,8 @@ Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**
 
 Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `Jumper_AION_T-Pro_2400_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
 
+If a Popup appears warning you're flashing the wrong target, click `Flash Anyway`. These units came pre-flashed from factory with an older Target, before these specific targets are available.
+
 Once the file is uploaded, a pop-up confirmation will show up. Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
 
 Verify the version and hash in the main screen of ExpressLRS Lua script (you will first need to close it and relaunch the script).
