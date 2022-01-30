@@ -62,5 +62,49 @@ Wait for the Lua script screen to close the "WiFi Running" screen and your modul
 
 Verify the version and hash in the main screen of ExpressLRS Lua script (you will first need to close it and relaunch the script).
 
+## HELP! I think I bricked my internal module!
+
+Okay, breathe. The module is recoverable.
+
+You will need a couple of files:
+
+1. An EdgeTX binary that allows you to use the USB port on the radio to reflash the module. Download it from [here](../../assets/recovery/tpro-ada778ee4.bin) (Right-click, Save-as) and save it into your Jumper T-Pro SD Card `/firmware` folder.
+2. A zip file with all the recovery scripts and firmwares. Download it from [here](../../assets/recovery/jumper-recover.zip) (Right-click, Save-as) and extract it into a folder in your harddrive. If you want your `Binding Phrase` and other [Firmware Options] set for you when you flash via this method, **Build** your `firmware.bin` file first via the ExpressLRS Configurator and replace the `firmware.bin` in this folder.
+
+### Procedure
+
+With the EdgeTX binary in your `/firmware` SD Card folder, reboot the radio into DFU/Bootloader mode. You can get to this mode by holding the trim switches inwards and pressing the power button. Release the button and trim switches and you should be in DFU/Bootloader mode. Write the firmware into the radio and reboot to ensure it got written. One way to check is to plug-in a USB cable and a new menu item should be available to you: USB Serial (Debug). You will need this menu item in the next steps.
+
+Turn off the radio.
+
+The next steps will require you to take the radio apart. You will need a small Philips screwdriver for this. There are 10 small Philips screws that keep both halves of the radio together.
+
+![tPro screws](../../assets/images/tpro_screws.jpg)
+
+!!! warning "Handle with Care"
+    There are a couple of wires connecting the module into the main board of the radio, along with battery leads. Do not yank out the back cover of the radio from its front half. You can leave the battery in its cradle as you will need to power up the radio in the next steps.
+
+Leave all the wiring intact, you will need a still-functional radio for the next steps!
+
+Power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below.
+
+![tPro serial debug](../../assets/images/tpro_serialdebug.jpg)
+
+Open up the folder where you extracted the Recovery scripts.
+
+Locate the Boot button in the Internal ExpressLRS module and Press and Hold it while you double-click the `recover.bat` script. Release the button when you see the `Features:` line appears.
+
+![tPro boot](../../assets/images/tpro_BootButton.png)
+
+![tPro flashing](../../assets/images/tpro_successFlash.png)
+
+Wait for the process to finish. A `Hard resetting via RTS pin...` will show up once done and the script should terminate on its own.
+
+Unplug the USB cable from the T-Pro and check with the Lua Script whether you have your Internal module back.
+
+If you chose to use the `firmware.bin` file in the original Recovery zip file, it doesn't have your `Binding Phrase` and other [Firmware Options]. You will need to reflash the module via WiFi using the steps above.
+
+Do not forget to reassemble the T-Pro. Let's hope you didn't lose a screw!
+
 [Firmware Options]: ../firmware-options.md
 [Radio Preparation]: tx-prep.md
