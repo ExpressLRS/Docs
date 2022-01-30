@@ -68,8 +68,8 @@ Okay, breathe. The module is recoverable.
 
 You will need a couple of files:
 
-1. An EdgeTX binary that allows you to use the USB port on the radio to reflash the module. Download it from [here](../../assets/tpro-ada778ee4.bin) (Right-click, Save-as) and save it into your Jumper T-Pro SD Card `/firmwares` folder.
-2. A zip file with all the recovery scripts and firmwares. Download it from [here](../../assets/jumper-recover.zip) (Right-click, Save-as) and extract it into a folder in your harddrive.
+1. An EdgeTX binary that allows you to use the USB port on the radio to reflash the module. Download it from [here](../../assets/recovery/tpro-ada778ee4.bin) (Right-click, Save-as) and save it into your Jumper T-Pro SD Card `/firmwares` folder.
+2. A zip file with all the recovery scripts and firmwares. Download it from [here](../../assets/recovery/jumper-recover.zip) (Right-click, Save-as) and extract it into a folder in your harddrive.
 
 ### Procedure
 
