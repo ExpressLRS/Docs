@@ -150,7 +150,7 @@ nav:
             - Flashing NamimnoRC Voyager: quick-start/transmitters/tx-voyager900.md
             - Flashing BetaFPV 900Mhz TX: quick-start/transmitters/tx-betafpv900.md
             - Flashing RadioMaster Internal TX: quick-start/transmitters/tx-rm-internal.md
-            - Flashing Jumper Aion Internal TX:  quick-start/transmitters/tx-aion-internal.md
+            - Flashing Jumper T-Pro Internal TX:  quick-start/transmitters/tx-aion-internal.md
             - Flashing DIY 900TX: quick-start/transmitters/tx-diy900.md
             - Flashing DIY 2400TX: quick-start/transmitters/tx-diy.md
           - Using The Lua Script: quick-start/transmitters/lua-howto.md
