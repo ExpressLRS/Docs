@@ -59,18 +59,6 @@ NO_SYNC_ON_ARM
 **no sync on arm** doesn't transmit sync packets while armed. This is useful for racing as there is less time & packets wasted 🗑️ on sending sync packets (one packet every 5 seconds if connected). **HOWEVER** if you are doing serious long range ⛰️, keep this disabled because in the case of a sustained failsafe, link can not be regained while armed.
 
 AUX1 is the channel ExpressLRS uses to detect "ARMED", and this feature assumes that a **low value of the arm switch is disarmed, and a high value is armed**. OpenTX can invert your switch if you prefer it to be mechanically inverted. It is best not to enable no sync on arm when you are first setting up ExpressLRS as it can be a source of confusion.
- 
-```
-FEATURE_OPENTX_SYNC
-FEATURE_OPENTX_SYNC_AUTOTUNE
-```
-These features enable **lower latency** 🏃‍♂️ and **offset** from the OpenTX radio to the TX. The first lowers latency and should be kept enabled. The second is more experimental and can lower the offset from the radio by tuning it as close as possible to `0`, but is experimental (even in 1.0) and is best left disabled. 
-
-Both require [OpenTX `2.3.12`](https://www.open-tx.org/) or above. In order to install it, you will have to use OpenTX companion application. 
-
-Deviation radio users such as those with the T8SGv2/v3 should disable this feature.
-
-You can also use [EdgeTX](https://github.com/EdgeTX/edgetx).
 
 ```
 LOCK_ON_FIRST_CONNECTION
