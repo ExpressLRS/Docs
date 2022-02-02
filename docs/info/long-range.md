@@ -54,6 +54,7 @@ Anyone can add an entry to the table, and entries should include the:
 | 10Km | 2.4G | 250HZ | 100mW | Wing | No | Snipes | [Link](https://youtu.be/dJYfWLtXVg8) |
 | 3Km | 2.4G (ceramic chip antenna RX) | 500HZ | 100mW | Quad | No | Spec | [Link](https://www.youtube.com/watch?v=kfa6ugX46n8) |
 | 10Km | 900M | 50HZ | 100mW | Quad | Yes | Taufik | [Link](https://youtu.be/Pi2j17T2dSk) |
+| 5.5Km | 900M | 50HZ | 100mW | Quad | No | Abdul | [Link](https://youtu.be/onFqZNVJiFQ) |
 
 ### 250mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
