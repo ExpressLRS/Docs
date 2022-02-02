@@ -137,7 +137,11 @@ On the ExpressLRS Configurator, select the `via UART` Flashing method. Set your 
 
 Incorrect or loose connections can cause this method to fail. If it does, disconnect the Serial Adapter from USB, ensure you have the right connection and repeat the process. Don't forget to press and hold the boot button prior to connecting the Serial Adapter into USB. 
 
-Once complete and a `Success` banner appears, carefully unplug the Serial Adapter and disconnect the module pins. Reinsert the connector into the module port and reassemble the radio (do not put in screws yet) and verify you have a working module once again by running the Lua script.
+Once complete and a `Success` banner appears, carefully unplug the Serial Adapter and disconnect the module pins. Reinsert the connector into the module port as shown below.
+
+![tPro Connection](../../assets/images/tproUART-AllSet.jpg)
+
+Reassemble the radio (but do not put in the screws yet) and verify you have a working module once again by running the Lua script.
 
 Once you've verified you have your Internal ExpressLRS module back, replace the screws and tighten things up. Chug one down and celebrate!
 
