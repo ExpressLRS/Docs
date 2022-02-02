@@ -106,5 +106,40 @@ If you chose to use the `firmware.bin` file in the original Recovery zip file, i
 
 Do not forget to reassemble the T-Pro. Let's hope you didn't lose a screw!
 
+## Recovery Method via FTDI or USB to Serial Adapter
+
+You need an FTDI dongle or a USB to Serial Adapter for this method. Make sure the Serial Adapter have its drivers installed and is being recognized by your Computer properly.
+
+You will also have to take apart the radio to get to the module connections and the boot button.
+
+### Procedure
+
+Make sure your radio is turned off, battery removed. You won't need to power up the radio with this method.
+
+Take off the back cover of the radio by loosening 10 small Philips screws. Don't lose one!
+
+![tPro screws](../../assets/images/tpro_screws.jpg)
+
+!!! warning "Handle with Care"
+    There are a couple of wires connecting the module into the main board of the radio, along with battery leads. Do not yank out the back cover of the radio from its front half. You don't need to disconnect the wires from the mainboard, but if you do so, be very careful!
+
+What you need is just the 4 wires connecting the ExpressLRS internal module to the Module daughterboard. The pin-out is as follows: White wire is the RX, Yellow wire is the TX, Red wire is the 5v pin, and the Black wire is the Gnd pin.
+
+![tPro duplex](../../assets/images/tproUART.jpg)
+
+Connect these 4 wires into your FTDI dongle or a USB to Serial Adapter as follows: RX pin into the TX pin; TX pin into the RX pin; 5v to 5v and Gnd to Gnd.
+
+![tPro on Serial](../../assets/images/tproUART-USB.jpg)
+
+Before you connect the FTDI dongle/Serial Adapter into the USB port of your Computer, hold down the Boot button. Keep the button pressed until you have connected the Serial Adapter into your USB port. 
+
+On the ExpressLRS Configurator, select the `via UART` Flashing method. Set your [Firmware Options] and click **Build and Flash** then wait for the process to complete.
+
+Incorrect or loose connections can cause this method to fail. If it does, disconnect the Serial Adapter from USB, ensure you have the right connection and repeat the process. Don't forget to press and hold the boot button prior to connecting the Serial Adapter into USB. 
+
+Once complete and a `Success` banner appears, carefully unplug the Serial Adapter and disconnect the module pins. Reinsert the connector into the module port and reassemble the radio (do not put in screws yet) and verify you have a working module once again by running the Lua script.
+
+Once you've verified you have your Internal ExpressLRS module back, replace the screws and tighten things up. Chug one down and celebrate!
+
 [Firmware Options]: ../firmware-options.md
 [Radio Preparation]: tx-prep.md
