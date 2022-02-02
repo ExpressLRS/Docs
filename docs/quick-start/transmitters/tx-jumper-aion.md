@@ -58,3 +58,13 @@ Using the ExpressLRS Configurator, select the correct Target and set your [Firmw
 ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
 
 Verify the version and hash in the main screen of ExpressLRS Lua script.
+
+## Flashing via USB/UART
+
+Target: `Jumper_AION_Nano_2400_TX_via_UART`
+
+Attach a USB-C Data Cable to your module and Computer. Windows users might have to install [CP210x Windows Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
+
+Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
+
+Verify the version and hash in the main screen of ExpressLRS Lua script.
