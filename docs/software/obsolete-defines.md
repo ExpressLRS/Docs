@@ -11,6 +11,21 @@ New items should be added to the top of the list so the last entry here is the o
 ## Obsolete Defines
 
 ```
+FEATURE_OPENTX_SYNC
+FEATURE_OPENTX_SYNC_AUTOTUNE
+```
+
+These features enable **lower latency** 🏃‍♂️ and **offset** from the OpenTX radio to the TX. The first lowers latency and should be kept enabled. The second is more experimental and can lower the offset from the radio by tuning it as close as possible to `0`, but is experimental (even in 1.0) and is best left disabled.
+
+Both require [OpenTX `2.3.12`](https://www.open-tx.org/) or above. In order to install it, you will have to use OpenTX companion application.
+
+Deviation radio users such as those with the T8SGv2/v3 should disable this feature.
+
+You can also use [EdgeTX](https://github.com/EdgeTX/edgetx).
+
+**REMOVED** After 2.2.0. Sync packets were always sent regardless of if this was enabled, but the sync offset would just be wrong if it wasn't defined.
+
+```
 USE_ESP8266_BACKPACK
 ```
 This enables communication with the **[ESP Backpack](../hardware/backpack/esp-backpack.md)** for over-the-air updates (`env:FrSky_TX_R9M_via_WiFi`) 🖥️ and debugging via WebSocket 🔍. Uncommented by default, does not need to be changed.
