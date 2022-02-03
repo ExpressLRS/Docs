@@ -58,3 +58,13 @@ Using the ExpressLRS Configurator, select the correct Target and set your [Firmw
 ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
 
 Verify the version and hash in the main screen of ExpressLRS Lua script.
+
+## Flashing via USB/UART
+
+Target: `Vantac_Lite_2400_TX_via_UART`
+
+Attach a USB-C Data Cable to your module and Computer. Windows users might have to install [CH340 Windows Drivers](https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip) to ensure the device is properly detected and initialized. For other Operating Systems, head to this [site](http://www.wch-ic.com/downloads/CH341SER_ZIP.html) to download your needed drivers.
+
+Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
+
+Verify the version and hash in the main screen of ExpressLRS Lua script.
