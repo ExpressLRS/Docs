@@ -69,7 +69,7 @@ Target: `HappyModel_TX_ES900TX_via_UART`
 
 This method requires you move two jumpers into specific pins in the module board. See the following image for the jumper location and which pin should be bridged for this method to work.
 
-![JumperES900](../../assets/images/Jumper-es900tx.jpg)
+![JumperES900](../../assets/images/Jumper-es900tx.png)
 
 The 2 bottom-most dipswitch should be moved into the position as shown in the image above. Attach your USB cable into the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
 
