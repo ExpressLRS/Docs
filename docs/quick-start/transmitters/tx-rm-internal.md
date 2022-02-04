@@ -11,7 +11,7 @@ template: main.html
 
 Target: `RadioMaster_Zorro_2400_TX_via_ETX`
 
-With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` in the option window that pops up.
+With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` in the option window that pops up. Check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. If not and you're seeing a bunch of Yellow Warning icons for the RadioMaster Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `W7_x64` executable.
 
 ![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
 
