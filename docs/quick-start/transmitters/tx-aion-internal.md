@@ -133,7 +133,12 @@ Once you have both halves of the radio apart, you will need to solder a piece of
 
 ![tPro janky boot](../../assets/images/tpro_bootOnSwitch.jpg)
 
-Once the wire is properly soldered, reassemble the radio. Tighten up the 10 screws to secure both halves of the radio. Replace the battery if you removed it and power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below. Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. If not and you're seeing a bunch of Yellow Warning icons for the Jumper TPro Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `W7_x64` executable.
+Once the wire is properly soldered, reassemble the radio. Tighten up the 10 screws to secure both halves of the radio. 
+
+!!! note
+    If you're planning to use the switch as an Aux channel, you might want to remove the wire afterwards. Leaving this wire connected means the Aux channel will output a constant "High" signal.
+
+Replace the battery if you removed it and power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below. Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. If not and you're seeing a bunch of Yellow Warning icons for the Jumper TPro Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `W7_x64` executable.
 
 ![tPro serial debug](../../assets/images/tpro_serialdebug.jpg)
 
