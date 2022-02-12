@@ -86,7 +86,7 @@ The next steps will require you to take the radio apart. You will need a small P
 
 Leave all the wiring intact, you will need a still-functional radio for the next steps!
 
-Power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below.
+Power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below. Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. If not and you're seeing a bunch of Yellow Warning icons for the RadioMaster Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `W7_x64` executable.
 
 ![tPro serial debug](../../assets/images/tpro_serialdebug.jpg)
 
@@ -105,6 +105,49 @@ Unplug the USB cable from the T-Pro and check with the Lua Script whether you ha
 If you chose to use the `firmware.bin` file in the original Recovery zip file, it doesn't have your `Binding Phrase` and other [Firmware Options]. You will need to reflash the module via WiFi using the steps above.
 
 Do not forget to reassemble the T-Pro. Let's hope you didn't lose a screw!
+
+## Recovery Method via ETX Passthrough
+
+!!! note
+    This could soon supersede the steps above. This method could also change slightly in the near future.
+
+You'll need the following:
+
+1. A piece of wire about 4" (10cm) in length.
+2. An EdgeTX Build that gives the `USB Serial(Debug)` option when a USB Data cable is connected. You can download it [here](../../assets/recovery/tpro-ada778ee4.bin) (Right-click, Save-as). Official support will be available for the Jumper T-pro once EdgeTX 2.6.1 is released.
+
+### Procedure
+
+With the EdgeTX binary in your `/firmware` SD Card folder, reboot the radio into DFU/Bootloader mode. You can get to this mode by holding the trim switches inwards and pressing the power button. Release the button and trim switches and you should be in DFU/Bootloader mode. Write the firmware into the radio and reboot to ensure it got written. One way to check is to plug-in a USB cable and a new menu item should be available to you: USB Serial (Debug). You will need this menu item in the next steps.
+
+Turn off the radio.
+
+The next steps will require you to take the radio apart. You will need a small Philips screwdriver for this. There are 10 small Philips screws that keep both halves of the radio together.
+
+![tPro screws](../../assets/images/tpro_screws.jpg)
+
+!!! warning "Handle with Care"
+    There are a couple of wires connecting the module into the main board of the radio, along with battery leads. Do not yank out the back cover of the radio from its front half. You don't need to disconnect the wires from the mainboard.
+
+Once you have both halves of the radio apart, you will need to solder a piece of wire on the Boot pad into one of the momentary switches on the radio. Refer to the image below where to solder the ends of the wire.
+
+![tPro janky boot](../../assets/images/tpro_bootOnSwitch.jpg)
+
+Once the wire is properly soldered, reassemble the radio. Tighten up the 10 screws to secure both halves of the radio. Replace the battery if you removed it and power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below. Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. If not and you're seeing a bunch of Yellow Warning icons for the Jumper TPro Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `W7_x64` executable.
+
+![tPro serial debug](../../assets/images/tpro_serialdebug.jpg)
+
+On the ExpressLRS Configurator, select the correct Device Type and Device (`Jumper AION T-Pro 2400 TX`) and choose the `EdgeTXPassthrough` flashing method. Set your [Firmware Options] and click `Build and Flash`.
+
+Wait for the Passthrough Init or Passthrough Done section of the log and Press the switch in the radio where you wired up the boot button and hold it until the script has connected. See the image below for the correct timing.
+
+![tPro press it](../../assets/images/tpro_viaETXPress.png)
+
+If you didn't get it right and it fails, don't worry. Just retry and it should go through.
+
+![tPro flashed](../../assets/images/tpro_viaETXSuccess.png)
+
+Unplug the USB and check via the ExpressLRS lua script your module is flashed and working properly again.
 
 ## Recovery Method via FTDI or USB to Serial Adapter
 
