@@ -65,6 +65,11 @@ Verify the version and hash in the main screen of ExpressLRS Lua script.
 
 ### Flashing via USB/UART
 
+![Uart Select Switch](../../assets/images/flash_backpack.png)
+
+!!! attention
+    The left position of the switch is for flashing the [backpack](../../hardware/backpack/backpack-tx-setup.md). The right position of the switch is for flashing the TX itself. The right position is default, so there is no need to open your module unless you need to unbrick your TX backpack!
+
 Target: `NamimnoRC_FLASH_2400_OLED_TX_via_UART`
 
 Attach your USB cable into the module and your computer. [CH340 Drivers](https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip) will have to be downloaded (Right-click, Save-as) and installed (Unzip the contents of the file; Run the executable installer) for this to work properly (Windows). Make sure your computer recognizes the module as a USB-SERIAL CH340 device, otherwise, this method will not work. 
