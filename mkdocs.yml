@@ -220,7 +220,7 @@ nav:
   - Info:
       - Glossary: info/glossary.md
       - Signal Health: info/signal-health.md
-      - Telemetry Bandwith: info/telem-bandwidth.md
+      - Telemetry Bandwidth: info/telem-bandwidth.md
       - Long Range Competition: info/long-range.md
   - FAQ: faq.md
 
