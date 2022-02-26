@@ -10,7 +10,7 @@ Target: `HappyModel_TX_ES900TX_via_WIFI`
 
 !!! attention
 
-    The methods below applies if you've already updated your Tx modules to 2.x. For modules still in firmwares pre 2.x, you should use 1.x WiFi flashing method to update to 2.x. Or update to 2.x via USB instead.
+    The methods below applies if you've already updated your Tx modules to 2.x. For modules still in firmwares pre 2.x, you should use [1.x WiFi flashing method](https://www.expresslrs.org/1.0/quick-start/tx-es900tx/) to update to 2.x. Or update to 2.x via USB instead.
 
 ### Method 1
 
