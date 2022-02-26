@@ -10,6 +10,7 @@ Targets:
 
 - `BETAFPV_2400_TX_via_WIFI`
 - `BETAFPV_2400_TX_MICRO_via_WIFI`
+- `BETAFPV_2400_TX_MICRO_1000mW_via_WIFI`
 
 !!! attention
 
@@ -72,6 +73,10 @@ Targets:
 
 - `BETAFPV_2400_TX_via_UART`
 - `BETAFPV_2400_TX_MICRO_via_UART`
+- `BETAFPV_2400_TX_MICRO_1000mW_via_WIFI`
+
+!!! Note
+    The BetaFPV Micro 1W module have dipswitches at the back of the module. You need to set switches 1 & 2 to ON, and the rest to OFF, for the flashing via USB to go through.
 
 Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
 
