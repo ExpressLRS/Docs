@@ -25,21 +25,28 @@ See the tables below for the list of supported devices:
 
 | TX Module    | Support |
 | ---------------------- | ---------------- |
-| Happy Model ES24TX  | ✔️ Fully supported  |
-| Happy Model Slim Pro  | ✔️ Fully supported  |
-| Happy Model Slim Ironman | ✔️ Fully supported  |
-| Happy Model Slim T-Lite| ✔️ Fully supported  |
-| Happy Model ES900TX  | ✔️ Fully supported  |
-| Happy Model ES915TX (STM32 version)  | ❌ Not compatible  |
-| FrSky R9 (all)  | ❌ Not compatible  |
-| Namimno Flash (STM32 version)  | ✔️ Fully supported |
-| Namimno Flash OLED(ESP version)  | ✔️ Fully supported |
-| Namimno Voyager (STM32 version)  | ✔️ Fully supported |
-| Namimno Voyager OLED(ESP version)  | ✔️ Fully supported |
+| Happymodel ES24TX Pro | ✔️ Fully supported  |
+| Happymodel ES24TX  | ✔️ Fully supported  |
+| Happymodel Slim Pro  | ✔️ Fully supported  |
+| Happymodel Slim Ironman | ✔️ Fully supported  |
+| Happymodel Slim T-Lite| ✔️ Fully supported  |
+| Happymodel ES900TX  | ✔️ Fully supported  |
+| Happymodel ES915TX (STM32 version)  | ❌ Not compatible  |
+| FrSky R9M | ✔️ Supported with addition of a ESP8285 |
+| FrSky R9 (all others)  | ❌ Not compatible  |
+| NamimnoRC Flash (STM32 version)  | ✔️ Fully supported |
+| NamimnoRC Flash OLED(ESP version)  | ✔️ Fully supported |
+| NamimnoRC Voyager (STM32 version)  | ✔️ Fully supported |
+| NamimnoRC Voyager OLED(ESP version)  | ✔️ Fully supported |
 | Axis Flying THOR  | ✔️ Fully supported |
 | HGLRC Hermes | ❌ Not compatible  |
+| BETAFPV 2.4 TX 1W Micro | ✔️ Fully supported  |
 | BETAFPV 2.4 TX | ❌ Not compatible  |
 | BETAFPV 900 TX | ❌ Not compatible  |
+| Radiomaster Zorro  | ✔️ Fully supported |
+| Jumper Aion T-Pro Internal | ❌ Not compatible  |
+| Jumper Aion Nano | ❌ Not compatible  |
+| Vantac Lite | ❌ Not compatible  |
 | ImmersionRC Ghost TX | ❌ Not compatible  |
 | QuadKopters 2.4 TX | ❌ Not compatible  |
 | SIYI FM30 | ❌ Not compatible  |
@@ -49,8 +56,9 @@ See the tables below for the list of supported devices:
 
 | Backpack Target | Compatibility | Tested?|
 | ---------------------- | ---------------- | ---------------- |
-| Happy Model EP1/EP2 | ✔️ Compatible | Yes |
-| Happy Model ES900RX | ✔️ Compatible | Yes |
+| Happymodel EP1/EP2 | ✔️ Compatible | Yes |
+| Happymodel ES900RX | ✔️ Compatible | Yes |
+| Happymodel EP82 | ✔️ Compatible | Yes |
 | BETAFPV Nano 2.4 | ✔️ Compatible | No |
 | Flywoo EL24E | ✔️ Compatible | No |
 | Flywoo EL24P | ✔️ Compatible | No |
@@ -62,6 +70,8 @@ See the tables below for the list of supported devices:
 | JHEMCU / HiYOUNGER RX24T | ❓ Unsure | No |
 | Matek R24-S | ✔️ Compatible | No |
 | Matek R24-D | ✔️ Compatible | No |
+| Jumper Aion RX | ✔️ Compatible | No |
+| Vantac 2.4GHz RX | ✔️ Compatible | No |
 | Namimno Flash (ESP) | ✔️ Compatible | No |
 | QuadKopters Nano | ✔️ Compatible | No |
 | SIYI FR Mini | ❌ Not compatible | N/A |
@@ -72,8 +82,8 @@ See the tables below for the list of supported devices:
 | ---------------------- | ---------------- |
 | ImmersionRC Rapidfire  | ✔️ Fully supported (Versions 1.2.5 of the rapidFIRE firmware and later)  |
 | SkyZone SteadyView | ✔️ Fully supported  |
-| TBS Fusion  | ❌  Not yet supported (check back soon)  |
-| Generic RX5808 Module  | ✔️ Fully supported  |
+| TBS Fusion  | ✔️ Fully supported (FTDI needed)  |
+| Generic RX5808 Module (some)  | ✔️ Fully supported  |
 | FENIX Module  | ✔️ Fully supported  |
 
 ## I'm Ready to Proceed. What do I do next?
