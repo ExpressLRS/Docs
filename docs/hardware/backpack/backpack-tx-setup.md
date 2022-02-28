@@ -31,7 +31,8 @@ Targets:
 - `HappyModel TX Backpack`
 - `AXIS THOR TX Backpack`
 - `FrSky TX Backpack`
-- `Namimno TX Backpack`
+- `Namimno Non-OLED TX Backpack`
+- `Namimno Flash OLED TX Backpack`
 
 ### via USB/UART
 
