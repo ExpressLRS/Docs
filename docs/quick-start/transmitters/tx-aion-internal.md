@@ -138,9 +138,15 @@ Once the wire is properly soldered, reassemble the radio. Tighten up the 10 scre
 !!! note
     If you're planning to use the switch as an Aux channel, you might want to remove the wire afterwards. Leaving this wire connected means the Aux channel will output a constant "High" signal.
 
-Replace the battery if you removed it and power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below. Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. If not and you're seeing a bunch of Yellow Warning icons for the Jumper TPro Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `W7_x64` executable.
+Replace the battery if you removed it and power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below.
 
 ![tPro serial debug](../../assets/images/tpro_serialdebug.jpg)
+
+Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. 
+
+![Device Manager](../../assets/images/DeviceMngr.png)
+
+If not and you're seeing a bunch of Yellow Warning icons for the Jumper T-Pro Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `VCP_V1.5.0_Setup_W7_x64_64bits` executable.
 
 On the ExpressLRS Configurator, select the correct Device Type and Device (`Jumper AION T-Pro 2400 TX`) and choose the `EdgeTXPassthrough` flashing method. Set your [Firmware Options] and click `Build and Flash`.
 

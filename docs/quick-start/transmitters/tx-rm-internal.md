@@ -17,6 +17,12 @@ With your handset turned on, connect a USB data cable on the USB data port of th
 
 ![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
 
+Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. 
+
+![Device Manager](../../assets/images/DeviceMngr.png)
+
+If not and you're seeing a bunch of Yellow Warning icons for the RadioMaster Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `VCP_V1.5.0_Setup_W7_x64_64bits` executable.
+
 Using the ExpressLRS Configurator, select the appropriate version and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
 
 Select the `Regulatory Domain` appropriate for your location.
