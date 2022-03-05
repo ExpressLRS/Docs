@@ -14,14 +14,17 @@ These firmwares allow flashing of `.elrs` files too.
 
 ## CRSF Protocol
 
-ExpressLRS uses the CRSF serial protocol to communicate between the transmitter and the TX module. To set this up, enter into your model settings, and on the "Model Setup" tab, enable your "External RF" and select "CRSF" as the protocol:
+!!! Note
+    If you're using an External ExpressLRS Module, make sure the Internal RF Module is **OFF**.
 
-**NOTE: Make sure the internal module is turned off.**
+    If you're using a Radio with an Internal ExpressLRS Module (e.g. RadioMaster Zorro), make sure the External RF Module is **OFF**, and the Internal RF Module is set to **CRSF** Protocol.
+
+ExpressLRS uses the CRSF serial protocol to communicate between the transmitter and the TX module. To set this up, enter into your model settings, and on the "Model Setup" tab, enable your "External RF" and select "CRSF" as the protocol:
 
 ![CRSF](https://oscarliang.com/ctt/uploads/2018/03/setup-tbs-crossfire-tx-rx-micro-nano-taranis-betaflight-fc-internal-external-rf-mode.jpg)
 ![CRSF](https://oscarliang.com/ctt/uploads/2019/12/JUMPER-T16-EXTERNAL-RF-MODE-PROTOCOL-TBS-CROSSFIRE-CRSF.jpg)
 
-**NOTE: Make sure the internal module is turned off.**
+For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro, set the Internal RF Module to **CRSF** Protocol and the External RF Module to OFF. If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, activate the CRSF Internal module via your Radio's `System Menu -> Hardware`, `Internal Module Type`.
 
 ## Serial Baud Rate
 
@@ -32,6 +35,8 @@ The QX7, X10/S, X12 will also going to require the [Crossfire Mod](https://blog.
 The X9D(plus) can't change its Max Bauds settings, but it has been found to be finicky, causing unstable packet transfers, and constant Telemetry Lost/Recovered messages from OpenTX. One fix for this is the use of the OneBit firmware or EdgeTX. Click [here](../../hardware/x9d-troubleshooting.md) for more info.
 
 ![Baud Rate](https://fpvfrenzy.com/wp-content/uploads/2017/11/baud-rate.jpg)
+
+If your radio is on EdgeTX, you can use higher Baud Rates than initially available. Max Baud Rate currently supported is 5.25M (EdgeTX 2.6.0) but not every ExpressLRS modules will be able to run at such speeds. If you're experiencing Telemetry Lost/Recovered notification from your Radio, set the Baud Rate to a much lower setting. Higher Baud Rate means faster transfer of data between radio and module, and faster load times of the Lua Script.
 
 ## ADC Filter
 
