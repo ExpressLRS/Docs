@@ -22,6 +22,8 @@ The only way to flash the FR Mini is using STLINK. Note this is a one-way proces
 * Attach 3.3V to the VDD pad on the flashing header. Do not connect 5V here! :fire:
 * Flash using the `FM30_RX_MINI_via_STLINK` target in the ExpressLRS Configurator
 
+![via STLink](../../assets/images/Method_RX_STLink-stm.png)
+
 For more information and troubleshooting of the STLINK connection, see the detail on the [FM30 Initial Flashing](../transmitters/tx-siyifm30.md) page.
 
 Once flashing is complete, wire the receiver to your flight controller using the images below.
@@ -40,4 +42,6 @@ Thank you to [@JupaCreations](http://www.jupacreations.com/)
 
 ## Updating via Passthrough
 
-Updating is done via Betaflight Passthrough with the receiver wired to the flight controller. Be sure the transmitter is off, use the `FM30_RX_MINI_via_BetaflightPassthrough` target in the ExpressLRS Configurator, then click on Build and Flash.
+Updating is done via Betaflight Passthrough with the receiver wired to the flight controller. Be sure the transmitter is off, use the `FM30_RX_MINI_via_BetaflightPassthrough` target in the ExpressLRS Configurator, then click on **Build and Flash**.
+
+![via Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
