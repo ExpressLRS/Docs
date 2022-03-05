@@ -12,13 +12,26 @@ Targets:
 - `BETAFPV_2400_TX_MICRO_via_WIFI`
 - `BETAFPV_2400_TX_MICRO_1000mW_via_WIFI`
 
-!!! attention
+Device Category: `BETAFPV 2.4 GHz`
 
+Device:
+
+- `BETAFPV 2400 TX Nano`
+- `BETAFPV 2400 TX Micro`
+- `BETAFPV 2400 TX Micro 1000mW`
+
+![via WiFi](../../assets/images/Method_TX_WiFi.png)
+
+!!! attention
     The methods below applies if you've already updated your Tx modules to 2.x. For modules still in firmwares pre 2.x, you should use [1.x WiFi flashing method](https://www.expresslrs.org/1.0/quick-start/tx-betafpv2400/) to update to 2.x. Or update to 2.x via USB instead.
 
 ### Method 1
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX-<version>.bin` or `BETAFPV_2400_TX_MICRO-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+
+![Build](../../assets/images/Build.png)
+
+Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX-<version>.bin` or `BETAFPV_2400_TX_MICRO-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 The next steps will require the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as). Download the ExpressLRS lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's proper connection with the radio (see the [Radio Preparation](tx-prep.md) page). Execute the ExpressLRS lua script by pressing "System Menu" in your radio and then under Tools, select `ExpressLRS`.
 
@@ -45,7 +58,11 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 ### Method 2
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX-<version>` or `BETAFPV_2400_TX_MICRO-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+
+![Build](../../assets/images/Build.png)
+
+Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX-<version>` or `BETAFPV_2400_TX_MICRO-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 Using the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in Join Network section of the Update Page, it will connect to the local network automatically.
 
@@ -63,6 +80,8 @@ Using the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/
 
 Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options]. Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
 
+![Build & Flash](../../assets/images/BuildFlash.png)
+
 ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
 
 Verify the version and hash in the main screen of ExpressLRS Lua script.
@@ -75,12 +94,24 @@ Targets:
 - `BETAFPV_2400_TX_MICRO_via_UART`
 - `BETAFPV_2400_TX_MICRO_1000mW_via_WIFI`
 
+Device Category: `BETAFPV 2.4 GHz`
+
+Device:
+
+- `BETAFPV 2400 TX Nano`
+- `BETAFPV 2400 TX Micro`
+- `BETAFPV 2400 TX Micro 1000mW`
+
+![via UART](../../assets/images/Method_TX_UART.png)
+
 !!! Note
     The BetaFPV Micro 1W module have dipswitches at the back of the module. You need to set switches 1 & 2 to ON, and the rest to OFF, for the flashing via USB to go through.
 
 Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
 
 Verify the version and hash in the main screen of ExpressLRS Lua script.
 

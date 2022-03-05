@@ -7,12 +7,11 @@ template: main.html
 Targets:
 
 - FM30 TX Module
-  - `FM30_TX_via_STLINK` (Initial Flash)
-  - `FM30_TX_via_DFU` (Updating)
-
+    * `FM30_TX_via_STLINK` (Initial Flash)
+    * `FM30_TX_via_DFU` (Updating)
 - FR Mini as TX Module
-  - `FM30_RX_MINI_AS_TX_via_STLINK` (Initial Flash)
-  - `FM30_RX_MINI_AS_TX_via_UART` (Updating)
+    * `FM30_RX_MINI_AS_TX_via_STLINK` (Initial Flash)
+    * `FM30_RX_MINI_AS_TX_via_UART` (Updating)
 
 ## FM30 Initial Flash
 

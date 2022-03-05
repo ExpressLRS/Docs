@@ -11,6 +11,15 @@ Targets:
 - `GHOST_2400_TX_via_STLINK`
 - `GHOST_2400_TX_LITE_via_STLINK`
 
+Device Category: `ImmersionRC Ghost`
+
+Device:
+
+- `GHOST 2400 TX`
+- `GHOST 2400 TX LITE`
+
+![via STLink](../../assets/images/Method_TX_STLink.png)
+
 ## Initial Flash
 
 Here is a 10 minute video, showing the steps required to both flash the TX if you would rather watch than read:

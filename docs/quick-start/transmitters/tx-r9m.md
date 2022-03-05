@@ -7,7 +7,10 @@ template: main.html
 !!! warning
     The R9M Lite Pro **can not** be flashed via OpenTx or EdgeTX, and therefore requires an STLink v2 to flash. See the guide [below](#flashing-using-stlink)
 
-## Flashing via OpenTX (Requires OpenTX 2.3.12 or newer)
+## Flashing via OpenTX
+
+!!! info
+    This method requires OpenTX 2.3.12 or newer; or EdgeTX 2.4.0 or newer.
 
 ### Flashing the Bootloader
 
@@ -35,9 +38,22 @@ Targets:
 - `Frsky_TX_R9M_via_stock_BL`
 - `Frsky_TX_R9M_LITE_via_stock_BL`
 
+Device Category: `Frsky R9`
+
+Device:
+
+- `Frsky TX R9M`
+- `Frsky TX R9M LITE`
+
+![via BL](../../assets/images/Method_TX_StockBL.png)
+
 In the ExpressLRS Configurator, select the correct target for your module and set your [Firmware Options]. 
 
-Click on **Build** and wait for the firmware to be compiled. After that's done, ExpressLRS Configurator Log should show the `Success` Message, and it will automatically open the folder where the **firmware.elrs** can be found. Put (copy-paste) the firmware.elrs to your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access). Once on your radio, navigate to the `/FIRMWARE` folder, select the firmware.elrs and click-hold the Enter button and select "Flash External ELRS".
+Click on **Build** and wait for the firmware to be compiled.
+
+![Build](../../assets/images/Build.png)
+
+After that's done, ExpressLRS Configurator Log should show the `Success` Message, and it will automatically open the folder where the **firmware.elrs** can be found. Put (copy-paste) the firmware.elrs to your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access). Once on your radio, navigate to the `/FIRMWARE` folder, select the firmware.elrs and click-hold the Enter button and select "Flash External ELRS".
 
 By this point, the bootloader (r9m_elrs_bl.frk) should've been flashed already. Wait for the flashing to finish, and if your module is equipped with a speaker (full size R9Ms), you should hear the tune and two beeps (if external module is now set to CRSF protocol).
 
@@ -48,6 +64,16 @@ Targets:
 - `Frsky_TX_R9M_via_STLINK`
 - `Frsky_TX_R9M_LITE_via_STLINK`
 - `Frsky_TX_R9M_LITE_PRO_via_STLINK`
+
+Device Category: `Frsky R9`
+
+Device:
+
+- `Frsky TX R9M`
+- `Frsky TX R9M LITE`
+- `Frsky TX R9M LITE PRO`
+
+![via STLink](../../assets/images/Method_TX_STLink.png)
 
 This method is an **irreversible** one. You will not be able to go back to Frsky firmwares with this method. You have been warned!
 
@@ -69,7 +95,11 @@ Wire up your module as shown above to your STLink device. This is important befo
 
 Before flashing, disable `'Readout Protection'`. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). After such, you can now disconnect (Target -> Disconnect) and close the ST-Link Utility.
 
-With the module still connected to the STLink, and your [Firmware Options] set, hit **Build & Flash** in the ExpressLRS Configurator and wait for the process to finish. Once that's done, and the Success Message showing, you can now remove/unsolder the STLink, and re-assemble the module, and put it into your Radio's Module Bay. The ExpressLRS tune should play and then two beeps after that can be heard, for units that has a speaker (R9Ms) and if the External Module is set to CRSF Protocol.
+With the module still connected to the STLink, and your [Firmware Options] set, hit **Build & Flash** in the ExpressLRS Configurator and wait for the process to finish.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
+
+Once that's done, and the Success Message showing, you can now remove/unsolder the STLink, and re-assemble the module, and put it into your Radio's Module Bay. The ExpressLRS tune should play and then two beeps after that can be heard, for units that has a speaker (R9Ms) and if the External Module is set to CRSF Protocol.
 
 Verification can be done using the [ExpressLRS lua] script. It should show the Version Number and Hash at the bottom, as well as the options you can set. If it's showing "Loading" at the top, check if External Module is set to CRSF for the selected model in your radio, and that internal RF module is set to off. See [General Troubleshooting] section for other ways to determine your module is flashed and ready for flying.
 

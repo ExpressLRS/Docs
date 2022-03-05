@@ -8,9 +8,19 @@ template: main.html
 
 Target: `NamimnoRC_Voyager_900_TX_via_WiFi`
 
+Device Category: `NamimnoRC VOYAGER 900 MHz`
+
+Device: `NamimnoRC VOYAGER 900 TX`
+
+![via WiFi](../../assets/images/Method_TX_WiFi-stm.png)
+
 #### Method 1
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `firmware.elrs` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+
+![Build](../../assets/images/Build.png)
+
+Once it's done, it should open the Target folder for you where the `firmware.elrs` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 These Tx Modules are STM32-based so they require a separate ESP "backpack" device for Wifi Flashing/Updating. 
 
@@ -38,15 +48,28 @@ Press `Configure WiFi` and set your home network SSID and password. This will en
 
 Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options]. Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
 
+![Build & Flash](../../assets/images/BuildFlash.png)
+
 ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
 
 Using the [ExpressLRS lua] script, verify that you have the latest version.
 
 ## Flashing via OpenTX Radio
 
-*Note: The `NamimnoRC_Voyager_900_TX_via_WiFi` Target will work for this method too!*
+!!! note
+    The `NamimnoRC_Voyager_900_TX_via_WiFi` Target will work for this method too!
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `NamimnoRC_Voyager_900_TX-<version>.elrs` file is. Do not close this window so you can easily locate the correct file to copy to your Radio SD Card.
+Device Category: `NamimnoRC VOYAGER 900 MHz`
+
+Device: `NamimnoRC VOYAGER 900 TX`
+
+![via WiFi](../../assets/images/Method_TX_WiFi-stm.png)
+
+With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+
+![Build](../../assets/images/Build.png)
+
+Once it's done, it should open the Target folder for you where the `NamimnoRC_Voyager_900_TX-<version>.elrs` file is. Do not close this window so you can easily locate the correct file to copy to your Radio SD Card.
 
 Copy the `NamimnoRC_Voyager_900_TX-<version>.elrs` file into your radio's SD Card `/FIRMWARE` folder.
 
@@ -57,6 +80,12 @@ Using the [ExpressLRS lua] script, verify that you have the latest version.
 ## Flashing via STLink
 
 Target: `NamimnoRC_Voyager_900_TX_via_STLINK`
+
+Device Category: `NamimnoRC VOYAGER 900 MHz`
+
+Device: `NamimnoRC VOYAGER 900 TX`
+
+![via STLink](../../assets/images/Method_TX_STLink.png)
 
 **ONLY USE THIS METHOD IF THE FIRMWARE HAS BEEN CORRUPTED** 
 
