@@ -6,17 +6,24 @@ template: main.html
 
 ## Flashing via Wifi
 
-Targets:
+Target: `AXIS_THOR_2400_TX_via_WIFI`
 
-- `AXIS_THOR_2400_TX_via_WIFI`
+Device Category: `AXIS 2.4 GHz`
+
+Device: `AXIS THOR 2400TX`
+
+![via WiFi](../../assets/images/Method_TX_WiFi.png)
 
 !!! attention
-
     The methods below applies if you've already updated your Tx modules to 2.x. For modules still in firmwares pre 2.x, you should use 1.x WiFi flashing method to update to 2.x. Or update to 2.x via USB instead.
 
 ### Method 1
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `AXIS_THOR_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+
+![Build](../../assets/images/Build.png)
+
+Once it's done, it should open the Target folder for you where the `AXIS_THOR_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 The next steps will require the [ExpressRLS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as). Download the ExpressLRS lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's proper connection with the radio (see the [Radio Preparation](tx-prep.md) page). Execute the ExpressLRS lua script by pressing "System Menu" in your radio and then under Tools, select `ExpressLRS`.
 
@@ -31,19 +38,27 @@ Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**
 
 Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `AXIS_THOR_2400_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
 
-Once the file is uploaded, a pop-up confirmation will show up. Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+Once the file is uploaded, a pop-up confirmation will show up.
+
+![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
+
+Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
 
 Verify the version and hash in the main screen of ExpressLRS Lua script.
 
-**Update for version 2.0**
+**Join Local Network**
 
-Once you have updated to firmware version 2.0 or newer, the Web Update page on the Hotspot will get a few updates of its own. It will get the Update progress bar, and a Popup will be shown for Success or Error messages. Additionally, you can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the two methods below.
+You can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the next two methods below.
 
 ![JoinNetwork](../../assets/images/web-joinnetwork.png)
 
 ### Method 2
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator. Once it's done, it should open the Target folder for you where the `AXIS_THOR_2400_TX-<version>` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+
+![Build](../../assets/images/Build.png)
+
+Once it's done, it should open the Target folder for you where the `AXIS_THOR_2400_TX-<version>` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 Using the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in Join Network section of the Update Page, it will connect to the local network automatically.
 
@@ -61,23 +76,30 @@ Using the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/
 
 Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options]. Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
 
+![Build & Flash](../../assets/images/BuildFlash.png)
+
 ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
 
 Verify the version and hash in the main screen of ExpressLRS Lua script.
 
 ## Flashing via USB/UART
 
-Targets: 
+Target: `AXIS_THOR_2400_TX_via_UART`
 
-- `AXIS_THOR_2400_TX_via_UART`
+Device Category: `AXIS 2.4 GHz`
+
+Device: `AXIS THOR 2400TX`
+
+![via UART](../../assets/images/Method_TX_UART.png)
 
 Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized. 
 
 !!! note
-
     To flash the TX itself, the switch on the back side of the module must be set to the **leftmost** position. To flash the TX backpack, the switch must be set to the **rightmost** position. For normal operation the switch must be **centered**. 
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
 
 Verify the version and hash in the main screen of ExpressLRS Lua script.
 

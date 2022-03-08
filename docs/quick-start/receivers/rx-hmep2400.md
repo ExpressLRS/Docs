@@ -8,6 +8,12 @@ template: main.html
 
 Target: `HappyModel_EP_2400_RX_via_WIFI`
 
+Device Category: `Happymodel 2.4 GHz`
+
+Device: `HappyModel EP 2400 RX`
+
+![via WiFi](../../assets/images/Method_RX_WiFi.png)
+
 ### Method 1
 
 **(Recommended as first-flash method)**
@@ -19,9 +25,17 @@ Target: `HappyModel_EP_2400_RX_via_WIFI`
 
 **Build** the firmware using the ExpressLRS Configurator using the correct Target and [Firmware Options]. Once done, it should open a new window where the `HappyModel_EP_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
+![Build](../../assets/images/Build.png)
+
 Power your Flight Controller by either connecting a LiPo or attaching the USB cable (if receiver gets powered from USB via a 4v5 pad). Receiver's LED will blink slow at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Hotspot Mode.
 
-Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same `expresslrs` password as the TX Module Hotspot. Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `HappyModel_EP_2400_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
+![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+
+Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same `expresslrs` password as the TX Module Hotspot.
+
+![WiFi Hotspot](../../assets/images/WifiHotspot.png)
+
+Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `HappyModel_EP_2400_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
 
 A white page should load momentarily with the message **Update Success! Rebooting...**. Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated. Power cycle and your module and receiver should now be bound (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
 
@@ -40,7 +54,11 @@ With the receiver [wired properly] to your FC, select the right target and set y
 
 **Build** the firmware. Once done, it should open a new window where the `HappyModel_EP_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
+![Build](../../assets/images/Build.png)
+
 Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi AP Mode. The fast blink will pause and flash fast once again, indicating connection to your Home Network.
+
+![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
 
 Using your browser, navigate to http://elrs_rx.local/. The Wifi Update page should load. It should show your device target along with the version of the firmware it currently has.
 
@@ -63,13 +81,23 @@ With the receiver [wired properly] to your FC, select the right target and set y
 
 Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Mode.
 
+![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+
 **Build & Flash** the firmware using the ExpressLRS Configurator. Wait for the process to complete, indicated by the "Success" prompt and the Receiver LED has gone back to the Slow Blink mode. You can now power down the Flight Controller.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
 
 ![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
 
 ## Flashing via Passthrough
 
 Target: `HappyModel_EP_2400_RX_via_BetaflightPassthrough`
+
+Device Category: `Happymodel 2.4 GHz`
+
+Device: `HappyModel EP 2400 RX`
+
+![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
 
 [Wire up your receiver] to a free uart in your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
 
@@ -82,15 +110,25 @@ Bridging the `Boot` pads is no longer needed past 1.0.0-RC6.
 
 Power your FC with a LiPo, or if receiver is powered via USB (receiver is connected to a 4v5 pad), connect the FC to your USB port. Using the ExpressLRS Configurator, with the correct Target selected and [Firmware Options] set, click on **Build & Flash**. Wait for the process to finish and you should be greeted with the "Success" banner.
 
+![Build & Flash](../../assets/images/BuildFlash.png)
+
 Unplug USB and LiPo, and removed the solder on the bridged `Boot` pads. You no longer need it (past 1.0.0-RC6). Power your TX Module and then your FC to verify you are bound and has connection.
 
 ## Flashing via FTDI
 
 Target: `HappyModel_EP_2400_RX_via_UART`
 
+Device Category: `Happymodel 2.4 GHz`
+
+Device: `HappyModel EP 2400 RX`
+
+![via UART](../../assets/images/Method_RX_UART.png)
+
 Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the FTDI, and RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Short the boot pad while powering the RX on, and release - the LED should now be solid.
 
 Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
 
 [Firmware Options]: ../firmware-options.md
 [wired properly]: rx-fcprep.md#happymodel-ep1-ep2-pp
