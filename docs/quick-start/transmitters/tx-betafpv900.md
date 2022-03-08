@@ -44,11 +44,7 @@ Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**
 
 Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `BETAFPV_900_TX-<version>.bin` or `BETAFPV_900_TX_MICRO-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
 
-Once the file is uploaded, a pop-up confirmation will show up.
-
-![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
-
-Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+Once the file is uploaded, a pop-up confirmation will show up. Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
 
 Verify the version and hash in the main screen of ExpressLRS Lua script.
 
@@ -105,6 +101,8 @@ Device:
 ![via UART](../../assets/images/Method_TX_UART.png)
 
 Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
+
+![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 

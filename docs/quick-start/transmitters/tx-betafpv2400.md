@@ -109,6 +109,8 @@ Device:
 
 Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
 
+![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
+
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
 ![Build & Flash](../../assets/images/BuildFlash.png)
