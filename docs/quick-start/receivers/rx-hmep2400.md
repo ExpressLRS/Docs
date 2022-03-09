@@ -101,7 +101,7 @@ Device: `HappyModel EP 2400 RX`
 
 [Wire up your receiver] to a free uart in your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
 
-You will need to bridge the `Boot` pads on the receiver the first time you'll be updating via this method. The above wiring guide shows where the `Boot` pads are. A solid LED indicates the receiver is in `Bootloader` mode when the TX module is OFF (Solid LED also indicates Radio+module & Receiver is bound and has connection). 
+You will need to bridge the `Boot` pads on the receiver the first time you'll be updating via this method. The [Wiring Guide] shows where the `Boot` pads are. A solid LED indicates the receiver is in `Bootloader` mode when the TX module is OFF (Solid LED also indicates Radio+module & Receiver is bound and has connection). 
 
 !!! attention ""
     Note: if you haven't bridged the `Boot` pads but the receiver has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
@@ -133,3 +133,4 @@ Select the target and set your [Firmware Options] and once done, click on **Buil
 [Firmware Options]: ../firmware-options.md
 [wired properly]: rx-fcprep.md#happymodel-ep1-ep2-pp
 [Wire up your receiver]: rx-fcprep.md#happymodel-ep1-ep2-pp
+[Wiring Guide]: rx-fcprep.md#happymodel-ep1-ep2-pp
