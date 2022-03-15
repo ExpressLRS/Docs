@@ -23,12 +23,12 @@ Some Radios/Transmitters will require the Inverter/[Crossfire Mod](https://blog.
 
 | Radio | Baud Rate | Inverter/Crossfire Mod | R9M ACCST MOD |  Other Notes |
 |---|---|---|---|
-| X9D | 400000 | Not Needed | Needed | See [Troubleshooting](./x9d-troubleshooting.md) |
-| X10S Express | 400000 | Not Needed | Needed | - |
-| X10S | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | Needed | - |
-| X12 | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | Needed | - |
-| QX7 | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | Needed | See [Troubleshooting](./x9d-troubleshooting.md) |
+| X9D | 400000 | Not Needed | Required | See [Troubleshooting](./x9d-troubleshooting.md) |
+| X10S Express | 400000 | Not Needed | Required | - |
+| X10S | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | Required | - |
+| X12 | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | Required | - |
+| QX7 | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | Required | See [Troubleshooting](./x9d-troubleshooting.md) |
 | QX7 | 115200 | Not Needed | Not Needed | Max Packet Rate supported is 250Hz |
-| Others | 400000+ | Not Needed | Needed | TX16S, TX12, T16/T18, etc |
+| Others | 400000+ | Not Needed | Required | TX16S, TX12, T16/T18, etc |
 
 `ACCESS` radios doesn't need the Inverter/Crossfire mod.
