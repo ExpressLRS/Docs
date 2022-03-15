@@ -8,9 +8,9 @@ template: main.html
 This page explain the more technical side for debugging things yourself.
 
 ## LUA Status
-in normal state, the top right corner of the LUA will display `-` or `C` for RX connection status. in Warning or Critical Warning, the top right corner of the LUA will display a number to debug. as the LUA title will only show the current most critical warning only.
+In normal state, the top right corner of the LUA will display `-` or `C` for RX connection status. in Warning or Critical Warning, the top right corner of the LUA will display a number to debug. As the LUA title will only show the current most critical warning only.
 
-converting the number on the top right corner to bits, you can decode the on going warnings.
+Converting the number on the top right corner to bits, you can decode the on going warnings.
 
 | Bit | Status | Solution |
 | ---- | -------------------------------- | ----------------------------------------------------------------- |
