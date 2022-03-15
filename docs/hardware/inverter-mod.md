@@ -4,7 +4,7 @@ template: main.html
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
-- To benefit from the higher bitrate of 400 kilobit per second using `OpenTX` you need to **add a pullup resistor to the inverter** of the serial port on the R9M 2018🗻🆙
+- To benefit from the higher bitrate of 400 kilobit per second using `OpenTX`/`EdgeTX` you need to **add a pullup resistor to the inverter** of the serial port on the R9M 2018🗻🆙
 - Strongly suggested to be done for anybody looking for higher than standard packet rates using `ExpressLRS` 🔮
 
 ## Identification
@@ -19,9 +19,15 @@ Easy - connect a **300Ω to 1000Ω resistor** between the `3.3V` and inverter pi
 
 ## Transmitter Notes
 
-- `X9D` **only** does 400 kbit/s and __does not allow__ lowering the bitrate to 115200 bit/s - 400k Mod is not required.
-- `X10S Express` 400k Mod is not required.
-- `X10S` **[modification is required](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/)** 🙅 
-- `X12` **[modification is required](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/)** 🙅 
-- `QX7` allows configuration of the bitrate in the OpenTX hardware menu.  ELRS will work fine using 115200 bit/s but the **[modification is required](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/)** for 400 kbit/s 🙅‍♀️
-- The modification is **not** needed for `ACCESS` radios
+Some Radios/Transmitters will require the Inverter/[Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) depending on the Baud Rate you want to use or you can use. 
+
+| Radio | Baud Rate | Inverter/Crossfire Mod | Other Notes |
+|---|---|---|---|
+| X9D | 400000 | Not Needed | See [Troubleshooting](./x9d-troubleshooting.md) |
+| X10S Express | 400000 | Not Needed | - |
+| X10S | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | - |
+| X12 | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | - |
+| QX7 | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | See [Troubleshooting](./x9d-troubleshooting.md) |
+| QX7 | 115200 | Not Needed | Max Packet Rate supported is 250Hz |
+
+`ACCESS` radios doesn't need the Inverter/Crossfire mod.
