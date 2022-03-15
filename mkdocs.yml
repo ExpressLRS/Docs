@@ -222,6 +222,7 @@ nav:
       - Signal Health: info/signal-health.md
       - Telemetry Bandwidth: info/telem-bandwidth.md
       - Long Range Competition: info/long-range.md
+      - Advance Technical Info: info/advance-technical-info.md
   - FAQ: faq.md
 
 extra_javascript:
