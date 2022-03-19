@@ -63,6 +63,7 @@ Anyone can add an entry to the table, and entries should include the:
 | 10.85Km   | 2.4G | 50Hz     | 250mW    | Wing |  No | Stavros       | [Link](https://youtu.be/tZvrAGST8tQ)                      |
 | 6Km | 2.4G | 500HZ | 250mW | Wing | No | Spec | [Link](https://www.youtube.com/watch?v=bVJaiqJq8gY) |
 | 4.77Km | 900M | 200HZ | 250mW | Quad | No | DaBit | [Link](https://www.youtube.com/watch?v=k0lY0XwB6Ko) |
+| 1.78Km | 2.4G | 250HZ | 250mW | Quad | No | Thujones | [Link](https://www.youtube.com/watch?v=jhWQvomcCLU) |
 
 ### 500mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
