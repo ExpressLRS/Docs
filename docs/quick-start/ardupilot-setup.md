@@ -40,5 +40,7 @@ RSSI_TYPE = 3 (ReceiverProtocol)
 
 and go to your OSD tab, and place your RSSI and LQ element where you want them to be.
 
+If you feel any delay / lagg in the control, check the RX connection to the Flight Controller.
+On some Flight Controllers you have to use full DMA supported input pin.
 
 Happy Flying! :airplane:
