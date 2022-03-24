@@ -10,7 +10,7 @@ template: main.html
 
 Check whether you have wired the receiver correctly and that Rx and Tx wires aren't swapped.
 
-Also check that you have the correct SerialRX configuration. You might want to revisit the [FC Preparation](receivers/rx-fcprep.md) page for the Flight Controller setup.
+Also check that you have the correct SerialRX configuration. You might want to revisit the [FC Preparation](receivers/rx-fcprep.md#serial-rx-setup) page for the Flight Controller setup.
 
 Also make sure that the UART where you connected the receiver doesn't have inversion and it's in full duplex mode. You can also try a different UART.
 
