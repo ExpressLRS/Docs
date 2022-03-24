@@ -37,8 +37,8 @@ The ExpressLRS GSoD project will:
 We estimate that this work will take 4-6 months to complete.
 
 Work that is out-of-scope of ELRS project:
-In-depth PID Tuning of RC vehicles (Multicopter, Fixed - Wing, Boat, Rover).
-Auxiliary function of RC vehicles (Mapping, Package Delivery, Pest Control Drone, Weaponry).
+- In-depth PID Tuning of RC vehicles (Multicopter, Fixed - Wing, Boat, Rover).
+- Auxiliary function of RC vehicles (Mapping, Package Delivery, Pest Control Drone, Weaponry).
 
 ## Measuring project’s success
 
