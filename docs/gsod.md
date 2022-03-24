@@ -44,7 +44,7 @@ Work that is out-of-scope of ELRS project:
 
 The ELRS project runs a [Facebook group](https://www.facebook.com/groups/636441730280366) (8.4k users at time of application) and [Discord Server](https://discord.gg/dS6ReFY) (8.1k users at time of application) to help users troubleshoot setup issues.  A milestone of this work will be to see the number of users posting setup issues reduced, and to have documentation for all common issues presented in a user first perspective and mindset.
 
-The project would be a success if we could provide a link to users for 90% of non software related bug issues.
+The project would be a success if we could provide a link to users for 90% of new user questions.
 
 ELRS Developers also volunteer a lot of time communicating with commercial manufacturers.  For a majority of the manufacturers English is not their native language and current ELRS documentation may be confusing.  A long term goal of the project is to minimise design errors in commercial hardware releases.
 
