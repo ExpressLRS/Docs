@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/2.0/gsod/</loc>
+         <lastmod>2022-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/2.0/hardware/fan-mod/</loc>
          <lastmod>2022-03-24</lastmod>
          <changefreq>daily</changefreq>
