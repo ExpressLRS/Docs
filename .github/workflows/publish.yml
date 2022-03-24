@@ -24,7 +24,7 @@ jobs:
           path: .cache  
           
       - name: Install Dependencies
-        run: pip install mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike jinja2
+        run: pip install mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike "jinja2==3.0.3"
 
       - name: Install MkDocs Insiders
         if: github.event.repository.fork == false
