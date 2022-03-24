@@ -224,7 +224,6 @@ nav:
       - Long Range Competition: info/long-range.md
       - Advance Technical Info: info/advance-technical-info.md
   - FAQ: faq.md
-  - GSoD: gsod.md
 
 extra_javascript:
   - assets/javascripts/binding-phrase.js
