@@ -30,6 +30,9 @@ Next, flash the `.frk` via the `S.port` flashing option in `OpenTX`. :zap: (It h
 
 Unplug the receiver, and your bootloader is flashed.
 
+!!! info "FYI"
+    You only need to flash the Bootloader ONCE. After it's flashed into the receiver, you **don't** have to reflash it in every update.
+
 ## Troubleshooting No Sync
 
 - Setting the External RF module to `PPM` mode helps.

@@ -16,6 +16,9 @@ template: main.html
 
 The bootloader is required to be flashed first prior to flashing the ExpressLRS firmware as the bootloader will replace the factory-bootloader, and enable the hardware to instead use the ExpressLRS code.
 
+!!! info "FYI"
+    You only need to flash the Bootloader ONCE. After it's flashed into the receiver, you **don't** have to reflash it in every update.
+
 Using an `OpenTX` transmitter, you flash the bootloader, and then flash ELRS.
 
 Here is a quick 2 minute demo if you would rather watch a video than read the steps:
