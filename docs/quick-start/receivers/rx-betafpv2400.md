@@ -10,7 +10,7 @@ Target: `BETAFPV_Nano_2400_RX_via_BetaflightPassthrough`
 
 Device Category: `BETAFPV 2.4 GHz`
 
-Device: `BETAFPV Nano 2400 RX`
+Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower), `BETAFPV Flat 2400 RX` (Flattie)
 
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
 
@@ -37,7 +37,7 @@ Target: `BETAFPV_Nano_2400_RX_via_WIFI`
 
 Device Category: `BETAFPV 2.4 GHz`
 
-Device: `BETAFPV Nano 2400 RX`
+Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower), `BETAFPV Flat 2400 RX` (Flattie)
 
 ![via WiFi](../../assets/images/Method_RX_WiFi.png)
 
@@ -117,7 +117,7 @@ Target: `BETAFPV_Nano_2400_RX_via_UART`
 
 Device Category: `BETAFPV 2.4 GHz`
 
-Device: `BETAFPV Nano 2400 RX`
+Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower), `BETAFPV Flat 2400 RX` (Flattie)
 
 ![via UART](../../assets/images/Method_RX_UART.png)
 
