@@ -6,11 +6,11 @@ template: main.html
 
 ## Flashing via Passthrough
 
-Target: `BETAFPV_2400_RX_via_BetaflightPassthrough`
+Target: `BETAFPV_Nano_2400_RX_via_BetaflightPassthrough`
 
 Device Category: `BETAFPV 2.4 GHz`
 
-Device: `BETAFPV 2400 RX`
+Device: `BETAFPV Nano 2400 RX`
 
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
 
@@ -33,11 +33,11 @@ A `Success` message will be shown once the process is complete.
 
 ## Flashing via WiFi
 
-Target: `BETAFPV_2400_RX_via_WIFI`
+Target: `BETAFPV_Nano_2400_RX_via_WIFI`
 
 Device Category: `BETAFPV 2.4 GHz`
 
-Device: `BETAFPV 2400 RX`
+Device: `BETAFPV Nano 2400 RX`
 
 ![via WiFi](../../assets/images/Method_RX_WiFi.png)
 
@@ -45,7 +45,7 @@ Device: `BETAFPV 2400 RX`
 
 With the receiver [wired] properly to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
 
-**Build** the firmware. Once done, it should open a new window where the `BETAFPV_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware. Once done, it should open a new window where the `BETAFPV_Nano_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
@@ -57,7 +57,7 @@ Connect to the Wifi Network the receiver has created. It should be named somethi
 
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
 
-Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `BETAFPV_2400_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
+Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `BETAFPV_Nano_2400_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
 
 A white page should load momentarily with the message **Update Success! Rebooting...**. Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated. Power cycle and your module and receiver should now be bound (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
 
@@ -74,7 +74,7 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
-**Build** the firmware. Once done, it should open a new window where the `BETAFPV_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware. Once done, it should open a new window where the `BETAFPV_Nano_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
@@ -88,7 +88,7 @@ Scroll down to the Firmware Update section, shown below:
 
 ![Firmware Update](../../assets/images/web-firmwareupdate.png)
 
-Drag-and-drop the `BETAFPV_2400_RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
+Drag-and-drop the `BETAFPV_Nano_2400_RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
 
 Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated.
 
@@ -113,11 +113,11 @@ Power up your Flight Controller by either connecting a LiPo or attaching the USB
 
 ## Flashing via FTDI
 
-Target: `BETAFPV_2400_RX_via_UART`
+Target: `BETAFPV_Nano_2400_RX_via_UART`
 
 Device Category: `BETAFPV 2.4 GHz`
 
-Device: `BETAFPV 2400 RX`
+Device: `BETAFPV Nano 2400 RX`
 
 ![via UART](../../assets/images/Method_RX_UART.png)
 
