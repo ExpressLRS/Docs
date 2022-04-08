@@ -9,11 +9,14 @@ template: main.html
 !!! info ""
     This method is the result of the collaborative effort between EdgeTX, RadioMaster and ExpressLRS.
 
-Target: `RadioMaster_Zorro_2400_TX_via_ETX`
+Targets:
+
+- `RadioMaster_Zorro_2400_TX_via_ETX`
+- `RadioMaster_TX16S_2400_TX_via_ETX`
 
 Device Category: `RadioMaster 2.4 GHz`
 
-Device: `RadioMaster Zorro 2400 TX`
+Device: `RadioMaster Zorro 2400 TX`, `RadioMaster TX16S 2400 TX`
 
 With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` in the option window that pops up. 
 
@@ -45,11 +48,14 @@ Unplug the USB and verify with the [ExpressLRS Lua Script](https://github.com/Ex
 
 ## Flashing via Wifi
 
-Target: `RadioMaster_Zorro_2400_TX_via_WIFI`
+Targets:
+
+- `RadioMaster_Zorro_2400_TX_via_WIFI`
+- `RadioMaster_TX16S_2400_TX_via_WIFI`
 
 Device Category: `RadioMaster 2.4 GHz`
 
-Device: `RadioMaster Zorro 2400 TX`
+Device: `RadioMaster Zorro 2400 TX`, `RadioMaster TX16S 2400 TX`
 
 ![via WiFi](../../assets/images/Method_intTX_WiFi.png)
 
@@ -59,7 +65,7 @@ With the correct target selected and [Firmware Options] set, **Build** your firm
 
 ![Build](../../assets/images/Build.png)
 
-Once it's done, it should open the Target folder for you where the `RadioMaster_Zorro_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+Once it's done, it should open the Target folder for you where the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 Execute the ExpressLRS lua script by pressing "System Menu" in your radio and then under Tools, select `ExpressLRS`. If the ExpressLRS Lua Script is not in the list, download it from [here](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
 
@@ -69,7 +75,7 @@ Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**
 
 ![Lua3](../../assets/images/lua/wifi-bw.png)
 
-Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `RadioMaster_Zorro_2400_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
+Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
 
 ![Firmware Update](../../assets/images/web-firmwareupdate.png)
 
@@ -93,7 +99,7 @@ With the correct target selected and [Firmware Options] set, **Build** your firm
 
 ![Build](../../assets/images/Build.png)
 
-Once it's done, it should open the Target folder for you where the `RadioMaster_Zorro_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+Once it's done, it should open the Target folder for you where the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
 Using the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in Join Network section of the Update Page, it will connect to the local network automatically.
 
@@ -103,7 +109,7 @@ Using your browser, navigate to http://elrs_tx.local and the WiFi Update page sh
 
 ![Firmware Update](../../assets/images/web-firmwareupdate.png)
 
-Drag-and-drop the `RadioMaster_Zorro_2400_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and once the file is uploaded, a pop-up confirmation will show up.
+Drag-and-drop the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and once the file is uploaded, a pop-up confirmation will show up.
 
 ![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
 
