@@ -78,4 +78,10 @@ Using the correct target specific for your receiver, set your [Firmware Options]
 
 Once done, wire your receiver to your Flight Controller. Passthrough flashing can now be used for updating the receiver.
 
+Here's the pinout for the R9 Slim:
+
+![R9 Slim](../../assets/images/R9SlimConnection.jpg)
+
+Wire the RX (CH5) to a TX pad in the FC and the TX (CH6) to an RX pad in the FC. And connect power as normal.
+
 [Firmware Options]: ../firmware-options.md
