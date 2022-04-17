@@ -88,7 +88,7 @@ Okay, breathe. The module is recoverable.
 
 You will need a couple of files:
 
-1. An EdgeTX binary that allows you to use the USB port on the radio to reflash the module. Download it from [here](../../assets/recovery/tpro-ada778ee4.bin) (Right-click, Save-as) and save it into your Jumper T-Pro SD Card `/firmware` folder.
+1. An EdgeTX binary that allows you to use the USB port on the radio to reflash the module. Download it from [here](../../assets/recovery/tpro-ada778ee4.bin) (Right-click, Save-as) and save it into your Jumper T-Pro SD Card `/firmware` folder. **NOTE** if your radio is already updated to EdgeTX 2.7.0, this package is no longer needed.
 2. A zip file with all the recovery scripts and firmwares. Download it from [here](../../assets/recovery/jumper-recover.zip) (Right-click, Save-as) and extract it into a folder in your harddrive. If you want your `Binding Phrase` and other [Firmware Options] set for you when you flash via this method, **Build** your `firmware.bin` file first via the ExpressLRS Configurator and replace the `firmware.bin` in this folder.
 
 ### Procedure
@@ -134,7 +134,7 @@ Do not forget to reassemble the T-Pro. Let's hope you didn't lose a screw!
 You'll need the following:
 
 1. A piece of wire about 4" (10cm) in length.
-2. An EdgeTX Build that gives the `USB Serial(Debug)` option when a USB Data cable is connected. You can download it [here](../../assets/recovery/tpro-ada778ee4.bin) (Right-click, Save-as). Official support will be available for the Jumper T-pro once EdgeTX 2.6.1 is released.
+2. An EdgeTX Build that gives the `USB Serial(Debug)` option when a USB Data cable is connected. You can download it [here](../../assets/recovery/tpro-ada778ee4.bin) (Right-click, Save-as). **NOTE** if your radio is already updated to EdgeTX 2.7.0, this package is no longer needed.
 
 ### Procedure
 
