@@ -136,7 +136,7 @@ Device: `HappyModel RX ES915RX`
 
 ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
 
-Wire up your receiver to your STLink, shown [here](fcprep.md#happymodel-es915868rx-discontinued).
+Connect your STLink into `GND`, `DIO`, `CLK`, `3V3` of the receiver. These pads are marked clearly in the image above.
 
 Using the correct target specific for your receiver, set your [Firmware Options] and hit **Build & Flash** on the ExpressLRS Configurator.
 

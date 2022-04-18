@@ -155,9 +155,9 @@ nav:
             - DIY 2400TX: quick-start/transmitters/diy2400.md
           - Using The Lua Script: quick-start/transmitters/lua-howto.md
       - Receivers:
-          - Flashing Bootloader: quick-start/receivers/bootloader.md
           - Preparing for Passthrough Flashing: quick-start/receivers/fcprep.md
-          - Preparing for STLink Flashing: quick-start/receivers/stlink.md
+          - Configuring your FC: quick-start/receivers/configuring-fc.md
+          - Receiver Wiring: quick-start/receivers/wiring-up.md
           - Flashing Receivers:
             - Axis Thor: quick-start/receivers/axis-thor.md
             - BetaFPV Lite & Nano 2.4GHz: quick-start/receivers/betafpv2400.md
