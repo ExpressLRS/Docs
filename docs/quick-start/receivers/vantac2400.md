@@ -4,38 +4,60 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing via Wifi 
+## Flashing via Passthrough
 
-Target: `MATEK_2400_RX_via_WIFI`
+Target: `Vantac_2400_RX_via_BetaflightPassthrough`
 
-Device Category: `Matek 2.4 GHz`
+Device Category: `Vantac 2.4 GHz`
 
-Device : `Matek 2400 RX`
+Device : `Vantac 2400 RX`
+
+![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
+
+Make sure you have [wired] your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
+
+If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
+
+If the receiver needs a LiPo attached to get powered up, then Press and Hold the button on the receiver, attach a LiPo, then let go once the LED in the receiver stopped blinking and goes SOLID. Then connect your FC to USB.
+
+!!! attention ""
+    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
+
+These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
+
+Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options] and then click **Build and Flash**. For first time flashing/updating, it would normally take a while.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
+
+A `Success` message will be shown once the process is complete.
+
+## Flashing via WiFi
+
+Target: `Vantac_2400_RX_via_WIFI`
+
+Device Category: `Vantac 2.4 GHz`
+
+Device : `Vantac 2400 RX`
 
 ![via WiFi](../../assets/images/Method_RX_WiFi.png)
 
 ### Method 1
 
-**(Recommended as first-flash method)**
+With the receiver [wired] properly to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
 
-[Wire up your receiver] to a free UART on your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
-
-!!! attention ""
-    *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
-
-**Build** the firmware using the ExpressLRS Configurator using the correct Target and [Firmware Options]. Once done, it should open a new window where the `MATEK_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware. Once done, it should open a new window where the `Vantac_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
-Power your Flight Controller by either connecting a LiPo or attaching the USB cable (if receiver gets powered from USB via a 4v5 pad). Receiver's LED will blink slow at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Hotspot Mode.
+Power your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Hotspot Mode.
 
 ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
 
-Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same `expresslrs` password as the TX Module Hotspot.
+Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same *expresslrs* password as the TX Module Hotspot.
 
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
 
-Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `MATEK_2400_RX-<version>.bin` is (you can drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
+Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `Vantac_2400_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
 
 A white page should load momentarily with the message **Update Success! Rebooting...**. Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated. Power cycle and your module and receiver should now be bound (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
 
@@ -52,7 +74,7 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
-**Build** the firmware. Once done, it should open a new window where the `MATEK_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware. Once done, it should open a new window where the `Vantac_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
@@ -66,7 +88,7 @@ Scroll down to the Firmware Update section, shown below:
 
 ![Firmware Update](../../assets/images/web-firmwareupdate.png)
 
-Drag-and-drop the `MATEK_2400_RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
+Drag-and-drop the `Vantac_2400_RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
 
 Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated.
 
@@ -89,36 +111,13 @@ Power up your Flight Controller by either connecting a LiPo or attaching the USB
 
 ![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
 
-## Flashing via Passthrough
+## Flashing via FTDI
 
-Target: `MATEK_2400_RX_via_BetaflightPassthrough`
+Target: `Vantac_2400_RX_via_UART`
 
-Device Category: `Matek 2.4 GHz`
+Device Category: `Vantac 2.4 GHz`
 
-Device : `Matek 2400 RX`
-
-![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
-
-[Wire up your receiver] to a free uart in your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
-
-Power your FC with a LiPo, or if receiver is powered via USB (receiver is connected to a 4v5 pad), connect the FC to your USB port.
-
-!!! attention ""
-    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
-
-Using the ExpressLRS Configurator, with the correct Target selected and [Firmware Options] set, click on **Build & Flash**. Wait for the process to finish and you should be greeted with the "Success" banner.
-
-![Build & Flash](../../assets/images/BuildFlash.png)
-
-Unplug USB and/or LiPo. Power your TX Module and then your FC to verify you are bound and has connection.
-
-## Flashing via UART
-
-Target: `MATEK_2400_RX_via_UART`
-
-Device Category: `Matek 2.4 GHz`
-
-Device : `Matek 2400 RX`
+Device : `Vantac 2400 RX`
 
 ![via UART](../../assets/images/Method_RX_UART.png)
 
@@ -129,5 +128,5 @@ Select the target and set your [Firmware Options] and once done, click on **Buil
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 [Firmware Options]: ../firmware-options.md
-[wired properly]: rx-fcprep.md#mateksys-receivers
-[Wire up your receiver]: rx-fcprep.md#mateksys-receivers
+[wired]: fcprep.md#betafpv-receivers
+[wired properly]: fcprep.md#betafpv-receivers

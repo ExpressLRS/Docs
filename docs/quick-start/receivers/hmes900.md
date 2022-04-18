@@ -4,48 +4,39 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing via Passthrough
+## ES900RX
 
-Target: `BETAFPV_Nano_2400_RX_via_BetaflightPassthrough`
+### Flashing via Passthrough
 
-Device Category: `BETAFPV 2.4 GHz`
+Target: `HappyModel_RX_ES900RX_via_BetaflightPassthrough`
 
-Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
+Device Category: `Happymodel 900 MHz`
+
+Device: `HappyModel RX ES900RX`
 
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
 
-Make sure you have [wired] your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
+![ES900RX](../../assets/images/es900rx-conn.png)
 
-If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
+With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator, then click on **Build and Flash**. First time compiles naturally takes a while but if you do the prep work properly, you'll be greeted with the `Success` message soon enough!
 
-If the receiver needs a LiPo attached to get powered up, then Press and Hold the button on the receiver, attach a LiPo, then let go once the LED in the receiver stopped blinking and goes SOLID. Then connect your FC to USB.
+### Flashing via Wifi
 
-!!! attention ""
-    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
+Target: `HappyModel_RX_ES900RX_via_Wifi`
 
-These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
+Device Category: `Happymodel 900 MHz`
 
-Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options] and then click **Build and Flash**. For first time flashing/updating, it would normally take a while.
-
-![Build & Flash](../../assets/images/BuildFlash.png)
-
-A `Success` message will be shown once the process is complete.
-
-## Flashing via WiFi
-
-Target: `BETAFPV_Nano_2400_RX_via_WIFI`
-
-Device Category: `BETAFPV 2.4 GHz`
-
-Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
+Device: `HappyModel RX ES900RX`
 
 ![via WiFi](../../assets/images/Method_RX_WiFi.png)
 
-### Method 1
+#### Method 1
 
-With the receiver [wired] properly to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
+**(Recommended as first-flash method)**
 
-**Build** the firmware. Once done, it should open a new window where the `BETAFPV_Nano_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
+
+**Build** the firmware. Once done, it should open a new window where the `HappyModel_RX_ES900RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
@@ -57,7 +48,7 @@ Connect to the Wifi Network the receiver has created. It should be named somethi
 
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
 
-Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `BETAFPV_Nano_2400_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
+Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `HappyModel_RX_ES900RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
 
 A white page should load momentarily with the message **Update Success! Rebooting...**. Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated. Power cycle and your module and receiver should now be bound (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
 
@@ -67,14 +58,14 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 ![JoinNetwork](../../assets/images/web-joinnetwork.png)
 
-### Method 2
+#### Method 2
 
 !!! note ""
     Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
 
 With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
-**Build** the firmware. Once done, it should open a new window where the `BETAFPV_Nano_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware. Once done, it should open a new window where the `HappyModel_RX_ES900RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
@@ -88,13 +79,13 @@ Scroll down to the Firmware Update section, shown below:
 
 ![Firmware Update](../../assets/images/web-firmwareupdate.png)
 
-Drag-and-drop the `BETAFPV_Nano_2400_RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
+Drag-and-drop the `HappyModel_RX_ES900RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
 
 Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated.
 
 You can now power down your Flight Controller along with the receiver.
 
-### Method 3
+#### Method 3
 
 !!! note ""
     Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
@@ -111,22 +102,47 @@ Power up your Flight Controller by either connecting a LiPo or attaching the USB
 
 ![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
 
-## Flashing via FTDI
+## ES915/868RX (Discontinued)
 
-Target: `BETAFPV_Nano_2400_RX_via_UART`
+### Flashing via Passthrough
 
-Device Category: `BETAFPV 2.4 GHz`
+Target: `HappyModel_RX_ES915RX_via_BetaflightPassthrough`
 
-Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
+Device Category: `Happymodel 900 MHz`
 
-![via UART](../../assets/images/Method_RX_UART.png)
+Device: `HappyModel RX ES915RX`
 
-Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the FTDI, and RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Press the button while powering the RX on, and release - the LED should now be solid.
+![stm Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
 
-Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
+![ES915RX](../../assets/images/ES915rx.jpg)
+
+Once [wired properly](rx-fcprep.md#happymodel-es915868rx-discontinued) to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
+
+If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your [Firmware Options] set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
 
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
+Once `Retry... ` lines appear, connect a LiPo if your receiver isn't powered by the USB (i.e. power up your receiver and FC). On subsequent flash, you can have the LiPo plugged in and receiver powered up from the start.
+
+Wait for this process to finish. It's done once the "Success" prompt is shown.
+
+### Flashing via STLink
+
+Target: `HappyModel_RX_ES915RX_via_STLINK`
+
+Device Category: `Happymodel 900 MHz`
+
+Device: `HappyModel RX ES915RX`
+
+![via STLink](../../assets/images/Method_RX_STLink-stm.png)
+
+Wire up your receiver to your STLink, shown [here](fcprep.md#happymodel-es915868rx-discontinued).
+
+Using the correct target specific for your receiver, set your [Firmware Options] and hit **Build & Flash** on the ExpressLRS Configurator.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
+
+Once done, wire your receiver to your Flight Controller. Passthrough flashing can now be used for updating the receiver.
+
 [Firmware Options]: ../firmware-options.md
-[wired]: rx-fcprep.md#betafpv-receivers
-[wired properly]: rx-fcprep.md#betafpv-receivers
+[wired properly]: fcprep.md#happymodel-es900rx

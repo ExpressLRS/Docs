@@ -128,5 +128,5 @@ Select the target and set your [Firmware Options] and once done, click on **Buil
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 [Firmware Options]: ../firmware-options.md
-[wired]: rx-fcprep.md#betafpv-receivers
-[wired properly]: rx-fcprep.md#betafpv-receivers
+[wired]: fcprep.md#betafpv-receivers
+[wired properly]: fcprep.md#betafpv-receivers

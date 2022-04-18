@@ -156,4 +156,4 @@ Select the target and set your [Firmware Options] and once done, click on **Buil
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 [Firmware Options]: ../firmware-options.md
-[wired properly]: rx-fcprep.md#namimnorc-voyager-flash
+[wired properly]: fcprep.md#namimnorc-voyager-flash

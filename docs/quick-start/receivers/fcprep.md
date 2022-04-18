@@ -21,7 +21,7 @@ template: main.html
 !!! attention ""
     Note: This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!
 
-After you've flashed the [bootloader](rx-bootloader.md) and wired your receiver as above, proceed to configure up your flight controller as shown [below].
+After you've flashed the [bootloader](bootloader.md) and wired your receiver as above, proceed to configure up your flight controller as shown [below].
 
 !!! note ""
     Note: R9 Slim requires flashing via STLink first. Passthrough should work for updates.
