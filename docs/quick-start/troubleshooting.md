@@ -10,7 +10,7 @@ template: main.html
 
 Check whether you have wired the receiver correctly and that Rx and Tx wires aren't swapped.
 
-Also check that you have the correct SerialRX configuration. You might want to revisit the [FC Preparation](receivers/fcprep.md#serial-rx-setup) page for the Flight Controller setup.
+Also check that you have the correct SerialRX configuration. You might want to revisit the [FC Preparation](receivers/configuring-fc.md#serial-rx-setup) page for the Flight Controller setup.
 
 Also make sure that the UART where you connected the receiver doesn't have inversion and it's in full duplex mode. You can also try a different UART.
 
@@ -97,7 +97,7 @@ Make sure you have disabled ADC Filter in your Radio Hardware settings.
 
 ### Invalid serial RX configuration detected
 
-This is often caused by incorrect Serial RX protocol (should be CRSF), or `serialrx_inverted = on` (should be off) or `serialrx_halfduplex=on` (should be off). The **Passthrough Init** section of the log will show you which setting should be corrected. See the [FC Preparation Guide](receivers/fcprep.md) for the correct settings.
+This is often caused by incorrect Serial RX protocol (should be CRSF), or `serialrx_inverted = on` (should be off) or `serialrx_halfduplex=on` (should be off). The **Passthrough Init** section of the log will show you which setting should be corrected. See the [FC Preparation Guide](receivers/configuring-fc.md) for the correct settings.
 
 ### RX Serial not found !!!!
 
@@ -113,8 +113,8 @@ This could also mean that the FC cannot be detected by the script. This could al
 
 This can be due to several things:
 
-- Incorrect bootloader is flashed or it's not flashed properly. This mainly happen on the R9 receivers. Go checkout [Bootloader Flashing Guide](receivers/bootloader.md).
-- Incorrect wiring. Make sure that Rx in the Receiver is connected to a Tx pad in the FC and the Tx in the Receiver is connected to an Rx pad in the FC. Also make sure receiver is getting enough voltage (min 4v5) from the FC or voltage supply. Wiring guide is [here](receivers/fcprep.md)
+- Incorrect bootloader is flashed or it's not flashed properly. This mainly happen on the R9 receivers. Go checkout [Bootloader Flashing Guide](receivers/r9.md#bootloaders).
+- Incorrect wiring. Make sure that Rx in the Receiver is connected to a Tx pad in the FC and the Tx in the Receiver is connected to an Rx pad in the FC. Also make sure receiver is getting enough voltage (min 4v5) from the FC or voltage supply. Wiring guide is [here](receivers/wiring-up.md)
 - Receiver is OFF. Check whether the LED on the receiver is lit, indicating it's powered and in working state.
 - The UART has hardware inversion. Make sure that the UART you've connected the receiver to is not an SBUS UART that's usually have hardware inversion (most common among F4 Flight Controllers). There are Flight controllers that require you bridge a pair of pads to enable or disable the Hardware inversion of an Rx pad. You can simply try a different UART.
 - The LED on the receiver is SOLID, while radio is off, could only mean that the Rx pad in the FC is being pulled LOW, putting the ESP-based receiver (EPs, ES900Rx, etc.) into Bootloader mode unintentionally, which will hinder normal passthrough operations. Feel free to try a different UART.
@@ -123,7 +123,7 @@ This can be due to several things:
 
 This can be due to several things:
 
-- Receiver is wired incorrectly. Please check if the Rx and Tx wires isn't swapped and connected Rx to Rx and Tx to Tx on the FC. Revisit the FC preparation page [here](receivers/fcprep.md).
+- Receiver is wired incorrectly. Please check if the Rx and Tx wires isn't swapped and connected Rx to Rx and Tx to Tx on the FC. Revisit the Receiver Wiring Guide [here](receivers/wiring-up.md).
 - The receiver's "boot" pads aren't bridged (or the button wasn't pressed and held during power up) for passthrough flashing. This is required for Passthrough flashing if the receiver is fresh from the packet and has a firmware version before 1.0.0-RC6.
 - The receiver uart is putting it in Bootloader mode and is interfering with passthrough flashing. Move it into another UART.
 
@@ -133,7 +133,7 @@ Please see the Flashing guide for your particular receiver using the Sidebar on 
 
 ### I updated via WiFi but now receiver won't work and has SOLID LED
 
-This is a sign that the Wifi flashing didn't go through properly due to premature power cycle. To fix this, you will have to bridge the boot pads (see [here](receivers/fcprep.md)) and reflash using the Passthrough method (**Telemetry** option on Betaflight/iNav set to `OFF`. This is important!) or using an FTDI adapter.
+This is a sign that the Wifi flashing didn't go through properly due to premature power cycle. To fix this, you will have to bridge the boot pads (see [here](receivers/wiring-up.md)) and reflash using the Passthrough method (**Telemetry** option on Betaflight/iNav set to `OFF`. This is important!) or using an FTDI adapter.
 
 This video shows the steps albeit using vscode development environment but the ExpressLRS Configurator will work just fine. 
 

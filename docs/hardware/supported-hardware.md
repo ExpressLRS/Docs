@@ -14,45 +14,45 @@ At the time of writing, here are the ExpressLRS-supported Transmitter Modules an
 
 ### Happymodel ES24Tx
 
-[Flashing Guide](../quick-start/transmitters/tx-es24tx.md)
+[Flashing Guide](../quick-start/transmitters/es24tx.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
 ### NamimnoRC Flash
 
-[Flashing Guide](../quick-start/transmitters/tx-flash2400.md)
+[Flashing Guide](../quick-start/transmitters/flash2400.md)
 
 ### Axis Thor TX
 
 Includes Color TFT display, built in motion sensor and thermally controlled fan
 
-[Flashing Guide](../quick-start/transmitters/tx-axis-thor.md)
+[Flashing Guide](../quick-start/transmitters/axis-thor.md)
 
 [Manufacturer Website](https://www.axisflying.com/product/axisflying-elrs-2-4g-module-thor-tx-pro-10-1000mw/)
 
 ### BetaFPV Nano 2.4GHz
 
-[Flashing Guide](../quick-start/transmitters/tx-betafpv2400.md)
+[Flashing Guide](../quick-start/transmitters/betafpv2400.md)
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-tx-module?variant=39416993382534)
 
 ### Jumper AION Nano TX
 
-[Flashing Guide](../quick-start/transmitters/tx-jumper-aion.md)
+[Flashing Guide](../quick-start/transmitters/jumper-aion.md)
 
 ### Vantac Lite TX
 
-[Flashing Guide](../quick-start/transmitters/tx-vantac-2400.md)
+[Flashing Guide](../quick-start/transmitters/vantac-lite.md)
 
 ### Ghost TX
 
-[Flashing Guide](../quick-start/transmitters/tx-ghost2400.md)
+[Flashing Guide](../quick-start/transmitters/ghost2400.md)
 
 *Note: STLink first time flash, irreversible*
 
 ### Siyi FM30
 
-[Flashing Guide](../quick-start/transmitters/tx-siyifm30.md)
+[Flashing Guide](../quick-start/transmitters/siyifm30.md)
 
 Max output power: 100mW default, 250mW with `UNLOCK_HIGHER_POWER`
 
@@ -62,55 +62,55 @@ To help find the right receiver for your needs, see the [Receiver Selection](rec
 
 ### Happymodel EP1 & EP2
 
-[Flashing Guide](../quick-start/receivers/rx-hmep2400.md)
+[Flashing Guide](../quick-start/receivers/hmep2400.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
 ### Happymodel PP
 
-[Flashing Guide](../quick-start/receivers/rx-hmpp2400.md)
+[Flashing Guide](../quick-start/receivers/hmpp2400.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
 ### NamimnoRC Flash
 
-[Flashing Guide](../quick-start/receivers/rx-flash2400.md)
+[Flashing Guide](../quick-start/receivers/flash2400.md)
 
 ### Axis Thor RX
 
-[Flashing Guide](../quick-start/receivers/rx-axis-thor.md)
+[Flashing Guide](../quick-start/receivers/axis-thor.md)
 
 [Manufacturer Website](https://www.axisflying.com/product/axisflying-elrs-2-4g-module-thor-tx-pro-10-1000mw/)
 
 ### BetaFPV Nano 2.4GHz
 
-[Flashing Guide](../quick-start/receivers/rx-betafpv2400.md)
+[Flashing Guide](../quick-start/receivers/betafpv2400.md)
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-receiver?variant=39416095408262)
 
 ### MatekSys 2.4GHz Receivers
 
-[Flashing Guide](../quick-start/receivers/rx-matek2400.md)
+[Flashing Guide](../quick-start/receivers/matek2400.md)
 
 [Manufacturer Website](http://www.mateksys.com/?portfolio=elrs-r24)
 
 ### Jumper AION Mini 2.4GHz Recievers
 
-[Flashing Guide](../quick-start/receivers/rx-jumper-aion.md)
+[Flashing Guide](../quick-start/receivers/jumper-aion.md)
 
 ### Vantac RX
 
-[Flashing Guide](../quick-start/receivers/rx-vantac-2400.md)
+[Flashing Guide](../quick-start/receivers/vantac2400.md)
 
 ### Ghost Atto Receivers
 
-[Flashing Guide](../quick-start/receivers/rx-ghost2400.md)
+[Flashing Guide](../quick-start/receivers/ghost2400.md)
 
 *Note: STLink first time flash, irreversible*
 
 ### Siyi FR Mini
 
-[Flashing Guide](../quick-start/receivers/rx-siyiFRmini.md)
+[Flashing Guide](../quick-start/receivers/siyiFRmini.md)
 
 Max telemetry power: 100mW default, 250mW with `UNLOCK_HIGHER_POWER`
 
@@ -120,7 +120,7 @@ Max telemetry power: 100mW default, 250mW with `UNLOCK_HIGHER_POWER`
 
 ### Frsky R9M (inc. Lite & Lite Pro)
 
-[Flashing Guide](../quick-start/transmitters/tx-r9m.md)
+[Flashing Guide](../quick-start/transmitters/frsky-r9modules.md)
 
 [Fan Mod](https://www.expresslrs.org/2.0/hardware/fan-mod/)
 
@@ -128,7 +128,7 @@ Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
 
 ### Happymodel ES900TX
 
-[Flashing Guide](../quick-start/transmitters/tx-es900tx.md)
+[Flashing Guide](../quick-start/transmitters/es900tx.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
@@ -136,11 +136,11 @@ Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
 
 ### NamimnoRC Voyager
 
-[Flashing Guide](../quick-start/transmitters/tx-voyager900.md)
+[Flashing Guide](../quick-start/transmitters/voyager900.md)
 
 ### BetaFPV Nano 900Mhz
 
-[Flashing Guide](../quick-start/transmitters/tx-betafpv900.md)
+[Flashing Guide](../quick-start/transmitters/betafpv900.md)
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-tx-module?variant=39416993415302)
 
@@ -154,25 +154,25 @@ Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
 - R9 Slim
 - R9 Slim+
 
-[Flashing Guide](../quick-start/receivers/rx-bootloader.md)
+[Flashing Guide](../quick-start/receivers/r9.md)
 
 ### Jumper R9 Mini
 
-[Flashing Guide](../quick-start/receivers/rx-jumper900.md)
+[Flashing Guide](../quick-start/receivers/jumper900.md)
 
 ### Happymodel ES900RX
 
-[Flashing Guide](../quick-start/receivers/rx-hmes900.md)
+[Flashing Guide](../quick-start/receivers/hmes900.md)
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/category/product/2-4g-system/elrs/)
 
 ### NamimnoRC Voyager
 
-[Flashing Guide](../quick-start/receivers/rx-voyager900.md)
+[Flashing Guide](../quick-start/receivers/voyager900.md)
 
 ### BetaFPV Nano 900Mhz
 
-[Flashing Guide](../quick-start/receivers/rx-betafpv900.md)
+[Flashing Guide](../quick-start/receivers/betafpv900.md)
 
 [Manufacturer Website](https://betafpv.com/products/elrs-nano-receiver?variant=39416095441030)
 

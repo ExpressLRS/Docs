@@ -124,5 +124,5 @@ Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the 
 Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
 
 [Firmware Options]: ../firmware-options.md
-[wired]: fcprep.md#betafpv-receivers
-[wired properly]: fcprep.md#betafpv-receivers
+[wired]: wiring-up.md#betafpv-receivers
+[wired properly]: wiring-up.md#betafpv-receivers

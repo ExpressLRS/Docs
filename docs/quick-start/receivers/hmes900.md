@@ -145,4 +145,4 @@ Using the correct target specific for your receiver, set your [Firmware Options]
 Once done, wire your receiver to your Flight Controller. Passthrough flashing can now be used for updating the receiver.
 
 [Firmware Options]: ../firmware-options.md
-[wired properly]: fcprep.md#happymodel-es900rx
+[wired properly]: wiring-up.md#happymodel-es900rx

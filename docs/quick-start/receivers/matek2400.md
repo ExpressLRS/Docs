@@ -129,5 +129,5 @@ Select the target and set your [Firmware Options] and once done, click on **Buil
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 [Firmware Options]: ../firmware-options.md
-[wired properly]: fcprep.md#mateksys-receivers
-[Wire up your receiver]: fcprep.md#mateksys-receivers
+[wired properly]: wiring-up.md#mateksys-receivers
+[Wire up your receiver]: wiring-up.md#mateksys-receivers
