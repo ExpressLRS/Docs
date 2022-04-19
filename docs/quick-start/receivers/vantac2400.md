@@ -18,7 +18,7 @@ Device : `Vantac 2400 RX`
 
 ### Method 1
 
-With the receiver [wired] properly to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
+With the receiver [wired properly] to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the `Vantac_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 

@@ -21,10 +21,6 @@ There are Flight Controllers that put their Receiver UART's RX pads Low, which i
 ![pull up](../../assets/images/pull-up.png)
 </figure>
 
-Also of note is that the EP receivers require their Boot pads (see figure above) be bridged on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the bridge needs to be removed, and is no longer needed for subsequent passthrough flashing.
-
-Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode and won't activate its WiFi Mode.
-
 ## Configuring your Flight Controller
 
 See this [page](configuring-fc.md) on how your flight controller should be configured. These settings apply on both INAV and Betaflight (and other flight controller software).

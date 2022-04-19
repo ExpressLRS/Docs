@@ -21,10 +21,6 @@ There are Flight Controllers that put their Receiver UART's RX pads Low, which i
 ![pull up](../../assets/images/pull-up.png)
 </figure>
 
-Also of note is that the EP receivers require their Boot pads (see figure above) be bridged on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the bridge needs to be removed, and is no longer needed for subsequent passthrough flashing.
-
-Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode and won't activate its WiFi Mode.
-
 ## Configuring your Flight Controller
 
 See this [page](configuring-fc.md) on how your flight controller should be configured. These settings apply on both INAV and Betaflight (and other flight controller software).
@@ -47,7 +43,7 @@ Device : `AXIS THOR 2400RX`
 
 ### Method 1
 
-With the receiver [wired] properly to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
+With the receiver [wired properly] to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the `AXIS_THOR_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
@@ -127,7 +123,7 @@ Device : `AXIS THOR 2400RX`
 
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
 
-Make sure you have [wired] your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
+Make sure you have your receiver [wired properly]. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
 
 If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
 
@@ -165,5 +161,4 @@ Select the target and set your [Firmware Options] and once done, click on **Buil
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 [Firmware Options]: ../firmware-options.md
-[wired]: #wiring-up-your-receiver
 [wired properly]: #wiring-up-your-receiver
