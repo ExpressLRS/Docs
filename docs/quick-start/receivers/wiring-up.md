@@ -80,7 +80,7 @@ Connect your FC to USB and configure your FC firmware as shown on the [next page
 
 <small>BetaFPV 2.4GHz ExpressLRS Receiver</small>
 
-![betafpv 2.4Ghz](../../assets/images/betaFPVrx2400.jpg)
+![betafpv 2.4Ghz](../../assets/images/betaFPVrx2400.png)
 
 Shown above are the pinouts and various components of the receivers. Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Don't forget to also wire up 5v(VCC) and Gnd.
 

@@ -4,32 +4,7 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing via Passthrough
 
-Target: `Vantac_2400_RX_via_BetaflightPassthrough`
-
-Device Category: `Vantac 2.4 GHz`
-
-Device : `Vantac 2400 RX`
-
-![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
-
-Make sure you have [wired] your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
-
-If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
-
-If the receiver needs a LiPo attached to get powered up, then Press and Hold the button on the receiver, attach a LiPo, then let go once the LED in the receiver stopped blinking and goes SOLID. Then connect your FC to USB.
-
-!!! attention ""
-    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
-
-These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
-
-Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options] and then click **Build and Flash**. For first time flashing/updating, it would normally take a while.
-
-![Build & Flash](../../assets/images/BuildFlash.png)
-
-A `Success` message will be shown once the process is complete.
 
 ## Flashing via WiFi
 
@@ -55,7 +30,9 @@ Power your Flight Controller by either connecting a LiPo or attaching the USB ca
 
 Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same *expresslrs* password as the TX Module Hotspot.
 
+<figure markdown>
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
+</figure>
 
 Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `Vantac_2400_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
 
@@ -110,6 +87,33 @@ Power up your Flight Controller by either connecting a LiPo or attaching the USB
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 ![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
+
+## Flashing via Passthrough
+
+Target: `Vantac_2400_RX_via_BetaflightPassthrough`
+
+Device Category: `Vantac 2.4 GHz`
+
+Device : `Vantac 2400 RX`
+
+![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
+
+Make sure you have [wired] your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
+
+If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
+
+If the receiver needs a LiPo attached to get powered up, then Press and Hold the button on the receiver, attach a LiPo, then let go once the LED in the receiver stopped blinking and goes SOLID. Then connect your FC to USB.
+
+!!! attention ""
+    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
+
+These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
+
+Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options] and then click **Build and Flash**. For first time flashing/updating, it would normally take a while.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
+
+A `Success` message will be shown once the process is complete.
 
 ## Flashing via FTDI
 

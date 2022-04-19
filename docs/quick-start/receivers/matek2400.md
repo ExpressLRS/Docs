@@ -33,7 +33,9 @@ Power your Flight Controller by either connecting a LiPo or attaching the USB ca
 
 Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same `expresslrs` password as the TX Module Hotspot.
 
+<figure markdown>
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
+</figure>
 
 Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `MATEK_2400_RX-<version>.bin` is (you can drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
 

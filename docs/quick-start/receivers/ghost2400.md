@@ -16,7 +16,9 @@ Device: `GHOST ATTO 2400 RX`
 
 Flashing the Ghost RX's is currently a **1 WAY** flash once you flash ExpressLRS to these RX's you **will not** be able to use them with Ghost TX.  You will need a `StLink V2` to flash the RX's
 
-<img src="https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/GHST_ATTO_V1.1_PINOUT.png" width = "30%">
+<figure markdown>
+![ghost atto](../../assets/images/GHST_ATTO_V1.1_PINOUT.png)
+</figure>
 
 1. Wire `3.3v`, `GND`, `CLK`, and `DIO` to their respective pins on the RX from the StLink.
 2. Select the `GHOST_ATTO_2400_via_STLINK` target.
