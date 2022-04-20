@@ -14,9 +14,12 @@ Targets:
 ## Initial Flashing
 
 The only way to flash the FR Mini is using STLINK. Note this is a one-way process, there is no returning to the stock firmware after flashing.
-
+<figure markdown>
 ![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-12.JPG?raw=true)
+</figure>
+<figure markdown>
 ![stlink](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-13.JPG?raw=true)
+</figure>
 
 * Connect wires to DIO (SWDIO), CLK (SWCLK), RST, and GND to the header points on the RX
 * Attach 3.3V to the VDD pad on the flashing header. Do not connect 5V here! :fire:
@@ -35,8 +38,12 @@ Once flashing is complete, wire the receiver to your flight controller using the
 | RX | TX2 |
 | TX | RX2 |
 
+<figure markdown>
 ![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-16.JPG?raw=true)
+</figure>
+<figure markdown>
 ![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-17.JPG?raw=true)
+</figure>
 
 Thank you to [@JupaCreations](http://www.jupacreations.com/)
 

@@ -16,6 +16,7 @@ Because of the massive shortage of `STM32` Chips, there are more `ESP8285` based
 
 <figure markdown>
 ![NamimnoRC Flash](../../assets/images/Pinout-Flash.png)
+<figcaption>Flash v1; ESP-based</figcaption>
 </figure>
 
 <figure markdown>
