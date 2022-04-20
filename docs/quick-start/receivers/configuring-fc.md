@@ -6,18 +6,18 @@ template: main.html
 
 ## Serial RX Setup
 
-Once wired up to our Flight Controller, we need to setup the UART for Serial RX. In the example below, the Receiver is wired to a Tx1/Rx1 (UART1) Pad, and so the Serial RX column should be activated on UART1.
+Once you've [wired up](./wiring-up.md) your Receiver to your Flight Controller, you need to setup the UART for Serial RX. In the example below, the Receiver is wired to UART1 (Tx1 and Rx1 pads), and so the Serial RX column should be enabled on UART1 in the Ports Tab.
 
-![](https://icantfly.xyz/wp-content/uploads/2019/01/image-58.png)
+![Ports Tab](../../assets/images/PortsTab.png)
 
 ## Protocol
 
-Similar to your OpenTX Radio, we are using the CRSF protocol between the receiver and the FC firmware (Betaflight/iNav/emuflight), so on the "Configuration" tab, you need to select "Serial-based receiver" on the "Receiver" panel, and select "CRSF" as the protocol. Telemetry is optional here and will reduce your stick update rate due to those transmit slots being used for telemetry.
+Similar to your OpenTX/EdgeTX Radio, ExpressLRS will be using the CRSF protocol between the receiver and the FC firmware (Betaflight/iNav/emuflight), so on the "Configuration" tab, you need to select "Serial-based Receiver" on the "Receiver" panel, and select "CRSF" as the Protocol. Telemetry is optional here and will enable your Flight Controller to send Flight Data back to your Radio like Battery Level, GPS Data, etc. but sending Telemetry will reduce your Channel update rate as it will use up bandwidth and time frames.
 
 !!! Note
     Betaflight 4.3.0 has moved the Receiver configuration into the Receiver Tab.
 
-![](https://icantfly.xyz/wp-content/uploads/2019/01/image-59.png)
+![Conf Tab](../../assets/images/ConfigurationTab.png)
 
 ## Software Inversion and Duplex Modes
 
