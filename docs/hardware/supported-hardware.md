@@ -188,13 +188,13 @@ Max output power: 250mW default, 1W with `UNLOCK_HIGHER_POWER`
 
 [Manufacturer Website](http://www.happymodel.cn/index.php/2021/04/22/happymodel-crazyf4-elrs-aio-5in1-flight-controller-built-in-900mhz-elrs-rx/)
 
-*Note: Receiver firmware can be updated using the [ES915/868RX](../quick-start/receivers/rx-hmes900.md#es915868rx-discontinued/) methods.*
+*Note: Receiver firmware can be updated using the [ES915/868RX](../quick-start/receivers/hmes900.md#es915868rx-discontinued/) methods.*
 
 ### BetaFPV F4 1S 12A AIO
 
 [Manufacturer Website](https://betafpv.com/products/f4-1s-12a-flight-controller?variant=39409298768006)
 
-*Note: Receiver firmware can be updated using the [Beta FPV Nano 2.4GHz](../quick-start/receivers/rx-betafpv2400.md) methods*
+*Note: Receiver firmware can be updated using the [Beta FPV Nano 2.4GHz](../quick-start/receivers/betafpv2400.md) methods*
 
 ### SPRacing H7RF
 

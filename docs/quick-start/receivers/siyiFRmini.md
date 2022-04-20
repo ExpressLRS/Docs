@@ -27,7 +27,7 @@ The only way to flash the FR Mini is using STLINK. Note this is a one-way proces
 
 ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
 
-For more information and troubleshooting of the STLINK connection, see the detail on the [FM30 Initial Flashing](../transmitters/tx-siyifm30.md) page.
+For more information and troubleshooting of the STLINK connection, see the detail on the [FM30 Initial Flashing](../transmitters/siyifm30.md) page.
 
 Once flashing is complete, wire the receiver to your flight controller using the images below.
 
