@@ -114,6 +114,8 @@ The EP receivers require their Boot pads (see figure above) be bridged on first 
 
 Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode (indicated with a solid LED) and won't activate the wifi hotspot.
 
+The PP doesn't have boot pads and also do not support WiFi as it uses an STM-based MCU.
+
 After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
 
 ## Happymodel ES900RX
@@ -137,6 +139,8 @@ After you've wired your receiver, proceed to configuring your FC firmware as sho
 </figure>
 
 Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
+
+These receivers are STM-based, and thus no support for WiFi Flashing/Updating.
 
 Connect your FC to USB and configure your FC firmware as shown on the [next page].
 
