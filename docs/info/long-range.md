@@ -35,7 +35,7 @@ Anyone can add an entry to the table, and entries should include the:
 ### 25mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
-| 13.58km | 900M | 50Hz | 25mW | Wing | No | Jullibach | [Link](https://youtu.be/_Mli6QL5Raw) |
+| 13.58km | 900M | 50Hz | 25mW | Wing | No | Jullibach | [Link](https://youtu.be/gZ8q5DAIrtE) |
 | 4.6km | 2.4G | 50Hz | 25mW | Quad | No | febbyeka | [Link](https://www.youtube.com/watch?v=jtiu6GdsKhA) |
 | 4.5km | 2.4G | 50Hz | 25mW | Quad | No | Taufik | [Link](https://youtu.be/j2MqtfiM7eo) |
 | 3km | 2.4G | 150Hz | 25mW | Quad | No | Taufik | [Link](https://www.youtube.com/watch?v=vG_hxHndXdI&ab_channel=CauSiang) |
