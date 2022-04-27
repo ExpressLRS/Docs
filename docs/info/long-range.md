@@ -54,10 +54,11 @@ Anyone can add an entry to the table, and entries should include the:
 | 20km | 2.4G | 150Hz | 100mW | Wing | Yes | Pairan | [Link](https://youtu.be/B9-AItJ9WS0) |
 | 12km | 900M | 50Hz | 100mW | Quad | Yes | Taufik | [Link](https://www.youtube.com/watch?v=dlpwG76BGs8&ab_channel=CauSiang) |
 | 11km | 900M | 50Hz | 100mW | Quad | No | Taufik | [Link](https://youtu.be/ySBvXENS33s) |
-| 10km | 2.4G | 250Hz | 100mW | Wing | No | Snipes | [Link](https://youtu.be/dJYfWLtXVg8) |
-| 3km | 2.4G (ceramic chip antenna RX) | 500Hz | 100mW | Quad | No | Spec | [Link](https://www.youtube.com/watch?v=kfa6ugX46n8) |
+| 10km | 2.4G | 250Hz | 100mW | Wing | No | Snipes | [Link](https://youtu.be/dJYfWLtXVg8) | 
 | 10km | 900M | 50Hz | 100mW | Quad | Yes | Taufik | [Link](https://youtu.be/Pi2j17T2dSk) |
+| 6.43km | 2.4G | 50Hz | 100mW | Wing | No | DivisionRc | [Link](https://youtu.be/3VAJ14y0ZIY) |
 | 5.5km | 900M | 50Hz | 100mW | Quad | No | Abdul | [Link](https://youtu.be/onFqZNVJiFQ) |
+| 3km | 2.4G (ceramic chip antenna RX) | 500Hz | 100mW | Quad | No | Spec | [Link](https://www.youtube.com/watch?v=kfa6ugX46n8)
 
 ### 250mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
