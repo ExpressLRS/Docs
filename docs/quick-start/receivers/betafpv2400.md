@@ -4,32 +4,38 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing via Passthrough
-
-Target: `BETAFPV_Nano_2400_RX_via_BetaflightPassthrough`
-
-Device Category: `BETAFPV 2.4 GHz`
-
-Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
-
-![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
-
-Make sure you have [wired] your receiver properly. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
-
-If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
-
-If the receiver needs a LiPo attached to get powered up, then Press and Hold the button on the receiver, attach a LiPo, then let go once the LED in the receiver stopped blinking and goes SOLID. Then connect your FC to USB.
+## Wiring up your receiver
 
 !!! attention ""
-    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
+    *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
 
-These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
+<figure markdown>
+![BetaFPV RX connection](../../assets/images/betaFPVrx2400.png)
+<figcaption>BetaFPV Nano</figcaption>
+</figure>
 
-Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options] and then click **Build and Flash**. For first time flashing/updating, it would normally take a while.
+<figure markdown>
+![BetaFPV RX Lite connection](../../assets/images/betaFPVrxLite.png)
+<figcaption>BetaFPV Lite (Flat & Tower)</figcaption>
+</figure>
 
-![Build & Flash](../../assets/images/BuildFlash.png)
+The image above show the receiver pinouts and their connections. As we're dealing with UART connection, Rx on receiver goes to a TX pad in the FC, and Tx on Receiver goes to an uninverted Rx pad on the FC.
 
-A `Success` message will be shown once the process is complete.
+There are Flight Controllers that put their Receiver UART's RX pads Low, which in turn, puts the ESP-based (e.g. EP1 and EP2) receivers to Bootloader mode unintentionally. One remedy is to wire them into a different UART, or wire a pull-up resistor (300-1k ohm) between the Rx pad of the FC and a 3.3v or 5v pad, as shown below.
+
+<figure markdown>
+![pull up](../../assets/images/pull-up.png)
+</figure>
+
+## Configuring your Flight Controller
+
+See this [page](configuring-fc.md) on how your flight controller should be configured. These settings apply on both INAV and Betaflight (and other flight controller software).
+
+Ports Tab should be setup so that Serial RX is on the UART where you have soldered the receiver.
+
+Receiver protocol is `CRSF`, with `serialrx_inverted = off` and `serialrx_halfduplex = off`.
+
+The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy (of high importance with the Passthrough Flashing Method).
 
 ## Flashing via WiFi
 
@@ -43,7 +49,7 @@ Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
 
 ### Method 1
 
-With the receiver [wired] properly to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
+With the receiver [wired properly] to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
 
 **Build** the firmware. Once done, it should open a new window where the `BETAFPV_Nano_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
@@ -55,7 +61,9 @@ Power your Flight Controller by either connecting a LiPo or attaching the USB ca
 
 Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same *expresslrs* password as the TX Module Hotspot.
 
+<figure markdown>
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
+</figure>
 
 Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `BETAFPV_Nano_2400_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
 
@@ -111,6 +119,33 @@ Power up your Flight Controller by either connecting a LiPo or attaching the USB
 
 ![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
 
+## Flashing via Passthrough
+
+Target: `BETAFPV_Nano_2400_RX_via_BetaflightPassthrough`
+
+Device Category: `BETAFPV 2.4 GHz`
+
+Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
+
+![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
+
+Make sure you have your receiver [wired properly]. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
+
+If the receiver gets powered up when you connect the FC to USB, you will need to Press and Hold the button on the receiver, connect USB and let go of the button once the LED stopped blinking and goes SOLID.
+
+If the receiver needs a LiPo attached to get powered up, then Press and Hold the button on the receiver, attach a LiPo, then let go once the LED in the receiver stopped blinking and goes SOLID. Then connect your FC to USB.
+
+!!! attention ""
+    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
+
+These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
+
+Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options] and then click **Build and Flash**. For first time flashing/updating, it would normally take a while.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
+
+A `Success` message will be shown once the process is complete.
+
 ## Flashing via FTDI
 
 Target: `BETAFPV_Nano_2400_RX_via_UART`
@@ -123,10 +158,13 @@ Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
 
 Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the FTDI, and RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Press the button while powering the RX on, and release - the LED should now be solid.
 
+<figure markdown>
+![FTDI Wiring](../../assets/images/FTDIConn.png)
+</figure>
+
 Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
 
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 [Firmware Options]: ../firmware-options.md
-[wired]: rx-fcprep.md#betafpv-receivers
-[wired properly]: rx-fcprep.md#betafpv-receivers
+[wired properly]: #wiring-up-your-receiver

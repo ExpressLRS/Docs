@@ -9,6 +9,49 @@ Because of the massive shortage of `STM32` Chips, there are more `ESP8285` based
 
 <img src = "https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/antenna.jpg?raw=true" width = "30%">
 
+## Wiring up your receiver
+
+!!! attention ""
+    *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
+
+<figure markdown>
+![NamimnoRC Flash](../../assets/images/Pinout-Flash.png)
+<figcaption>Flash v1; ESP-based</figcaption>
+</figure>
+
+<figure markdown>
+![NamimnoRC Flash V2 SMD](../../assets/images/Namimno-Flash-RX-V2_S.png)
+<figcaption>Flash V2 SMD; ESP-based</figcaption>
+</figure>
+
+<figure markdown>
+![NamimnoRC Flash V2 T](../../assets/images/Namimno-Flash-RX-V2_T.png)
+<figcaption>Flash V2 T-Dipole; ESP-based</figcaption>
+</figure>
+
+<figure markdown>
+![NamimnoRC Flash V2 Diversity](../../assets/images/Namimno-Flash-RX-V2_D.png)
+<figcaption>Flash V2 Diversity; ESP-based</figcaption>
+</figure>
+
+The image above show the receiver pinouts and their connections. As we're dealing with UART connection, Rx on receiver goes to a TX pad in the FC, and Tx on Receiver goes to an uninverted Rx pad on the FC.
+
+There are Flight Controllers that put their Receiver UART's RX pads Low, which in turn, puts the ESP-based (e.g. EP1 and EP2) receivers to Bootloader mode unintentionally. One remedy is to wire them into a different UART, or wire a pull-up resistor (300-1k ohm) between the Rx pad of the FC and a 3.3v or 5v pad, as shown below.
+
+<figure markdown>
+![pull up](../../assets/images/pull-up.png)
+</figure>
+
+## Configuring your Flight Controller
+
+See this [page](configuring-fc.md) on how your flight controller should be configured. These settings apply on both INAV and Betaflight (and other flight controller software).
+
+Ports Tab should be setup so that Serial RX is on the UART where you have soldered the receiver.
+
+Receiver protocol is `CRSF`, with `serialrx_inverted = off` and `serialrx_halfduplex = off`.
+
+The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy (of high importance with the Passthrough Flashing Method).
+
 ## Betaflight Passthrough
 
 Targets: 
@@ -65,7 +108,9 @@ Power your Flight Controller by either connecting a LiPo or attaching the USB ca
 
 Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same *expresslrs* password as the TX Module Hotspot.
 
+<figure markdown>
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
+</figure>
 
 Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `NamimnoRC_FLASH_2400_ESP_RX-<version>.bin` or `NamimnoRC_FLASH_2400_ESP_RX_PA-<version>.bin` file is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
 
@@ -135,6 +180,10 @@ Device : `NamimnoRC FLASH 2400 ESP RX`, `NamimnoRC FLASH 2400 ESP Diversity RX`
 
 Wire the receiver into the FTDI, with the TX on receiver connected to the Rx on the FTDI, and the RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Press the button while powering the RX on, and release - the LED should now be solid.
 
+<figure markdown>
+![FTDI Wiring](../../assets/images/FTDIConn.png)
+</figure>
+
 Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
 
 ![Build & Flash](../../assets/images/BuildFlash.png)
@@ -156,4 +205,4 @@ Select the target and set your [Firmware Options] and once done, click on **Buil
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 [Firmware Options]: ../firmware-options.md
-[wired properly]: rx-fcprep.md#namimnorc-voyager-flash
+[wired properly]: #wiring-up-your-receiver

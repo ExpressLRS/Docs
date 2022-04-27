@@ -6,6 +6,37 @@ template: main.html
 
 ## ES900RX
 
+### Wiring up your receiver
+
+!!! attention ""
+    *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
+
+<figure markdown>
+![HM2400 connection](../../assets/images/es900rx-conn.png)
+</figure>
+
+The image above show the receiver pinouts and their connections. As we're dealing with UART connection, Rx on receiver goes to a TX pad in the FC, and Tx on Receiver goes to an uninverted Rx pad on the FC.
+
+There are Flight Controllers that put their Receiver UART's RX pads Low, which in turn, puts the ESP-based (e.g. EP1 and EP2) receivers to Bootloader mode unintentionally. One remedy is to wire them into a different UART, or wire a pull-up resistor (300-1k ohm) between the Rx pad of the FC and a 3.3v or 5v pad, as shown below.
+
+<figure markdown>
+![pull up](../../assets/images/pull-up.png)
+</figure>
+
+Also of note is that the ESP-based receivers require their Boot pads (see figure above) be bridged on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the bridge needs to be removed, and is no longer needed for subsequent passthrough flashing.
+
+Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode and won't activate its WiFi Mode.
+
+### Configuring your Flight Controller
+
+See this [page](configuring-fc.md) on how your flight controller should be configured. These settings apply on both INAV and Betaflight (and other flight controller software).
+
+Ports Tab should be setup so that Serial RX is on the UART where you have soldered the receiver.
+
+Receiver protocol is `CRSF`, with `serialrx_inverted = off` and `serialrx_halfduplex = off`.
+
+The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy (of high importance with the Passthrough Flashing Method).
+
 ### Flashing via Passthrough
 
 Target: `HappyModel_RX_ES900RX_via_BetaflightPassthrough`
@@ -15,8 +46,6 @@ Device Category: `Happymodel 900 MHz`
 Device: `HappyModel RX ES900RX`
 
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
-
-![ES900RX](../../assets/images/es900rx-conn.png)
 
 With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator, then click on **Build and Flash**. First time compiles naturally takes a while but if you do the prep work properly, you'll be greeted with the `Success` message soon enough!
 
@@ -46,7 +75,9 @@ Power your Flight Controller by either connecting a LiPo or attaching the USB ca
 
 Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same *expresslrs* password as the TX Module Hotspot.
 
+<figure markdown>
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
+</figure>
 
 Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `HappyModel_RX_ES900RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
 
@@ -114,9 +145,11 @@ Device: `HappyModel RX ES915RX`
 
 ![stm Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
 
+<figure markdown>
 ![ES915RX](../../assets/images/ES915rx.jpg)
+</figure>
 
-Once [wired properly](rx-fcprep.md#happymodel-es915868rx-discontinued) to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
+Once wired properly to your FC as shown above, connect your FC to USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
 
 If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your [Firmware Options] set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
 
@@ -136,7 +169,11 @@ Device: `HappyModel RX ES915RX`
 
 ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
 
-Wire up your receiver to your STLink, shown [here](rx-fcprep.md#happymodel-es915868rx-discontinued).
+<figure markdown>
+![ES915RX](../../assets/images/ES915rx.jpg)
+</figure>
+
+Connect your STLink into `GND`, `DIO`, `CLK`, `3V3` of the receiver. These pads are marked clearly in the top left of the image above.
 
 Using the correct target specific for your receiver, set your [Firmware Options] and hit **Build & Flash** on the ExpressLRS Configurator.
 
@@ -145,4 +182,4 @@ Using the correct target specific for your receiver, set your [Firmware Options]
 Once done, wire your receiver to your Flight Controller. Passthrough flashing can now be used for updating the receiver.
 
 [Firmware Options]: ../firmware-options.md
-[wired properly]: rx-fcprep.md#happymodel-es900rx
+[wired properly]: #wiring-up-your-receiver

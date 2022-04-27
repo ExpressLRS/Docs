@@ -4,6 +4,39 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
+## Wiring up your receiver
+
+!!! attention ""
+    *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
+
+<figure markdown>
+![Matek R24-d](../../assets/images/ELRS-R24-D.jpg)
+<figcaption>R24-D Diversity</figcaption>
+</figure>
+
+<figure markdown>
+![Matek R24-d](../../assets/images/ELRS-R24-S.jpg)
+<figcaption>R24-S SMD</figcaption>
+</figure>
+
+The image above show the receiver pinouts and their connections. As we're dealing with UART connection, Rx on receiver goes to a TX pad in the FC, and Tx on Receiver goes to an uninverted Rx pad on the FC.
+
+There are Flight Controllers that put their Receiver UART's RX pads Low, which in turn, puts the ESP-based (e.g. EP1 and EP2) receivers to Bootloader mode unintentionally. One remedy is to wire them into a different UART, or wire a pull-up resistor (300-1k ohm) between the Rx pad of the FC and a 3.3v or 5v pad, as shown below.
+
+<figure markdown>
+![pull up](../../assets/images/pull-up.png)
+</figure>
+
+## Configuring your Flight Controller
+
+See this [page](configuring-fc.md) on how your flight controller should be configured. These settings apply on both INAV and Betaflight (and other flight controller software).
+
+Ports Tab should be setup so that Serial RX is on the UART where you have soldered the receiver.
+
+Receiver protocol is `CRSF`, with `serialrx_inverted = off` and `serialrx_halfduplex = off`.
+
+The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy (of high importance with the Passthrough Flashing Method).
+
 ## Flashing via Wifi 
 
 Target: `MATEK_2400_RX_via_WIFI`
@@ -18,10 +51,7 @@ Device : `Matek 2400 RX`
 
 **(Recommended as first-flash method)**
 
-[Wire up your receiver] to a free UART on your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
-
-!!! attention ""
-    *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
+Before your proceed, make sure you have the receiver [wired properly] to your FC.
 
 **Build** the firmware using the ExpressLRS Configurator using the correct Target and [Firmware Options]. Once done, it should open a new window where the `MATEK_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
@@ -33,7 +63,9 @@ Power your Flight Controller by either connecting a LiPo or attaching the USB ca
 
 Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same `expresslrs` password as the TX Module Hotspot.
 
+<figure markdown>
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
+</figure>
 
 Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `MATEK_2400_RX-<version>.bin` is (you can drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
 
@@ -99,7 +131,7 @@ Device : `Matek 2400 RX`
 
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
 
-[Wire up your receiver] to a free uart in your Flight Controller. Wire TX on receiver to an RX pad on the FC, and the RX on receiver to a TX pad on the FC in the same UART. Wire 5v and Gnd as normal (5v to a 5v pad on FC and Gnd to a Gnd pad on the FC).
+Make sure you have your receiver [wired properly]. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
 
 Power your FC with a LiPo, or if receiver is powered via USB (receiver is connected to a 4v5 pad), connect the FC to your USB port.
 
@@ -124,10 +156,13 @@ Device : `Matek 2400 RX`
 
 Wire the receiver into the FTDI, with TX on receiver connected to the Rx on the FTDI, and RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Press the button while powering the RX on, and release - the LED should now be solid.
 
+<figure markdown>
+![FTDI Wiring](../../assets/images/FTDIConn.png)
+</figure>
+
 Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
 
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 [Firmware Options]: ../firmware-options.md
-[wired properly]: rx-fcprep.md#mateksys-receivers
-[Wire up your receiver]: rx-fcprep.md#mateksys-receivers
+[wired properly]: #wiring-up-your-receiver

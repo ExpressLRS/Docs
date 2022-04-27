@@ -22,7 +22,7 @@ Easy - connect a **300Ω to 1000Ω resistor** between the `3.3V` and inverter pi
 Some Radios/Transmitters will require the Inverter/[Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) depending on the Baud Rate you want to use or you can use. 
 
 | Radio | Baud Rate | Inverter/Crossfire Mod | R9M ACCST MOD |  Other Notes |
-|---|---|---|---|
+|---|---|---|---|---|
 | X9D | 400000 | Not Needed | Required | See [Troubleshooting](./x9d-troubleshooting.md) |
 | X10S Express | 400000 | Not Needed | Required | - |
 | X10S | 400000 | Required. [Modding Guide.](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) | Required | - |
