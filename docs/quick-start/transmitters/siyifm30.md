@@ -45,7 +45,7 @@ Error during download get_status
 *** [upload] Error 74
 ```
 
-# FR Mini RX as TX
+## FR Mini RX as TX
 
 The RX has the same RF components as the TX does, making it a possible candidate for a small ~200mW TX module. Wiring to the JR Module Bay requires only 3 pins (JR pins are starting from the top down)
 
@@ -59,13 +59,13 @@ JR Module Pin | FR Mini Pin | Description
 
 ![FR Mini RX as TX Wiring](https://cdn.discordapp.com/attachments/738450139693449258/864205774251229224/frmini-rx-as-tx-wiring.jpg)
 
-## FR Mini RX as TX Initial Flashing
+### FR Mini RX as TX Initial Flashing
 
 The only way to flash the FR Mini is using STLINK. Note this is a one-way process, there is no returning to the stock firmware after flashing. The flashing procedure is similar to the FM30 TX module flashing listed above but using these pads on the receiver. Use the `FM30_RX_MINI_AS_TX_via_STLINK` target for initial flashing.
 
 ![FR Mini Pads](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/siyi/jupa/Siyi-12.JPG)
 
-## FR Mini RX as TX Updating
+### FR Mini RX as TX Updating
 
 Updates are done through OpenTX's built-in firmware flashing tool.
 

@@ -141,14 +141,14 @@ nav:
             - BetaFPV 2.4GHz: quick-start/transmitters/betafpv2400.md
             - BetaFPV 900MHz: quick-start/transmitters/betafpv900.md
             - Frsky R9 Modules: quick-start/transmitters/frsky-r9modules.md
-            - Ghost: quick-start/transmitters/ghost2400.md
             - Happymodel ES24TX: quick-start/transmitters/es24tx.md
             - Happymodel ES900TX: quick-start/transmitters/es900tx.md
+            - IMRC Ghost: quick-start/transmitters/ghost2400.md
             - Jumper Aion Nano: quick-start/transmitters/jumper-aion.md
             - NamimnoRC Flash: quick-start/transmitters/flash2400.md
             - NamimnoRC Voyager: quick-start/transmitters/voyager900.md
+            - Siyi FM30: quick-start/transmitters/siyifm30.md
             - Vantac Lite: quick-start/transmitters/vantac-lite.md
-            - Siyi TXes: quick-start/transmitters/siyifm30.md
             - Internal RadioMaster: quick-start/transmitters/rm-internal.md
             - Internal Jumper T-Pro:  quick-start/transmitters/aion-internal.md
             - DIY 900TX: quick-start/transmitters/diy900.md
@@ -161,18 +161,18 @@ nav:
             - Axis Thor: quick-start/receivers/axis-thor.md
             - BetaFPV Lite & Nano 2.4GHz: quick-start/receivers/betafpv2400.md
             - BetaFPV Nano 900Mhz: quick-start/receivers/betafpv900.md
-            - Frsky R9s: quick-start/receivers/r9.md
-            - Ghost: quick-start/receivers/ghost2400.md
-            - Happymodel EPs: quick-start/receivers/hmep2400.md
+            - Frsky R9: quick-start/receivers/r9.md
+            - Happymodel EP: quick-start/receivers/hmep2400.md
             - Happymodel PP: quick-start/receivers/hmpp2400.md
             - Happymodel ES900RX: quick-start/receivers/hmes900.md
+            - IMRC Ghost: quick-start/receivers/ghost2400.md
             - Jumper Aion Nano: quick-start/receivers/jumper-aion.md
             - Jumper R9 Mini: quick-start/receivers/jumper900.md
             - NamimnoRC Flash: quick-start/receivers/flash2400.md
             - NamimnoRC Voyager: quick-start/receivers/voyager900.md
             - Matek R24: quick-start/receivers/matek2400.md
-            - Vantac: quick-start/receivers/vantac2400.md
             - Siyi FR Mini: quick-start/receivers/siyiFRmini.md
+            - Vantac: quick-start/receivers/vantac2400.md
             - DIY 900RX: quick-start/receivers/diy900.md
             - DIY 2400RX: quick-start/receivers/diy2400.md
       - Post-Flash:
