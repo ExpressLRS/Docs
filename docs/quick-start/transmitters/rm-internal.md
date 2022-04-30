@@ -18,7 +18,7 @@ Device Category: `RadioMaster 2.4 GHz`
 
 Device: `RadioMaster Zorro 2400 TX`, `RadioMaster TX16S 2400 TX`
 
-With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` in the option window that pops up. 
+With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` or `USB Serial(VCP)` in the option window that pops up. 
 
 ![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
 

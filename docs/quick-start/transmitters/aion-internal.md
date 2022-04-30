@@ -93,7 +93,7 @@ You will need a couple of files:
 
 ### Procedure
 
-With the EdgeTX binary in your `/firmware` SD Card folder, reboot the radio into DFU/Bootloader mode. You can get to this mode by holding the trim switches inwards and pressing the power button. Release the button and trim switches and you should be in DFU/Bootloader mode. Write the firmware into the radio and reboot to ensure it got written. One way to check is to plug-in a USB cable and a new menu item should be available to you: USB Serial (Debug). You will need this menu item in the next steps.
+With the EdgeTX binary in your `/firmware` SD Card folder, reboot the radio into DFU/Bootloader mode. You can get to this mode by holding the trim switches inwards and pressing the power button. Release the button and trim switches and you should be in DFU/Bootloader mode. Write the firmware into the radio and reboot to ensure it got written. One way to check is to plug-in a USB cable and a new menu item should be available to you: USB Serial (Debug/VCP). You will need this menu item in the next steps.
 
 Turn off the radio.
 
@@ -106,7 +106,7 @@ The next steps will require you to take the radio apart. You will need a small P
 
 Leave all the wiring intact, you will need a still-functional radio for the next steps!
 
-Power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below. Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. If not and you're seeing a bunch of Yellow Warning icons for the RadioMaster Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `W7_x64` executable.
+Power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` or `USB Serial (VCP)` as shown in the photo below. Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. If not and you're seeing a bunch of Yellow Warning icons for the RadioMaster Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `W7_x64` executable.
 
 ![tPro serial debug](../../assets/images/tpro_serialdebug.jpg)
 
@@ -134,11 +134,11 @@ Do not forget to reassemble the T-Pro. Let's hope you didn't lose a screw!
 You'll need the following:
 
 1. A piece of wire about 4" (10cm) in length.
-2. An EdgeTX Build that gives the `USB Serial(Debug)` option when a USB Data cable is connected. You can download it [here](../../assets/recovery/tpro-ada778ee4.bin) (Right-click, Save-as). **NOTE** if your radio is already updated to EdgeTX 2.7.0, this package is no longer needed.
+2. An EdgeTX Build that gives the `USB Serial(Debug)` or `USB Serial (VCP)` option when a USB Data cable is connected. You can download it [here](../../assets/recovery/tpro-ada778ee4.bin) (Right-click, Save-as). **NOTE** if your radio is already updated to EdgeTX 2.7.0, this package is no longer needed.
 
 ### Procedure
 
-With the EdgeTX binary in your `/firmware` SD Card folder, reboot the radio into DFU/Bootloader mode. You can get to this mode by holding the trim switches inwards and pressing the power button. Release the button and trim switches and you should be in DFU/Bootloader mode. Write the firmware into the radio and reboot to ensure it got written. One way to check is to plug-in a USB cable and a new menu item should be available to you: USB Serial (Debug). You will need this menu item in the next steps.
+With the EdgeTX binary in your `/firmware` SD Card folder, reboot the radio into DFU/Bootloader mode. You can get to this mode by holding the trim switches inwards and pressing the power button. Release the button and trim switches and you should be in DFU/Bootloader mode. Write the firmware into the radio and reboot to ensure it got written. One way to check is to plug-in a USB cable and a new menu item should be available to you: USB Serial (Debug/VCP). You will need this menu item in the next steps.
 
 Turn off the radio.
 
@@ -158,7 +158,7 @@ Once the wire is properly soldered, reassemble the radio. Tighten up the 10 scre
 !!! note
     If you're planning to use the switch as an Aux channel, you might want to remove the wire afterwards. Leaving this wire connected means the Aux channel will output a constant "High" signal.
 
-Replace the battery if you removed it and power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` as shown in the photo below.
+Replace the battery if you removed it and power up the radio and make sure internal ExpressLRS module is the active one. Plug in a usb cable and select `USB Serial (Debug)` or `USB Serial (VCP)` as shown in the photo below.
 
 ![tPro serial debug](../../assets/images/tpro_serialdebug.jpg)
 
