@@ -56,6 +56,7 @@ Currently supported VRx Modules include:
 * SkyZone SteadyView
 * Generic RX5808 Module
 * FENIX Module
+* Shark Byte RX5.1 HDZero Module
 
 The VRx Backpacks communicate to these modules via SPI bus and involves 3 signal lines: `CLK`, `DATA`, `CS`. Depending on your VRx Backpack, they will either need `5v` (ExpressLRS ESP-based Receiver) or `3.3v` (ESP01F module) and of course the `GND` line.
 
@@ -103,9 +104,26 @@ The power supply wires are connected as follows:
 
 ![Covered up](https://github.com/ExpressLRS/Backpack/wiki/SkyZone-Lid-On.jpg)
 
+### Shark Byte RX5.1 HDZero Module Connection
+
+The VRX has an easily accessible UART on the main board, which is accessed by removing the 4 screws which secure the backplate.
+Use the goggle mount to pull the backplate from the housing.
+
+Solder your VRx backpack as shown below:
+
+![RX5.1 wiring diagram - GND-GND, TX-RX, RX-TX, 5V from inner edge of voltage regulator "N"](../../assets/images/RX5.1-Backpack-wiring.jpg)
+
+It is unlikely that you can close the backplate with backpack module between the plate and the main board. There are two solutions:
+* Route the wires out of the cooling vents and mount it externally
+* Mount the backpack in the front patch, routing the wirse through the goggle mount as shown below:
+
+![RX5.1 Backpack module located behind the front patches](../../assets/images/RX5.1-Backpack-patch-mounting.jpg)
+
 ## How to check you have updated the VRx Backpack Firmware?
 
-Navigate to the `WiFi Connectivity` folder of the ExpressLRS v2 Lua script and select `Enable VRx WiFi`. Scan for Access Points and **ExpressLRS VRx Backpack** should appear. Connect into it and point your browser to http://10.0.0.1/.
+Navigate to the `WiFi Connectivity` folder of the ExpressLRS v2 Lua script and select `Enable VRx WiFi`.
+The LED will begin blinking rapidly.
+Scan for Access Points and **ExpressLRS VRx Backpack** should appear. Connect into it and point your browser to http://10.0.0.1/.
 
 If you have set your Home Network SSID and Password, point your browser to http://elrs_vrx.local/.
 
