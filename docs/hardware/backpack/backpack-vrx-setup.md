@@ -113,9 +113,9 @@ Solder your VRx backpack as shown below:
 
 ![RX5.1 wiring diagram - GND-GND, TX-RX, RX-TX, 5V from inner edge of voltage regulator "N"](../../assets/images/RX5.1-Backpack-wiring.jpg)
 
-It is unlikely that you can close the backplate with Backpack module between the plate and the main board.
-It is possible to route the wires out of the cooling vents and mount it externally.
-Alternatively, the Backpack module can be houses in one of the front patches, with wires easily routed through the goggle mount:
+It is unlikely that you can close the backplate with backpack module between the plate and the main board. There are two solutions:
+* Route the wires out of the cooling vents and mount it externally
+* Mount the backpack in the front patch, routing the wirse through the goggle mount as shown below:
 
 ![RX5.1 Backpack module located behind the front patches](../../assets/images/RX5.1-Backpack-patch-mounting.jpg)
 
