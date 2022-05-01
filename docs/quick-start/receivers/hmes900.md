@@ -73,7 +73,7 @@ Power your Flight Controller by either connecting a LiPo or attaching the USB ca
 
 ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
 
-Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same *expresslrs* password as the TX Module Hotspot.
+Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same `expresslrs` password as the TX Module Hotspot.
 
 <figure markdown>
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
