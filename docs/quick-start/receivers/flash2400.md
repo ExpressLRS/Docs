@@ -9,6 +9,9 @@ Because of the massive shortage of `STM32` Chips, there are more `ESP8285` based
 
 <img src = "https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/antenna.jpg?raw=true" width = "30%">
 
+!!! Note
+    New versions of the receiver also have the PCB Wifi Antenna, and doesn't have the Rainsun SMD Antenna mentioned above. These will use the same ESP-based Target, NOT the STM-based target.
+
 ## Wiring up your receiver
 
 !!! attention ""
