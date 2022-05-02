@@ -11,7 +11,7 @@ template: main.html
 
 <figure markdown>
 ![GepRC 900MHz](../../assets/images/GepRC-Nano900.png)
-<figcaption>BetaFPV Nano</figcaption>
+<figcaption>GepRC Nano 900MHz</figcaption>
 </figure>
 
 The image above show the receiver pinouts and their connections. As we're dealing with UART connection, Rx on receiver goes to a TX pad in the FC, and Tx on Receiver goes to an uninverted Rx pad on the FC.
