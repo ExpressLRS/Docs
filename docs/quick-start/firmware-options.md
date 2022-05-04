@@ -8,9 +8,13 @@ This page aims to explain only the key options in ExpressLRS Configurator you ma
 
 Some of these options are present on both the Tx and Rx Targets. It is important that these options match to both the TX module and receiver in order for them to bind. `team2400` and `team900` also share a few options and some options are unique to that frequency band. Shown below are common options available on `team2400` and `team900` TXes respectively.
 
-![2400 TX Options](../assets/images/ConfigurationOptions2400tx.jpg)
+<figure markdown>
+![2400 TX Options](../assets/images/ConfigurationOptions2400tx.png)
+</figure>
 
-![900 TX Options](../assets/images/ConfigurationOptions900tx.jpg)
+<figure markdown>
+![900 TX Options](../assets/images/ConfigurationOptions900tx.png)
+</figure>
 
 ## Regulatory Domains
 !!! note "Only available for 900MHz devices"
@@ -49,9 +53,13 @@ This **only works** with ESP32 based TXes. **Almost all handsets** require `UART
 
 ## Receiver Only Options ##
 
-![2400 RX Options](../assets/images/ConfigurationOptions2400rx.jpg)
+<figure markdown>
+![2400 RX Options](../assets/images/ConfigurationOptions2400rx.png)
+</figure>
 
-![900 RX Options](../assets/images/ConfigurationOptions900rx.jpg)
+<figure markdown>
+![900 RX Options](../assets/images/ConfigurationOptions900rx.png)
+</figure>
 
 !!! attention ""
     Note: Configuration of Receivers should match the configuration of the Transmitter Module for Sync/Binding to happen between devices.
