@@ -42,7 +42,7 @@ Once that's done, click **Build and Flash** and wait for the Success banner from
 
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
-Unplug the USB and verify with the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as) you have a working internal module and that you have updated to the version you have selected.
+Unplug the USB and verify with the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/2.1.0/src/lua/elrsV2.lua?raw=true) (right-click, save as) you have a working internal module and that you have updated to the version you have selected.
 
 ![Lua Running](../../assets/images/tx-internalLuaCheck.jpg)
 
@@ -67,7 +67,7 @@ With the correct target selected and [Firmware Options] set, **Build** your firm
 
 Once it's done, it should open the Target folder for you where the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
-Execute the ExpressLRS lua script by pressing "System Menu" in your radio and then under Tools, select `ExpressLRS`. If the ExpressLRS Lua Script is not in the list, download it from [here](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
+Execute the ExpressLRS lua script by pressing "System Menu" in your radio and then under Tools, select `ExpressLRS`. If the ExpressLRS Lua Script is not in the list, download it from [here](https://github.com/ExpressLRS/ExpressLRS/blob/2.1.0/src/lua/elrsV2.lua?raw=true) (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
 
 ![Lua Script](../../assets/images/lua1.jpg)
 
@@ -101,7 +101,7 @@ With the correct target selected and [Firmware Options] set, **Build** your firm
 
 Once it's done, it should open the Target folder for you where the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
-Using the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in Join Network section of the Update Page, it will connect to the local network automatically.
+Using the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/2.1.0/src/lua/elrsV2.lua?raw=true) (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in Join Network section of the Update Page, it will connect to the local network automatically.
 
 ![Lua3](../../assets/images/lua/wifi-bw.png)
 
@@ -119,7 +119,7 @@ Verify the version and hash in the main screen of ExpressLRS Lua script (you wil
 
 ### Method 3
 
-Using the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true) (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in Join Network section of the Update Page, it will connect to the network automatically.
+Using the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/2.1.0/src/lua/elrsV2.lua?raw=true) (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in Join Network section of the Update Page, it will connect to the network automatically.
 
 ![Lua3](../../assets/images/lua/wifi-bw.png)
 
