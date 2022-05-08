@@ -10,8 +10,8 @@ template: main.html
     *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
 
 <figure markdown>
-![GepRC 900MHz](../../assets/images/GepRC-Nano900.png)
-<figcaption>GepRC Nano 900MHz</figcaption>
+![GEPRC 900MHz](../../assets/images/GEPRC-Nano900.png)
+<figcaption>GEPRC Nano 900MHz</figcaption>
 </figure>
 
 The image above show the receiver pinouts and their connections. As we're dealing with UART connection, Rx on receiver goes to a TX pad in the FC, and Tx on Receiver goes to an uninverted Rx pad on the FC.
@@ -34,11 +34,11 @@ The next step will not be able to proceed properly and you'll have issues later 
 
 ## Flashing via WiFi
 
-Target: `GepRC_Nano_900_RX_via_WIFI`
+Target: `GEPRC_Nano_900_RX_via_WIFI`
 
-Device Category: `GepRC 900 MHz`
+Device Category: `GEPRC 900 MHz`
 
-Device: `GepRC Nano 900MHz`
+Device: `GEPRC Nano 900MHz`
 
 ![via WiFi](../../assets/images/Method_RX_WiFi.png)
 
@@ -46,7 +46,7 @@ Device: `GepRC Nano 900MHz`
 
 With the receiver [wired properly] to your FC, select the correct target and set the [Firmware Options] in the ExpressLRS Configurator.
 
-**Build** the firmware. Once done, it should open a new window where the `GepRC_Nano_900_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware. Once done, it should open a new window where the `GEPRC_Nano_900_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
@@ -60,7 +60,7 @@ Connect to the Wifi Network the receiver has created. It should be named somethi
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
 </figure>
 
-Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `GepRC_Nano_900_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
+Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `GEPRC_Nano_900_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
 
 A white page should load momentarily with the message **Update Success! Rebooting...**. Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated. Power cycle and your module and receiver should now be bound (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
 
@@ -77,7 +77,7 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
-**Build** the firmware. Once done, it should open a new window where the `GepRC_Nano_900_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware. Once done, it should open a new window where the `GEPRC_Nano_900_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
@@ -91,7 +91,7 @@ Scroll down to the Firmware Update section, shown below:
 
 ![Firmware Update](../../assets/images/web-firmwareupdate.png)
 
-Drag-and-drop the `GepRC_Nano_900_RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
+Drag-and-drop the `GEPRC_Nano_900_RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
 
 Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated.
 
@@ -116,11 +116,11 @@ Power up your Flight Controller by either connecting a LiPo or attaching the USB
 
 ## Flashing via Passthrough
 
-Target: `GepRC_Nano_900_RX_via_BetaflightPassthrough`
+Target: `GEPRC_Nano_900_RX_via_BetaflightPassthrough`
 
-Device Category: `GepRC 900 MHz`
+Device Category: `GEPRC 900 MHz`
 
-Device: `GepRC Nano 900MHz`
+Device: `GEPRC Nano 900MHz`
 
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
 
@@ -143,11 +143,11 @@ A `Success` message will be shown once the process is complete.
 
 ## Flashing via FTDI
 
-Target: `GepRC_Nano_900_RX_via_UART`
+Target: `GEPRC_Nano_900_RX_via_UART`
 
-Device Category: `GepRC 900 MHz`
+Device Category: `GEPRC 900 MHz`
 
-Device: `GepRC Nano 900MHz`
+Device: `GEPRC Nano 900MHz`
 
 ![via UART](../../assets/images/Method_RX_UART.png)
 
