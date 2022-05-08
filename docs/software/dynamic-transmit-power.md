@@ -68,7 +68,9 @@ Because dynamic power relies on information coming back from the RX to know how 
 On startup, the output power will be set to the lowest possible value. If telemetry is lost, the output power will stay at the current value until telemetry is received again. This is intended to prevent everyone's TX from blasting to max power when swapping batteries.
 
 ### OSD Power Readout
-To see the current output power on betaflight OSD, enable the `Tx uplink power` OSD element. You will also have to set the switch mode to `wide` in the transmitter settings.
+To see the current output power on the OSD, enable the `Tx uplink power` OSD element. This is only available on Betaflight starting at v4.3.0 and in INAV starting at v2.6.0.
+
+You will also have to set the switch mode to `Wide` in the transmitter settings via the ExpressLRS Lua Script (Switch Mode can only be changed when not bound/connected to a receiver). 
 
 ### OpenTX Power Readout
 Depending on your FC Firmware version, TX Power telemetry (TPWR) may not be recognized and will not be displayed on your OSD. You can instead use OpenTX/EdgeTX Telemetry readout special function so you get notified when changes in the power level has happened, as in the demo video.
