@@ -83,6 +83,7 @@ Updates are done through OpenTX's built-in firmware flashing tool.
 ### "Unable to connect to target device"
 
 If the flash fails with "Unable to connect to target device" (not "No STLINK found!") it is likely your STLINK clone does not have the RST line connected, but you can trigger the needed reset manually with a little more effort. The reason this is needed is that SIYI have disabled "Software Reset" to protect you from stealing their firmware binary.
+
   * Verify your wiring
   * Make sure the TX board is powering up (the LEDs light up)
   * Use the [STM32CubeProgrammer](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.html) or [STLINK GUI](https://www.st.com/en/development-tools/stsw-link004.html) to connect see next step.
