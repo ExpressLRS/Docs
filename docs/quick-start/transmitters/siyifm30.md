@@ -99,10 +99,12 @@ Before both the TX and RX can be flashed using the `st-flash` utility used by Pl
 stlink_fwrite_flash() == -1
 ```
 The only way I know of to disable the RDP is to use the STM32CubeProgrammer for Linux, or use a Windows VM / machine to use the ST-LINK.exe GUI / CLI to clear the RDP.
+
 ![STM32CubeProgrammerSteps](https://cdn.discordapp.com/attachments/798006228450017290/862145434311196682/unknown.png)
-* Click the "Connect" button to connect to the ST-LINK device. You'll probably get a popup error **Error: Data read failed**. That's normal. If it says it can't connect or no device is present, you'll have to figure that out first.
-* Click the "OB" button on the left.
-* Expand the "Read Out Protection" section.
-* Select RDP = "AA"
-* Click the "Apply" button at the bottom.
-* You should get a message indicating the "Option bytes successfully programmed". If so you're good to go. Click "Disconnect" at the top and flash from PlatformIO now. You can also flash directly from this GUI if you have the binaries and know their target addresses.
+
+  * Click the "Connect" button to connect to the ST-LINK device. You'll probably get a popup error **Error: Data read failed**. That's normal. If it says it can't connect or no device is present, you'll have to figure that out first.
+  * Click the "OB" button on the left.
+  * Expand the "Read Out Protection" section.
+  * Select RDP = "AA"
+  * Click the "Apply" button at the bottom.
+  * You should get a message indicating the "Option bytes successfully programmed". If so you're good to go. Click "Disconnect" at the top and flash from PlatformIO now. You can also flash directly from this GUI if you have the binaries and know their target addresses.
