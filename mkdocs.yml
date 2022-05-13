@@ -165,6 +165,8 @@ nav:
             - Happymodel EP: quick-start/receivers/hmep2400.md
             - Happymodel PP: quick-start/receivers/hmpp2400.md
             - Happymodel ES900RX: quick-start/receivers/hmes900.md
+            - iFlight 2.4GHz: quick-start/receivers/iflight2400.md
+            - iFlight 900MHz: quick-start/receivers/iflight900.md
             - IMRC Ghost: quick-start/receivers/ghost2400.md
             - Jumper Aion Nano: quick-start/receivers/jumper-aion.md
             - Jumper R9 Mini: quick-start/receivers/jumper900.md
