@@ -63,6 +63,7 @@ Anyone can add an entry to the table, and entries should include the:
 ### 250mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
+| 43.7km | 2.4G | 150Hz | 250mW | Wing | No | Slickshot | [Link](https://www.youtube.com/watch?v=Fidq5O3IvZs) |
 | 20km | 2.4G | 50Hz | 250mW | Wing | No | Padcom | [Link](https://www.youtube.com/watch?v=Fu0fHgSrOqw) |
 | 10.85km | 2.4G | 50Hz | 250mW | Wing | No | Stavros | [Link](https://youtu.be/tZvrAGST8tQ) |
 | 6km | 2.4G | 500Hz | 250mW | Wing | No | Spec | [Link](https://www.youtube.com/watch?v=bVJaiqJq8gY) |
