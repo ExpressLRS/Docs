@@ -13,14 +13,17 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 | Jumper AION Mini RX | :moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3: | :checkered_flag:|
 | Vantac RX | :moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3: | 20dBm | :whale::whale: | :thumbsup_tone3: | :checkered_flag:|
 | BetaFPV Nano 2.4 | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | 20dBm | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
+| BetaFPV Lite 2.4 | :moneybag::moneybag: | :straight_ruler: | :thumbsup_tone3:  | :thumbsdown_tone3: | :whale: | :thumbsup_tone3:  | :checkered_flag: |
 | DIY Nano 2.4 | :moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale:/:whale::whale:/:whale::whale::metal: | :thumbsup_tone3:  | :thumbsdown_tone3: |
 | Flywoo EL24E | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale: | :thumbsup_tone3:  | :checkered_flag: |
 | Flywoo EL24P | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | Ghost ATTO | :moneybag::moneybag::moneybag::moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsdown_tone3: | :thumbsdown_tone3: |
+| GEPRC Nano | :moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | HappyModel PP | :moneybag::moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale: | :thumbsdown_tone3: | :checkered_flag: |
 | HappyModel EP1 | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | HappyModel EP2 | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale: | :thumbsup_tone3:  | :checkered_flag: |
 | HGLRC 2400RX | :moneybag::moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: | 
+| iFlight ELRS | :moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | JHEMCU / HiYOUNGER EP24S | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale: | :thumbsup_tone3:  | :checkered_flag: |
 | JHEMCU / HiYOUNGER SP24S | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | JHEMCU / HiYOUNGER RX24T | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | 20dBm? | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: | 
@@ -39,6 +42,7 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 | HappyModel ES900RX | :moneybag::moneybag: | :straight_ruler: | :thumbsup_tone3:  | :thumbsup_tone3:  | :whale::whale: | :thumbsup_tone3:  | :thumbsup_tone3:  |
 | Jumper R9 Mini | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | :thumbsup_tone3:  | :whale::whale: | :thumbsdown_tone3: | :thumbsdown_tone3: |
 | NamimnoRC Voyager | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | :thumbsup_tone3:  | :whale::whale: | :thumbsdown_tone3: | :thumbsup_tone3:  |
+| GEPRC Nano | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 
 ## Most important column
 * **Whoops / Toothpicks / Light aircraft** Size is probably the most important feature, with a light small receiver and an onboard antenna being the best choice.
