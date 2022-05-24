@@ -19,11 +19,12 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 | Flywoo EL24P | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | Ghost ATTO | :moneybag::moneybag::moneybag::moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsdown_tone3: | :thumbsdown_tone3: |
 | GEPRC Nano | :moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
+| GEPRC NanoSE | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale: | :thumbsup_tone3:  | :checkered_flag: |
 | HappyModel PP | :moneybag::moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale: | :thumbsdown_tone3: | :checkered_flag: |
 | HappyModel EP1 | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | HappyModel EP2 | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale: | :thumbsup_tone3:  | :checkered_flag: |
 | HGLRC 2400RX | :moneybag::moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: | 
-| iFlight ELRS | :moneybag: | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
+| iFlight ELRS | :moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3: | 20dBm | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | JHEMCU / HiYOUNGER EP24S | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale: | :thumbsup_tone3:  | :checkered_flag: |
 | JHEMCU / HiYOUNGER SP24S | :moneybag: | :straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | JHEMCU / HiYOUNGER RX24T | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3:  | 20dBm? | :whale::whale: | :thumbsup_tone3:  | :checkered_flag: | 
