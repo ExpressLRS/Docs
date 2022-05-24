@@ -43,7 +43,7 @@ Anyone can add an entry to the table, and entries should include the:
 ### 50mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
-| 15.76| 2.4G | 150Hz | 50mW | Wing | yes | Börner | [Link](https://www.youtube.com/watch?v=EdrOipm3JWA) |
+| 15.76km| 2.4G | 150Hz | 50mW | Wing | yes | Börner | [Link](https://www.youtube.com/watch?v=EdrOipm3JWA) |
 | 7km | 2.4G | 150Hz | 50mW | Quad | No | Taufik | [Link](https://youtu.be/bUlUGCup48I) |
 | 6km | 900M | 100Hz | 50mW | Wing | No | Snipes | [Link](https://youtu.be/kN89mINbmQc?t=58) |
 
