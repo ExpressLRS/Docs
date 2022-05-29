@@ -162,6 +162,8 @@ nav:
             - BetaFPV Lite & Nano 2.4GHz: quick-start/receivers/betafpv2400.md
             - BetaFPV Nano 900Mhz: quick-start/receivers/betafpv900.md
             - Frsky R9: quick-start/receivers/r9.md
+            - GEPRC Nano 2.4GHz: quick-start/receivers/geprc2400.md
+            - GEPRC Nano 900MHz: quick-start/receivers/geprc900.md
             - Happymodel EP: quick-start/receivers/hmep2400.md
             - Happymodel PP: quick-start/receivers/hmpp2400.md
             - Happymodel ES900RX: quick-start/receivers/hmes900.md
