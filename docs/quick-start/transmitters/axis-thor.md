@@ -97,7 +97,8 @@ Attach a USB Data Cable to your module and Computer. Windows users might have to
 ![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
 
 !!! note
-    To flash the TX itself, the switch on the back side of the module must be set to the **leftmost** position. To flash the TX backpack, the switch must be set to the **rightmost** position. For normal operation the switch must be **centered**. 
+    To flash the TX itself, the switch on the back side of the module must be set to the **leftmost** position. To flash the TX backpack, the switch must be set to the **rightmost** position. For normal operation the switch must be **centered**.
+    <img src="../../../assets/images/thor-switch.png" width="30%">
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
