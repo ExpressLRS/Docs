@@ -30,6 +30,7 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 | Namimno Flash Diversity(ESP) | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3: | 21dBm | :whale::whale::metal: | :thumbsup_tone3:  | :checkered_flag: |
 | QuadKopters Nano | :moneybag::moneybag:? | :straight_ruler::straight_ruler: | :thumbsdown_tone3: | :thumbsdown_tone3: | :whale:/:whale::whale: | :thumbsup_tone3:  | :checkered_flag: |
 | SIYI FR Mini | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :thumbsup_tone3:  | 23dBm | :whale::whale::metal: | :thumbsdown_tone3: | :thumbsdown_tone3: |
+| Skystars Nano SS24D | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :thumbsup_tone3: | 23dBm | :whale::whale: | :thumbsup_tone3: | :checkered_flag: |
 
 ## Team900
 | Model | Price | Size | LNA | PA | Antenna | WiFi | RTF |
