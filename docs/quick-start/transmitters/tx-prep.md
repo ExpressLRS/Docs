@@ -17,14 +17,14 @@ These firmwares allow flashing of `.elrs` files too.
 !!! Note
     If you're using an External ExpressLRS Module, make sure the Internal RF Module is **OFF**.
 
-    If you're using a Radio with an Internal ExpressLRS Module (e.g. RadioMaster Zorro), make sure the External RF Module is **OFF**, and the Internal RF Module is set to **CRSF** Protocol.
+    If your Radio has an Internal ExpressLRS Module, and you want to use it instead of an external module, then set External RF Module to **OFF**, and then set the Internal RF Module to **CRSF** Protocol.
 
 ExpressLRS uses the CRSF serial protocol to communicate between the transmitter and the TX module. To set this up, enter into your model settings, and on the "Model Setup" tab, enable your "External RF" and select "CRSF" as the protocol:
 
 ![CRSF](https://oscarliang.com/ctt/uploads/2018/03/setup-tbs-crossfire-tx-rx-micro-nano-taranis-betaflight-fc-internal-external-rf-mode.jpg)
 ![CRSF](https://oscarliang.com/ctt/uploads/2019/12/JUMPER-T16-EXTERNAL-RF-MODE-PROTOCOL-TBS-CROSSFIRE-CRSF.jpg)
 
-For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro, set the Internal RF Module to **CRSF** Protocol and the External RF Module to OFF. If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, activate the CRSF Internal module via your Radio's `System Menu -> Hardware`, `Internal Module Type`.
+For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro, set the Internal RF Module to **CRSF** Protocol and the External RF Module to OFF if you want to use the Internal ExpressLRS module instead of an external one. If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, activate the CRSF Internal module via your Radio's `System Menu -> Hardware`, `Internal Module Type`.
 
 ## Serial Baud Rate
 
