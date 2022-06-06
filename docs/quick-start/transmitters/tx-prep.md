@@ -16,7 +16,7 @@ These firmwares allow flashing of `.elrs` files too.
 
 ### Serial Baud Rate
 
-The Baud Rate is the speed to which (in this instance) the RF module and the radio communicates. It is measured in bits per second. Common baud rates include 115200bps and 400000bps.
+The Baud Rate is the speed to which (in this instance) the Transmitter module and the Radio Handset communicates. It is measured in bits per second. Common baud rates include 115200bps and 400000bps.
 
 Faster or higher baud rate means that the module and radio can talk much faster, further lowering the end-to-end latency of the system. However, not all radio handset and/or transmitter module is capable of higher baud rate as this is highly dependent on the hardware itself.
 
