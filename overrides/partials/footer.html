@@ -10,7 +10,7 @@
         <a href="{{ prev_page_url | url }}" class="md-footer__link md-footer__link--prev" aria-label="{{ direction }}: {{ prev_page_title | e }}" rel="prev">
       {% elif page.parent.title == "Flashing Receivers" %}
         {% set prev_page_url = "quick-start/receivers/configuring-fc/" %}
-        {% set prev_page_title = "Configuring your FC" %}
+        {% set prev_page_title = "Configuring FC" %}
         <a href="{{ prev_page_url | url }}" class="md-footer__link md-footer__link--prev" aria-label="{{ direction }}: {{ prev_page_title | e }}" rel="prev">
       {% else %}
         {% set prev_page_title = page.previous_page.title %}
