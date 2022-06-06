@@ -4,7 +4,7 @@
     {% if page.previous_page %}
       {% set direction = lang.t("footer.previous") %}
       <!-- Use of variable for prev URL and previous page title in order to switch them when needed -->
-      {% if page.parent.title == "Flashing TX Modules" %}
+      {% if page.parent.title == "Flashing Transmitters" %}
         {% set prev_page_url = "quick-start/transmitters/tx-prep/" %}
         {% set prev_page_title = "Preparing your Radio" %}
         <a href="{{ prev_page_url | url }}" class="md-footer__link md-footer__link--prev" aria-label="{{ direction }}: {{ prev_page_title | e }}" rel="prev">
@@ -32,7 +32,7 @@
     {% if page.next_page %}
       {% set direction = lang.t("footer.next") %}
       <!-- Use of variable for next URL and next page title in order to switch them when needed -->
-      {% if page.parent.title == "Flashing TX Modules" %}
+      {% if page.parent.title == "Flashing Transmitters" %}
         {% set next_page_url = "quick-start/transmitters/lua-howto/" %}
         {% set next_page_title = "Using The Lua Script" %}
         <a href="{{ next_page_url | url }}" class="md-footer__link md-footer__link--next" aria-label="{{ direction }}: {{ next_page_title | e }}" rel="next">
