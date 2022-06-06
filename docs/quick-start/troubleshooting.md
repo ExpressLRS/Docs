@@ -89,9 +89,9 @@ template: main.html
 
     For newly-acquired ExpressLRS modules, flashing via USB is the recommended update method.
 
-### <span class="custom-heading" data-id="10">Betaflight Lua is stuck at 'Initializing'</span>
+### <span class="custom-heading" data-id="10">Betaflight Lua is stuck at `Initializing`</span>
 
-??? Note "Betaflight Lua is stuck at 'Initializing'"
+??? Note "Betaflight Lua is stuck at `Initializing`"
     Increase the TLM Ratio via the ExpressLRS Lua script to values like 1:4 or even 1:2 and retry the Betaflight Lua script.
 
     Also, you have to make sure you're getting more than ten (10) Telemetry sensors prior to launching the script.
