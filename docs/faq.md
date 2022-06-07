@@ -88,4 +88,4 @@ hide:
     | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX |
     | TSNR | Downlink - signal-to-noise ratio                     |           | SNR reported by the TX for telemetry packets |
 
-<script src="../../assets/javascripts/admonition-enhancement.js"></script>
+<script src="../assets/javascripts/admonition-enhancement.js"></script>
