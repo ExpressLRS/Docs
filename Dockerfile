@@ -1,4 +1,4 @@
-FROM squidfunk/mkdocs-material:8.1.4
+FROM squidfunk/mkdocs-material:8.3.2
 RUN apk add build-base
 RUN pip install "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0"
 
