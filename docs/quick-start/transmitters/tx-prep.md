@@ -8,9 +8,7 @@ template: main.html
 
 ExpressLRS **requires** CRSFShot or Mixer Sync to ensure full support for high packet rates. Starting with [OpenTX-2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12), `CRSFshot` has been fully implemented, and thus you will have to update your OpenTX radio to these [newer](https://www.open-tx.org/downloads.html#Releases23-ref) versions.
 
-Another alternative is [EdgeTX](https://github.com/EdgeTX/edgetx/releases), the bleeding edge fork of OpenTX.
-
-These firmwares allow flashing of `.elrs` files too.
+The ExpressLRS Devs, however, highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases) for the best experience and compatibility. There are options in EdgeTX that old and new Radio handsets will benefit from, like the One Bit sample mode for the older Frsky Radios (X9D, QX7) and Mega Bauds (Baudrates higher than 400K). 
 
 ## Radio Setup
 
