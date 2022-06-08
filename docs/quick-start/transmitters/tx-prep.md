@@ -20,7 +20,15 @@ Faster or higher baud rate means that the module and radio can talk much faster,
 
 Depending on the firmware that is running on your radio handset, you can easily change the baud rate setting. This setting can be found usually in the System Menu -> Hardware page, under the Max Bauds (earlier OpenTX) or Baudrate (EdgeTX; recent OpenTX). On EdgeTX 2.7.0 and later, External RF modules now uses their own Baudrate setting (see Model Setup section below).
 
+<figure markdown>
+![Baudrate](../../assets/images/txprep-clr-hardware.jpg)
+<figcaption>Baudrate setting on Colored Screen Radios</figcaption>
+</figure>
+
+<figure markdown>
 ![Baud Rate](https://fpvfrenzy.com/wp-content/uploads/2017/11/baud-rate.jpg)
+<figcaption>Baudrate setting on Older Radios</figcaption>
+</figure>
 
 The 500Hz Packet Rate requires at least 400K Baud Rate setting on the Radio handset. 
 
@@ -50,10 +58,23 @@ With EdgeTX 2.7, you can set this per-model (Global, On, Off) as this is helpful
 
 ExpressLRS uses the CRSF serial protocol to communicate between the transmitter and the TX module. To set this up, enter into your model settings, and on the "Model Setup" tab, enable your "External RF" and select "CRSF" as the protocol:
 
-![CRSF](https://oscarliang.com/ctt/uploads/2018/03/setup-tbs-crossfire-tx-rx-micro-nano-taranis-betaflight-fc-internal-external-rf-mode.jpg)
-![CRSF](https://oscarliang.com/ctt/uploads/2019/12/JUMPER-T16-EXTERNAL-RF-MODE-PROTOCOL-TBS-CROSSFIRE-CRSF.jpg)
+<figure markdown>
+![ExternalRF BW](../../assets/images/txprep-bw-externalRF.jpg)
+</figure>
+
+<figure markdown>
+![ExternalRF Color](../../assets/images/txprep-clr-externalRF.jpg)
+</figure>
 
 For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro, set the Internal RF Module to **CRSF** Protocol and the External RF Module to OFF if you want to use the Internal ExpressLRS module instead of an external one. If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, activate the CRSF Internal module via your Radio's `System Menu -> Hardware`, `Internal Module Type`.
+
+<figure markdown>
+![InternalRF BW](../../assets/images/txprep-bw-internalRF.jpg)
+</figure>
+
+<figure markdown>
+![InternalRF Color](../../assets/images/txprep-clr-internalRF.jpg)
+</figure>
 
 ### Mixes
 
@@ -61,7 +82,23 @@ You've probably heard about setting Aux1 as your Arming switch with ExpressLRS. 
 
 On the current model, navigate to the Mixes Page (Model Menu-> Mixes). By default, you will only find the first 4 channels assigned to those 4 gimbal sticks. You will need to do the same to the remaining channels, starting with CH5.
 
+<figure markdown>
+![mixes BW](../../assets/images/txprep-bw-mixes.jpg)
+</figure>
+
+<figure markdown>
+![mixes Color](../../assets/images/txprep-clr-mixes.jpg)
+</figure>
+
 Select the Channel, long press Enter and select Edit. You can name this channel however you want to remind you of its purpose. Then under Source, set it to the Switch you'd want to use for this channel. An example would be for CH5, which will be your Arming switch, you'd want to choose a 2-position switch.
+
+<figure markdown>
+![mixesAux BW](../../assets/images/txprep-bw-mixAux.jpg)
+</figure>
+
+<figure markdown>
+![mixesAux Color](../../assets/images/txprep-clr-mixAux.jpg)
+</figure>
 
 Once you're done, press the RTN key to go back to the Mixes page. Do the same to the rest of the Channels you need.
 
