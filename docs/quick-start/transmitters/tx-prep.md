@@ -80,7 +80,7 @@ For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro
 
 By default, a fresh model do not have any Aux Channels configured (Aux channels start from Ch5, with the first 4 Channels assigned to your joysticks). If moving any of the switches in your radio doesn't affect your Modes in Betaflight or INAV, this is one of the main reasons. So let's get this sorted out!
 
-On the current model, navigate to the Mixes Page (Model Menu-> Mixes). By default, you will only find the first 4 channels assigned to those 4 gimbal sticks. You will need to do the same to the remaining channels, starting with CH5.
+On the current model, navigate to the Mixes Page (Model Menu-> Mixes). You will need to assign switches to the remaining channels, as shown in the following images.
 
 <figure markdown>
 ![mixes BW](../../assets/images/txprep-bw-mixes.jpg)
