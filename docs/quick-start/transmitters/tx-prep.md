@@ -14,11 +14,11 @@ The ExpressLRS Devs, however, highly recommends [EdgeTX](https://github.com/Edge
 
 ### Serial Baud Rate
 
-The Baud Rate is the speed to which (in this instance) the Transmitter module and the Radio Handset communicates. It is measured in bits per second. Common baud rates include 115200bps and 400000bps.
+The Baud Rate is the speed to which (in this instance) the Transmitter module and the Radio Handset communicate. It is measured in bits per second. Common baud rates include 115200bps and 400000bps.
 
-Faster or higher baud rate means that the module and radio can talk much faster, further lowering the end-to-end latency of the system. However, not all radio handset and/or transmitter module is capable of higher baud rate as this is highly dependent on the hardware itself.
+Faster or higher baud rate means that the module and radio can talk much faster, further lowering the end-to-end latency of the system. However, not all radio handsets or transmitter modules are capable of higher baud rate as this is highly dependent on the hardware.
 
-Depending on the firmware that is running on your radio handset, you can easily change the baud rate setting. This setting can be found usually in the System Menu -> Hardware page, under the Max Bauds (earlier OpenTX) or Baudrate (EdgeTX; recent OpenTX). On EdgeTX 2.7.0 and later, External RF modules now uses their own Baudrate setting (see Model Setup section below).
+Depending on the firmware that is running on your radio handset, you can change the baud rate setting to better suit your setup. This setting can be found in the System Menu -> Hardware page, under the Max Bauds (earlier OpenTX) or Baudrate (EdgeTX; recent OpenTX). On EdgeTX 2.7.0 and later, External RF modules now uses their own Baudrate setting (see Model Setup section below). Internal CRSF Modules will still use the Baudrate setting in the System Menu -> Hardware page.
 
 <figure markdown>
 ![Baudrate](../../assets/images/txprep-clr-hardware.jpg)
@@ -66,7 +66,7 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 ![ExternalRF Color](../../assets/images/txprep-clr-externalRF.jpg)
 </figure>
 
-For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro, set the Internal RF Module to **CRSF** Protocol and the External RF Module to OFF if you want to use the Internal ExpressLRS module instead of an external one. If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, activate the CRSF Internal module via your Radio's `System Menu -> Hardware`, `Internal Module Type`.
+For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro, set the Internal RF Module to **CRSF** Protocol and the External RF Module to OFF if you want to use the Internal ExpressLRS module instead of an external one. If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, activate the CRSF Internal module via your Radio's `System Menu -> Hardware`, `Internal Module`.
 
 <figure markdown>
 ![InternalRF BW](../../assets/images/txprep-bw-internalRF.jpg)
@@ -76,9 +76,9 @@ For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro
 ![InternalRF Color](../../assets/images/txprep-clr-internalRF.jpg)
 </figure>
 
-### Mixes
+### Switches and Aux Channels
 
-You've probably heard about setting Aux1 as your Arming switch with ExpressLRS. How would you do that exactly?
+By default, a fresh model do not have any Aux Channels configured (Aux channels start from Ch5, with the first 4 Channels assigned to your joysticks). If moving any of the switches in your radio doesn't affect your Modes in Betaflight or INAV, this is one of the main reasons. So let's get this sorted out!
 
 On the current model, navigate to the Mixes Page (Model Menu-> Mixes). By default, you will only find the first 4 channels assigned to those 4 gimbal sticks. You will need to do the same to the remaining channels, starting with CH5.
 
