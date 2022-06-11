@@ -18,6 +18,8 @@ Device Category: `RadioMaster 2.4 GHz`
 
 Device: `RadioMaster Zorro 2400 TX`, `RadioMaster TX16S 2400 TX`
 
+Before you start, ensure you have the latest EdgeTX firmware version on your Zorro or TX16S MK2. You need at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0). The Zorro often comes with an earlier EdgeTX 2.7.0 version (2bdd4974) which results in unsuccessful flashing.
+
 With your handset turned on, connect a USB data cable on the USB data port of the Radio. Select `USB Serial(Debug)` or `USB Serial(VCP)` in the option window that pops up. 
 
 ![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
