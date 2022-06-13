@@ -8,7 +8,9 @@ Prior to your first ExpressLRS flight, you may want to do a few tweaks to your s
 
 ## Modes
 
-By default, ExpressLRS uses limited bits for AUX switches (1-bit for AUX1, and 3-4 bits for other AUX channels), which results in very coarse resolutions up to 8 or 16 positions to Betaflight/iNav on the AUX channels. In most cases, it is enough (especially on a multirotor), but if you need finer resolution, enabling **WideHybrid** option expands the resolution of AUX2-AUX8 up to 128 positions. For more information, read the [switch modes page](../software/switch-config.md). 
+By default, ExpressLRS uses limited bits for AUX switches (1-bit for AUX1, and 3-4 bits for other AUX channels), which results in very coarse resolutions up to 8 or 16 positions to Betaflight/INAV on the AUX channels. In most cases, it is enough (especially on a multirotor), but if you need finer resolution, enabling **Wide** Switch Mode option expands the resolution of AUX2-AUX8 up to 128 positions. For more information, read the [switch modes page](../software/switch-config.md).
+
+One important thing to keep in mind is that Aux1 should be used as your Arming switch, with LOW (~1000us) as `disarmed` and HIGH (~2000us) as `armed`. AUX1 is the low-latency switch, sent with every packet, and only supports on/off (2-position) operation. ExpressLRS uses AUX1 to determine if your model is armed and this is the most reliable way to be able to tell your model to disarm. If your arm switch is in another aux channel, it may be several packets before that switch is transmitted, and there's no guarantee that the Receiver will actually receive that packet.
 
 !!! warning "WARNING" 
     Please make sure your **ARM mode is on the AUX1 channel, and the armed state is set ~2000.**
