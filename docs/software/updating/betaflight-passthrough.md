@@ -43,4 +43,5 @@ Open the sensor’s configuration software and connect to the autopilot’s COM 
 If the configuration fails to connect there are some things to try:
 Some configuration software will not allow connecting to the autopilot’s COM port by default but may have a option to display all available COM ports
 If no serial messages are received from the PC the timeout will expire and SERIAL_PASS2 will revert to -1
-https://ardupilot.org/.../common-serial-passthrough.html
+
+https://ardupilot.org/plane/docs/common-serial-passthrough.html
