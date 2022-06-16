@@ -262,7 +262,7 @@ Connect your FC to USB and configure your FC firmware as shown on the [next page
 <figcaption>RadioMaster EP2, ESP-based</figcaption>
 </figure>
 
-The EP receivers require their Boot pad (see figure above) shorted to ground on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the bridge needs to be removed, and is no longer needed for subsequent passthrough flashing.
+The EP receivers require their Boot pad (see figure above) shorted to ground on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the Boot pad connection needs to be removed, and is no longer needed for subsequent passthrough flashing.
 
 Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode (indicated with a solid LED) and won't activate the wifi hotspot.
 
