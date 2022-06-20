@@ -6,9 +6,6 @@ template: main.html
 
 Now that you have flashed your TX it is time to learn how to use the ELRS lua script!
 
-!!! attention ""
-    If you flashed via WiFi or were on a version previous to 2.x you need a different version of the lua than you already installed.
-
 ## Installing the Lua Script
 
 Download the [ELRSv2 Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrsV2.lua?raw=true)(you can simply right-click, save-as) into your radio's SD Card under the `Scripts/Tools` folder and Long Press the "SYS" button (for T16 or similar Radios) or the "Menu" button (for Taranis X9D or similar Radios) to access the Tools Menu where you can find the ExpressLRS script ready to run with only one click.
@@ -60,12 +57,30 @@ The `Model Mismatched` message will also show up to indicate your are connected 
 
 These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allow you to change your performance parameters. 
 
-* `Packet Rate` sets how fast data packets are sent, higher rates send packets more frequently and have lower latency, but have reduced range. The options for Team2.4 are: `50, 150, 250 & 500` Hz and the options for Team900 are `25, 50, 100 & 200` Hz. The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.
+* `Packet Rate` sets how fast data packets are sent, higher rates send packets more frequently and have lower latency, but have reduced range.
+
+	The following options are available for `2.4GHz`:
+
+	- `50Hz, 150Hz, 250Hz & 500Hz`: These are LoRa-based options.
+	- `F500Hz & F1000Hz` :new: : These are FLRC-based options. See [PR1277](https://github.com/ExpressLRS/ExpressLRS/pull/1277) for more technical details.
+	- `D250Hz & D500Hz` :new: : These are FLRC-based options. See [PR1527](https://github.com/ExpressLRS/ExpressLRS/pull/1527) for the technical details.
+		Both of these rates run at FLRC 1000Hz Over-the-Air (OTA) but to the handset and flight controller, they are still seen as 250Hz and 500Hz, respectively. The main benefit of using these rates was the improved LQ values compared to their LoRa counterparts at close range. `D` stands for `Déjà Vu`.
+	- `100Hz Full & 333Hz Full` :new: : These are Lora-based Full resolution modes. See [PR1572](https://github.com/ExpressLRS/ExpressLRS/pull/1572) for more technical details.
+		+ 100Hz Full is ideal for general use servo output where every channel is full resolution. Great for new users coming from traditional systems, and the go-to mode for fixed wing with or without a flight controller.
+		+ 333Hz Full is for aerobatic helicopters, 3D fixed wing pilots, and surface RCers who want to get the most of their insanely expensive servos.
+	
+	The following options are available for `900MHz`:
+
+	- `25, 50, 100 & 200`: The options we've started with and loved.
+	- `100Hz Full` :new: : Full resolution mode for Team900.
+
+	The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.
 
 !!! warning "WARNING"
 	NEVER change the packet rate while flying as this FORCES A DISCONNECT between the TX and RX. 
 
-* `Telem Ratio` sets the telemetry ratio, how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data. For information on telemetry setup, see [First Flight: Telemetry](../pre-1stflight.md#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth.md).
+* `Telem Ratio` sets the telemetry ratio or how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data. For information on telemetry setup, see [First Flight: Telemetry](../pre-1stflight.md#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth.md).
+	- :new: v3.0 comes with `Std` and `Race` options. `Std` changes the Telemetry Ratio dynamically based on our recommendation. `Race` is the same as `Std` but will turn Telemetry Off once Armed, which work as if `NO_SYNC_ON_ARM` was enabled.
 
 ### Switch Mode
 
