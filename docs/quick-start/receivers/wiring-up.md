@@ -52,7 +52,7 @@ Those using DJI Air Units require another set of UARTs. The SBUS connection from
 
 <figure markdown>
 ![Axis Thor RX](../../assets/images/rx-axis-thor.jpg)
-<figcaption>Axisflying Thor</figcaption>
+<figcaption>Axisflying Thor, ESP-based</figcaption>
 </figure>
 
 Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
@@ -65,17 +65,17 @@ Connect your FC to USB and configure your FC firmware as shown on the [next page
 
 <figure markdown>
 ![betafpv 900Mhz](../../assets/images/betaFPVrx900.png)
-<figcaption>BetaFPV 900MHz ExpressLRS Receiver</figcaption>
+<figcaption>BetaFPV 900MHz Nano, ESP-based</figcaption>
 </figure>
 
 <figure markdown>
 ![betafpv 2.4Ghz](../../assets/images/betaFPVrx2400.png)
-<figcaption>BetaFPV 2.4GHz ExpressLRS Receiver</figcaption>
+<figcaption>BetaFPV 2.4GHz Nano, ESP-based</figcaption>
 </figure>
 
 <figure markdown>
 ![betafpv Lite](../../assets/images/betaFPVrxLite.png)
-<figcaption>BetaFPV 2.4GHz Lite Receivers (Flat & Tower)</figcaption>
+<figcaption>BetaFPV 2.4GHz Lite (Flat & Tower), ESP-based</figcaption>
 </figure>
 
 Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Don't forget to also wire up 5v(VCC) and Gnd.
@@ -98,11 +98,34 @@ AFTER you've flashed the [bootloader](r9.md#bootloaders) and wired your receiver
 !!! note ""
     Note: R9 Slim requires flashing via STLink first. Passthrough should work for updates.
 
+## GEPRC 900MHz & 2.4GHz
+
+<figure markdown>
+![GEPRC 900MHz](../../assets/images/GEPRC-Nano900.png)
+<figcaption>GEPRC Nano 900MHz, ESP-based</figcaption>
+</figure>
+
+<figure markdown>
+![GEPRC Nano 2.4GHz](../../assets/images/GEPRC-Nano2400.png)
+<figcaption>GEPRC Nano, ESP-based</figcaption>
+</figure>
+
+<figure markdown>
+![GEPRC NanoSE 2.4GHz](../../assets/images/GEPRC-NanoSE.png)
+<figcaption>GEPRC Nano SE, ESP-based</figcaption>
+</figure>
+
+Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Take note the location of the Nano SE Boot pad, and the Boot buttons of the Nano.
+
+As this is an ESP-based receiver, be aware that there are certain FCs that puts their Receiver UART's RX pads Low, which in turn, puts the receiver to Bootloader mode unintentionally.
+
+After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
+
 ## Happymodel EP1, EP2, PP
 
 <figure markdown>
 ![HM2400 connection](../../assets/images/EPWiring.png)
-<figcaption>Happymodel EP1 & EP2</figcaption>
+<figcaption>Happymodel EP1 & EP2, ESP-based</figcaption>
 </figure>
 
 <figure markdown>
@@ -122,6 +145,7 @@ After you've wired your receiver, proceed to configuring your FC firmware as sho
 
 <figure markdown>
 ![ES900RX](../../assets/images/es900rx-conn.png)
+<figcaption>ES900RX, ESP-based</figcaption>
 </figure>
 
 Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Additionally, the Boot Pads, encircled in the photo above, needs to be bridged for the first-time passthrough flash from the factory firmware.
@@ -132,7 +156,7 @@ Should you be updating via Wifi, the bridging of the boot pads is not needed.
 
 After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
 
-## Happymodel ES915/868RX (Discontinued)
+## Happymodel ES915/868RX
 
 <figure markdown>
 ![ES915RX](../../assets/images/ES915rx.jpg)
@@ -144,11 +168,29 @@ These receivers are STM-based, and thus no support for WiFi Flashing/Updating.
 
 Connect your FC to USB and configure your FC firmware as shown on the [next page].
 
+## iFlight 900MHz & 2.4GHz
+
+<figure markdown>
+![iFlight Dipole](../../assets/images/iFlight-2400Dipole.png)
+<figcaption>iFlight 900MHz & 2.4GHz Dipole, ESP-based</figcaption>
+</figure>
+
+<figure markdown>
+![iFlight SMD](../../assets/images/iFlight-2400smd.png)
+<figcaption>iFlight 2.4GHz SMD, ESP-based</figcaption>
+</figure>
+
+Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Boot buttons are indicated above.
+
+As this is an ESP-based receiver, be aware that there are certain FCs that puts their Receiver UART's RX pads Low, which in turn, puts the receiver to Bootloader mode unintentionally.
+
+After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
+
 ## Jumper Aion
 
 <figure markdown>
 ![Jumper Aion RX](../../assets/images/JumperAionRX.png)
-<figcaption>Jumper Aion</figcaption>
+<figcaption>Jumper Aion, ESP-based</figcaption>
 </figure>
 
 Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
@@ -161,12 +203,12 @@ Connect your FC to USB and configure your FC firmware as shown on the [next page
 
 <figure markdown>
 ![mateksys r24-d](../../assets/images/ELRS-R24-D.jpg)
-<figcaption>R24-D Diversity (Antenna)</figcaption>
+<figcaption>R24-D (Antenna) Diversity, ESP-based</figcaption>
 </figure>
 
 <figure markdown>
 ![mateksys r24-d](../../assets/images/ELRS-R24-S.jpg)
-<figcaption>R24-S SMD Antenna</figcaption>
+<figcaption>R24-S SMD Antenna, ESP-based</figcaption>
 </figure>
 
 Connect Rx/R to a Tx pad on the FC and Tx/T to an Rx pad on the FC. Don't forget to also wire up 5v and Gnd.
@@ -208,11 +250,29 @@ Also shown above were the boot pads for the V2 of these receivers.
 
 Connect your FC to USB and configure your FC firmware as shown on the [next page].
 
+## RadioMaster EP
+
+<figure markdown>
+![RM2400 connection](../../assets/images/RM-EP1.png)
+<figcaption>RadioMaster EP1, ESP-based</figcaption>
+</figure>
+
+<figure markdown>
+![RM2400 connection](../../assets/images/RM-EP2.png)
+<figcaption>RadioMaster EP2, ESP-based</figcaption>
+</figure>
+
+The EP receivers require their Boot pad (see figure above) shorted to ground on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the Boot pad connection needs to be removed, and is no longer needed for subsequent passthrough flashing.
+
+Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode (indicated with a solid LED) and won't activate the wifi hotspot.
+
+After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
+
 ## Vantac ELRS
 
 <figure markdown>
 ![Vantac ELRS](../../assets/images/vantac-elrs2.4_rx.png)
-<figcaption>Vantac</figcaption>
+<figcaption>Vantac, ESP-based</figcaption>
 </figure>
 
 Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
