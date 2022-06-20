@@ -206,6 +206,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/2.0/quick-start/receivers/hglrc-hermes2400/</loc>
+         <lastmod>2022-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/quick-start/receivers/hglrc-hermes900/</loc>
+         <lastmod>2022-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/2.0/quick-start/receivers/hmep2400/</loc>
          <lastmod>2022-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -327,6 +337,11 @@
     </url>
     <url>
          <loc>https://www.expresslrs.org/2.0/quick-start/transmitters/ghost2400/</loc>
+         <lastmod>2022-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/2.0/quick-start/transmitters/hglrc-hermes/</loc>
          <lastmod>2022-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
