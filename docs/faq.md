@@ -75,17 +75,18 @@ hide:
 ## <span class="custom-heading" data-id="11">What does RQLY, TQLY, RSSI x2, SNR x2 mean?</span>
 
 ??? faq "What does RQLY, TQLY, RSSI x2, SNR x2 mean?"
+
     | Datapoint| Description   |   Range | Info |
     |------|-----------------------------------------|---|---|
-    | RQly | Uplink - link quality (valid packets)                |  0 - 100  | The number of successful packets out of the last 100 from TX → RX |
-    | 1RSS | Uplink - received signal strength antenna 1 (RSSI)   | -128 - 0  | RSSI dBm as reported by the RX. Values vary depending on mode, antenna quality, output power and distance |
-    | 2RSS | Uplink - received signal strength antenna 2 (RSSI)   |           | Second antenna RSSI, used in diversity mode |
-    | ANT  | RX active antenna                                    | 0 - 1     | Active antenna for diversity RX |
-    | RSNR | Uplink - signal-to-noise ratio                       |           | SNR reported by the RX. Value varies mostly by radio chip and gets lower with distance (once the agc hits its limit)|
+    | RQly | Uplink - link quality (valid packets)                |  0 - 100  | The number of successful packets out of the last 100 from TX. TX → RX |
+    | 1RSS | Uplink - received signal strength antenna 1 (RSSI)   | -128 - 0  | First antenna RSSI dBm as reported by the RX. Values vary depending on mode, antenna quality, output power and distance. TX → RX |
+    | 2RSS | Uplink - received signal strength antenna 2 (RSSI)   |           | Second antenna RSSI dBm, for diversity receivers.  TX → RX |
+    | ANT  | RX active antenna                                    | 0 - 1     | Active receiver antenna for diversity RX.  |
+    | RSNR | Uplink - signal-to-noise ratio                       |           | SNR reported by the RX. Value varies mostly by radio chip and gets lower with distance (once the agc hits its limit). TX → RX |
     | RFMD | Uplink - packet rate                                 | 0 - 7     | [RF Mode Indexes](info/signal-health.md#rf-mode-indexes-rfmd) |
     | TPWR | Uplink - transmitting power                          |           | 50mW reported as 0, as CRSF/OpenTX do not have this option |
-    | TQly | Downlink - link quality (valid packets)              |  0 - 100  | An LQ indicator of telemetry packets received RX → TX |
-    | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX |
-    | TSNR | Downlink - signal-to-noise ratio                     |           | SNR reported by the TX for telemetry packets |
+    | TQly | Downlink - link quality (valid packets)              |  0 - 100  | An LQ indicator of telemetry packets received by TX. RX → TX |
+    | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX. RX → TX |
+    | TSNR | Downlink - signal-to-noise ratio                     |           | SNR reported by the TX for telemetry packets. RX → TX |
 
 <script src="../assets/javascripts/admonition-enhancement.js"></script>
