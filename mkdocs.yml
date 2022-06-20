@@ -143,6 +143,7 @@ nav:
             - Frsky R9 Modules: quick-start/transmitters/frsky-r9modules.md
             - Happymodel ES24TX: quick-start/transmitters/es24tx.md
             - Happymodel ES900TX: quick-start/transmitters/es900tx.md
+            - HGLRC Hermes: quick-start/transmitters/hglrc-hermes.md
             - IMRC Ghost: quick-start/transmitters/ghost2400.md
             - Internal RadioMaster: quick-start/transmitters/rm-internal.md
             - Internal Jumper T-Pro:  quick-start/transmitters/aion-internal.md
@@ -167,6 +168,8 @@ nav:
             - Happymodel EP: quick-start/receivers/hmep2400.md
             - Happymodel PP: quick-start/receivers/hmpp2400.md
             - Happymodel ES900RX: quick-start/receivers/hmes900.md
+            - HGLRC Hermes 2.4GHz: quick-start/receivers/hglrc-hermes2400.md
+            - HGLRC Hermes 900MHz: quick-start/receivers/hglrc-hermes900.md
             - iFlight 2.4GHz: quick-start/receivers/iflight2400.md
             - iFlight 900MHz: quick-start/receivers/iflight900.md
             - IMRC Ghost: quick-start/receivers/ghost2400.md
