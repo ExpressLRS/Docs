@@ -51,7 +51,7 @@ UART_INVERTED
 ```
 This **only works** with ESP32 based TXes. **Almost all handsets** require `UART_INVERTED` on, such as the FrSky QX7, TBS Tango 2, and RadioMaster TX16S. For T8SG V2 or Deviation firmware turn this setting off.
 
-## Receiver Only Options ##
+## Receiver Only Options
 
 <figure markdown>
 ![2400 RX Options](../assets/images/ConfigurationOptions2400rx.png)
@@ -64,7 +64,7 @@ This **only works** with ESP32 based TXes. **Almost all handsets** require `UART
 !!! attention ""
     Note: Configuration of Receivers should match the configuration of the Transmitter Module for Sync/Binding to happen between devices.
 
-Most of the options listed above also apply to Receivers. The following are options specific to receivers that you might need.
+Most of the options listed above for the Transmitter Modules also apply to Receivers. The following are options specific to receivers that you might need.
 
 ### Output Inverting
 
@@ -78,7 +78,7 @@ USE_R9MM_R9MINI_SBUS
 ```
 On the R9MM/R9Mini only, this changes the pin used to output CRSF from the receiver the two side pins (A9 and A10) to the pin labeled "SBUS" on the RX, which is inverted. Similar to `RCVR_INVERT_TX` this does not convert the output to SBUS protocol, so CRSF should still be the receiver protocol selected in the flight controller software.
 
-### Should I turn these off/on?
+## Should I turn these off/on?
 
 ```
 NO_SYNC_ON_ARM
