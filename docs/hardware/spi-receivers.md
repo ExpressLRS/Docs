@@ -11,7 +11,7 @@ Because the ExpressLRS code is "baked-in" to the flight controller firmware inst
 !!! info "NOTE"
     You cannot use the ExpressLRS Configurator to update these FCs.
 
-With [Betaflight 4.3.0](https://github.com/betaflight/betaflight/releases/tag/4.3.0) finally released, you should first update the FC firmware to this released version. These flight controllers come with pre-released Betaflight 4.3.0 which will only work with ExpressLRS 1.x Firmware. A lot of tweaks and fixes were implemented on Betaflight 4.3.0 for these flight controllers and the ExpressLRS Developers highly recommend updating to the latest Betaflight firmware.
+With [Betaflight 4.3.0](https://github.com/betaflight/betaflight/releases/tag/4.3.0) finally released, you should first update the FC firmware to this released version. The firmware the FC comes with most likely has a pre-release Betaflight 4.3.0 which will only work with ExpressLRS 1.x firmware and may have bugs. A lot of tweaks and fixes were implemented on Betaflight 4.3.0 for these flight controllers and the ExpressLRS Developers highly recommend updating to the latest Betaflight firmware.
 
 In preparation for updating, you should save a copy of your `diff all` dump. Simply go into the CLI Tab of the Betaflight Configurator and execute the command `diff all` then press enter. A bunch of text will show up on the screen. At the bottom of the page, click the **Save to File** button and navigate to the folder you want the file to be saved. Finally click `Save` after taking note of the folder and filename of the text file. You will need to navigate to this file later on, moreover if you already have customized your settings on the flight controller, like rates, pid tune, OSD. For newly acquired flight controllers, this is often unnecessary.
 
@@ -116,7 +116,7 @@ Where `[your index]` corresponds to the following:
 
 ## Thanks are in order
 
-The SPI ExpressLRS implementation will not be possible without the work and huge efforts from the following developers:
+The SPI ExpressLRS implementation would not have been possible without the work and huge efforts from the following developers:
 
 [@phobos-](https://github.com/phobos-)
 [@hydra](https://github.com/hydra)
