@@ -108,7 +108,14 @@ Devices:
 
 ![via UART](../../assets/images/Method_TX_UART.png)
 
-Attach a USB-C Data Cable to your module and Computer. Windows users might have to install [CP210x Windows Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
+Unscrew the two screws holding the Transmitter Module to the back of the radio handset. Carefully lift the Transmitter Module to get access to the USB-c port. Do not tug too much as there are wires connecting the Transmitter Module to the mainboard of the radio handset, along with the antenna cable of the module itself.
+
+<figure markdown>
+![Commando Back](../../assets/images/iFlight-cmndoUSB.jpg)
+<figcaption>TX Module and USB-C connection</figcaption>
+</figure>
+
+Attach a USB-C Data Cable to your module and Computer. Windows users might have to install [CP210x Windows Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized. Check Device Manager to verify the TX Module appears as a CP210x USB to UART Bridge, under the Ports grouping.
 
 ![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
 
@@ -117,3 +124,5 @@ Using the ExpressLRS Configurator with the correct Target selected and [Firmware
 ![Build & Flash](../../assets/images/BuildFlash.png)
 
 Verify the version and hash in the main screen of ExpressLRS Lua script.
+
+[Firmware Options]: ../firmware-options.md
