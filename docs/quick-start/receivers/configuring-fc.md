@@ -10,6 +10,8 @@ Once you've [wired up](./wiring-up.md) your Receiver to your Flight Controller, 
 
 ![Ports Tab](../../assets/images/PortsTab.png)
 
+![INAV Ports](../../assets/images/FC-portsconfig-INAV.png)
+
 ## Protocol
 
 Similar to your OpenTX/EdgeTX Radio, ExpressLRS will be using the CRSF protocol between the receiver and the FC firmware (Betaflight/iNav/emuflight), so on the "Configuration" tab, you need to select "Serial-based Receiver" on the "Receiver" panel, and select "CRSF" as the Protocol. Telemetry is optional here and will enable your Flight Controller to send Flight Data back to your Radio like Battery Level, GPS Data, etc. but sending Telemetry will reduce your Channel update rate as it will use up bandwidth and time frames.
@@ -18,6 +20,10 @@ Similar to your OpenTX/EdgeTX Radio, ExpressLRS will be using the CRSF protocol 
     Betaflight 4.3.0 has moved the Receiver configuration into the Receiver Tab.
 
 ![Conf Tab](../../assets/images/ConfigurationTab.png)
+
+![INAV Config](../../assets/images/FC-config-INAV.png)
+
+![INAV Config](../../assets/images/FC-rxconfig-INAV.png)
 
 ## Software Inversion and Duplex Modes
 

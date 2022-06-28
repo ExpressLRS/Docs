@@ -6,6 +6,11 @@ template: main.html
 
 **Welcome to the ELRS Quick Start Guide!**
 
+!!! info "Prerequisites"
+    You should be comfortable navigating through your Radio Handset firmware (OpenTX/EdgeTX) and setting up models, as the guide on this website mainly covers setting up your radio for you to be able to use ExpressLRS.
+    
+    Likewise, you should also be comfortable with your Flight Controller firmware (Betaflight, INAV, etc), as the guide only covers setting up your ExpressLRS receiver to work with your flight controller firmware.
+
 Please use the Navigation Bar at the bottom of each page for a more step-by-step approach, or use the Navigation Menu at the left to get to a Hardware-specific Guide.
 
 Longer pages have a **Table of Contents** menu found on the right hand side of the page.
