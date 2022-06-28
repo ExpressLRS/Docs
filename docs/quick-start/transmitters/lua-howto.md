@@ -77,11 +77,13 @@ These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allo
 	NEVER change the packet rate while flying as this FORCES A DISCONNECT between the TX and RX. 
 
 * `Telem Ratio` sets the telemetry ratio or how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data. For information on telemetry setup, see [First Flight: Telemetry](../pre-1stflight.md#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth.md).
-	- :new: v3.0 comes with `Std` and `Race` options.
+	- :new: v3.0 comes with `Std` and `Race` options. `Std` changes depending on the Packet Rate, while `Race` will give you Telemetry while not yet armed, stopping Telemetry once armed.
 
 ### Switch Mode
 
 The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver (the 4 main channels are always 10-bit). The options are `Hybrid & Wide`. **Hybrid** mode is 6x 2/3/6-position + 1x 16-position, and **Wide** is 7x 64 or 128-position. For detail about the differences, see the [Switch Configs](../../software/switch-config.md) documentation.
+
+:new: With the introduction of the Full Resolution modes, new Switch Modes can now be set for them. **8CH Mode** have CH1-CH4(sticks) and CH6-CH9 being sent 10-bit (Full Resolution) at the selected rate, with CH5(Aux1) remaining 1-bit for Arming state. **12CH Mode** have CH1-CH4(sticks) being sent 10-bit along with CH5(Aux1) sent 1-bit at the selected rate, while CH6-CH13 being sent 10-bit at half rate. **16CH Mode** have all channels (CH1-CH16) being sent 10-bit at half rate.
 
 !!! hint "Hot Tip"
 	The Switch Mode can only be changed when not connected to a receiver. The top right corner of the lua script will show a `-` if you're not connected.
@@ -100,7 +102,7 @@ TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXI
 
 * `Max Power` sets the maxumum power level your TX will transmit at. Selecting a power level higher or lower than your TX supports will revert to the closest supported level. The options are `10, 25, 50, 100, 250, 500, 1000 & 2000` mW. If Dynamic Power is set to `Off` this is the power level your TX always uses. 
 
-* `Dynamic` enables the Dynamic Power feature. `Off` means that the TX will transmit at Max Power at all times. `On` means the TX will dynamically _lower_ power to save energy when maximum power is not needed. The options `AUX9, AUX10, AUX11, AUX12` indicate that the TX can be changed from max power to dynamic power by changing the position of a switch. where switch HIGH (>1500us) = dynamic power, switch LOW (<1500us) = max power. For more information, [Dynamic Transmit Power](../../software/dynamic-transmit-power.md) provides a deeper dive on the algorithm and usage.
+* `Dynamic` enables the Dynamic Power feature. `Off` means that the TX will transmit at Max Power at all times. `On` (`Dyn` on v3.x) means the TX will dynamically _lower_ power to save energy when maximum power is not needed. The options `AUX9, AUX10, AUX11, AUX12` indicate that the TX can be changed from max power to dynamic power by changing the position of a switch. where switch HIGH (>1500us) = dynamic power, switch LOW (<1500us) = max power. For more information, [Dynamic Transmit Power](../../software/dynamic-transmit-power.md) provides a deeper dive on the algorithm and usage.
 
 * `Fan Thresh` sets the power level the Fan should activate, e.g. if set to 100mW, then the fan should spin up if you set `Max Power` to 100mW with `Dynamic` set to OFF after a short delay. The fan will continue running for some time even after the power level goes below the threshold. Not all modules have a Fan header that benefits from the setting. . Default fan threshold is 250mW.
 
