@@ -55,20 +55,20 @@ The `Model Mismatched` message will also show up to indicate your are connected 
 
 ### Packet Rate and Telemetry Ratio
 
-These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allow you to change your performance parameters. 
+These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allows you to change your performance parameters. 
 
 * `Packet Rate` sets how fast data packets are sent, higher rates send packets more frequently and have lower latency, but have reduced range.
 
 	The following options are available for `2.4GHz`:
 
-	- `50Hz, 150Hz, 250Hz & 500Hz`: These are LoRa-based options.
+	- `50Hz, 150Hz, 250Hz & 500Hz`: These are the LoRa-based options we started with.
 	- `F500Hz & F1000Hz` :new: : These are FLRC-based options. See [PR1277](https://github.com/ExpressLRS/ExpressLRS/pull/1277) for more technical details.
 	- `D250Hz & D500Hz` :new: : These are FLRC-based options. `D` stands for `Déjà Vu`. See [PR1527](https://github.com/ExpressLRS/ExpressLRS/pull/1527) for the technical details.
 	- `100Hz Full & 333Hz Full` :new: : These are Lora-based Full resolution modes. See [PR1572](https://github.com/ExpressLRS/ExpressLRS/pull/1572) for more technical details.
 	
 	The following options are available for `900MHz`:
 
-	- `25, 50, 100 & 200`: The options we've started with and loved.
+	- `25, 50, 100 & 200`: These are the LoRa-based options we started with.
 	- `100Hz Full` :new: : Full resolution mode for Team900. See [PR1572](https://github.com/ExpressLRS/ExpressLRS/pull/1572) for more technical details.
 
 	The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.

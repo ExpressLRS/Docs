@@ -13,22 +13,22 @@ For both switch modes, the first switch (AUX1) is sent with every packet. Put. Y
 
 1. The default choice is `HYBRID_SWITCHES_8` or just "Hybrid" where the switches are broken into different types
 
-| Channel | Resolution | Frequency |
-|---|---|---|
-| AUX1 | 1-bit / 2-position | Every packet, ARM channel |
-| AUX2-AUX7 | 3-bit / 2-position, 3-position, or 6-position | Round-robin |
-| AUX8 | 4-bit / 16-position | Round-robin |
+    | Channel | Resolution | Frequency |
+    |---|---|---|
+    | AUX1 | 1-bit / 2-position | Every packet, ARM channel |
+    | AUX2-AUX7 | 3-bit / 2-position, 3-position, or 6-position | Round-robin |
+    | AUX8 | 4-bit / 16-position | Round-robin |
 
-It takes 7 packets to send the complete set of switches before cycling back to AUX2.
+    It takes 7 packets to send the complete set of switches before cycling back to AUX2.
 
 2. The other choice is "WideHybrid" mode. It shares much in common with regular Hybrid mode, but with just two different types
 
-| Channel | Resolution | Frequency |
-|---|---|---|
-| AUX1 | 1-bit / 2-position | Every packet, ARM channel |
-| AUX2-AUX8 | 6 or 7-bit / 64 or 128-position | Round-robin |
+    | Channel | Resolution | Frequency |
+    |---|---|---|
+    | AUX1 | 1-bit / 2-position | Every packet, ARM channel |
+    | AUX2-AUX8 | 6 or 7-bit / 64 or 128-position | Round-robin |
 
-It takes 8 packets to send the complete set of switches before cycling back to AUX2 (one more than Hybrid). WideHybrid uses the 8th slot to transmit extra data to the receiver, including the current transmitter power. This is the only switch mode which can show TPwr on the flight controller's OSD.
+    It takes 8 packets to send the complete set of switches before cycling back to AUX2 (one more than Hybrid). WideHybrid uses the 8th slot to transmit extra data to the receiver, including the current transmitter power. This is the only switch mode which can show TPwr on the flight controller's OSD.
 
 ## AUX 1 (All Modes)
 
@@ -73,6 +73,16 @@ In Wide switch mode, AUX2-AUX8 are 7-bit (128 position) for telemetry ratios 1:1
 Wide switch mode also sends current transmitter power to the flight controller to display in the OSD. TPwr is only available at the flight controller in this mode.
 
 Ardupilot Modes don't line up very well with the standard -100% (988us) to +100% (2012us) output range in OpenTX when using a 6-position selector as input. Both the first two and the last two positions get binned into Mode 1 and Mode 6 respectively. To get the full 6 Ardupilot modes, go to the Outputs page on the OpenTX model setup and set the min / max for the channels to -75% / +75%.
+
+## Full Resolution Switch Modes :new:
+
+Version 3.0 brought Full Resolution Modes to both Team2400 and Team900. There are three new Switch Modes for these new RF Modes:
+
+1. 8CH Mode - Channels 1 to 4 and Channels 6 to 9 are sent 10-bit, Full Resolution at the current selected Packet Rate, along with Channel 5 (AUX1) in 1-bit (2-position) for Arming.
+
+2. 12CH Mode - Channels 1 to 4 are sent 10-bit, with Channel 5 (AUX1) still in 1-bit, at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
+
+3. 16CH Mode - All the Channels are sent 10-bit but at half rate.
 
 ## FAQ
 
