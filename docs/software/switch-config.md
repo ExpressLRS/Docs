@@ -80,7 +80,7 @@ Version 3.0 brought Full Resolution Modes to both Team2400 and Team900. There ar
 
 1. 8CH Mode - Channels 1 to 4 and Channels 6 to 9 are sent 10-bit, Full Resolution at the current selected Packet Rate, along with Channel 5 (AUX1) in 1-bit (2-position) for Arming.
 
-2. 12CH Mode - Channels 1 to 4 are sent 10-bit, with Channel 5 (AUX1) still in 1-bit, at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
+2. 12CH Mode - Channels 1 to 4 are sent 10-bit, Full Resolution with Channel 5 (AUX1) still in 1-bit, at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
 
 3. 16CH Mode - All the Channels are sent 10-bit but at half rate.
 
