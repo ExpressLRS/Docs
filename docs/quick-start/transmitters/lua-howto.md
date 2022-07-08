@@ -53,6 +53,12 @@ The `Connection Status` indicator shows your current RC link status. When not co
 
 The `Model Mismatched` message will also show up to indicate your are connected to a receiver, but the model selected in your radio is incorrect. See the [Model Match](../../software/model-config-match.md) page for more info about Model Matching.
 
+### Folder Titles
+
+Items with `>` before the name is a folder that when selected shows another level of customization. `TX Power`, `VTX Administrator`, `Wifi Connectivity` were example of these items.
+
+:new: These items will now show what is currently set for the items within. Example would be on `TX Power`, which will show the current Power set, and if Dynamic Power is enabled, it will show the current set Max Power, followed by the indicator `Dyn`.
+
 ### Packet Rate and Telemetry Ratio
 
 These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allows you to change your performance parameters. 
@@ -92,6 +98,7 @@ The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver
 
 Model Match is used to prevent accidentally selecting the wrong model in the handset and flying with an unexpected handset or ELRS configuration. Setting this to `On` while a receiver is connected will make that receiver only connect with the current Receiver ID. Setting it to `Off` will allow a connection with any bound receiver (including those using a Bind Phrase). Both sides of the connection must agree on their Model Match setting. For a detailed explanation of how this restricts connections see [Model Match](../../software/model-config-match.md).
 
+:new: Following the `On` or `Off` setting will be the current Model ID to help determining what Model ID should be/will be set on the Receiver. This will further help determine the cause of the Model Mismatch.
 
 ### TX Power
 
@@ -102,7 +109,7 @@ TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXI
 
 * `Max Power` sets the maxumum power level your TX will transmit at. Selecting a power level higher or lower than your TX supports will revert to the closest supported level. The options are `10, 25, 50, 100, 250, 500, 1000 & 2000` mW. If Dynamic Power is set to `Off` this is the power level your TX always uses. 
 
-* `Dynamic` enables the Dynamic Power feature. `Off` means that the TX will transmit at Max Power at all times. `On` (`Dyn` on v3.x) means the TX will dynamically _lower_ power to save energy when maximum power is not needed. The options `AUX9, AUX10, AUX11, AUX12` indicate that the TX can be changed from max power to dynamic power by changing the position of a switch. where switch HIGH (>1500us) = dynamic power, switch LOW (<1500us) = max power. For more information, [Dynamic Transmit Power](../../software/dynamic-transmit-power.md) provides a deeper dive on the algorithm and usage.
+* `Dynamic` enables the Dynamic Power feature. `Off` means that the TX will transmit at Max Power at all times. `Dyn` means the TX will dynamically _lower_ power to save energy when maximum power is not needed. The options `AUX9, AUX10, AUX11, AUX12` indicate that the TX can be changed from max power to dynamic power by changing the position of a switch. where switch HIGH (>1500us) = dynamic power, switch LOW (<1500us) = max power. For more information, [Dynamic Transmit Power](../../software/dynamic-transmit-power.md) provides a deeper dive on the algorithm and usage.
 
 * `Fan Thresh` sets the power level the Fan should activate, e.g. if set to 100mW, then the fan should spin up if you set `Max Power` to 100mW with `Dynamic` set to OFF after a short delay. The fan will continue running for some time even after the power level goes below the threshold. Not all modules have a Fan header that benefits from the setting. . Default fan threshold is 250mW.
 
@@ -149,6 +156,12 @@ Pressing the `[Bind]` button activates binding mode for traditional binding. Thi
 <img src="../../../assets/images/lua/blejoystick-bw.png" width = "40%">
 
 Pressing the `[BLE Joystick]` selection activates BluetoothLE Joystick mode which allows connection to simulators through the bluetooth of your computer. Reboot or change models to exit this mode.
+
+### Other Devices
+
+This folder will allow you to switch between the TX module settings (above) or Receiver-specific settings, like Model Match ID or the Telemetry Transmit Power for PA/LNA-equipped Receivers. You can also check the version flashed into the currently connected Receiver through this folder.
+
+Model Loaning is also here, along with the Return Model option.
 
 ## Troubleshooting the Lua Script
 
