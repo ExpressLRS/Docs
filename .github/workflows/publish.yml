@@ -2,7 +2,7 @@ name: publish
 on:
   push:
     branches:
-      - master
+      - v2
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
@@ -41,8 +41,7 @@ jobs:
        
       - name: Deploy release version       
         run: |
-          mike deploy --config-file mkdocs-insiders.yml 2.0 release
-          mike set-default release
+          mike deploy --config-file mkdocs-insiders.yml 2.0 v2
           
       - name: Push changes to server
         run: |
