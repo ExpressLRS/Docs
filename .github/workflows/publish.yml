@@ -37,11 +37,12 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
-          git checkout master
+          git checkout v2
        
       - name: Deploy release version       
         run: |
           mike deploy --config-file mkdocs-insiders.yml 2.0 v2
+          mike set-default v2
           
       - name: Push changes to server
         run: |
