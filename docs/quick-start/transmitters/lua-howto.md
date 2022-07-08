@@ -55,7 +55,7 @@ The `Model Mismatched` message will also show up to indicate your are connected 
 
 ### Folder Titles
 
-Items with `>` before the name is a folder that when selected shows another level of customization. `TX Power`, `VTX Administrator`, `Wifi Connectivity` were example of these items.
+Items with `>` before the name is a folder that when selected shows another level of customization. `TX Power`, `VTX Administrator`, `Wifi Connectivity` are examples of these items.
 
 :new: These items will now show what is currently set for the items within. Example would be on `TX Power`, which will show the current Power set, and if Dynamic Power is enabled, it will show the current set Max Power, followed by the indicator `Dyn`.
 
@@ -83,13 +83,13 @@ These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allo
 	NEVER change the packet rate while flying as this FORCES A DISCONNECT between the TX and RX. 
 
 * `Telem Ratio` sets the telemetry ratio or how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data. For information on telemetry setup, see [First Flight: Telemetry](../pre-1stflight.md#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth.md).
-	- :new: v3.0 comes with `Std` and `Race` options. `Std` changes depending on the Packet Rate, while `Race` will give you Telemetry while not yet armed, stopping Telemetry once armed.
+	- :new: v3.0 also omes with `Std` and `Race` options. `Std` changes depending on the Packet Rate, while `Race` will give you Telemetry while not yet armed, stopping Telemetry once armed.
 
 ### Switch Mode
 
 The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver (the 4 main channels are always 10-bit). The options are `Hybrid & Wide`. **Hybrid** mode is 6x 2/3/6-position + 1x 16-position, and **Wide** is 7x 64 or 128-position. For detail about the differences, see the [Switch Configs](../../software/switch-config.md) documentation.
 
-:new: With the introduction of the Full Resolution modes, new Switch Modes can now be set for them. **8CH Mode** have CH1-CH4(sticks) and CH6-CH9 being sent 10-bit (Full Resolution) at the selected rate, with CH5(Aux1) remaining 1-bit for Arming state. **12CH Mode** have CH1-CH4(sticks) being sent 10-bit along with CH5(Aux1) sent 1-bit at the selected rate, while CH6-CH13 being sent 10-bit at half rate. **16CH Mode** have all channels (CH1-CH16) being sent 10-bit at half rate.
+:new: With the introduction of the Full Resolution modes, new Switch Modes can now be set for them. **8CH Mode** has CH1-CH4(sticks) and CH6-CH9 sent as 10-bit (Full Resolution) at the selected rate, with CH5(Aux1) remaining as 1-bit for Arming state. **12CH Mode** has CH1-CH4(sticks) sent as 10-bit along with CH5(Aux1) sent as 1-bit at the selected rate, and CH6-CH13 sent as 10-bit at half rate. **16CH Mode** has all channels (CH1-CH16) sent at 10-bit at half rate.
 
 !!! hint "Hot Tip"
 	The Switch Mode can only be changed when not connected to a receiver. The top right corner of the lua script will show a `-` if you're not connected.
@@ -98,7 +98,7 @@ The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver
 
 Model Match is used to prevent accidentally selecting the wrong model in the handset and flying with an unexpected handset or ELRS configuration. Setting this to `On` while a receiver is connected will make that receiver only connect with the current Receiver ID. Setting it to `Off` will allow a connection with any bound receiver (including those using a Bind Phrase). Both sides of the connection must agree on their Model Match setting. For a detailed explanation of how this restricts connections see [Model Match](../../software/model-config-match.md).
 
-:new: Following the `On` or `Off` setting will be the current Model ID to help determining what Model ID should be/will be set on the Receiver. This will further help determine the cause of the Model Mismatch.
+:new: Following the `On` or `Off` setting will be the current Model ID to help determining what Model ID should be/will be set on the Receiver. This will further help determine the cause of a Model Mismatch.
 
 ### TX Power
 
@@ -159,9 +159,7 @@ Pressing the `[BLE Joystick]` selection activates BluetoothLE Joystick mode whic
 
 ### Other Devices
 
-This folder will allow you to switch between the TX module settings (above) or Receiver-specific settings, like Model Match ID or the Telemetry Transmit Power for PA/LNA-equipped Receivers. You can also check the version flashed into the currently connected Receiver through this folder.
-
-Model Loaning is also here, along with the Return Model option.
+This folder will allow you to switch between the TX module settings (above) or Receiver-specific settings, like Model Match ID or the Telemetry Transmit Power for PA/LNA-equipped Receivers. You can also check the version flashed into the currently connected Receiver through this folder. You can also use the Model Loaning and Return Model features from this folder.
 
 ## Troubleshooting the Lua Script
 
