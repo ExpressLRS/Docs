@@ -61,44 +61,44 @@ Items with `>` before the name is a folder that when selected shows another leve
 
 ### Packet Rate and Telemetry Ratio
 
-These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allows you to change your performance parameters. 
+These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allow you to change your performance parameters. 
 
-* `Packet Rate` sets how fast data packets are sent, higher rates send packets more frequently and have lower latency, but have reduced range.
+* `Packet Rate` sets how fast data packets are sent, higher rates send packets more frequently and have lower latency.
 
 	The following options are available for `2.4GHz`:
 
-	- `50Hz, 150Hz, 250Hz & 500Hz`: These are the LoRa-based options we started with.
-	- `F500Hz & F1000Hz` :new: : These are FLRC-based options. See [PR1277](https://github.com/ExpressLRS/ExpressLRS/pull/1277) for more technical details.
-	- `D250Hz & D500Hz` :new: : These are FLRC-based options. `D` stands for `Déjà Vu`. See [PR1527](https://github.com/ExpressLRS/ExpressLRS/pull/1527) for the technical details.
-	- `100Hz Full & 333Hz Full` :new: : These are Lora-based Full resolution modes. See [PR1572](https://github.com/ExpressLRS/ExpressLRS/pull/1572) for more technical details.
+	- `50Hz, 150Hz, 250Hz & 500Hz`: Lora-based options. Higher means lower latency in the expense of sensitivity. Since v1.0.
+	- `F500 & F1000` :new: : Pure FLRC for lowest latency, reduced range compared to LoRa, 500Hz and 1000Hz. [Detaills](https://github.com/ExpressLRS/ExpressLRS/pull/1277)
+	- `D250 & D500` :new: : Redundant transmit FLRC modes.  `D` stands for `Déjà Vu`, 250Hz and 500Hz. Higher latency, reduced packet jitter and higher LQ. Same range as other FLRC modes. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1527)
+	- `100Hz Full & 333Hz Full` :new: : Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
 	
 	The following options are available for `900MHz`:
 
-	- `25, 50, 100 & 200`: These are the LoRa-based options we started with.
-	- `100Hz Full` :new: : Full resolution mode for Team900. See [PR1572](https://github.com/ExpressLRS/ExpressLRS/pull/1572) for more technical details.
+	- `25Hz, 50Hz, 100Hz & 200Hz`: LoRa-based options. Higher means lower latency in the expense of sensitivity. Since v1.0.
+	- `100Hz Full` :new: : Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
 
 	The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.
 
 !!! warning "WARNING"
 	NEVER change the packet rate while flying as this FORCES A DISCONNECT between the TX and RX. 
 
-* `Telem Ratio` sets the telemetry ratio or how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data. For information on telemetry setup, see [First Flight: Telemetry](../pre-1stflight.md#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth.md).
-	- :new: v3.0 also comes with `Std` and `Race` options. `Std` changes depending on the Packet Rate, while `Race` will give you Telemetry while not yet armed, stopping Telemetry once armed.
+* `Telem Ratio` sets the telemetry ratio or how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data.
+	- :new: v3.0 comes with `Std` and `Race` options. `Std` changes ratio depending on the Packet Rate, and `Race` is the same as Std, but will disable telemetry and sync while Armed.
+
+	For information on telemetry setup, see [First Flight: Telemetry](../pre-1stflight.md#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth.md).
 
 ### Switch Mode
 
-The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver (the 4 main channels are always 10-bit). The options are `Hybrid & Wide`. **Hybrid** mode is 6x 2/3/6-position + 1x 16-position, and **Wide** is 7x 64 or 128-position. For detail about the differences, see the [Switch Configs](../../software/switch-config.md) documentation.
+The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver (the 4 main channels are always 10-bit). The options are `Hybrid & Wide`. **Hybrid** mode is 6x 2, 3 or 6-position + 1x 16-position, and **Wide** is 7x 64 or 128-position. For detail about the differences, see the [Switch Configs](../../software/switch-config.md) documentation.
 
-:new: With the introduction of the Full Resolution modes, new Switch Modes can now be set for them. **8CH Mode** has CH1-CH4(sticks) and CH6-CH9 sent as 10-bit (Full Resolution) at the selected rate, with CH5(Aux1) remaining as 1-bit for Arming state. **12CH Mode** has CH1-CH4(sticks) sent as 10-bit along with CH5(Aux1) sent as 1-bit at the selected rate, and CH6-CH13 sent as 10-bit at half rate. **16CH Mode** has all channels (CH1-CH16) sent at 10-bit at half rate.
+:new: In full resolution modes, the Switch Mode parameter selects the number of channels to be used. [Full Resolution Switch Modes](../../software/switch-config.md#full-resolution-switch-modes) 
 
 !!! hint "Hot Tip"
 	The Switch Mode can only be changed when not connected to a receiver. The top right corner of the lua script will show a `-` if you're not connected.
 
 ### Model Match
 
-Model Match is used to prevent accidentally selecting the wrong model in the handset and flying with an unexpected handset or ELRS configuration. Setting this to `On` while a receiver is connected will make that receiver only connect with the current Receiver ID. Setting it to `Off` will allow a connection with any bound receiver (including those using a Bind Phrase). Both sides of the connection must agree on their Model Match setting. For a detailed explanation of how this restricts connections see [Model Match](../../software/model-config-match.md).
-
-:new: Following the `On` or `Off` setting will be the current Model ID to help determining what Model ID should be/will be set on the Receiver. This will further help determine the cause of a Model Mismatch.
+Model Match is used to prevent accidentally selecting the wrong model in the handset and flying with an unexpected handset or ELRS configuration. Setting this to `On` while a receiver is connected will make that receiver only connect with the current Receiver ID. Setting it to `Off` will allow a connection with any bound receiver (including those using a Bind Phrase). Both sides of the connection must agree on their Model Match setting. For a detailed explanation of how this restricts connections see [Model Match](../../software/model-config-match.md). The current Receiver ID is shown after the option value.
 
 ### TX Power
 
@@ -159,7 +159,7 @@ Pressing the `[BLE Joystick]` selection activates BluetoothLE Joystick mode whic
 
 ### Other Devices
 
-This folder will allow you to switch between the TX module settings (above) or Receiver-specific settings, like Model Match ID or the Telemetry Transmit Power for PA/LNA-equipped Receivers. You can also check the version flashed into the currently connected Receiver through this folder. You can also use the Model Loaning and Return Model features from this folder.
+The Other Devices folder, if present, allows changing the configuration of other connected devices, such as the current receiver. Options can include Telemetry Power, Diversity Mode, and the Loan / Return Model features.
 
 ## Troubleshooting the Lua Script
 
