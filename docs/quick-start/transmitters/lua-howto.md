@@ -83,7 +83,7 @@ These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allo
 	NEVER change the packet rate while flying as this FORCES A DISCONNECT between the TX and RX. 
 
 * `Telem Ratio` sets the telemetry ratio or how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data. For information on telemetry setup, see [First Flight: Telemetry](../pre-1stflight.md#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth.md).
-	- :new: v3.0 also omes with `Std` and `Race` options. `Std` changes depending on the Packet Rate, while `Race` will give you Telemetry while not yet armed, stopping Telemetry once armed.
+	- :new: v3.0 also comes with `Std` and `Race` options. `Std` changes depending on the Packet Rate, while `Race` will give you Telemetry while not yet armed, stopping Telemetry once armed.
 
 ### Switch Mode
 
