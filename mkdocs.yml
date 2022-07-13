@@ -205,6 +205,7 @@ nav:
       - Features:
         - Model Matching: software/model-config-match.md
         - Dynamic Transmit Power: software/dynamic-transmit-power.md
+        - Loan Model: software/loan-model.md
       - Testing:
         - CRC Testing: software/testing/crc-testing.md
         - Unit Testing: software/testing/unit-testing.md

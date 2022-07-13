@@ -159,7 +159,7 @@ Pressing the `[BLE Joystick]` selection activates BluetoothLE Joystick mode whic
 
 ### Other Devices
 
-The Other Devices folder, if present, allows changing the configuration of other connected devices, such as the current receiver. Options can include Telemetry Power, Diversity Mode, and the Loan / Return Model features.
+The Other Devices folder, if present, allows changing the configuration of other connected devices, such as the current receiver. Options can include Telemetry Power, Diversity Mode, and the [Loan Model](../../software/loan-model.md) features.
 
 ## Troubleshooting the Lua Script
 
