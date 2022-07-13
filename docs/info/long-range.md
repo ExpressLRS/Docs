@@ -76,5 +76,5 @@ Anyone can add an entry to the table, and entries should include the:
 ### 500mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
-| 4.00km | 900M | 100Hz | 500mW | Wing | No | Aaron Vergara | [Link](https://www.youtube.com/watch?v=o_DbErp85cQ) |
 | 50km | 900M | 25Hz | 500mW | Wing | No | Yarillo | [Link](https://youtu.be/EJeTSvX5jrA) |
+| 4.00km | 900M | 100Hz | 500mW | Wing | No | Aaron Vergara | [Link](https://www.youtube.com/watch?v=o_DbErp85cQ) |
