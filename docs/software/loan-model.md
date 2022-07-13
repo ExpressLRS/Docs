@@ -7,8 +7,8 @@ template: main.html
 ## Loan Model
 
 !!! note "Scenario"
-    You are flying with by buddies and your friend has crashed all his models. You'd like to be able to lend him one of yours but you
-    can't because it's using a binding phrase, so he's relegated to being the crached model fetcher for the rest of the day!
+    You are flying with your buddies and your friend has crashed all his models. You'd like to be able to lend him one of yours but you
+    can't because it's using a binding phrase, so he's relegated to being the crashed model fetcher for the rest of the day!
 
     No longer is he destined to be running to the bando and back again fetching downed quads. You can use the "Loan Model" feature and lend him one of your models!
 
@@ -53,11 +53,11 @@ The first method is for the borrower to return it from the LUA script as follows
 
       ![Select RX](../assets/images/loan-rx-select.png)
 
-  4. Select the "Loan Model" entry
+  4. Select the "Return Model" entry
 
       ![Return Model](../assets/images/loan-return.png)
 
-The second method is as follows, used if the borrower forgets to return the model:
+The second method used if the borrower forgets to return the model, is as follows:
 
   1. Power cycle the model 3 times in rapid succession, turning it off each time after the LED flashes on and off again.
   2. If done correctly, the model will return to the state where it is bound to your transmitter.
@@ -68,7 +68,7 @@ The second method is as follows, used if the borrower forgets to return the mode
 
 ## Bump to Loan
 
-On transmitter modules with an accelerometer, you can loan and return a model by bumping it to another transmitter. 
+On transmitter modules with an accelerometer (such as the Axis Thor), you can loan and return a model by bumping it to another transmitter. 
 
 The process is easy - simply hold both the lender and the borrower's transmitters vertically while a model is connected and not armed and bump them together. 
 
