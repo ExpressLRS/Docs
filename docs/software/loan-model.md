@@ -10,7 +10,7 @@ template: main.html
     You are flying with by buddies and your friend has crashed all his models. You'd like to be able to lend him one of yours but you
     can't because it's using a binding phrase, so he's relegated to being the crached model fetcher for the rest of the day!
 
-No longer is he destined to be running to the bando and back again fetching downed quads. You can use the "Loan Model" feature and lend him one of your models!
+    No longer is he destined to be running to the bando and back again fetching downed quads. You can use the "Loan Model" feature and lend him one of your models!
 
 ## How to "Loan Model"
 
@@ -40,31 +40,38 @@ No longer is he destined to be running to the bando and back again fetching down
 
 ## Returning a "Loaned" Model
 
-There are a couple of ways to return a model to the owner. The first (and simplest) is for the borrower to return it from the LUA script as follows:
+There are a couple of ways to return a model to the owner. 
 
-1. On the borrowers handset, connect to the "loaned" model
-2. Enter the LUA screen and select "Other Devices" at the bottom of the list
+The first method is for the borrower to return it from the LUA script as follows:
 
-    ![Other Devices](../assets/images/loan-other-devices.png)
+  1. On the borrowers handset, connect to the "loaned" model
+  2. Enter the LUA screen and select "Other Devices" at the bottom of the list
 
-3. Choose the RX from the list
+      ![Other Devices](../assets/images/loan-other-devices.png)
 
-    ![Select RX](../assets/images/loan-rx-select.png)
+  3. Choose the RX from the list
 
-4. Select the "Loan Model" entry
+      ![Select RX](../assets/images/loan-rx-select.png)
 
-    ![Return Model](../assets/images/loan-return.png)
+  4. Select the "Loan Model" entry
 
-The second, is to power on/off the model 3 times in quick succession. When you power the model, the LED on the RX will flash once,
-then remain off for 2 seconds then start is normal flashing. You must power off the RX in the period where the LED is off.
+      ![Return Model](../assets/images/loan-return.png)
 
-This method is generally only used if the borrower "forgot" to return the model at the end of the session.
+The second method is as follows, used if the borrower forgets to return the model:
+
+  1. Power cycle the model 3 times in rapid succession, turning it off each time after the LED flashes on and off again.
+  2. If done correctly, the model will return to the state where it is bound to your transmitter.
+
+!!! note
+    If the LED returns to normal flashing between reboots, the counter is reset to 0 and you must restart the process.
+
 
 ## Bump to Loan
 
-On transmitter modules with an acceleromter you can loan a model holding the transmitter in the vertical position while conencted to the model,
-but not armed and bump you transmitter with the borrowers transmitter, and the loan command is automatically executed.
+On transmitter modules with an accelerometer, you can loan and return a model by bumping it to another transmitter. 
 
-If the borrower also has a transmitter module equipped with an accelerometer, his module will automatically send the bind command.
+The process is easy - simply hold both the lender and the borrower's transmitters vertically while a model is connected and not armed and bump them together. 
 
-"Bump to Loan" also works in reverse, i.e. returning a model.
+!!! note
+    If the borrower does not have am accelerometer, the borrower must go into binding mode manually. 
+
