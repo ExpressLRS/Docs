@@ -73,5 +73,5 @@ On transmitter modules with an accelerometer, you can loan and return a model by
 The process is easy - simply hold both the lender and the borrower's transmitters vertically while a model is connected and not armed and bump them together. 
 
 !!! note
-    If the borrower does not have am accelerometer, the borrower must go into binding mode manually. 
+    If the borrower does not have an accelerometer, the borrower must go into binding mode manually. 
 
