@@ -396,6 +396,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/3.0/software/loan-model/</loc>
+         <lastmod>2022-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/3.0/software/model-config-match/</loc>
          <lastmod>2022-07-13</lastmod>
          <changefreq>daily</changefreq>
