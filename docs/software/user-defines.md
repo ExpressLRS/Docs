@@ -158,7 +158,7 @@ Prints a log line for every channels packet recieved at the RX `ID,Antenna,RSSI,
 ```
 DEBUG_FREQ_CORRECTION
 ```
-Enable reporting of RF FreqCorrection in RX's SNR LinkStatistics, also decreases packet rate on Team2.4 for the additional time needed to include the packet header / enable FreqCorrection. The current FreqCorrection value will be reported in RSNR in the LinkStats scaled -127 to +127, where 127 is the maximum allowable deviation. 200kHz for Team2.4, 150kHz for Team900. Dynamic power must be OFF, else it will adjust based on the FreqCorrection reported in SNR.
+Enable reporting of RF FreqCorrection in RX's SNR LinkStatistics, also decreases packet rate on Team2.4 for the additional time needed to include the packet header / enable FreqCorrection. The current FreqCorrection value will be reported in RSNR in the LinkStats scaled -127 to +127, where 127 is the maximum allowable deviation. 200kHz for Team2.4, 100kHz for Team900. Dynamic power must be OFF, else it will adjust based on the FreqCorrection reported in SNR.
 
 ## Obsolete user_defines
 
