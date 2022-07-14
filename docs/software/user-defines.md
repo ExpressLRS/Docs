@@ -19,7 +19,7 @@ With more features being added consistently, [`./src/user_defines.txt`](https://
 ```
 MY_BINDING_PHRASE="default ExpressLRS binding phrase"
 ```
-This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet<sup>*</sup>. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional binding method. 📜
+This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet<sup>*</sup>. Receivers flashed with firmware builds that do not have binding phrase enabled will support and require the traditional binding method. 📜 For ESP/ESP32 hardware, this value can also be changed through the webui.
 
 This feature can, but should not be used as a model match feature (to lock a single specific transmitter to a single specific receiver). For that use, the [Model Match option](model-config-match.md#model-match).
 
@@ -37,46 +37,24 @@ Regulatory_Domain_ISM_2400
 This is a relatively simple one - enable whatever regulatory domain you are in. `EU 868` 🇪🇺  is compliant to the frequency but **is not** LBT compliant 👂 . Every other band is near compliant 👿  but may not be fully compliant for your regulatory domain. 
 
 ```
-TLM_REPORT_INTERVAL_MS=320LU
+TLM_REPORT_INTERVAL_MS=240LU
 ```
-It makes the TX module send the telemetry data to the OpenTX every 320 ms by default. This stops the telemetry lost warnings when running a high telemetry ratio, or low rates like 50hz.
-     
-Default value is **320LU**. If you want to change that you have to suffix your milliseconds value with **LU**. For example, in order to specify 100 ms telemetry update rate you have to enter it like this: **100LU**.
-
-Typically, you want to keep **320LU** value for OpenTX based radios, and **100LU** for ErskyTx ones.
+The TX module sends the LinkStats telemetry to the OpenTX frequently to let the handset know the connection is still active and reduce "Telemetry Lost" warnings. Reducing this value may reduce warnings caused by handset errors at higher baud rates. This only affects the connection from the TX module to the handset and does not do anything with the telemetry connection from the receiver. Default value is **240LU**. When changing this value, suffix your milliseconds value with **LU**. For example, in order to specify a 100ms LinkStats update rate you have to enter it like this: **100LU**.
 
 ## Output Power Limit
-By default the max power of hardware is limited to what it can safely output without extra cooling. Some hardware supports increasing the power by enabling the following option. Check the [supported hardware](../hardware/supported-hardware.md) page to see if this is available and what cooling modifications can be made. By enabling this, you are risking perminant damage to your hardware, sometimes even when you add extra cooling. For example, R9M modules will burn out without cooling.
 
 ````
 UNLOCK_HIGHER_POWER 
 ````
+By default the max power of hardware is limited to what it can safely output without extra cooling. Some hardware supports increasing the power by enabling the following option. Check the [supported hardware](../hardware/supported-hardware.md) page to see if this is available and what cooling modifications can be made. By enabling this, you are risking perminant damage to your hardware, sometimes even when you add extra cooling. For example, R9M modules will burn out without cooling.
 
 ## Performance Options
-```
-NO_SYNC_ON_ARM
-```
-**no sync on arm** doesn't transmit sync packets while armed. This is useful for racing as there is less time & packets wasted 🗑️ on sending sync packets (one packet every 5 seconds if connected). **HOWEVER** if you are doing serious long range ⛰️, keep this disabled because in the case of a sustained failsafe, link can not be regained while armed.
-
-AUX1 is the channel ExpressLRS uses to detect "ARMED", and this feature assumes that a **low value of the arm switch is disarmed, and a high value is armed**. OpenTX can invert your switch if you prefer it to be mechanically inverted. It is best not to enable no sync on arm when you are first setting up ExpressLRS as it can be a source of confusion.
-
 ```
 LOCK_ON_FIRST_CONNECTION
 ```
 RF Mode Locking - When the RX is waiting for a connection, it cycles through all available rates waiting for a connection on each one. By default, ExpressLRS will go back to this mode after a disconnect (failsafe). If `LOCK_ON_FIRST_CONNECTION` is used, ELRS will not cycle after a disconnect, but instead just stay on whatever rate the last connection was. This makes connection re-establishment quick, because the RX is always listening at the proper rate. This is generally what everyone wants, but there is utility in being able to switch the TX to the lowest rate to get more range to re-establish a link with a downed model, which can't happen if the RX is locked at the previous rate.
 
 When cycling through the rates, the RX starts with the fastest packet rate and works down to the slowest, then repeats. It waits `PACKET_INTERVAL * PACKS_PER_HOP * HOP_COUNT * 1.1` at each rate. Example: 4ms * 4 * 80 * 1.1 = 1.408s for 250Hz. The duration is extended 10x if a valid packet is received during that time. Even with `LOCK_ON_FIRST_CONNECTION`, the rate can be changed by changing the TX rate using ELRS.lua while connected, or by power cycling the RX.
-
-```
-USE_DIVERSITY
-```
-Enable antenna-switching diversity for RX that support it. Safe to leave on for hardware that doesn't have diversity except DIY builds which did not populate the RF switch.
-
-```
-DYNPOWER_THRESH_UP=15
-DYNPOWER_THRESH_DN=21
-```
-Change the RSSI thresholds used by the Dynamic Power algorithm. If the RSSI moving average is below `DYNPOWER_THRESH_UP` dBm from the sensitivity limit, the algorithm will increase the power output by one step. Similarly, if the RSSI is above `DYNPOWER_THRESH_DN` from the sensitivity limit, the power will be decreased one step.
 
 ```
 FAN_MIN_RUNTIME=30
@@ -120,18 +98,6 @@ These options set Home Network Access for your Wifi-enabled hardware. With these
 
 Wifi mode will first try to connect to the network specified before falling back and creating a new wifi network. The Home Network can also be modified from the webui.
 
-## Thermal Options
-*New in version 2.1*
-
-
-For TX devices with fans, FAN_MIN_RUNTIME keeps the fan running even after the power level has
-dropped below the configured fan threshold. This prevents the fan from turning on and off every
-few seconds if the power level is constantly changing. Default is 30 seconds if not defined, value can be 0-254 (in seconds).
-
-```
-FAN_MIN_RUNTIME
-```
-
 ## Other Options
 
 ```
@@ -157,11 +123,42 @@ DISABLE_ALL_BEEPS
 ```
 Disables all TX buzzer beeps at any state
 
-
 ```
 USE_TX_BACKPACK
 ```
 Enables code for talking to a connected [ESP8266 backpack](https://github.com/ExpressLRS/Backpack) on the TX module, and associated Lua params. The device target should enable this automatically for devices that come with this built-in, but can be added to any device. The TX backpack allows wireless integration with VRx modules and planned telemetry mirroring over wifi.
+
+## Debug Options
+
+```
+DEBUG_LOG
+```
+Turn on debug messages, sent to the TX Backpack UART if available or else right out the main CRSF UART (such as on the receiver).
+
+```
+DEBUG_LOG_VERBOSE
+```
+Use to see verbose debug logging (spammy stuff)
+
+```
+DEBUG_RX_SCOREBOARD
+```
+Print a letter for each packet received or missed (receiver debugging)
+
+```
+DEBUG_CRSF_NO_OUTPUT
+```
+Don't send CRSF messages over the CRSF UART (receiver only). Used to only see logging and not logging mixed with CRSF.
+
+```
+DEBUG_RCVR_LINKSTATS
+```
+Prints a log line for every channels packet recieved at the RX `ID,Antenna,RSSI,LQ,SNR,PWR,FHSS,TimingOffset`. The ID is generated on the TX side and overwrites CH1-CH4 and increments once for every channels packet. Writes directly to Serial, does not require DEBUG_LOG. Flash both TX & RX with this enbled to use it if the ID is required.
+
+```
+DEBUG_FREQ_CORRECTION
+```
+Enable reporting of RF FreqCorrection in RX's SNR LinkStatistics, also decreases packet rate on Team2.4 for the additional time needed to include the packet header / enable FreqCorrection. The current FreqCorrection value will be reported in RSNR in the LinkStats scaled -127 to +127, where 127 is the maximum allowable deviation. 200kHz for Team2.4, 150kHz for Team900. Dynamic power must be OFF, else it will adjust based on the FreqCorrection reported in SNR.
 
 ## Obsolete user_defines
 
