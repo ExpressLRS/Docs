@@ -11,6 +11,30 @@ New items should be added to the top of the list so the last entry here is the o
 ## Obsolete Defines
 
 ```
+USE_DIVERSITY
+```
+Enable antenna-switching diversity for RX that support it. Safe to leave on for hardware that doesn't have diversity except DIY builds which did not populate the RF switch.
+
+**REMOVED** 3.0. Diversity is now a receiver option, changed via Lua for devices that support it in hardware.
+
+```
+DYNPOWER_THRESH_UP=15
+DYNPOWER_THRESH_DN=21
+```
+Change the RSSI thresholds used by the Dynamic Power algorithm. If the RSSI moving average is below `DYNPOWER_THRESH_UP` dBm from the sensitivity limit, the algorithm will increase the power output by one step. Similarly, if the RSSI is above `DYNPOWER_THRESH_DN` from the sensitivity limit, the power will be decreased one step.
+
+**REMOVED** 3.0. The dynamic power algorithm uses SNR which is defined per-rate so the thresholds are more complicated than 2 defines.
+
+```
+NO_SYNC_ON_ARM
+```
+**no sync on arm** doesn't transmit sync packets while armed. This is useful for racing as there is less time & packets wasted 🗑️ on sending sync packets (one packet every 5 seconds if connected). **HOWEVER** if you are doing serious long range ⛰️, keep this disabled because in the case of a sustained failsafe, link can not be regained while armed.
+
+AUX1 is the channel ExpressLRS uses to detect "ARMED", and this feature assumes that a **low value of the arm switch is disarmed, and a high value is armed**. OpenTX can invert your switch if you prefer it to be mechanically inverted. It is best not to enable no sync on arm when you are first setting up ExpressLRS as it can be a source of confusion.
+
+**REMOVED** 3.0. Replaced with "Race" telemetry mode, which also disables sending SYNC on arm.
+
+```
 FEATURE_OPENTX_SYNC
 FEATURE_OPENTX_SYNC_AUTOTUNE
 ```
