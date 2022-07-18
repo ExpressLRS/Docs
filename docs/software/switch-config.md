@@ -100,7 +100,9 @@ You can still use a 3-position switch to arm! AUX1 just needs to be 2-position, 
 
 ### Why can't I have switches / potentiometers with full 10-bit resolution?
 
-A lot of the magic of ExpressLRS comes from its small packet sizes, there simply is not enough space to put all that data. There are tricks that can be done with interleaving sticks and switches packets but we believe sticks should be in every packet for the lowest control latency. Different switch modes with higher resolution may be added further down the road for setups where higher latency doesn't matter.
+A lot of the magic of ExpressLRS comes from its small packet sizes, there simply is not enough space to put all that data. There are tricks that can be done with interleaving sticks and switches packets but we believe sticks should be in every packet for the lowest control latency. 
+
+With the new [Full Resolution Switch Modes](#full-resolution-switch-modes) this is now possible.
 
 ### What about "Normal" one bit switch mode?
 
