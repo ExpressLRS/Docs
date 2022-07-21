@@ -161,6 +161,14 @@ Pressing the `[BLE Joystick]` selection activates BluetoothLE Joystick mode whic
 
 The Other Devices folder, if present, allows changing the configuration of other connected devices, such as the current receiver. Options can include Telemetry Power, Diversity Mode, and the [Loan Model](../../software/loan-model.md) features.
 
+## Recommendations
+
+* For racing where maximum performance is a must, the `500Hz` modes or faster, with the `Race` Telemetry mode, is ideal. `Hybrid` Switch Mode is also good here.
+
+* For freestyle and general everyday flying, you may use the `250Hz` modes or faster, with the `Std` Telemetry mode. Switch Mode doesn't matter as much here. Select what's appropriate for your Flight Mode settings.
+
+* For fixed wings, we recommend using `100Hz Full Res`, together with either `Std` or your choice of Telemetry Ratio. Switch Mode will depend greatly on how many full resolution channels you intend to use.
+
 ## Troubleshooting the Lua Script
 
 ### ExpressLRS Lua Script is stuck at `Loading...`
