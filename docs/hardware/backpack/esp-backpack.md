@@ -1,6 +1,8 @@
 ---
 template: main.html
+description: The ExpressLRS Backpack opens up new possibilities, like the hands-off tuning of your FPV Goggles.
 ---
+
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
 
 ## What is a Backpack?

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Get your ExpressLRS Devices setup as you deemed fit! Customize your Receivers and Transmitter Modules per your needs with the Firmware Options.
 ---
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)

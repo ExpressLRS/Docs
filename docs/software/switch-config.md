@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: To optimize the performance of ExpressLRS, it has different Switch Modes explained in detail here.
 ---
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">

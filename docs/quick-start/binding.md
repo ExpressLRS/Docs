@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Binding ExpressLRS is easy! With the Binding Phrase, no button presses needed! Manual Binding is also available if pressing buttons is your thing.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)

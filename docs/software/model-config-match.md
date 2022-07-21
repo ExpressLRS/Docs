@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: ExpressLRS can retain a per-Model configuration eliminating the need to tweak your settings everytime you change models in the radio.
 ---
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">

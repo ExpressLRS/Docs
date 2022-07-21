@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Know what your LQ and RSSI dBm values mean. Prevent a failsafe by knowing when to turn back!
 ---
 
 ![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: ExpressLRS can be used with Ardupilot! This guide got you covered with the correct Ardupilot Parameters.
 ---
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)

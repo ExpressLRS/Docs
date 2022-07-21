@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: The LEDs on both the ExpressLRS Receivers and Transmitter Modules are very helpful diagnostic tool in determining the current status of the device.
 ---
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">

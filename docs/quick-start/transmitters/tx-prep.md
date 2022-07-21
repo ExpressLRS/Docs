@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Get your Radio Handset prepared for ExpressLRS with this setup guide.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
