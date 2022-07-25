@@ -17,14 +17,18 @@ Some of these options are present on both the Tx and Rx Targets. It is important
 </figure>
 
 ## Regulatory Domains
-!!! note "Only available for 900MHz devices"
-    This option is now set automatically for 2.4GHz devices.
 ```
 Regulatory_Domain_AU_915
 Regulatory_Domain_EU_868
+Regulatory_Domain_IN_866
 Regulatory_Domain_FCC_915
+
+Regulatory_Domain_ISM_2400
+Regulatory_Domain_EU_CE_2400
 ```
 This is a relatively simple one - enable whatever regulatory domain you are in to select the frequency range to be used. `EU 868` is compliant to the frequency but **is not** LBT compliant 👂.
+
+EU_CE has a limit of 10mW to comply with Regulations.
 
 
 ## Binding Phrase
