@@ -1,5 +1,7 @@
 ---
 template: main.html
+hide:
+    - toc
 ---
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
