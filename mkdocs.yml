@@ -83,7 +83,7 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/expresslrs
       name: Follow us on Instagram
-    - icon: fontawesome/solid/donate
+    - icon: fontawesome/solid/circle-dollar-to-slot
       link: https://opencollective.com/expresslrs
       name: Send a Donation!
   version:
