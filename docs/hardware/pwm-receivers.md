@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: ExpressLRS now supports direct PWM output without the need of converters.
+description: ExpressLRS supports PWM output without the need of converters.
 ---
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)

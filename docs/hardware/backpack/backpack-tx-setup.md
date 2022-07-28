@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: How to setup, flash and update your ExpressLRS Transmitter Backpack.
 ---
 # TX Backpack Setup
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)

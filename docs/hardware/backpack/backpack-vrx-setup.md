@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: How to connect, setup, flash and update your ExpressLRS Goggle VRX Backpack.
 ---
 # VRx Backpack Setup
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)

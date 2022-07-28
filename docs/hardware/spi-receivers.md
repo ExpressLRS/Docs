@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: All-in-one Flight Controllers were released with ExpressLRS receivers using SPI connection.
 ---
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)

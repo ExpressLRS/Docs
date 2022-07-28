@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: If you're having issues with your Frsky X9D or QX7 while using ExpressLRS, check this page out!
 ---
 
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
