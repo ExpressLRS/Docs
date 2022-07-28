@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: A short guide on how to add a resistor for the R9M ACCST Inverter Mod.
 ---
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: User Defines are firmware flags akin to the Firmware Options. You can use these defines with the Manual Mode in the ExpressLRS Configurator.
 ---
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">

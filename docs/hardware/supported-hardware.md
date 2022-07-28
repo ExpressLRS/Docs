@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Here's a partial list of hardware you can use with ExpressLRS.
 ---
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)

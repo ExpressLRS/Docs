@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: ExpressLRS supports PWM output without the need of converters.
 ---
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)

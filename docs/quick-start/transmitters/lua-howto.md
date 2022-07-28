@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Here is a simple ExpressLRS Lua Script guide explaining the different options.
 ---
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)

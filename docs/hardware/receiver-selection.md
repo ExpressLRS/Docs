@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: If you're still wondering which ExpressLRS receiver to get for your next RC model, we have prepared this selection guide for you.
 hide:
     - toc
 ---

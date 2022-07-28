@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Configure your Flight Controller with the help of this guide.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

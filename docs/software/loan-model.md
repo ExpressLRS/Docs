@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Lend your ExpressLRS models to your friends without having to reflash Binding Phrase everytime.
 ---
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">

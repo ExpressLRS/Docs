@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: The ExpressLRS Configurator has made improvements on ExpressLRS accessibility. It is an invaluable tool to get your ExpressLRS Device up-to-date.
 ---
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)

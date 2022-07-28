@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Start your ExpressLRS experience here! This is the most comprehensive guide to get you flying on ExpressLRS.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Some ExpressLRS receivers uses a "ceramic" antenna. Here's some info about them.
 ---
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)

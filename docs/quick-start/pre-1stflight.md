@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: What's the Bench Test? How to set Aux1 for Arming? RSSI dBm and Link Quality on the OSD? Setting up ExpressLRS Telemetry? You're in the right place!
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

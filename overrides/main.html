@@ -2,34 +2,7 @@
 
 <!-- Custom front matter -->
 {% block extrahead %}
-
-<!-- Determine title -->
-{% set title = config.site_name %}
-{% if page and page.title and not page.is_homepage %}
-{% set title = config.site_name ~ " - " ~ page.title | striptags %}
-{% endif %}
 <link rel="icon" href="https://avatars.githubusercontent.com/u/77287864?s=200&v=4">
-<!-- The image needs to have an absolute URL -->
-{% set image = config.site_url ~ '/assets/images/banner.png' %}
-
-<!-- Open graph meta tags -->
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="{{ title }}"/>
-<meta property="og:description" content="{{ config.site_description }}"/>
-<meta property="og:url" content="{{ page.canonical_url }}"/>
-<meta property="og:image" content="{{ image }}"/>
-<meta property="og:image:type" content="image/png"/>
-<meta property="og:image:width" content="1080"/>
-<meta property="og:image:height" content="568"/>
-
-<!-- Twitter meta tags -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:site" content="@expresslrs"/>
-<meta name="twitter:creator" content="@expresslrs"/>
-<meta name="twitter:title" content="{{ title }}"/>
-<meta name="twitter:description" content="{{ config.site_description }}"/>
-<meta name="twitter:image" content="{{ image }}"/>
-
 <!-- Google Site Verification Search Console -deadbyte -->
 <meta name="google-site-verification" content="pg26rs-EELwcFEnEgD5uQqtX1ZTdRSD7Mp3O-4CthDs" />
 {% endblock %}

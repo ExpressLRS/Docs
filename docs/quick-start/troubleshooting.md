@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Stuck on your ExpressLRS setup? Let us help you with that! Here's some troubleshooting tips to get you unstuck.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)

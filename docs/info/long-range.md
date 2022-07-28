@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: ExpressLRS boasts great range at any given packet rate. Here's what others reached with their aircrafts.
 ---
 
 ![FAQ-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/community.png)

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Let's get your ExpressLRS Receiver connected to your flight controller.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

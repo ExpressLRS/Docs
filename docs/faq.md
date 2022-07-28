@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: We answer the most commonly asked questions here.
 hide:
   - navigation
 ---
