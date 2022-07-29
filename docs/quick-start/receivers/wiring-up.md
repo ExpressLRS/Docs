@@ -254,12 +254,12 @@ Connect your FC to USB and configure your FC firmware as shown on the [next page
 ## RadioMaster RP
 
 <figure markdown>
-![RM2400 connection](../../assets/images/RM-EP1.png)
+![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-EP1.png)
 <figcaption>RadioMaster RP1, ESP-based</figcaption>
 </figure>
 
 <figure markdown>
-![RM2400 connection](../../assets/images/RM-EP2.png)
+![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-EP2.png)
 <figcaption>RadioMaster RP2, ESP-based</figcaption>
 </figure>
 
