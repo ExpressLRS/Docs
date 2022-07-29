@@ -25,7 +25,7 @@ There are Flight Controllers that put their Receiver UART's RX pads Low, which i
 ![pull up](../../assets/images/pull-up.png)
 </figure>
 
-Also of note is that the EP receivers need to be put into Bootloader mode manually on first time Passthrough Flash from their factory firmwares. To put any of these receivers into Bootloader mode, solder one end of a piece of wire into the Boot pad and the other end to the Ground pad. After the first succcessful passthrough flashing, the Boot pad connection to Ground should be removed. Subsequent passthrough flashing doesn't require the Boot pads connection to Ground.
+Also of note is that the RP receivers need to be put into Bootloader mode manually on first time Passthrough Flash from their factory firmwares. To put any of these receivers into Bootloader mode, solder one end of a piece of wire into the Boot pad and the other end to the Ground pad. After the first succcessful passthrough flashing, the Boot pad connection to Ground should be removed. Subsequent passthrough flashing doesn't require the Boot pads connection to Ground.
 
 Flashing via Wifi doesn't need the Boot pad to be connected to Ground. Moreover, if it is connected, the receiver will stay in bootloader mode and won't activate its WiFi Mode.
 
@@ -45,7 +45,7 @@ Alias of Target: `HappyModel_EP_2400_RX_via_WIFI`
 
 Device Category: `RadioMaster 2.4 GHz`
 
-Device: `RadioMaster EP 2400 RX`
+Device: `RadioMaster RP1/2 2400 RX`
 
 ![via WiFi](../../assets/images/Method_RX_WiFi.png)
 
@@ -55,7 +55,7 @@ Device: `RadioMaster EP 2400 RX`
 
 Before your proceed, make sure you have the receiver [wired properly] to your FC.
 
-**Build** the firmware using the ExpressLRS Configurator using the correct Target and [Firmware Options]. Once done, it should open a new window where the `RM_EP_2400RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware using the ExpressLRS Configurator using the correct Target and [Firmware Options]. Once done, it should open a new window where the `RM_RP_2400RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
@@ -69,7 +69,7 @@ Connect to the Wifi Network the receiver has created. It should be named somethi
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
 </figure>
 
-Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `RM_EP_2400RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
+Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `RM_RP_2400RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
 
 A white page should load momentarily with the message **Update Success! Rebooting...**. Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated. Power cycle the receiver and it should be able to bind with your TX module now (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
 
@@ -86,7 +86,7 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
-**Build** the firmware. Once done, it should open a new window where the `RM_EP_2400RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware. Once done, it should open a new window where the `RM_RP_2400RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 ![Build](../../assets/images/Build.png)
 
@@ -100,7 +100,7 @@ Scroll down to the Firmware Update section, shown below:
 
 ![Firmware Update](../../assets/images/web-firmwareupdate.png)
 
-Drag-and-drop the `RM_EP_2400RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
+Drag-and-drop the `RM_RP_2400RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
 
 Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated.
 
@@ -129,7 +129,7 @@ Alias of Target: `HappyModel_EP_2400_RX_via_BetaflightPassthrough`
 
 Device Category: `RadioMaster 2.4 GHz`
 
-Device: `RadioMaster EP 2400 RX`
+Device: `RadioMaster RP1/2 2400 RX`
 
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
 
@@ -152,7 +152,7 @@ Alias of Target: `HappyModel_EP_2400_RX_via_UART`
 
 Device Category: `RadioMaster 2.4 GHz`
 
-Device: `RadioMaster EP 2400 RX`
+Device: `RadioMaster RP1/2 2400 RX`
 
 ![via UART](../../assets/images/Method_RX_UART.png)
 
