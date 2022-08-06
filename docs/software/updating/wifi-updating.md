@@ -15,7 +15,7 @@ Put your device in WiFi Updating mode. For TX modules, this is accomplished usin
 Connect to the hotspot that the device has created. For Tx modules, this hotspot should show up as **ExpressLRS TX** while for receivers, the hotspot will have a name such as **ExpressLRS RX**. They have the same password: `expresslrs`. 
 
 !!! Note
-    The receivers, due to their respective sizes, doesn't have robust WiFi antennas and you will have to bring them closer to the device you're connecting from. The window that opens can easily be closed.*
+    The receivers, due to their respective sizes, doesn't have robust WiFi antennas and you will have to bring them closer to the device you're connecting from. The window that opens can easily be closed.
 
 <figure markdown>
 ![ExpressLRS RX Hotspot](../../assets/images/WifiHotspot.png)
