@@ -12,8 +12,18 @@ template: main.html
 
 Put your device in WiFi Updating mode. For TX modules, this is accomplished using the ExpressLRS Lua Script. Simply select `WiFi Update` from the script and it should start the Update Hotspot. For receivers, power the receiver and wait until `AUTO_WIFI_ON_INTERVAL` time has elapsed and that the LED on the receiver is blinking fast.
 
-Connect to the hotspot that the device has created. For Tx modules, this hotspot should show up as **ExpressLRS TX Module** while for receivers, the hotspot will have a name such as **ExpressLRS RX**. They have the same password: `expresslrs`. 
-*Note: The receivers, due to their respective sizes, doesn't have robust WiFi antennas and you will have to bring them closer to the device you're connecting from. The window that opens can easily be closed.*
+Connect to the hotspot that the device has created. For Tx modules, this hotspot should show up as **ExpressLRS TX** while for receivers, the hotspot will have a name such as **ExpressLRS RX**. They have the same password: `expresslrs`. 
+
+!!! Note
+    The receivers, due to their respective sizes, doesn't have robust WiFi antennas and you will have to bring them closer to the device you're connecting from. The window that opens can easily be closed.*
+
+<figure markdown>
+![ExpressLRS RX Hotspot](../../assets/images/WifiHotspot.png)
+</figure>
+
+<figure markdown>
+![ExpressLRS TX Hotspot](../../assets/images/WifiHotspotTX.png)
+</figure>
 
 Navigate your browser to `http://10.0.0.1/` and the WiFi Update Page should show up.
 
