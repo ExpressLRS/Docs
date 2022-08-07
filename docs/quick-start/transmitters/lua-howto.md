@@ -27,7 +27,7 @@ If parameters do show up, but the Bad/Good section on the right side of the head
 <img src="../../../assets/images/lua3.jpg" width = "40%">
 <img src="../../../assets/images/lua/config-bw.png" width = "45%">
 
-The `master   942c40` from the photo above is the git branch and commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). On the first photo above, `master` means the module is flashed with the `Master Branch` with the git commit `942c40`. If you're on a Released version or a Release Candidate, this will read something like `2.0` or `2.0-RC1` plus the commit hash of the release.
+The `master   942c40` from the photo above is the git branch and commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). On the first photo above, `master` means the module is flashed with the `Master Branch` with the git commit `942c40`. If you're on a Released version or a Release Candidate, this will read something like `3.0` or `3.0-RC1` plus the commit hash of the release.
 
 !!! note ""
     Colors may differ from Handset to Handset, depending on the current theme in use.
@@ -179,6 +179,32 @@ Go back to the [Radio Setup Guide](tx-prep.md) and make sure your radio is prepp
 Also make sure your module has been flashed with v2.0 firmware. V2 Lua for V2.0-flashed modules, V1 Lua for v1.x-flashed modules (including modules fresh from factory; except the new OLED-equipped NamimnoRC modules and the Happymodel ES24TX Pro full-size module).
 
 For newly-acquired ExpressLRS modules, flashing via USB is the recommended update method.
+
+### I can't change the Switch Mode!
+
+Changing switch modes requires that TX module and Receiver aren't connected to each other (no C in the top right corner of the Lua Script). Power off the receiver first, change the Switch Mode from the Lua script, then power up the receiver. The Switch Mode should then apply.
+
+### I cannot change my Packet Rate to F1000!
+
+F1000 requires higher than 400K baud rates. First update your baud rate setting either in the Model Setup menu or in the System Menu -> Hardware, reboot your radio to ensure that the baud rate setting got applied and then change the Packet Rate.
+
+Do note that not every handset is capable of higher than 400K baud rates. See the [Radio Setup Guide](tx-prep.md) for the details.
+
+### I cannot change to Full Resolution Rates!
+
+As Full Resolution Rates calls for an entirely different Switch Modes, you need to first disconnect the Receiver and the TX module from each other, like how you would change Switch Modes. Power down the receiver, change the Packet Rate to the Full Resolution modes, select your Switch Mode scheme and then power up the receiver or the aircraft.
+
+### VTX Admin is not working but I can change VTX channels via OSD Menu.
+
+As VTX Admin depends on MSP which then depends on Telemetry, ensure that you have Telemetry enabled on your FC Configuration and that you are getting more than 10 Telemetry Sensors on your Radio (Model Setup -> Telemetry page; Delete and Discover New sensors to refresh the sensor list.)
+
+Also make sure Telem Ratio is not Off.
+
+### There is no C on the top right corner, and I'm not getting Telemetry in my radio!
+
+Make sure Telem Ratio is not set to `Off`.
+
+Set it to `Std`, or to any other value other than `Off`.
 
 ### On v1.x, I can choose 2W on the Lua, but I cannot do that anymore. What gives?
 

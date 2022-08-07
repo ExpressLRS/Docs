@@ -33,6 +33,8 @@ Depending on the firmware that is running on your radio handset, you can change 
 
 The 500Hz Packet Rate requires at least 400K Baud Rate setting on the Radio handset. 
 
+The F1000 Packet Rate requires more than 400K Baud Rate setting on the Radio handset.
+
 Radios such as the Frsky QX7, X10/S, X12 will require either the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) or the OneBit Sample mode (found just before the ADC Filter setting in EdgeTX System Menu -> Hardware page) if a 400K or higher Baud Rate is desired. The Taranis X9D(+) has proven to be finicky even with the default 400K Baud Rate setting (see [Troublshooting the X9D](../../hardware/x9d-troubleshooting.md)) and could use the OneBit Sample Mode as well.
 
 !!! info "Note"
@@ -46,7 +48,7 @@ Be warned though. Just because you can doesn't mean you should. If you're experi
 
 The ADC filter is enabled by default in OpenTX and is known to cause issues with RC Command data. This can result in "jagged" RC command responses in black box logs, caused by sequential RC packets that have the same command value (which were "smoothed" by the ADC filter). We recommend turning the ADC filter OFF in [OpenTX](https://www.youtube.com/watch?v=ESr2H_EZ89Q).
 
-With EdgeTX 2.7, you can set this per-model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
+With EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
 
 ## Model Setup
 
@@ -67,7 +69,7 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 ![ExternalRF Color](../../assets/images/txprep-clr-externalRF.jpg)
 </figure>
 
-For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro, set the Internal RF Module to **CRSF** Protocol and the External RF Module to OFF if you want to use the Internal ExpressLRS module instead of an external one. If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, activate the CRSF Internal module via your Radio's `System Menu -> Hardware`, `Internal Module`.
+For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro, RadioMaster TX16S MK2, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro or the BetaFPV Lite Radio 3 Pro, set the Internal RF Module to **CRSF** Protocol and the External RF Module to OFF if you want to use the Internal ExpressLRS module instead of an external one. If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, set the `Internal Module Type` to CRSF via your Radio's `System Menu -> Hardware` page.
 
 <figure markdown>
 ![InternalRF BW](../../assets/images/txprep-bw-internalRF.jpg)
@@ -76,6 +78,11 @@ For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro
 <figure markdown>
 ![InternalRF Color](../../assets/images/txprep-clr-internalRF.jpg)
 </figure>
+
+!!! Note
+    iFlight Commando 8 is NOT using an internal RF module for its ExpressLRS units, unlike the RadioMaster Zorro, RadioMaster TX16S MK2, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro or the BetaFPV Lite Radio 3 Pro.
+
+    Set the Internal RF module to Off, and set the External RF module to CRSF protocol, as any External RF module requires.
 
 ### Switches and Aux Channels
 

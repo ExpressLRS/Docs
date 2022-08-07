@@ -25,11 +25,18 @@ To get RSSI and Link Quality displayed in the OSD, set RSSI Channel to "Disabled
 
 ![OSD](../assets/images/OSD.jpg)
 
-If you wish to enable the rssi dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm). If using DJI Goggles, you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab. More information about signal metrics is found in this great [article on signal health](../info/signal-health.md).
+If you wish to enable the rssi dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm).
+
+If using DJI Goggles, you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab.
+
+More information about signal metrics is found in this great [article on signal health](../info/signal-health.md).
 
 ## Bench Test
 
-![Bench Testing](../assets/images/BenchTest.jpg)
+<figure markdown>
+![ExpressLRS Bench Test](../assets/images/BenchTest.jpg)
+<figcaption>ExpressLRS Bench Test</figcaption>
+</figure>
 
 Shown above is a Bench Test to determine if you're getting a good signal from your radio. This aims to provide you information on whether you should check your antennas (particularly the R9's Super 8) or you have good hardware overall. 
 
@@ -44,14 +51,20 @@ On the 900Mhz hardware, a -20dbm or thereabouts is a good indication your hardwa
 - On receivers using an SMD antennas, expect lower values than those equipped with wire antennas. If the receiver with the SMD antenna has heat shrink, enclosed in a whoop canopy, surrounded with carbon parts or buried inside a plane/fixed wing, expect some more attenuation of the signal.
 - The Super 8 antenna from Frsky, which most of the R9Ms came with, are notorious for being faulty or would degrade from just a few weeks use. Replace it or as a temporary fix, solder all around the junction where the coax shielding and the RP-SMA meet. Another failure point is the connection of the coax to the active elements itself. It would seem okay, but due to twisting of the antenna, the connection could be severed.
 
+<figure markdown>
 ![NotSuper8](../assets/images/super8notsuper.jpg)
-![NotSuper8 for sure](../assets/images/super8notsuper2.jpg)
+</figure>
 
-<small>Super8 Antenna's common points of failure</small>
+<figure markdown>
+![NotSuper8 for sure](../assets/images/super8notsuper2.jpg)
+<figcaption>Super8 Antenna's common points of failure</figcaption>
+</figure>
 
 - Check if there aren't any missing components in your receivers, like the RF filter (can be found near the antenna or ufl). Also check if the SMD antenna is not broken or damaged and it's soldered in properly.
 
+<figure markdown>
 ![missing filter](https://cdn.discordapp.com/attachments/899260365555249192/899263539951304714/WhatsApp_Image_2021-07-09_at_1.png)
+</figure>
 
 - Most DIY modules require moving the 0 ohm resistor on the E28 from the PCB antenna side towards the UFL side. A solder bridge will work just fine as well, but make sure it is on the correct pads.
 - Swap out antennas on receiver and/or the TX module; Most ExpressLRS receiver antennas use IPEX 1/UFL connectors and as long as the frequency tuning of the antenna is appropriate for the frequency you're in, it should work. You can also use old 2.4GHz WiFi Router antennas for your 2.4GHz modules, but avoid those that are dual-band. Also make sure that the connector on the antenna is the appropriate one (RP-SMA on R9 modules; SMA on most off-the-shelf ExpressLRS modules)

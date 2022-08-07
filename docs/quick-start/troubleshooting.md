@@ -23,7 +23,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
     To "fix" this, you might want to turn On Model Matching. Please see [Model Matching](../software/model-config-match.md) for more Note.
 
-    Another thing to check is whether you have enabled **RCVR_INVERT_TX** option for your receiver firmware. This option is intended for FCs that doesn't have any other UARTs available (AIOs) other than an SBUS pad. See this section for more details: [Output Inverting](firmware-options.md#output-inverting).
+    Another thing to check is whether you have enabled **RCVR_INVERT_TX** option for your receiver firmware. This option is intended for FCs that doesn't have any other UARTs available (e.g. AIOs) other than an SBUS pad. See this section for more details: [Output Inverting](firmware-options.md#output-inverting).
 
     For the R9mm/mini receivers, make sure you didn't enable **USE_R9MM_R9MINI_SBUS** in your firmware option. See [Output Inverting](firmware-options.md#output-inverting) for what this option do.
 
@@ -67,7 +67,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="7">I am getting Telemetry Lost/Recovered and is getting annoying</span>
 
 ??? Note "I am getting Telemetry Lost/Recovered and is getting annoying"
-    There's a handful of reasons why this is occuring, and if you have newer handset/radio, it shouldn't happen at all unless you're flying very far away using a receiver without an amplifier on its Telemetry signal (e.g. the EP receivers).
+    There's a handful of reasons why this is occuring, and if you have newer handset/radio, it shouldn't happen at all unless you're flying very far away using a receiver without an amplifier for its Telemetry signal (e.g. the EP receivers).
 
     - You're on an X9D(+) or a QX7 with subpar inverter chips. Check [this page](../hardware/x9d-troubleshooting.md) on how to remedy it.
     - You're on an early version of the Happymodel Slim Pro. Check [this FB post](https://www.facebook.com/groups/636441730280366/permalink/835603713697499/) for the fix from manufacturer.
@@ -86,7 +86,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ??? Note "ExpressLRS Lua Script is stuck at `Loading...`"
     Go back to the [Radio Setup Guide](transmitters/tx-prep.md) and make sure your radio is prepped up for ExpressLRS.
 
-    Also make sure your module has been flashed with v2.0 firmware. V2 Lua for V2.0-flashed modules, V1 Lua for v1.x-flashed modules (including modules fresh from factory; except the new OLED-equipped NamimnoRC modules and the Happymodel ES24TX Pro full-size module).
+    Also make sure your module has been flashed with v3.0 firmware. V3 Lua for V3.0-flashed modules, V2 Lua for v2.x-flashed modules (including some modules fresh from factory).
 
     For newly-acquired ExpressLRS modules, flashing via USB is the recommended update method.
 
@@ -97,7 +97,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
     Also, you have to make sure you're getting more than ten (10) Telemetry sensors prior to launching the script.
 
-    See [MSP Section](pre-1stflight.md#msp) for more Note.
+    See [MSP Section](pre-1stflight.md#msp) for more info.
 
 ### <span class="custom-heading" data-id="11">My Blackbox Log has stepping on the RC trace</span>
 
@@ -106,7 +106,10 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
 ## Flashing/Updating
 
-**Note: Individual hardware Flashing and Updating guide can be found by using the menu on the left sidebar.**
+!!! Tip
+    Individual hardware Flashing and Updating guide can be found by using the menu on the left sidebar.
+
+    You can also use the Search Bar on top of the page to get to your device's Flashing Guide faster.
 
 ### <span class="custom-heading" data-id="12">Invalid serial RX configuration detected</span>
 
@@ -116,7 +119,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="13">RX Serial not found !!</span>
 
 ??? Note "RX Serial not found !!"
-    Make sure your Serial RX on the Ports Tab of your FC Firmware configurator is set to the correct UART.
+    Make sure your Serial RX on the Ports Tab of your FC Firmware configurator is set to the correct UART. See the [FC Preparation Guide](receivers/configuring-fc.md) for the correct settings.
 
 ### <span class="custom-heading" data-id="14">No CLI Available</span>
 
@@ -124,6 +127,10 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
     This message can be seen on the ExpressLRS Configurator Log while using the Passthrough method and can be caused by a busy Com Port. Make sure any other Configurator Apps were closed and unplug-replug your FC to USB. You might also want to use a different USB port or cable.
 
     This could also mean that the FC cannot be detected by the script. This could also due to the FC being in DFU mode, which for passthrough flashing, is not needed.
+
+    There are also Apps that are running in the background that could cause this. One of which is Cura Slicer. If there are such apps, close them first before attempting another Build and Flash. 
+
+    Unplug-replug the FC's USB before another attempt.
 
 ### <span class="custom-heading" data-id="15">10 Retries but no Success</span>
 
