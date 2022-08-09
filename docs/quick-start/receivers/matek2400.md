@@ -133,6 +133,8 @@ Device : `Matek 2400 RX`
 
 Make sure you have your receiver [wired properly]. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
 
+You don't need to be connected to Betaflight or INAV Configurator during this step. Close your FC Configurator and unplug the USB to refresh the connection.
+
 Power your FC with a LiPo, or if receiver is powered via USB (receiver is connected to a 4v5 pad), connect the FC to your USB port.
 
 !!! attention ""
