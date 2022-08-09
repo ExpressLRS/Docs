@@ -103,3 +103,8 @@
 .red-x {
   color: #ff0000
 }
+
+/* increase admonition font size */
+.admonition {
+  font-size: 0.75rem!important; /* default's 0.64rem */
+} 
