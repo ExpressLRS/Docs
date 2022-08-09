@@ -49,15 +49,21 @@ OSDs report the packet rate using an index instead of the actual rate, either as
 
 ![OSD RFMD](https://cdn.discordapp.com/attachments/738450139693449258/886313969638334484/unknown.png)
 
-| RFMD | Packet Rate | Sensitivity Limit | TX duration (us) | TX Interval (us) |
-|---|---|---|---|---|
-| 7 | 500Hz | -105dBm | 1665 | 2000 |
-| 6 | 250Hz | -108dBm | 3300 | 4000 |
-| 5 | 200Hz | -112dBm | 4380 | 5000 |
-| 4 | 150Hz | -112dBm | 5871 | 6000 |
-| 3 | 100Hz | -117dBm | 8770 | 10000 |
-| 2 | 50Hz | -120dBm (900) / -117dBm (2.4) | 17540 (900) / 18443 (2.4) | 20000 |
-| 1 | 25Hz | -123dBm | 19732 | 40000 |
+| RFMD | Lua | Packet Rate | Sensitivity Limit | TX duration <br />(us) | TX Interval <br/>(us) |
+|---|---|---|---|---|---|
+| 13 | F1000 | 1000Hz | -104dBm | 1665 | 1000 |
+| 12 | F500 | 500Hz | -104dBm | 1665 | 2000 |
+| 11 | D500 | 500Hz | -104dBm | 1665 | 1000 |
+| 10 | D250 | 250Hz | -104dBm | 1665 | 1000 |
+| 9 | 500Hz | 500Hz | -105dBm | 1665 | 2000 |
+| 8 | 333Hz Full | 333Hz | -105dBm | 1665 | 3003 |
+| 7 | 250Hz | 250Hz | -108dBm | 3300 | 4000 |
+| 6 | 200Hz | 200Hz | -112dBm | 5871 | 5000 |
+| 5 | 150Hz | 150Hz | -112dBm | 1665 | 6666 |
+| 4 | 100Hz | 100Hz | -112dBm | 4380 | 10000 |
+| 3 | 100Hz Full | 100Hz | -117dBm | 8770 | 10000 |
+| 2 | 50Hz | 50Hz | -120dBm (900) /<br /> -115dBm (2.4) | 17540 (900) /<br /> 18443 (2.4) | 20000 |
+| 1 | 25Hz | 25Hz | -123dBm | 19732 | 40000 |
 
 ## What about SNR?
 
