@@ -30,21 +30,21 @@ This table summarizes the switch configuration modes and the available switch po
 | 14  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
 | 15  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
 | 16  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
-
-**Swith Position / Channel Resolution**
-Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to 2012
-128-pos = 7-bit which is 12.5% the resolution of 10-bit
-16-pos = 4-bit which is good for flight modes, flaps, gear, etc.
-6-pos = 3-bit which is good for flight modes, flaps, gear, etc.
-2-pos	= 1-bit for Arm (see the description below of why this is important for safety and performance)
-
-**Packet Frequency - 50Hz, 150Hz, etc**
-
-**Channel Update Rate versus Packet Frequency**
-**Bold** - Every packet includes this channel (So a 150hz Packet Freq = 150hz Channel Update Rate)
-H - Half Speed - Every other packet includes this channel (So a 150hz Packet Freq cut in half = 75hz Channel Update Rate)
-RR - Round Robin - Channel waits its turn to be sent in a packet (So a 150hz Packet Freq sent every 7th packet = 22 hz Channel Update Rate)
-
+ 
+**Swith Position / Channel Resolution** 
+Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to 2012 
+128-pos = 7-bit which is 12.5% the resolution of 10-bit 
+16-pos = 4-bit which is good for flight modes, flaps, gear, etc. 
+6-pos = 3-bit which is good for flight modes, flaps, gear, etc. 
+2-pos	= 1-bit for Arm (see the description below of why this is important for safety and performance) 
+ 
+**Packet Frequency - 50Hz, 150Hz, etc** 
+ 
+**Channel Update Rate versus Packet Frequency** 
+**Bold** - Every packet includes this channel (So a 150hz Packet Freq = 150hz Channel Update Rate) 
+H - Half Speed - Every other packet includes this channel (So a 150hz Packet Freq cut in half = 75hz Channel Update Rate) 
+RR - Round Robin - Channel waits its turn to be sent in a packet (So a 150hz Packet Freq sent every 7th packet = 22 hz Channel Update Rate) 
+ 
 ## Detailed Description of Switch Configs
 
 ExpressLRS has two options for how switches are transmitted: Hybrid and WideHybrid. **The switch mode can only be changed when a receiver is not connnected.** Switch mode is changed using Lua configuration, the user_define setting is no longer needed.
