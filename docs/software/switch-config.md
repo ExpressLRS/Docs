@@ -126,11 +126,17 @@ Ardupilot Modes don't line up very well with the standard -100% (988us) to +100%
 
 ### Why do you keep saying "*put arm on AUX1*"?
 
-For safety reasons.
+For safety and performance reasons.
+
+**SAFETY**
 
 AUX1 is sent with every packet going out, this is the most reliable way to be able to tell your model to disarm. If your arm switch is in another aux channel, it may be several packets before that switch is transmitted, and there's no guarantee that the RX will actually receive that packet. There's a non-trivial chance your model **may not ever disarm** if the link quality is low and it just so happens that the packet containing the arm switch is getting missed every time. Forcing the arm switch into every packet on AUX1 means that if **any** packet is received by ExpresLRS, it will disarm your model, not just a less than 1-in-7 chance.
 
 It also protects against unintentional disarms caused by a corrupt packet changing the value of the arm switch to disarmed. Betaflight requires that 4x "disarm" commands are received before disarming to guard against this possibility. With arm on AUX1, a single corrupt packet can not disarm your model. With arm on AUX2-8, the one corrupt switch value will be sent 6 times before the value is refreshed, but the flight controller would have already disarmed by that point.
+
+**PERFORMANCE**
+
+Your transmitter and receiver act differently when “armed” and “disarmed”. When disarmed, the transmitter and receiver talk back and forth more which makes configuring the devices more responsive. Yes the channels and transmitted and everything will work, but the performance of the link hasn’t been enabled. When you arm, the transmitter and receiver change into the packet rate and channel modes you selected and start monitoring signal strength, packet loss, adjusting transmit power, etc. so that the link performs the way you expect. Please use Channel 5 (Aux 1) as indicated.
 
 Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~2000us is the **armed** state.
 
