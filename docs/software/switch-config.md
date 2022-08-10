@@ -19,13 +19,13 @@ This table summarizes the switch configuration modes and the available switch po
 | 3   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
 | 4   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
 | **5<sup>+</sup>**   | Aux 1 | **2-pos** | **2-pos** | **2-pos** | **2-pos** | **2-pos** |
-| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64 or 128<br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 7   | Aux 3 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 8   | Aux 4 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 10  | Aux 6 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 11  | Aux 7 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 12  | Aux 8 | *16-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<sup>\#</sup><br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<sup>\#</sup><br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<sup>\#</sup><br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<sup>\#</sup><br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 10  | Aux 6 | *6-pos*<sup>RR</sup> | *64/128<sup>\#</sup><br>-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 11  | Aux 7 | *6-pos*<sup>RR</sup> | *64/128<sup>\#</sup><br>-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64/128<sup>\#</sup><br>-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
 | 13  | Aux 9 | - | - | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
 | 14  | Aux 10 | - | - | - | Full Res<sup>H</sup> | - |
 | 15  | Aux 11 | - | - | - | Full Res<sup>H</sup> | - |
@@ -38,6 +38,7 @@ Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to
 6-pos = 3-bit which is good for flight modes, flaps, gear, etc.<br>
 2-pos	= 1-bit for Arm (see the description below of why this is important for safety and performance)<br>
 \+ If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any other channel to PWM Output 5. It is not wasted. Please use Channel 5 for the intended 2 position Arm even if you are not using a flight controller. This is very important.
+\# Either 64 or 128 postition is used depending on telemetry ratio
 
 **Packet Frequency - 50Hz, 150Hz, etc** 
  
