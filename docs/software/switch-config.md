@@ -5,10 +5,12 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
 
+# Switch Configs
+
 !!! warning "WARNING" 
     **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
-# Summary of Switch Configs
+## Summary of Switch Configs
 
 This table summarizes the switch configuration modes and the available switch positions / resolution and update frequency on each channel or flight controller auxiliary channel (Aux X).
 
@@ -37,16 +39,15 @@ This table summarizes the switch configuration modes and the available switch po
 **16-pos** = 4-bit which is good for flight modes, flaps, gear, etc.<br>
 **6-pos** = 3-bit which is good for flight modes, flaps, gear, etc.<br>
 **2-pos**	= 1-bit for Arm (see the description below of why this is important for safety and performance)<br>
-\+ If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any other channel to PWM Output 5. It is not wasted. Please use Channel 5 for the intended 2 position Arm even if you are not using a flight controller. This is very important.
+!!! note
+    If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any other channel to PWM Output 5. Please still use AUX1 for the 2-pos arm switch
 
-**Packet Rate - 50Hz, 150Hz, etc** see the [RF Mode Indexes (RFMD)](../../info/signal-health/#rf-mode-indexes-rfmd) for details.
- 
-**Channel Update Rate versus Packet Frequency**<br>
+**Channel Update Rate versus Packet Rate**<br>
 **Bold** - Every packet includes this channel (So a 150hz Packet Freq = 150hz Channel Update Rate)<br>
 H - Half Speed - Every other packet includes this channel (So a 150hz Packet Freq cut in half = 75hz Channel Update Rate)<br>
 RR - Round Robin - Channel waits its turn to be sent in a packet (So a 150hz Packet Freq sent every 7th packet = 22 hz Channel Update Rate)<br>
  
-# Detailed Description of Switch Configs
+## Detailed Description of Switch Configs
 
 ExpressLRS has two options for how switches are transmitted: Hybrid and WideHybrid. **The switch mode can only be changed when a receiver is not connnected.** Switch mode is changed using Lua configuration, the user_define setting is no longer needed.
 
@@ -71,14 +72,14 @@ For both switch modes, the first switch (AUX1) is sent with every packet. Put. Y
 
     It takes 8 packets to send the complete set of switches before cycling back to AUX2 (one more than Hybrid). WideHybrid uses the 8th slot to transmit extra data to the receiver, including the current transmitter power. This is the only switch mode which can show TPwr on the flight controller's OSD.
 
-## AUX 1 (All Modes)
+### AUX 1 (All Modes)
 
 !!! warning "WARNING" 
     **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
     
 AUX1 is the low-latency switch, sent with every packet, and only supports on/off (2-position) operation. ExpressLRS uses AUX1 to determine if your model is armed, and should set up on the transmitter as armed at high values.
 
-## AUX 2-7 (Hybrid)
+### AUX 2-7 (Hybrid)
 
 The majority of the aux channels in Hybrid mode, AUX2 - AUX7, work with 2-position switches, 3-position switches, or 6-position switches / selector buttons.
 
@@ -92,7 +93,7 @@ Approx. Channel Input (us) | Channel Output (us) | Ardupilot Mode
 1807 | 1725 | Mode5
 2011 | 2000 | Mode6 (down position for 2-pos / 3-pos)
 
-## AUX 8 (Hybrid)
+### AUX 8 (Hybrid)
 
 AUX8 is the wide range channel, supporting 16 positions. You can stack all your modes in here, Bardwell style, or get some low-res camera pan action-- 180 degrees / 16 actually isn't terrible. Clever math-heads might note that there's no "center position" (1500us) in a 16-position switch, so using AUX8 with a 3-position switch means it will come out as 1533 at the flight controller.
 
@@ -107,7 +108,7 @@ Switch Position | Channel Output (us) | Switch Position | Channel Output (us)
 6 | 1400 | 14 | 1933
 7 | 1467 | 15 | 2000
 
-## AUX 2-8 (Wide)
+### AUX 2-8 (Wide)
 
 In Wide switch mode, AUX2-AUX8 are 7-bit (128 position) for telemetry ratios 1:128 through 1:8, or 6-bit (64 position) for 1:4 and 1:2. These behave more like traditional channels although with lower precision. You can tell you're operating in Wide mode when a switch in the middle position shows up as 1503 instead of 1500.
 
@@ -144,12 +145,6 @@ Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~20
 ### I use a 3-pos switch for arm, this software is unusable
 
 You can still use a 3-position switch to arm! AUX1 just needs to be 2-position, not the physical switch. Simply adjust the mixer in your transmitter so AUX1 works like an on-off switch. If your 3-position arm switch had a second function as well, such as enabling Blackbox, just use one of the other 7 AUX channels to send the switch on a second channel.
-
-### Why can't I have switches / potentiometers with full 10-bit resolution?
-
-A lot of the magic of ExpressLRS comes from its small packet sizes, there simply is not enough space to put all that data. There are tricks that can be done with interleaving sticks and switches packets but we believe sticks should be in every packet for the lowest control latency. 
-
-With the new [Full Resolution Switch Modes](#full-resolution-switch-modes) this is now possible.
 
 ### What about "Normal" one bit switch mode?
 
