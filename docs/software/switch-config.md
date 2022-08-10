@@ -19,7 +19,7 @@ This table summarizes the switch configuration modes and the available switch po
 | 3   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
 | 4   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
 | **5<sup>+</sup>**   | Aux 1 | **2-pos** | **2-pos** | **2-pos** | **2-pos** | **2-pos** |
-| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64 or 128<br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
 | 7   | Aux 3 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
 | 8   | Aux 4 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
 | 9   | Aux 5 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
