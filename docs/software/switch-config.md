@@ -16,10 +16,10 @@ This table summarizes the switch configuration modes and the available switch po
 
 | Channel | Flight  <br>Controller | Hybrid | Wide  <br>Hybrid | Full Res  <br>8 | Full Res  <br>16 Half Rate | Full Res  <br>12 Mixed |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1   | Sticks | **Normal Range** | **Normal Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
-| 2   | Sticks | **Normal Range** | **Normal Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
-| 3   | Sticks | **Normal Range** | **Normal Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
-| 4   | Sticks | **Normal Range** | **Normal Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
+| 1   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
+| 2   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
+| 3   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
+| 4   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | **5**   | **Aux 1** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** |
 | 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
@@ -34,20 +34,20 @@ This table summarizes the switch configuration modes and the available switch po
 | 16  | Aux 12 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
  
 **Switch Position / Channel Resolution**<br>
-**Normal Range** = 10-bit or 1024 positions mapped to PWM 988-2012us (1 bit = 1us)<br>
-**CRSF Ext Limits** = 10-bit or 1024 positions mapped to PWM 885-2115us (1 bit = 1.23046875us)<br>
-**64 / 128-pos** = The bit depth is dependent on the selected telemetry ratio. For a telemetry raio of 1:2 and 1:4 these channels are 6-bit/64 pos. For all other ratios, these channels are 7-bit/128 pos. The 7-bit/128 positions is 12.5% the resolution of 10-bit, and 6-bit/64 positions is 6.25% the resolution of 10-bit. This may be enough resolution for a head tracker but defiintely enough for flight modes, flaps, gear, etc.<br>
-**16-pos** = 4-bit which is good for flight modes, flaps, gear, etc.<br>
-**6-pos** = 3-bit which is good for flight modes, flaps, gear, etc.<br>
-**2-pos**	= 1-bit for Arm (see the description below of why this is important for safety and performance)
+| **Normal Range** | 10-bit or 1024 positions mapped to PWM 988-2012us (1 bit = 1us) |
+| **CRSF Ext Limits** | 10-bit or 1024 positions mapped to PWM 885-2115us (1 bit = 1.23046875us) |
+| **64 / 128-pos** | The bit depth is dependent on the selected telemetry ratio. For a telemetry raio of 1:2 and 1:4 these channels are 6-bit/64 pos. For all other ratios, these channels are 7-bit/128 pos. The 7-bit/128 positions is 12.5% the resolution of 10-bit, and 6-bit/64 positions is 6.25% the resolution of 10-bit. This may be enough resolution for a head tracker but defiintely enough for flight modes, flaps, gear, etc. |
+| **16-pos** | 4-bit which is good for flight modes, flaps, gear, etc. |
+| **6-pos** | 3-bit which is good for flight modes, flaps, gear, etc. |
+| **2-pos** | 1-bit for Arm, ~1000us is the **disarmed** state and ~2000us is the **armed** state (see the explanations below of why the armed state is very important for safety and performance) |
 
 !!! note
     If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any other channel to PWM Output 5. Please still use AUX1 for the 2-pos arm switch
 
 **Channel Update Rate versus Packet Rate**<br>
-**Bold** - Every packet includes this channel (So a 150hz Packet Freq = 150hz Channel Update Rate)<br>
-H - Half Speed - Every other packet includes this channel (So a 150hz Packet Freq cut in half = 75hz Channel Update Rate)<br>
-RR - Round Robin - Channel waits its turn to be sent in a packet (So a 150hz Packet Freq sent every 7th packet = 22 hz Channel Update Rate)<br>
+| **Bold** | Every packet that is sent will include this channel (So a 150hz Packet Rate = 150hz Channel Update Rate) |
+| H <br> Half Speed | Every other packet includes this channel (So a 150hz Packet Rate cut in half = 75hz Channel Update Rate) |
+| RR <br> Round Robin | Channel waits its turn to be sent in a packet (So a 150hz Packet Rate sent every 7th packet = 22 hz Channel Update Rate) |
  
 ## Detailed Description of Switch Configs
 
@@ -142,18 +142,17 @@ It also protects against unintentional disarms caused by a corrupt packet changi
 
 Your transmitter and receiver act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver are free to adjust their communcation in order to make the LUA and other configuration operations more responsive. When "disarmed", everything will appear to be working appropriately but none of the safeguards will be in place and performace will not be what you expect. 
 
-When IsArmed is enabled, these safeguards are enabled:
-- Dynamic Power is fully activated
+When `IsArmed` is enabled, these safeguards are enabled:
+- Dynamic Power is fully enabled
 - All "Button" inputs are disabled
 - All "Joystick" (5-way buttons) are disabled
 - Bump to Share is disabled
-- VTX Admin disabled
-- Integrated VTX channel change disabled
+- VTX Admin is disabled
+- Integrated VTX channel change is disabled
 - Race telemetry mode is enabled
-- Some thermal-based fan controls are adjusted
-Arming is an important part of the performance of the control link. Please use Channel 5 (Aux 1) as indicated.
+- Some thermal-based fan controls are enabled
 
-Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~2000us is the **armed** state.
+Arming is an important part of the performance of the control link. Please use Channel 5 (Aux 1) as indicated. Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~2000us is the **armed** state.
 
 ### I use a 3-pos switch for arm, this software is unusable
 
