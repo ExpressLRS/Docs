@@ -27,10 +27,9 @@ This table summarizes the switch configuration modes and the available switch po
 | 11  | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
 | 12  | Aux 2 | *16-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
 | 13  | Aux 2 | - | - | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 14  | Aux 2 | - | - | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 14  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
 | 15  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
 | 16  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
-| 6   | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |  
 
 **Swith Position / Channel Resolution**
 Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to 2012
