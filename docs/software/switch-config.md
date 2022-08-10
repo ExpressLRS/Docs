@@ -12,170 +12,25 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 Here is a summary of the channel modes you can select
 
-<table>
-<tr>
-  <th>Channel</th>
-  <th>Flight<br>Controller</th>
-  <th>Hybrid</th>
-  <th>Wide<br>Hybrid</th>
-  <th>Full Rez<br>8</th>
-  <th>Full Rez<br>16 Rate/2</th>
-  <th>Full Rez<br>12 Mixed</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td>Sticks</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td>Sticks</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td>Sticks</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td>Sticks</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="green">Full Res</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td>Aux 1</td>
-  <td bgcolor="green"><b>2-pos</b></td>
-  <td bgcolor="green"><b>2-pos</b></td>
-  <td bgcolor="green"><b>2-pos</b></td>
-  <td bgcolor="lightgreen"><b>2-pos</b></td>
-  <td bgcolor="green"><b>2-pos</b></td>
-</tr>
-<tr>
-  <td>6</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td>Aux 2</td>
-  <td bgcolor="beige">6-pos</td>
-  <td bgcolor="beige">128-pos</td>
-  <td bgcolor="beige">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-  <td bgcolor="lightgreen">Full Res</td>
-</tr>
-</table>  
+| Channel | Flight  <br>Controller | Hybrid | Wide  <br>Hybrid | Full Res  <br>8 | Full Res  <br>16 Half Rate | Full Res  <br>12 Mixed |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
+| 2   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
+| 3   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
+| 4   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
+| 5   | Aux 1 | **2-pos** | **2-pos** | **2-pos** | **2-pos** | **2-pos** |
+| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 7   | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 8   | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 9   | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 10  | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 11  | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 12  | Aux 2 | *16-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 13  | Aux 2 | - | - | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 14  | Aux 2 | - | - | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 15  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
+| 16  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
+| 6   | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |  
 
 Resolution of the Channel,,,,,,
 1024,10-bit = Full Resolution,,,,,
