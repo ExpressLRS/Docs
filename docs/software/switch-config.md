@@ -18,18 +18,18 @@ This table summarizes the switch configuration modes and the available switch po
 | 2   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
 | 3   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
 | 4   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
-| 5   | Aux 1 | **2-pos** | **2-pos** | **2-pos** | **2-pos** | **2-pos** |
+| 5<sup>*</sup>   | Aux 1 | **2-pos** | **2-pos** | **2-pos** | **2-pos** | **2-pos** |
 | 6   | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 7   | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 8   | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 9   | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 10  | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 11  | Aux 2 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 12  | Aux 2 | *16-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 13  | Aux 2 | - | - | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 14  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
-| 15  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
-| 16  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
+| 7   | Aux 3 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 8   | Aux 4 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 10  | Aux 6 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 11  | Aux 7 | *6-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 12  | Aux 8 | *16-pos*<sup>RR</sup> | *128-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 13  | Aux 9 | - | - | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
+| 14  | Aux 10 | - | - | - | Full Res<sup>H</sup> | - |
+| 15  | Aux 11 | - | - | - | Full Res<sup>H</sup> | - |
+| 16  | Aux 12 | - | - | - | Full Res<sup>H</sup> | - |
  
 **Swith Position / Channel Resolution**<br>
 Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to 2012<br>
@@ -44,6 +44,7 @@ Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to
 **Bold** - Every packet includes this channel (So a 150hz Packet Freq = 150hz Channel Update Rate)<br>
 H - Half Speed - Every other packet includes this channel (So a 150hz Packet Freq cut in half = 75hz Channel Update Rate)<br>
 RR - Round Robin - Channel waits its turn to be sent in a packet (So a 150hz Packet Freq sent every 7th packet = 22 hz Channel Update Rate)<br>
+* If you are using a PWM receiver and you would like to use the PWM output 5 on the receiver, you can go into the wifi interface of the receiver and map any other channel to be sent out on PWM Output 5. It is not wasted. Please use Channel 5 for the intended 2 position Arm for Safety and Performance. Even if you are not using a flight controller.
  
 # Detailed Description of Switch Configs
 
