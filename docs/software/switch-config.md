@@ -12,15 +12,15 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 ## Summary of Switch Configs
 
-This table summarizes the switch configuration modes and the available switch positions / resolution and update frequency on each channel or flight controller auxiliary channel (Aux X).
+This table summarizes the switch configuration modes and the available switch positions / resolution and update rate on each channel or flight controller auxiliary channel (Aux X). Below the table are descriptions for each option.
 
-| Channel | Flight  <br>Controller | Hybrid | Wide  <br>Hybrid | Full Res  <br>8 | Full Res  <br>16 Half Rate | Full Res  <br>12 Mixed |
+| Channel | Flight <br>Controller | Hybrid | Wide <br>Hybrid | Full Res <br>8 | Full Res <br>16 Half Rate | Full Res <br>12 Mixed |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | 2   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | 3   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | 4   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
-| **5**   | **Aux 1** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** |
+| **5** | **Aux 1** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** |
 | 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
@@ -33,11 +33,13 @@ This table summarizes the switch configuration modes and the available switch po
 | 15  | Aux 11 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
 | 16  | Aux 12 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
  
-| |**Switch Position / Channel Resolution**|
+### Switch Position / Channel Resolution
+
+| Label | Description |
 |:---:| --- |
 | **Normal Range** | 10-bit or 1024 positions mapped to PWM 988us to 2012us (1 bit = 1us) |
 | **CRSF Ext Limits** | 10-bit or 1024 positions mapped to PWM 885us to 2115us (1 bit = 1.23046875us) |
-| **64 / 128-pos** | The bit depth is dependent on the selected telemetry ratio. For a telemetry raio of 1:2 and 1:4 these channels are 6-bit/64 pos. For all other ratios, these channels are 7-bit/128 pos. The 7-bit/128 positions is 12.5% the resolution of 10-bit, and 6-bit/64 positions is 6.25% the resolution of 10-bit. This may be enough resolution for a head tracker but defiintely enough for flight modes, flaps, gear, etc. |
+| **64 / 128-pos** | The bit depth is dependent on the selected telemetry ratio. For a telemetry ratio of 1:2 and 1:4 these channels are 6-bit/64 pos. For all other ratios, these channels are 7-bit/128 pos. The 7-bit/128 positions is 12.5% the resolution of 10-bit, and 6-bit/64 positions is 6.25% the resolution of 10-bit. This may be enough resolution for a head tracker but definitely enough for flight modes, flaps, gear, etc. |
 | **16-pos** | 4-bit which is good for flight modes, flaps, gear, etc. |
 | **6-pos** | 3-bit which is good for flight modes, flaps, gear, etc. |
 | **2-pos** | 1-bit for Arm, ~1000us is the **disarmed** state and ~2000us is the **armed** state (see the explanations below of why the armed state is very important for safety and performance) |
@@ -45,17 +47,19 @@ This table summarizes the switch configuration modes and the available switch po
 !!! note
     If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any other channel to PWM Output 5. Please still use AUX1 for the 2-pos arm switch
 
-| |**Channel Update Rate versus Packet Rate**|
+### Channel Update Rate versus Packet Rate
+
+| Label | Description |
 |:---:| --- |
 | **Bold** | Every packet that is sent will include this channel (So a 150hz Packet Rate = 150hz Channel Update Rate) |
 | H <br> Half Speed | Every other packet includes this channel (So a 150hz Packet Rate cut in half = 75hz Channel Update Rate) |
-| RR <br> Round Robin | Channel waits its turn to be sent in a packet (So a 150hz Packet Rate sent every 7th packet = 22 hz Channel Update Rate) |
+| RR <br> Round Robin | Channel waits its turn to be sent in a packet (So a 150hz Packet Rate sent every 7th packet = 22hz Channel Update Rate) |
  
 ## Detailed Description of Switch Configs
 
-ExpressLRS has two options for how switches are transmitted: Hybrid and WideHybrid. **The switch mode can only be changed when a receiver is not connnected.** Switch mode is changed using Lua configuration, the user_define setting is no longer needed.
+ExpressLRS has a few options for how switches are transmitted: Under Hybrid and WideHybrid. **The switch mode can only be changed when a receiver is not connected.** Switch mode is changed using Lua configuration, the user_define setting is no longer needed.
 
-For both switch modes, the first switch (AUX1) is sent with every packet. Put. Your. Arm. On. AUX1. For the remaining 7 switches, one switch is sent with each packet (in addition to AUX1) and which switch is sent is rotated on each packet. 
+For these two switch modes, the first switch (AUX1) is sent with every packet. **Put Your Arm On AUX1**. For the remaining 7 switches, one switch is sent with each packet (in addition to AUX1) and which switch is sent is rotated on each packet. 
 
 1. The default choice is `HYBRID_SWITCHES_8` or just "Hybrid" where the switches are broken into different types
 
@@ -142,7 +146,7 @@ It also protects against unintentional disarms caused by a corrupt packet changi
 
 **PERFORMANCE**
 
-Your transmitter and receiver act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver are free to adjust their communcation in order to make the LUA and other configuration operations more responsive. When "disarmed", everything will appear to be working appropriately but none of the safeguards will be in place and performace will not be what you expect. 
+Your transmitter and receiver act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver are free to adjust their communication in order to make the LUA and other configuration operations more responsive. When "disarmed", everything will appear to be working appropriately but none of the safeguards will be in place and performance will not be what you expect. 
 
 When `IsArmed` is enabled, these safeguards are enabled:
 - Dynamic Power is fully enabled
@@ -166,4 +170,4 @@ In 1.0, there was also a switch mode where there were 8x 1-position switches sen
 
 ### Every time I change switch mode in Lua, it changes back!
 
-The switch mode can only be changed when a receiver is not connnected, to ensure a consistency between the RX and TX's interpretetation of the switch data. Power down your receiver, wait for the "Telemetry Lost" callout, and the switch mode change will stick.
+The switch mode can only be changed when a receiver is not connected, to ensure a consistency between the RX and TX's interpretation  of the switch data. Power down your receiver, wait for the "Telemetry Lost" callout, and the switch mode change will stick.
