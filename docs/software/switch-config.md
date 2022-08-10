@@ -37,6 +37,7 @@ Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to
 16-pos = 4-bit which is good for flight modes, flaps, gear, etc.<br>
 6-pos = 3-bit which is good for flight modes, flaps, gear, etc.<br>
 2-pos	= 1-bit for Arm (see the description below of why this is important for safety and performance)<br>
+\+ If you are using a PWM receiver and you would like to use the PWM output 5 on the receiver, you can go into the wifi interface of the receiver and map any other channel to be sent out on PWM Output 5. It is not wasted. Please use Channel 5 for the intended 2 position Arm for Safety and Performance. Even if you are not using a flight controller.
 
 **Packet Frequency - 50Hz, 150Hz, etc** 
  
@@ -44,7 +45,6 @@ Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to
 **Bold** - Every packet includes this channel (So a 150hz Packet Freq = 150hz Channel Update Rate)<br>
 H - Half Speed - Every other packet includes this channel (So a 150hz Packet Freq cut in half = 75hz Channel Update Rate)<br>
 RR - Round Robin - Channel waits its turn to be sent in a packet (So a 150hz Packet Freq sent every 7th packet = 22 hz Channel Update Rate)<br>
-+ If you are using a PWM receiver and you would like to use the PWM output 5 on the receiver, you can go into the wifi interface of the receiver and map any other channel to be sent out on PWM Output 5. It is not wasted. Please use Channel 5 for the intended 2 position Arm for Safety and Performance. Even if you are not using a flight controller.
  
 # Detailed Description of Switch Configs
 
