@@ -10,11 +10,6 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 ## Summary of Switch Configs
 
-| Syntax | Description |
-| --- | ----------- |
-| Header | Title |
-| Paragraph | Text |
-
 Here is a summary of the channel modes you can select
 
     | Channel | Flight Ctroller | Hybrid | Wide Hybrid | Full Rez 8 | Full Rez 16 Rate/2 | Full Rez 12 Mixed |
@@ -28,9 +23,9 @@ Here is a summary of the channel modes you can select
     | 7 | Aux 3 | 6 | 128 | 1024 | 1024 | 1024 |
     | 8 | Aux 4 | 6 | 128 | 1024 | 1024 | 1024 |
     | 9 | Aux 5 | 6 | 128 | 1024 | 1024 | 1024 |
-    | 10 | Aux 6 | 6 | 128 | - | 1024 | 1024 |
-    | 11 | Aux 7 | 6 | 128 | - | 1024 | 1024 |
-    | 12 | Aux 8 | 16 | 128 | - | 1024 | 1024 |
+    | 10 | Aux 6 | 6 | 128 | 0 | 1024 | 1024 |
+    | 11 | Aux 7 | 6 | 128 | 0 | 1024 | 1024 |
+    | 12 | Aux 8 | 16 | 128 | 0 | 1024 | 1024 |
     | 13 | Aux 9 | - | - | - | 1024 | 1024 |
     | 14 | Aux 10 | - | - | - | 1024 | - |
     | 15 | Aux 11 | - | - | - | 1024 | - |
