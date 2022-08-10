@@ -16,29 +16,31 @@ This table summarizes the switch configuration modes and the available switch po
 
 | Channel | Flight  <br>Controller | Hybrid | Wide  <br>Hybrid | Full Res  <br>8 | Full Res  <br>16 Half Rate | Full Res  <br>12 Mixed |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
-| 2   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
-| 3   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
-| 4   | Sticks | **Full Res** | **Full Res** | **Full Res** | Full Res<sup>H</sup> | **Full Res** |
-| **5<sup>+</sup>**   | Aux 1 | **2-pos** | **2-pos** | **2-pos** | **2-pos** | **2-pos** |
-| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *Full Res*<sup>RR</sup> | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 10  | Aux 6 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 11  | Aux 7 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 13  | Aux 9 | - | - | - | Full Res<sup>H</sup> | Full Res<sup>H</sup> |
-| 14  | Aux 10 | - | - | - | Full Res<sup>H</sup> | - |
-| 15  | Aux 11 | - | - | - | Full Res<sup>H</sup> | - |
-| 16  | Aux 12 | - | - | - | Full Res<sup>H</sup> | - |
+| 1   | Sticks | **Normal Range** | **Normal Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
+| 2   | Sticks | **Normal Range** | **Normal Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
+| 3   | Sticks | **Normal Range** | **Normal Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
+| 4   | Sticks | **Normal Range** | **Normal Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
+| **5**   | **Aux 1** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** |
+| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 10  | Aux 6 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 11  | Aux 7 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 13  | Aux 9 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 14  | Aux 10 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
+| 15  | Aux 11 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
+| 16  | Aux 12 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
  
 **Switch Position / Channel Resolution**<br>
-**Full Res** = 10-bit or 1024 positions for full resolution for a PWM between 988 to 2012<br>
-**64 / 128-pos** = 6/7-bit or 64/128 positions (approx 12.5% the resolution of 10-bit). The bit depth is dependent on the selected telemetry ratio<br>
+**Normal Range** = 10-bit or 1024 positions mapped to PWM 988-2012us (1 bit = 1us)<br>
+**CRSF Ext Limits** = 10-bit or 1024 positions mapped to PWM 885-2115us (1 bit = 1.23046875us)<br>
+**64 / 128-pos** = The bit depth is dependent on the selected telemetry ratio. For a telemetry raio of 1:2 and 1:4 these channels are 6-bit/64 pos. For all other ratios, these channels are 7-bit/128 pos. The 7-bit/128 positions is 12.5% the resolution of 10-bit, and 6-bit/64 positions is 6.25% the resolution of 10-bit. This may be enough resolution for a head tracker but defiintely enough for flight modes, flaps, gear, etc.<br>
 **16-pos** = 4-bit which is good for flight modes, flaps, gear, etc.<br>
 **6-pos** = 3-bit which is good for flight modes, flaps, gear, etc.<br>
-**2-pos**	= 1-bit for Arm (see the description below of why this is important for safety and performance)<br>
+**2-pos**	= 1-bit for Arm (see the description below of why this is important for safety and performance)
+
 !!! note
     If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any other channel to PWM Output 5. Please still use AUX1 for the 2-pos arm switch
 
@@ -138,7 +140,18 @@ It also protects against unintentional disarms caused by a corrupt packet changi
 
 **PERFORMANCE**
 
-Your transmitter and receiver act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver increase telemetry in order to talk back and forth with each other faster. This makes configuring the devices more responsive. When disarmed, everything will appear to be working appropriately including the channels. However, when disarmed, the packet frequency is low and telemetry ratios are high and many safe guards such as locking out the configuration interface are not yet enabled. When you arm, the transmitter and receiver are fully enabled with safeguards and the packet and telemetry rates that you selected and the system starts to monitor signal strength, packet loss, and adjusting transmit power, etc. Arming is an important part of the performance of the control link. Please use Channel 5 (Aux 1) as indicated.
+Your transmitter and receiver act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver are free to adjust their communcation in order to make the LUA and other configuration operations more responsive. When "disarmed", everything will appear to be working appropriately but none of the safeguards will be in place and performace will not be what you expect. 
+
+When IsArmed is enabled, these safeguards are enabled:
+- Dynamic Power is fully activated
+- All "Button" inputs are disabled
+- All "Joystick" (5-way buttons) are disabled
+- Bump to Share is disabled
+- VTX Admin disabled
+- Integrated VTX channel change disabled
+- Race telemetry mode is enabled
+- Some thermal-based fan controls are adjusted
+Arming is an important part of the performance of the control link. Please use Channel 5 (Aux 1) as indicated.
 
 Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~2000us is the **armed** state.
 
