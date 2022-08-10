@@ -12,8 +12,16 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 Here is a summary of the channel modes you can select
 
-<table align="center">  
-<tr><th>Channel</th><th>Flight<br>Controller</th><th>Hybrid</th><th>Wide<br>Hybrid</th><th>Full Rez<br>8</th><th>Full Rez<br>16 Rate/2</th><th>Full Rez<br>12 Mixed</th></tr>
+<table>
+<tr>
+  <th>Channel</th>
+  <th>Flight<br>Controller</th>
+  <th>Hybrid</th>
+  <th>Wide<br>Hybrid</th>
+  <th>Full Rez<br>8</th>
+  <th>Full Rez<br>16 Rate/2</th>
+  <th>Full Rez<br>12 Mixed</th>
+</tr>
 <tr>
   <td>1</td>
   <td>Sticks</td>
