@@ -45,7 +45,7 @@ This table summarizes the switch configuration modes and the available switch po
 | **2-pos** | 1-bit for Arm, ~1000us is the **disarmed** state and ~2000us is the **armed** state (see the explanations below of why the armed state is very important for safety and performance) |
 
 !!! note
-    If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any other channel to PWM Output 5. Please still use AUX1 for the 2-pos arm switch
+    If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any of the other channels to PWM Output 5. Please always still use AUX1 for the 2-pos Arm switch.
 
 ### Channel Update Rate versus Packet Rate
 
