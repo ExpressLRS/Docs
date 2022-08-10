@@ -10,7 +10,7 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 ## Summary of Switch Configs
 
-Here is a summary of the channel modes you can select
+This table summarizes the switch configuration modes and the available switch positions / resolution and update frequency on each channel or flight controller auxillary channel (Aux X).
 
 | Channel | Flight  <br>Controller | Hybrid | Wide  <br>Hybrid | Full Res  <br>8 | Full Res  <br>16 Half Rate | Full Res  <br>12 Mixed |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -32,29 +32,21 @@ Here is a summary of the channel modes you can select
 | 16  | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |
 | 6   | Aux 2 | - | - | - | Full Res<sup>H</sup> | - |  
 
-Resolution of the Channel,,,,,,
-1024,10-bit = Full Resolution,,,,,
-128,7-bit which is 12.5% the resolution of 10-bit,,,,,
-16,4-bit which is good for modes/flaps/gear,,,,,
-6,3-bit which is good for modes/flaps/gear,,,,,
-2,1-bit for Arm (see the description below),,,,,
-,,,,,,
-" Packet Frequency - 50Hz, 150Hz, etc",,,,,,
-,,,,,,
-Channel Update Rate versus Packet Frequency,,,,,,
-Full Speed - Every packet sends the channel (150hz = 150hz Channel Update Rate),,,,,,
-Half Speed - Every other packet sends the channel (150hz / 2 = 75hz Channel Update Rate),,,,,,
-Round Robin - Channel waits its turn to be sent (150hz / 7 = 22 hz Channel Update Rate),,,,,,
+**Swith Position / Channel Resolution**
+Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to 2012
+128-pos = 7-bit which is 12.5% the resolution of 10-bit
+16-pos = 4-bit which is good for flight modes, flaps, gear, etc.
+6-pos = 3-bit which is good for flight modes, flaps, gear, etc.
+2-pos	= 1-bit for Arm (see the description below of why this is important for safety and performance)
 
+**Packet Frequency - 50Hz, 150Hz, etc**
 
+**Channel Update Rate versus Packet Frequency**
+**Bold** - Every packet includes this channel (So a 150hz Packet Freq = 150hz Channel Update Rate)
+H - Half Speed - Every other packet includes this channel (So a 150hz Packet Freq cut in half = 75hz Channel Update Rate)
+RR - Round Robin - Channel waits its turn to be sent in a packet (So a 150hz Packet Freq sent every 7th packet = 22 hz Channel Update Rate)
 
-
-
-
-
-
-
-
+## Detailed Description of Switch Configs
 
 ExpressLRS has two options for how switches are transmitted: Hybrid and WideHybrid. **The switch mode can only be changed when a receiver is not connnected.** Switch mode is changed using Lua configuration, the user_define setting is no longer needed.
 
