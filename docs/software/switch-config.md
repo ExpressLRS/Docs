@@ -13,6 +13,7 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 Here is a summary of the channel modes you can select
 
     | Channel | Flight Ctroller | Hybrid | Wide Hybrid | Full Rez 8 | Full Rez 16 Rate/2 | Full Rez 12 Mixed |
+    |---|---|---|---|---|---|---|
     | 1 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
     | 2 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
     | 3 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
