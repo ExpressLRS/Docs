@@ -14,7 +14,7 @@ Here is a summary of the channel modes you can select
 
 | Channel | Flight<br>Controller | Hybrid | Wide<br>Hybrid | Full Rez<br>8 | Full Rez<br>16 Rate/2 | Full Rez<br>12 Mixed |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1 | Sticks | <span style="background-color: #FFFF00"> 1024 </span> | 1024 | 1024 | 1024 | 1024 |
+| 1 | Sticks | <mark style="background-color:red;"> 1024 </mark> | 1024 | 1024 | 1024 | 1024 |
 | 2 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
 | 3 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
 | 4 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
