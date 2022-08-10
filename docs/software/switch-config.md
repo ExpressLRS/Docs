@@ -33,7 +33,7 @@ This table summarizes the switch configuration modes and the available switch po
  
 **Switch Position / Channel Resolution**<br>
 **Full Res** = 10-bit or 1024 positions for full resolution for a PWM between 988 to 2012<br>
-**64 / 128-pos** = 6 / 7-bit or 64 / 128 positions which is 12.5% the resolution of 10-bit. The bit depth is dependent on the selected telemetry ratio<br>
+**64 / 128-pos** = 6/7-bit or 64/128 positions (approx 12.5% the resolution of 10-bit). The bit depth is dependent on the selected telemetry ratio<br>
 **16-pos** = 4-bit which is good for flight modes, flaps, gear, etc.<br>
 **6-pos** = 3-bit which is good for flight modes, flaps, gear, etc.<br>
 **2-pos**	= 1-bit for Arm (see the description below of why this is important for safety and performance)<br>
