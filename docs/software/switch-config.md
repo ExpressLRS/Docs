@@ -136,7 +136,7 @@ It also protects against unintentional disarms caused by a corrupt packet changi
 
 **PERFORMANCE**
 
-Your transmitter and receiver act differently when “armed” and “disarmed”. When disarmed, the transmitter and receiver talk back and forth more which makes configuring the devices more responsive. Yes the channels and transmitted and everything will work, but the performance of the link hasn’t been enabled. When you arm, the transmitter and receiver change into the packet rate and channel modes you selected and start monitoring signal strength, packet loss, adjusting transmit power, etc. so that the link performs the way you expect. Please use Channel 5 (Aux 1) as indicated.
+Your transmitter and receiver act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver increase telemetry in order to talk back and forth with each other faster. This makes configuring the devices more responsive. When disarmed, everything will appear to be working appropriately including the channels. However, when disarmed, the packet frequency is low and telemetry ratios are high and many safe guards such as locking out teh configuration interface are not yet enabled. When you arm, the transmitter and receiver are fully enabled with the packet rates and telemetry you selected and the system starts to monitor signal strength, packet loss, and adjusting transmit power, etc. for high performance radio control. Arming is an important part of the perormance of the control link. Please use Channel 5 (Aux 1) as indicated.
 
 Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~2000us is the **armed** state.
 
