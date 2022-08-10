@@ -8,7 +8,7 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 !!! warning "WARNING" 
     **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
-## Summary of Switch Configs
+# Summary of Switch Configs
 
 This table summarizes the switch configuration modes and the available switch positions / resolution and update frequency on each channel or flight controller auxillary channel (Aux X).
 
@@ -45,7 +45,7 @@ Full Res = 10-bit or 1024 positions for full resolution for a PWM between 988 to
 H - Half Speed - Every other packet includes this channel (So a 150hz Packet Freq cut in half = 75hz Channel Update Rate) 
 RR - Round Robin - Channel waits its turn to be sent in a packet (So a 150hz Packet Freq sent every 7th packet = 22 hz Channel Update Rate) 
  
-## Detailed Description of Switch Configs
+# Detailed Description of Switch Configs
 
 ExpressLRS has two options for how switches are transmitted: Hybrid and WideHybrid. **The switch mode can only be changed when a receiver is not connnected.** Switch mode is changed using Lua configuration, the user_define setting is no longer needed.
 
