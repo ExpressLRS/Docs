@@ -10,7 +10,7 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 # Summary of Switch Configs
 
-This table summarizes the switch configuration modes and the available switch positions / resolution and update frequency on each channel or flight controller auxillary channel (Aux X).
+This table summarizes the switch configuration modes and the available switch positions / resolution and update frequency on each channel or flight controller auxiliary channel (Aux X).
 
 | Channel | Flight  <br>Controller | Hybrid | Wide  <br>Hybrid | Full Res  <br>8 | Full Res  <br>16 Half Rate | Full Res  <br>12 Mixed |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -31,9 +31,9 @@ This table summarizes the switch configuration modes and the available switch po
 | 15  | Aux 11 | - | - | - | Full Res<sup>H</sup> | - |
 | 16  | Aux 12 | - | - | - | Full Res<sup>H</sup> | - |
  
-**Swith Position / Channel Resolution**<br>
+**Switch Position / Channel Resolution**<br>
 **Full Res** = 10-bit or 1024 positions for full resolution for a PWM between 988 to 2012<br>
-**64 / 128-pos** = 6 / 7-bit or 64 / 128 positions which is 12.5% the resolution of 10-bit. The bit depth is dependant on the selected telemetry ratio<br>
+**64 / 128-pos** = 6 / 7-bit or 64 / 128 positions which is 12.5% the resolution of 10-bit. The bit depth is dependent on the selected telemetry ratio<br>
 **16-pos** = 4-bit which is good for flight modes, flaps, gear, etc.<br>
 **6-pos** = 3-bit which is good for flight modes, flaps, gear, etc.<br>
 **2-pos**	= 1-bit for Arm (see the description below of why this is important for safety and performance)<br>
