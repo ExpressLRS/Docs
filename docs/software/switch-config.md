@@ -33,9 +33,10 @@ This table summarizes the switch configuration modes and the available switch po
 | 15  | Aux 11 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
 | 16  | Aux 12 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
  
-**Switch Position / Channel Resolution**<br>
-| **Normal Range** | 10-bit or 1024 positions mapped to PWM 988-2012us (1 bit = 1us) |
-| **CRSF Ext Limits** | 10-bit or 1024 positions mapped to PWM 885-2115us (1 bit = 1.23046875us) |
+| |**Switch Position / Channel Resolution**|
+|:---:| --- |
+| **Normal Range** | 10-bit or 1024 positions mapped to PWM 988us to 2012us (1 bit = 1us) |
+| **CRSF Ext Limits** | 10-bit or 1024 positions mapped to PWM 885us to 2115us (1 bit = 1.23046875us) |
 | **64 / 128-pos** | The bit depth is dependent on the selected telemetry ratio. For a telemetry raio of 1:2 and 1:4 these channels are 6-bit/64 pos. For all other ratios, these channels are 7-bit/128 pos. The 7-bit/128 positions is 12.5% the resolution of 10-bit, and 6-bit/64 positions is 6.25% the resolution of 10-bit. This may be enough resolution for a head tracker but defiintely enough for flight modes, flaps, gear, etc. |
 | **16-pos** | 4-bit which is good for flight modes, flaps, gear, etc. |
 | **6-pos** | 3-bit which is good for flight modes, flaps, gear, etc. |
@@ -44,7 +45,8 @@ This table summarizes the switch configuration modes and the available switch po
 !!! note
     If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any other channel to PWM Output 5. Please still use AUX1 for the 2-pos arm switch
 
-**Channel Update Rate versus Packet Rate**<br>
+| |**Channel Update Rate versus Packet Rate**|
+|:---:| --- |
 | **Bold** | Every packet that is sent will include this channel (So a 150hz Packet Rate = 150hz Channel Update Rate) |
 | H <br> Half Speed | Every other packet includes this channel (So a 150hz Packet Rate cut in half = 75hz Channel Update Rate) |
 | RR <br> Round Robin | Channel waits its turn to be sent in a packet (So a 150hz Packet Rate sent every 7th packet = 22 hz Channel Update Rate) |
