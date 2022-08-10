@@ -39,7 +39,7 @@ This table summarizes the switch configuration modes and the available switch po
 **2-pos**	= 1-bit for Arm (see the description below of why this is important for safety and performance)<br>
 \+ If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any other channel to PWM Output 5. It is not wasted. Please use Channel 5 for the intended 2 position Arm even if you are not using a flight controller. This is very important.
 
-**Packet Rate - 50Hz, 150Hz, etc** see the [RF Mode Indexes (RFMD)]https://www.expresslrs.org/3.0/info/signal-health/#rf-mode-indexes-rfmd for details.
+**Packet Rate - 50Hz, 150Hz, etc** see the [RF Mode Indexes (RFMD)](/info/signal-health/#rf-mode-indexes-rfmd) for details.
  
 **Channel Update Rate versus Packet Frequency**<br>
 **Bold** - Every packet includes this channel (So a 150hz Packet Freq = 150hz Channel Update Rate)<br>
