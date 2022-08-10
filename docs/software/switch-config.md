@@ -8,6 +8,55 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 !!! warning "WARNING" 
     **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
+## Summary of Switch Configs
+
+    | Channel | Resolution | Frequency |
+    |---|---|---|
+    | AUX1 | 1-bit / 2-position | Every packet, ARM channel |
+    | AUX2-AUX8 | 6 or 7-bit / 64 or 128-position | Round-robin |
+
+    | Channel | Flight Ctroller | Hybrid | Wide Hybrid | Full Rez 8 | Full Rez 16 Rate/2 | Full Rez 12 Mixed |
+    | 1 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
+    | 2 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
+    | 3 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
+    | 4 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
+    | 5 | Aux 1 | 2 | 2 | 2 | 2 | 2 |
+    | 6 | Aux 2 | 6 | 128 | 1024 | 1024 | 1024 |
+    | 7 | Aux 3 | 6 | 128 | 1024 | 1024 | 1024 |
+    | 8 | Aux 4 | 6 | 128 | 1024 | 1024 | 1024 |
+    | 9 | Aux 5 | 6 | 128 | 1024 | 1024 | 1024 |
+    | 10 | Aux 6 | 6 | 128 | - | 1024 | 1024 |
+    | 11 | Aux 7 | 6 | 128 | - | 1024 | 1024 |
+    | 12 | Aux 8 | 16 | 128 | - | 1024 | 1024 |
+    | 13 | Aux 9 | - | - | - | 1024 | 1024 |
+    | 14 | Aux 10 | - | - | - | 1024 | - |
+    | 15 | Aux 11 | - | - | - | 1024 | - |
+    | 16 | Aux 12 | - | - | - | 1024 | - |
+
+Resolution of the Channel,,,,,,
+1024,10-bit = Full Resolution,,,,,
+128,7-bit which is 12.5% the resolution of 10-bit,,,,,
+16,4-bit which is good for modes/flaps/gear,,,,,
+6,3-bit which is good for modes/flaps/gear,,,,,
+2,1-bit for Arm (see the description below),,,,,
+,,,,,,
+" Packet Frequency - 50Hz, 150Hz, etc",,,,,,
+,,,,,,
+Channel Update Rate versus Packet Frequency,,,,,,
+Full Speed - Every packet sends the channel (150hz = 150hz Channel Update Rate),,,,,,
+Half Speed - Every other packet sends the channel (150hz / 2 = 75hz Channel Update Rate),,,,,,
+Round Robin - Channel waits its turn to be sent (150hz / 7 = 22 hz Channel Update Rate),,,,,,
+
+
+
+
+
+
+
+
+
+
+
 ExpressLRS has two options for how switches are transmitted: Hybrid and WideHybrid. **The switch mode can only be changed when a receiver is not connnected.** Switch mode is changed using Lua configuration, the user_define setting is no longer needed.
 
 For both switch modes, the first switch (AUX1) is sent with every packet. Put. Your. Arm. On. AUX1. For the remaining 7 switches, one switch is sent with each packet (in addition to AUX1) and which switch is sent is rotated on each packet. 
