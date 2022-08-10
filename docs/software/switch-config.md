@@ -10,10 +10,7 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 ## Summary of Switch Configs
 
-    | Channel | Resolution | Frequency |
-    |---|---|---|
-    | AUX1 | 1-bit / 2-position | Every packet, ARM channel |
-    | AUX2-AUX8 | 6 or 7-bit / 64 or 128-position | Round-robin |
+Here is a summary of the channel modes you can select
 
     | Channel | Flight Ctroller | Hybrid | Wide Hybrid | Full Rez 8 | Full Rez 16 Rate/2 | Full Rez 12 Mixed |
     | 1 | Sticks | 1024 | 1024 | 1024 | 1024 | 1024 |
