@@ -12,23 +12,6 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 Here is a summary of the channel modes you can select
 
-<style>
-    .switchconfigtable {
-        width: 70%;
-        text-align: center;
-    }
-    .switchconfigtable th {
-        background: grey;
-        word-wrap: break-word;
-        text-align: center;
-    }
-    .switchconfigtable tr:nth-child(1) { background: red; }
-    .switchconfigtable tr:nth-child(2) { background: orange; }
-    .switchconfigtable tr:nth-child(3) { background: green; }
-</style>
-
-<div class="switchconfigtable">
-
 | Channel | Flight<br>Controller | Hybrid | Wide<br>Hybrid | Full Rez<br>8 | Full Rez<br>16 Rate/2 | Full Rez<br>12 Mixed |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | Sticks | <span style="background-color: #FFFF00"> 1024 </span> | 1024 | 1024 | 1024 | 1024 |
@@ -47,8 +30,6 @@ Here is a summary of the channel modes you can select
 | 14 | Aux 10 | - | - | - | 1024 | - |
 | 15 | Aux 11 | - | - | - | 1024 | - |
 | 16 | Aux 12 | - | - | - | 1024 | - |
-
-</div>
 
 Resolution of the Channel,,,,,,
 1024,10-bit = Full Resolution,,,,,
