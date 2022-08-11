@@ -33,4 +33,7 @@ The CRSF Protocol requires a full UART pair, uninverted and in full-duplex mode.
 - `serialrx_halfduplex` should be **OFF**; configure it with `set serialrx_halfduplex = off`.
 - Don't forget to use `save` once you're done setting these up.
 
+!!! important
+    Close your Flight Controller Configurator once you've set it up for ExpressLRS. Keeping it open could prevent the next steps from completing properly, particularly flashing via Passthrough. You must also unplug the FC from USB before proceeding to the next steps to refresh the connection.
+
 **Use the Navigation Menu to proceed to the Flashing Guides (under the section `Flashing Receivers`).**
