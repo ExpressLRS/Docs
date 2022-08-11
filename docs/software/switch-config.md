@@ -39,7 +39,7 @@ This table summarizes the switch configuration modes and the available switch po
 |:---:| --- |
 | **Normal Range** | 10-bit or 1024 positions mapped to PWM 988us to 2012us (1 bit = 1us) |
 | **CRSF Ext Limits** | 10-bit or 1024 positions mapped to PWM 885us to 2115us (1 bit = 1.23046875us) |
-| **64 / 128-pos** | The bit depth is dependent on the selected telemetry ratio. For a telemetry ratio of 1:2 and 1:4 these channels are 6-bit/64 pos. For all other ratios, these channels are 7-bit/128 pos. The 7-bit/128 positions is 12.5% the resolution of 10-bit, and 6-bit/64 positions is 6.25% the resolution of 10-bit. This may be enough resolution for a head tracker but definitely enough for flight modes, flaps, gear, etc. |
+| **64 / 128-pos** | The bit depth is dependent on the selected telemetry ratio. For a telemetry ratio of 1:2 and 1:4 these channels are 6-bit/64 pos. For all other ratios, these channels are 7-bit/128 pos. The 7-bit/128 positions is 12.5% the resolution of 10-bit, and 6-bit/64 positions is 6.25% the resolution of 10-bit. This may not be enough resolution for a head tracker but definitely enough for flight modes, flaps, gear, etc. |
 | **16-pos** | 4-bit which is good for flight modes, flaps, gear, etc. |
 | **6-pos** | 3-bit which is good for flight modes, flaps, gear, etc. |
 | **2-pos** | 1-bit for Arm, ~1000us is the **disarmed** state and ~2000us is the **armed** state (see the explanations below of why the armed state is very important for safety and performance) |
@@ -149,14 +149,15 @@ It also protects against unintentional disarms caused by a corrupt packet changi
 Your transmitter and receiver act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver are free to adjust their communication in order to make the LUA and other configuration operations more responsive. When "disarmed", everything will appear to be working appropriately but none of the safeguards will be in place and performance will not be what you expect. 
 
 When `IsArmed` is enabled, these safeguards are enabled:
-- Dynamic Power is fully enabled
-- All "Button" inputs are disabled
-- All "Joystick" (5-way buttons) are disabled
-- Bump to Share is disabled
-- VTX Admin is disabled
-- Integrated VTX channel change is disabled
-- Race telemetry mode is enabled
-- Some thermal-based fan controls are enabled
+
+  - Dynamic Power is fully enabled
+  - All "Button" inputs are disabled
+  - All "Joystick" (5-way buttons) are disabled
+  - Bump to Share is disabled
+  - VTX Admin is disabled
+  - Integrated VTX channel change is disabled
+  - Race telemetry mode is enabled
+  - Some thermal-based fan controls are enabled
 
 Arming is an important part of the performance of the control link. Please use Channel 5 (Aux 1) as indicated. Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~2000us is the **armed** state.
 
