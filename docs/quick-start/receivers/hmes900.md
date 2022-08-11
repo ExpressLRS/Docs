@@ -47,7 +47,22 @@ Device: `HappyModel RX ES900RX`
 
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
 
-With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator, then click on **Build and Flash**. First time compiles naturally takes a while but if you do the prep work properly, you'll be greeted with the `Success` message soon enough!
+Make sure you have your receiver [wired properly]. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
+
+For the following steps, you should be disconnected from Betaflight or INAV Configurator. Close the FC Configurator and unplug the FC from USB to refresh the connection.
+
+You will need to bridge the `Boot` pads on the receiver the first time you'll be updating via this method. The [Wiring Guide] shows where the `Boot` pads are. A solid LED indicates the receiver is in `Bootloader` mode when the TX module is OFF (Solid LED also indicates Radio+module & Receiver is bound and has connection). 
+
+!!! attention ""
+    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
+
+These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
+
+Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options] and then click **Build and Flash**. For first time flashing/updating, it would normally take a while.
+
+![Build & Flash](../../assets/images/BuildFlash.png)
+
+A `Success` message will be shown once the process is complete.
 
 ### Flashing via Wifi
 
@@ -183,3 +198,4 @@ Once done, wire your receiver to your Flight Controller. Passthrough flashing ca
 
 [Firmware Options]: ../firmware-options.md
 [wired properly]: #wiring-up-your-receiver
+[Wiring Guide]: #wiring-up-your-receiver
