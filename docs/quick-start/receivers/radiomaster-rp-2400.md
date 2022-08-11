@@ -138,6 +138,8 @@ Device: `RadioMaster RP1/2 2400 RX`
 
 Make sure you have your receiver [wired properly]. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
 
+For the following steps, you should be disconnected from Betaflight or INAV Configurator. Close the FC Configurator and unplug the FC from USB to refresh the connection.
+
 You will need to solder one end of a piece of wire into the Boot pad and the other end into the Ground pad the first time you'll be updating with this method to manually put the receiver into Bootloader mode. The [Wiring Guide] shows where the `Boot` pad is. A solid LED indicates the receiver is in `Bootloader` mode when the TX module is OFF (Solid LED also indicates Radio+module & Receiver is bound and has connection). 
 
 !!! attention ""
