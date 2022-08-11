@@ -14,7 +14,7 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 This table summarizes the switch configuration modes, available channel switch positions or resolution, channel update rate, and packet rate as it applies to each channel or flight controller auxiliary channel (Aux X). Below the table are descriptions for each option in the table.
 
-|  |  | Hybrid | Wide <br>Hybrid | Full Res <br>8 | Full Res <br>16 Half Rate | Full Res <br>12 Mixed |
+|  |  | Hybrid | Wide <br>Hybrid | Full Res <br>8ch | Full Res <br>16ch Half Rate | Full Res <br>12ch Mixed |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Channel | Flight <br>Controller | 50,150,250,500<br>D250,D500<br>F500,F1000 | 50,150,250,500<br>D250,D500<br>F500,F1000 | 100Hz Full<br>333Hz Full | 100Hz Full<br>333Hz Full | 100Hz Full<br>333Hz Full |
 | 1   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
