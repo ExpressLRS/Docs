@@ -20,11 +20,11 @@ This table summarizes the switch configuration modes, available channel switch p
 | 2   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | 3   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | 4   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
-| **5** | **Aux 1** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** |
-| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
-| 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
-| 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
-| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | *CRSF Ext<br>Limits*<sup>RR</sup> | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 5 | Aux 1 | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | CRSF Ext<br>Limits<sup>H</sup><br/>Arm | **2-pos<br>Arm** |
+| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 10  | Aux 6 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 11  | Aux 7 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
@@ -56,7 +56,7 @@ This table summarizes the switch configuration modes, available channel switch p
 
 | Label | Description |
 |:---:| --- |
-| **Bold** | Every packet that is sent will include this channel (So a 150hz Packet Rate = 150hz Channel Update Rate) |
+| **Bolded** | This channel will be included in every packet at the selected packet rate (So a 150hz Packet Rate = 150hz Channel Update Rate) |
 | H <br> Half Rate | Half of the channels are included in each packet - Rate/2 (So a 100hz Packet Rate cut in half = 50hz Channel Update Rate) |
 | RR <br> Round Robin | These channels wait their turn to be sent in a packet (So a 150hz Packet Rate sends a channel every 7th packet = 22hz Channel Update Rate) |
 | 50 thru<br>F1000 | The **Hybrid** and **Wide** switch modes are only available on packet rates of 50Hz, 150Hz, 250Hz, 500Hz, D250Hz, D500Hz, F500Hz, and F1000Hz |
@@ -100,7 +100,7 @@ In **Hybrid** mode, AUX8 / Chan12 is 4-bit / 16-position and is mapped to the PW
 | Approx.&nbsp;Chan&nbsp;Input&nbsp;PWM&nbsp;(us) | 988 | 1056 | 1125 | 1193 | 1261 | 1329 | 1398 | 1466 | 1534 | 1602 | 1671 | 1739 | 1807 | 1875 | 1944 | 2012 | 
 | Chan&nbsp;Output&nbsp;PWM&nbsp;(us) | 1000 | 1066 | 1133 | 1200 | 1266 | 1333 | 1400 | 1467 | 1533 | 1600 | 1666 | 1733 | 1800 | 1866 | 1933 | 2000 |
 
-In **Wide** mode, AUX2-AUX8 / Chan6-12 are 6-bit / 64-position for telemetry ratios of 1:2 and 1:4. For all other telemetry ratios, these 7 switched are 7-bit / 128-position. It takes 8 packets to send the complete set of switches before cycling back to AUX2 (one more than **Hybrid**). **Wide** uses the 8th slot to transmit extra data to the receiver, including the current transmitter power. This is the only switch mode which can show the transmitter power `TPwr` on the flight controller's OSD. These behave more like traditional channels although with lower precision. You can tell you're operating in **Wide** mode when a switch in the middle position shows up as 1503 instead of 1500.
+In **Wide** mode, AUX2-AUX8 / Chan6-12 are 6-bit / 64-position for telemetry ratios of 1:2 and 1:4. For all other telemetry ratios, these 7 switches are 7-bit / 128-position. It takes 8 packets to send the complete set of switches before cycling back to AUX2 (one more than **Hybrid**). **Wide** uses the 8th slot to transmit extra data to the receiver, including the current transmitter power. This is the only switch mode which can show the transmitter power `TPwr` on the flight controller's OSD. These behave more like traditional channels although with lower precision. You can tell you're operating in **Wide** mode when a switch in the middle position shows up as 1503 instead of 1500.
 
 If using Ardupilot in **Wide** mode you will see that the channel outputs don't line up very well with the standard -100% (988us) to +100% (2012us) output range in EdgeTX / OpenTX when using a 6-position selector as input. Both the first two and the last two positions get binned into Mode 1 and Mode 6 respectively. To get the full 6 Ardupilot modes, go to the Outputs page on the OpenTX model setup and set the min / max for the channels to -75% / +75%.
 
@@ -108,11 +108,11 @@ If using Ardupilot in **Wide** mode you will see that the channel outputs don't 
 
 These switch modes come in three flavors based on the number of output channels you would like and are only available on packet rates of 100Hz Full and 333Hz Full.
 
-1. **8ch** - Channels 1 to 4 and Channels 6 to 9 are sent 10-bit, Full Resolution at the selected Packet Rate, along with Channel 5 (AUX1) in 1-bit (2-position) for Arming.
+1. **8ch** - Channels 1 to 4 and Channels 6 to 9 are sent 10-bit, at the selected Packet Rate, along with Channel 5 (AUX1) in 1-bit (2-position) for Arming.
 
 2. **16ch Rate/2** - All the Channels are sent 10-bit but at half rate.
 
-3. **12ch Mixed** - Channels 1 to 4 are sent 10-bit, Full Resolution with Channel 5 (AUX1) still in 1-bit, at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
+3. **12ch Mixed** - Channels 1 to 4 are sent 10-bit with Channel 5 (AUX1) in 1-bit (2-position) for Arming at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
 
 All of these 10-bit or 1024 positions are mapped to PWM 885us to 2115us (1 bit = 1.23046875us) in what is called **"CRSF Extended Limits"**
 ![CRSF Extended Limits](../assets/images/channelrange-crsf.png)
@@ -144,7 +144,7 @@ When `IsArmed` is enabled, these safeguards are applied:
 When `IsArmed` is enabled, these performance features are activated:
 
   - Dynamic Power is fully enabled
-  - Race telemetry mode is enabled
+  - Race telemetry mode turns telemetry off
   - Some thermal-based fan controls are enabled
 
 Arming is an extremely important part of the performance of the control link. Please use Aux 1 / Chan 5 as indicated. Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~2000us is the **armed** state.
