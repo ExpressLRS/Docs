@@ -228,3 +228,4 @@ Select the target and set your [Firmware Options] and once done, click on **Buil
 
 [Firmware Options]: ../firmware-options.md
 [wired properly]: #wiring-up-your-receiver
+[Wiring Guide]: #wiring-up-your-receiver
