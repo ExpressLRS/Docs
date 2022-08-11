@@ -62,7 +62,7 @@ This table summarizes the switch configuration modes, available channel switch p
 | 50 thru<br>F1000 | The **Hybrid** and **Wide** switch modes are only available on packet rates of 50Hz, 150Hz, 250Hz, 500Hz, D250Hz, D500Hz, F500Hz, and F1000Hz |
 | 100&333<br>Only | The **Full Resolution** switch modes (**8ch**, **16ch Rate/2**, **12ch Mixed**) are only available on packet rates of 100Hz Full and 333Hz Full |
  
-## Detailed Description of Switch Configuration Modes
+# Detailed Description of Switch Configuration Modes
 
 !!! note
     The switch configuration mode can only be changed when a receiver is not connected to the transmitter and when the transmitter is not armed. The mode is changed using the LUA Configuration in EdgeTX / OpenTX or using buttons, joystick, screen, etc. on the actual transmitter itself. 
@@ -97,8 +97,8 @@ In **Hybrid** mode, AUX8 / Chan12 is 4-bit / 16-position and is mapped to the PW
 
 | Switch Position | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| Approx. Chan Input PWM (us) | 988 | 1056 | 1125 | 1193 | 1261 | 1329 | 1398 | 1466 | 1534 | 1602 | 1671 | 1739 | 1807 | 1875 | 1944 | 2012 | 
-| Chan Output PWM (us) | 1000 | 1066 | 1133 | 1200 | 1266 | 1333 | 1400 | 1467 | 1533 | 1600 | 1666 | 1733 | 1800 | 1866 | 1933 | 2000 |
+| Approx.&nbsp;Chan&nbsp;Input&nbsp;PWM&nbsp;(us) | 988 | 1056 | 1125 | 1193 | 1261 | 1329 | 1398 | 1466 | 1534 | 1602 | 1671 | 1739 | 1807 | 1875 | 1944 | 2012 | 
+| Chan&nbsp;Output&nbsp;PWM&nbsp;(us) | 1000 | 1066 | 1133 | 1200 | 1266 | 1333 | 1400 | 1467 | 1533 | 1600 | 1666 | 1733 | 1800 | 1866 | 1933 | 2000 |
 
 In **Wide** mode, AUX2-AUX8 / Chan6-12 are 6-bit / 64-position for telemetry ratios of 1:2 and 1:4. For all other telemetry ratios, these 7 switched are 7-bit / 128-position. It takes 8 packets to send the complete set of switches before cycling back to AUX2 (one more than **Hybrid**). **Wide** uses the 8th slot to transmit extra data to the receiver, including the current transmitter power. This is the only switch mode which can show the transmitter power `TPwr` on the flight controller's OSD. These behave more like traditional channels although with lower precision. You can tell you're operating in **Wide** mode when a switch in the middle position shows up as 1503 instead of 1500.
 
