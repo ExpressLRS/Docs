@@ -62,14 +62,14 @@ This table summarizes the switch configuration modes, available channel switch p
 | 50 thru<br>F1000 | The **Hybrid** and **Wide** switch modes are only available on packet rates of 50Hz, 150Hz, 250Hz, 500Hz, D250Hz, D500Hz, F500Hz, and F1000Hz |
 | 100&333<br>Only | The **Full Resolution** switch modes (**8ch**, **16ch Rate/2**, **12ch Mixed**) are only available on packet rates of 100Hz Full and 333Hz Full |
  
-# Detailed Description of Switch Configuration Modes
+## Detailed Description of Switch Configuration Modes
 
 !!! note
     The switch configuration mode can only be changed when a receiver is not connected to the transmitter and when the transmitter is not armed. The mode is changed using the LUA Configuration in EdgeTX / OpenTX or using buttons, joystick, screen, etc. on the actual transmitter itself. 
 
 ExpressLRS has a few options for how switches are transmitted; Hybrid, Wide, Full Res 8ch, Full Res 16ch Rate/2, Full Res 12ch Mixed.
 
-## **Hybrid** and **Wide** Switch Configuration Modes
+### **Hybrid** and **Wide** Switch Configuration Modes
 
 These two switch modes are only available when packet rates of 50Hz, 150Hz, 250Hz, 500Hz, D250Hz, D500Hz, F500Hz, and F1000Hz and selected.
 
@@ -104,7 +104,7 @@ In **Wide** mode, AUX2-AUX8 / Chan6-12 are 6-bit / 64-position for telemetry rat
 
 If using Ardupilot in **Wide** mode you will see that the channel outputs don't line up very well with the standard -100% (988us) to +100% (2012us) output range in EdgeTX / OpenTX when using a 6-position selector as input. Both the first two and the last two positions get binned into Mode 1 and Mode 6 respectively. To get the full 6 Ardupilot modes, go to the Outputs page on the OpenTX model setup and set the min / max for the channels to -75% / +75%.
 
-## Full Resolution Switch Configuration Modes :new:
+### Full Resolution Switch Configuration Modes :new:
 
 These switch modes come in three flavors based on the number of output channels you would like and are only available on packet rates of 100Hz Full and 333Hz Full.
 
