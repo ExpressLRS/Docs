@@ -6,8 +6,8 @@ template: main.html
 
 ## Wiring up your receiver
 
-!!! attention ""
-    *Note: There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.*
+!!! attention "Note"
+    There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
 
 <figure markdown>
 ![Axis Thor RX connection](../../assets/images/rx-axis-thor.jpg)
@@ -71,8 +71,8 @@ Once you have updated to firmware version 2.0 or newer, the Web Update page on t
 
 ### Method 2
 
-!!! note ""
-    Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
+!!! note "Note"
+    This method will only work once the Home Network SSID and Password has been configured with the receiver
 
 With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
@@ -98,8 +98,8 @@ You can now power down your Flight Controller along with the receiver.
 
 ### Method 3
 
-!!! note ""
-    Note: This method will only work once the Home Network SSID and Password has been configured with the receiver
+!!! note "Note"
+    This method will only work once the Home Network SSID and Password has been configured with the receiver
 
 With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
@@ -131,8 +131,8 @@ If the receiver gets powered up when you connect the FC to USB, you will need to
 
 If the receiver needs a LiPo attached to get powered up, then Press and Hold the button on the receiver, attach a LiPo, then let go once the LED in the receiver stopped blinking and goes SOLID. Then connect your FC to USB.
 
-!!! attention ""
-    Note: if you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
+!!! attention "Note"
+    If you powered the receiver and has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
 
 These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
 

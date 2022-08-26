@@ -65,8 +65,8 @@ This **only works** with ESP32 based TXes. **Almost all handsets** require `UART
 ![900 RX Options](../assets/images/ConfigurationOptions900rx.png)
 </figure>
 
-!!! attention ""
-    Note: Configuration of Receivers should match the configuration of the Transmitter Module for Sync/Binding to happen between devices.
+!!! attention "Note"
+    Configuration of Receivers should match the configuration of the Transmitter Module for Sync/Binding to happen between devices.
 
 Most of the options listed above for the Transmitter Modules also apply to Receivers. The following are options specific to receivers that you might need.
 
@@ -96,6 +96,6 @@ Keeps the receiver on the last packet rate it was on if it failsafes, instead of
 
 ## Full List
 
-*For a complete list of User Defines, head over to the [User Defines page](../software/user-defines.md).*
+For a complete list of User Defines, head over to the [User Defines page](../software/user-defines.md).
 
 **Done! It's time to flash the firmware on your transmitter**

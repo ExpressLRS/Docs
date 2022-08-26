@@ -91,13 +91,13 @@ Connect your FC to USB and configure your FC firmware as shown on the [next page
 ![FC Wiring](../../assets/images/FCWiringR9.jpg" width ="100%")
 </figure>
 
-!!! attention ""
-    Note: This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!
+!!! attention "Note"
+    This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!
 
-AFTER you've flashed the [bootloader](r9.md#bootloaders) and wired your receiver as above, proceed to configure up your flight controller as shown on the [next page].
+After you've flashed the [bootloader](r9.md#bootloaders) and wired your receiver as above, proceed to configure up your flight controller as shown on the [next page].
 
-!!! note ""
-    Note: R9 Slim requires flashing via STLink first. Passthrough should work for updates.
+!!! attention "Note"
+    R9 Slim requires flashing via STLink first. Passthrough should work for updates.
 
 ## GEPRC 900MHz & 2.4GHz
 

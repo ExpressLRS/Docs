@@ -99,7 +99,13 @@ Since telemetry messages are sent with low priority it may take some time to tra
 
 The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 200 Hz. So if you need fast a fast telemetry update rate choose high refresh rate, and a ratio that favors telemetry messages e.g. 200 Hz and 1:16 usually works good. For detailed information on telemetry bandwidth at different rates and ratios, see [this page on telemetry bandwidth](../info/telem-bandwidth.md).
 
-To finish the telemetry setup open the telemetry page on your transmitter and select "Discover new sensors" and wait for the list to fill. You will notice that there is a * sign for each row. This star indicates that this telemetry sensor was just updated.  If you see a row that does not change, and the name of the row is in square brackets it means that this sensor was not updated for some time.
+To finish the telemetry setup open the telemetry page on your transmitter and select "Discover new sensors" and wait for the list to fill. 
+
+!!! hint "Asterisk Sign Indication"
+    Notice, that there is a * sign for each row. This star indicates that this telemetry sensor was just updated.  
+
+!!! hint "Square Brackets Indication"
+    If you see a row that does not change, and the name of the row is in square brackets it means that this sensor was not updated for some time.
 
 The first values (including RSSI and link quality) should always be updated (flashing stars). If this does not happen multiple times per second the transmitter will issue a "telemetry warning". To prevent this warning use the setting TLM_REPORT_INTERVAL_MS.
 

@@ -24,7 +24,7 @@ Using the latest [Betaflight Configurator](https://github.com/betaflight/betafli
 
 If your Flight Controller model is not in the list above, consult your Flight Controller manufacturer for details.
 
-!!! warning ""
+!!! info "NOTE"
     The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../quick-start/receivers/hmes900.md#es915868rx-discontinued) instead.
 
 Once flashed, you will need to paste in the `diff all` you have saved. Don't forget to type in `save` and press enter once done. Power cycle your flight controller, and you should be set. Review your Betaflight settings (no changes needed for the Receiver Type and Protocol; should already be set with `SPI Receiver`, with Provider as `ExpressLRS`).
@@ -46,9 +46,10 @@ Put the receiver into bind mode using any of these procedures:
 - press the bind button on the flight controller.
 - using the CLI, type in `set expresslrs_uid = 0`, press enter once, then save and reboot
 
-One the SPI receiver is in Bind Mode (indicated by two immediate blinks followed by a short pause), execute the [ExpressLRS](../quick-start/transmitters/lua-howto.md) lua script in your handset and press the `Bind` option. The RX and TX should be now bound (indicated by a SOLID LED on the Flight Controller).
+One the SPI receiver is in Bind Mode (indicated by two immediate blinks followed by a short pause), execute the [ExpressLRS lua script](../quick-start/transmitters/lua-howto.md) in your handset and press the `Bind` option. The RX and TX should be now bound (indicated by a SOLID LED on the Flight Controller).
 
-**Please mind the order, RX first, TX second.**
+!!! info "NOTE"
+    RX should be bound before TX.
 
 Video Tutorial (thanks to @JyeSmith):
 
@@ -59,8 +60,9 @@ Video Tutorial (thanks to @JyeSmith):
 
 The binding phrase is hashed into 6 bytes represented as numbers. These 6 bytes are referred to as the UID bytes. 
 UID bytes are entered into the Betaflight CLI for binding. Please [look below](#setting-binding-phrase) for instructions. 
-When building via ExpressLRS Configurator or via VS Code, note down the UID bytes from the build log. You can also use the 
-[generator below](#uid-byte-generator) to retrieve your UID bytes from your binding phrase.
+
+!!! info "NOTE"
+    When building via ExpressLRS Configurator or via VS Code, note down the UID bytes from the build log. You can also use the [generator below](#uid-byte-generator) to retrieve your UID bytes from your binding phrase.
 
 ![UID String](../assets/images/UIDsource.png)
 
@@ -69,10 +71,15 @@ When building via ExpressLRS Configurator or via VS Code, note down the UID byte
 <style>
 .bp-input {
   color: #000;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 12px 20px;
 }
 </style>
 
-Binding Phrase
+Binding Phrase:
+
 <div class="bp-wrapper">
   <input class="md-input bp-input" type="text" placeholder="expresslrs" />
 </div>
@@ -115,12 +122,12 @@ Where `[your index]` corresponds to the following:
 - 150Hz = 2
 - 50Hz = 3
 
-## Thanks are in order
+## Acknowledgements
 
 The SPI ExpressLRS implementation would not have been possible without the work and huge efforts from the following developers:
 
-[@phobos-](https://github.com/phobos-)
-[@hydra](https://github.com/hydra)
-[@klutvott123](https://github.com/klutvott123)
-[@SteveCEvans](https://github.com/SteveCEvans)
-[@ctzsnooze](https://github.com/ctzsnooze)
+- [Paweł Stefański](https://github.com/phobos-)
+- [Dominic Clifton](https://github.com/hydra)
+- [Hans Christian Olaussen](https://github.com/klutvott123)
+- [Steve Evans](https://github.com/SteveCEvans)
+- [Ctzsnooze](https://github.com/ctzsnooze)

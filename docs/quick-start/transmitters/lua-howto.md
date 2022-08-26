@@ -29,7 +29,7 @@ If parameters do show up, but the Bad/Good section on the right side of the head
 
 The `master   942c40` from the photo above is the git branch and commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). On the first photo above, `master` means the module is flashed with the `Master Branch` with the git commit `942c40`. If you're on a Released version or a Release Candidate, this will read something like `3.0` or `3.0-RC1` plus the commit hash of the release.
 
-!!! note ""
+!!! note "Note"
     Colors may differ from Handset to Handset, depending on the current theme in use.
 
 ## Understanding and Using the Lua Script
@@ -81,7 +81,7 @@ These are shown as `Packet Rate` and `Telem Ratio` in the lua script, which allo
 	The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.
 
 !!! warning "WARNING"
-	NEVER change the packet rate while flying as this FORCES A DISCONNECT between the TX and RX. 
+	Never change the packet rate while flying as this FORCES A DISCONNECT between the TX and RX. 
 
 * `Telem Ratio` sets the telemetry ratio or how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data.
 	- :new: v3.0 comes with `Std` and `Race` options. `Std` changes ratio depending on the Packet Rate, and `Race` is the same as Std, but will disable telemetry and sync while Armed.
