@@ -101,10 +101,10 @@ The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 20
 
 To finish the telemetry setup open the telemetry page on your transmitter and select "Discover new sensors" and wait for the list to fill. 
 
-!!! hint "Asterisk Sign Indication"
+!!! hint "* Indication"
     Notice, that there is a * sign for each row. This star indicates that this telemetry sensor was just updated.  
 
-!!! hint "Square Brackets Indication"
+!!! hint "[ ] Indication"
     If you see a row that does not change, and the name of the row is in square brackets it means that this sensor was not updated for some time.
 
 The first values (including RSSI and link quality) should always be updated (flashing stars). If this does not happen multiple times per second the transmitter will issue a "telemetry warning". To prevent this warning use the setting TLM_REPORT_INTERVAL_MS.

@@ -282,9 +282,4 @@ This is an ESP-based receivers and updating via WiFi is supported.
 
 Connect your FC to USB and configure your FC firmware as shown on the [next page].
 
-<hr />
-
-!!! tip "Hint!"
-    KISS FCs may label its UARTs differently. You might have to wire up the Rx pin into an RX pad, and the Tx pin into a TX pad. Always check your FC wiring guide/manual.
-
 [next page]: configuring-fc.md
