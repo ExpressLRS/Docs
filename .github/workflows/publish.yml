@@ -42,6 +42,7 @@ jobs:
       - name: Deploy release version       
         run: |
           mike deploy --config-file mkdocs-insiders.yml 3.0 v3
+          mike set-default v3
           
       - name: Push changes to server
         run: |
