@@ -48,8 +48,7 @@ Put the receiver into bind mode using any of these procedures:
 
 One the SPI receiver is in Bind Mode (indicated by two immediate blinks followed by a short pause), execute the [ExpressLRS lua script](../quick-start/transmitters/lua-howto.md) in your handset and press the `Bind` option. The RX and TX should be now bound (indicated by a SOLID LED on the Flight Controller).
 
-!!! info "NOTE"
-    RX should be bound before TX.
+**Please mind the order, RX first, TX second.**
 
 Video Tutorial (thanks to @JyeSmith):
 
@@ -67,16 +66,6 @@ UID bytes are entered into the Betaflight CLI for binding. Please [look below](#
 ![UID String](../assets/images/UIDsource.png)
 
 #### UID Byte Generator
-
-<style>
-.bp-input {
-  color: #000;
-  width: 100%;
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding: 12px 20px;
-}
-</style>
 
 Binding Phrase:
 
