@@ -4,7 +4,7 @@ template: main.html
 
 ![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
 
-## Words with explanations
+## Technical words with explanations
 
 Below you can find a list of terms you might not be sure about, as well as some common abbreviations:
 
