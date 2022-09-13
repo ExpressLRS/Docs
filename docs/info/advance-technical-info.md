@@ -4,7 +4,6 @@ template: main.html
 
 ![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
 
-# Advance Technical Information
 This page explain the more technical side for debugging things yourself.
 
 ## LUA Status
