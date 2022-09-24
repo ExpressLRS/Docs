@@ -59,7 +59,7 @@ With EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off) as this i
 
     If your Radio has an Internal ExpressLRS Module, and you want to use it instead of an external module, then set External RF Module to **OFF**, and then set the Internal RF Module to **CRSF** Protocol.
 
-ExpressLRS uses the CRSF serial protocol to communicate between the transmitter and the TX module. To set this up, enter into your model settings, and on the "Model Setup" tab, enable your "External RF" and select "CRSF" as the protocol:
+ExpressLRS uses the CRSF serial protocol to communicate between the transmitter and the TX module. To set this up, enter into your model settings, and on the **Model Setup** tab, enable your **External RF** and select **CRSF** as the protocol:
 
 <figure markdown>
 ![ExternalRF BW](../../assets/images/txprep-bw-externalRF.jpg)

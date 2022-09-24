@@ -1,6 +1,6 @@
-FROM squidfunk/mkdocs-material:8.3.2
+FROM squidfunk/mkdocs-material:8.1.9
 RUN apk add build-base
-RUN pip install "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0"
+RUN pip install mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike "jinja2==3.0.3"
 
 # Set working directory
 WORKDIR /docs

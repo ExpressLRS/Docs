@@ -9,9 +9,13 @@ description: Configure your Flight Controller with the help of this guide.
 
 Once you've [wired up](./wiring-up.md) your Receiver to your Flight Controller, you need to setup the UART for Serial RX. In the example below, the Receiver is wired to UART1 (Tx1 and Rx1 pads), and so the Serial RX column should be enabled on UART1 in the Ports Tab.
 
+<figure markdown>
 ![Ports Tab](../../assets/images/PortsTab.png)
+</figure>
 
+<figure markdown>
 ![INAV Ports](../../assets/images/FC-portsconfig-INAV.png)
+</figure>
 
 ## Protocol
 
@@ -20,11 +24,17 @@ Similar to your OpenTX/EdgeTX Radio, ExpressLRS will be using the CRSF protocol 
 !!! Note
     Betaflight 4.3.0 has moved the Receiver configuration into the Receiver Tab.
 
+<figure markdown>
 ![Conf Tab](../../assets/images/ConfigurationTab.png)
+</figure>
 
+<figure markdown>
 ![INAV Config](../../assets/images/FC-config-INAV.png)
+</figure>
 
+<figure markdown>
 ![INAV Config](../../assets/images/FC-rxconfig-INAV.png)
+</figure>
 
 ## Software Inversion and Duplex Modes
 
@@ -37,4 +47,4 @@ The CRSF Protocol requires a full UART pair, uninverted and in full-duplex mode.
 !!! important
     Close your Flight Controller Configurator once you've set it up for ExpressLRS. Keeping it open could prevent the next steps from completing properly, particularly flashing via Passthrough. You must also unplug the FC from USB before proceeding to the next steps to refresh the connection.
 
-**Use the Navigation Menu to proceed to the Flashing Guides (under the section `Flashing Receivers`).**
+**Use the Navigation Menu to proceed to the Flashing Guides under the section `Flashing Receivers`.**
