@@ -108,3 +108,11 @@
 .admonition {
   font-size: 0.75rem!important; /* default's 0.64rem */
 }
+
+.bp-input {
+  color: #000;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+}
