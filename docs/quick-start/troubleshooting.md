@@ -11,20 +11,20 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
 ??? Note "My RX and TX are bound, but FC is not responding to inputs, and I can only see 10 Telemetry sensors"
     Check whether you have wired the receiver correctly and that Rx and Tx wires aren't swapped.
-
-    Also check that you have the correct SerialRX configuration. You might want to revisit the [FC Preparation](receivers/configuring-fc.md#serial-rx-setup) page for the Flight Controller setup.
-
-    Also make sure that the UART where you connected the receiver doesn't have inversion and it's in full duplex mode. You can also try a different UART.
+    
+    Also, check that you have the correct SerialRX configuration. You might want to revisit the [FC Preparation](receivers/configuring-fc.md#serial-rx-setup) page for the Flight Controller setup.
+    
+    Also, make sure that the UART where you connected the receiver doesn't have inversion and it's in full duplex mode. You can also try a different UART.
 
 ### <span class="custom-heading" data-id="2">My RX and TX are bound, and I'm getting more than 10 Telemetry sensors on my Radio, but I'm not getting stick inputs</span>
 
 ??? Note "My RX and TX are bound, and I'm getting more than 10 Telemetry sensors on my Radio, but I'm not getting stick inputs"
-    This is due to a [model mismatch](../software/model-config-match.md) between receiver and tx module. The LED on the receiver will have 3 short blinks then a 1s pause indicating the mismatch.
-
-    To "fix" this, you might want to turn On Model Matching. Please see [Model Matching](../software/model-config-match.md) for more Note.
-
-    Another thing to check is whether you have enabled **RCVR_INVERT_TX** option for your receiver firmware. This option is intended for FCs that doesn't have any other UARTs available (e.g. AIOs) other than an SBUS pad. See this section for more details: [Output Inverting](firmware-options.md#output-inverting).
-
+    This is due to a [model mismatch](../software/model-config-match.md) between the receiver and the tx module. The LED on the receiver will have 3 short blinks and then a 1s pause indicating the mismatch.
+    
+    To "fix" this, you might want to turn On Model Matching. Please see [Model Matching](../software/model-config-match.md) for more notes.
+    
+    Another thing to check is whether you have enabled **RCVR_INVERT_TX** option for your receiver firmware. This option is intended for FCs that don't have any other UARTs available (e.g. AIOs) other than an SBUS pad. See this section for more details: [Output Inverting](firmware-options.md#output-inverting).
+    
     For the R9mm/mini receivers, make sure you didn't enable **USE_R9MM_R9MINI_SBUS** in your firmware option. See [Output Inverting](firmware-options.md#output-inverting) for what this option do.
 
 ### <span class="custom-heading" data-id="3">My RX and TX are bound, and I'm getting stick inputs, but I can only get 10 Telemetry sensors</span>
@@ -32,20 +32,20 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ??? Note "My RX and TX are bound, and I'm getting stick inputs, but I can only get 10 Telemetry sensors"
     Check if you have Telemetry Feature enabled in your FC Configuration.
 
-    Also verify the Rx pad from receiver is connected properly to a Tx pad in the FC in the same UART as the Tx wire from receiver.
+    Also, verify the Rx pad from the receiver is connected properly to a Tx pad in the FC in the same UART as the Tx wire from the receiver.
 
-    Also make sure you have deleted and rediscovered the sensors. It's good to increase the TLM Ratio so the acquisition of the sensors will be faster.
+    Also, make sure you have deleted and rediscovered the sensors. It's good to increase the TLM Ratio so the acquisition of the sensors will be faster.
 
-    This could also mean you'll have to update your FC Firmware to a more recent version that supports at least CRSFv2 protocol.
+    This could also mean you'll have to update your FC Firmware to a more recent version that supports at least the CRSFv2 protocol.
 
-### <span class="custom-heading" data-id="4">I think my Receiver and Transmitter are bound, as the LED on the Receiver is solid. But I do not have stick inputs or RSSI on radio.</span>
+### <span class="custom-heading" data-id="4">I think my Receiver and Transmitter are bound, as the LED on the Receiver is solid. But I do not have stick inputs or RSSI on the radio.</span>
 
-??? Note "I think my Receiver and Transmitter are bound, as the LED on the Receiver is solid. But I do not have stick inputs or RSSI on radio."
+??? Note "I think my Receiver and Transmitter are bound, as the LED on the Receiver is solid. But I do not have stick inputs or RSSI on the radio."
     You are not bound. Your Receiver is probably in bootloader mode.
 
     * Make sure you have unbridged the boot pads if you flashed it via passthrough.
 
-    * Turn off your Radio and if the LED is still solid, but boot pads aren't bridged, the UART where the receiver is on is putting it into bootloader mode unintentionally. This is primarily caused by pull-down resistor on the RX pad to aid with SBUS line inversion. To verify it is the case with the UART, disconnect the Rx and Tx wires from the FC UART, and it should start blinking slow then after the set interval (20s - 30s by default), it will blink fast indicating it's on WiFi Mode. To "fix" the issue, you have two options:
+    * Turn off your Radio and if the LED is still solid, but boot pads aren't bridged, the UART where the receiver is on is putting it into bootloader mode unintentionally. This is primarily caused by pull-down resistor on the RX pad to aid with SBUS line inversion. To verify it is the case with the UART, disconnect the Rx and Tx wires from the FC UART, and it should start blinking slowly then after the set interval (20s - 30s by default), it will blink fast indicating it's on WiFi Mode. To "fix" the issue, you have two options:
 
         - Move the receiver into another free UART.
         - If there's no other UART, wire up a resistor with a value between 300 Ohm to 1k Ohm between a 3.3v pad and the FC's RX pad (where the TX from the receiver connects to).
@@ -67,30 +67,37 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="7">I am getting Telemetry Lost/Recovered and is getting annoying</span>
 
 ??? Note "I am getting Telemetry Lost/Recovered and is getting annoying"
-    There's a handful of reasons why this is occuring, and if you have newer handset/radio, it shouldn't happen at all unless you're flying very far away using a receiver without an amplifier for its Telemetry signal (e.g. the EP receivers).
+    There's a handful of reasons why this is occurring, and if you have newer handset/radio, it shouldn't happen at all unless you're flying very far away using a receiver without an amplifier for its Telemetry signal (e.g. the EP receivers).
 
     - You're on an X9D(+) or a QX7 with subpar inverter chips. Check [this page](../hardware/x9d-troubleshooting.md) on how to remedy it.
     - You're on an early version of the Happymodel Slim Pro. Check [this FB post](https://www.facebook.com/groups/636441730280366/permalink/835603713697499/) for the fix from manufacturer.
     - You're using a 2018 ACCST R9M, while also using a Radio with 400k or higher Baud rate. You will either have to lower the Baud rate on your radio to 115200 (QX7) or do the Resistor mod on the module as described [here](../hardware/inverter-mod.md).
-    - Your module is getting loose inside its enclosure, most common on the first batches of the Happymodel ES24TX (white 3D-Printed enclosure; although the black one is only marginally better having 4 screw points instead of 2). You either have to print your own enclosure (search Thingiverse for "expresslrs") or find a way to tighten or snug the enclosure with the module board.
-    - Check the S.Port pin and connection in your module and module bay, and make sure they have a solid physical connection. On the DIY modules, particularly the full size module, the round hole/via for the Molex connector's flat pin might not be getting good connection due to cold solder joint, or insufficient solder.
+    - Your module is getting loose inside its enclosure, most common on the first batches of the Happymodel ES24TX (white 3D-Printed enclosure; although the black one is only marginally better having 4 screw points instead of 2). You either have to print your enclosure (search Thingiverse for "expresslrs") or find a way to tighten or snug the enclosure with the module board.
+    - Check the S.Port pin and connection in your module and module bay, and make sure they have a solid physical connection. On the DIY modules, particularly the full size module, the round hole/via for the Molex connector's flat pin might not be getting a good connection due to cold solder joint, or insufficient solder.
 
 
-### <span class="custom-heading" data-id="8">I need to plug my FC a second/third time before I get a bind. LED on receiver is dim when I power it up</span>
+### <span class="custom-heading" data-id="8">I need to plug my FC a second/third time before I get a bind. The LED on the receiver is dim when I power it up</span>
 
-??? Note "I need to plug my FC a second/third time before I get a bind. LED on receiver is dim when I power it up"
-    Update to the latest firmware as soon as you can. A batch of HM receivers have reached the market with Voltage regulators (marked SDG) that were insufficient and wasn't able to handle the higher current draw during boot up. To learn more of this issue and the fix, please check out this [PR](https://github.com/ExpressLRS/ExpressLRS/pull/928).
+??? Note "I need to plug my FC a second/third time before I get a bind. The LED on the receiver is dim when I power it up"
+    Update to the latest firmware as soon as you can. A batch of HM receivers have reached the market with Voltage regulators (marked SDG) that were insufficient and weren't able to handle the higher current draw during boot up. To learn more about this issue and the fix, please check out this [PR](https://github.com/ExpressLRS/ExpressLRS/pull/928).
 
-### <span class="custom-heading" data-id="9">ExpressLRS Lua Script is stuck at `Loading...`</span>
+### <span class="custom-heading" data-id="9">My Blackbox Log has stepping on the RC trace</span>
+
+??? Note "My Blackbox Log has stepping on the RC trace"
+    Make sure you have disabled ADC Filter in your Radio Hardware settings.
+
+## Troubleshooting the Lua Script
+
+### <span class="custom-heading" data-id="10">ExpressLRS Lua Script is stuck at `Loading...`</span>
 
 ??? Note "ExpressLRS Lua Script is stuck at `Loading...`"
     Go back to the [Radio Setup Guide](transmitters/tx-prep.md) and make sure your radio is prepped up for ExpressLRS.
 
-    Also make sure your module has been flashed with v3.0 firmware. V3 Lua for V3.0-flashed modules, V2 Lua for v2.x-flashed modules (including some modules fresh from factory).
+    Also, make sure your module has been flashed with v3.0 firmware. V3 Lua for V3.0-flashed modules, V2 Lua for v2.x-flashed modules (including some modules fresh from the factory).
 
     For newly-acquired ExpressLRS modules, flashing via USB is the recommended update method.
 
-### <span class="custom-heading" data-id="10">Betaflight Lua is stuck at `Initializing`</span>
+### <span class="custom-heading" data-id="11">Betaflight Lua is stuck at `Initializing`</span>
 
 ??? Note "Betaflight Lua is stuck at `Initializing`"
     Increase the TLM Ratio via the ExpressLRS Lua script to values like 1:4 or even 1:2 and retry the Betaflight Lua script.
@@ -99,72 +106,134 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
     See [MSP Section](pre-1stflight.md#msp) for more info.
 
-### <span class="custom-heading" data-id="11">My Blackbox Log has stepping on the RC trace</span>
+### <span class="custom-heading" data-id="12">I cannot change the Switch Mode!</span>
 
-??? Note "My Blackbox Log has stepping on the RC trace"
-    Make sure you have disabled ADC Filter in your Radio Hardware settings.
+??? Note "I cannot change the Switch Mode!"
+    Changing switch modes requires that the TX module and Receiver aren't connected to each other (no C in the top right corner of the Lua Script). Power off the receiver first, change the Switch Mode from the Lua script, then power up the receiver. The Switch Mode should then apply.
+
+### <span class="custom-heading" data-id="13">I cannot change my Packet Rate to F1000!</span>
+
+??? Note "I cannot change my Packet Rate to F1000!"
+    F1000 requires higher than 400K baud rates. First update your baud rate setting either in the Model Setup menu or in the System Menu -> Hardware, reboot your radio to ensure that the baud rate setting got applied and then change the Packet Rate.
+
+    Do note that not every handset is capable of higher than 400K baud rates. See the [Radio Setup Guide](tx-prep.md) for the details.
+
+### <span class="custom-heading" data-id="14">I cannot change to Full Resolution Rates!</span>
+
+??? Note "I cannot change to Full Resolution Rates!"
+    As Full Resolution Rates call for an entirely different Switch Modes, you need to first disconnect the Receiver and the TX module from each other, like how you would change Switch Modes. Power down the receiver, change the Packet Rate to the Full Resolution modes, select your Switch Mode scheme and then power up the receiver or the aircraft.
+
+### <span class="custom-heading" data-id="15">VTX Admin is not working but I can change VTX channels via OSD Menu.</span>
+
+??? Note "VTX Admin is not working but I can change VTX channels via OSD Menu."
+    As VTX Admin depends on MSP which then depends on Telemetry, ensure that you have Telemetry enabled on your FC Configuration and that you are getting more than 10 Telemetry Sensors on your Radio (Model Setup -> Telemetry page; Delete and Discover New sensors to refresh the sensor list.)
+    Also, make sure Telem Ratio is not Off.
+
+### <span class="custom-heading" data-id="16">There is no C on the top right corner, and I'm not getting Telemetry in my radio!</span>
+
+??? Note "There is no C on the top right corner, and I'm not getting Telemetry in my radio!"
+
+    Make sure Telem Ratio is not set to `Off`.
+    Set it to `Std`, or to any other value other than `Off`.
+
+### <span class="custom-heading" data-id="17">On v1.x, I can choose 2W on the Lua, but I cannot do that anymore. What gives?</span>
+
+??? Note "On v1.x, I can choose 2W on the Lua, but I cannot do that anymore. What gives?"
+    This means your module cannot go that high or that low. The power levels you can select on the new Lua script are based on the power levels your module supports.
+    This also applies to other options like `Enable Backpack WiFi` or `BLE Joystick`. If your module doesn't support any of these features, it won't show up on the Lua Script.
 
 ## Flashing/Updating
 
-!!! Tip
-    Individual hardware Flashing and Updating guide can be found by using the menu on the left sidebar.
+!!! Attention
+    Individual hardware Flashing and Updating guide can be found by using the menu on the left sidebar. You can also use the Search Bar on the top of the page to get to your device's Flashing Guide faster.
 
-    You can also use the Search Bar on top of the page to get to your device's Flashing Guide faster.
-
-### <span class="custom-heading" data-id="12">Invalid serial RX configuration detected</span>
+### <span class="custom-heading" data-id="18">Invalid serial RX configuration detected</span>
 
 ??? Note "Invalid serial RX configuration detected"
     This is often caused by incorrect Serial RX protocol (should be CRSF), or `serialrx_inverted = on` (should be off) or `serialrx_halfduplex=on` (should be off). The **Passthrough Init** section of the log will show you which setting should be corrected. See the [FC Preparation Guide](receivers/configuring-fc.md) for the correct settings.
 
-### <span class="custom-heading" data-id="13">RX Serial not found !!</span>
+### <span class="custom-heading" data-id="19">RX Serial not found !!</span>
 
 ??? Note "RX Serial not found !!"
     Make sure your Serial RX on the Ports Tab of your FC Firmware configurator is set to the correct UART. See the [FC Preparation Guide](receivers/configuring-fc.md) for the correct settings.
 
-### <span class="custom-heading" data-id="14">No CLI Available</span>
+### <span class="custom-heading" data-id="20">No CLI Available</span>
 
 ??? Note "No CLI Available"
     This message can be seen on the ExpressLRS Configurator Log while using the Passthrough method and can be caused by a busy Com Port. Make sure any other Configurator Apps were closed and unplug-replug your FC to USB. You might also want to use a different USB port or cable.
 
     This could also mean that the FC cannot be detected by the script. This could also due to the FC being in DFU mode, which for passthrough flashing, is not needed.
 
-    There are also Apps that are running in the background that could cause this. One of which is Cura Slicer. If there are such apps, close them first before attempting another Build and Flash. 
+    Some apps are running in the background that could cause this. One of which is Cura Slicer. If there are such apps, close them first before attempting another Build and Flash. 
 
     Unplug-replug the FC's USB before another attempt.
 
-### <span class="custom-heading" data-id="15">10 Retries but no Success</span>
+### <span class="custom-heading" data-id="21">10 Retries but no Success</span>
 
 ??? Note "10 Retries but no Success"
     This can be due to several things:
 
-    - Incorrect bootloader is flashed or it's not flashed properly. This mainly happen on the R9 receivers. Go checkout [Bootloader Flashing Guide](receivers/r9.md#bootloaders).
-    - Incorrect wiring. Make sure that Rx in the Receiver is connected to a Tx pad in the FC and the Tx in the Receiver is connected to an Rx pad in the FC. Also make sure receiver is getting enough voltage (min 4v5) from the FC or voltage supply. Wiring guide is [here](receivers/wiring-up.md)
-    - Receiver is OFF. Check whether the LED on the receiver is lit, indicating it's powered and in working state.
-    - The UART has hardware inversion. Make sure that the UART you've connected the receiver to is not an SBUS UART that's usually have hardware inversion (most common among F4 Flight Controllers). There are Flight controllers that require you bridge a pair of pads to enable or disable the Hardware inversion of an Rx pad. You can simply try a different UART.
-    - The LED on the receiver is SOLID, while radio is off, could only mean that the Rx pad in the FC is being pulled LOW, putting the ESP-based receiver (EPs, ES900Rx, etc.) into Bootloader mode unintentionally, which will hinder normal passthrough operations. Feel free to try a different UART.
+    - Incorrect bootloader is flashed or it's not flashed properly. This mainly happens on the R9 receivers. Go checkout [Bootloader Flashing Guide](receivers/r9.md#bootloaders).
+    - Incorrect wiring. Make sure that Rx in the Receiver is connected to a Tx pad in the FC and the Tx in the Receiver is connected to an Rx pad in the FC. Also, make sure the receiver is getting enough voltage (min 4v5) from the FC or voltage supply. Wiring guide is [here](receivers/wiring-up.md)
+    - Receiver is OFF. Check whether the LED on the receiver is lit, indicating it's powered and in a working state.
+    - The UART has hardware inversion. Make sure that the UART you've connected the receiver to is not an SBUS UART that usually has hardware inversion (most common among F4 Flight Controllers). There are Flight controllers that require you to bridge a pair of pads to enable or disable the Hardware inversion of an Rx pad. You can simply try a different UART.
+    - The LED on the receiver is SOLID, while the radio is off, which could only mean that the Rx pad in the FC is being pulled LOW, putting the ESP-based receiver (EPs, ES900Rx, etc.) into Bootloader mode unintentionally, which will hinder normal passthrough operations. Feel free to try a different UART.
 
-### <span class="custom-heading" data-id="16">Failed to connect to ESP8266: Timed out waiting for packet header.</span>
+### <span class="custom-heading" data-id="22">Failed to connect to ESP8266: Timed out waiting for packet header.</span>
 
 ??? Note "Failed to connect to ESP8266: Timed out waiting for packet header."
     This can be due to several things:
 
-    - Receiver is wired incorrectly. Please check if the Rx and Tx wires isn't swapped and connected Rx to Rx and Tx to Tx on the FC. Revisit the Receiver Wiring Guide [here](receivers/wiring-up.md).
+    - Receiver is wired incorrectly. Please check if the Rx and Tx wires aren't swapped and connected Rx to Rx and Tx to Tx on the FC. Revisit the Receiver Wiring Guide [here](receivers/wiring-up.md).
     - The receiver's "boot" pads aren't bridged (or the button wasn't pressed and held during power up) for passthrough flashing. This is required for Passthrough flashing if the receiver is fresh from the packet and has a firmware version before 1.0.0-RC6.
-    - The receiver uart is putting it in Bootloader mode and is interfering with passthrough flashing. Move it into another UART.
+    - The receiver UART is putting it in Bootloader mode and is interfering with passthrough flashing. Move it into another UART.
 
-    You can also attempt the update the via UART using an FTDI Adapter (or a USB to UART Bridge).
+    You can also attempt the update via UART using an FTDI Adapter (or a USB to UART Bridge).
 
     Please see the Flashing guide for your particular receiver using the Sidebar on the Left.
 
-### <span class="custom-heading" data-id="17">I updated via WiFi but now receiver won't work and has SOLID LED</span>
+### <span class="custom-heading" data-id="23">I updated via WiFi but now the receiver won't work and has SOLID LED</span>
 
-??? Note "I updated via WiFi but now receiver won't work and has SOLID LED"
-    This is a sign that the Wifi flashing didn't go through properly due to premature power cycle. To fix this, you will have to bridge the boot pads (see [here](receivers/wiring-up.md)) and reflash using the Passthrough method (**Telemetry** option on Betaflight/iNav set to `OFF`. This is important!) or using an FTDI adapter.
+??? Note "I updated via WiFi but now the receiver won't work and has SOLID LED"
+    This is a sign that the Wifi flashing didn't go through properly due to a premature power cycle. To fix this, you will have to bridge the boot pads (see [here](receivers/wiring-up.md)) and reflash using the Passthrough method (**Telemetry** option on Betaflight/iNav set to `OFF`. This is important!) or using an FTDI adapter.
 
-    This video shows the steps albeit using vscode development environment but the ExpressLRS Configurator will work just fine. 
+    This video shows the steps albeit using a VSCode development environment but the ExpressLRS Configurator will work just fine. 
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/SShMaLnqZr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    To ensure that the WiFi flashing finished properly, **wait until the LED on the receiver blinks slow** (indicating it's looking for a TX bind) before pulling off power.
+    To ensure that the WiFi flashing is finished properly, **wait until the LED on the receiver blinks slowly** (indicating it's looking for a TX bind) before pulling off power.
+
+### <span class="custom-heading" data-id="24">Unable to connect to the target device</span>
+
+??? Note "Unable to connect to the target device"
+    If the flash fails with "Unable to connect to target device" (not "No STLINK found!") it is likely your STLINK clone does not have the RST line connected, but you can trigger the needed reset manually with a little more effort. The reason this is needed is that SIYI has disabled "Software Reset" to protect you from stealing their firmware binary.
+
+    * Verify your wiring
+    * Make sure the TX board is powering up (the LEDs light up)
+    * Use the [STM32CubeProgrammer](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.html) or [STLINK GUI](https://www.st.com/en/development-tools/stsw-link004.html) to connect see next step.
+    * Before you press CONNECT. Short the RST line from the TX to GND. Press CONNECT and quickly remove the wire from the GND pad.
+    * If it works, the GUI will tell you that the board is readout protected and must be disabled. Do this.
+
+### <span class="custom-heading" data-id="25">Flash loader run error</span>
+
+??? Note "Flash loader run error"
+    Before both the TX and RX can be flashed using the `st-flash` utility used by PlatformIO on Linux, the STM32 chip must have its "Readout Protection" (RDP) disabled, which was set by SIYI at the factory to make our lives more difficult. The windows flashing utility usually automatically disables this, but the Linux utility does not. If you do not disable readout protection you'll get this cryptic error when flashing:
+    ```
+    2021-07-06T21:08:42 ERROR flash_loader.c: flash loader run error
+    2021-07-06T21:08:42 ERROR common.c: stlink_flash_loader_run(0x8000000) failed! == -1
+    stlink_fwrite_flash() == -1
+    ```
+    The only way I know of to disable the RDP is to use the STM32CubeProgrammer for Linux, or use a Windows VM / machine to use the ST-LINK.exe GUI / CLI to clear the RDP.
+
+    <figure markdown>
+    ![STM32CubeProgrammerSteps](https://cdn.discordapp.com/attachments/798006228450017290/862145434311196682/unknown.png)
+    </figure>
+
+    * Click the "Connect" button to connect to the ST-LINK device. You'll probably get a popup error **Error: Data read failed**. That's normal. If it says it can't connect or no device is present, you'll have to figure that out first.
+    * Click the "OB" button on the left.
+    * Expand the "Read Out Protection" section.
+    * Select RDP = "AA"
+    * Click the "Apply" button at the bottom.
+    * You should get a message indicating the "Option bytes successfully programmed". If so you're good to go. Click "Disconnect" at the top and flash from PlatformIO now. You can also flash directly from this GUI if you have the binaries and know their target addresses.
 
 <script src="../../assets/javascripts/admonition-enhancement.js"></script>
