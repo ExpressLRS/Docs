@@ -80,7 +80,7 @@ For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro
 </figure>
 
 !!! Note
-    The iFlight Commando 8 is not using an internal RF module for its ExpressLRS units, unlike the RadioMaster Zorro, RadioMaster TX16S MK2, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro or the BetaFPV Lite Radio 3 Pro.
+    The iFlight Commando 8 is NOT using an internal RF module for its ExpressLRS units, unlike the RadioMaster Zorro, RadioMaster TX16S MK2, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro or the BetaFPV Lite Radio 3 Pro.
 
     Set the Internal RF module to Off, and set the External RF module to CRSF protocol, as any External RF module requires.
 

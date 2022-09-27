@@ -203,37 +203,4 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
     To ensure that the WiFi flashing is finished properly, **wait until the LED on the receiver blinks slowly** (indicating it's looking for a TX bind) before pulling off power.
 
-### <span class="custom-heading" data-id="24">Unable to connect to the target device</span>
-
-??? Note "Unable to connect to the target device"
-    If the flash fails with "Unable to connect to target device" (not "No STLINK found!") it is likely your STLINK clone does not have the RST line connected, but you can trigger the needed reset manually with a little more effort. The reason this is needed is that SIYI has disabled "Software Reset" to protect you from stealing their firmware binary.
-
-    * Verify your wiring
-    * Make sure the TX board is powering up (the LEDs light up)
-    * Use the [STM32CubeProgrammer](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.html) or [STLINK GUI](https://www.st.com/en/development-tools/stsw-link004.html) to connect see next step.
-    * Before you press CONNECT. Short the RST line from the TX to GND. Press CONNECT and quickly remove the wire from the GND pad.
-    * If it works, the GUI will tell you that the board is readout protected and must be disabled. Do this.
-
-### <span class="custom-heading" data-id="25">Flash loader run error</span>
-
-??? Note "Flash loader run error"
-    Before both the TX and RX can be flashed using the `st-flash` utility used by PlatformIO on Linux, the STM32 chip must have its "Readout Protection" (RDP) disabled, which was set by SIYI at the factory to make our lives more difficult. The windows flashing utility usually automatically disables this, but the Linux utility does not. If you do not disable readout protection you'll get this cryptic error when flashing:
-    ```
-    2021-07-06T21:08:42 ERROR flash_loader.c: flash loader run error
-    2021-07-06T21:08:42 ERROR common.c: stlink_flash_loader_run(0x8000000) failed! == -1
-    stlink_fwrite_flash() == -1
-    ```
-    The only way I know of to disable the RDP is to use the STM32CubeProgrammer for Linux, or use a Windows VM / machine to use the ST-LINK.exe GUI / CLI to clear the RDP.
-
-    <figure markdown>
-    ![STM32CubeProgrammerSteps](https://cdn.discordapp.com/attachments/798006228450017290/862145434311196682/unknown.png)
-    </figure>
-
-    * Click the "Connect" button to connect to the ST-LINK device. You'll probably get a popup error **Error: Data read failed**. That's normal. If it says it can't connect or no device is present, you'll have to figure that out first.
-    * Click the "OB" button on the left.
-    * Expand the "Read Out Protection" section.
-    * Select RDP = "AA"
-    * Click the "Apply" button at the bottom.
-    * You should get a message indicating the "Option bytes successfully programmed". If so you're good to go. Click "Disconnect" at the top and flash from PlatformIO now. You can also flash directly from this GUI if you have the binaries and know their target addresses.
-
 <script src="../../assets/javascripts/admonition-enhancement.js"></script>

@@ -93,7 +93,7 @@ These are shown as `Packet Rate` and `Telem Ratio` in the Lua script, which allo
 	The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.
 
 !!! warning "WARNING"
-	Never change the packet rate while flying as this forces a disconnect between the TX and RX. 
+	Never change the packet rate while flying as this **FORCES A DISCONNECT** between the TX and RX. 
 
 * `Telem Ratio` sets the telemetry ratio or how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data.
 	- :new: v3.0 comes with `Std` and `Race` options. `Std` changes ratio depending on the Packet Rate, and `Race` is the same as Std, but will disable telemetry and sync while Armed.
@@ -206,3 +206,52 @@ The Other Devices folder, if present, allows changing the configuration of other
 * For freestyle and general everyday flying, you may use the `250Hz` modes or faster, with the `Std` Telemetry mode. Switch Mode doesn't matter as much here. Select what's appropriate for your Flight Mode settings.
 
 * For fixed wings, we recommend using `100Hz Full Res`, together with either `Std` or your choice of Telemetry Ratio. Switch Mode will depend greatly on how many full resolution channels you intend to use.
+
+## Troubleshooting the Lua Script
+
+### <span class="custom-heading" data-id="1">ExpressLRS Lua Script is stuck at `Loading...`</span>
+
+??? Note "ExpressLRS Lua Script is stuck at `Loading...`"
+    Go back to the [Radio Setup Guide](transmitters/tx-prep.md) and make sure your radio is prepped up for ExpressLRS.
+
+    Also, make sure your module has been flashed with v3.0 firmware. V3 Lua for V3.0-flashed modules, V2 Lua for v2.x-flashed modules (including some modules fresh from the factory).
+
+    For newly-acquired ExpressLRS modules, flashing via USB is the recommended update method.
+
+### <span class="custom-heading" data-id="2">I cannot change the Switch Mode!</span>
+
+??? Note "I cannot change the Switch Mode!"
+    Changing switch modes requires that the TX module and Receiver aren't connected to each other (no C in the top right corner of the Lua Script). Power off the receiver first, change the Switch Mode from the Lua script, then power up the receiver. The Switch Mode should then apply.
+
+### <span class="custom-heading" data-id="3">I cannot change my Packet Rate to F1000!</span>
+
+??? Note "I cannot change my Packet Rate to F1000!"
+    F1000 requires higher than 400K baud rates. First update your baud rate setting either in the Model Setup menu or in the System Menu -> Hardware, reboot your radio to ensure that the baud rate setting got applied and then change the Packet Rate.
+
+    Do note that not every handset is capable of higher than 400K baud rates. See the [Radio Setup Guide](tx-prep.md) for the details.
+
+### <span class="custom-heading" data-id="4">I cannot change to Full Resolution Rates!</span>
+
+??? Note "I cannot change to Full Resolution Rates!"
+    As Full Resolution Rates call for an entirely different Switch Modes, you need to first disconnect the Receiver and the TX module from each other, like how you would change Switch Modes. Power down the receiver, change the Packet Rate to the Full Resolution modes, select your Switch Mode scheme and then power up the receiver or the aircraft.
+
+### <span class="custom-heading" data-id="5">VTX Admin is not working but I can change VTX channels via OSD Menu.</span>
+
+??? Note "VTX Admin is not working but I can change VTX channels via OSD Menu."
+    As VTX Admin depends on MSP which then depends on Telemetry, ensure that you have Telemetry enabled on your FC Configuration and that you are getting more than 10 Telemetry Sensors on your Radio (Model Setup -> Telemetry page; Delete and Discover New sensors to refresh the sensor list.)
+    Also, make sure Telem Ratio is not Off.
+
+### <span class="custom-heading" data-id="6">There is no C on the top right corner, and I'm not getting Telemetry in my radio!</span>
+
+??? Note "There is no C on the top right corner, and I'm not getting Telemetry in my radio!"
+
+    Make sure Telem Ratio is not set to `Off`.
+    Set it to `Std`, or any other value other than `Off`.
+
+### <span class="custom-heading" data-id="7">On v1.x, I can choose 2W on the Lua, but I cannot do that anymore. What gives?</span>
+
+??? Note "On v1.x, I can choose 2W on the Lua, but I cannot do that anymore. What gives?"
+    This means your module cannot go that high or that low. The power levels you can select on the new Lua script are based on the power levels your module supports.
+    This also applies to other options like `Enable Backpack WiFi` or `BLE Joystick`. If your module doesn't support any of these features, it won't show up on the Lua Script.
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>
