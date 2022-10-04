@@ -9,11 +9,14 @@ description: The ExpressLRS Backpack opens up new possibilities, like the hands-
 
 A Backpack is an add-on device that facilitates wireless communication between an ExpressLRS module and another device (e.g. a Video Receiver on your goggles) using ESPnow as protocol.
 
+<figure markdown>
 ![Backpack Comms](https://github.com/ExpressLRS/Backpack/raw/master/img/flow-diagram-backpack.jpg)
+<figcaption>Communication between an ExpressLRS module and a Video Receiver<figcaption>
+</figure>
 
 ## Usage Scenario
 
-You are setting up to fly with others and your favorite video channel is already in use. You're asked to use R2 as that's the vacant one. Using the [ExpressLRS lua script](../../quick-start/transmitters/lua-howto.md#vtx-administrator), you change the setting into R2 (this while your aircraft is still unpowered). You power up your goggles equipped with a VRX Backpack. Then plug in your aircraft. Upon establishment of the connection, the VTX and the VRX are automatically set into R2. You're now ready to fly. No fiddling of channels on the OSD or on your goggles.
+You are setting up to fly with others and your favorite video channel is already in use. You're asked to use R2 as that's the vacant one. Using the [ExpressLRS Lua script](../../quick-start/transmitters/lua-howto.md#vtx-administrator), you change the setting into R2 (this while your aircraft is still unpowered). You power up your goggles equipped with a VRX Backpack. Then plug in your aircraft. Upon establishment of the connection, the VTX and the VRX are automatically set into R2. You're now ready to fly. No fiddling with channels on the OSD or your goggles.
 
 ## Okay, I'm sold. What do I need to get this working?
 
@@ -90,19 +93,17 @@ See the tables below for the list of supported devices:
 
 ## I'm Ready to Proceed. What do I do next?
 
-If your TX module is already equipped with a TX backpack (see list above), your next step is to update the firmware of the backpack. Proceed to the [next page](backpack-tx-setup.md) for more details.
+If your TX module is already equipped with a TX backpack (see list above), your next step is to update the firmware of the backpack. Proceed to the [TX Backpack Setup page](backpack-tx-setup.md) for more details.
 
-If you're using a DIY TX module and want to add a backpack into it, proceed to the [Backpack Wiki](https://github.com/ExpressLRS/Backpack/wiki).
+If you're using a DIY TX module and want to add a backpack to it, proceed to the [Backpack Wiki](https://github.com/ExpressLRS/Backpack/wiki).
 
-For the VRX Backpack, you will need to first update the firmware on the ESP device. The firmware will highly depend on which VRX module you will use it on. Proceed to [this page](backpack-vrx-setup.md) for more info.
-
-[TX Backpack Setup](backpack-tx-setup.md){.md-button}      [VRx Backpack Setup](backpack-vrx-setup.md){.md-button}
+For the VRX Backpack, you will need to first update the firmware on the ESP device. The firmware will highly depend on which VRX module you will use it on. Proceed to [VRx Backpack Setup page](backpack-vrx-setup.md) for more info.
 
 ## Backpack Usage
 
 ### LED Status codes
 
-* Solid - Backpack is powered up and ready to receive packets.
+* Solid - The backpack is powered up and ready to receive packets.
 * Fast Continious Blinking - WiFi Mode is active and either the Access Point is ready for connection or the Backpack has connected to your Local WiFi Network (0.2.0; Home Network SSID and Password have been set).
 * Double Blink, Pause - Backpack is in Binding Mode. Using the ExpressLRS Lua Script, press `Bind` and the TX Backpack should bind with the VRx Backpack.
 
@@ -119,7 +120,7 @@ Just like any ExpressLRS device, you can set a **Binding Phrase** for both the T
 Should you choose to bind manually, the procedure is as follows:
 
 1. Make sure you didn't flash the VRx firmware with a Binding Phrase.
-2. Power Cycle the VRx Backpack 3 times every ~30s. This interval gives ample time for your googles and VRx module to power up and down more gracefully. If your VRx Backpack has a button, it can also be used to power-cycle the device by cycling between WiFi Mode and Normal mode 3x (as WiFi mode reboots the device).
+2. Power Cycle the VRx Backpack 3 times every ~30s. This interval gives ample time for your goggles and VRx module to power up and down more gracefully. If your VRx Backpack has a button, it can also be used to power-cycle the device by cycling between WiFi Mode and Normal mode 3x (as WiFi mode reboots the device).
 3. The LED on the Backpack should now blink twice followed by a brief pause, then repeats, indicating it is in Binding Mode.
 4. Using the ExpressLRS Lua script, navigate into the `Bind` option. Press it once and the LED on both Backpacks should blink once and stay SOLID thereafter.
 5. Your Backpacks are now bound and connected and you can now use **VTX Administrator** on the ExpressLRS Lua script to sync your VTX and VRx modules.
