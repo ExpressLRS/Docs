@@ -87,7 +87,7 @@ Please note that they are only a few samples acquired by the devs, which may not
 
 There are a few interesting points in the graph.
 
-1 All three samples from JHEMCU have significantly deviated more than other makers. A TX module at the reference frequency will not bind to `JHEMCU #3` (yellow bars). Also, a TX module with a slight positive frequency deviation will not bind to `JHEMCU #1 and #2` as well.
+1 All three samples from JHEMCU have significantly deviated more than other makers. A TX module at the reference frequency will not bind to `JHEMCU #3 (yellow bars)`. Also, a TX module with a slight positive frequency deviation will not bind to `JHEMCU #1 and #2` as well.
 2 Ambient temperature changes the operating frequency of a module. In the graph, `Jumper Aion RX (blue bars)` and `JHEMCU #3 (yellow bars)` were chilled and heated, and their operating frequencies were changed around +- 50 kHz.
 3 A few makers added extra load capacitors to XO, which lowered their operating frequencies. In this graph, Matek (pink and green bars) and Jumper (blue bars) modules were shipped with the extra load caps. Removing them shifted the frequency to the higher side.
 4 Overall frequency errors tend to shift toward the negative side. This might be caused by using XO designed for 8pF load, while the internal load capacitance of SX1280 is 10 pF.
@@ -101,14 +101,17 @@ Just to note, we've had some mismatching cases as follows:
 
 <figure markdown>
 <img alt="The position of two caps to be removed" src="https://user-images.githubusercontent.com/45789971/148380518-4cf323d7-7741-4081-83c8-5e438a97b62d.png">
+<figcaption>Caps to be removed</figcaption>
 </figure>
 
 <figure markdown>
 ![jumper_aion_caps](https://user-images.githubusercontent.com/12195507/157823663-4f2f8982-0b6d-4626-b4c6-15ba4c24ffed.png)
+<figcaption>Jumper Aion Caps</figcaption>
 </figure>
 
 <figure markdown>
 ![flywoo_caps](https://cdn.discordapp.com/attachments/798006228450017290/1008232318135193611/SimoneFrascarelli.jpg)
+<figcaption>Flywoo Caps</figcaption>
 </figure>
 
 ### How-to-video
