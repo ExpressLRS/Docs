@@ -9,7 +9,7 @@ description: A short guide to control the Crystal Oscillator frequency error wit
 
 ExpressLRS TX and RX modules generate RF signals based on an external clock source, such as a crystal oscillator (XO). For example, an ExpressLRS 2.4GHz module has an SX1280/1281 RF transceiver chip with a 52 MHz XO. Theoretically, XO is desired to be 52 MHz exactly to generate an accurate 2.4GHz RF signal. However, a real-world XO has deviation for various reasons, such as manufacturing error and ambient temperature.
 
-Real-world TX and RX modules deviate from the reference frequency, depending on the quality of XO used and circuit design. Despite that, if the frequency difference is within a certain threshold, they can communicate with each other (`working pairs #1` and #2` in the picture). However, the last malfunctioning TX/RX pair will not communicate. In ELRS 2.4g@500Hz, the threshold is around 190 kHz.
+Real-world TX and RX modules deviate from the reference frequency, depending on the quality of XO used and circuit design. Despite that, if the frequency difference is within a certain threshold, they can communicate with each other (`working pairs #1 and #2` in the picture). However, the last malfunctioning TX/RX pair will not communicate. In ELRS 2.4g@500Hz, the threshold is around 190 kHz.
 
 <figure markdown>
 <img width="927" alt="TX/RX frequency mismatch" src="https://user-images.githubusercontent.com/12195507/155923027-7eda810e-d874-432e-ac87-7833870f50f9.png">
