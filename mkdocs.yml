@@ -216,6 +216,7 @@ nav:
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
       - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
+      - Crystal Oscillator (XO) Frequency Error: hardware/crystal-frequency-error.md
       - SMD Antenna: hardware/smd-antenna.md
       - PWM Receivers: hardware/pwm-receivers.md
       - SPI Receivers: hardware/spi-receivers.md
@@ -240,3 +241,6 @@ extra_javascript:
   - assets/javascripts/binding-phrase.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - assets/javascripts/tablesort.js
+  - assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
