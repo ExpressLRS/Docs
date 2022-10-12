@@ -42,18 +42,19 @@ There are two ways to bind the receiver, as shown below
 Put the receiver into bind mode using any of these procedures:
 
 - "Bind" button in the Betaflight Configurator, Receiver Page (if can't be found, [update](#updating) the Betaflight firmware).
-- using the CLI, type in `bind_rx` and press enter once.
-- press the bind button on the flight controller.
-- using the CLI, type in `set expresslrs_uid = 0`, press enter once, then save and reboot
+- Using the CLI, type in `bind_rx` and press enter once.
+- Press the bind button on the flight controller.
+- Using the CLI, type in `set expresslrs_uid = 0`, press enter once, then save and reboot
 
-One the SPI receiver is in Bind Mode (indicated by two immediate blinks followed by a short pause), execute the [ExpressLRS lua script](../quick-start/transmitters/lua-howto.md) in your handset and press the `Bind` option. The RX and TX should be now bound (indicated by a SOLID LED on the Flight Controller).
+Once the SPI receiver is in Bind Mode (indicated by two immediate blinks followed by a short pause), execute the [ExpressLRS Lua script](../quick-start/transmitters/lua-howto.md) in your handset and press the `Bind` option. The RX and TX should be now bound (indicated by a SOLID LED on the Flight Controller).
 
 **Please mind the order, RX first, TX second.**
 
 Video Tutorial (thanks to @JyeSmith):
 
+<figure markdown>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U2sxqx2oT4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+</figure>
 
 ### Binding Phrase
 
@@ -63,7 +64,9 @@ UID bytes are entered into the Betaflight CLI for binding. Please [look below](#
 !!! info "NOTE"
     When building via ExpressLRS Configurator or via VS Code, note down the UID bytes from the build log. You can also use the [generator below](#uid-byte-generator) to retrieve your UID bytes from your binding phrase.
 
+<figure markdown>
 ![UID String](../assets/images/UIDsource.png)
+</figure>
 
 #### UID Byte Generator
 

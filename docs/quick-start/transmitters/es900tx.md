@@ -4,7 +4,9 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing via WiFi
+## ES900TX
+
+### Flashing via WiFi
 
 - Target: `HappyModel_TX_ES900TX_via_WIFI`
 
@@ -20,7 +22,7 @@ template: main.html
 !!! attention
     The methods below applies if you've already updated your Tx modules to 2.x. For modules still in firmwares pre 2.x, you should use [1.x WiFi flashing method](https://www.expresslrs.org/1.0/quick-start/tx-es900tx/) to update to 2.x. Or update to 2.x via USB instead.
 
-### Method 1
+#### Method 1
 
 With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
 
@@ -65,7 +67,7 @@ Verify the version and hash in the main screen of the ExpressLRS Lua script.
 ![JoinNetwork](../../assets/images/web-joinnetwork.png)
 </figure>
 
-### Method 2
+#### Method 2
 
 With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
 
@@ -87,7 +89,7 @@ Drag-and-drop the `HappyModel_TX_ES900TX-<version>.bin` file created by the Expr
 
 Verify the version and hash in the main screen of the ExpressLRS Lua script.
 
-### Method 3
+#### Method 3
 
 Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the network automatically.
 
@@ -103,7 +105,7 @@ Using the ExpressLRS Configurator, select the correct Target and set your [Firmw
 
 Verify the version and hash in the main screen of the ExpressLRS Lua script.
 
-### Flashing via UART/USB
+### Flashing via USB/UART
 
 - Target: `HappyModel_TX_ES900TX_via_UART`
 
