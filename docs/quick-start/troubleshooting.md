@@ -116,7 +116,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ??? Note "I cannot change my Packet Rate to F1000!"
     F1000 requires higher than 400K baud rates. First update your baud rate setting either in the Model Setup menu or in the System Menu -> Hardware, reboot your radio to ensure that the baud rate setting got applied and then change the Packet Rate.
 
-    Do note that not every handset is capable of higher than 400K baud rates. See the [Radio Setup Guide](tx-prep.md) for the details.
+    Do note that not every handset is capable of higher than 400K baud rates. See the [Radio Setup Guide](transmitters/tx-prep.md) for the details.
 
 ### <span class="custom-heading" data-id="14">I cannot change to Full Resolution Rates!</span>
 
