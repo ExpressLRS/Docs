@@ -27,7 +27,7 @@ On the ELRS Lua script v2, Select `> TX Power`. There are three configurable ele
 
 * `Max Power`: The output power will never exceed this power output level in any situation.
 * `Dynamic`: Three options are available.
-    - `Off`: Fixed power, is always set to the configured `Max Power`` output.
+    - `Off`: Fixed power, always set to the configure `Max Power` output.
     - `On`: Dynamic power is enabled, following the logic described below.
     - `AUX9`-`AUX12`: Dynamic power is enabled only when this AUX channel is `high`, and power is fixed to the `Max Power` when `low`.
 * `Fan Thresh`: Fan threshold. If the module has a fan, it will be enabled starting at this power level after a short delay.
