@@ -116,7 +116,7 @@ For all your customization needs, use `DMY_STARTUP_MELODY` to define your own st
 
 For example, BlHeli32 melodies are available on [Rox Wolf's youtube channel](https://www.youtube.com/playlist?list=PL_O0XT_1mZinetucKyuBUvkju8P7DEg-v), some experimentation may be required though. :musical_note: To write your own melody, **[this (Sheet Music 101)](https://github.com/nseidle/AxelF_DoorBell/wiki/How-to-convert-sheet-music-into-an-Arduino-Sketch)** and **[this (BLHeli Piano)](https://dra6n.github.io/blhelikeyboard.github.io/)** are useful resources.
 
-The build process also supports RTTTL-formatted ringtone strings. RTTTL melodies are delimited by colons `:` and start with a description versus the BLHeli style with pipes `|``. e.g. `Mario:d=4,o=5,b=100:32p,16e6,16e6,16p,16e6,16p,16c6,16e6,16p,16g6,8p,16p,16g`
+The build process also supports RTTTL-formatted ringtone strings. RTTTL melodies are delimited by colons `:` and start with a description versus the BLHeli style with pipes `|`. e.g. `Mario:d=4,o=5,b=100:32p,16e6,16e6,16p,16e6,16p,16c6,16e6,16p,16g6,8p,16p,16g`
 
 ```
 DISABLE_STARTUP_BEEP
