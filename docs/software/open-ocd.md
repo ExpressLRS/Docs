@@ -4,7 +4,9 @@ template: main.html
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
 
-If you are using Linux then you can't use the ST-LINK utility from st.com. But fortunately you can achieve the same effect with openocd on the Linux command line. This tutorial assumes you have an STLink v2.
+## Overview
+
+If you are using Linux then you can't use the ST-LINK utility from st.com. But fortunately, you can achieve the same effect with openocd on the Linux command line. This tutorial assumes you have an STLink v2.
 
 1. Install openocd from your distro's repository. For Debian/Ubuntu use: `sudo apt-get install openocd`
 2. Issue the full command:

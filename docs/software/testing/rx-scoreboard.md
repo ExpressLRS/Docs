@@ -2,11 +2,13 @@
 template: main.html
 ---
 
-![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
+<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
 
-The RX Scoreboard is a developer / troubleshooting feature that shows the outcome of every receiver packet cycle with a single character. Enable it with `-DPRINT_RX_SCOREBOARD` when compiling any RX environment and connect to the debug serial UART, usually the same as the CRSF output UART for most environments. 
+## Overview
 
-⚠️ For that reason, it should not be enabled during normal RC control operation since it will get mixed in with real CRSF data sent to the FC.
+The RX Scoreboard is a developer/troubleshooting feature that shows the outcome of every receiver packet cycle with a single character. Enable it with `-DPRINT_RX_SCOREBOARD` when compiling any RX environment and connect to the debug serial UART, usually the same as the CRSF output UART for most environments. 
+
+⚠️ For that reason, it should not be enabled during normal RC control operations since it will get mixed in with real CRSF data sent to the FC.
 
 ## Example 500Hz 1:32 Scoreboard
 
@@ -55,4 +57,4 @@ Character | Meaning | Description |
 
 ## Name Origin
 
-The term *scoreboard* originated from an Apache (web server) feature that would display the state of every worked as a single character in a text block. Thanks to them for the feature name and the dodecatillion web pages they've enabled serving.
+The term **scoreboard** originated from an Apache (web server) feature that would display the state of every work as a single character in a text block. Thanks to them for the feature name and the dodecatillion web pages they've enabled serving.
