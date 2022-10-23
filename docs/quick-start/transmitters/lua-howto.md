@@ -34,7 +34,7 @@ If parameters do show up, but the Bad/Good section on the right side of the head
 </figure>
 
 <figure markdown>
-![Lua Script Config BW](../../../assets/images/lua/config-bw.png)
+![Lua Script Config BW](../../assets/images/lua/config-bw.png)
 </figure>
 
 The `master 942c40` from the photo above is the git branch and commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). In the first photo above, `master` means the module is flashed with the `Master Branch` with the git commit `942c40`. If you're on a Released version or a Release Candidate, this will read something like `3.0` or `3.0-RC1` plus the commit hash of the release.
@@ -46,7 +46,7 @@ The `master 942c40` from the photo above is the git branch and commit hash of th
 Now, we can explore the complexities of the Lua script, and how to interpret each of its many sections. ExpressLRS supports multiple configuration profiles, and the configuration profile is selected by setting the "Receiver" property in handset Model Setup -> External Module -> Receiver (number).
 
 <figure markdown>
-![Model CFG](../../../assets/images/modelcfg.jpg)
+![Model CFG](../../assets/images/modelcfg.jpg)
 </figure>
 
 !!! warning "WARNING"
@@ -116,11 +116,11 @@ Model Match is used to prevent accidentally selecting the wrong model in the han
 ### TX Power
 
 <figure markdown>
-![Power Settings](../../../assets/images/lua/pwrrm.png)
+![Power Settings](../../assets/images/lua/pwrrm.png)
 </figure>
 
 <figure markdown>
-![Power Settings BW](../../../assets/images/lua/power-bw.png)
+![Power Settings BW](../../assets/images/lua/power-bw.png)
 </figure>
 
 TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXIT to exit the folder.
@@ -134,11 +134,11 @@ TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXI
 ### VTX Administrator
 
 <figure markdown>
-![VTX Settings](../../../assets/images/lua/vtxrm.png)
+![VTX Settings](../../assets/images/lua/vtxrm.png)
 </figure>
 
 <figure markdown>
-![VTX Settings BW](../../../assets/images/lua/vtx-bw.png)
+![VTX Settings BW](../../assets/images/lua/vtx-bw.png)
 </figure>
 
 VTX Administrator allows you to change your VTX settings directly from your radio, and have those VTX settings be applied to any receiver you connect to. The VTX settings are sent every time a new connection is acquired, or when `[Send VTX]` is pressed. **VTX Administrator will only send data when disarmed**
@@ -156,11 +156,11 @@ VTX Administrator allows you to change your VTX settings directly from your radi
 ### WiFi Connectivity
 
 <figure markdown>
-![WiFi Connectivity Settings](../../../assets/images/lua/wifirm.png)
+![WiFi Connectivity Settings](../../assets/images/lua/wifirm.png)
 </figure>
 
 <figure markdown>
-![WiFi Connectivity Settings BW](../../../assets/images/lua/wifi-bw.png)
+![WiFi Connectivity Settings BW](../../assets/images/lua/wifi-bw.png)
 </figure>
 
 This section contains all the WiFi-related functions.
@@ -175,7 +175,7 @@ This section contains all the WiFi-related functions.
 
 ### Bind
 <figure markdown>
-![Binding](../../../assets/images/lua/bindrm.jpg)
+![Binding](../../assets/images/lua/bindrm.jpg)
 </figure>
 
 <figure markdown>
@@ -186,11 +186,11 @@ Pressing the `[Bind]` button activates the binding mode for traditional binding.
 
 ### BLE Joystick (ESP32 TXes Only)
 <figure markdown>
-![BLE Joystick](../../../assets/images/lua/blerm.jpg)
+![BLE Joystick](../../assets/images/lua/blerm.jpg)
 </figure>
 
 <figure markdown>
-![BLE Joystick BW](../../../assets/images/lua/blejoystick-bw.png)
+![BLE Joystick BW](../../assets/images/lua/blejoystick-bw.png)
 </figure>
 
 Pressing the `[BLE Joystick]` selection activates BluetoothLE Joystick mode which allows connection to simulators through the bluetooth of your computer. Reboot or change models to exit this mode.

@@ -2,17 +2,20 @@
 template: main.html
 ---
 
-![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
+<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
 
-After performing CRC tests using the CRC-13 it was found that CRC basically includes parity checking so adding a seperate parity check was wasteful. CRC checking has now been updated to 14-bit.
+## Overview
 
-The following tests were performed using the new CRC-14 bit implementation with a polynomial of 0x372B, which gives a hamming distance of 6 in a 57-bit range. What this means is that it can detect up to 5 randomly flipped bits a message that is 57 bits long.
+After performing CRC tests using the CRC-13 it was found that CRC includes parity checking so adding a separate parity check was wasteful. CRC checking has now been updated to 14-bit.
 
-Three stress tests have been performed on the 50-bit data with CRC-14. The tests create random data in 7 bytes (the first byte only has the lower 2 bits set) then perform random bit flipping based on three styles.
+The following tests were performed using the new CRC-14 bit implementation with a polynomial of 0x372B, which gives a hamming distance of 6 in a 57-bit range. What this means is that it can detect up to 5 randomly flipped bits of a message that is 57 bits long.
+
+Three stress tests have been performed on the 50-bit data with CRC-14. The tests create random data in 7 bytes (the first byte only has the lower 2 bits set) and then perform random bit flipping based on three styles.
 
 Bear in mind that the CRC is not in the data and so is not subject to bit flipping.
 
 ## Random flipped bits within 14-bit range
+
 Anything over 14 is fairly useless as it will just flip bits back!
 ```
 1 : 0 out of 1000000 false positives, 0.000000%
@@ -46,7 +49,9 @@ Anything over 14 is fairly useless as it will just flip bits back!
 29 : 0 out of 1000000 false positives, 0.000000%
 30 : 0 out of 1000000 false positives, 0.000000%
 ```
-## Flipped bits in a single sequence at random start position
+
+## Flipped bits in a single sequence at the random start position
+
 The number 1-30 is the number of consecutive bits that are flipped at a random starting position.
 ```
 1 : 0 out of 1000000 false positives, 0.000000%
@@ -80,8 +85,10 @@ The number 1-30 is the number of consecutive bits that are flipped at a random s
 29 : 0 out of 1000000 false positives, 0.000000%
 30 : 0 out of 1000000 false positives, 0.000000%
 ```
+
 ## Randomly flipped bits
-Interestingly this is where the hamming distance shows an any flipped bits less that HD6 are detected.
+
+Interestingly this is where the hamming distance shows any flipped bits less that HD6 is detected.
 Also this is where the built-in parity shows up as it detects the odd numbered bit flips.
 ```
 1 : 0 out of 1000000 false positives, 0.000000%
@@ -117,6 +124,7 @@ Also this is where the built-in parity shows up as it detects the odd numbered b
 ```
 
 ## OTA Testing
+
 A 5hr OTA soak test was done at RSSI -108dBm (2.4GHz, 500Hz) and branch https://github.com/ExpressLRS/ExpressLRS/commit/e3ddcc.  RC data bytes were hard coded 0xAA and checked for CRC14 pass/fail, and the number of bits flipped counted.
 
 The below table columns are the number of bits flipped, crc passed tally, crc failed tally. Where passed means a bad packet that passes the CRC check and would accepted by the RX. On the `0` row, `Passed` is good, `Failed` is where the data is good, but the CRC itself was changed by bit-flips.

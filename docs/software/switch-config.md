@@ -5,8 +5,6 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
 
-# Switch Configs
-
 !!! warning "WARNING" 
     **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
@@ -69,15 +67,17 @@ This table summarizes the switch configuration modes, available channel switch p
 
 ExpressLRS has a few options for how switches are transmitted; Hybrid, Wide, Full Res 8ch, Full Res 16ch Rate/2, Full Res 12ch Mixed.
 
-### **Hybrid** and **Wide** Switch Configuration Modes
+### Hybrid and Wide Switch Configuration Modes
 
 These two switch modes are only available when packet rates of 50Hz, 150Hz, 250Hz, 500Hz, D250Hz, D500Hz, F500Hz, and F1000Hz and selected.
 
 The stick inputs (Chan 1-4) are sent with every packet at the normal range resolution of 10-bit or 1024 positions mapped to a PWM of 988us to 2012us (1 bit = 1us) which corresponds to -100% and 100% in EdgeTX / OpenTX.
+
+<figure markdown>
 ![Normal Range](../assets/images/channelrange-normal.png)
+</figure>
 
-
-The first switch (Chan 5 / AUX 1) is sent with every packet. **Put Your Arm On this channel / AUX 1**. It is used to enable safeguards and performance settings in the software and hardware. See the FAQ below. This switch is 1-bit / 2-position and is mapped to a PWM of **~1000us for disarmed and ~2000us for armed**.
+The first switch (Chan 5 / AUX 1) is sent with every packet. **PUT YOUR ARM ON THIS CHANNEL / AUX 1**. It is used to enable safeguards and performance settings in the software and hardware. See the FAQ below. This switch is 1-bit / 2-position and is mapped to a PWM of **~1000us for disarmed and ~2000us for armed**.
 
 For the remaining 7 switches (Chan 6 thru 12 /  AUX 2 thru AUX 8), only one switch is sent with each packet and is rotated on each packet (Round Robin).
 
@@ -115,7 +115,10 @@ These switch modes come in three flavors based on the number of output channels 
 3. **12ch Mixed** - Channels 1 to 4 are sent 10-bit with Channel 5 (AUX1) in 1-bit (2-position) for Arming at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
 
 All of these 10-bit or 1024 positions are mapped to PWM 885us to 2115us (1 bit = 1.23046875us) in what is called **"CRSF Extended Limits"**
+
+<figure markdown>
 ![CRSF Extended Limits](../assets/images/channelrange-crsf.png)
+</figure>
 
 ## FAQ
 
@@ -133,19 +136,19 @@ Your transmitter and receiver also act differently when “armed” and when “
 
 When `IsArmed` is enabled, these safeguards are applied:
 
-  - All "Button" inputs are disabled
-  - All "Joystick" (5-way buttons) are disabled
-  - Bump to Share is disabled
-  - VTX Admin is disabled
-  - Integrated VTX channel change is disabled
+- All "Button" inputs are disabled
+- All "Joystick" (5-way buttons) are disabled
+- Bump to Share is disabled
+- VTX Admin is disabled
+- Integrated VTX channel change is disabled
 
 **PERFORMANCE**
 
 When `IsArmed` is enabled, these performance features are activated:
 
-  - Dynamic Power is fully enabled
-  - Race telemetry mode turns telemetry off
-  - Some thermal-based fan controls are enabled
+- Dynamic Power is fully enabled
+- Race telemetry mode turns telemetry off
+- Some thermal-based fan controls are enabled
 
 Arming is an extremely important part of the performance of the control link. Please use Aux 1 / Chan 5 as indicated. Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~2000us is the **armed** state.
 
