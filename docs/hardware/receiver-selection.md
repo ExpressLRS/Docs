@@ -26,8 +26,8 @@ The ExpressLRS is a hashtag blessed with the benefit of there being many receive
 | HappyModel EP2 | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | HGLRC 2400RX | :moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: | 
 | iFlight ELRS | :moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| JHEMCU / HiYOUNGER EP24S | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| JHEMCU / HiYOUNGER SP24S | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
+| JHEMCU / HiYOUNGER EP24S | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
+| JHEMCU / HiYOUNGER SP24S | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | JHEMCU / HiYOUNGER RX24T | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 20dBm? | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: | 
 | Matek R24-S | :moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 20dBm | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | Matek R24-D | :moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 23dBm | :whale::whale::metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
