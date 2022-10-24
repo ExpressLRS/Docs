@@ -22,6 +22,11 @@ This issue may affect both 2.4g and 900M units. To compensate for this, 900Mhz m
  - For SX1280/1281, **USE 52 MHZ XO RATED 10 PPM TOLERANCE, 10 PF LOAD CAPACITANCE.**
  - Do not add unnecessary extra load capacitors. If you add the extra caps for the frequency fine-tune, please **VERIFY THE FREQUENCY ACCURACY WITH YOUR FINAL PRODUCT** (for every new batch). The detailed procedure is described in this document.
 
+### The ultimate solution -- TCXO
+TCXO (Temperature Compensated Crystal Oscillator) is a special kind of crystal oscillator, which equips a temperature-compensation circuit inside the package. Unfortunately, TCXO could not be a drop-in replacement for a normal XO, as it requires additional circuitry and needs a redesign of the module. Please refer to SX1280 reference design (part 15.2, Application Design with optional TCXO) to apply.
+
+The advantage of TCXO over a normal XO is its frequency accuracy and stability. Usually, the frequency tolerance of a TCXO is <2 ppm, while the error of a *good* XO is limited to about 10 ppm. While a good XO is totally fine for ELRS operations (it can tolerate up to 50 ppm relative errors), a TCXO could be a silver bullet to eliminate the frequency offset issue entirely.
+
 ## Frequency error measurement
 
 So far, we have established two ways of measuring the XO frequency error: 
@@ -29,14 +34,20 @@ So far, we have established two ways of measuring the XO frequency error:
 - Absolute 
 - Relative
 
-### Measuring Absolute XO error (not for everyone)
+### Measuring absolute XO error (not for everyone)
 
 !!! note "Note"
     This procedure requires a special instrument, which is not expected of a regular ELRS user.
 
-With a custom code (commit hash `06c0efe250a87f5cc90db778f699b6fe1695e5f8`, branch location https://github.com/SunjunKim/ExpressLRS/commits/kc_cert_2.x), a TX/RX unit runs in test-tone mode. When it's flashed, the unit will generate a continuous wave at 2440 MHz. By measuring the output frequency with a spectrum analyzer (e.g., HackRF SDR), you can determine how the XO deviates from the reference frequency (2440 MHz). Within 20 ppm (=~50 kHz) absolute error over the entire working operating temperature (from -20 to 85 degC) is expected for a good unit. Up to 40 ppm error (=~100 kHz) is acceptable.
+The current ELRS `master` branch (after PR #1785) equips a test-tone mode. After flashing a TX/RX unit with `master` branch, get into WiFi update mode, and access `http://10.0.0.1/cw.html` which should look like the figure below:
 
-### Measuring Relative XO error between a TX-RX pair
+<figure markdown>
+<img width="600" alt="A WebUI page for continuous wave test mode" src="https://user-images.githubusercontent.com/512740/185773219-9e2488d1-f889-4b93-b616-5060e1a14020.png">
+</figure>
+
+By clicking the `START CONTINUOUS WAVE` button, the unit will generate a continuous wave at 2440 MHz. By measuring the output frequency with a spectrum analyzer (e.g., HackRF SDR), you can determine how the XO deviates from the reference frequency (2440 MHz). Within 20 ppm (=~50 kHz) absolute error over the entire working operating temperature (from -20 to 85 degC) is expected for a good unit. Up to 40 ppm error (=~100 kHz) is acceptable.
+
+### Measuring relative XO error between a TX-RX pair
 
 You'll need to use "Manual mode" in the configurator to enable a special debug mode. In addition to this debug mode flag, you should add any other user defines you need to get your TX/RX to connect (check the [user defines section](https://www.expresslrs.org/3.0/software/user-defines/)).
 
@@ -72,7 +83,7 @@ The tick value that appeared in the RSNR field is a scaled value of the frequenc
 
 For example, if you got the tick value of 30, the frequency offset between your TX and RX is $30 \times 1.575 = +47.25_{kHz}$, and this means your receiver is generating 47.25 kHz higher frequency than your TX.
 
-#### Measuring Absolute error
+#### Measuring absolute error
 
 When one unit in the measured pair uses TCXO with good error tolerance (desirably <1 ppm) as the SX1280 clock source, the measured ticks will represent the absolute error of the counterpart unit.
 
