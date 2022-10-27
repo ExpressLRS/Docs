@@ -40,11 +40,11 @@ The next step will not be able to proceed properly and you'll have issues later 
 
 ## Flashing via Wifi 
 
-- Target: `MATEK_2400_RX_via_WIFI`
+- Target: `MATEK_2400_RX_via_WIFI`,`MATEK_2400_RX_R24D_via_WIFI`
 
 - Device Category: `Matek 2.4 GHz`
 
-- Device: `Matek 2400 RX`
+- Device: `Matek 2400 RX`,`Matek 2400 RX R24D`
 
 <figure markdown>
 ![via WiFi](../../assets/images/Method_RX_WiFi.png)
@@ -57,7 +57,7 @@ The next step will not be able to proceed properly and you'll have issues later 
 
 Before your proceed, make sure you have the receiver [wired properly] to your FC.
 
-**Build** the firmware using the ExpressLRS Configurator using the correct Target and [Firmware Options]. Once done, it should open a new window where the `MATEK_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware using the ExpressLRS Configurator using the correct Target and [Firmware Options]. Once done, it should open a new window where the `MATEK_2400_RX-<version>.bin` or `MATEK_2400_RX_R24D-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 <figure markdown>
 ![Build]
@@ -75,7 +75,7 @@ Connect to the Wifi Network the receiver has created. It should be named somethi
 ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
 </figure>
 
-Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `MATEK_2400_RX-<version>.bin` is (you can drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
+Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `MATEK_2400_RX-<version>.bin` or `MATEK_2400_RX_R24D-<version>.bin` is (you can drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on **Update** button and the firmware file will be uploaded and the update process should commence. 
 
 A white page should load momentarily with the message **Update Success! Rebooting...**. Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated. Power cycle the receiver and it should be able to bind with your TX module now (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
 
@@ -93,7 +93,7 @@ A white page should load momentarily with the message **Update Success! Rebootin
 
 With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
 
-**Build** the firmware. Once done, it should open a new window where the `MATEK_2400_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+**Build** the firmware. Once done, it should open a new window where the `MATEK_2400_RX-<version>.bin` or `MATEK_2400_RX_R24D-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
 
 <figure markdown>
 ![Build]
@@ -113,7 +113,7 @@ Scroll down to the Firmware Update section, shown below:
 ![Firmware Update](../../assets/images/web-firmwareupdate.png)
 </figure>
 
-Drag-and-drop the `MATEK_2400_RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
+Drag-and-drop the `MATEK_2400_RX-<version>.bin` or `MATEK_2400_RX_R24D-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
 
 Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated.
 
@@ -144,11 +144,11 @@ Power up your Flight Controller by either connecting a LiPo or attaching the USB
 
 ## Flashing via Passthrough
 
-- Target: `MATEK_2400_RX_via_BetaflightPassthrough`
+- Target: `MATEK_2400_RX_via_BetaflightPassthrough`,`MATEK_2400_RX_R24D_via_BetaflightPassthrough`
 
 - Device Category: `Matek 2.4 GHz`
 
-- Device: `Matek 2400 RX`
+- Device: `Matek 2400 RX`,`Matek 2400 RX R24D`
 
 <figure markdown>
 ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
@@ -174,11 +174,11 @@ Unplug USB and/or LiPo. Power your TX Module and then your FC to verify you are 
 
 ## Flashing via UART
 
-- Target: `MATEK_2400_RX_via_UART`
+- Target: `MATEK_2400_RX_via_UART`,`MATEK_2400_RX_R24D_via_UART`
 
 - Device Category: `Matek 2.4 GHz`
 
-- Device: `Matek 2400 RX`
+- Device: `Matek 2400 RX`,`Matek 2400 RX R24D`
 
 <figure markdown>
 ![via UART](../../assets/images/Method_RX_UART.png)
