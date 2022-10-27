@@ -23,7 +23,7 @@ Dynamic Power allows the TX module to *adjust* its output power up to the config
 
 ### How to configure Dynamic Power
 
-On the ELRS Lua script v2, Select `> TX Power`. There are three configurable elements.
+On the ELRS Lua script v3, Select `> TX Power`. There are three configurable elements.
 
 * `Max Power`: The output power will never exceed this power output level in any situation.
 * `Dynamic`: Three options are available.
