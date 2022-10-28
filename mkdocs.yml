@@ -135,7 +135,7 @@ nav:
       - Installing the Configurator: quick-start/installing-configurator.md
       - Firmware Options: quick-start/firmware-options.md
       - Transmitters:
-          - Preparing your Radio: quick-start/transmitters/tx-prep.md
+          - Preparing Radio: quick-start/transmitters/tx-prep.md
           - Flashing Transmitters:
             - Axis Thor: quick-start/transmitters/axis-thor.md
             - BetaFPV 2.4GHz: quick-start/transmitters/betafpv2400.md

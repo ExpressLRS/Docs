@@ -43,6 +43,6 @@ If you have other questions or concerns, or maybe you need further help that isn
 
 ## Where are Video Guides?
 
-Due to the current fast pace of development, video guides often end up outdated faster than intended. Specific hardware guides sometimes use pre-release firmware targets or targets intended for a different hardware which can cause confusion when specific firmware targets are added. 
+Due to the current fast pace of development, video guides often end up outdated faster than intended. Specific hardware guides sometimes use pre-release firmware targets or targets intended for different hardware which can confuse when specific firmware targets are added. 
 
 We will be adding a separate videos section soon, but for now, until we find high quality, relevant and applicable guides, you are on your own. Please take note of the publication date for these videos to make sure they are still relevant.

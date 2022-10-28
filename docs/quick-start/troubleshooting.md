@@ -203,4 +203,9 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
     To ensure that the WiFi flashing is finished properly, **wait until the LED on the receiver blinks slowly** (indicating it's looking for a TX bind) before pulling off power.
 
+If you have other questions or concerns, or maybe you need further help that is not covered by this Guide, head over to our Discord Channel or Facebook Group!
+
+<span style="padding-left:10%; display:inline; text-align:center">[ExpressLRS Discord :fontawesome-brands-discord:](https://discord.gg/dS6ReFY){ .md-button }</span>
+<span style="padding-left:10%; display:inline; text-align:center">[ExpressLRS Facebook :fontawesome-brands-facebook:](https://www.facebook.com/groups/636441730280366){ .md-button }</span>
+
 <script src="../../assets/javascripts/admonition-enhancement.js"></script>
