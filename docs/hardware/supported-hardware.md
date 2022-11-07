@@ -15,11 +15,11 @@ At the time of writing, here are the ExpressLRS-supported Transmitters and Recei
 
 ??? Abstract "2.4GHz Transmitters"
 
-    ### Axis Thor TX
+    ### Axisflying Thor TX
 
     Includes Color TFT display, built in motion sensor and thermally controlled fan
 
-    - [Flashing Guide](../quick-start/transmitters/axis-thor.md)
+    - [Flashing Guide](../quick-start/transmitters/axisflying-thor.md)
 
     - [Manufacturer Website](https://www.axisflying.com/product/axisflying-elrs-2-4g-module-thor-tx-pro-10-1000mw/)
     
@@ -66,9 +66,9 @@ At the time of writing, here are the ExpressLRS-supported Transmitters and Recei
 
     To help find the right receiver for your needs, see the [Receiver Selection](receiver-selection.md) page.
 
-    ### Axis Thor RX
+    ### Axisflying Thor RX
 
-    - [Flashing Guide](../quick-start/receivers/axis-thor.md)
+    - [Flashing Guide](../quick-start/receivers/axisflying-thor.md)
 
     - [Manufacturer Website](https://www.axisflying.com/product/axisflying-elrs-2-4g-module-thor-tx-pro-10-1000mw/)
 
