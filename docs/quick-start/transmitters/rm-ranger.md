@@ -59,7 +59,7 @@ Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**
 ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
 </figure>
 
-Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `RadioMaster_Ranger_2400_TX-<version>.bin`, `RadioMaster_Ranger_Micro_2400_TX-<version>.bin` or `RadioMaster_Ranger_Nano_2400_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
+Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show the Web UI. Navigate to the `Update` Tab and you should see a File Upload form. You can now drag-and-drop the `RadioMaster_Ranger_2400_TX-<version>.bin`, `RadioMaster_Ranger_Micro_2400_TX-<version>.bin` or `RadioMaster_Ranger_Nano_2400_TX-<version>.bin` file that the ExpressLRS Configurator created into the File Upload field. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
 
 Once the file is uploaded, a pop-up confirmation will show up. Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
 
