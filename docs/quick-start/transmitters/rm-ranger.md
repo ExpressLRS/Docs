@@ -85,13 +85,9 @@ Once it's done, it should open the Target folder for you where the `RadioMaster_
 
 Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the local network automatically.
 
-Using your browser, navigate to http://elrs_tx.local and the WiFi Update page should show up. Scroll down towards the Firmware Update section, as shown below:
+Using your browser, navigate to http://elrs_tx.local and the WiFi Update page should show up. Navigate to the `Update` Tab and you should see a File Upload form. You can now drag-and-drop the `RadioMaster_Ranger_2400_TX-<version>.bin`, `RadioMaster_Ranger_Micro_2400_TX-<version>.bin` or `RadioMaster_Ranger_Nano_2400_TX-<version>.bin` file that the ExpressLRS Configurator created into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. 
 
-<figure markdown>
-![Firmware Update](../../assets/images/web-firmwareupdate.png)
-</figure>
-
-Drag-and-drop the `RadioMaster_Ranger_2400_TX-<version>.bin`, `RadioMaster_Ranger_Micro_2400_TX-<version>.bin` or `RadioMaster_Ranger_Nano_2400_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and the module will reboot (~1min).
+Once the file is uploaded, a pop-up confirmation will show up. Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
 
 Verify the version and hash in the main screen of the ExpressLRS Lua script.
 
