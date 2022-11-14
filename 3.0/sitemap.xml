@@ -366,6 +366,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/3.0/quick-start/transmitters/jumper-internal/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/3.0/quick-start/transmitters/lua-howto/</loc>
          <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
