@@ -49,7 +49,7 @@ Should you really need to use that particular UART that puts your ESP-based Expr
 
 Those using DJI Air Units require another set of UARTs. The SBUS connection from the Air Unit to the FC is not needed and sometimes interfere with the ExpressLRS Receiver, moreover if it's wired up to the same UART as the Receiver. It's generally a good idea to disconnect that SBUS wire altogether. If the UART that's left for your ExpressLRS Receiver has a pull-down resistor making your Receiver stay in Bootloader Mode, swap the two devices (i.e. Air Unit goes to the Receiver UART, ExpressLRS Receiver goes into the Air Unit UART).
 
-## AxisFlying Receivers
+## Axisflying Receivers
 
 <figure markdown>
 ![Axis Thor RX](../../assets/images/rx-axis-thor.jpg)
