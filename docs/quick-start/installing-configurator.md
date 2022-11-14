@@ -14,7 +14,10 @@ There are two ways to build and flash ExpressLRS:
 
 [Download](https://github.com/ExpressLRS/ExpressLRS-Configurator/releases) the latest ExpressLRS Configurator application for your platform, following the instructions written by [jurgelenas](https://github.com/jurgelenas/).
 
+<figure markdown>
 ![Configurator](../assets/images/ConfiguratorScreenCap.png)
+<figcaption>ExpressLRS Configurator</figcaption>
+</figure>
 
 The targets for each of the supported hardware can be seen on the individual device pages. Use the navigation menu on the left to get to the specific hardware page.
 

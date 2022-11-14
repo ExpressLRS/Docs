@@ -90,4 +90,9 @@ hide:
     | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX. RX → TX |
     | TSNR | Downlink - signal-to-noise ratio                     |           | SNR reported by the TX for telemetry packets. RX → TX |
 
+If you have other questions or concerns, or maybe you need further help that is not covered by this Guide, head over to our Discord Channel or Facebook Group!
+
+<span style="padding-left:15%; display:inline; text-align:center">[ExpressLRS Discord :fontawesome-brands-discord:](https://discord.gg/dS6ReFY){ .md-button }</span>
+<span style="padding-left:15%; display:inline; text-align:center">[ExpressLRS Facebook :fontawesome-brands-facebook:](https://www.facebook.com/groups/636441730280366){ .md-button }</span>
+
 <script src="../assets/javascripts/admonition-enhancement.js"></script>
