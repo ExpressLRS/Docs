@@ -58,6 +58,20 @@ Unplug the USB and change the position of the jumpers/dipswitches for the `Norma
 
 Put back the cover of the module and attach it to your module bay.
 
+### Flashing via Passthrough
+
+Applies to: `Radiomaster Ranger Series`
+
+These devices use the base `HappyModel TX Backpack` as target.
+
+- Plug in a USB Data Cable into the module.
+- Select the latest Backpack Release version.
+- Select the device target, `HappyModel TX Backpack`.
+- Select the `via Passthrough` flashing method.
+- Set your runtime options.
+- Click `Build and Flash`
+- Wait for the process to complete.
+
 ### Flashing via WiFi (ESP-based TX Modules)
 
 !!! info "Note"
