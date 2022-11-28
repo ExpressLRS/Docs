@@ -14,7 +14,7 @@ License v3.0 license](https://github.com/ExpressLRS/ExpressLRS/blob/master/LICEN
 
 Specific licensing info for each project can be found in its GitHub Repositories, including, but not limited to:
 
-* https://github.com/expressLRS/expressLRS
+* https://github.com/ExpressLRS/ExpressLRS
 * https://github.com/ExpressLRS/ExpressLRS-Configurator
 * https://github.com/ExpressLRS/Backpack
 * https://github.com/ExpressLRS/Docs
