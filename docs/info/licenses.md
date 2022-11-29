@@ -23,4 +23,4 @@ Third-party logos may be subject to third-party copyrights and trademarks and ar
 as the rest of the ExpressLRS.org website.
 
 If you have a specific question or concern about the ExpressLRS project or any of its associated projects are licensed,
-please contact the ExpressLRS.
+please contact the ExpressLRS via info@expresslrs.org.
