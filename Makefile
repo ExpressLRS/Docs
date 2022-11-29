@@ -1,7 +1,7 @@
 .PHONY: run
 run:
-	docker-compose up
+	docker compose up
 
 .PHONY: build
 build:
-	docker-compose build
+	docker compose build
