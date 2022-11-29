@@ -1,10 +1,10 @@
 ---
 template: main.html
 description: Privacy policy
+search:
+  exclude: true
 hide:
-
 - navigation
-
 ---
 
 # Privacy Policy

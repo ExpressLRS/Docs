@@ -11,26 +11,26 @@ jobs:
     steps:
       - name: Checkout latest push
         uses: actions/checkout@v2
-      
+
       - name: Setup Python env
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x
+          python-version: 3.9.2
 
       - name: Setup Caching
         uses: actions/cache@v2
         with:
           key: ${{ github.ref }}
-          path: .cache  
-          
+          path: .cache
+
       - name: Install Dependencies
-        run: pip install mkdocs-extra-sass-plugin "mkdocs-minify-plugin>=0.3" "mkdocs-redirects>=1.0" mike "jinja2==3.0.3"
+        run: pip install "mkdocs-extra-sass-plugin==0.1.0" "mkdocs-minify-plugin==0.6.2" "mkdocs-redirects==1.2" "mike==1.1.2" "jinja2==3.0.3"
 
       - name: Install MkDocs Insiders
         if: github.event.repository.fork == false
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@8.1.9-insiders-4.7.1
+        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@8.5.10-insiders-4.26.6
 
       - name: Setup Github
         run: |
@@ -38,12 +38,12 @@ jobs:
           git config --local user.name "GitHub Action"
           git pull
           git checkout master
-       
-      - name: Deploy release version       
+
+      - name: Deploy release version
         run: |
           mike deploy --config-file mkdocs-insiders.yml 3.0 v3
           mike set-default v3
-          
+
       - name: Push changes to server
         run: |
           git checkout gh-pages
