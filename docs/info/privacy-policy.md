@@ -2,9 +2,7 @@
 template: main.html
 description: Privacy policy
 hide:
-
 - navigation
-
 ---
 
 # Privacy Policy
