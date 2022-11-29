@@ -101,7 +101,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/3.0/info/licenses/</loc>
+         <lastmod>2022-11-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/3.0/info/long-range/</loc>
+         <lastmod>2022-11-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/3.0/info/privacy-policy/</loc>
          <lastmod>2022-11-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
