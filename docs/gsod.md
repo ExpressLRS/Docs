@@ -95,7 +95,7 @@ A review of the existing user documentation by a technical writer, who has not p
 
 **Creating the proposal**
 
-The proposal idea was pretty easy for us… as we like to keep it simple.  GSoD is about documents, and hiring a Technical Writer, so we rubbed our 2 brain cells together and decided we needed help reviewing a writing docs.  The exploding ELRS users base meant we can not continue to provide 1 on 1 support to every users, unlike in the beginning of the project.  The demand for more and better documents is and will be ongoing during the ELRS growth period.  However, the community appears to have reached a critical mass and the user base is great at supporting new users.
+The proposal idea was pretty easy for us… as we like to keep it simple.  GSoD is about documents, and hiring a Technical Writer, so we rubbed our 2 brain cells together and decided we needed help reviewing a writing docs.  The exploding ELRS user base meant we can not continue to provide 1 on 1 support to every user, unlike in the beginning of the project.  The demand for more and better documents is and will be ongoing during the ELRS growth period.  However, the community appears to have reached a critical mass and the user base is great at supporting new users.
 
 **Budget**
 
