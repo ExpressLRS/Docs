@@ -72,3 +72,76 @@ ELRS has set its next major release goal before November to include release note
 ## Additional information
 
 The ELRS development team includes a range of expertise, from software professionals, academics, researchers, scientists, and university students.  And we love nothing more than nerding out on all things FPV in our free time :smiley:
+
+## Case study
+
+[**ExpressLRS**](https://www.expresslrs.org)
+
+Organization Description:
+
+ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best, completely open source, high refresh radio control link, minimising latency while maximising range. A vast range of hardware in both 900 Mhz and 2.4 GHz frequencies is available.
+
+FPV is a community built on top of open source projects such as [flight controller firmware Betaflight](https://github.com/betaflight) and [RC handset firmware EdgeTX](https://github.com/EdgeTX).  ELRS fills a void for an open source and high performance RC link with an active development team of about 20 volunteers.
+
+[github.com/ExpressLRS](https://github.com/ExpressLRS/ExpressLRS) was created nearly 4 years ago and in the past 12 months has experienced significant growth.  Not only in code contributions, but also users and commercial manufacturers releasing ELRS compatible hardware.
+
+**Problem Statement / Proposal Abstract**
+
+During early ELRS development users were required to Do It Yourself (DIY) and build their own hardware. This tended to attract tech savvy users. However, in the past 12 months a number of commercial manufacturers have released ELRS compatible hardware. A much wider user group now exists of varying knowledge and initial setup of ELRS can be troublesome. More so for users who are also new to FPV.
+
+A review of the existing user documentation by a technical writer, who has not previously been exposed to FPV, will bring a fresh pair of eyes to the project and help identify knowledge gaps.
+
+**Project Description**
+
+**Creating the proposal**
+
+The proposal idea was pretty easy for us… as we like to keep it simple.  GSoD is about documents, and hiring a Technical Writer, so we rubbed our 2 brain cells together and decided we needed help reviewing a writing docs.  The exploding ELRS users base meant we can not continue to provide 1 on 1 support to new users, unlike in the beginning of the project.  The demand for more and better documents is and will be ongoing during the ELRS growth period.  However, the community appears to have reached a critical mass and the user base is great at supporting new users.
+
+**Budget**
+
+Of the initially deposited $5800…
+
+$3000 was invoiced by our Technical Writer.
+
+$1,849.42 of the proposed $2000 hardware budget has been spent.
+
+$600 of the proposed $1000 Volunteer stipends has been claimed.
+
+The project was able to stay within the initial budget.  Some ExpressLRS hardware manufacturers were even able to help with additional hardware and we thank (in alphabetical order) [BETAFPV](https://betafpv.com/), [Happymodel](https://www.happymodel.cn/), and [Radiomaster](https://www.radiomasterrc.com/) for their assistance in providing hundreds of dollars of free hardware.
+
+**Participants**
+
+The project had 5 volunteers that were either Developers or long term advance users on Discord and known to ExpressLRS…  deadbyte, maybenikhil, StonedDawg, braincell power user, and commanderguy.  Our Technical Writer AghaSaad was found through reviewing resumes.
+
+While no one dropped out of the project, there were personal issues that arose during the period that made it difficult for some volunteers to be available.  This did impact the project's timeline and delay hardware delivery.
+
+Selecting a Writer with a pre-existing interest in RC or similar hobby that aligned with the projects, and not focus solely on writing experience, may also have assisted with keeping to the timeline.
+
+**Timeline**
+
+Our initial timeline has been heavily delayed through the delivery of hardwar to our Writer… and then the eventual confiscation of said hardware.  More details below.
+
+**Results**
+
+[A number of PRs were merged](https://github.com/ExpressLRS/Docs/pulls?q=is%3Apr+author%3AAghaSaad04) by the Technical Writer, which include major technical topics/issues such as (Crystal Oscillator (XO) Frequency Error](https://github.com/ExpressLRS/Docs/pull/256).  However key beginner documents will be difficult without hardware for our Writers to learn on.
+
+**Metrics**
+
+A key metric for the success of the project was to address a lot of the users' issues.  At the time of the proposal the Facebook group had 8.4k and Discord 8.1k users.  These groups have now grown to 12.4k and 13k respectively!  Coupled with the introduction of numerous new features to ELRS, It will be difficult to keep up with user questions during such a growth period.
+
+
+**Analysis**
+
+A number of challenges were met during this project.  With the final hurdle being the import of FPV hardware to the Technical Writer.  In the end the hardware required for learning FPV, building, and flying were confiscated by the country's Ministry of Defence.  This massively limited what could/can be completed during the project.
+
+Can the project be called a success without hardware to write about… probably not.
+
+**Summary**
+
+A number of [PRs were merged](https://github.com/ExpressLRS/Docs/pulls?q=is%3Apr+author%3AAghaSaad04) by the Technical Writer, which is to be commended without access to hardware.  If ELRS was to participate in GSoD again in the future there are a couple major conditions that require checking before hiring a Writer;
+
+Is FPV legal in their country?
+Is the import of FPV/RC hardware legal in their country?
+
+Hot tip for other organisations participating in GSoD and dealing with hardware.  Potentially look to hire someone in a country, or in close proximity to one of the participating developers or volunteers.  Local expertise to help with delivery and hand up assistance will be invaluable.
+
