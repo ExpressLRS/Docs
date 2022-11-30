@@ -58,6 +58,9 @@ theme:
 plugins:
   - minify:
       minify_html: true
+  - search:
+      lang:
+        - en
 
 extra_css:
   - assets/stylesheets/main.css
@@ -67,6 +70,19 @@ extra:
   analytics:
     provider: google
     property: G-VMF2B5BYJZ
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    analytics:
+      name: Google Analytics
+    actions:
+      - accept
+      - manage
+      - reject
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ExpressLRS/
@@ -83,7 +99,7 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/expresslrs
       name: Follow us on Instagram
-    - icon: fontawesome/solid/donate
+    - icon: fontawesome/solid/circle-dollar-to-slot
       link: https://opencollective.com/expresslrs
       name: Send a Donation!
   version:

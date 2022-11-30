@@ -1,6 +1,8 @@
 ---
 template: main.html
 description: Licenses
+search:
+  exclude: true
 hide:
 - navigation
 ---
