@@ -79,7 +79,7 @@ The ELRS development team includes a range of expertise, from software professio
 
 Organization Description:
 
-ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best, completely open source, high refresh radio control link, minimising latency while maximising range. A vast range of hardware in both 900 Mhz and 2.4 GHz frequencies is available.
+ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best, completely open source, high refresh radio control link, minimising latency while minimizing latency and maximizing range. A vast range of hardware in both 900 Mhz and 2.4 GHz frequencies is available.
 
 FPV is a community built on top of open source projects such as [flight controller firmware Betaflight](https://github.com/betaflight) and [RC handset firmware EdgeTX](https://github.com/EdgeTX).  ELRS fills a void for an open source and high performance RC link with an active development team of about 20 volunteers.
 
@@ -95,7 +95,7 @@ A review of the existing user documentation by a technical writer, who has not p
 
 **Creating the proposal**
 
-The proposal idea was pretty easy for us… as we like to keep it simple.  GSoD is about documents, and hiring a Technical Writer, so we rubbed our 2 brain cells together and decided we needed help reviewing a writing docs.  The exploding ELRS users base meant we can not continue to provide 1 on 1 support to new users, unlike in the beginning of the project.  The demand for more and better documents is and will be ongoing during the ELRS growth period.  However, the community appears to have reached a critical mass and the user base is great at supporting new users.
+The proposal idea was pretty easy for us… as we like to keep it simple.  GSoD is about documents, and hiring a Technical Writer, so we rubbed our 2 brain cells together and decided we needed help reviewing a writing docs.  The exploding ELRS users base meant we can not continue to provide 1 on 1 support to every users, unlike in the beginning of the project.  The demand for more and better documents is and will be ongoing during the ELRS growth period.  However, the community appears to have reached a critical mass and the user base is great at supporting new users.
 
 **Budget**
 
@@ -111,19 +111,19 @@ The project was able to stay within the initial budget.  Some ExpressLRS hardwar
 
 **Participants**
 
-The project had 5 volunteers that were either Developers or long term advance users on Discord and known to ExpressLRS…  deadbyte, maybenikhil, StonedDawg, braincell power user, and commanderguy.  Our Technical Writer AghaSaad was found through reviewing resumes.
+The project had 5 volunteers that were either Developers or long term advanced users on Discord and known to ExpressLRS…  deadbyte, maybenikhil, StonedDawg, braincell power user, and commanderguy.  Our Technical Writer AghaSaad was found through reviewing resumes.
 
-While no one dropped out of the project, there were personal issues that arose during the period that made it difficult for some volunteers to be available.  This did impact the project's timeline and delay hardware delivery.
+While no one dropped out of the project, there were personal issues that arose during the period that made it impossible for some volunteers to be available.  This did impact the project's timeline and delay hardware delivery.
 
 Selecting a Writer with a pre-existing interest in RC or similar hobby that aligned with the projects, and not focus solely on writing experience, may also have assisted with keeping to the timeline.
 
 **Timeline**
 
-Our initial timeline has been heavily delayed through the delivery of hardwar to our Writer… and then the eventual confiscation of said hardware.  More details below.
+Our initial timeline has been heavily delayed through the delivery of hardware to our Writer… and then the eventual confiscation of said hardware.  More details below.
 
 **Results**
 
-[A number of PRs were merged](https://github.com/ExpressLRS/Docs/pulls?q=is%3Apr+author%3AAghaSaad04) by the Technical Writer, which include major technical topics/issues such as (Crystal Oscillator (XO) Frequency Error](https://github.com/ExpressLRS/Docs/pull/256).  However key beginner documents will be difficult without hardware for our Writers to learn on.
+[A number of PRs were merged](https://github.com/ExpressLRS/Docs/pulls?q=is%3Apr+author%3AAghaSaad04) by the Technical Writer, which include major technical topics/issues such as (Crystal Oscillator (XO) Frequency Error](https://github.com/ExpressLRS/Docs/pull/256).  However key beginner documents will be impossible without hardware for our Writers to learn on.
 
 **Metrics**
 
