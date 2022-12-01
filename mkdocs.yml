@@ -13,6 +13,7 @@ edit_uri: "https://github.com/ExpressLRS/Docs/tree/master/docs"
 
 # privacy_policy_page_path: "/info/privacy-policy"
 # licenses_page_path: "/info/licenses"
+# terms_and_conditions_page_path: "info/terms-and-conditions"
 
 # Copyright
 copyright: Copyright &copy; 2021-2023 ExpressLRS
@@ -292,6 +293,7 @@ nav:
       - Advance Technical Info: info/advance-technical-info.md
       - Privacy Policy: info/privacy-policy.md
       - Licenses: info/licenses.md
+      - Terms & Conditions: info/terms-and-conditions.md
   - FAQ: faq.md
   - GSoD: gsod.md
 

@@ -3,6 +3,7 @@ INHERIT: mkdocs.yml
 # these will throw a warning but exist to inject privacy and license links post build to footer
 privacy_policy_page_path: "info/privacy-policy"
 licenses_page_path: "info/licenses"
+terms_and_conditions_page_path: "info/terms-and-conditions"
 
 theme:
   features:
