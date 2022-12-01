@@ -32,6 +32,9 @@ theme:
     - navigation.instant
     - navigation.sections
     - navigation.tabs
+    - search.highlight
+    - search.suggest
+    - toc.follow
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
