@@ -1,17 +1,1 @@
 INHERIT: mkdocs.yml
-plugins:
-  - search
-  - social:
-      cards_color:
-        fill: "#4361AA"
-      cards_font: PT Sans
-  - tags
-  - minify:
-      minify_html: true
-
-theme:
-  features:
-    - announce.dismiss
-    - navigation.instant
-    - navigation.sections
-    - navigation.tabs

@@ -2,89 +2,81 @@
 
 <!-- Render hero under tabs -->
 {% block tabs %}
-{{ super() }}
+  {{ super() }}
 
-<!-- Additional styles for landing page -->
-<style>
+  <!-- Additional styles for landing page -->
+  <style>
 
-  /* Application header should be static for the landing page */
-  .md-header {
-    position: initial;
-  }
+    /* Application header should be static for the landing page */
+    .md-header {
+      position: initial;
+    }
 
-  /* Remove spacing, as we cannot hide it completely */
-  .md-main__inner {
-    margin: 0;
-  }
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
 
-  /* Hide main content for now */
-  .md-content {
-    display: none;
-  }
-
-  /* Hide table of contents */
-  @media screen and (min-width: 60em) {
-    .md-sidebar--secondary {
+    /* Hide main content for now */
+    .md-content {
       display: none;
     }
-  }
 
-  /* Hide navigation */
-  @media screen and (min-width: 76.25em) {
-    .md-sidebar--primary {
-      display: none;
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
     }
-  }
-</style>
 
-<!-- Hero for landing page -->
-<section class="mdx-container">
-  <div class="md-grid md-typeset">
-    <div class="mdx-hero">
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+  </style>
 
-      <!-- Hero image -->
-      <div class="mdx-hero__image">
-        <img
-          src="assets/images/drone_race.svg"
-          alt=""
-          width="1659"
-          height="1200"
-          draggable="false"
-        >
-        <!--        <img-->
-        <!--          src="assets/images/illustration.png"-->
-        <!--          alt=""-->
-        <!--          width="1659"-->
-        <!--          height="1200"-->
-        <!--          draggable="false"-->
-        <!--        >-->
-      </div>
+  <!-- Hero for landing page -->
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
 
-      <!-- Hero content -->
-      <div class="mdx-hero__content">
-        <h1>High-performance Open Source Radio Control Link</h1>
-        <p>{{ config.site_description }}</p>
-        <!--          href="{{ page.next_page.url | url }}"-->
-        <a
-          href="quick-start/getting-started/"
-          title="{{ page.next_page.title | e }}"
-          class="md-button md-button--primary"
-          target="_self"
-        >
-          Quick Start
-        </a> <!-- db change: opens in same tab/window -->
-        <a
-          href="https://github.com/ExpressLRS/ExpressLRS-Configurator/releases/latest"
-          title="Download ExpressLRS Configurator"
-          class="md-button"
-          target="_blank"
-        >
-          Download Configurator
-        </a>
+        <!-- Hero image -->
+        <div class="mdx-hero__image">
+          <img
+            src="assets/images/drone_race.svg"
+            alt=""
+            width="1659"
+            height="1200"
+            draggable="false"
+          >
+        </div>
+
+        <!-- Hero content -->
+        <div class="mdx-hero__content">
+          <h1>High-performance Open Source Radio Control Link</h1>
+          <p>{{ config.site_description }}</p>
+          <a
+            href="quick-start/getting-started/"
+            title="{{ page.next_page.title | e }}"
+            class="md-button md-button--primary"
+            target="_self"
+          >
+            Quick Start
+          </a> <!-- db change: opens in same tab/window -->
+          <a
+            href="https://github.com/ExpressLRS/ExpressLRS-Configurator/releases/latest"
+            title="Download ExpressLRS Configurator"
+            class="md-button"
+            target="_blank"
+          >
+            Download Configurator
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 {% endblock %}
 
 <!-- Content -->

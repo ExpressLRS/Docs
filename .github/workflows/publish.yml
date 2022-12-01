@@ -23,21 +23,21 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
 
-      - name: Install Dependencies
-        run: pip install "mkdocs-extra-sass-plugin==0.1.0" "mkdocs-minify-plugin==0.6.2" "mkdocs-redirects==1.2" "mike==1.1.2" "jinja2==3.0.3" "pillow==9.3.0" "cairosvg==2.5.2"
-
-      - name: Install MkDocs Insiders
-        if: github.event.repository.fork == false
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@8.5.10-insiders-4.26.6
-
       - name: Setup Github
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
           git checkout master
+
+      - name: Install Dependencies
+        run: make install-python-packages
+
+      - name: Install MkDocs Insiders
+        if: github.event.repository.fork == false
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@8.5.10-insiders-4.26.6
 
       - name: Deploy release version
         run: |

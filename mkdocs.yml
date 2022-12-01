@@ -28,9 +28,13 @@ theme:
 
   language: en
   features:
+    - announce.dismiss
     - navigation.instant
     - navigation.sections
     - navigation.tabs
+    - search.highlight
+    - search.suggest
+    - toc.follow
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -56,11 +60,15 @@ theme:
     logo: logo
 
 plugins:
-  - minify:
-      minify_html: true
-  - search:
-      lang:
-        - en
+  search:
+    lang: en
+  tags: { }
+  minify:
+    minify_html: true
+  social:
+    cards_color:
+      fill: "#4361AA"
+    cards_font: PT Sans
 
 extra_css:
   - assets/stylesheets/main.css
