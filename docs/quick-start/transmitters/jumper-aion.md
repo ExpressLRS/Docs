@@ -4,6 +4,11 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
+!!! danger "Advisory"
+    If you are flashing/updating your TX module for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
+
+    Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
+
 ## Flashing via WiFi
 
 - Target: `Jumper_AION_Nano_2400_TX_via_WIFI`
@@ -115,6 +120,9 @@ Verify the version and hash in the main screen of the ExpressLRS Lua script.
 </figure>
 
 Attach a USB-C Data Cable to your module and Computer. Windows users might have to install [CP210x Windows Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
+
+!!! note
+    Jumper seems to have switched to a different UART adapter chip on some of these devices. They should be detected as USB-Enhanced Serial CH9102.
 
 <figure markdown>
 ![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)

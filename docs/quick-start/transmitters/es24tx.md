@@ -7,6 +7,11 @@ template: main.html
 !!! note 
     This guide applies to all of the following HappyModel TX modules: ES24TX, ES24TX Lite, ES24TX Iron Man, ES24TX Slim Pro and ES24TX Pro Micro. Any module with "Pro" in the name uses the `_Pro_Series` target. Some Pro Series targets may come unflashed, which requires [USB Flashing](#flashing-via-usbuart).
 
+!!! danger "Advisory"
+    If you are flashing/updating your TX module for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
+
+    Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
+
 ## Flashing via WiFi
 
 - Targets:
