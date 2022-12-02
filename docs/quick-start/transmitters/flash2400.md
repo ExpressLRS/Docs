@@ -7,9 +7,9 @@ template: main.html
 </figure>
 
 !!! danger "Advisory"
-    If you are flashing/updating your TX module for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware. Follow the Method 1 or Method 2 from the WiFi Flashing Guide below.
+    If you are flashing/updating your TX module for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
 
-    Joshua Bardwell have a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
+    Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
 
 ## 2nd Gen, OLED-equipped
 
