@@ -14,6 +14,9 @@ template: main.html
 
 - Device: `Jumper AION T-Lite 2400 TX`
 
+!!! tip "Hot Tip"
+    To ensure updating success with this method, update the EdgeTX firmware on the radio to at least EdgeTX 2.8.0 (released Nov. 27, 2022). The EdgeTx Firmware that comes with this radio is a pre-release version.
+
 With your handset turned on, connect a USB data cable to the USB data port of the Radio. Select `USB Serial(Debug)` or `USB Serial(VCP)` in the options window that pops up. 
 
 <figure markdown>
