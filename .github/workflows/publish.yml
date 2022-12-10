@@ -15,7 +15,7 @@ jobs:
       - name: Setup Python env
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9.2
+          python-version: 3.9.3
 
       - name: Setup Caching
         uses: actions/cache@v2
