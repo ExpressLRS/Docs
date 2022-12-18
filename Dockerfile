@@ -14,4 +14,3 @@ EXPOSE 8000
 
 ENTRYPOINT ["dumb-init"]
 CMD ["mkdocs", "serve", "--livereload", "--dev-addr=0.0.0.0:8000"]
-#CMD ["wget", "https://fonts.google.com/download?PT+Sans"]
