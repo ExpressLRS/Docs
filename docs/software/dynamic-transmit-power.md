@@ -20,7 +20,7 @@ In the ELRS Lua script, select `> TX Power`. There are three configurable elemen
 * `Dynamic`: Three options are available.
     - `Off`: Fixed power, always set power to the configured `Max Power` output.
     - `Dyn`: Dynamic power is enabled.
-    - `AUX9`-`AUX12`: Dynamic power is enabled only when this AUX channel is `high`, and power is fixed to the `Max Power` when `low`.
+    - `AUX9`-`AUX12`: Dynamic power is enabled only when this AUX channel is `high`, and power is fixed to the `Max Power` when `low`. [Demo Video](https://www.youtube.com/watch?v=wdPWw2xu8Ig)
 * `Fan Thresh`: Fan threshold. If the module has a fan, it will be enabled starting at this power level after a short delay.
 
 Another important setting is to make sure your craft is **armed** on AUX1=`high` (~2000us). See [Switch Modes](switch-config.md) for more information about AUX channels.
