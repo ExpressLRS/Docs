@@ -35,7 +35,7 @@ On module powerup with Dynamic Power enabled, transmit power is set to the minim
 
 For non-FLRC modes, Dynamic Power uses the average signal to noise ratio (SNR) reported by the receiver. If the SNR is above a threshold, the power will be lowered by one level. SNR is used because it takes into account interference (the "noise" in signal-to-noise) and is not affected by receivers with LNAs, which boost RSSI dBm. The thresholds for lowering the power are specific to each packet rate. For example, 250Hz (LoRa) will lower the power if SNR is <= 9.5 but 150Hz (LoRa) will lower power if the SNR is <= 8.5.
 
-For FLRC modes (packet rates beginning with `F` or `D`) Dynamic Power averages the last few RSSI dBm readings from the RX. If the RSSI is >= 83dBm, the transmit power is lowered by one level.
+For FLRC modes (packet rates beginning with `F` or `D`) Dynamic Power averages the last few RSSI dBm readings from the RX. If the RSSI is >= -83dBm, the transmit power is lowered by one level.
 
 For both algorithms, the power will only be lowered if the link quality (LQ) is 95% or higher.
 
@@ -45,7 +45,7 @@ The opposite of the "lowering power" algorithm is also in place, to raise power 
 
   * 250Hz (LoRa) raise power if SNR <= 3.0
   * 150Hz (LoRa) raise power if SNR <= 0.0
-  * F500 (FLRC) raise power if RSSI <= 89 dBm. Note that all FLRC modes use this same limit.
+  * F500 (FLRC) raise power if RSSI <= -89 dBm. Note that all FLRC modes use this same limit.
 
 To be proactive when telemetry is not received, Dynamic Power will also increase power one level for each missed telemetry packet, starting when two are missed back to back.
 
@@ -58,7 +58,7 @@ To be proactive when telemetry is not received, Dynamic Power will also increase
 In addition to the slow power ramp up, three LQ-based conditions will raise the power immediately to the maximum configured value.
 
 1. If the LQ ever drops below the hard limit (50% LQ), the power will jump to the max.
-2. If the LQ drops suddenly in a single telemetry update compared to the moving average. This is intended to react to flying behind a structure where the LQ suddenly takes a hit and is expected to drop further. Example: LQ is running 100% (as ExpressLRS do) and the TX receives a telemetry packet with 80% LQ, the power will jump to the max.
+2. If the LQ drops suddenly in a single telemetry update compared to the moving average. This is intended to react to flying behind a structure where the LQ suddenly takes a hit and is expected to drop further. Example: LQ is running 100% (as ExpressLRS does under most conditions) and the TX receives a telemetry packet with 80% LQ, the power will jump to the max.
 3. If telemetry is lost entirely with the arm switch high. Any time the TX is "disconnected" while armed, the power will jump to the max.
 
 ## Notes
