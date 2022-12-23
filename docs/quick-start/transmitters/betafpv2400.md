@@ -136,8 +136,10 @@ Verify the version and hash in the main screen of the ExpressLRS Lua script.
 </figure>
 
 !!! Note
-    The BetaFPV Micro 1W module (and the updated BetaFPV Micro 500mW) have dipswitches at the back of the module. You need to set switches 1 & 2 to ON, and the rest to OFF, for the flashing via USB to go through.
-
+    The BetaFPV Micro 1W module (and the updated BetaFPV Micro 500mW) has dipswitches at the back of the module. You need to set switches 1 & 2 to ON, and the rest to OFF, for flashing via USB. For normal operation switches 3 & 4 must be ON and the rest OFF. See the below diagram:
+    <figure markdown>
+    <img class="center-img" src="https://user-images.githubusercontent.com/1081265/208266962-2e00a222-d44f-48b8-8ea0-e4a9a8433e64.png">
+    </figure>
 Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
 
 <figure markdown>
