@@ -17,13 +17,18 @@ template: main.html
     There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
 
 <figure markdown>
-![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-EP1.png)
+![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-RP1.png)
 <figcaption>RadioMaster RP1 2.4GHz</figcaption>
 </figure>
 
 <figure markdown>
-![RadioMaster RP2 2.4GHz wiring pinout](../../assets/images/RM-EP2.png)
+![RadioMaster RP2 2.4GHz wiring pinout](../../assets/images/RM-RP2.png)
 <figcaption>RadioMaster RP2 2.4GHz</figcaption>
+</figure>
+
+<figure markdown>
+![RadioMaster RP3 2.4GHz wiring pinout](../../assets/images/RM-RP3.png)
+<figcaption>RadioMaster RP3 2.4GHz</figcaption>
 </figure>
 
 The images above show the receivers' pinouts and their connections. As we're dealing with UART connection, Rx on the receiver goes to a TX pad on the FC, and Tx on the receiver goes to an uninverted Rx pad on the FC.

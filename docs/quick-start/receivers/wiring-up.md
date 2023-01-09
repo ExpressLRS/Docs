@@ -254,13 +254,18 @@ Connect your FC to USB and configure your FC firmware as shown on the [next page
 ## RadioMaster RP
 
 <figure markdown>
-![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-EP1.png)
+![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-RP1.png)
 <figcaption>RadioMaster RP1, ESP-based</figcaption>
 </figure>
 
 <figure markdown>
-![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-EP2.png)
+![RadioMaster RP2 2.4GHz wiring pinout](../../assets/images/RM-RP2.png)
 <figcaption>RadioMaster RP2, ESP-based</figcaption>
+</figure>
+
+<figure markdown>
+![RadioMaster RP3 2.4GHz wiring pinout](../../assets/images/RM-RP3.png)
+<figcaption>RadioMaster RP3, ESP-based</figcaption>
 </figure>
 
 The RP receivers require their Boot pad (see figure above) shorted to ground on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the Boot pad connection needs to be removed, and is no longer needed for subsequent passthrough flashing.
