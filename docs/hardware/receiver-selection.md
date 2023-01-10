@@ -5,49 +5,26 @@ description: If you're still wondering which ExpressLRS receiver to get for your
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
-The ExpressLRS is a hashtag blessed with the benefit of there being many receivers available from a variety of manufacturers. This begs the question "Which receiver is best?" There is no best receiver, there is only one that has the features you want for the price you want to pay in the size you want it. ExpressLRS does not recommend a specific brand or model, but provide the information to help you select the right receiver for your needs.
+The ExpressLRS is a hashtag blessed with the benefit of there being many receivers available from a variety of manufacturers. This begs the question "Which receiver is best?" There is no best receiver, there is only one that has the features you want for the price you want to pay in the size you want it. ExpressLRS does not recommend a specific brand or model, but provide the information to help you select the right receiver for your needs. The following page will list manufacturers and features to look out for on their recievers.
 
-## Team2.4
-| Model | Price | Size | LNA | PA | Antenna | WiFi | RTF |
-|---|---|---|---|---|---|---|---|
-| Axis Thor RX | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } |  :whale::whale: | :material-check-bold: { .greencheck } | :checkered_flag: | 
-| Jumper AION Mini RX | :moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck } | :checkered_flag:|
-| Vantac RX | :moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :whale::whale: | :material-check-bold: { .greencheck } | :checkered_flag:|
-| BetaFPV Nano 2.4 | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 20dBm | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| BetaFPV Lite 2.4 | :moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x }  | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| DIY Nano 2.4 | :moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale:/:whale::whale:/:whale::whale::metal: | :material-check-bold: { .greencheck }  | :material-close-thick: { .red-x } |
-| Flywoo EL24E | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| Flywoo EL24P | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| Ghost ATTO | :moneybag::moneybag::moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } |
-| GEPRC Nano | :moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| GEPRC NanoSE | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| HappyModel PP | :moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-close-thick: { .red-x } | :checkered_flag: |
-| HappyModel EP1 | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| HappyModel EP2 | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| HGLRC 2400RX | :moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: | 
-| iFlight ELRS | :moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| JHEMCU / HiYOUNGER EP24S | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| JHEMCU / HiYOUNGER SP24S | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| JHEMCU / HiYOUNGER RX24T | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 20dBm? | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: | 
-| Matek R24-S | :moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 20dBm | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| Matek R24-D | :moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 23dBm | :whale::whale::metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| Namimno Flash (ESP) | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale:/:whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| Namimno Flash Diversity(ESP) | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 21dBm | :whale::whale::metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| QuadKopters Nano | :moneybag::moneybag:? | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale:/:whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| SIYI FR Mini | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 23dBm | :whale::whale::metal: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } |
-| Skystars Nano SS24D | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 23dBm | :whale::whale::metal: | :material-check-bold: { .greencheck } | :checkered_flag: |
+## Manufacturers:
+* Axisflying
+* BetaFPV
+* Emax
+* Foxeer
+* FrSky
+* Happymodel
+* HGLRC
+* iFlightRC
+* Jumper
+* MatekSys
+* NamimnoRC
+* RadioMasterRC
+* Vantac
 
-## Team900
-| Model | Price | Size | LNA | PA | Antenna | WiFi | RTF |
-|---|---|---|---|---|---|---|---|
-| BetaFPV Nano 900 | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | :material-check-bold: { .greencheck }  | :whale::whale: | :material-check-bold: { .greencheck } | :material-check-bold: { .greencheck }  |
-| FrSky R9 | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | :material-check-bold: { .greencheck }  | :whale::whale: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } |
-| HappyModel ES900RX | :moneybag::moneybag: | :straight_ruler: | :material-check-bold: { .greencheck }  | :material-check-bold: { .greencheck }  | :whale::whale: | :material-check-bold: { .greencheck }  | :material-check-bold: { .greencheck }  |
-| Jumper R9 Mini | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | :material-check-bold: { .greencheck }  | :whale::whale: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } |
-| NamimnoRC Voyager | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | :material-check-bold: { .greencheck }  | :whale::whale: | :material-close-thick: { .red-x } | :material-check-bold: { .greencheck }  |
-| GEPRC Nano | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 
-## Most important column
+## Things to look for:
+Each build is different, but these are reccomended things to look for when selecting a reciever:
 * **Whoops / Toothpicks / Light aircraft:** Size is probably the most important feature, with a light small receiver and an onboard antenna being the best choice.
 * **Racing Quads:** Size is again most important. Ceramic antennas could be less easily damaged, and the reduced range of tucking them inside the frame is fine due to the short flight range. An external 2.4GHz antenna dipole is still pretty easy to fit and can be tucked away for a small improvement over the ceramic, but comes with Chance of Choppage.
 * **Freestyle Quads:** Minimum size is no longer an issue so Nano-sized receivers are the best bet here. A LNA is going to give you better reception behind obstacles. External antennas are a benefit as well, but you need to trade off how unobstructed the antenna will be versus getting it chopped. Diversity is of marginal benefit.
