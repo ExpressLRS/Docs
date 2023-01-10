@@ -243,8 +243,7 @@ nav:
           - Unit Testing: software/testing/unit-testing.md
           - RX Testing: software/testing/rx-scoreboard.md
   - Hardware:
-      - Supported Hardware: hardware/supported-hardware.md
-      - Receiver Selection: hardware/receiver-selection.md
+      - Hardware Selection: hardware/hardware-selection.md
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
       - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
