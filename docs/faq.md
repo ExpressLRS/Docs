@@ -58,15 +58,16 @@ hide:
 ## <span class="custom-heading" data-id="9">How many channels does ELRS support?</span>
 
 ??? faq "How many channels does ELRS support?"
-    12 channels(suspicious asterisk). There is not enough bandwidth to support all full-resolution channels. It is possible that future versions would further expand this by sending extra channel data in a slow upload, but it is not a priority for development. Therefore, ELRS provides:
+    16 channels*. With more than 8 aux channels, there are tradeoffs that must be made, therefore ELRS offers the following aux modes:
 
-      * 4x full-resolution (10-bit) channels for sticks (CH1-4)
-      * Either:
-        * **Standard Mode** 4x 2-position channels sent every frame (increased to 8x in 1.0; dropped in 2.x), OR
-        * **HYBRID_SWITCHES_8 Mode** 1x 2-position channel, AUX1 (CH5; Must be used for Arming), 6x 2-position/3-position/6-position (AUX2-7) and 1x 16-position (AUX8), OR
-        * **WIDE HYBRID Mode** 1x 2-position channel, AUX1 (CH5; Must be used for Arming), 7x 64 or 128-position channels (AUX2-8). Available via the Lua Script since 2.0.
+      * 4x full-resolution (10-bit) channels for sticks (CH1-4) with either:
+        * **HYBRID Mode** 1x 2-position channel, AUX1 (CH5; Must be used for Arming), 6x 2-position/3-position/6-position (AUX2-7) and 1x 16-position (AUX8), OR
+        * **WIDE Mode** 1x 2-position channel, AUX1 (CH5; Must be used for Arming), 7x 64 or 128-position channels (AUX2-8). Available via the Lua Script since 2.0.
+      * 8x full-resolution (10-bit, ext-limits) with 1x 2-position channel, AUX1
+      * 16x full-resolution (10-bit, ext-limits, all half rate) with 1x 2-position channel, AUX1
+      * 12x full-resolution (10-bit, ext-limits) with 1x 2-position channel, AUX1, channels AUX2-9 run at half rate.
         
-      See [Switch Modes](software/switch-config.md) more more details.
+      See [Switch Modes](software/switch-config.md) for more details on switch modes and how they work
 
 ## <span class="custom-heading" data-id="10">Is my binding phrase a secret?</span>
 
