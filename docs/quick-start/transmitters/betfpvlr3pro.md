@@ -38,7 +38,7 @@ Windows users should check Device Manager and make sure your device is being det
 ![Device Manager](../../assets/images/DeviceMngr.png)
 </figure>
 
-If not and you're seeing a bunch of Yellow Warning icons for the RadioMaster Serial Port, download the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Extract/unzip the contents of the package into a folder and run the `VCP_V1.5.0_Setup_W7_x64_64bits` executable. 
+If not and you're seeing a bunch of Yellow Warning icons for the BetaFPV Lite Radio 3 Serial Port, download the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Extract/unzip the contents of the package into a folder and run the `VCP_V1.5.0_Setup_W7_x64_64bits` executable. 
 
 Using the ExpressLRS Configurator, select the appropriate version and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
 
