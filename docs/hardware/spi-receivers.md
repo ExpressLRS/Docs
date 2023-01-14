@@ -97,7 +97,7 @@ Go to Betaflight CLI and enter the following commands.
   });
 </script>
 
-The new Betaflight Configurator 10.9.0 also have the Passphrase/Binding Phrase field in the Receiver Tab where you can simply enter your Binding Phrase, and it will generate the UID numbers for you. Clicking `Save and Reboot` will then set the Binding Phrase into the flight controller configuration.
+The new Betaflight Configurator 10.9.0 also has the Passphrase/Binding Phrase field in the Receiver Tab where you can simply enter your Binding Phrase, and it will generate the UID numbers for you. Clicking `Save and Reboot` will set the Binding Phrase into the flight controller configuration.
 
 ## Acknowledgements
 
