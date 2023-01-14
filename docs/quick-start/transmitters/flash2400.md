@@ -137,7 +137,7 @@ Verify the version and hash in the main screen of the ExpressLRS Lua script.
 Attach your USB cable to the module and your computer. [CH340 Drivers](https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip) will have to be downloaded (Right-click, Save-as) and installed (Unzip the contents of the file; Run the executable installer) for this to work properly (Windows). Make sure your computer recognizes the module as a USB-SERIAL CH340 device, otherwise, this method will not work. For other Operating Systems, head to this [site](http://www.wch-ic.com/downloads/CH341SER_ZIP.html) to download your needed drivers.
 
 !!! tip "Important"
-    Check Device Manager on your Windows system before proceeding. Ensure drivers are installed. Some Linux distro might also need drivers. Driver download link [here](https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip).
+    Check Device Manager on your Windows system before proceeding. Ensure the correct drivers are installed. Some Linux distros might also need drivers. The drivers can be downloaded [here](https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip).
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 

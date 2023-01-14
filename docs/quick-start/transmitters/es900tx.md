@@ -134,8 +134,8 @@ This method requires you to move two jumpers into specific pins in the module bo
 The 2 bottom-most dipswitches should be moved into the position as shown in the image above. Attach your USB cable to the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
 
 !!! tip "Important"
-    Check Device Manager on your Windows system before proceeding. Ensure drivers are installed. Some Linux distro might also need drivers. Driver download link [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
-
+    Check Device Manager on your Windows system before proceeding. Ensure the correct drivers are installed. Some Linux distros might also need drivers. The drivers can be downloaded [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
+    
 <figure markdown>
 ![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
 </figure>
