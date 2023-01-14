@@ -11,6 +11,8 @@ template: main.html
 
     Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
 
+    Repartitioner is not needed if flashing via USB/UART.
+
 ## Flashing via EdgeTX Passthrough
 
 !!! info "Info"
@@ -88,6 +90,7 @@ Unplug the USB and verify with the [ExpressLRS Lua script] (right-click, save as
 - Targets:
     - `RadioMaster_Zorro_2400_TX_via_WIFI`
     - `RadioMaster_TX16S_2400_TX_via_WIFI`
+    - `RadioMaster_Boxer_2400_TX_via_WIFI`
 
 - Device Category:
     - `RadioMaster 2.4 GHz`
@@ -95,6 +98,8 @@ Unplug the USB and verify with the [ExpressLRS Lua script] (right-click, save as
 - Device: 
     - `RadioMaster Zorro 2400 TX`
     - `RadioMaster TX16S 2400 TX`
+    - `RadioMaster TX12 2400 TX`
+    - `RadioMaster Boxer 2400 TX`
 
 <figure markdown>
 ![via WiFi](../../assets/images/Method_intTX_WiFi.png)
