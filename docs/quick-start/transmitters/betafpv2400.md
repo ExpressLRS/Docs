@@ -146,7 +146,7 @@ Verify the version and hash in the main screen of the ExpressLRS Lua script.
 Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
 
 !!! tip "Important"
-    Check Device Manager on your Windows system before proceeding. Ensure drivers are installed. Some Linux distro might also need drivers. Driver download link [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
+    Check Device Manager on your Windows system before proceeding. Ensure the correct drivers are installed. Some Linux distros might also need drivers. The drivers can be downloaded [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
 
 <figure markdown>
 ![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
