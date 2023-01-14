@@ -34,10 +34,10 @@ template: main.html
 
 Before you start, ensure you have the latest EdgeTX firmware version on your RadioMaster Radio Handset. Consult the EdgeTX [documentation](https://github.com/EdgeTX/edgetx.github.io/wiki/EdgeTX-Installation-Guide) regarding the updating process.
 
-    - `TX16S MK2`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0).
-    - `Zorro`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0). It often comes with an earlier EdgeTX 2.7.0 version (2bdd4974) which results in unsuccessful flashing.
-    - `TX12 MK2`: Update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
-    - `Boxer`: The factory EdgeTX firmware should be based off an early EdgeTX 2.8.0 and wouldn't need an update.
+- `TX16S MK2`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0).
+- `Zorro`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0). It often comes with an earlier EdgeTX 2.7.0 version (2bdd4974) which results in unsuccessful flashing.
+- `TX12 MK2`: Update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
+- `Boxer`: The factory EdgeTX firmware should be based off an early EdgeTX 2.8.0 and wouldn't need an update.
 
 Also make sure you have an internal ELRS module on your Radio. The following steps only applies to handsets with ExpressLRS-specific internal modules. There are stickers marked with "ELRS" attached into your radio packaging or boxes, as well as on the JR module bays indicating the type of internal rf module the radio have.
 
