@@ -7,7 +7,7 @@ template: main.html
 </figure>
 
 !!! danger "Advisory"
-    If you are flashing/updating your TX module for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
+    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
 
     Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
 
@@ -19,6 +19,7 @@ template: main.html
 - Targets:
     - `RadioMaster_Zorro_2400_TX_via_ETX`
     - `RadioMaster_TX16S_2400_TX_via_ETX`
+    - `RadioMaster_Boxer_2400_TX_via_ETX`
 
 - Device Category:
     - `RadioMaster 2.4 GHz`
@@ -26,8 +27,17 @@ template: main.html
 - Device:
     - `RadioMaster Zorro 2400 TX`
     - `RadioMaster TX16S 2400 TX`
+    - `RadioMaster TX12 2400 TX`
+    - `RadioMaster Boxer 2400 TX`
 
-Before you start, ensure you have the latest EdgeTX firmware version on your Zorro or TX16S MK2. You need at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0). The Zorro often comes with an earlier EdgeTX 2.7.0 version (2bdd4974) which results in unsuccessful flashing.
+Before you start, ensure you have the latest EdgeTX firmware version on your RadioMaster Radio Handset. Consult the EdgeTX [documentation](https://github.com/EdgeTX/edgetx.github.io/wiki/EdgeTX-Installation-Guide) regarding the updating process.
+
+    - `TX16S MK2`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0).
+    - `Zorro`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0). It often comes with an earlier EdgeTX 2.7.0 version (2bdd4974) which results in unsuccessful flashing.
+    - `TX12 MK2`: Update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
+    - `Boxer`: The factory EdgeTX firmware should be based off an early EdgeTX 2.8.0 and wouldn't need an update.
+
+Also make sure you have an internal ELRS module on your Radio. The following steps only applies to handsets with ExpressLRS-specific internal modules. There are stickers marked with "ELRS" attached into your radio packaging or boxes, as well as on the JR module bays indicating the type of internal rf module the radio have.
 
 With your handset turned on, connect a USB data cable to the USB data port of the Radio. Select `USB Serial(Debug)` or `USB Serial(VCP)` in the options window that pops up. 
 
@@ -39,13 +49,16 @@ With your handset turned on, connect a USB data cable to the USB data port of th
 ![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
 </figure>
 
-Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. 
+!!! tip "Important"
+    This is a vital step and a common failure point. Pay attention.
+
+Windows users should check Device Manager and make sure your device is being detected as **STMicroelectronics Virtual COM Port** device. 
 
 <figure markdown>
 ![Device Manager](../../assets/images/DeviceMngr.png)
 </figure>
 
-If not and you're seeing a bunch of Yellow Warning icons for the RadioMaster Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `VCP_V1.5.0_Setup_W7_x64_64bits` executable.
+If not and you're seeing a bunch of Yellow Warning icons for the RadioMaster Serial Port, download the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Extract/unzip the contents of the package into a folder and run the `VCP_V1.5.0_Setup_W7_x64_64bits` executable. 
 
 Using the ExpressLRS Configurator, select the appropriate version and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
 

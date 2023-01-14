@@ -7,9 +7,11 @@ template: main.html
 ## ES900TX
 
 !!! danger "Advisory"
-    If you are flashing/updating your TX module for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
+    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
 
     Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
+
+    Repartitioner is not needed if flashing via USB/UART.
 
 ### Flashing via WiFi
 
@@ -130,6 +132,9 @@ This method requires you to move two jumpers into specific pins in the module bo
 </figure>
 
 The 2 bottom-most dipswitches should be moved into the position as shown in the image above. Attach your USB cable to the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a USB-to-UART Bridge device, otherwise, this method will not work.
+
+!!! tip "Important"
+    Check Device Manager on your Windows system before proceeding. Ensure drivers are installed. Some Linux distro might also need drivers. Driver download link [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
 
 <figure markdown>
 ![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)

@@ -7,9 +7,11 @@ template: main.html
 </figure>
 
 !!! danger "Advisory"
-    If you are flashing/updating your TX module for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
+    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
 
     Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
+
+    Repartitioner is not needed if flashing via USB/UART.
 
 ## 2nd Gen, OLED-equipped
 
@@ -132,7 +134,10 @@ Verify the version and hash in the main screen of the ExpressLRS Lua script.
 <figcaption>Flashing via UART</figcaption>
 </figure>
 
-Attach your USB cable to the module and your computer. [CH340 Drivers](https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip) will have to be downloaded (Right-click, Save-as) and installed (Unzip the contents of the file; Run the executable installer) for this to work properly (Windows). Make sure your computer recognizes the module as a USB-SERIAL CH340 device, otherwise, this method will not work. 
+Attach your USB cable to the module and your computer. [CH340 Drivers](https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip) will have to be downloaded (Right-click, Save-as) and installed (Unzip the contents of the file; Run the executable installer) for this to work properly (Windows). Make sure your computer recognizes the module as a USB-SERIAL CH340 device, otherwise, this method will not work. For other Operating Systems, head to this [site](http://www.wch-ic.com/downloads/CH341SER_ZIP.html) to download your needed drivers.
+
+!!! tip "Important"
+    Check Device Manager on your Windows system before proceeding. Ensure drivers are installed. Some Linux distro might also need drivers. Driver download link [here](https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip).
 
 Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
 
