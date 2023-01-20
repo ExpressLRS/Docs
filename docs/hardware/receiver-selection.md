@@ -23,6 +23,7 @@ The ExpressLRS is a hashtag blessed with the benefit of there being many receive
 | GEPRC NanoSE | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | HappyModel PP | :moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-close-thick: { .red-x } | :checkered_flag: |
 | HappyModel EP1 | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
+| HappyModel EP1 Dual | :moneybag: | :straight_ruler: | :material-close-thick: { .greencheck } | >19dBm | :whale:/:whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | HappyModel EP2 | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | HGLRC 2400RX | :moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: | 
 | iFlight ELRS | :moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
@@ -34,6 +35,7 @@ The ExpressLRS is a hashtag blessed with the benefit of there being many receive
 | Namimno Flash (ESP) | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale:/:whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | Namimno Flash Diversity(ESP) | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 21dBm | :whale::whale::metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | QuadKopters Nano | :moneybag::moneybag:? | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale:/:whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
+| Radiomaster RP3 | :moneybag: | :straight_ruler: | :material-close-thick: { .greencheck } | 100mw no dbm value | :whale:/:whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | SIYI FR Mini | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 23dBm | :whale::whale::metal: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } |
 | Skystars Nano SS24D | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 23dBm | :whale::whale::metal: | :material-check-bold: { .greencheck } | :checkered_flag: |
 
