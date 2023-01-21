@@ -37,7 +37,7 @@ With the correct target selected and [Firmware Options] set, **Build** your firm
 
 Once it's done, it should open the Target folder for you where the `AXIS_THOR_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
-The next steps will require the [ExpressRLS Lua script] (right-click, save as). Download the ExpressLRS Lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's a proper connection with the radio (see the [Radio Preparation](tx-prep.md) page). Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`.
+The next steps will require the [ExpressLRS Lua script] (right-click, save as). Download the ExpressLRS Lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's a proper connection with the radio (see the [Radio Preparation](tx-prep.md) page). Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`.
 
 <figure markdown>
 ![Lua Script](../../assets/images/lua1.jpg)

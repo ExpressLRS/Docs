@@ -86,7 +86,7 @@ With the correct target selected and [Firmware Options] set, **Build** your firm
 
 Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX_LITERADIO3-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
-Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`. If the ExpressLRS Lua script is not in the list, download it from [here] (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
+Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`. If the ExpressLRS Lua script is not in the list, download it from [here](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
 
 <figure markdown>
 ![Lua Script](../../assets/images/lua1.jpg)
