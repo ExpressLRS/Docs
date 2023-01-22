@@ -5,7 +5,7 @@ description: This will guide you on how to select the best ExpressLRS (ELRS) rad
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
-ExpressLRS is hashtag blessed with the benefit of there being many receivers available from a variety of manufacturers. This begs the question "Which receiver is best?" There is no best receiver, there is only one that has the features you want for the price you want to pay in the size you want it. ExpressLRS does not recommend a specific brand or model, but provide the information to help you select the right receiver for your needs. The following page will list manufacturers and features to look out for on their recievers.
+ExpressLRS is hashtag blessed with the benefit of there being many receivers available from a variety of manufacturers. This begs the question "Which receiver is best?" There is no best receiver, there is only one that has the features you want for the price you want to pay in the size you want it. ExpressLRS does not recommend a specific brand or model, but provide the information to help you select the right receiver for your needs. The following page will list manufacturers and features to look out for on their receivers.
 
 !!! note Note
     This list will list primarily 2.4GHz hardware with 900MHz only listed in the frequency category, as 2.4GHz has become a significantly larger portion of the ELRS market.
@@ -25,10 +25,10 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 * [NamimnoRC](https://m.facebook.com/profile.php?id=100070062095159&_rdr)
 * [RadioMasterRC](https://www.radiomasterrc.com)
 * [Vantac](https://www.frsky-rc.com)
-## Reciever Selection
-This section exists to list out some common features of recievers and will give some examples of recievers with these features.
+## Receiver Selection
+This section exists to list out some common features of receivers and will give some examples of receivers with these features.
 
-Each build is different, but these are reccomended things to look for when selecting a reciever:
+Each build is different, but these are reccomended things to look for when selecting a receiver:
 
   * **Whoops / Toothpicks / Light aircraft:** Size is probably the most important feature, with a light small receiver and an onboard antenna being the best choice.
   * **Racing Quads:** Size is again most important. Ceramic antennas could be less easily damaged, and the reduced range of tucking them inside the frame is fine due to the short flight range. An external 2.4GHz antenna dipole is still pretty easy to fit and can be tucked away for a small improvement over the ceramic, but comes with Chance of Choppage.
@@ -37,7 +37,7 @@ Each build is different, but these are reccomended things to look for when selec
 
 ??? info "Frequency"
 
-    ExpressLRS offers both 2.4GHz and 900MHz systems, with each only working with recievers and transmitters of the same frequency. 2.4GHz is the currently most popular frequency given it's legality, featureset and cost. 2.4GHz links offer the fastest packet rates allowing for a more locked in feel while piloting and still offer massive amounts of range. 900MHz is the original long range frequency and still can be great for high wifi pollution environments with slightly better penetration.
+    ExpressLRS offers both 2.4GHz and 900MHz systems, with each only working with receivers and transmitters of the same frequency. 2.4GHz is the currently most popular frequency given it's legality, featureset and cost. 2.4GHz links offer the fastest packet rates allowing for a more locked in feel while piloting and still offer massive amounts of range. 900MHz is the original long range frequency and still can be great for high wifi pollution environments with slightly better penetration.
 
     For new users unless you plan on flying hundreds of kilometers or in a high noise environment we reccomend 2.4GHz hardware:
 
@@ -45,7 +45,7 @@ Each build is different, but these are reccomended things to look for when selec
       * Radiomaster RP Series
       * NamimnoRC Flash Series
 
-    If you have an R9 system or similar or plan on flying beyond reasonable ranges, some great 900MHz recievers include:
+    If you have an R9 system or similar or plan on flying beyond reasonable ranges, some great 900MHz receivers include:
 
       * BetaFPV Nano900
       * Happymodel ES900RX
@@ -57,8 +57,8 @@ Each build is different, but these are reccomended things to look for when selec
 
 ??? info Diversity
 
-??? info LNA
-
-??? info PA
+??? info PA/LNA
 
 ??? info PWM
+
+??? info Size
