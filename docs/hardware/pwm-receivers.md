@@ -5,7 +5,7 @@ description: ExpressLRS supports PWM output without the need of converters.
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
-ExpressLRS now supports direct PWM output from receivers that have been specifically designed for this mode. Any version-compatible TX firmware (e.g. 2.0.0 TX with 2.0.0 RX) works with PWM receivers-- only the RX firmware is specific to PWM. This documentation refers to only receivers with native PWM output, not receivers attached to external CRSF to PWM converters such as the [CRServoF](https://github.com/CapnBry/CRServoF/) or Matek CRSF-PWM-C. PWM frequency is currently locked at 50Hz.
+ExpressLRS now supports direct PWM output from receivers that have been specifically designed for this mode. Any version-compatible TX firmware (e.g. 2.0.0 TX with 2.0.0 RX) works with PWM receivers-- only the RX firmware is specific to PWM. This documentation refers to only receivers with native PWM output, not receivers attached to external CRSF to PWM converters such as the [CRServoF](https://github.com/CapnBry/CRServoF/) or Matek CRSF-PWM-C.
 
 ## Channel Mapping and Failsafe
 The default channel mapping is straight through: CH1 from the TX goes to PWM Output 1, CH2 to Output 2, etc. To change this on ESP-based receivers, allow the receiver to go into WiFi mode then use the WebUI to configure the mapping. Any input channel can be mapped to any output channel, and the same input can be used for as many outputs as desired. AUX1/CH5 is always 1-bit, so you'll likely want to change this mapping to a channel with more resolution.
