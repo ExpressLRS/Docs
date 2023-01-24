@@ -22,7 +22,9 @@ Both really. LQI is most important because you can't fly if you're not getting p
 
 ## RSSI Sensitivity Limit
 
-This is the lowest theoretical RSSI value that can be distinguished by the radio receiver. It is displayed in the ELRS.lua when you select the packet rate, because different packet rates and frequency bands have different sensitivity limits. Lower rates are more sensitive, -123dBm for 25Hz 915MHz up to -105dBm for 500Hz 2400MHz. This gives you the limit you know you can't fly below.
+This is the lowest theoretical RSSI value that can be distinguished by the radio receiver. It is displayed next to the packet rate in the ELRS.lua script, as different packet rates and frequency bands have different sensitivity limits. Lower rates are more sensitive, -123dBm for 25Hz 915MHz up to -105dBm for 500Hz 2400MHz. This gives you the limit you know you can't fly below. 
+
+A sensible warning value is 5-10dBm higher than the sensitivity limit shown in the [RF Mode Indexes](https://github.com/ExpressLRS/Docs/edit/master/docs/info/signal-health.md#rf-mode-indexes-rfmd) (e.g. 250Hz=-108dBn, so -103dBm to -98dBm for the alarm).
 
 ## RSSI Channel
 
