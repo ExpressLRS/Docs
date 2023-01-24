@@ -30,6 +30,7 @@ Anyone can add an entry to the table, and entries should include the:
 | 40.7Km | 900M | 50Hz | 10mW | Wing | No | Leslie Yagin | [Link](https://www.youtube.com/watch?v=HRqTklpWDIM) |
 | 10Km | 2.4G | 500Hz | 10mW | Quad | Yes | mrscythe | [Link](https://youtu.be/IpiPEZrCGtg) |
 | 10Km | 2.4G | 50Hz | 10mW |  Wing| No | Padcom | [Link](https://www.youtube.com/watch?v=8Xm_bNlywQA) |
+| 2.28Km | 900M | 50Hz | 10mW | Quad | No | Mike Malagoli | [Link](https://www.youtube.com/watch?v=qi4OygUAZxA&t=75s) |
 
 
 ### 25mW
