@@ -79,11 +79,31 @@ Connect your FC to USB and configure your FC firmware as shown on the [next page
 <figcaption>BetaFPV 2.4GHz Lite (Flat & Tower), ESP-based</figcaption>
 </figure>
 
+<figure markdown>
+![betafpv SuperD](../../assets/images/BetaFPVSuperD.png)
+<figcaption>BetaFPV SuperD Diversity Receiver, ESP-based</figcaption>
+</figure>
+
 Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Don't forget to also wire up 5v(VCC) and Gnd.
 
 These are ESP-based receivers and updating via WiFi is supported.
 
 Connect your FC to USB and configure your FC firmware as shown on the [next page].
+
+## Foxeer Receivers
+
+<figure markdown>
+![Foxeer ExpressLRS Receivers](../../assets/images/FoxeerWiring.png)
+<figcaption>Foxeer LNA and Lite 2.4GHz, ESP-based</figcaption>
+</figure>
+
+Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Don't forget to also wire up 5v(VCC) and Gnd.
+
+These are ESP-based receivers and updating via WiFi is supported.
+
+Connect your FC to USB and configure your FC firmware as shown on the [next page].
+
+Also shown were the locations of the boot pads and boot button.
 
 ## Frsky R9MM/mini, R9mx, R9Slim, R9Slim+
 
