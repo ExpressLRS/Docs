@@ -41,6 +41,8 @@ Before you start, ensure you have the latest EdgeTX firmware version on your Rad
 
 Also make sure you have an internal ELRS module on your Radio. The following steps only applies to handsets with ExpressLRS-specific internal modules. There are stickers marked with "ELRS" attached into your radio packaging or boxes, as well as on the JR module bays indicating the type of internal rf module the radio have.
 
+Also make sure that the Serial Ports, USB-VCP setting is set to `CLI` mode on your Radio. This setting can be found in the `System Menu` -> `Hardware` Page.
+
 With your handset turned on, connect a USB data cable to the USB data port of the Radio. Select `USB Serial(Debug)` or `USB Serial(VCP)` in the options window that pops up. 
 
 <figure markdown>

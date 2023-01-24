@@ -19,6 +19,8 @@ template: main.html
 
 - Device: `BETAFPV LiteRadio 3 Pro`
 
+Before starting, make sure that the Serial Ports, USB-VCP setting is set to `CLI` mode on your Radio. This setting can be found in the `System Menu` -> `Hardware` Page.
+
 With your handset turned on, connect a USB data cable to the USB port of the Radio. Select `USB Serial(VCP)` in the options window that pops up. 
 
 <figure markdown>
