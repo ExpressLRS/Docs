@@ -44,6 +44,7 @@ Anyone can add an entry to the table, and entries should include the:
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
 | 18.97Km| 2.4G | 150Hz | 50mW | Wing | yes | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
+| 7Km | 2.4G | 150Hz | 50mW | Quad | No | Taufik | [Link](https://youtu.be/bUlUGCup48I) |
 | 6Km | 900M | 100Hz | 50mW | Wing | No | Snipes | [Link](https://youtu.be/kN89mINbmQc?t=58) |
 
 ### 100mW
@@ -52,8 +53,8 @@ Anyone can add an entry to the table, and entries should include the:
 | 35Km | 2.4G | 250Hz | 100mW | Wing | No | Snipes | [Link](https://youtu.be/dBmTRhgVcyY) |
 | 30Km | 900M | 50Hz | 100mW | Wing | No | Slickshot | [Link](https://www.youtube.com/watch?v=PpJuhhFvYpM&t) |
 | 20Km | 2.4G | 150Hz | 100mW | Wing | Yes | Pairan | [Link](https://youtu.be/B9-AItJ9WS0) |
-| 12Km | 900M | 50Hz | 100mW | Quad | Yes | Taufik | [Link](https://www.youtube.com/watch?v=dlpwG76BGs8&ab_channel=CauSiang) |
-| 7.14Km | 2.4g | 500hz | 100mw | wing | NO | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
+| 13.1Km | 900M | 50Hz | 100mW | Quad | No | Taufik | [Link](https://youtu.be/Thrz9QuZGWE) |
+| 7.14Km | 2.4g | 500hz | 100mw | Wing | NO | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
 | 6.43Km | 2.4G | 50Hz | 100mW | Wing | No | DivisionRc | [Link](https://youtu.be/3VAJ14y0ZIY) |
 | 3Km | 2.4G (ceramic chip antenna RX) | 500Hz | 100mW | Quad | No | Spec | [Link](https://www.youtube.com/watch?v=kfa6ugX46n8)
 
