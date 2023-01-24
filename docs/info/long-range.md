@@ -37,6 +37,7 @@ Anyone can add an entry to the table, and entries should include the:
 ### 25mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
+| 13.96Km | 2.4G | 50Hz | 25mW | Wing | Yes | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
 | 13.58Km | 900M | 50Hz | 25mW | Wing | No | Jullibach | [Link](https://youtu.be/gZ8q5DAIrtE) |
 | 4.6Km | 2.4G | 50Hz | 25mW | Quad | No | febbyeka | [Link](https://www.youtube.com/watch?v=jtiu6GdsKhA) |
 | 4.5Km | 2.4G | 50Hz | 25mW | Quad | No | Taufik | [Link](https://youtu.be/j2MqtfiM7eo) |
@@ -45,6 +46,7 @@ Anyone can add an entry to the table, and entries should include the:
 ### 50mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
+| 18.97Km| 2.4G | 150Hz | 50mW | Wing | yes | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
 | 15.76Km| 2.4G | 150Hz | 50mW | Wing | yes | Börner | [Link](https://www.youtube.com/watch?v=EdrOipm3JWA) |
 | 7Km | 2.4G | 150Hz | 50mW | Quad | No | Taufik | [Link](https://youtu.be/bUlUGCup48I) |
 | 6Km | 900M | 100Hz | 50mW | Wing | No | Snipes | [Link](https://youtu.be/kN89mINbmQc?t=58) |
@@ -79,4 +81,5 @@ Anyone can add an entry to the table, and entries should include the:
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
 | 50Km | 900M | 25Hz | 500mW | Wing | No | Yarillo | [Link](https://youtu.be/EJeTSvX5jrA) |
+| 11.47Km | 2.4G | 50hz | 500mW | Wing | No | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
 | 4.00Km | 900M | 100Hz | 500mW | Wing | No | Aaron Vergara | [Link](https://www.youtube.com/watch?v=o_DbErp85cQ) |
