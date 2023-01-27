@@ -17,6 +17,8 @@ template: main.html
 !!! tip "Hot Tip"
     To ensure updating success with this method, update the EdgeTX firmware on the radio to at least EdgeTX 2.8.0 (f6d140e, released Nov. 27, 2022). The EdgeTx Firmware that comes with this radio is a pre-release version.
 
+Before starting, make sure that the Serial Ports, USB-VCP setting is set to `CLI` mode on your Radio. This setting can be found in the `System Menu` -> `Hardware` Page.
+
 With your handset turned on, connect a USB data cable to the USB data port of the Radio. Select `USB Serial(Debug)` or `USB Serial(VCP)` in the options window that pops up. 
 
 <figure markdown>
