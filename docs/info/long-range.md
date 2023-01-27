@@ -27,12 +27,11 @@ Anyone can add an entry to the table, and entries should include the:
 ### 10mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
-| 40Km | 900M | 50Hz | 10mW | Wing | No | Snipes | [Link](https://www.youtube.com/watch?v=0QWN9qWoSYY) |
 | 40.7Km | 900M | 50Hz | 10mW | Wing | No | Leslie Yagin | [Link](https://www.youtube.com/watch?v=HRqTklpWDIM) |
 | 10Km | 2.4G | 500Hz | 10mW | Quad | Yes | mrscythe | [Link](https://youtu.be/IpiPEZrCGtg) |
 | 10Km | 2.4G | 50Hz | 10mW |  Wing| No | Padcom | [Link](https://www.youtube.com/watch?v=8Xm_bNlywQA) |
-| 6.3Km| 2.4G | 50Hz | 10mW | Wing |  No | Padcom | [Link](https://www.youtube.com/watch?v=xS_HYcZSkyI) |
 | 2.28Km | 900M | 50Hz | 10mW | Quad | No | Mike Malagoli | [Link](https://www.youtube.com/watch?v=qi4OygUAZxA&t=75s) |
+
 
 ### 25mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
@@ -40,14 +39,12 @@ Anyone can add an entry to the table, and entries should include the:
 | 13.96Km | 2.4G | 50Hz | 25mW | Wing | Yes | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
 | 13.58Km | 900M | 50Hz | 25mW | Wing | No | Jullibach | [Link](https://youtu.be/gZ8q5DAIrtE) |
 | 4.6Km | 2.4G | 50Hz | 25mW | Quad | No | febbyeka | [Link](https://www.youtube.com/watch?v=jtiu6GdsKhA) |
-| 4.5Km | 2.4G | 50Hz | 25mW | Quad | No | Taufik | [Link](https://youtu.be/j2MqtfiM7eo) |
 | 3Km | 2.4G | 150Hz | 25mW | Quad | No | Taufik | [Link](https://www.youtube.com/watch?v=vG_hxHndXdI&ab_channel=CauSiang) |
 
 ### 50mW
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
 | 18.97Km| 2.4G | 150Hz | 50mW | Wing | yes | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
-| 15.76Km| 2.4G | 150Hz | 50mW | Wing | yes | Börner | [Link](https://www.youtube.com/watch?v=EdrOipm3JWA) |
 | 7Km | 2.4G | 150Hz | 50mW | Quad | No | Taufik | [Link](https://youtu.be/bUlUGCup48I) |
 | 6Km | 900M | 100Hz | 50mW | Wing | No | Snipes | [Link](https://youtu.be/kN89mINbmQc?t=58) |
 
@@ -58,12 +55,8 @@ Anyone can add an entry to the table, and entries should include the:
 | 30Km | 900M | 50Hz | 100mW | Wing | No | Slickshot | [Link](https://www.youtube.com/watch?v=PpJuhhFvYpM&t) |
 | 20Km | 2.4G | 150Hz | 100mW | Wing | Yes | Pairan | [Link](https://youtu.be/B9-AItJ9WS0) |
 | 13.1Km | 900M | 50Hz | 100mW | Quad | No | Taufik | [Link](https://youtu.be/Thrz9QuZGWE) |
-| 12Km | 900M | 50Hz | 100mW | Quad | Yes | Taufik | [Link](https://www.youtube.com/watch?v=dlpwG76BGs8&ab_channel=CauSiang) |
-| 11Km | 900M | 50Hz | 100mW | Quad | No | Taufik | [Link](https://youtu.be/ySBvXENS33s) |
-| 10Km | 2.4G | 250Hz | 100mW | Wing | No | Snipes | [Link](https://youtu.be/dJYfWLtXVg8) | 
-| 7.14Km | 2.4g | 500hz | 100mw | wing | NO | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
+| 7.14Km | 2.4g | 500hz | 100mw | Wing | NO | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
 | 6.43Km | 2.4G | 50Hz | 100mW | Wing | No | DivisionRc | [Link](https://youtu.be/3VAJ14y0ZIY) |
-| 5.5Km | 900M | 50Hz | 100mW | Quad | No | Abdul | [Link](https://youtu.be/onFqZNVJiFQ) |
 | 3Km | 2.4G (ceramic chip antenna RX) | 500Hz | 100mW | Quad | No | Spec | [Link](https://www.youtube.com/watch?v=kfa6ugX46n8)
 
 ### 250mW
@@ -72,8 +65,6 @@ Anyone can add an entry to the table, and entries should include the:
 | 43.7Km | 2.4G | 150Hz | 250mW | Wing | No | Slickshot | [Link](https://www.youtube.com/watch?v=Fidq5O3IvZs) |
 | 20Km | 2.4G | 50Hz | 250mW | Wing | No | Padcom | [Link](https://www.youtube.com/watch?v=Fu0fHgSrOqw) |
 | 12.2Km | 2.4G | 500Hz | 250mW | Wing | No | Börner | [Link](https://youtu.be/GUUngM6NcAg) |
-| 10.85Km | 2.4G | 50Hz | 250mW | Wing | No | Stavros | [Link](https://youtu.be/tZvrAGST8tQ) |
-| 6Km | 2.4G | 500Hz | 250mW | Wing | No | Spec | [Link](https://www.youtube.com/watch?v=bVJaiqJq8gY) |
 | 4.77Km | 900M | 200Hz | 250mW | Quad | No | DaBit | [Link](https://www.youtube.com/watch?v=k0lY0XwB6Ko) |
 | 1.78Km | 2.4G | 250Hz | 250mW | Quad | No | Thujones | [Link](https://www.youtube.com/watch?v=jhWQvomcCLU) |
 
