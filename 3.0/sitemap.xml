@@ -176,6 +176,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/3.0/quick-start/receivers/betafpv-superd/</loc>
+         <lastmod>2023-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/3.0/quick-start/receivers/betafpv2400/</loc>
          <lastmod>2023-01-27</lastmod>
          <changefreq>daily</changefreq>
@@ -202,6 +207,11 @@
     </url>
     <url>
          <loc>https://www.expresslrs.org/3.0/quick-start/receivers/flash2400/</loc>
+         <lastmod>2023-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/3.0/quick-start/receivers/foxeer2400/</loc>
          <lastmod>2023-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
