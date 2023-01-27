@@ -21,7 +21,10 @@ With more features being added consistently, [`./src/user_defines.txt`](https://
 ```
 MY_BINDING_PHRASE="default ExpressLRS binding phrase"
 ```
-This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet<sup>*</sup>. Receivers flashed with firmware builds that do not have binding phrases enabled will support and require the traditional binding method. 📜 For ESP/ESP32 hardware, this value can also be changed through the WebUI.
+!!! Important
+    This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet<sup>*</sup>. 
+
+Receivers flashed with firmware builds that do not have binding phrases enabled will support and require the traditional binding method. 📜 For ESP/ESP32 hardware, this value can also be changed through the WebUI.
 
 This feature can, but should not be used as a model match feature (to lock a single specific transmitter to a single specific receiver). For that use, the [Model Match option](model-config-match.md#model-match).
 
