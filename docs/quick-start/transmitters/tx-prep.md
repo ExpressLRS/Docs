@@ -5,21 +5,23 @@ description: Get your Radio Handset prepared for ExpressLRS with this setup guid
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Radio Firmware with CRSFShot/Mixer Sync
+## Compatibility Requirements for ExpressLRS
 
-ExpressLRS **requires** CRSFShot or Mixer Sync to ensure full support for high packet rates. Starting with [OpenTX-2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12), `CRSFshot` has been fully implemented, and thus you will have to update your OpenTX radio to these [newer](https://www.open-tx.org/downloads.html#Releases23-ref) versions.
+### Requirements for High Packet Rate Support
 
-The ExpressLRS Devs, however, highly recommend [EdgeTX](https://github.com/EdgeTX/edgetx/releases) for the best experience and compatibility. There are options in EdgeTX that old and new Radio handsets will benefit from, like the One Bit sample mode for the older Frsky Radios (X9D, QX7) and Mega Bauds (Baudrates higher than 400K). 
+To ensure full support for high packet rates, ExpressLRS requires either `CRSFShot` or Mixer Sync. If you are using OpenTX, make sure to update to [OpenTX-2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12) or later, as CRSFShot has been fully integrated into these [newer](https://www.open-tx.org/downloads.html#Releases23-ref) versions.
+
+### Recommendation for Best Experience
+
+The ExpressLRS development team highly recommends using [EdgeTX](https://github.com/EdgeTX/edgetx/releases) for the best experience and compatibility. EdgeTX offers options that will benefit both old and new radio handsets, including the One Bit sample mode for older Frsky radios (X9D, QX7) and support for Mega Bauds (baud rates higher than 400K). 
 
 ## Radio Setup
 
 ### Serial Baud Rate
 
-The Baud Rate is the speed to which (in this instance) the Transmitter module and the Radio Handset communicate. It is measured in bits per second. Common baud rates include 115200bps and 400000bps.
+The Baud Rate determines the communication speed between the Transmitter module and the Radio Handset, expressed in bits per second. Common baud rates are 115200bps and 400000bps.
 
-A Faster or higher baud rate means that the module and radio can talk much faster, further lowering the end-to-end latency of the system. However, not all radio handsets or transmitter modules are capable of higher baud rates as this is highly dependent on the hardware.
-
-Depending on the firmware that is running on your radio handset, you can change the baud rate setting to better suit your setup. This setting can be found in the System Menu -> Hardware page, under the Max Bauds (earlier OpenTX) or Baudrate (EdgeTX; recent OpenTX). On EdgeTX 2.7.0 and later, External RF modules now use their Baudrate setting (see Model Setup section below). Internal CRSF Modules will still use the Baudrate setting in the System Menu -> Hardware page.
+A higher baud rate reduces the end-to-end latency of the system, but not all hardware supports higher rates. The baud rate setting can be found in the System Menu -> Hardware page, and can be changed to match your setup. On EdgeTX 2.7.0 and later, the Baudrate setting for external RF modules is located in the Model Setup section, while internal CRSF modules use the Baudrate setting in the System Menu -> Hardware page.
 
 <figure markdown>
 ![Baudrate](../../assets/images/txprep-clr-hardware.jpg)
@@ -31,24 +33,37 @@ Depending on the firmware that is running on your radio handset, you can change 
 <figcaption>Baudrate setting on Older Radios</figcaption>
 </figure>
 
-The 500Hz Packet Rate requires at least 400K Baud Rate setting on the Radio handset. 
+### Radio Packet Rate and Baud Rate Requirements
 
-The F1000 Packet Rate requires more than 400K Baud Rate setting on the Radio handset.
+#### 500Hz Packet Rate
 
-Radios such as the Frsky QX7, X10/S, and X12 will require either the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) or the OneBit Sample mode (found just before the ADC Filter setting in EdgeTX System Menu -> Hardware page) if a 400K or higher Baud Rate is desired. The Taranis X9D(+) has proven to be finicky even with the default 400K Baud Rate setting (see [Troubleshooting the X9D](../../hardware/x9d-troubleshooting.md)) and could use the OneBit Sample Mode as well.
+- A minimum of 400K Baud Rate setting is required on the radio handset.
+
+#### F1000 Packet Rate
+
+- Requires a Baud Rate setting of more than 400K on the radio handset.
+
+#### Radio Handset Compatibility
+
+- Frsky QX7, X10/S, and X12: [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) or OneBit Sample mode (found in EdgeTX System Menu -> Hardware page) may be required for 400K or higher Baud Rate setting.
+- Taranis X9D(+): Default 400K Baud Rate setting may not be sufficient and OneBit Sample Mode may be needed. (Refer to [Troubleshooting the X9D](../../hardware/x9d-troubleshooting.md) for more information)
 
 !!! info "Note"
     When Radio Baud Rate is set at 115200, 250Hz will be the maximum Packet Rate you can use.
 
-As this setting also involves the module, it should be noted that you must also consider the type of module you are using with the radio. For instance, the R9M 2018 cannot reliably run at 400K Baud Rate setting and will require the [Resistor Mod](../../hardware/inverter-mod.md) first. If you can run your Radio Handset at a lower 115200 Baud Rate, then you don't have to do this Mod. STM-based modules like the R9M 2019, Ghost, Happymodel ES915TX or the Gen1 No OLED NamimnoRC Flash and Voyager modules can run at 1.87M Baud Rate. ESP-based modules like the Happymodel ES24TX, BetaFPV Nano & Micro or the Axisflying Thor can run up-to 3.75M or even 5.25M.
+#### Module Compatibility
 
-Be warned though. Just because you can doesn't mean you should. If you're experiencing constant Telemetry Lost/Recovered even nearby and/or that the Lua Script fails to load properly, then it's a sign your radio and/or module cannot run the selected Baud Rate. Lower it down a notch or settle with 400K Baud Rate.
+When adjusting the Baud Rate setting on your radio handset, it's important to take into account the type of module you are using. For example, the R9M 2018 may not be able to run at a Baud Rate of 400K, and may require a [Resistor Mod](../../hardware/inverter-mod.md) before it can be used. If you can run your radio handset at a lower Baud Rate of 115200, then the mod may not be necessary.
+
+STM-based modules, such as the R9M 2019, Ghost, Happymodel ES915TX, and the Gen1 No OLED NamimnoRC Flash and Voyager modules, can run at a Baud Rate of 1.87M. On the other hand, ESP-based modules, such as the Happymodel ES24TX, BetaFPV Nano & Micro, and the Axisflying Thor, can run up to 3.75M or even 5.25M.
+
+It's important to note that just because a higher Baud Rate is possible, it doesn't mean it's always the best option. If you're experiencing constant Telemetry Lost/Recovered even when in close proximity, or if Lua scripts are failing to load properly, this could be a sign that the selected Baud Rate is not compatible with your radio and/or module. In such cases, it may be necessary to lower the Baud Rate down a notch or settle with 400K.
 
 ### ADC Filter
 
-The ADC filter is enabled by default in OpenTX and is known to cause issues with RC Command data. This can result in "jagged" RC command responses in black box logs, caused by sequential RC packets that have the same command value (which were "smoothed" by the ADC filter). We recommend turning the ADC filter OFF in [OpenTX/EdgeTX](https://www.youtube.com/watch?v=ESr2H_EZ89Q).
+The ADC filter is enabled by default in OpenTX, but it can cause problems with RC Command data. It can result in "jagged" RC command responses in black box logs because the filter smooths sequential RC packets with the same command value. We recommend turning off the ADC filter in [OpenTX/EdgeTX](https://www.youtube.com/watch?v=ESr2H_EZ89Q).
 
-With EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
+In EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off), which is useful for Fixed Wing models equipped with PWM receivers connected to slower servos.
 
 ## Model Setup
 
@@ -69,7 +84,9 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 ![ExternalRF Color](../../assets/images/txprep-clr-externalRF.jpg)
 </figure>
 
-For Radios equipped with Internal ExpressLRS modules, like the RadioMaster Zorro, RadioMaster TX16S MK2, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro or the BetaFPV Lite Radio 3 Pro, set the Internal RF Module to **CRSF** Protocol and the External RF Module to OFF if you want to use the Internal ExpressLRS module instead of an external one. If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, set the `Internal Module Type` to CRSF via your Radio's `System Menu -> Hardware` page.
+### Internal ExpressLRS Module Configuration
+
+For radios equipped with an Internal ExpressLRS module, such as the RadioMaster Zorro, RadioMaster TX16S MK2, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro, or BetaFPV Lite Radio 3 Pro, set the Internal RF Module to CRSF Protocol and turn the External RF Module off if you want to use the internal ExpressLRS module instead of an external one. If the CRSF Protocol option is not available under the Internal RF Modes, set the `Internal Module Type` to CRSF through the `System Menu -> Hardware page`.
 
 <figure markdown>
 ![InternalRF BW](../../assets/images/txprep-bw-internalRF.jpg)

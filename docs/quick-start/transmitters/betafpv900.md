@@ -4,156 +4,208 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-!!! danger "Advisory"
-    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
-
-    Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
-
-    Repartitioner is not needed if flashing via USB/UART.
-
-## Flashing via WiFi
-
-- Targets:
-    - `BETAFPV_900_TX_via_WIFI`
-    - `BETAFPV_900_TX_MICRO_via_WIFI`
-
-- Device Category: 
-    - `BETAFPV 900 MHz`
-
-- Device:
-    - `BETAFPV 900 TX` (Nano)
-    - `BETAFPV 900 TX Micro`
-
-
-<figure markdown>
-![via WiFi](../../assets/images/Method_TX_WiFi.png)
-<figcaption>Flashing via WiFi</figcaption>
-</figure>
-
-!!! attention
-    The methods below apply if you've already updated your Tx modules to 2.x. For modules still in firmwares pre 2.x, you should use [1.x WiFi flashing method](https://www.expresslrs.org/1.0/quick-start/tx-betafpv900/) to update to 2.x. Or update to 2.x via USB instead.
-
-### Method 1
-
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
-
-<figure markdown>
-![Build]
-</figure>
-
-Once it's done, it should open the Target folder for you where the `BETAFPV_900_TX-<version>.bin` or `BETAFPV_900_TX_MICRO-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
-
-The next steps will require the [ExpressLRS Lua script] (right-click, save as). Download the ExpressLRS Lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's a proper connection with the radio (see the [Radio Preparation](tx-prep.md) page). Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`.
-
-<figure markdown>
-![Lua Script](../../assets/images/lua1.jpg)
-</figure>
-
-<figure markdown>
-![Lua Script T16](../../assets/images/lua2.jpg)
-</figure>
-
-If the script is stuck at `Loading...`, then there's a chance your module is still in v1.x firmware, your External RF module is not set to CRSF or your module is not well-connected to the module bay pins.
-
-<figure markdown>
-![Lua3](../../assets/images/lua3.jpg)
-</figure>
-
-Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**. Press OK once more to activate the WiFi on the Tx Module. Connect to the Access Point the module will create called `ExpressLRS TX`, with the password being `expresslrs`.
-
-<figure markdown>
-![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
-</figure>
-
-Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `BETAFPV_900_TX-<version>.bin` or `BETAFPV_900_TX_MICRO-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
-
-Once the file is uploaded, a pop-up confirmation will show up. Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
-
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
-
-!!! Info "Update for version 2.0"
-    Once you have updated to firmware version 2.0 or newer, the Web Update page on the Hotspot will get a few updates of its own. It will get the Update progress bar, and a Popup will be shown for Success or Error messages. Additionally, you can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the two methods below.
-
-<figure markdown>
-![JoinNetwork](../../assets/images/web-joinnetwork.png)
-</figure>
-
-### Method 2
-
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
-
-<figure markdown>
-![Build]
-</figure>
-
-Once it's done, it should open the Target folder for you where the `BETAFPV_900_TX-<version>.bin` or `BETAFPV_900_TX_MICRO-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
-
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the local network automatically.
-
-Using your browser, navigate to http://elrs_tx.local and the WiFi Update page should show up. Scroll down towards the Firmware Update section, as shown below:
-
-<figure markdown>
-![Firmware Update](../../assets/images/web-firmwareupdate.png)
-</figure>
-
-Drag-and-drop the `BETAFPV_900_TX-<version>.bin` or `BETAFPV_900_TX_MICRO-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and the module will reboot (~1min).
-
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
-
-### Method 3
-
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the network automatically.
-
-Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options]. Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
-
-<figure markdown>
-![Build & Flash]
-</figure>
-
-<figure markdown>
-![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
-</figure>
-
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
-
-## Flashing via USB/UART
-
-- Targets:
-    - `BETAFPV_900_TX_via_UART`
-    - `BETAFPV_900_TX_MICRO_via_UART`
-
-- Device Category:
-    - `BETAFPV 900 MHz`
-
-- Device:
-    - `BETAFPV 900 TX` (Nano)
-    - `BETAFPV 900 TX Micro`
-
-<figure markdown>
-![via UART](../../assets/images/Method_TX_UART.png)
-<figcaption>Flashing via UART</figcaption>
-</figure>
-
-Attach a USB Data Cable to your module and Computer. Windows users might have to install [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
-
-!!! tip "Important"
-    Check Device Manager on your Windows system before proceeding. Ensure the correct drivers are installed. Some Linux distros might also need drivers. The drivers can be downloaded [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
+!!! danger "Flashing ExpressLRS 3.x Firmware"
+    1. If flashing/updating for the first time from the factory firmware or an older firmware, flash the module to version 2.5.1.
+    2. Use the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as) to flash it.
+        - If Target Mismatch error appears, click `Flash Anyway`.
+    3. Follow method 1 or 2 from the WiFi Flashing Guide to flash to the 3.x firmware.
     
-<figure markdown>
-![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
-</figure>
+    !!! info "Repartitioner is not necessary when flashing via USB/UART."
 
-Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
+    **Reference**: Joshua Bardwell's video on the topic can be found [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
 
-<figure markdown>
-![Build & Flash]
-</figure>
+## Flashing BetaFPV 900MHz
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
+Following are the flashing methods for BetaFPV 900MHz
 
-## Cannot flash?
+### <span class="custom-heading" data-id="1">Flashing via WiFi</span>
+??? Note "Flashing via WiFi"
 
-If you've followed any of the steps above and still cannot get your devices flashed and updated, see this video for the explanation of why and the fix to get your devices flashed and updated (applies to the Nano modules only).
+    - Targets:
+        - `BETAFPV_900_TX_via_WIFI`
+        - `BETAFPV_900_TX_MICRO_via_WIFI`
+
+    - Device Category: 
+        - `BETAFPV 900 MHz`
+
+    - Device:
+        - `BETAFPV 900 TX` (Nano)
+        - `BETAFPV 900 TX Micro`
+
+
+    <figure markdown>
+    ![via WiFi](../../assets/images/Method_TX_WiFi.png)
+    <figcaption>Flashing via WiFi</figcaption>
+    </figure>
+
+    !!! attention
+        The methods below apply if you've already updated your Tx modules to 2.x. For modules still in firmwares pre 2.x, you should use [1.x WiFi flashing method](https://www.expresslrs.org/1.0/quick-start/tx-betafpv900/) to update to 2.x. Or update to 2.x via USB instead.
+
+    #### <span class="custom-heading" data-id="2">Method 1</span>
+    ??? Note "Method 1"
+
+        1. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        2. Build the firmware, which will open the Target folder where the `BETAFPV_900_TX-<version>.bin` or `BETAFPV_900_TX_MICRO-<version>.bin` file is located. Do not close this window so you can easily locate the correct file to upload to the module.
+
+            <figure markdown>
+            ![Build]
+            </figure>
+
+        3. Download the [ExpressLRS Lua script] (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
+        4. Insert the module into the module bay and make sure it's securely connected to the radio (see the [Radio Preparation](tx-prep.md) page).
+        5. Execute the ExpressLRS Lua script by going to "System Menu" on your radio, then under Tools, select `ExpressLRS`.
+
+            <figure markdown>
+            ![Lua Script](../../assets/images/lua1.jpg)
+            </figure>
+
+            <figure markdown>
+            ![Lua Script T16](../../assets/images/lua2.jpg)
+            </figure>
+
+            !!! Info "Troubleshooting the ExpressLRS Lua Script"
+                If you encounter an issue where the script is stuck at `Loading...`, please refer to the [troubleshooting guide](http://localhost:8000/quick-start/troubleshooting/#expresslrs-lua-script-is-stuck-at-loading) for help.
+
+            <figure markdown>
+            ![Lua3](../../assets/images/lua3.jpg)
+            </figure>
+
+        6. From the ExpressLRS Lua script, select "WiFi Connectivity" and then "Enable WiFi". Confirm by pressing OK.
+
+            <figure markdown>
+            ![Lua4](../../assets/images/lua/wifi-bw.png)
+            </figure>
+
+        7. Connect to the Access Point created by the module, named `ExpressLRS TX`, using the password `expresslrs`.
+
+            <figure markdown>
+            ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
+            </figure>
+
+
+        8. Open your browser and navigate to http://10.0.0.1/ to access the upload form. Scroll down to find the form.
+        9. Drag and drop the firmware file, `BETAFPV_900_TX-<version>.bin` or `BETAFPV_900_TX_MICRO-<version>.bin`, created by the ExpressLRS Configurator. Alternatively, use the `Choose File` button to select the file from the folder where the firmware was created.
+        10. Ensure that you have selected the correct firmware file and click `Update`.
+        11. Once the file is uploaded, a pop-up confirmation will show up.
+
+            <figure markdown>
+            ![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
+            </figure>
+
+        12. Wait for the confirmation pop-up and for the "WiFi Running" screen to close.
+        13. Close and relaunch the script.
+        14. Verify the firmware version and hash in the main screen of the ExpressLRS Lua script.
+
+        !!! info
+            You can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the next two methods below.
+
+        <figure markdown>
+        ![JoinNetwork](../../assets/images/web-joinnetwork.png)
+        </figure>
+
+    #### <span class="custom-heading" data-id="3">Method 2</span>
+    ??? Note "Method 2"
+
+        1. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        2. Build the firmware, which will open the Target folder where the `BETAFPV_900_TX-<version>.bin` or `BETAFPV_900_TX_MICRO-<version>.bin` file is located. Do not close this window so you can easily locate the correct file to upload to the module.
+
+            <figure markdown>
+            ![Build]
+            </figure>
+
+        3. Using the [ExpressLRS Lua script] (right-click, save as), select "WiFi Connectivity" and then "Enable WiFi". Confirm by pressing OK.
+
+            <figure markdown>
+            ![Lua4](../../assets/images/lua/wifi-bw.png)
+            </figure>
+
+        4. If you have previously set up your Tx Module with your home WiFi network details, it will connect automatically.
+        5. Using a browser, navigate to http://elrs_tx.local.
+        6. The WiFi Update page will appear. Scroll down to the "Firmware Update" section.
+
+            <figure markdown>
+            ![Firmware Update](../../assets/images/web-firmwareupdate.png)
+            </figure>
+
+        7. Drag-and-drop the `BETAFPV_900_TX-<version>.bin` or `BETAFPV_900_TX_MICRO-<version>.bin` file created by the ExpressLRS Configurator into the "Choose File" field, or manually navigate to the folder and select the file.
+        8. Click the "Update" button. Wait for the process to complete (approx. 1 minute).
+        9. Close and relaunch the script.
+        10. Verify the version and hash in the main screen of the ExpressLRS Lua script.
+
+    #### <span class="custom-heading" data-id="4">Method 3</span>
+    ??? Note "Method 3"
+
+        1. Using the [ExpressLRS Lua script] (right-click, save as), select "WiFi Connectivity" and then "Enable WiFi". Confirm by pressing OK.
+
+            <figure markdown>
+            ![Lua4](../../assets/images/lua/wifi-bw.png)
+            </figure>
+
+        2. If you have previously set up your Tx Module with your home WiFi network details, it will connect automatically.
+        3. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        4. Click **Build and Flash**. Wait for the compile process to complete.
+
+            <figure markdown>
+            ![Build & Flash]
+            </figure>
+
+        5. Once done, you should see a Success message, marking the update process complete.
+
+            <figure markdown>
+            ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
+            </figure>
+
+        6. Close and relaunch the script.
+        7. Verify the version and hash in the main screen of the ExpressLRS Lua script.
+
+### <span class="custom-heading" data-id="5">Flashing via USB/UART</span>
+??? Note "Flashing via USB/UART"
+
+    - Targets:
+        - `BETAFPV_900_TX_via_UART`
+        - `BETAFPV_900_TX_MICRO_via_UART`
+
+    - Device Category:
+        - `BETAFPV 900 MHz`
+
+    - Device:
+        - `BETAFPV 900 TX` (Nano)
+        - `BETAFPV 900 TX Micro`
+
+    <figure markdown>
+    ![via UART](../../assets/images/Method_TX_UART.png)
+    <figcaption>Flashing via UART</figcaption>
+    </figure>
+
+    1. Attach a USB Data Cable to your module and computer.
+    2. Windows users may need to install the [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly recognized and initialized.
+
+        !!! tip "Important"
+            Check Device Manager on your Windows system before proceeding. Ensure the correct drivers are installed. Some Linux distros might also need drivers. The drivers can be downloaded [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
+
+        <figure markdown>
+        ![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
+        </figure>
+
+    3. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+    4. Click **Build and Flash**. Wait for the compile process to complete.
+
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
+
+    5. Once done, you should see a Success message, marking the update process complete.
+
+        <figure markdown>
+        ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
+        </figure>
+
+    6. Close and relaunch the script.
+    7. Verify the version and hash in the main screen of the ExpressLRS Lua script.
+
+## Fix for Flashing and Updating Devices (Nano Modules Only)
+
+If you have encountered issues with flashing and updating your devices even after following the steps, watch this video for a demonstration of the problem and its solution.
 
 <figure markdown>
 <iframe width="688" height="387" src="https://www.youtube.com/embed/Pt5rMp7Zs8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -163,3 +215,5 @@ If you've followed any of the steps above and still cannot get your devices flas
 [Build]: ../../assets/images/Build.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Firmware Options]: ../firmware-options.md
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>

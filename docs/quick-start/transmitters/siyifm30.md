@@ -4,48 +4,52 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## FM30
+## Flashing and Updating FM30
 
-### Flashing via STLink
+Following are the flashing and updating methods for Siyi FM30
 
-- Target: `FM30_TX_via_STLINK`
+### <span class="custom-heading" data-id="1">Flashing via STLink</span>
+??? Note "Flashing via STLink"
 
-!!! note
-    The only way to flash the FM30 series is using STLINK. Luckily, their pads are pretty generous on the TX and easy to connect. This is a one-way process, there is no returning to the stock firmware after flashing. 
+    - Target: `FM30_TX_via_STLINK`
 
-<figure markdown>
-![TX Unwired](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-4.JPG?raw=true)
-</figure>
+    !!! note
+        The only way to flash the FM30 series is using STLINK. Luckily, their pads are pretty generous on the TX and easy to connect. This is a one-way process, there is no returning to the stock firmware after flashing. 
 
-* The TX module is opened by removing the four screws on the corners of the case using a small phillips screwdriver, then two further screws to remove the circuit board once inside.
-* Connect wires to SWDIO, SWCLK, NRST, and GND to the header points shown in red above on the TX. Attach 5V to the VCC pad, not the 3.3V pad!
-* Connect the other side to a STLINK programmer
-* Flash using the `FM30_TX_via_STLINK` target
-* After the flashing procedure, it is safe to leave the STLINK device connected to test that the firmware is operational, but uplug the USB connection before inserting the module into your handset for testing.
-* Be sure your handset has the External Module type set to CRSF. See the general Troubleshooting section for other ways to determine your module is flashed and ready for flying.
+    <figure markdown>
+    ![TX Unwired](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-4.JPG?raw=true)
+    </figure>
 
-### Updating via DFU
+    1. The TX module is opened by removing the four screws on the corners of the case using a small phillips screwdriver, then two further screws to remove the circuit board once inside.
+    2. Connect wires to SWDIO, SWCLK, NRST, and GND to the header points shown in red above on the TX. Attach 5V to the VCC pad, not the 3.3V pad!
+    3. Connect the other side to a STLINK programmer
+    4. Flash using the `FM30_TX_via_STLINK` target
+    5. After the flashing procedure, it is safe to leave the STLINK device connected to test that the firmware is operational, but uplug the USB connection before inserting the module into your handset for testing.
+    6. Be sure your handset has the External Module type set to CRSF. See the general Troubleshooting section for other ways to determine your module is flashed and ready for flying.
 
-- Target: `FM30_TX_via_DFU`
+### <span class="custom-heading" data-id="2">Updating via DFU</span>
+??? Note "Updating via DFU"
 
-Updating the TX is a lot easier and can be done via DFU without needing a STLINK.
+    - Target: `FM30_TX_via_DFU`
 
-* Remove the module from your handset. ⚠️ DO NOT plug in the USB while the module is still in the handset. There is no protection to prevent connecting the USB's power directly to your handset.
-* Hold the button labeled "Bind" on the FM30 TX. Plug in the USB. There should be an "ExpressLRS DFU bootloader" device in Windows Device Manager. If not, the STM32 DFU drivers may need to be installed.
-* Flash using the `FM30_TX_via_DFU` target
-* Note that the process **always reports failure** but this occurs after flashing, so check for the message "File downloaded successfully", not what follows it:
-```
-Download        [======================== ]  97%        46080 bytes
-Download        [=========================] 100%        47340 bytes
-Download done.
-File downloaded successfully
-Invalid DFU suffix signature
-A valid DFU suffix will be required in a future dfu-util release!!!
-Error during download get_status
-*** [upload] Error 74
-```
+    Updating the TX is a lot easier and can be done via DFU without needing a STLINK.
 
-## FR Mini RX as TX
+    1. Remove the module from your handset. ⚠️ DO NOT plug in the USB while the module is still in the handset. There is no protection to prevent connecting the USB's power directly to your handset.
+    2. Hold the button labeled "Bind" on the FM30 TX. Plug in the USB. There should be an "ExpressLRS DFU bootloader" device in Windows Device Manager. If not, the STM32 DFU drivers may need to be installed.
+    3. Flash using the `FM30_TX_via_DFU` target
+    4. Note that the process **always reports failure** but this occurs after flashing, so check for the message "File downloaded successfully", not what follows it:
+    ```
+    Download        [======================== ]  97%        46080 bytes
+    Download        [=========================] 100%        47340 bytes
+    Download done.
+    File downloaded successfully
+    Invalid DFU suffix signature
+    A valid DFU suffix will be required in a future dfu-util release!!!
+    Error during download get_status
+    *** [upload] Error 74
+    ```
+
+## Flashing and Updating FR Mini RX as TX
 
 The RX has the same RF components as the TX does, making it a possible candidate for a small ~200mW TX module. Wiring to the JR Module Bay requires only 3 pins (JR pins are starting from the top down)
 
@@ -61,37 +65,39 @@ JR Module Pin | FR Mini Pin | Description
 ![FR Mini RX as TX Wiring](https://cdn.discordapp.com/attachments/738450139693449258/864205774251229224/frmini-rx-as-tx-wiring.jpg)
 </figure>
 
-### Flashing via STLink
+### <span class="custom-heading" data-id="3">Flashing via STLink</span>
+??? Note "Flashing via STLink"
 
-- Target: `FM30_RX_MINI_AS_TX_via_STLINK`
+    - Target: `FM30_RX_MINI_AS_TX_via_STLINK`
 
-!!! note
-    The only way to flash the FR Mini is using STLINK. This is a one-way process, there is no returning to the stock firmware after flashing. 
-    
-The flashing procedure is similar to the FM30 TX module flashing listed above but using these pads on the receiver. Use the `FM30_RX_MINI_AS_TX_via_STLINK` target for initial flashing.
+    !!! note
+        The only way to flash the FR Mini is using STLINK. This is a one-way process, there is no returning to the stock firmware after flashing. 
+        
+    The flashing procedure is similar to the FM30 TX module flashing listed above but using these pads on the receiver. Use the `FM30_RX_MINI_AS_TX_via_STLINK` target for initial flashing.
 
-<figure markdown>
-![FR Mini Pads](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/siyi/jupa/Siyi-12.JPG)
-</figure>
+    <figure markdown>
+    ![FR Mini Pads](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/siyi/jupa/Siyi-12.JPG)
+    </figure>
 
-### Updating via UART
+### <span class="custom-heading" data-id="4">Updating via UART</span>
+??? Note "Updating via UART"
 
-- Target: `FM30_RX_MINI_AS_TX_via_UART`
+    - Target: `FM30_RX_MINI_AS_TX_via_UART`
 
-Updates are done through OpenTX's built-in firmware flashing tool.
+    Updates are done through OpenTX's built-in firmware flashing tool.
 
-* Build the firmware using Configurator and selecting the `FM30_RX_MINI_AS_TX_via_UART` target. The build process will generate a `firmware`.elrs` file.
-* Copy this file to the handset `FIRMWARE/` directory on the sd card.
-* Flash the firmware to the module using OpenTX
-* Hold the MENU/SYS button on the handset to open the system menu
-* Press PAGE to navigate to the SD card browser
-* Scroll down to the FIRMWARE directory, and press ENTER
-* Find `firmware.elrs` and long press the ENTER key to open the context menu
-* Select `Flash Ext. ELRS` from the menu
+    1. Build the firmware using Configurator and selecting the `FM30_RX_MINI_AS_TX_via_UART` target. The build process will generate a `firmware`.elrs` file.
+    2. Copy this file to the handset `FIRMWARE/` directory on the sd card.
+    3. Flash the firmware to the module using OpenTX
+    4. Hold the MENU/SYS button on the handset to open the system menu
+    5. Press PAGE to navigate to the SD card browser
+    6. Scroll down to the FIRMWARE directory, and press ENTER
+    7. Find `firmware.elrs` and long press the ENTER key to open the context menu
+    8. Select `Flash Ext. ELRS` from the menu
 
 ## Troubleshooting Flashing
 
-### <span class="custom-heading" data-id="1">Unable to connect to the target device</span>
+### <span class="custom-heading" data-id="5">Unable to connect to the target device</span>
 
 ??? Note "Unable to connect to the target device"
     If the flash fails with "Unable to connect to target device" (not "No STLINK found!") it is likely your STLINK clone does not have the RST line connected, but you can trigger the needed reset manually with a little more effort. The reason this is needed is that SIYI has disabled "Software Reset" to protect you from stealing their firmware binary.
@@ -102,7 +108,7 @@ Updates are done through OpenTX's built-in firmware flashing tool.
     * Before you press CONNECT. Short the RST line from the TX to GND. Press CONNECT and quickly remove the wire from the GND pad.
     * If it works, the GUI will tell you that the board is readout protected and must be disabled. Do this.
 
-### <span class="custom-heading" data-id="2">Flash loader run error</span>
+### <span class="custom-heading" data-id="6">Flash loader run error</span>
 
 ??? Note "Flash loader run error"
     Before both the TX and RX can be flashed using the `st-flash` utility used by PlatformIO on Linux, the STM32 chip must have its "Readout Protection" (RDP) disabled, which was set by SIYI at the factory to make our lives more difficult. The windows flashing utility usually automatically disables this, but the Linux utility does not. If you do not disable readout protection you'll get this cryptic error when flashing:

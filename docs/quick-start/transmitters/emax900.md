@@ -7,139 +7,198 @@ template: main.html
 !!! Info
     These devices come pre-installed with a 3.x-ready firmware. You don't need to reflash these devices. You can use the Web UI of these devices to update the Binding Phrase or any of the firmware options.
 
-## Flashing via WiFi
+## Flashing EMAX 900MHz
 
-- Target:
-    - `EMAX_Nano_900_TX_via_WIFI`
-    - `EMAX_900_TX_via_WIFI`
+Following are the flashing methods for EMAX 900MHz.
 
-- Device Category: `EMAX 900 MHz`
+### <span class="custom-heading" data-id="1">Flashing via WiFi</span>
+??? Note "Flashing via WiFi"
 
-- Device: 
-    - `EMAX Nano 900MHz TX`
-    - `EMAX OLED 900MHz TX`
+    - Target:
+        - `EMAX_Nano_900_TX_via_WIFI`
+        - `EMAX_900_TX_via_WIFI`
+
+    - Device Category: 
+        - `EMAX 900 MHz`
+
+    - Device: 
+        - `EMAX Nano 900MHz TX`
+        - `EMAX OLED 900MHz TX`
+
+    <figure markdown>
+    ![via WiFi](../../assets/images/Method_TX_WiFi.png)
+    <figcaption>Flashing via WiFi</figcaption>
+    </figure>
+
+    #### <span class="custom-heading" data-id="2">Method 1</span>
+    ??? Note "Method 1"
+
+        1. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        2. Build the firmware, which will open the Target folder where the `EMAX_Nano_900_TX-<version>.bin` or `EMAX_900_TX-<version>.bin` file is located. Do not close this window so you can easily locate the correct file to upload to the module.
+
+            <figure markdown>
+            ![Build]
+            </figure>
+
+        3. Download the [ExpressLRS Lua script] (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
+        4. Insert the module into the module bay and make sure it's securely connected to the radio (see the [Radio Preparation](tx-prep.md) page).
+        5. Execute the ExpressLRS Lua script by going to "System Menu" on your radio, then under Tools, select `ExpressLRS`.
+
+            <figure markdown>
+            ![Lua Script](../../assets/images/lua1.jpg)
+            </figure>
+
+            <figure markdown>
+            ![Lua Script T16](../../assets/images/lua2.jpg)
+            </figure>
+
+            !!! Info "Troubleshooting the ExpressLRS Lua Script"
+                If you encounter an issue where the script is stuck at `Loading...`, please refer to the [troubleshooting guide](http://localhost:8000/quick-start/troubleshooting/#expresslrs-lua-script-is-stuck-at-loading) for help.
+
+            <figure markdown>
+            ![Lua3](../../assets/images/lua3.jpg)
+            </figure>
+
+        6. From the ExpressLRS Lua script, select "WiFi Connectivity" and then "Enable WiFi". Confirm by pressing OK.
+
+            <figure markdown>
+            ![Lua4](../../assets/images/lua/wifi-bw.png)
+            </figure>
+
+        7. Connect to the Access Point created by the module, named `ExpressLRS TX`, using the password `expresslrs`.
+
+            <figure markdown>
+            ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
+            </figure>
 
 
-<figure markdown>
-![via WiFi](../../assets/images/Method_TX_WiFi.png)
-<figcaption>Flashing via WiFi</figcaption>
-</figure>
+        8. Open your browser and navigate to http://10.0.0.1/ to access the upload form. Scroll down to find the form.
+        9. Drag and drop the firmware file, `EMAX_Nano_900_TX-<version>.bin` or `EMAX_900_TX-<version>.bin`, created by the ExpressLRS Configurator. Alternatively, use the `Choose File` button to select the file from the folder where the firmware was created.
+        10. Ensure that you have selected the correct firmware file and click `Update`.
 
-### Method 1
+            <figure markdown>
+            ![Firmware Update](../../assets/images/web-firmwareupdate.png)
+            </figure>
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+        11. Once the file is uploaded, a pop-up confirmation will show up.
 
-<figure markdown>
-![Build]
-</figure>
+            <figure markdown>
+            ![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
+            </figure>
+            
+        12. Wait for the confirmation pop-up and for the "WiFi Running" screen to close.
+        13. Close and relaunch the script.
+        14. Verify the firmware version and hash in the main screen of the ExpressLRS Lua script.
 
-Once it's done, it should open the Target folder for you where the `EMAX_Nano_900_TX-<version>.bin` or `EMAX_900_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+        !!! info
+            You can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the next two methods below.
 
-The next steps will require the [ExpressLRS Lua script] (right-click, save as). Download the ExpressLRS Lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's a proper connection with the radio (see the [Radio Preparation] page). Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`.
+        <figure markdown>
+        ![JoinNetwork](../../assets/images/web-joinnetwork.png)
+        </figure>
 
-<figure markdown>
-![Lua Script](../../assets/images/lua1.jpg)
-</figure>
+    #### <span class="custom-heading" data-id="3">Method 2</span>
+    ??? Note "Method 2"
 
-<figure markdown>
-![Lua Script T16](../../assets/images/lua2.jpg)
-</figure>
+        1. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        2. Build the firmware, which will open the Target folder where the `EMAX_Nano_900_TX-<version>.bin` or `EMAX_900_TX-<version>.bin` file is located. Do not close this window so you can easily locate the correct file to upload to the module.
 
-If the script is stuck at `Loading...`, then there's a chance your Radio External RF module is not set to CRSF or that your module is not well-connected to the module bay pins.
+            <figure markdown>
+            ![Build]
+            </figure>
 
-<figure markdown>
-![Lua3](../../assets/images/lua3.jpg)
-</figure>
+        3. Using the [ExpressLRS Lua script] (right-click, save as), select "WiFi Connectivity" and then "Enable WiFi". Confirm by pressing OK.
 
-Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**. Press OK once more to activate the WiFi on the Tx Module. Connect to the Access Point the module will create called `ExpressLRS TX`, with the password being `expresslrs`.
+            <figure markdown>
+            ![Lua4](../../assets/images/lua/wifi-bw.png)
+            </figure>
 
-<figure markdown>
-![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
-</figure>
+        4. If you have previously set up your Tx Module with your home WiFi network details, it will connect automatically.
+        5. Using a browser, navigate to http://elrs_tx.local.
+        6. The WiFi Update page will appear. Scroll down to the "Firmware Update" section.
 
-Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show the Web UI. Navigate to the `Update` Tab and you should see a File Upload form. You can now drag-and-drop the `EMAX_Nano_900_TX-<version>.bin` or `EMAX_900_TX-<version>.bin` file that the ExpressLRS Configurator created into the File Upload field. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
+            <figure markdown>
+            ![Firmware Update](../../assets/images/web-firmwareupdate.png)
+            </figure>
 
-Once the file is uploaded, a pop-up confirmation will show up. Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+        7. Drag-and-drop the `EMAX_Nano_900_TX-<version>.bin` or `EMAX_900_TX-<version>.bin` file created by the ExpressLRS Configurator into the "Choose File" field, or manually navigate to the folder and select the file.
+        8. Click the "Update" button. Wait for the process to complete (approx. 1 minute).
+        9. Close and relaunch the script.
+        10. Verify the version and hash in the main screen of the ExpressLRS Lua script.
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
+    #### <span class="custom-heading" data-id="4">Method 3</span>
+    ??? Note "Method 3"
 
-**Join Local Network**
+        1. Using the [ExpressLRS Lua script] (right-click, save as), select "WiFi Connectivity" and then "Enable WiFi". Confirm by pressing OK.
 
-You can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the next two methods below.
+            <figure markdown>
+            ![Lua4](../../assets/images/lua/wifi-bw.png)
+            </figure>
 
-<figure markdown>
-![JoinNetwork](../../assets/images/web-joinnetwork.png)
-</figure>
+        2. If you have previously set up your Tx Module with your home WiFi network details, it will connect automatically.
+        3. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        4. Click **Build and Flash**. Wait for the compile process to complete.
 
-### Method 2
+            <figure markdown>
+            ![Build & Flash]
+            </figure>
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+        5. Once done, you should see a Success message, marking the update process complete.
 
-<figure markdown>
-![Build]
-</figure>
+            <figure markdown>
+            ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
+            </figure>
 
-Once it's done, it should open the Target folder for you where the `EMAX_Nano_900_TX-<version>.bin` or `EMAX_900_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+        6. Close and relaunch the script.
+        7. Verify the version and hash in the main screen of the ExpressLRS Lua script.
 
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the local network automatically.
+### <span class="custom-heading" data-id="5">Flashing via USB/UART</span>
+??? Note "Flashing via USB/UART"
 
-Using your browser, navigate to http://elrs_tx.local and the WiFi Update page should show up. Navigate to the `Update` Tab and you should see a File Upload form. You can now drag-and-drop the `EMAX_Nano_900_TX-<version>.bin` or `EMAX_900_TX-<version>.bin` file that the ExpressLRS Configurator created into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. 
+    - Target:
+        - `EMAX_Nano_900_TX_via_UART`
+        - `EMAX_900_TX_via_UART`
 
-Once the file is uploaded, a pop-up confirmation will show up. Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+    - Device Category: `EMAX 900 MHz`
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
+    - Device: 
+        - `EMAX Nano 900MHz TX`
+        - `EMAX OLED 900MHz TX`
 
-### Method 3
+    <figure markdown>
+    ![via UART](../../assets/images/Method_TX_UART.png)
+    <figcaption>Flashing via UART</figcaption>
+    </figure>
 
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the network automatically.
+    1. Attach a USB Data Cable to your module and computer.
+    2. Windows users may need to install the [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly recognized and initialized.
 
-Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options]. Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
+        !!! tip "Important"
+            Check Device Manager on your Windows system before proceeding. Ensure the correct drivers are installed. Some Linux distros might also need drivers. The drivers can be downloaded [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
 
-<figure markdown>
-![Build & Flash]
-</figure>
+        <figure markdown>
+        ![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
+        </figure>
 
-<figure markdown>
-![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
-</figure>
+    3. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+    4. Click **Build and Flash**. Wait for the compile process to complete.
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
 
-## Flashing via USB/UART
+    5. Once done, you should see a Success message, marking the update process complete.
 
-- Target:
-    - `EMAX_Nano_900_TX_via_UART`
-    - `EMAX_900_TX_via_UART`
+        <figure markdown>
+        ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
+        </figure>
 
-- Device Category: `EMAX 900 MHz`
-
-- Device: 
-    - `EMAX Nano 900MHz TX`
-    - `EMAX OLED 900MHz TX`
-
-<figure markdown>
-![via UART](../../assets/images/Method_TX_UART.png)
-<figcaption>Flashing via UART</figcaption>
-</figure>
-
-Attach a USB-C Data Cable to your module and Computer. Windows users might have to install [CP210x Windows Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to ensure the device is properly detected and initialized.
-
-!!! tip "Important"
-    Check Device Manager on your Windows system before proceeding. Ensure the correct drivers are installed. Some Linux distros might also need drivers. The drivers can be downloaded [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
-
-<figure markdown>
-![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
-</figure>
-
-Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
-
-<figure markdown>
-![Build & Flash]
-</figure>
-
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
+    6. Close and relaunch the script.
+    7. Verify the version and hash in the main screen of the ExpressLRS Lua script.
 
 [ExpressLRS Lua script]: https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true
 [Build]: ../../assets/images/Build.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Firmware Options]: ../firmware-options.md
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>

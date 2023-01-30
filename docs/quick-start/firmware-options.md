@@ -5,9 +5,15 @@ description: Get your ExpressLRS Devices setup as you deemed fit! Customize your
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-This page aims to explain only the key options in ExpressLRS Configurator you may need for your initial setup. For a full description of **all** the options available, see the [User Defines page](../software/user-defines.md).
 
-Some of these options are present on both the Tx and Rx Targets. It is important that these options match to both the TX module and receiver in order for them to bind. `team2400` and `team900` also share a few options and some options are unique to that frequency band. Shown below are common options available on `team2400` and `team900` TXes respectively.
+## ExpressLRS Configurator Key Options
+This page provides an overview of the important options in ExpressLRS Configurator for initial setup. For a comprehensive description of all available options, see the [User Defines page](../software/user-defines.md).
+
+## Option Matching
+It is essential that options match between the TX module and receiver for them to bind. Some options are shared by `team2400` and `team900`, while others are unique to each frequency band.
+
+## Common Options
+This page lists the common options available for `team2400` and `team900` TXes.
 
 <figure markdown>
 ![2400 TX Options](../assets/images/ConfigurationOptions2400tx.png)
@@ -33,7 +39,7 @@ EU Regulatory domains are now LBT compliant!
 
 ## Binding Phrase
 
-Entering a binding phrase allows you to skip the binding step with your receivers-- you want this set. Any transmitter using the same binding phrase will connect to any receiver with the same binding phrase, so be unique. Limit to alphanumeric phrases conforming to the Latin alphabet. Receivers flashed with firmware builds that do not have binding phrase enabled will require binding with the traditional [binding method](binding.md).
+Entering a binding phrase allows you to skip the binding process with receivers. It's recommended to set one and make it unique, using only Latin alphabet letters and numbers. Transmitters using the same binding phrase can connect to any receiver with the same binding phrase. Receivers with firmware builds without binding phrase enabled will require traditional [binding method](binding.md).
 
 ## Network Options
 
@@ -48,12 +54,12 @@ Set these to have the "Wifi Update" mode try to connect to an existing wifi netw
 ```
 UNLOCK_HIGHER_POWER 
 ```
-Enables higher output power for devices that support it but will possibly melt themselves to give it to you. Do not enable it without first updating your cooling setup or verifying the device isn't overheating when running at your chosen power.
+Enables higher output power for devices that support it. However, be cautious as this could potentially damage your device without proper cooling. Verify the device's cooling setup and temperature before enabling.
 
 ```
-UART_INVERTED
+UART_INVERTED 
 ```
-This **only works** with ESP32 based TXes. **Almost all handsets** require `UART_INVERTED` on, such as the FrSky QX7, TBS Tango 2, and RadioMaster TX16S. For T8SG V2 or Deviation firmware turn this setting off.
+This **only works** with ESP32 based TXes. Turn this setting on for handsets like FrSky QX7, TBS Tango 2, and RadioMaster TX16S. Turn it off for T8SG V2 or Deviation firmware.
 
 ## Receiver Only Options
 

@@ -4,187 +4,211 @@ template: main.html
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-!!! danger "Advisory"
-    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
+!!! danger "Flashing ExpressLRS 3.x Firmware"
+    1. If flashing/updating for the first time from the factory firmware or an older firmware, flash the module to version 2.5.1.
+    2. Use the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as) to flash it.
+        - If Target Mismatch error appears, click `Flash Anyway`.
+    3. Follow method 1 or 2 from the WiFi Flashing Guide to flash to the 3.x firmware.
+    
+    !!! info "Repartitioner is not necessary when flashing via USB/UART."
 
-    Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
+    **Reference**: Joshua Bardwell's video on the topic can be found [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
 
-    Repartitioner is not needed if flashing via USB/UART.
+## Flashing BetaFPV LR3 Pro
 
-## Flashing via EdgeTX Passthrough
+Following are the flashing methods for BetaFPV LR3 Pro.
 
-- Target: `BETAFPV_2400_TX_LITERADIO3_via_ETX`
+### <span class="custom-heading" data-id="1">Flashing via EdgeTX Passthrough</span>
+??? Note "Flashing via EdgeTX Passthrough"
 
-- Device Category: `BETAFPV 2.4 GHz`
+    - Target: `BETAFPV_2400_TX_LITERADIO3_via_ETX`
 
-- Device: `BETAFPV LiteRadio 3 Pro`
+    - Device Category: `BETAFPV 2.4 GHz`
 
-Before starting, make sure that the Serial Ports, USB-VCP setting is set to `CLI` mode on your Radio. This setting can be found in the `System Menu` -> `Hardware` Page.
+    - Device: `BETAFPV LiteRadio 3 Pro`
 
-With your handset turned on, connect a USB data cable to the USB port of the Radio. Select `USB Serial(VCP)` in the options window that pops up. 
+    <figure markdown>
+    ![via EdgeTX Passthrough](../../assets/images/Method_intTX_EdgeTXPassthrough.png)
+    <figcaption>Flashing via EdgeTXPassthrough</figcaption>
+    </figure>
 
-<figure markdown>
-![usb picture](../../assets/images/betafpv-ETXpassthrough.jpg)
-</figure>
+    1. Ensure the Radio's USB-VCP setting is set to `CLI` mode in the `System Menu` -> `Hardware` Page.
+    2. Turn on the Handset and connect a USB data cable to the USB data port.
+    3. Choose `USB Serial(Debug)` or `USB Serial(VCP)` in the options window that pops up.
 
-<figure markdown>
-![Debug option](../../assets/images/betafpv-VCP.jpg)
-</figure>
+        <figure markdown>
+        ![usb picture](../../assets/images/betafpv-ETXpassthrough.jpg)
+        </figure>
 
-!!! tip "Important"
-    This is a vital step and a common failure point. Pay attention.
+        <figure markdown>
+        ![Debug option](../../assets/images/betafpv-VCP.jpg)
+        </figure>
 
-Windows users should check Device Manager and make sure your device is being detected as **STMicroelectronics Virtual COM Port** device. 
+        !!! tip "Important"
+            This is a vital step and a common failure point. Pay attention.
 
-<figure markdown>
-![Device Manager](../../assets/images/DeviceMngr.png)
-</figure>
+    4. On Windows, check Device Manager for the STMicroelectronics Virtual COM Port device. If not and you are seeing a bunch of Yellow Warning icons, download the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html) and extract the contents. Run the VCP_V1.5.0_Setup_W7_x64_64bits executable.
 
-If not and you're seeing a bunch of Yellow Warning icons for the BetaFPV Lite Radio 3 Serial Port, download the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Extract/unzip the contents of the package into a folder and run the `VCP_V1.5.0_Setup_W7_x64_64bits` executable. 
+        <figure markdown>
+        ![Device Manager](../../assets/images/DeviceMngr.png)
+        </figure>
 
-Using the ExpressLRS Configurator, select the appropriate version and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
+    5. In the ExpressLRS Configurator, select the correct Device Target and set the Flashing method to `EdgeTXPassthrough`. Choose the `Regulatory Domain` appropriate for your location.
 
-<figure markdown>
-![via EdgeTX Passthrough](../../assets/images/Method_intTX_EdgeTXPassthrough.png)
-<figcaption>Flashing via EdgeTXPassthrough</figcaption>
-</figure>
+        !!! info "Optional" 
+            Set the Binding Phrase and other relevant [Firmware Options], such as Local WiFi Network SSID and password.
 
-Select the `Regulatory Domain` appropriate for your location.
+    6. Click Build and Flash and wait for the Success banner.
 
-Set your Binding Phrase (optional) and other relevant [Firmware Options] like Local WiFi Network SSID and password.
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
 
-Once that's done, click **Build and Flash** and wait for the Success banner from the Configurator.
+    7. Unplug the USB and verify the internal module is working and updated to the selected version using the [ExpressLRS Lua script].
 
-<figure markdown>
-![Build & Flash]
-</figure>
+        <figure markdown>
+        ![Lua Running](../../assets/images/betafpv-Lua.jpg)
+        </figure>
 
-Unplug the USB and verify with the [ExpressLRS Lua script] (right-click, save as) you have a working internal module and that you have updated to the version you have selected.
+### <span class="custom-heading" data-id="2">Flashing via WiFi</span>
+??? Note "Flashing via WiFi"
 
-<figure markdown>
-![Lua Running](../../assets/images/betafpv-Lua.jpg)
-</figure>
+    - Target: `BETAFPV_2400_TX_LITERADIO3_via_WIFI`
 
-## Flashing via WiFi
+    - Device Category: `BETAFPV 2.4 GHz`
 
-- Target: `BETAFPV_2400_TX_LITERADIO3_via_WIFI`
+    - Device: `BETAFPV LiteRadio 3 Pro`
 
-- Device Category: `BETAFPV 2.4 GHz`
+    <figure markdown>
+    ![via WiFi](../../assets/images/Method_intTX_WiFi.png)
+    <figcaption>Flashing via WiFi</figcaption>
+    </figure>
 
-- Device: `BETAFPV LiteRadio 3 Pro`
+    #### <span class="custom-heading" data-id="3">Method 1</span>
+    ??? Note "Method 1"
 
-<figure markdown>
-![via WiFi](../../assets/images/Method_intTX_WiFi.png)
-<figcaption>Flashing via WiFi</figcaption>
-</figure>
+        1. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        2. Build the firmware, which will open the Target folder where the `BETAFPV_2400_TX_LITERADIO3-<version>.bin` file is located. Do not close this window so you can easily locate the correct file to upload to the module.
 
-### Method 1
+            <figure markdown>
+            ![Build]
+            </figure>
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+        3. Download the [ExpressLRS Lua script] (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
+        4. Insert the module into the module bay and make sure it's securely connected to the radio (see the [Radio Preparation](tx-prep.md) page).
+        5. Execute the ExpressLRS Lua script by going to "System Menu" on your radio, then under Tools, select `ExpressLRS`.
 
-<figure markdown>
-![Build]
-</figure>
+            <figure markdown>
+            ![Lua Script](../../assets/images/lua1.jpg)
+            </figure>
 
-Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX_LITERADIO3-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+            <figure markdown>
+            ![Lua Script T16](../../assets/images/lua2.jpg)
+            </figure>
 
-Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`. If the ExpressLRS Lua script is not in the list, download it from [here](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
+            !!! Info "Troubleshooting the ExpressLRS Lua Script"
+                If you encounter an issue where the script is stuck at `Loading...`, please refer to the [troubleshooting guide](http://localhost:8000/quick-start/troubleshooting/#expresslrs-lua-script-is-stuck-at-loading) for help.
 
-<figure markdown>
-![Lua Script](../../assets/images/lua1.jpg)
-</figure>
+            <figure markdown>
+            ![Lua3](../../assets/images/lua3.jpg)
+            </figure>
 
-Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**. Press OK once more to activate the WiFi on the Tx Module. Connect to the Access Point the module will create called `ExpressLRS TX`, with the password being `expresslrs`.
+        6. From the ExpressLRS Lua script, select "WiFi Connectivity" and then "Enable WiFi". Confirm by pressing OK.
 
-<figure markdown>
-![Lua3](../../assets/images/lua/wifi-bw.png)
-</figure>
+            <figure markdown>
+            ![Lua4](../../assets/images/lua/wifi-bw.png)
+            </figure>
 
-<figure markdown>
-![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
-</figure>
+        7. Connect to the Access Point created by the module, named `ExpressLRS TX`, using the password `expresslrs`.
 
-Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `BETAFPV_2400_TX_LITERADIO3-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
+            <figure markdown>
+            ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
+            </figure>
 
-<figure markdown>
-![Firmware Update](../../assets/images/web-firmwareupdate.png)
-</figure>
 
-Once the file is uploaded, a pop-up confirmation will show up.
+        8. Open your browser and navigate to http://10.0.0.1/ to access the upload form. Scroll down to find the form.
+        9. Drag and drop the firmware file, `BETAFPV_2400_TX_LITERADIO3-<version>.bin`, created by the ExpressLRS Configurator. Alternatively, use the `Choose File` button to select the file from the folder where the firmware was created.
+        10. Ensure that you have selected the correct firmware file and click `Update`.
 
-<figure markdown>
-![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
-</figure>
+            <figure markdown>
+            ![Firmware Update](../../assets/images/web-firmwareupdate.png)
+            </figure>
 
-Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+        11. Once the file is uploaded, a pop-up confirmation will show up.
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script (you will first need to close it and relaunch the script).
+            <figure markdown>
+            ![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
+            </figure>
+            
+        12. Wait for the confirmation pop-up and for the "WiFi Running" screen to close.
+        13. Close and relaunch the script.
+        14. Verify the firmware version and hash in the main screen of the ExpressLRS Lua script.
 
-**Join Local Network**
+        !!! info
+            You can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the next two methods below.
 
-You can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the next two methods below.
+        <figure markdown>
+        ![JoinNetwork](../../assets/images/web-joinnetwork.png)
+        </figure>
 
-<figure markdown>
-![JoinNetwork](../../assets/images/web-joinnetwork.png)
-</figure>
+    #### <span class="custom-heading" data-id="4">Method 2</span>
+    ??? Note "Method 2"
 
-### Method 2
+        1. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        2. Build the firmware, which will open the Target folder where the `BETAFPV_2400_TX_LITERADIO3-<version>.bin` file is located. Do not close this window so you can easily locate the correct file to upload to the module.
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+            <figure markdown>
+            ![Build]
+            </figure>
 
-<figure markdown>
-![Build]
-</figure>
+        3. Using the [ExpressLRS Lua script] (right-click, save as), select "WiFi Connectivity" and then "Enable WiFi". Confirm by pressing OK.
 
-Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX_LITERADIO3-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+            <figure markdown>
+            ![Lua4](../../assets/images/lua/wifi-bw.png)
+            </figure>
 
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the local network automatically.
+        4. If you have previously set up your Tx Module with your home WiFi network details, it will connect automatically.
+        5. Using a browser, navigate to http://elrs_tx.local.
+        6. The WiFi Update page will appear. Scroll down to the "Firmware Update" section.
 
-<figure markdown>
-![Lua3](../../assets/images/lua/wifi-bw.png)
-</figure>
+            <figure markdown>
+            ![Firmware Update](../../assets/images/web-firmwareupdate.png)
+            </figure>
 
-Using your browser, navigate to http://elrs_tx.local and the WiFi Update page should show up. Scroll down towards the Firmware Update section, as shown below:
+        7. Drag-and-drop the `BETAFPV_2400_TX_LITERADIO3-<version>.bin` file created by the ExpressLRS Configurator into the "Choose File" field, or manually navigate to the folder and select the file.
+        8. Click the "Update" button. Wait for the process to complete (approx. 1 minute).
+        9. Close and relaunch the script.
+        10. Verify the version and hash in the main screen of the ExpressLRS Lua script.
 
-<figure markdown>
-![Firmware Update](../../assets/images/web-firmwareupdate.png)
-</figure>
+    #### <span class="custom-heading" data-id="5">Method 3</span>
+    ??? Note "Method 3"
 
-Drag-and-drop the `BETAFPV_2400_TX_LITERADIO3-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and once the file is uploaded, a pop-up confirmation will show up.
+        1. Using the [ExpressLRS Lua script] (right-click, save as), select "WiFi Connectivity" and then "Enable WiFi". Confirm by pressing OK.
 
-<figure markdown>
-![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
-</figure>
+            <figure markdown>
+            ![Lua4](../../assets/images/lua/wifi-bw.png)
+            </figure>
 
-Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+        2. If you have previously set up your Tx Module with your home WiFi network details, it will connect automatically.
+        3. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        4. Click **Build and Flash**. Wait for the compile process to complete.
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script (you will first need to close it and relaunch the script).
+            <figure markdown>
+            ![Build & Flash]
+            </figure>
 
-### Method 3
+        5. Once done, you should see a Success message, marking the update process complete.
 
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the network automatically.
+            <figure markdown>
+            ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
+            </figure>
 
-<figure markdown>
-![Lua3](../../assets/images/lua/wifi-bw.png)
-</figure>
-
-Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options]. Click **Build and Flash** and wait for the compile process to complete. 
-
-<figure markdown>
-![Build & Flash]
-</figure>
-
-You should see a section as pictured below and the Success message marking the update process complete.
-
-<figure markdown>
-![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
-</figure>
-
-Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
-
-Verify the version and hash in the main screen of the ExpressLRS Lua script (you will first need to close it and relaunch the script).
+        6. Close and relaunch the script.
+        7. Verify the version and hash in the main screen of the ExpressLRS Lua script.
 
 [ExpressLRS Lua script]: https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true
 [Build]: ../../assets/images/Build.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Firmware Options]: ../firmware-options.md
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>

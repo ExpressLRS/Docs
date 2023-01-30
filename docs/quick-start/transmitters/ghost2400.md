@@ -4,49 +4,61 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing via STLink
+## Flashing and Updating IMRC Ghost
 
-- Targets:
-    - `GHOST_2400_TX_via_STLINK`
-    - `GHOST_2400_TX_LITE_via_STLINK`
+Following are the flashing and updating methods for IMRC Ghost.
 
-- Device Category:
-    - `ImmersionRC Ghost`
+### <span class="custom-heading" data-id="1">Flashing via STLink</span>
+??? Note "Flashing via STLink"
 
-- Device:
-    - `GHOST 2400 TX`
-    - `GHOST 2400 TX LITE`
+    - Targets:
+        - `GHOST_2400_TX_via_STLINK`
+        - `GHOST_2400_TX_LITE_via_STLINK`
 
-<figure markdown>
-![via STLink](../../assets/images/Method_TX_STLink.png)
-<figcaption>Flashing via STLink</figcaption>
-</figure>
+    - Device Category:
+        - `ImmersionRC Ghost`
 
-## Initial Flash
+    - Device:
+        - `GHOST 2400 TX`
+        - `GHOST 2400 TX LITE`
 
-Here is a 10 minute video, showing the steps required to both flash the TX if you would rather watch than read:
+    <figure markdown>
+    ![via STLink](../../assets/images/Method_TX_STLink.png)
+    <figcaption>Flashing via STLink</figcaption>
+    </figure>
 
-<figure markdown>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fHxx2Cc3Hz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+    #### <span class="custom-heading" data-id="2">Initial Flash</span>
+    ??? Note "Initial Flash"
 
-Flashing the Ghost TX's is currently a **1 WAY** flash once you flash ExpressLRS to the TX you **will not** be able to use it with stock Ghost RX's (running stock firmware, they **will work** while running ELRS).  You will need a `StLink V2` to flash the TX
+        Watch this 10-minute video to learn the step-by-step process of flashing the TX if you prefer visual instructions over reading.
 
-Wire `3.3v`, `GND`, `CLK`, and `DIO` to their respective pins on your part from the StLink. (You can power with the StLink but in the first two image the radio is used to power the module). 
+        <figure markdown>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fHxx2Cc3Hz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </figure>
 
-<figure markdown>
-<img class="center-img" src="https://i.imgur.com/58wxHZe.png" width = "49%">
-</figure>
+        1. The Ghost TX is a **ONE-WAY** flash, meaning it cannot be used with stock Ghost RXs after being flashed with ExpressLRS
+        2. A StLink V2 is required for flashing the Ghost TX
+        3. Connect `3.3v`, `GND`, `CLK`, and `DIO` pins on the StLink to the corresponding pins on the Ghost TX
+        4. The module can be powered through the StLink or the radio.
 
-<figure markdown>
-<img class="center-img" src="https://i.imgur.com/vztruRj.png" width = "49%">
-</figure>
+        <figure markdown>
+        <img class="center-img" src="https://i.imgur.com/58wxHZe.png" width = "49%">
+        </figure>
 
-<figure markdown>
-![antenna](https://camo.githubusercontent.com/49b7f4a41eb507189f92f792520a7dccad624df24a63db3ee119b284e2d41def/68747470733a2f2f692e696d6775722e636f6d2f724f6e7a6e6d592e706e67)
-<figcaption>Output/Input antennas of the TX</figcaption>
-</figure>
+        <figure markdown>
+        <img class="center-img" src="https://i.imgur.com/vztruRj.png" width = "49%">
+        </figure>
 
-## Updating
+        <figure markdown>
+        ![antenna](https://camo.githubusercontent.com/49b7f4a41eb507189f92f792520a7dccad624df24a63db3ee119b284e2d41def/68747470733a2f2f692e696d6775722e636f6d2f724f6e7a6e6d592e706e67)
+        <figcaption>Output/Input antennas of the TX</figcaption>
+        </figure>
 
-Updating can be done by building an updated version on the configurator and then flashing the `firmware.bin` file using OpenTX.
+### <span class="custom-heading" data-id="3">Updating</span>
+??? Note "Updating"
+
+    1. To update the firmware, build an updated version using the ExpressLRS Configurator
+    2. The configurator will produce a `firmware.bin` file upon successful build
+    3. Use OpenTX to flash the `firmware.bin` file to the module
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>

@@ -125,3 +125,5 @@ Verification can be done using the [ExpressLRS Lua] script. It should show the V
 [Radio Preparation]: tx-prep.md
 [ExpressLRS Lua]: lua-howto.md
 [General Troubleshooting]: ../troubleshooting.md#general-troubleshooting
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>
