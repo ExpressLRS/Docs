@@ -5,6 +5,9 @@ description: All-in-one Flight Controllers were released with ExpressLRS receive
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
+!!! note "Supported RF Modes"
+    D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) are not supported by the ExpressLRS SPI code and thus will not bind or sync with a TX module in any of these modes.
+
 A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano longrange rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
 Because the ExpressLRS code is "baked-in" to the flight controller firmware instead of using a second microcontroller, these can not be updated the same way external uart-based receivers are updated. 
@@ -98,6 +101,9 @@ Go to Betaflight CLI and enter the following commands.
 </script>
 
 The new Betaflight Configurator 10.9.0 also has the Passphrase/Binding Phrase field in the Receiver Tab where you can simply enter your Binding Phrase, and it will generate the UID numbers for you. Clicking `Save and Reboot` will set the Binding Phrase into the flight controller configuration.
+
+!!! note "Supported RF Modes"
+    D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) are not supported by the ExpressLRS SPI code and thus will not bind or sync with a TX module in any of these modes.
 
 ## Acknowledgements
 
