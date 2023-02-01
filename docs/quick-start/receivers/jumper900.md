@@ -4,64 +4,76 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing via STLink
+## Flashing/Updating Jumper R9 Mini
 
-- Target: `Jumper_RX_R900MINI_via_STLINK`
+Following are the flashing and updating methods for Jumper R9 Mini.
 
-- Device Category: `Jumper R900`
+### <span class="custom-heading" data-id="1">Flashing via STLink</span>
 
-- Device: `Jumper RX R900MINI`
+??? Note "Flashing via STLink"
 
-<figure markdown>
-![via STLink](../../assets/images/Method_RX_STLink-stm.png)
-<figcaption>Flashing via STLink</figcaption>
-</figure>
+    - Target: `Jumper_RX_R900MINI_via_STLINK`
 
-Wire it up to your STLink V2 as follows:
+    - Device Category: `Jumper R900`
 
-Wire `+ = 3v3`, `- = GND`, `C = CLK` and `D = DIO` to their respective pins on the RX from the StLink.
+    - Device: `Jumper RX R900MINI`
 
-<figure markdown>
-<img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/r900mini-rx/r900mini-side2-closeup.jpg" width = "60%">
-<figcaption>Jumper R9 Mini</figcaption>
-</figure>
+    <figure markdown>
+    ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
+    <figcaption>Flashing via STLink</figcaption>
+    </figure>
 
-Because those pins are so small one option is to only solder a wire on the `CLK` and `DIO` then power it with the 5v pin with an external power source. 
+    1. Wire it up to your STLink V2 as follows:
+        
+        - Wire `+ = 3v3`, `- = GND`, `C = CLK` and `D = DIO` to their respective pins on the RX from the StLink.
 
-Disable 'Readout Protection'. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). Or alternatively under linux you can use [OpenOCD](../../software/open-ocd.md).
+        <figure markdown>
+        <img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/r900mini-rx/r900mini-side2-closeup.jpg" width = "60%">
+        <figcaption>Jumper R9 Mini</figcaption>
+        </figure>
 
-How to video:
-<figure markdown>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SEYQ1HpRmk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+    2. These pins are so small, so one option is to only solder a wire on the `CLK` and `DIO`.
+    3. Power it with the 5v pin with an external power source. 
 
-Using the correct target specific for your receiver, and your [Firmware Options] set, click **Build & Flash** on the ExpressLRS Configurator.
+    4. Disable 'Readout Protection'. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html).
+    5. Follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). Or alternatively under linux you can use [OpenOCD](../../software/open-ocd.md).
 
-<figure markdown>
-![Build & Flash]
-</figure>
+        How to video:
+        <figure markdown>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SEYQ1HpRmk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </figure>
 
-After the flash is successful, desolder the STLink and connect RX2 and TX2 (you will need to solder on the STM32 pins, see picture) to a flight controller and setting up the receiver with the CRSF serial protocol.
+    6. Using the correct target specific for your receiver, and your [Firmware Options] set, click **Build & Flash** on the ExpressLRS Configurator.
 
-## Updating via Passthrough
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
 
-- Target: `Jumper_RX_R900MINI_via_BetaflightPassthrough`
+    7. After the flash is successful, desolder the STLink and connect RX2 and TX2 (you will need to solder on the STM32 pins, see picture) to a flight controller and setting up the receiver with the CRSF serial protocol.
 
-- Device Category: `Jumper R900`
+### <span class="custom-heading" data-id="2">Updating via Passthrough</span>
 
-- Device: `Jumper RX R900MINI`
+??? Note "Updating via Passthrough"
 
-<figure markdown>
-![via Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
-<figcaption>Updating via Passthrough</figcaption>
-</figure>
+    - Target: `Jumper_RX_R900MINI_via_BetaflightPassthrough`
 
-After flashing via STLink, the `Jumper_RX_R900MINI_via_BetaflightPassthrough` target may now be used for future firmware updates.
-Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
+    - Device Category: `Jumper R900`
 
-<figure markdown>
-![Build & Flash]
-</figure>
+    - Device: `Jumper RX R900MINI`
+
+    <figure markdown>
+    ![via Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
+    <figcaption>Updating via Passthrough</figcaption>
+    </figure>
+
+    1. After flashing via STLink, the `Jumper_RX_R900MINI_via_BetaflightPassthrough` target may now be used for future firmware updates.
+    2. Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
+
+    <figure markdown>
+    ![Build & Flash]
+    </figure>
 
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Firmware Options]: ../firmware-options.md
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>

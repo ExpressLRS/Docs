@@ -44,191 +44,231 @@ Receiver protocol is `CRSF` with `serialrx_inverted = off` and `serialrx_halfdup
 
 The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy (of high importance with the Passthrough Flashing Method).
 
-## Flashing via Passthrough
+## Flashing/Updating NamimnoRC Voyager
 
-- Targets:
-    - `NamimnoRC_VOYAGER_900_ESP_RX_via_BetaflightPassthrough` 
-    - `NamimnoRC_VOYAGER_900_RX_via_BetaflightPassthrough`
+Following are the flashing and updating methods for NamimnoRC Voyager.
 
-- Device Category: 
-    - `NamimnoRC VOYAGER 900 MHz`
+### <span class="custom-heading" data-id="1">Flashing via Passthrough</span>
 
-- Device:
-    - `NamimnoRC VOYAGER 900 ESP RX`
-    - `NamimnoRC VOYAGER 900 RX`
+??? Note "Flashing via Passthrough"
 
-<figure markdown>
-![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
-<figcaption>Flashing via Passthrough</figcaption>
-</figure>
+    - Targets:
+        - `NamimnoRC_VOYAGER_900_ESP_RX_via_BetaflightPassthrough` 
+        - `NamimnoRC_VOYAGER_900_RX_via_BetaflightPassthrough`
 
-### STM-based receivers
+    - Device Category: 
+        - `NamimnoRC VOYAGER 900 MHz`
 
-Once [wired properly] to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
+    - Device:
+        - `NamimnoRC VOYAGER 900 ESP RX`
+        - `NamimnoRC VOYAGER 900 RX`
 
-If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your [Firmware Options] set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `Passthrough Init` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
+    <figure markdown>
+    ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
+    <figcaption>Flashing via Passthrough</figcaption>
+    </figure>
 
-<figure markdown>
-![Build & Flash]
-</figure>
+    #### <span class="custom-heading" data-id="2">STM-based receivers</span>
 
-Once `Retry...` lines appear, connect a LiPo if your receiver isn't powered by the USB (i.e. power up your receiver and FC). On subsequent flash, you can have the LiPo plugged in and receiver powered up from the start.
+    ??? Note "STM-based receivers"
 
-### ESP-based receivers
+        1. [Wire] up the receiver to FC.
+        2. Plug in the flight controller to USB. If the receiver powers up too, with both LEDs lit, disconnect USB, hold the bind button on the receiver, and reconnect to USB. The LED should start alternating between green and red. Once it is alternating, you can release the bind button.
+        3. If the receiver does not power up from USB, have a LiPo ready. On the ExpressLRS Configurator, set your firmware options, then click on "Build & Flash". The first time, it may take a while. Keep an eye out for the `Passthrough Init` stage, which will check your flight controller configuration for the correct Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.) 
+            
+            <figure markdown>
+            ![Build & Flash]
+            </figure>
+        
+        4. If `Retry...` lines appear, connect the LiPo to power up your flight controller and receiver.
+        5. Wait until the flashing process is complete and the "Success" prompt is shown. On subsequent flashes, the LiPo can be plugged in and the receiver powered up before connecting the USB.
 
-For the ESP-based receivers, you can connect a LiPo during the `PASSTHROUGH DONE` section of the Log.
+    #### <span class="custom-heading" data-id="3">ESP-based receivers</span>
 
-Wait for this process to finish. It's done once the "Success" prompt is shown.
+    ??? Note "ESP-based receivers"
 
-## Updating via WiFi (ESP Only - Recommended)
+        1. For the ESP-based receivers, you can connect a LiPo during the `PASSTHROUGH DONE` section of the Log.
+        2. Wait for the process to complete, indicated by the "Success" prompt
 
-- Target: `NamimnoRC_VOYAGER_900_ESP_RX_via_WIFI`
+### <span class="custom-heading" data-id="4">Updating via WiFi (ESP Only - Recommended)</span>
 
-- Device Category: `NamimnoRC VOYAGER 900 MHz`
+??? Note "Updating via WiFi (ESP Only - Recommended)"
 
-- Device: `NamimnoRC VOYAGER 900 ESP RX`
+    - Target: `NamimnoRC_VOYAGER_900_ESP_RX_via_WIFI`
 
-<figure markdown>
-![via WiFi](../../assets/images/Method_RX_WiFi.png)
-<figcaption>Updating via WiFi</figcaption>
-</figure>
+    - Device Category: `NamimnoRC VOYAGER 900 MHz`
 
-### Method 1
+    - Device: `NamimnoRC VOYAGER 900 ESP RX`
 
-With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
+    <figure markdown>
+    ![via WiFi](../../assets/images/Method_RX_WiFi.png)
+    <figcaption>Updating via WiFi</figcaption>
+    </figure>
 
-**Build** the firmware. Once done, it should open a new window where the `NamimnoRC_VOYAGER_900_ESP_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+    #### <span class="custom-heading" data-id="5">Method 1</span>
 
-<figure markdown>
-![Build]
-</figure>
+    ??? Note "Method 1"
 
-Power your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Hotspot Mode.
+        1. [Wire] your receiver properly with FC.
+        2. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        3. Build the firmware, which will open the Target folder where the `NamimnoRC_VOYAGER_900_ESP_RX-<version>.bin` file is located. Do not close this window so you can easily locate the correct file to upload to the module.
 
-<figure markdown>
-![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
-</figure>
+            <figure markdown>
+            ![Build]
+            </figure>
 
-Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same `expresslrs` password as the TX Module Hotspot.
+        4. Power your FC by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Hotspot Mode.
 
-<figure markdown>
-![WiFi Hotspot](../../assets/images/WifiHotspot.png)
-</figure>
+            <figure markdown>
+            ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+            </figure>
 
-Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `NamimnoRC_VOYAGER_900_ESP_RX-<version>.bin` is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
+        5. Connect to the Access Point created by the module, named `ExpressLRS TX`, using the password `expresslrs`.
 
-A white page should load momentarily with the message **Update Success! Rebooting...**. Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated. Power cycle and your module and receiver should now be bound (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
+            <figure markdown>
+            ![WiFi Hotspot](../../assets/images/WifiHotspot.png)
+            </figure>
 
-!!! Info "Update for version 2.0"
-    Once you have updated to firmware version 2.0 or newer, the Web Update page on the Hotspot will get a few updates of its own. It will get the Update progress bar, and a Popup will be shown for Success or Error messages. Additionally, you can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the two methods below.
+        6. Open your browser and navigate to http://10.0.0.1/ to access the upload form. Scroll down to find the form.
+        7. Drag and drop the firmware file, `NamimnoRC_VOYAGER_900_ESP_RX-<version>.bin`, created by the ExpressLRS Configurator. Alternatively, use the `Choose File` button to select the file from the folder where the firmware was created.
+        8. Ensure that you have selected the correct firmware file and click `Update`.
+        9. A white page should load with the message "Update Success! Rebooting...."
+        10. Wait until the LED on the Receiver starts to blink slowly again
+        11. Receiver should be updated after waiting a little bit
+        12. Power cycle the receiver
+        13. Receiver should be able to bind with your TX module, if the Tx Module has also been updated and they have the same binding phrase and options.
 
-<figure markdown>
-![JoinNetwork](../../assets/images/web-joinnetwork.png)
-</figure>
+        !!! info
+            You can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the next two methods below.
 
-### Method 2
+        <figure markdown>
+        ![JoinNetwork](../../assets/images/web-joinnetwork.png)
+        </figure>
 
-!!! note "Note"
-    This method will only work once the Home Network SSID and Password has been configured with the receiver.
+    #### <span class="custom-heading" data-id="6">Method 2</span>
 
-With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
+    ??? Note "Method 2"
 
-**Build** the firmware. Once done, it should open a new window where the `NamimnoRC_VOYAGER_900_ESP_RX-<version>.bin` is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+        !!! note "Note"
+            This method will only work once the Home Network SSID and Password has been configured with the receiver.
 
-<figure markdown>
-![Build]
-</figure>
+        1. [Wire] your receiver properly with FC.
+        2. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        3. Build the firmware, which will open the Target folder where the `NamimnoRC_VOYAGER_900_ESP_RX-<version>.bin` file is located. Do not close this window so you can easily locate the correct file to upload to the module.
 
-Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Mode.
+            <figure markdown>
+            ![Build]
+            </figure>
+        4. Power your FC by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi AP Mode.
+        5. The fast blink will pause and flash fast once again, indicating connection to your Home Network.
 
-<figure markdown>
-![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
-</figure>
+            <figure markdown>
+            ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+            </figure>
 
-Using your browser, navigate to http://elrs_rx.local/. The Wifi Update page should load. It should show your device target along with the version of the firmware it currently has.
+        6. Open your browser and navigate to http://elrs_rx.local/ to access the upload form. It should show your device target along with the version of the firmware it currently has.
+        7. Scroll down to the Firmware Update section, shown below:
 
-Scroll down to the Firmware Update section, shown below:
+            <figure markdown>
+            ![Firmware Update](../../assets/images/web-firmwareupdate.png)
+            </figure>
 
-<figure markdown>
-![Firmware Update](../../assets/images/web-firmwareupdate.png)
-</figure>
+        8. Drag and drop the firmware file, `NamimnoRC_VOYAGER_900_ESP_RX-<version>.bin`, created by the ExpressLRS Configurator. Alternatively, use the `Choose File` button to select the file from the folder where the firmware was created.
 
-Drag-and-drop the `NamimnoRC_VOYAGER_900_ESP_RX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen.
+        9. Ensure that you have selected the correct firmware file and click `Update`.
+        10. A white page should load with the message "Update Success! Rebooting...."
+        11. Wait until the LED on the Receiver starts to blink slowly again
+        12. Receiver should be updated after waiting a little bit
+        13. Now power down your Flight Controller along with the receiver
 
-Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated.
+    #### <span class="custom-heading" data-id="7">Method 3</span>
 
-You can now power down your Flight Controller along with the receiver.
+    ??? Note "Method 3"
 
-### Method 3
+        !!! note "Note"
+            This method will only work once the Home Network SSID and Password has been configured with the receiver.
 
-!!! note "Note"
-    This method will only work once the Home Network SSID and Password has been configured with the receiver.
+        1. [Wire] your receiver properly with FC.
+        2. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+        3. Power your FC by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Mode.
 
-With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
+            <figure markdown>
+            ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+            </figure>
 
-Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Mode.
+        4. **Build & Flash** the firmware using the ExpressLRS Configurator. 
+            
+            <figure markdown>
+            ![Build & Flash]
+            </figure>
+        
+        5. Wait for the process to complete, indicated by the "Success" prompt and the Receiver LED has gone back to the Slow Blink mode. You can now power down the Flight Controller.
 
-<figure markdown>
-![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
-</figure>
+            <figure markdown>
+            ![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
+            </figure>
 
-**Build & Flash** the firmware using the ExpressLRS Configurator. Wait for the process to complete, indicated by the "Success" prompt and the Receiver LED has gone back to the Slow Blink mode. You can now power down the Flight Controller.
 
-<figure markdown>
-![Build & Flash]
-</figure>
+### <span class="custom-heading" data-id="8">Updating via FTDI (ESP Only)</span>
 
-<figure markdown>
-![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
-</figure>
+??? Note "Updating via FTDI (ESP Only)"
 
-## Updating via FTDI (ESP Only)
+    - Target: `NamimnoRC_VOYAGER_900_ESP_RX_via_UART`
 
-- Target: `NamimnoRC_VOYAGER_900_ESP_RX_via_UART`
+    - Device Category: `NamimnoRC VOYAGER 900 MHz`
 
-- Device Category: `NamimnoRC VOYAGER 900 MHz`
+    - Device: `NamimnoRC VOYAGER 900 ESP RX`
 
-- Device: `NamimnoRC VOYAGER 900 ESP RX`
+    <figure markdown>
+    ![via UART](../../assets/images/Method_RX_UART.png)
+    <figcaption>Updating via UART</figcaption>
+    </figure>
 
-<figure markdown>
-![via UART](../../assets/images/Method_RX_UART.png)
-<figcaption>Updating via UART</figcaption>
-</figure>
+    1. Wire the receiver into the FTDI
 
-Wire the receiver into the FTDI, with the TX on receiver connected to the Rx on the FTDI, and the RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Press the button while powering the RX on, and release - the LED should now be solid.
+        - Connect the TX pad on receiver to the Rx on the FTDI
+        - Connect the RX pad on receiver connected to the Tx of the FTDI. 
+        - Wire 5V and GND of the FTDI to 5V and GND of the Receiver.
+        - Press the button while powering the RX on, and release - the LED should now be solid.
 
-<figure markdown>
-![FTDI Wiring](../../assets/images/FTDIConn.png)
-</figure>
+        <figure markdown>
+        ![FTDI Wiring](../../assets/images/FTDIConn.png)
+        </figure>
 
-Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
+    2. Select the correct target and set [Firmware Options] using the ExpressLRS Configurator.
+    3. **Build & Flash** the firmware using the ExpressLRS Configurator. 
+            
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
 
-<figure markdown>
-![Build & Flash]
-</figure>
+### <span class="custom-heading" data-id="9">Updating via STLink (STM32 Only)</span>
 
-## Updating via STLink(STM32 Only)
+??? Note "Updating via STLink (STM32 Only)"
 
-- Target: `NamimnoRC_VOYAGER_900_RX_via_STLINK`
+    - Target: `NamimnoRC_VOYAGER_900_RX_via_STLINK`
 
-- Device Category: `NamimnoRC VOYAGER 900 MHz`
+    - Device Category: `NamimnoRC VOYAGER 900 MHz`
 
-- Device: `NamimnoRC VOYAGER 900 RX`
+    - Device: `NamimnoRC VOYAGER 900 RX`
 
-<figure markdown>
-![via STLink](../../assets/images/Method_RX_STLink-stm.png)
-<figcaption>Updating via STLink</figcaption>
-</figure>
+    <figure markdown>
+    ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
+    <figcaption>Updating via STLink</figcaption>
+    </figure>
 
-The units provided to the documentation team did not have STM32 chips due to the chip shortage, however, the following should apply. Wire CLK, 3v3, GND and DIO to the recievers STLink pins.
+    The units provided to the documentation team did not have STM32 chips due to the chip shortage, however, the following should apply. 
+    
+    1. Wire CLK, 3v3, GND and DIO to the recievers STLink pins.
+    2. Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
 
-Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
-
-<figure markdown>
-![Build & Flash]
-</figure>
+    <figure markdown>
+    ![Build & Flash]
+    </figure>
 
 [Build]: ../../assets/images/Build.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Firmware Options]: ../firmware-options.md
-[wired properly]: wiring-up.md#namimnorc-voyager-flash
+[Wire]: wiring-up.md#namimnorc-voyager-flash
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>

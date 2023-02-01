@@ -10,9 +10,7 @@ template: main.html
 
     !!! info "If you've flashed it straight to 3.x and you're getting "Not Enough Space" popup during WiFi flashing, flash the receiver to 2.5.1 first,  and then flash it to 3.x. The Repartitioner is for TX only."
 
-## ES900RX
-
-### Wiring up your receiver
+## Wiring up your receiver
 
 !!! attention "Note"
     There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
@@ -35,7 +33,7 @@ Also of note is that the ESP-based receivers require their Boot pads (see figure
 
 Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode and won't activate its WiFi Mode.
 
-### Configuring your Flight Controller
+## Configuring your Flight Controller
 
 To configure your flight controller properly, please go through [Configure FC page](configuring-fc.md). These settings apply on INAV, Betaflight and other flight controller software.
 
@@ -44,6 +42,10 @@ Ports Tab should be setup so that Serial RX is on the UART where you have solder
 Receiver protocol is `CRSF` with `serialrx_inverted = off` and `serialrx_halfduplex = off`.
 
 The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy (of high importance with the Passthrough Flashing Method).
+
+## Flashing Happymodel ES900RX
+
+Following are the flashing methods for Happymodel ES900RX.
 
 ### <span class="custom-heading" data-id="1">Flashing via Passthrough</span>
 
@@ -202,7 +204,9 @@ The next step will not be able to proceed properly and you'll have issues later 
             ![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
             </figure>
 
-## ES915/868RX (Discontinued)
+## Flashing Happymodel ES915/868RX (Discontinued)
+
+Following are the flashing methods for Happymodel ES915/868RX.
 
 ### <span class="custom-heading" data-id="6">Flashing via Passthrough</span>
 
@@ -224,7 +228,7 @@ The next step will not be able to proceed properly and you'll have issues later 
     <figcaption>Happymodel ES915RX</figcaption>
     </figure>
 
-    1. Wire up the receiver to FC as shown above.
+    1. [Wire] up the receiver to FC.
     2. Plug in the flight controller to USB. If the receiver powers up too, with both LEDs lit, disconnect USB, hold the bind button on the receiver, and reconnect to USB. The LED should start alternating between green and red. Once it is alternating, you can release the bind button.
     3. If the receiver does not power up from USB, have a LiPo ready. On the ExpressLRS Configurator, set your firmware options, then click on "Build & Flash". The first time, it may take a while. Keep an eye out for the "Passthrough Init" stage, which will check your flight controller configuration for the correct Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.) 
         

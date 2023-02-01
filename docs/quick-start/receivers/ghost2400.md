@@ -4,53 +4,65 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing via STLink (Ghost Atto/Zepto RX's)
+## Flashing/Updating IMRC Ghost
 
-- Target: `GHOST_ATTO_2400_RX_via_STLINK`
+Following are the flashing and updating methods for IMRC Ghost.
 
-- Device Category: `ImmersionRC Ghost`
+### <span class="custom-heading" data-id="1">Flashing via STLink (Ghost Atto/Zepto RX's)</span>
 
-- Device: `GHOST ATTO 2400 RX`
+??? Note "Flashing via STLink (Ghost Atto/Zepto RX's)"
 
-<figure markdown>
-![via STLink](../../assets/images/Method_RX_STLink-stm.png)
-<figcaption>Flashing via STLink</figcaption>
-</figure>
+    - Target: `GHOST_ATTO_2400_RX_via_STLINK`
 
-Flashing the Ghost RX's is currently a **1 WAY** flash. Once you flash ExpressLRS to these RX's you will not be able to use them with Ghost TX.  You will need a `StLink V2` to flash the RX's.
+    - Device Category: `ImmersionRC Ghost`
 
-<figure markdown>
-![ghost atto](../../assets/images/GHST_ATTO_V1.1_PINOUT.png)
-<figcaption>IMRC Ghost</figcaption>
-</figure>
+    - Device: `GHOST ATTO 2400 RX`
 
-Connect your STLink into `GND`, `DIO`, `CLK`, `3.3V` of the receiver. Select the `GHOST_ATTO_2400_via_STLINK` target, set your [Firmware Options] and hit **Build & Flash** on the ExpressLRS Configurator.
+    <figure markdown>
+    ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
+    <figcaption>Flashing via STLink</figcaption>
+    </figure>
 
-<figure markdown>
-![Build & Flash]
-</figure>
+    !!! Warning
+        Flashing the Ghost RX's is currently a **1 WAY** flash. Once you flash ExpressLRS to these RX's you will not be able to use them with Ghost TX.  You will need a `StLink V2` to flash the RX's.
 
-Once done, wire your receiver to your Flight Controller as normal (i.e. Rx to Tx, and Tx to Rx).
+    <figure markdown>
+    ![ghost atto](../../assets/images/GHST_ATTO_V1.1_PINOUT.png)
+    <figcaption>IMRC Ghost</figcaption>
+    </figure>
 
-## Updating via Passthrough
+    1. Connect your STLink into `GND`, `DIO`, `CLK`, `3.3V` of the receiver.
+    2. Select the `GHOST_ATTO_2400_via_STLINK` target, set your [Firmware Options] and hit **Build & Flash** on the ExpressLRS Configurator.
 
-- Target: `GHOST_ATTO_2400_RX_via_BetaflightPassthrough`
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
 
-- Device Category: `ImmersionRC Ghost`
+    3. Wire your receiver to your Flight Controller as normal (i.e. Rx to Tx, and Tx to Rx).
 
-- Device: `GHOST ATTO 2400 RX`
+### <span class="custom-heading" data-id="2">Updating via Passthrough</span>
 
-<figure markdown>
-![via Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
-<figcaption>Updating via Passthrough</figcaption>
-</figure>
+??? Note "Updating via Passthrough"
 
-After flashing via STLink, the `GHOST_ATTO_2400_RX_via_BetaflightPassthrough` target may now be used for future firmware updates.
-Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
+    - Target: `GHOST_ATTO_2400_RX_via_BetaflightPassthrough`
 
-<figure markdown>
-![Build & Flash]
-</figure>
+    - Device Category: `ImmersionRC Ghost`
+
+    - Device: `GHOST ATTO 2400 RX`
+
+    <figure markdown>
+    ![via Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
+    <figcaption>Updating via Passthrough</figcaption>
+    </figure>
+
+    1. The `GHOST_ATTO_2400_RX_via_BetaflightPassthrough` target may now be used for future firmware updates after flashing via STLink.
+    2. Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
+
+    <figure markdown>
+    ![Build & Flash]
+    </figure>
 
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Firmware Options]: ../firmware-options.md
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>

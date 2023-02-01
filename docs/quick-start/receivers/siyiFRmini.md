@@ -7,63 +7,76 @@ template: main.html
 !!! note "Note"
     This is only guaranteed to work on the v3.0 of the receiver.
 
-## Flashing via STLink
+## Flashing/Updating Siyi FR Mini
 
-- Target: `FM30_RX_MINI_via_STLINK` (First-time Flash)
+Following are the flashing and updating methods for Siyi FR Mini.
 
-!!! note "Note"
-    The only way to flash the FR Mini is using STLink. This is a one-way process, there is no returning to the stock firmware after flashing.
+### <span class="custom-heading" data-id="1">Flashing via STLink</span>
 
-<figure markdown>
-![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-12.JPG?raw=true)
-</figure>
+??? Note "Flashing via STLink"
 
-<figure markdown>
-![stlink](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-13.JPG?raw=true)
-<figcaption>Siyi FR Mini</figcaption>
-</figure>
+    - Target: `FM30_RX_MINI_via_STLINK` (First-time Flash)
 
-- Connect wires to DIO (SWDIO), CLK (SWCLK), RST, and GND to the header points on the RX
-- Attach 3.3V to the VDD pad on the flashing header. Do not connect 5V here! :fire:
-- Flash using the `FM30_RX_MINI_via_STLINK` target in the ExpressLRS Configurator
+    !!! note "Note"
+        The only way to flash the FR Mini is using STLink. This is a one-way process, there is no returning to the stock firmware after flashing.
 
-<figure markdown>
-![via STLink](../../assets/images/Method_RX_STLink-stm.png)
-<figcaption>Flashing via STLink</figcaption>
-</figure>
+    <figure markdown>
+    ![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-12.JPG?raw=true)
+    </figure>
 
-For more information and troubleshooting of the STLink connection, see the detail on the [FM30 Initial Flashing](../transmitters/siyifm30.md) page.
+    <figure markdown>
+    ![stlink](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-13.JPG?raw=true)
+    <figcaption>Siyi FR Mini</figcaption>
+    </figure>
 
-Once flashing is complete, wire the receiver to your flight controller using the images below.
+    1. Connect wires to DIO (SWDIO), CLK (SWCLK), RST, and GND to the header points on the RX
+    2. Attach 3.3V to the VDD pad on the flashing header. Do not connect 5V here! :fire:
+    3. Flash using the `FM30_RX_MINI_via_STLINK` target in the ExpressLRS Configurator
 
-| Flight Controller | FR Mini Receiver |
-|---|---|
-| 5V | VDD |
-| GND | GND |
-| RX | TX2 |
-| TX | RX2 |
+        <figure markdown>
+        ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
+        <figcaption>Flashing via STLink</figcaption>
+        </figure>
 
-<figure markdown>
-![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-16.JPG?raw=true)
-</figure>
+        !!! info
+            For more information and troubleshooting of the STLink connection, see the detail on the [FM30 Initial Flashing](../transmitters/siyifm30.md) page.
 
-<figure markdown>
-![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-17.JPG?raw=true)
-</figure>
+    4. Once flashing is complete, wire the receiver to your flight controller using the images below.
 
-Thank you [@JupaCreations](http://www.jupacreations.com/) for contributing.
+        | Flight Controller | FR Mini Receiver |
+        |---|---|
+        | 5V | VDD |
+        | GND | GND |
+        | RX | TX2 |
+        | TX | RX2 |
 
-## Updating via Passthrough
+    <figure markdown>
+    ![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-16.JPG?raw=true)
+    </figure>
 
-- Target: `FM30_RX_MINI_via_BetaflightPassthrough` (Updates)
+    <figure markdown>
+    ![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-17.JPG?raw=true)
+    </figure>
 
-<figure markdown>
-![via Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
-<figcaption>Updating via Passthrough</figcaption>
-</figure>
+    Thank you [@JupaCreations](http://www.jupacreations.com/) for contributing.
 
-Updating is done via Betaflight Passthrough with the receiver wired to the flight controller. Be sure the transmitter is off, use the `FM30_RX_MINI_via_BetaflightPassthrough` target in the ExpressLRS Configurator and once done, click on **Build and Flash**.
+### <span class="custom-heading" data-id="2">Updating via Passthrough</span>
 
-<figure markdown>
-![Build & Flash](../../assets/images/BuildFlash.png)
-</figure>
+??? Note "Updating via Passthrough"
+
+    - Target: `FM30_RX_MINI_via_BetaflightPassthrough` (Updates)
+
+    <figure markdown>
+    ![via Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
+    <figcaption>Updating via Passthrough</figcaption>
+    </figure>
+
+        1. Updating is done via Betaflight Passthrough with the receiver wired to the flight controller. 
+        2. Turn off the transmitter
+        3. Use the `FM30_RX_MINI_via_BetaflightPassthrough` target in the ExpressLRS Configurator and once done, click on **Build and Flash**.
+
+    <figure markdown>
+    ![Build & Flash](../../assets/images/BuildFlash.png)
+    </figure>
+
+<script src="../../../assets/javascripts/admonition-enhancement.js"></script>

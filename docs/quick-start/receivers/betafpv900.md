@@ -39,7 +39,11 @@ Receiver protocol is `CRSF` with `serialrx_inverted = off` and `serialrx_halfdup
 
 The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy (of high importance with the Passthrough Flashing Method).
 
-## <span class="custom-heading" data-id="1">Flashing via WiFi</span>
+## Flashing BetaFPV Nano 900MHz
+
+Following are the flashing methods for BetaFPV Nano 900MHz.
+
+### <span class="custom-heading" data-id="1">Flashing via WiFi</span>
 
 ??? Note "Flashing via WiFi"
 
@@ -54,7 +58,7 @@ The next step will not be able to proceed properly and you'll have issues later 
     <figcaption>Flashing via WiFi</figcaption>
     </figure>
 
-    ### <span class="custom-heading" data-id="2">Method 1</span>
+    #### <span class="custom-heading" data-id="2">Method 1</span>
 
     ??? Note "Method 1"
 
@@ -94,7 +98,7 @@ The next step will not be able to proceed properly and you'll have issues later 
         ![JoinNetwork](../../assets/images/web-joinnetwork.png)
         </figure>
 
-    ### <span class="custom-heading" data-id="3">Method 2</span>
+    #### <span class="custom-heading" data-id="3">Method 2</span>
 
     ??? Note "Method 2"
 
@@ -130,7 +134,7 @@ The next step will not be able to proceed properly and you'll have issues later 
         12. Receiver should be updated after waiting a little bit
         13. Now power down your Flight Controller along with the receiver
 
-    ### <span class="custom-heading" data-id="4">Method 3</span>
+    #### <span class="custom-heading" data-id="4">Method 3</span>
 
     ??? Note "Method 3"
 
@@ -157,7 +161,7 @@ The next step will not be able to proceed properly and you'll have issues later 
             ![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
             </figure>
 
-## <span class="custom-heading" data-id="5">Flashing via Passthrough</span>
+### <span class="custom-heading" data-id="5">Flashing via Passthrough</span>
 
 ??? Note "Flashing via Passthrough"
 
@@ -199,7 +203,7 @@ The next step will not be able to proceed properly and you'll have issues later 
 
     14. Wait for the process to complete, indicated by the "Success" prompt
 
-## <span class="custom-heading" data-id="6">Flashing via FTDI</span>
+### <span class="custom-heading" data-id="6">Flashing via FTDI</span>
 
 ??? Note "Flashing via FTDI"
 
