@@ -80,7 +80,23 @@ There's three methods to determine what firmware version you currently have on y
 
         -Insert Image of the new Web UI Banner for TX-
 
-Once you have determined the firmware version that's currently flashed into your Transmitter module, you can now decide to whether keep using it as is or update to the latest version.
+Once you have determined the firmware version that's currently flashed into your Transmitter module, you can now decide to whether keep using it as is or update to the latest version. The receiver firmware and the tx module firmware should be in the same Major firmware version.
+
+!!! Tip
+    The ExpressLRS Firmware Versioning scheme is based on the [semantic versioning scheme](https://semver.org/).
+
+    A Version is defined or formatted as "Major.Minor.Patch"
+
+        - major = major new feature and/or incompatible changes
+        - minor = minor features or enhancements and/or new targets
+        - patch = bug-fixes
+    
+    That first number in the Version string should match between a TX Module and a Receiver.
+    examples:
+
+    - a TX Module with version string of 3.1.2 will sync and work with a Receiver with firmware version 3.0.1
+    - a TX Module with version string of 3.2.0 will not sync or bind with a Receiver with firmware version 2.4.0
+
 
 For the latest ExpressLRS firmware version, check the [Releases page in Git Hub](https://github.com/ExpressLRS/ExpressLRS/releases)
 

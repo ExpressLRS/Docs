@@ -132,16 +132,18 @@ To check and change this setting, follow these steps:
 3. Scroll down until you reach the ADC Filter setting.
 4. Press Enter key to toggle it On or Off.
 
-With EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
+??? info "EdgeTX 2.7.0 Per-model Settings"
 
-1. Press MDL Key.
-    - Older Radios or those with only a Menu key will need to long-press the Menu key to access the Model Menu.
-    - Consult your Radio User's Manual on how to get to the Model Menu.
-2. Press the Page key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
-3. Scroll down until you reach the ADC Filter setting.
-4. Press Enter key once.
-5. Use the Scroll wheel to select between Global(uses the setting from the Hardware page in the System Menu), On or Off.
-6. Press Enter key once more to set it.
+    With EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
+
+    1. Press MDL Key.
+        - Older Radios or those with only a Menu key will need to long-press the Menu key to access the Model Menu.
+        - Consult your Radio User's Manual on how to get to the Model Menu.
+    2. Press the Page key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
+    3. Scroll down until you reach the ADC Filter setting.
+    4. Press Enter key once.
+    5. Use the Scroll wheel to select between Global(uses the setting from the Hardware page in the System Menu), On or Off.
+    6. Press Enter key once more to set it.
 
 ## Model Setup
 
@@ -187,11 +189,11 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
     6. Scroll down until you reach the External RF settings. Set this to Off.
     7. Press the RTN Key or Exit the Model Menu
 
-    !!! tip
+    ??? info "No CRSF Mode Option?"
         If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, set the `Internal Module Type` to CRSF via your Radio's `System Menu -> Hardware` page.
 
         1. Press the SYS Key. 
-            - Radio without a dedicated SYS key will need to long-press the Menu key to access the System Menu.
+            - Radios without a dedicated SYS key will need to long-press the Menu key to access the System Menu.
             - Consult your Radio User's Manual on how to get to the System Menu.
         2. Press the Page Key until you get to the Hardware page.
         3. Scroll down until you reach the Internal RF settings.
@@ -217,8 +219,8 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 By default, a fresh model does not have any Aux Channels configured (Aux channels start from Ch5, with the first 4 Channels assigned to your joysticks). If moving any of the switches in your radio doesn't affect your Modes in Betaflight or INAV, this is one of the main reasons. So let's get this sorted out!
 
 1. Press the MDL Key.
-        - Older Radios or those with only a Menu key will need to long-press the Menu key to access the Model Menu.
-        - Consult your Radio User's Manual on how to get to the Model Menu.
+    - Older Radios or those with only a Menu key will need to long-press the Menu key to access the Model Menu.
+    - Consult your Radio User's Manual on how to get to the Model Menu.
 2. Press the Page key until you reach the Mixes Page.
 3. Scroll down to the Channel you want to configure.
 4. Select the Channel, long press Enter and select Edit.
