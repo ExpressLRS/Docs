@@ -5,15 +5,15 @@ description: Start your ExpressLRS experience here! This is the most comprehensi
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-**Welcome to the ELRS Quick Start Guide!**
+## Welcome to the Quick Start Guide
 
-## Prerequisites
+### Prerequisites
 
 You should be comfortable navigating through your Radio Handset firmware (OpenTX/EdgeTX) and setting up models, as the guide on this website mainly covers setting up your radio for you to be able to use ExpressLRS.
     
 Likewise, you should also be comfortable with your Flight Controller firmware (Betaflight, INAV, etc), as the guide only covers setting up your ExpressLRS receiver to work with your flight controller firmware.
 
-## How to Use or Navigate through the Guide
+### How to Use or Navigate through the Guide
 
 This User Guide is organized to cater to both new and seasoned users of the system. The navigation at the side of the Quick Start section is arranged starting from getting the ExpressLRS Configurator installed, an Explanation of the Options available, Steps concerning the Radio and TX module, FC and Receiver setup, a "Before you Fly" page and a Troubleshooting page:
 
@@ -39,9 +39,9 @@ We hope these pages will help you get started with ExpressLRS and experience one
 
 If you have other questions or concerns, or maybe you need further help that isn't covered by this Guide, head over to our Discord Channel!
 
-<span style="text-align:center">[ExpressLRS Discord :fontawesome-brands-discord:](https://discord.gg/dS6ReFY){ .md-button }</span>
+[ExpressLRS Discord :fontawesome-brands-discord:](https://discord.gg/dS6ReFY){ .md-button .md-button--primary .center-block }
 
-## Where are Video Guides?
+## Where are the Video Guides?
 
 Due to the current fast pace of development, video guides often end up outdated faster than intended. Specific hardware guides sometimes use pre-release firmware targets or targets intended for different hardware which can confuse when specific firmware targets are added. 
 

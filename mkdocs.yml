@@ -168,6 +168,7 @@ nav:
       - The Web UI: quick-start/webui.md
       - Transmitters:
           - Radio Preparation: quick-start/transmitters/tx-prep.md
+          - Checking FW Version: quick-start/transmitters/firmware-version.md
           - Flashing Transmitters:
               - Axisflying Thor: quick-start/transmitters/axisflying-thor.md
               - BetaFPV 2.4GHz: quick-start/transmitters/betafpv2400.md
@@ -223,6 +224,8 @@ nav:
               - Vantac: quick-start/receivers/vantac2400.md
               - DIY 900RX: quick-start/receivers/diy900.md
               - DIY 2400RX: quick-start/receivers/diy2400.md
+      - Installing the Configurator: quick-start/installing-configurator.md
+      - Firmware Options: quick-start/firmware-options.md
       - Post-Flash:
           - LED Status: quick-start/led-status.md
           - Binding ExpressLRS: quick-start/binding.md

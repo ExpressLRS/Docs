@@ -122,3 +122,14 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.center-block {
+  display: block!important;
+  max-width: 245px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabbed-labels>label{
+  font-size: .8rem!important;
+}
