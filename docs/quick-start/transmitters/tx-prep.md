@@ -58,7 +58,7 @@ To get to the baudrate setting on your radio:
         - Older Radios or those with only a Menu key will need to long-press the Menu key to access the System Menu.
         - Consult your Radio User's Manual on how to get to the System Menu.
     2. Press the Page Key until you get to the Hardware page.
-    3. Scroll down until you see the Baudrate setting.
+    3. Scroll down until you reach the Baudrate setting.
     4. Press the Enter Key.
     5. Use the Scroll wheel to change and select the Baudrate you want to use.
     6. Press Enter Key once to apply the changes.
@@ -75,7 +75,7 @@ To get to the baudrate setting on your radio:
         - Older Radios or those with only a Menu key will need to short-press the Menu key to access the Model Menu.
         - Consult your Radio User's Manual on how to get to the Model Menu.
     2. Press the Page Key until you get to the Model Setup page.
-    3. Scroll down until you see the External RF settings.
+    3. Scroll down until you reach the External RF settings.
     4. Select the Baudrate setting.
     5. Press the Enter Key.
     6. Use the Scroll wheel to change and select the Baudrate you want to use.
@@ -93,7 +93,7 @@ To get to the baudrate setting on your radio:
         - Older Radios or those with only a Menu key will need to long-press the Menu key to access the System Menu.
         - Consult your Radio User's Manual on how to get to the System Menu.
     2. Press the Page Key until you get to the Hardware page.
-    3. Scroll down until you see the Baudrate setting.
+    3. Scroll down until you reach the Baudrate setting.
         - If you don't see this setting, that means your radio doesn't support changing the baudrate in this firmware and is locked at 400000.
     4. Press the Enter Key.
     5. Use the Scroll wheel to change and select the Baudrate you want to use.
@@ -129,7 +129,7 @@ To check and change this setting, follow these steps:
     - Older Radios or those with only a Menu key will need to long-press the Menu key to access the System Menu.
     - Consult your Radio User's Manual on how to get to the System Menu.
 2. Press the Page key until you reach the Hardware Page.
-3. Scroll down until you see the ADC Filter setting.
+3. Scroll down until you reach the ADC Filter setting.
 4. Press Enter key to toggle it On or Off.
 
 With EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
@@ -138,7 +138,7 @@ With EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off) as this i
     - Older Radios or those with only a Menu key will need to long-press the Menu key to access the Model Menu.
     - Consult your Radio User's Manual on how to get to the Model Menu.
 2. Press the Page key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
-3. Scroll down until you see the ADC Filter setting.
+3. Scroll down until you reach the ADC Filter setting.
 4. Press Enter key once.
 5. Use the Scroll wheel to select between Global(uses the setting from the Hardware page in the System Menu), On or Off.
 6. Press Enter key once more to set it.
