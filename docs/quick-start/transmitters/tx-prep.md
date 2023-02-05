@@ -29,10 +29,10 @@ ExpressLRS **requires** CRSFShot or Mixer Sync to ensure full support for high p
 
 To determine your Radio Operating System Version, load the Version page from the System Menu of your Radio:
 
-1. Press the Sys Key.
-    - On Radios with only one Menu Button, long-press the Menu button to get to the System Menu.
+1. Press the ++"SYS"++ Key.
+    - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
     - Consult your Radio User's Manual on how to access the System Menu.
-2. Press Page Key until you get to the Version Page.
+2. Press ++"PAGE"++ Key until you get to the Version Page.
 
 -show images of how to get to the version page on both b&w and colored screens-
 
@@ -54,14 +54,14 @@ To get to the baudrate setting on your radio:
 
 === "EdgeTX, Internal Module"
 
-    1. Press the SYS Key. 
-        - Older Radios or those with only a Menu key will need to long-press the Menu key to access the System Menu.
+    1. Press the ++"SYS"++ Key. 
+        - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
         - Consult your Radio User's Manual on how to get to the System Menu.
-    2. Press the Page Key until you get to the Hardware page.
+    2. Press the ++"PAGE"++ Key until you get to the Hardware page.
     3. Scroll down until you reach the Baudrate setting.
-    4. Press the Enter Key.
+    4. Press the ++enter++ Key.
     5. Use the Scroll wheel to change and select the Baudrate you want to use.
-    6. Press Enter Key once to apply the changes.
+    6. Press ++enter++ Key once to apply the changes.
     7. Reboot the Radio (turn it Off, then turn it On again).
 
     <figure markdown>
@@ -71,15 +71,15 @@ To get to the baudrate setting on your radio:
 
 === "EdgeTX, External Module"
 
-    1. Press the MDL Key. 
-        - Older Radios or those with only a Menu key will need to short-press the Menu key to access the Model Menu.
+    1. Press the ++"MDL"++ Key. 
+        - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
         - Consult your Radio User's Manual on how to get to the Model Menu.
-    2. Press the Page Key until you get to the Model Setup page.
+    2. Press the ++"PAGE"++ Key until you get to the Model Setup page. On Colored Screen Radios, this should not be needed.
     3. Scroll down until you reach the External RF settings.
     4. Select the Baudrate setting.
-    5. Press the Enter Key.
+    5. Press the ++enter++ Key.
     6. Use the Scroll wheel to change and select the Baudrate you want to use.
-    7. Press Enter Key once to apply the changes.
+    7. Press ++enter++ Key once to apply the changes.
     8. Reboot the Radio (turn it Off, then turn it On again).
 
     <figure markdown>
@@ -89,21 +89,23 @@ To get to the baudrate setting on your radio:
 
 === "OpenTX"
 
-    1. Press the SYS Key. 
-        - Older Radios or those with only a Menu key will need to long-press the Menu key to access the System Menu.
+    1. Press the ++"SYS"++ Key. 
+        - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
         - Consult your Radio User's Manual on how to get to the System Menu.
-    2. Press the Page Key until you get to the Hardware page.
+    2. Press the ++"PAGE"++ Key until you get to the Hardware page.
     3. Scroll down until you reach the Baudrate setting.
         - If you don't see this setting, that means your radio doesn't support changing the baudrate in this firmware and is locked at 400000.
-    4. Press the Enter Key.
+    4. Press the ++enter++ Key.
     5. Use the Scroll wheel to change and select the Baudrate you want to use.
-    6. Press Enter Key once to apply the changes.
+    6. Press ++enter++ Key once to apply the changes.
     7. Reboot the Radio (turn it Off, then turn it On again).
 
     <figure markdown>
     ![Baud Rate](https://fpvfrenzy.com/wp-content/uploads/2017/11/baud-rate.jpg)
     <figcaption>Baudrate setting on Older Radios</figcaption>
     </figure>
+
+<hr />
 
 **Considerations for the Baudrate Settings** 
 
@@ -125,25 +127,25 @@ The ADC filter is enabled by default in OpenTX and is known to cause issues with
 
 To check and change this setting, follow these steps:
 
-1. Press SYS Key.
-    - Older Radios or those with only a Menu key will need to long-press the Menu key to access the System Menu.
+1. Press ++"SYS"++ Key.
+    - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
     - Consult your Radio User's Manual on how to get to the System Menu.
-2. Press the Page key until you reach the Hardware Page.
+2. Press the ++"PAGE"++ Key until you reach the Hardware Page.
 3. Scroll down until you reach the ADC Filter setting.
-4. Press Enter key to toggle it On or Off.
+4. Press ++enter++ Key to toggle it On or Off.
 
 ??? info "EdgeTX 2.7.0 Per-model Settings"
 
     With EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
 
-    1. Press MDL Key.
-        - Older Radios or those with only a Menu key will need to long-press the Menu key to access the Model Menu.
+    1. Press ++"MDL"++ Key.
+        - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
         - Consult your Radio User's Manual on how to get to the Model Menu.
-    2. Press the Page key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
+    2. Press the ++"PAGE"++ Key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
     3. Scroll down until you reach the ADC Filter setting.
-    4. Press Enter key once.
+    4. Press ++enter++ Key once.
     5. Use the Scroll wheel to select between Global(uses the setting from the Hardware page in the System Menu), On or Off.
-    6. Press Enter key once more to set it.
+    6. Press ++enter++ Key once more to set it.
 
 ## Model Setup
 
@@ -158,16 +160,16 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 
 === "External ExpressLRS Modules"
 
-    1. Press the MDL Key.
-        - Older Radios or those with only a Menu key will need to long-press the Menu key to access the Model Menu.
+    1. Press the ++"MDL"++ Key.
+        - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
         - Consult your Radio User's Manual on how to get to the Model Menu.
-    2. Press the Page key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
-    3. Scroll down until you reach the Internal RF settings. Set this to Off.
+    2. Press the ++"PAGE"++ Key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
+    3. Scroll down until you reach the Internal RF settings. Set this to `Off`.
     3. Scroll down until you reach the External RF settings.
-    4. Set the Mode to CRSF.
+    4. Set the Mode to `CRSF`.
         - You can also change the baudrate setting at this point.
     5. (Optional) Set the Receiver ID to a Unique Number.
-    6. Press the RTN Key or Exit the Model Menu
+    6. Press the ++"RTN"++ Key or Exit the Model Menu
 
     <figure markdown>
     ![ExternalRF BW](../../assets/images/txprep-bw-externalRF.jpg)
@@ -179,27 +181,27 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 
 === "Internal ExpressLRS Modules"
 
-    1. Press the MDL Key.
-        - Older Radios or those with only a Menu key will need to long-press the Menu key to access the Model Menu.
+    1. Press the ++"MDL"++ Key.
+        - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
         - Consult your Radio User's Manual on how to get to the Model Menu.
-    2. Press the Page key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
+    2. Press the ++"PAGE"++ Key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
     3. Scroll down until you reach the Internal RF settings.
-    4. Set the Mode to CRSF.
+    4. Set the Mode to `CRSF`.
     5. (Optional) Set the Receiver ID to a Unique Number.
     6. Scroll down until you reach the External RF settings. Set this to Off.
-    7. Press the RTN Key or Exit the Model Menu
+    7. Press the ++"RTN"++ Key or Exit the Model Menu
 
     ??? info "No CRSF Mode Option?"
         If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, set the `Internal Module Type` to CRSF via your Radio's `System Menu -> Hardware` page.
 
-        1. Press the SYS Key. 
-            - Radios without a dedicated SYS key will need to long-press the Menu key to access the System Menu.
+        1. Press the ++"SYS"++ Key. 
+            - Radios without a dedicated ++"SYS"++ Key will need to long-press the ++context-menu++ Key to access the System Menu.
             - Consult your Radio User's Manual on how to get to the System Menu.
-        2. Press the Page Key until you get to the Hardware page.
+        2. Press the ++"PAGE"++ Key until you get to the Hardware page.
         3. Scroll down until you reach the Internal RF settings.
-        4. Set the Type to CRSF.
+        4. Set the Type to `CRSF`.
             - You can also set the Baudrate at this point.
-        5. Press the RTN key or Exit the Hardware Menu, and go back into setting your Internal RF module.
+        5. Press the ++"RTN"++ Key or Exit the Hardware Menu, and go back into setting your Internal RF module.
 
     <figure markdown>
     ![InternalRF BW](../../assets/images/txprep-bw-internalRF.jpg)
@@ -218,17 +220,19 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 
 By default, a fresh model does not have any Aux Channels configured (Aux channels start from Ch5, with the first 4 Channels assigned to your joysticks). If moving any of the switches in your radio doesn't affect your Modes in Betaflight or INAV, this is one of the main reasons. So let's get this sorted out!
 
-1. Press the MDL Key.
-    - Older Radios or those with only a Menu key will need to long-press the Menu key to access the Model Menu.
+1. Press the ++"MDL"++ Key.
+    - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
     - Consult your Radio User's Manual on how to get to the Model Menu.
-2. Press the Page key until you reach the Mixes Page.
+2. Press the ++"PAGE"++ Key until you reach the Mixes Page.
 3. Scroll down to the Channel you want to configure.
-4. Select the Channel, long press Enter and select Edit.
+4. Select the Channel, long press ++enter++ and select Edit.
 5. (Optional) You can name this channel however you want to remind you of its purpose.
-6. Select Source. Press the Enter Key.
+6. Select Source. Press the ++enter++ Key.
 7. Activate or flick the Switch you'd want to use for this channel. An example would be for CH5, which will be your Arming switch, you'd want to choose a 2-position switch.
-8. Press Enter Key once more to set the switch.
-9. Press RTN Key once to exit the Channel Mix editor.
+8. Press ++enter++ Key once more to set the switch.
+9. Press ++"RTN"++ Key once to exit the Channel Mix editor.
+
+Repeat these steps until you have configured all the switches you think you will need.
 
 === "Mono-Screen Radio"
 

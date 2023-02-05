@@ -104,9 +104,17 @@
   color: #ff0000
 }
 
+.md-grid {
+  max-width:1440px;
+}
+
 /* increase admonition font size */
 .admonition, details {
-  font-size: 0.75rem!important; /* default's 0.64rem */
+  font-size: 0.8rem!important; /* default's 0.64rem */
+}
+
+kbd {
+  font-size: 0.8em!important;
 }
 
 .bp-input {
@@ -125,7 +133,8 @@
 
 .center-block {
   display: block!important;
-  max-width: 245px;
+  max-width: 292px;
+  width:fit-content;
   margin-left: auto;
   margin-right: auto;
 }
