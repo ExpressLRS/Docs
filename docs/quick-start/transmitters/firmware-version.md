@@ -55,12 +55,12 @@ There's three methods to determine what firmware version you currently have on y
                 - TX Modules with an OLED Screen will also show a message regarding WiFi mode.
 
     2. Scan for the `ExpressLRS TX` Access Point. 
+        ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png){ align=right }
+
         - If your TX Module is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
         - `expresslrs` is the Password for this Access Point.
 
-        <figure markdown>
-        ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
-        </figure>
+        <br clear="right" />
 
     3. Load the Web UI on your browser using these addresses:
         - http://10.0.0.1/ -If you have connected to the `ExpressLRS TX` Access Point
@@ -74,6 +74,19 @@ There's three methods to determine what firmware version you currently have on y
 
             !!! Note
                 Some computers and networks cannot resolve this address if MDNS is not working. 
+
+            ??? tip "Use the IP Address instead!"
+                === "The `arp` Command"
+
+                    1. Open up a Command Prompt window on your computer.
+                    2. Execute the command `arp -a` which will list all the devices in the Network.
+                    3. Use each of the IP Addresses marked as `Dynamic` as URL into your Browser until you get to the ExpressLRS Web UI.
+
+                === "Router DHCP List"
+                    1. Log in into your Router dashboard.
+                    2. Check the DHCP List and look for the "elrs" device.
+                    3. Take note of the IP Address given by your router.
+                    4. Use this IP address into your Browser as the URL.
 
     4. The Banner of the Web UI should tell you the firmware version flashed into your Tx module.
 
