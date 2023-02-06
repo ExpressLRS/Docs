@@ -51,7 +51,7 @@ There's three methods to determine what firmware version you currently have on y
         === "External Module detached from Radio"
 
             1. With your Tx module disconnected from your Radio module bay, power it up either via an external power source (2S) or by plugging in a USB cable into its USB Port.
-            2. Let it be for 60s and the RGB LED will turn into a Green Breathing LED pattern. This indicates it is now in WiFi Mode.
+            2. Let it be for 60s and the RGB LED will turn into a Green Breathing LED pattern indicating it is now in WiFi Mode.
                 - TX Modules with an OLED Screen will also show a message regarding WiFi mode.
 
     2. Scan for the `ExpressLRS TX` Access Point. 

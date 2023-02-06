@@ -40,6 +40,23 @@ If you have an older version, please first update your Radio OS to at least the 
 
 ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases) for best experience and compatibility. EdgeTX have introduced options that old and new Radio handsets will benefit from, like One Bit Sample Mode (mainly for old Frsky Radios like the X9D and the QX7) and Mega Bauds (Baudrates higher than 400K).
 
+??? Tip "Simplest EdgeTX Updating Procedure"
+    1. Visit http://buddy.edgetx.org/.
+    2. Select the EdgeTX version and the Radio Model you want to update from the Left-hand side column.
+    3. Click the ++"Download .bin"++ button at the bottom of the page.
+    4. Save the firmware file into your Radio's SD Card, inside the `Firmware` Folder.
+    5. Reboot the Radio into DFU/Bootloader mode.
+        - Start by turning off your radio.
+        - Press and hold the two horizontal Trim switches then press the Power button. The Screen should Light up. Release the buttons.
+        - Some Radios have a different procedure, like the BetaFPV Lite Radio 3 Pro. Consult the Manual for the steps to get it into this DFU/Bootloader mode.
+    6. Select `Write Firmware`.
+    7. Navigate to the EdgeTx firmware file you just downloaded.
+    8. Follow the screen prompts.
+    9. Once Writing is complete, reboot the radio.
+    10. Check the Radio's Version Page to verify you have the version you need.
+
+Check [this page](https://github.com/EdgeTX/edgetx.github.io/wiki/EdgeTX-Installation-Guide) for the EdgeTX installation instructions if you're coming in from OpenTX.
+
 ## Radio Settings
 
 ### Serial Baud Rate
@@ -118,6 +135,17 @@ To get to the baudrate setting on your radio:
 Radios such as the Frsky QX7, X10/S, and X12 will require either the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) or the OneBit Sample mode (found just before the ADC Filter setting in EdgeTX System Menu -> Hardware page) if a 400K or higher Baud Rate is desired. The Taranis X9D(+) has proven to be finicky even with the default 400K Baud Rate setting (see [Troubleshooting the X9D](../../hardware/x9d-troubleshooting.md)) and could use the OneBit Sample Mode as well.
 
 As this setting also involves the module, it should be noted that you must also consider the type of module you are using with the radio. For instance, the R9M 2018 cannot reliably run at 400K Baud Rate setting and will require the [Resistor Mod](../../hardware/inverter-mod.md) first. If you can run your Radio Handset at a lower 115200 Baud Rate, then you don't have to do this Mod. STM-based modules like the R9M 2019, Ghost, Happymodel ES915TX or the Gen1 No OLED NamimnoRC Flash and Voyager modules can run at 1.87M Baud Rate. ESP-based modules like the Happymodel ES24TX, BetaFPV Nano & Micro or the Axisflying Thor can run up-to 3.75M or even 5.25M.
+
+| TX Module | Max Baud Rate | Notes |
+| ---- | ---- | ---- |
+| RadioMaster Internal ELRS Modules | 5.25M | |
+| HM ES24TX, HM ES900TX, BetaFPV Nano/Micro and <br />other ExpressLRS External Modules | 5.25M* | ESP32-based Modules |
+| Jumper TLite V2 & Jumper T-Pro Internal ELRS Modules | 1.87M | |
+| Vantac Lite Nano TX, Jumper Aion Nano TX | 1.87M | |
+| R9M 2018 | 115200 | [Resistor Mod](../../hardware/inverter-mod.md) for 400K |
+| R9M ACCESS, HM ES915TX | 1.87M | STM32-based Modules |
+| GHOST, Gen1 NamimnoRC no OLED  | 1.87M | STM32-based Modules |
+*Dependent on Radio
 
 Be warned though. Just because you can doesn't mean you should. If you're experiencing constant Telemetry Lost/Recovered even nearby and/or that the Lua Script fails to load properly, then it's a sign your radio and/or module cannot run the selected Baud Rate. Lower it down a notch or settle with 400K Baud Rate.
 
@@ -224,15 +252,15 @@ By default, a fresh model does not have any Aux Channels configured (Aux channel
     - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
     - Consult your Radio User's Manual on how to get to the Model Menu.
 2. Press the ++"PAGE"++ Key until you reach the Mixes Page.
-3. Scroll down to the Channel you want to configure.
-4. Select the Channel, long press ++enter++ and select Edit.
+3. Scroll down and select the Channel you want to configure.
+4. Long press ++enter++ and select Edit and press ++enter++ once more.
 5. (Optional) You can name this channel however you want to remind you of its purpose.
 6. Select Source. Press the ++enter++ Key.
-7. Activate or flick the Switch you'd want to use for this channel. An example would be for CH5, which will be your Arming switch, you'd want to choose a 2-position switch.
+7. Activate or flick the Switch you'd want to use for this channel. 
+    - An example would be for CH5, which will be your Arming switch, you'd want to choose a 2-position switch.
 8. Press ++enter++ Key once more to set the switch.
 9. Press ++"RTN"++ Key once to exit the Channel Mix editor.
-
-Repeat these steps until you have configured all the switches you think you will need.
+10. Repeat steps 3-9 until you have configured all the switches you think you will need.
 
 === "Mono-Screen Radio"
 
