@@ -37,6 +37,8 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             - Do not close this Temp folder unless you have already copied the firmware file somewhere safe, like into your smartphone folder if you're planning to use your smartphone to upload the file in the next steps.
             - the firmware file named with the format `<device target name> + <version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
         6. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
+            - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+            - Consult your Radio User's Manual on how to access the System Menu.
         7. Scroll down and select `ExpressLRS` Lua Script.
             - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
         8. Press ++enter++ to Load it.
@@ -88,6 +90,8 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             - Do not close this Temp folder unless you have already copied the firmware file somewhere safe, like into your smartphone folder if you're planning to use your smartphone to upload the file in the next steps.
             - the firmware file named with the format `<device target name> + <version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
         6. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
+            - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+            - Consult your Radio User's Manual on how to access the System Menu.
         7. Scroll down and select `ExpressLRS` Lua Script.
             - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
         8. Press ++enter++ to Load it.
@@ -129,6 +133,8 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             MDNS must also be working and that your browser can resolve the address http://elrs_tx.local and it can load the ExpressLRS Web UI from said address.
 
         1. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
+            - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+            - Consult your Radio User's Manual on how to access the System Menu.
         2. Scroll down and select `ExpressLRS` Lua Script.
             - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
         3. Press ++enter++ to Load it.

@@ -18,12 +18,18 @@ There's three methods to determine what firmware version you currently have on y
 === "via Lua Script"
 
     1. Press the ++"SYS"++ Key on your Radio.
+
         - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
         - Consult your Radio User's Manual on how to access the System Menu.
+
     2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
+
         - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+
     3. Press ++enter++ Key to activate the Script.
+
         - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+
     4. Scroll to the bottom of the page and you should see the Current Version flashed into your TX module.
 
     -insert image of Lua Script showing the version line-
