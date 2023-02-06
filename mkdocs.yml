@@ -162,6 +162,7 @@ nav:
       - Getting Started: quick-start/getting-started.md
       - Installing the Configurator: quick-start/installing-configurator.md
       - Firmware Options: quick-start/firmware-options.md
+      - The Web UI: quick-start/webui.md
       - Transmitters:
           - Radio Preparation: quick-start/transmitters/tx-prep.md
           - Flashing Transmitters:
