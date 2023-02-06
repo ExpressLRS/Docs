@@ -18,6 +18,8 @@ There's three methods to determine what firmware version you currently have on y
 === "via Lua Script"
 
     1. Press the ++"SYS"++ Key on your Radio.
+        - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+        - Consult your Radio User's Manual on how to access the System Menu.
     2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
         - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
     3. Press ++enter++ Key to activate the Script.
@@ -39,6 +41,8 @@ There's three methods to determine what firmware version you currently have on y
         === "via ExpressLRS Lua Script" 
 
             1. Press the ++"SYS"++ Key on your Radio.
+                - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+                - Consult your Radio User's Manual on how to access the System Menu.
             2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
                 - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
             3. Press ++enter++ to Load it.
