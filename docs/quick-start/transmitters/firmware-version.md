@@ -53,13 +53,18 @@ There's three methods to determine what firmware version you currently have on y
                 - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
             3. Press ++enter++ to Load it.
             
-                <figure markdown style="width: 75%" >
+                <figure markdown >
                 ![Lua Running]
                 </figure> 
 
                 - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
             4. Scroll down and select `Wifi Connectivity` and press ++enter++.
             5. Select `Enable WiFi` and press ++enter++.
+            
+                <figure markdown>
+                ![Lua WiFi]
+                </figure>
+            
             6. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
                 - If the Script stopped and is showing a Syntax Error, do not worry. The module is still in WiFi mode. The Syntax Error could be because you're on an older radio, older EdgeTX/OpenTX firmware or both. It could also be due to the fact your TX module is on an earlier firmware version and you're using a more recent Lua Script.
 
@@ -142,5 +147,6 @@ For the latest ExpressLRS firmware version, check the [Releases page in Git Hub]
 
     See the [Binding Procedure](../binding.md) to sync your TX Module with your Receiver.
 
-[Lua Running]: ../../assets/images/tx-internalLuaCheck.jpg
+[Lua Running]: ../../assets/images/lua/config-bw.png
+[Lua WiFi]: ../../assets/images/lua/wifi-bw.png
 [WiFi Hotspot]: ../../assets/images/WifiHotspotTX.png

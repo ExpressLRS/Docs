@@ -19,7 +19,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             This option is only possible if you haven't previously flashed or configured your TX Module with your Home WiFi SSID and Password or it's unable to connect to said WiFi Network because the router is Off or unreachable.
 
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
-            ![Configurator Release]{ align=right width="50%" max-width="340px" }
+            ![Configurator Release]{ align=right }
 
             - Make sure Official Releases is active from the horizontal tab.
             - Make sure you have selected the Released version you want to flash into your TX module.
@@ -39,11 +39,11 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             
         5. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
 
-            ![Temp TX]{ align=right width="50%" max-width="340px" }
+            ![Temp TX]{ align=right }
 
             - You can use any of these files.
             - Do not close this Temp folder unless you have already copied the firmware file somewhere safe, like into your smartphone folder if you're planning to use your smartphone to upload the file in the next steps.
-            - the firmware file named with the format `<device target name> + <version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
+            - the firmwaare file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
 
             <br clear="right" />
             
@@ -54,13 +54,18 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
         8. Press ++enter++ to Load it.
 
-            <figure markdown style="width: 75%" >
+            <figure markdown>
             ![Lua Running]
             </figure>
 
             - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
         9. Scroll down and select `Wifi Connectivity` and press ++enter++.
         10. Select `Enable WiFi` and press ++enter++.
+
+            <figure markdown>
+            ![Lua WiFi]
+            </figure>
+
         11. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
             - If the Script stopped and is showing a Syntax Error, do not worry. The module is still in WiFi mode. The Syntax Error could be because you're on an older radio, older EdgeTX/OpenTX firmware or both. It could also be due to the fact your TX module is on an earlier firmware version and you're using a more recent Lua Script.
 
@@ -88,7 +93,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and it's able to connect to said WiFi Network.
 
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
-            ![Configurator Release]{ align=right width="50%" max-width="340px" }
+            ![Configurator Release]{ align=right }
 
             - Make sure Official Releases is active from the horizontal tab.
             - Make sure you have selected the Released version you want to flash into your TX module.
@@ -106,11 +111,11 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             </figure>
             
         5. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
-            ![Temp TX]{ align=right width="50%" max-width="340px" }
+            ![Temp TX]{ align=right }
 
             - You can use any of these files.
             - Do not close this Temp folder unless you have already copied the firmware file somewhere safe, like into your smartphone folder if you're planning to use your smartphone to upload the file in the next steps.
-            - the firmware file named with the format `<device target name> + <version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
+            - the firmwaare file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
 
             <br clear="right" />
         6. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
@@ -120,13 +125,18 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
         8. Press ++enter++ to Load it.
 
-            <figure markdown style="width: 75%" >
+            <figure markdown>
             ![Lua Running]
             </figure>
 
             - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
         9. Scroll down and select `Wifi Connectivity` and press ++enter++.
         10. Select `Enable WiFi` and press ++enter++.
+            
+            <figure markdown>
+            ![Lua WiFi]
+            </figure>
+
         11. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
             - If the Script stopped and is showing a Syntax Error, do not worry. The module is still in WiFi mode. The Syntax Error could be because you're on an older radio, older EdgeTX/OpenTX firmware or both. It could also be due to the fact your TX module is on an earlier firmware version and you're using a more recent Lua Script.
 
@@ -168,17 +178,22 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
         3. Press ++enter++ to Load it.
 
-            <figure markdown style="width: 75%" >
+            <figure markdown>
             ![Lua Running]
             </figure>
 
             - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
         4. Scroll down and select `Wifi Connectivity` and press ++enter++.
         5. Select `Enable WiFi` and press ++enter++.
+            
+            <figure markdown>
+            ![Lua WiFi]
+            </figure>
+            
         6. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
             - If the Script stopped and is showing a Syntax Error, do not worry. The module is still in WiFi mode. The Syntax Error could be because you're on an older radio, older EdgeTX/OpenTX firmware or both. It could also be due to the fact your TX module is on an earlier firmware version and you're using a more recent Lua Script.
         7. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
-            ![Configurator Release]{ align=right width="50%" max-width="340px" }
+            ![Configurator Release]{ align=right }
 
             - Make sure Official Releases is active from the horizontal tab.
             - Make sure you have selected the Released version you want to flash into your TX module.
@@ -225,7 +240,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
         - The ES24TX line of modules from Happymodel have jumper blocks or dipswitches inside the module.
         - The BetaFPV Micro modules have dipswitches at the back.
     4. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
-        ![Configurator Release]{ align=right width="50%" max-width="340px" }
+        ![Configurator Release]{ align=right }
 
         - Make sure Official Releases is active from the horizontal tab.
         - Make sure you have selected the Released version you want to flash into your TX module.
@@ -330,7 +345,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
         You only have to do this once usually.
     
     4. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
-        ![Configurator Release]{ align=right width="50%" max-width="340px" }
+        ![Configurator Release]{ align=right }
 
         - Make sure Official Releases is active from the horizontal tab.
         - Make sure you have selected the Released version you want to flash into your TX module.
@@ -351,7 +366,8 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
     9. Unplug your Radio from USB.
     10. Using the ExpressLRS Lua Script from the Tools Menu, check  if the firmware version got updated.
 
-[Lua Running]: ../../assets/images/tx-internalLuaCheck.jpg
+[Lua Running]: ../../assets/images/lua/config-bw.png
+[Lua WiFi]: ../../assets/images/lua/wifi-bw.png
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
 [Temp TX]: ../../assets/images/build-temp-tx.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
