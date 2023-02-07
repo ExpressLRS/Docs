@@ -32,7 +32,7 @@ There's three methods to determine what firmware version you currently have on y
 
     4. Scroll to the bottom of the page and you should see the Current Version flashed into your TX module.
 
-    -insert image of Lua Script showing the version line-
+        -insert image of Lua Script showing the version line-
 
 === "via OLED Screen"
 
@@ -44,7 +44,7 @@ There's three methods to determine what firmware version you currently have on y
 
     1. Put your module into wifi mode.
 
-        === "via ExpressLRS Lua Script" 
+        === "using the ExpressLRS Lua Script" 
 
             1. Press the ++"SYS"++ Key on your Radio.
                 - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
@@ -52,20 +52,26 @@ There's three methods to determine what firmware version you currently have on y
             2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
                 - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
             3. Press ++enter++ to Load it.
+            
+                <figure markdown style="width: 75%" >
+                ![Lua Running]
+                </figure> 
+
                 - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
             4. Scroll down and select `Wifi Connectivity` and press ++enter++.
             5. Select `Enable WiFi` and press ++enter++.
             6. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
                 - If the Script stopped and is showing a Syntax Error, do not worry. The module is still in WiFi mode. The Syntax Error could be because you're on an older radio, older EdgeTX/OpenTX firmware or both. It could also be due to the fact your TX module is on an earlier firmware version and you're using a more recent Lua Script.
 
-        === "External Module detached from Radio"
+        === "using Auto WiFi mode"
 
             1. With your Tx module disconnected from your Radio module bay, power it up either via an external power source (2S) or by plugging in a USB cable into its USB Port.
-            2. Let it be for 60s and the RGB LED will turn into a Green Breathing LED pattern indicating it is now in WiFi Mode.
-                - TX Modules with an OLED Screen will also show a message regarding WiFi mode.
+            2. Let it be for at least 60s and the RGB LED will turn into a Green Breathing LED pattern indicating it is now in WiFi Mode.
+                - The Auto WiFi On Interval setting controls how long the device will wait to initiate WiFi Mode when it's powered up and it's not getting valid CRSF packets.
+                - TX Modules with an OLED Screen will also show a message to indicate it is in WiFi Mode.
 
     2. Scan for the `ExpressLRS TX` Access Point. 
-        ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png){ align=right }
+        ![WiFi Hotspot]{ align=right }
 
         - If your TX Module is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
         - `expresslrs` is the Password for this Access Point.
@@ -104,7 +110,7 @@ There's three methods to determine what firmware version you currently have on y
 
 <hr />
 
-Once you have determined the firmware version that's currently flashed into your Transmitter module, you can now decide to whether keep using it as is or update to the latest version. 
+Once you have determined the firmware version that's currently flashed into your Transmitter module, you can now decide to whether keep using it as is or update to the latest version.
 
 !!! Info "Versioning Scheme"
     The ExpressLRS Firmware Versioning scheme is based on the [semantic versioning scheme](https://semver.org/).
@@ -124,3 +130,17 @@ Once you have determined the firmware version that's currently flashed into your
 
 For the latest ExpressLRS firmware version, check the [Releases page in Git Hub](https://github.com/ExpressLRS/ExpressLRS/releases)
 
+## I Know the Version. What Now?
+
+=== "I have an old version"
+
+    See the [next page](../transmitters/updating.md) for the typical updating procedure or use the links below to find the updating instructions specific to your TX Module.
+
+    -links-
+
+=== "I have a recent one"
+
+    See the [Binding Procedure](../binding.md) to sync your TX Module with your Receiver.
+
+[Lua Running]: ../../assets/images/tx-internalLuaCheck.jpg
+[WiFi Hotspot]: ../../assets/images/WifiHotspotTX.png

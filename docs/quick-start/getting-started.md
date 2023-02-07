@@ -13,6 +13,28 @@ You should be comfortable navigating through your Radio Handset firmware (OpenTX
     
 Likewise, you should also be comfortable with your Flight Controller firmware (Betaflight, INAV, etc), as the guide only covers setting up your ExpressLRS receiver to work with your flight controller firmware.
 
+### What should I do first?
+
+So you got your ExpressLRS Hardware, be it a new Radio Handset with Internal ExpressLRS module, or an External ExpressLRS Module; and a set of ExpressLRS Receivers in a bundle or a Bind-and-Fly drone with ExpressLRS Receiver already wired up. Where do you start?
+
+Here's our recommendation:
+
+=== "Transmitter Side"
+    1. [Setup your Radio](../quick-start/transmitters/tx-prep.md)
+    2. [Check the TX Firmware Version](../quick-start/transmitters/firmware-version.md)
+    3. [Update the TX Module](../quick-start/transmitters/updating.md)
+
+=== "Receiver Side"
+    1. [Connect your Receiver](../quick-start/receivers/wiring-up.md)
+    2. [Configure your Flight Controller](../quick-start/receivers/configuring-fc.md)
+    3. Check the RX Firmware Version
+    4. Update the RX Firmware
+
+After both of these, you can then proceed with the following:
+
+- [Bind](../quick-start/binding.md)
+- Do the [Bench Test](../quick-start/pre-1stflight.md#bench-test)
+
 ### How to Use or Navigate through the Guide
 
 This User Guide is organized to cater to both new and seasoned users of the system. The navigation at the side of the Quick Start section is arranged starting from getting the ExpressLRS Configurator installed, an Explanation of the Options available, Steps concerning the Radio and TX module, FC and Receiver setup, a "Before you Fly" page and a Troubleshooting page:
