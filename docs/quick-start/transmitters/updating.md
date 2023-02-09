@@ -34,9 +34,9 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             </figure>
 
         4. Set the [firmware options](../firmware-options.md) for your device.
-            - Regulatory Domain (choose the domain appropriate for the location or country you're flying).
-            - Binding Phrase (take note of this phrase as this should be the same on your other devices or they will not bind or sync).
-            - Local WiFi Network Credentials (will be used the next time the device goes into WiFi mode).
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
         5. Click the ++"Build"++ button.
             
             <figure markdown>
@@ -48,8 +48,8 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             ![Temp TX]{ align=right }
 
             - You can use any of these files.
-            - Do not close this Temp folder unless you have already copied the firmware file somewhere safe, like into your smartphone folder if you're planning to use your smartphone to upload the file in the next steps.
-            - the firmwaare file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
 
             <br clear="right" />
             
@@ -86,6 +86,13 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
 
         14. Once you have connected to the `ExpressLRS TX` Access Point, open up a Browser window and type in the IP Address `10.0.0.1` on the Address Bar and press ++enter++. The ExpressLRS Web UI will load.
         15. Activate the `Update` Tab.
+
+            - If your TX Module is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
+
+            <figure markdown>
+            ![Old File Upload]
+            </figure>
+
         16. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
             - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied it somewhere else on an earlier step.
         17. Click the ++"Update"++ button to start the Updating procedure.
@@ -96,7 +103,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
     === "Manual Upload via Local WiFi"
 
         !!! Info "Heads up!"
-            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and it's able to connect to said WiFi Network.
+            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
 
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
@@ -113,9 +120,9 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             </figure>
 
         4. Set the [firmware options](../firmware-options.md) for your device.
-            - Regulatory Domain (choose the domain appropriate for the location or country you're flying).
-            - Binding Phrase (take note of this phrase as this should be the same on your other devices or they will not bind or sync).
-            - Local WiFi Network Credentials (will be used the next time the device goes into WiFi mode).
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
         5. Click the ++"Build"++ button.
             
             <figure markdown>
@@ -126,8 +133,8 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             ![Temp TX]{ align=right }
 
             - You can use any of these files.
-            - Do not close this Temp folder unless you have already copied the firmware file somewhere safe, like into your smartphone folder if you're planning to use your smartphone to upload the file in the next steps.
-            - the firmwaare file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
 
             <br clear="right" />
         7. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
@@ -169,6 +176,13 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
                     4. Use this IP address into your Browser as the URL.
 
         14. Activate the `Update` Tab.
+
+            - If your TX Module is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
+
+            <figure markdown>
+            ![Old File Upload]
+            </figure>
+
         15. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
             - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied it somewhere else on an earlier step.
         16. Click the ++"Update"++ button to start the Updating procedure.
@@ -179,7 +193,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
     === "Auto Upload"
 
         !!! Info "Heads up!"
-            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and it's able to connect to said WiFi Network. 
+            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network. 
             
             MDNS must also be working and that your browser can resolve the address http://elrs_tx.local and it can load the ExpressLRS Web UI from said address.
 
@@ -220,9 +234,9 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             </figure>
 
         10. Set the [firmware options](../firmware-options.md) for your device.
-            - Regulatory Domain (choose the domain appropriate for the location or country you're flying).
-            - Binding Phrase (take note of this phrase as this should be the same on your other devices or they will not bind or sync).
-            - Local WiFi Network Credentials (will be used the next time the device goes into WiFi mode).
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
         11. Click the ++"Build & Flash"++ button.
 
             <figure markdown>
@@ -246,6 +260,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
     </figure>
 
     1. Connect your TX Module to your Computer via a USB Data Cable. Best if you remove it from your Radio.
+        - Some TX Modules would require some disassembly before you can get to the USB port.
     2. Determine whether your TX Module is being detected properly as a USB-to-UART Device.
 
         ![CP210x]{ align=right }
@@ -274,9 +289,9 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
         </figure>
 
     7. Set the [firmware options](../firmware-options.md) for your device.
-        - Regulatory Domain (choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (take note of this phrase as this should be the same on your other devices or they will not bind or sync).
-        - Local WiFi Network Credentials (will be used the next time the device goes into WiFi mode).
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
     8. Click the ++"Build & Flash"++ button.
 
         <figure markdown>
@@ -386,9 +401,9 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
         </figure>
 
     7. Set the [firmware options](../firmware-options.md) for your device.
-        - Regulatory Domain (choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (take note of this phrase as this should be the same on your other devices or they will not bind or sync).
-        - Local WiFi Network Credentials (will be used the next time the device goes into WiFi mode).
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
     8. Click the ++"Build & Flash"++ button.
 
         <figure markdown>
@@ -406,3 +421,4 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [CP210x]: ../../assets/images/device-mngr-cp210x.png
+[Old File Upload]: ../../assets/images/web-firmwareupdate.png
