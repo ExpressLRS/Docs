@@ -9,7 +9,7 @@ template: main.html
 
     Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
 
-    Repartitioner is not needed if flashing via USB/UART.
+    You can update straight to 3.2.0 without repartitioner or going to 2.5.1 first if flashing via UART.
 
 ## Flashing via WiFi
 
