@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: Get to know your ExpressLRS devices' Firmware Version.
+description: Get to know your ExpressLRS TX Module Firmware Version.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
@@ -42,7 +42,7 @@ There's three methods to determine what firmware version you currently have on y
 
 === "via Web UI"
 
-    1. Put your module into wifi mode.
+    1. Put your module into WiFi mode.
 
         === "using the ExpressLRS Lua Script" 
 

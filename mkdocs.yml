@@ -169,7 +169,7 @@ nav:
       - Transmitters:
           - Radio Preparation: quick-start/transmitters/tx-prep.md
           - Checking FW Version: quick-start/transmitters/firmware-version.md
-          - Typical Updating Process: quick-start/transmitters/updating.md
+          - Typical Updating Steps: quick-start/transmitters/updating.md
           - Updating Transmitters:
               - Axisflying Thor: quick-start/transmitters/axisflying-thor.md
               - BetaFPV 2.4GHz: quick-start/transmitters/betafpv2400.md
@@ -198,6 +198,8 @@ nav:
       - Receivers:
           - Receiver Wiring: quick-start/receivers/wiring-up.md
           - Configuring FC: quick-start/receivers/configuring-fc.md
+          - Checking FW Version: quick-start/receivers/firmware-version.md
+          - Typical Updating Steps: quick-start/receivers/updating.md
           - Updating Receivers:
               - Axisflying Thor: quick-start/receivers/axisflying-thor.md
               - BetaFPV Lite & Nano 2.4GHz: quick-start/receivers/betafpv2400.md
