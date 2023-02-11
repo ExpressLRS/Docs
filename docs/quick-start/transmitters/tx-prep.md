@@ -25,14 +25,14 @@ Make sure you do have an Internal ExpressLRS Modules on your shiny new radio. Th
 
 ## Radio Operating System
 
-ExpressLRS **requires** CRSFShot or Mixer Sync to ensure full support for high packet rates. You should have [OpenTX 2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12) or newer; or [EdgeTX 2.4.0](https://github.com/EdgeTX/edgetx/releases/tag/v2.4.0) or newer; These version have full CRSFShot/Mixer Sync support.
+ExpressLRS **requires** CRSFShot or Mixer Sync to ensure full support for high packet rates. You should have [OpenTX 2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12) or newer; or [EdgeTX 2.4.0](https://github.com/EdgeTX/edgetx/releases/tag/v2.4.0) or newer; These versions have full CRSFShot/Mixer Sync support.
 
 To determine your Radio Operating System Version, load the Version page from the System Menu of your Radio:
 
 1. Press the ++"SYS"++ Key.
     - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
     - Consult your Radio User's Manual on how to access the System Menu.
-2. Press ++"PAGE"++ Key until you get to the Version Page.
+2. Press ++"PAGE"++ Key until you reach the Version Page.
 
 -show images of how to get to the version page on both b&w and colored screens-
 
@@ -65,7 +65,7 @@ The Baud Rate is the speed to which (in this instance) the Transmitter module an
 
 A Faster or higher baud rate means that the module and radio can talk much faster, further lowering the end-to-end latency of the system. However, not all radio handsets or transmitter modules are capable of higher baud rates as this is highly dependent on the hardware.
 
-Depending on the firmware that is running on your radio handset, you can change the baud rate setting to better suit your setup. This setting can be found in the System Menu -> Hardware page, under the Max Bauds (earlier OpenTX) or Baudrate (EdgeTX; recent OpenTX). On EdgeTX 2.7.0 and later, External RF modules now have their own Baudrate setting (see Model Setup section below). Internal ExpressLRS Modules will still use the Baudrate setting in the System Menu -> Hardware page.
+Depending on the firmware that is running on your radio handset, you can change the baud rate setting to better suit your setup. 
 
 To get to the baudrate setting on your radio:
 
@@ -184,7 +184,7 @@ To check and change this setting, follow these steps:
 
     If your Radio has an Internal ExpressLRS Module, and you want to use it instead of an external module, then set External RF Module to **OFF**, and then set the Internal RF Module to **CRSF** Protocol.
 
-ExpressLRS uses the CRSF serial protocol to communicate between the transmitter and the TX module. Follow the following procedure to set it up on the current selected Model:
+ExpressLRS uses the CRSF serial protocol to communicate between the transmitter and the TX module. Follow the following procedure to set it up on the currently selected Model:
 
 === "External ExpressLRS Modules"
 
