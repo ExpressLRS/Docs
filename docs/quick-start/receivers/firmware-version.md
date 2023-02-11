@@ -139,7 +139,7 @@ It is still recommended that you update your gear to the latest firmware version
 
 <hr />
 
-Once you have determined the firmware version that's currently flashed into your Transmitter module, you can now decide to whether keep using it as is or update to the latest version.
+Once you have determined the firmware version that's currently flashed into your Receiver, you can now decide to whether keep using it as is or update to the latest version.
 
 !!! Info "Versioning Scheme"
     The ExpressLRS Firmware Versioning scheme is based on the [semantic versioning scheme](https://semver.org/).
@@ -150,7 +150,7 @@ Once you have determined the firmware version that's currently flashed into your
         - minor = minor features or enhancements and/or new targets
         - patch = bug-fixes
     
-    That first number in the Version string should match between a Receiver and a Receiver.
+    That first number in the Version string should match between a TX Module and a Receiver.
     Examples:
 
     - a Receiver with version string of 3.1.2 will sync and work with a TX Module with firmware version 3.0.1
