@@ -27,8 +27,8 @@ Here's our recommendation:
 === "Receiver Side"
     1. [Connect your Receiver](../quick-start/receivers/wiring-up.md)
     2. [Configure your Flight Controller](../quick-start/receivers/configuring-fc.md)
-    3. Check the RX Firmware Version
-    4. Update the RX Firmware
+    3. [Check the Receiver Firmware Version](../quick-start/receivers/firmware-version.md)
+    4. [Update the Receiver Firmware](../quick-start/receivers/updating.md)
 
 After both of these, you can then proceed with the following:
 
