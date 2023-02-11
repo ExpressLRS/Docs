@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: General Guidelines for ExpressLRS TX module firmware updating.
+description: General Guidelines for ExpressLRS TX Module firmware updating.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
@@ -82,6 +82,11 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             - If your TX Module is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
             - `expresslrs` is the Password for this Access Point.
 
+            ??? question "Where's the Access Point?"
+                If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also try putting the devices closer together.
+                
+                If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
+
             <br clear="right" />
 
         14. Once you have connected to the `ExpressLRS TX` Access Point, open up a Browser window and type in the IP Address `10.0.0.1` on the Address Bar and press ++enter++. The ExpressLRS Web UI will load.
@@ -94,7 +99,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             </figure>
 
         16. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
-            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied it somewhere else on an earlier step.
+            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
         17. Click the ++"Update"++ button to start the Updating procedure.
         18. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
         19. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
@@ -162,7 +167,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
         13. With your module now in WiFi Mode and it was able to connect to your Local WiFi Network, open a Browser window on any WiFi-capable device that is also connected to the same Local WiFi Network. Type in the Address http://elrs_tx.local on your browser's Address Bar. The ExpressLRS Web UI should load.
             - If your browser cannot resolve this address and it cannot load the ExpressLRS Web UI, this means that MDNS is not working on your device or network.
 
-            ??? tip "Use the IP Address instead!"
+            ??? tip "MDNS is not working!"
                 === "The `arp` Command"
 
                     1. Open up a Command Prompt window on your computer.
@@ -184,7 +189,7 @@ description: General Guidelines for ExpressLRS TX module firmware updating.
             </figure>
 
         15. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
-            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied it somewhere else on an earlier step.
+            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
         16. Click the ++"Update"++ button to start the Updating procedure.
         17. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
         18. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.

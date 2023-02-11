@@ -81,6 +81,11 @@ There's three methods to determine what firmware version you currently have on y
         - If your TX Module is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
         - `expresslrs` is the Password for this Access Point.
 
+        ??? question "Where's the Access Point?"
+            If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also try putting the devices closer together.
+                
+            If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
+
         <br clear="right" />
 
     3. Load the Web UI on your browser using these addresses:

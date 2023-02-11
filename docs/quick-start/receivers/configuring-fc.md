@@ -1,11 +1,11 @@
 ---
 template: main.html
-description: Configure your Flight Controller with the help of this guide.
+description: Configure your Flight Controller for ExpressLRS with the help of this guide.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Ports Tab Settings
+## Serial RX Setup
 
 Once you've [wired up](./wiring-up.md) your Receiver to your Flight Controller, you need to setup the UART for Serial RX. This is usually done on the Ports Tab of your Flight Controller Configurator.
 

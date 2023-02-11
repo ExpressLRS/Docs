@@ -72,6 +72,11 @@ It is still recommended that you update your gear to the latest firmware version
         - If your Receiver is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
         - `expresslrs` is the Password for this Access Point.
 
+        ??? question "Where's the Access Point?"
+            If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also try putting the devices closer together.
+                
+            If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
+
         <br clear="right" />
 
     3. Load the Web UI on your browser using these addresses:
@@ -158,7 +163,7 @@ For the latest ExpressLRS firmware version, check the [Releases page in Git Hub]
 
 === "I have an old version"
 
-    See the [next page](../transmitters/updating.md) for the typical updating procedure or use the links below to find the updating instructions specific to your Receiver.
+    See the [next page](../receivers/updating.md) for the typical updating procedure or use the links below to find the updating instructions specific to your Receiver.
 
     -links-
 
