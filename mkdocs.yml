@@ -258,6 +258,7 @@ nav:
           - Backpack Info: hardware/backpack/esp-backpack.md
           - Tx Backpack Setup: hardware/backpack/backpack-tx-setup.md
           - VRx Backpack Setup: hardware/backpack/backpack-vrx-setup.md
+          - HDZero Goggle VRx Backpack: hardware/backpack/hdzero-goggles.md
       - Special Targets:
           - DIY Receiver: hardware/special-targets/diy-rx.md
           - DIY Transmitter: hardware/special-targets/diy-tx.md
