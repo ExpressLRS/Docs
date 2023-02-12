@@ -166,7 +166,7 @@ This section is currently only available for the RadioMaster Ranger module.
         <br clear="right" />
 
     3. Load the Web UI on your browser using these addresses:
-        - http://10.0.0.1/ -If you have connected to the `ExpressLRS RX` Access Point
+        - http://10.0.0.1/ - If you have connected to the `ExpressLRS RX` Access Point
 
             !!! Note
                 This IP address is also often being used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
@@ -224,7 +224,7 @@ This section is currently only available for the RadioMaster Ranger module.
         <br clear="right" />
 
     3. Load the Web UI on your browser using these addresses:
-        - http://10.0.0.1/ -If you have connected to the `ExpressLRS TX` Access Point
+        - http://10.0.0.1/ - If you have connected to the `ExpressLRS TX` Access Point
 
             !!! Note
                 This IP address is also often being used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
