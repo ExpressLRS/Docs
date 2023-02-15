@@ -227,8 +227,6 @@ nav:
               - Vantac: quick-start/receivers/vantac2400.md
               - DIY 900RX: quick-start/receivers/diy900.md
               - DIY 2400RX: quick-start/receivers/diy2400.md
-      - Installing the Configurator: quick-start/installing-configurator.md
-      - Firmware Options: quick-start/firmware-options.md
       - Post-Flash:
           - LED Status: quick-start/led-status.md
           - Binding ExpressLRS: quick-start/binding.md
