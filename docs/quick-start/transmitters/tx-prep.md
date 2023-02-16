@@ -61,7 +61,7 @@ Check [this page](https://github.com/EdgeTX/edgetx.github.io/wiki/EdgeTX-Install
 
 ### Serial Baud Rate
 
-The Baud Rate is the speed to which (in this instance) the Transmitter module and the Radio Handset communicate. It is measured in bits per second. Common baud rates include 115200bps and 400000bps.
+The Baud Rate is the speed to which (in this instance) the Transmitter module and the Radio Handset communicate. It is measured in bits per second. Common baud rates include 115200bps (sometimes shown as 115K) and 400000bps (sometimes shown as 400K).
 
 A Faster or higher baud rate means that the module and radio can talk much faster, further lowering the end-to-end latency of the system. However, not all radio handsets or transmitter modules are capable of higher baud rates as this is highly dependent on the hardware.
 
