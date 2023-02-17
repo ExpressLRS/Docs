@@ -107,7 +107,10 @@ It is still recommended that you update your gear to the latest firmware version
 
     4. The Banner of the Web UI should tell you the firmware version flashed into your Receiver.
 
-        -Insert Image of the new Web UI Banner for RX-
+        <figure markdown>
+        ![Web UI Banner](../../assets/images/web-banner-rx.png)
+        <figcaption>The ExpressLRS Web UI Banner </figcaption>
+        </figure>
 
 === "via Lua Script"
 

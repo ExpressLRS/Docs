@@ -116,7 +116,10 @@ There's three methods to determine what firmware version you currently have on y
 
     4. The Banner of the Web UI should tell you the firmware version flashed into your Tx module.
 
-        -Insert Image of the new Web UI Banner for TX-
+        <figure markdown>
+        ![Web UI Banner](../../assets/images/web-banner.png)
+        <figcaption>The ExpressLRS Web UI Banner </figcaption>
+        </figure>
 
 <hr />
 

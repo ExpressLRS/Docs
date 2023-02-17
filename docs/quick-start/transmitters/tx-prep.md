@@ -160,7 +160,7 @@ To check and change this setting, follow these steps:
     - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
     - Consult your Radio User's Manual on how to get to the System Menu.
 2. Press the ++"PAGE"++ Key until you reach the Hardware Page.
-3. Scroll down until you reach the ADC Filter setting.
+3. Scroll down until you reach the `ADC Filter` setting.
 4. Press ++enter++ Key to toggle it On or Off.
 
 ??? info "EdgeTX 2.7.0 Per-model Settings"
@@ -171,7 +171,7 @@ To check and change this setting, follow these steps:
         - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
         - Consult your Radio User's Manual on how to get to the Model Menu.
     2. Press the ++"PAGE"++ Key until you reach the Model Setup Page. On Colored Screen Radios, this should not be needed.
-    3. Scroll down until you reach the ADC Filter setting.
+    3. Scroll down until you reach the `ADC Filter` setting.
     4. Press ++enter++ Key once.
     5. Use the Scroll wheel to select between Global(uses the setting from the Hardware page in the System Menu), On or Off.
     6. Press ++enter++ Key once more to set it.
