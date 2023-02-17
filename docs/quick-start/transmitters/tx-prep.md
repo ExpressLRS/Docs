@@ -63,11 +63,11 @@ Check [this page](https://github.com/EdgeTX/edgetx.github.io/wiki/EdgeTX-Install
 
 The Baud Rate is the speed to which (in this instance) the Transmitter module and the Radio Handset communicate. It is measured in bits per second. Common baud rates include 115200bps (sometimes shown as 115K) and 400000bps (sometimes shown as 400K).
 
-A Faster or higher baud rate means that the module and radio can talk much faster, further lowering the end-to-end latency of the system. However, not all radio handsets or transmitter modules are capable of higher baud rates as this is highly dependent on the hardware.
+A faster or higher baud rate means that the module and radio can talk much faster, further lowering the end-to-end latency of the system. However, not all radio handsets or transmitter modules are capable of higher baud rates as this is highly dependent on the hardware.
 
 Depending on the firmware that is running on your radio handset, you can change the baud rate setting to better suit your setup. 
 
-To get to the baudrate setting on your radio:
+To get to the baud rate setting on your radio:
 
 === "EdgeTX, Internal Module"
 
@@ -75,9 +75,9 @@ To get to the baudrate setting on your radio:
         - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
         - Consult your Radio User's Manual on how to get to the System Menu.
     2. Press the ++"PAGE"++ Key until you get to the Hardware page.
-    3. Scroll down until you reach the Baudrate setting.
+    3. Scroll down until you reach the `Baudrate` setting.
     4. Press the ++enter++ Key.
-    5. Use the Scroll wheel to change and select the Baudrate you want to use.
+    5. Use the Scroll wheel to change and select the `Baudrate` you want to use.
     6. Press ++enter++ Key once to apply the changes.
     7. Reboot the Radio (turn it Off, then turn it On again).
 
@@ -93,9 +93,9 @@ To get to the baudrate setting on your radio:
         - Consult your Radio User's Manual on how to get to the Model Menu.
     2. Press the ++"PAGE"++ Key until you get to the Model Setup page. On Colored Screen Radios, this should not be needed.
     3. Scroll down until you reach the External RF settings.
-    4. Select the Baudrate setting.
+    4. Select the `Baudrate` setting.
     5. Press the ++enter++ Key.
-    6. Use the Scroll wheel to change and select the Baudrate you want to use.
+    6. Use the Scroll wheel to change and select the `Baudrate` you want to use.
     7. Press ++enter++ Key once to apply the changes.
     8. Reboot the Radio (turn it Off, then turn it On again).
 
@@ -110,10 +110,10 @@ To get to the baudrate setting on your radio:
         - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
         - Consult your Radio User's Manual on how to get to the System Menu.
     2. Press the ++"PAGE"++ Key until you get to the Hardware page.
-    3. Scroll down until you reach the Baudrate setting.
-        - If you don't see this setting, that means your radio doesn't support changing the baudrate in this firmware and is locked at 400000.
+    3. Scroll down until you reach the `Baudrate` setting.
+        - If you don't see this setting, that means your radio doesn't support changing the baud rate in this firmware and is locked at 400000.
     4. Press the ++enter++ Key.
-    5. Use the Scroll wheel to change and select the Baudrate you want to use.
+    5. Use the Scroll wheel to change and select the `Baudrate` you want to use.
     6. Press ++enter++ Key once to apply the changes.
     7. Reboot the Radio (turn it Off, then turn it On again).
 
@@ -124,30 +124,31 @@ To get to the baudrate setting on your radio:
 
 <hr />
 
-**Considerations for the Baudrate Settings** 
+**So what should I set it to?**
 
-| Baud Rate | Max Packet Rate | Radio Firmware | Notes |
-| ---- | ---- | ---- | --------- |
-| 115200 | 250Hz | OpenTX/EdgeTX | QX7 without Crossfire/Inverter Mod |
-| 400000 | F500 | OpenTX/EdgeTX | QX7, X9D and older radios will need a hardware mod to be reliable |
-| 400000+ | F1000 | EdgeTX only | |
+400K (400000bps) Baudrate is the safest setting to use. This setting should work on most Radios and TX Modules.
 
-Radios such as the Frsky QX7, X10/S, and X12 will require either the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/) or the OneBit Sample mode (found just before the ADC Filter setting in EdgeTX System Menu -> Hardware page) if a 400K or higher Baud Rate is desired. The Taranis X9D(+) has proven to be finicky even with the default 400K Baud Rate setting (see [Troubleshooting the X9D](../../hardware/x9d-troubleshooting.md)) and could use the OneBit Sample Mode as well.
+However, there are some exceptions:
 
-As this setting also involves the module, it should be noted that you must also consider the type of module you are using with the radio. For instance, the R9M 2018 cannot reliably run at 400K Baud Rate setting and will require the [Resistor Mod](../../hardware/inverter-mod.md) first. If you can run your Radio Handset at a lower 115K Baud Rate, then you don't have to do this Mod. STM-based modules like the R9M 2019, Ghost, Happymodel ES915TX or the Gen1 No OLED NamimnoRC Flash and Voyager modules can run at 1.87M Baud Rate. ESP-based modules like the Happymodel ES24TX, BetaFPV Nano & Micro or the Axisflying Thor can run up-to 3.75M or even 5.25M.
+- The Frsky Taranis QX7 ACCST, Horus X12S and Horus X10S cannot reliably run 400K baud rate without the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/).
+
+- The Frsky Taranis X9D has proven to be finicky even with the default 400K baud rate and will benefit from the One Bit Sample Mode setting and a Hardware Mod. See see [Troubleshooting the X9D](../../hardware/x9d-troubleshooting.md) for more details.
+
+On other Radios, you can set the Baudrate higher than 400K but will highly depend on what TX Module you will use with it.
 
 | TX Module | Max Baud Rate | Notes |
 | ---- | ---- | ---- |
 | RadioMaster Internal ELRS Modules | 5.25M | |
-| HM ES24TX, HM ES900TX, BetaFPV Nano/Micro and <br />other ExpressLRS External Modules | 5.25M* | ESP32-based Modules |
+| HM ES24TX, HM ES900TX, BetaFPV Nano/Micro and <br />other ExpressLRS External Modules | 5.25M | ESP32-based Modules |
 | Jumper TLite V2 & Jumper T-Pro Internal ELRS Modules | 1.87M | |
+| iFlight Commando 8 | 3.75M | |
 | Vantac Lite Nano TX, Jumper Aion Nano TX | 1.87M | |
 | R9M 2018 | 115200 | [Resistor Mod](../../hardware/inverter-mod.md) for 400K |
 | R9M ACCESS, HM ES915TX | 1.87M | STM32-based Modules |
 | GHOST, Gen1 NamimnoRC no OLED  | 1.87M | STM32-based Modules |
-*Dependent on Radio
 
-Be warned though. Just because you can doesn't mean you should. If you're experiencing constant Telemetry Lost/Recovered even nearby and/or that the Lua Script fails to load properly, then it's a sign your radio and/or module cannot run the selected Baud Rate. Lower it down a notch or settle with 400K Baud Rate.
+!!! warning
+    Just because you can set the Baudrate higher, doesn't mean you should. If you're experiencing constant Telemetry Lost/Recovered even with the receiver nearby and/or that the Lua Script fails to load properly, then it's a sign your radio and/or module cannot work on the selected Baud Rate. Lower it down a notch or settle with 400K Baud Rate.
 
 ### ADC Filter
 
