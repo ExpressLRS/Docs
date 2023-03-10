@@ -15,7 +15,7 @@ The ExpressLRS is a hashtag blessed with the benefit of there being many receive
 | Vantac RX | :moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :whale::whale: | :material-check-bold: { .greencheck } | :checkered_flag:|
 | BetaFPV Nano 2.4 | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 20dBm | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | BetaFPV Lite 2.4 | :moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x }  | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| DIY Nano 2.4 | :moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale:/:whale::whale:/:whale::whale::metal: | :material-check-bold: { .greencheck }  | :material-close-thick: { .red-x } |
+| DIY Nano 2.4 | :moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale:/:whale::whale:/:metal: | :material-check-bold: { .greencheck }  | :material-close-thick: { .red-x } |
 | Flywoo EL24E | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | Flywoo EL24P | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | Ghost ATTO | :moneybag::moneybag::moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } |
@@ -23,7 +23,7 @@ The ExpressLRS is a hashtag blessed with the benefit of there being many receive
 | GEPRC NanoSE | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | HappyModel PP | :moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-close-thick: { .red-x } | :checkered_flag: |
 | HappyModel EP1 | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| HappyModel EP1 Dual | :moneybag: | :straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :whale:/:whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
+| HappyModel EP1 Dual | :moneybag: | :straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :metal::metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | HappyModel EP2 | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | HGLRC 2400RX | :moneybag::moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: | 
 | iFlight ELRS | :moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
@@ -31,13 +31,13 @@ The ExpressLRS is a hashtag blessed with the benefit of there being many receive
 | JHEMCU / HiYOUNGER SP24S | :moneybag: | :straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | JHEMCU / HiYOUNGER RX24T | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 20dBm? | :whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: | 
 | Matek R24-S | :moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 20dBm | :whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| Matek R24-D | :moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 23dBm | :whale::whale::metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
+| Matek R24-D | :moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 23dBm | :metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | Namimno Flash (ESP) | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale:/:whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| Namimno Flash Diversity(ESP) | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 21dBm | :whale::whale::metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
+| Namimno Flash Diversity(ESP) | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 21dBm | :metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
 | QuadKopters Nano | :moneybag::moneybag:? | :straight_ruler::straight_ruler: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } | :whale:/:whale::whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| Radiomaster RP3 | :moneybag: | :straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :whale:/:whale: | :material-check-bold: { .greencheck }  | :checkered_flag: |
-| SIYI FR Mini | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 23dBm | :whale::whale::metal: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } |
-| Skystars Nano SS24D | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 23dBm | :whale::whale::metal: | :material-check-bold: { .greencheck } | :checkered_flag: |
+| Radiomaster RP3 | :moneybag: | :straight_ruler: | :material-check-bold: { .greencheck } | 20dBm | :metal::metal: | :material-check-bold: { .greencheck }  | :checkered_flag: |
+| SIYI FR Mini | :moneybag::moneybag::moneybag: | :straight_ruler::straight_ruler::straight_ruler: | :material-check-bold: { .greencheck }  | 23dBm | :metal: | :material-close-thick: { .red-x } | :material-close-thick: { .red-x } |
+| Skystars Nano SS24D | :moneybag::moneybag: | :straight_ruler::straight_ruler: | :material-check-bold: { .greencheck } | 23dBm | :metal: | :material-check-bold: { .greencheck } | :checkered_flag: |
 
 ## Team900
 | Model | Price | Size | LNA | PA | Antenna | WiFi | RTF |
@@ -81,11 +81,12 @@ A Low Noise Amplifier directly adds to your **incoming** RSSI. Typical gains are
 A Power Amplifier boosts the **outgoing** signal strength and extends the telemetry range back to the TX. Without a PA, the power output is limited by the RF chip's max power output itself (around +13dBm 20mW). It works the same way as turning up the power output on the transmitter module, however it is not adjustable. The receiver's output is always run at max power, since it runs a much lower duty cycle than the transmitter does (duty cycle = telemetry ratio). Higher numbers are better.
 
 ### Antenna Type
-Antennas are where the invisible waves come and go from the receiver. Ceramic antenna < Mini Dipole ("Minimortal-T" style) < sleeved dipole < Half-wave Dipole. Don't ask how many dBm a ceramic antenna lowers your signal, it is not a flat value. Any working external antenna will outperform a ceramic, so the classes below are:
+Antennas are where the invisible waves come and go from the receiver. Ceramic antenna < Mini Dipole ("Minimortal-T" style, smaller than half-wave) < sleeved dipole < Half-wave Dipole. If Diversity is a benefit, Switched Diversity (single RF + 2 antennas) << True Diversity (dual RF + 2 antennas). Any working external antenna will outperform a ceramic by quite a bit.
 
 - Ceramic (:whale:)
 - External (:whale::whale:)
-- External Diversity (:whale::whale::metal:)
+- External Switched Diversity (:metal:)
+- External True Diversity (:metal::metal:)
 
 ### WiFi
 Many ExpressLRS receivers have integrated wifi with a short range. This is not active during flight, but the receiver can go into wifi mode to allow firmware updates which is pretty convenient.
