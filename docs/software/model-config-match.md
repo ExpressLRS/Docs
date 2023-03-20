@@ -65,6 +65,6 @@ The implementation follows this set of rules for handling half connections / ful
 * Use the ExpressLRS Lua to set the Model Match option to "Off"
 * The receiver now has its Model Match number cleared and will connect with any configuration profile which has Model Match set to "Off"
 
-_Alternatively_
+**_Alternatively_**
 
 * For wifi-enabled RX modules, use the WebUI to set the Model Match to 255 to disable matching. "Model Match" must still be set to "Off" in the Lua config.

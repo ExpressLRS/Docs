@@ -5,9 +5,11 @@ template: main.html
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
 !!! danger "Advisory"
-    If this is the first time you're flashing/updating your receiver or you're updating it from a previous 2.x firmware, first ensure that it has version 2.5.1. Once it has the 2.5.1 flashed, update to 3.x.
+    If this is the first time you're flashing/updating your receiver or you're updating it from a previous 2.x firmware via WiFi, first ensure that it has version 2.5.2. Once it has the 2.5.2 flashed, update to 3.x.
 
-    If you've flashed it straight to 3.x and you're getting "Not Enough Space" popup during WiFi flashing, flash the receiver to 2.5.1 first, and then flash it to 3.x.
+    If you've flashed it straight to 3.x and you're getting "Not Enough Space" popup during WiFi flashing, flash the receiver to 2.5.2 first, and then flash it to 3.x.
+
+    You can update straight to 3.x via Passthrough or via UART.
 
     The Repartitioner is for **TX only**.
 
@@ -17,13 +19,18 @@ template: main.html
     There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
 
 <figure markdown>
-![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-EP1.png)
+![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-RP1.png)
 <figcaption>RadioMaster RP1 2.4GHz</figcaption>
 </figure>
 
 <figure markdown>
-![RadioMaster RP2 2.4GHz wiring pinout](../../assets/images/RM-EP2.png)
+![RadioMaster RP2 2.4GHz wiring pinout](../../assets/images/RM-RP2.png)
 <figcaption>RadioMaster RP2 2.4GHz</figcaption>
+</figure>
+
+<figure markdown>
+![RadioMaster RP3 2.4GHz wiring pinout](../../assets/images/RM-RP3.png)
+<figcaption>RadioMaster RP3 2.4GHz</figcaption>
 </figure>
 
 The images above show the receivers' pinouts and their connections. As we're dealing with UART connection, Rx on the receiver goes to a TX pad on the FC, and Tx on the receiver goes to an uninverted Rx pad on the FC.

@@ -15,7 +15,9 @@ template: main.html
 - Device: `Jumper AION T-Lite 2400 TX`
 
 !!! tip "Hot Tip"
-    To ensure updating success with this method, update the EdgeTX firmware on the radio to at least EdgeTX 2.8.0 (released Nov. 27, 2022). The EdgeTx Firmware that comes with this radio is a pre-release version.
+    To ensure updating success with this method, update the EdgeTX firmware on the radio to at least EdgeTX 2.8.0 (f6d140e, released Nov. 27, 2022). The EdgeTx Firmware that comes with this radio is a pre-release version.
+
+Before starting, make sure that the Serial Ports, USB-VCP setting is set to `CLI` mode on your Radio. This setting can be found in the `System Menu` -> `Hardware` Page.
 
 With your handset turned on, connect a USB data cable to the USB data port of the Radio. Select `USB Serial(Debug)` or `USB Serial(VCP)` in the options window that pops up. 
 
@@ -27,13 +29,16 @@ With your handset turned on, connect a USB data cable to the USB data port of th
 ![Debug option](../../assets/images/tliteV2-usbVCP.jpg)
 </figure>
 
-Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. 
+!!! tip "Important"
+    This is a vital step and a common failure point. Pay attention.
+
+Windows users should check Device Manager and make sure your device is being detected as **STMicroelectronics Virtual COM Port** device. 
 
 <figure markdown>
 ![Device Manager](../../assets/images/DeviceMngr.png)
 </figure>
 
-If not and you're seeing a bunch of Yellow Warning icons for the Jumper TLite Serial Port, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `VCP_V1.5.0_Setup_W7_x64_64bits` executable.
+If not and you're seeing a bunch of Yellow Warning icons for the Jumper T-Lite Serial Port, download the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Extract/unzip the contents of the package into a folder and run the `VCP_V1.5.0_Setup_W7_x64_64bits` executable. 
 
 Using the ExpressLRS Configurator, select the appropriate version and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
 

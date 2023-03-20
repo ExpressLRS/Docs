@@ -90,6 +90,8 @@ See the tables below for the list of supported devices:
 | TBS Fusion  | ✔️ Fully supported (FTDI needed)  |
 | Generic RX5808 Module (some)  | ✔️ Fully supported  |
 | FENIX Module  | ✔️ Fully supported  |
+| HDZero VRX4  | ✔️ Fully supported  |
+| HDZero Goggles (built-in, no mods required)  | ✔️ Fully supported  |
 
 ## I'm Ready to Proceed. What do I do next?
 

@@ -113,8 +113,6 @@ extra:
     - icon: fontawesome/solid/circle-dollar-to-slot
       link: https://opencollective.com/expresslrs
       name: Send a Donation!
-  version:
-    provider: mike
   generator: true
 
 markdown_extensions:
@@ -154,6 +152,9 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+          kwds:
+            case: lower
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
@@ -164,6 +165,7 @@ nav:
       - Getting Started: quick-start/getting-started.md
       - Installing the Configurator: quick-start/installing-configurator.md
       - Firmware Options: quick-start/firmware-options.md
+      - The Web UI: quick-start/webui.md
       - Transmitters:
           - Radio Preparation: quick-start/transmitters/tx-prep.md
           - Flashing Transmitters:
@@ -171,6 +173,8 @@ nav:
               - BetaFPV 2.4GHz: quick-start/transmitters/betafpv2400.md
               - BetaFPV 900MHz: quick-start/transmitters/betafpv900.md
               - BetaFPV LR3 Pro: quick-start/transmitters/betfpvlr3pro.md
+              - EMAX 2.4GHz: quick-start/transmitters/emax2400.md
+              - EMAX 900MHz: quick-start/transmitters/emax900.md
               - Frsky R9 Modules: quick-start/transmitters/frsky-r9modules.md
               - Happymodel ES24TX: quick-start/transmitters/es24tx.md
               - Happymodel ES900TX: quick-start/transmitters/es900tx.md
@@ -196,6 +200,8 @@ nav:
               - Axisflying Thor: quick-start/receivers/axisflying-thor.md
               - BetaFPV Lite & Nano 2.4GHz: quick-start/receivers/betafpv2400.md
               - BetaFPV Nano 900MHz: quick-start/receivers/betafpv900.md
+              - BetaFPV SuperD 2.4GHz: quick-start/receivers/betafpv-superd.md
+              - Foxeer LNA & Lite 2.4GHz: quick-start/receivers/foxeer2400.md
               - Frsky R9: quick-start/receivers/r9.md
               - GEPRC Nano 2.4GHz: quick-start/receivers/geprc2400.md
               - GEPRC Nano 900MHz: quick-start/receivers/geprc900.md
@@ -255,6 +261,7 @@ nav:
           - Backpack Info: hardware/backpack/esp-backpack.md
           - Tx Backpack Setup: hardware/backpack/backpack-tx-setup.md
           - VRx Backpack Setup: hardware/backpack/backpack-vrx-setup.md
+          - HDZero Goggle VRx Backpack: hardware/backpack/hdzero-goggles.md
       - Special Targets:
           - DIY Receiver: hardware/special-targets/diy-rx.md
           - DIY Transmitter: hardware/special-targets/diy-tx.md
@@ -277,3 +284,5 @@ extra_javascript:
   - assets/javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+INHERIT: redirects.yml

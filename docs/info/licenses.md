@@ -3,11 +3,9 @@ template: main.html
 description: Licenses
 search:
   exclude: true
-hide:
-- navigation
 ---
 
-# Licenses
+![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
 
 The ExpressLRS project and ExpressLRS Configurator, including this website, are licensed under [GNU General Public
 License v3.0 license](https://github.com/ExpressLRS/ExpressLRS/blob/master/LICENSE).

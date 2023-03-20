@@ -5,9 +5,11 @@ template: main.html
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
 !!! danger "Advisory"
-    If you are flashing/updating your TX module for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.1 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
+    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware you will first need to flash it to version 2.5.2 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
 
     Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
+
+    You can update straight to 3.2.0 without repartitioner or going to 2.5.2 first if flashing via ETX Passthrough.
 
 ## Flashing via EdgeTX Passthrough
 
@@ -16,6 +18,8 @@ template: main.html
 - Device Category: `BETAFPV 2.4 GHz`
 
 - Device: `BETAFPV LiteRadio 3 Pro`
+
+Before starting, make sure that the Serial Ports, USB-VCP setting is set to `CLI` mode on your Radio. This setting can be found in the `System Menu` -> `Hardware` Page.
 
 With your handset turned on, connect a USB data cable to the USB port of the Radio. Select `USB Serial(VCP)` in the options window that pops up. 
 
@@ -27,13 +31,16 @@ With your handset turned on, connect a USB data cable to the USB port of the Rad
 ![Debug option](../../assets/images/betafpv-VCP.jpg)
 </figure>
 
-Windows users should check Device Manager and make sure your device is being detected as STMicroelectronics Virtual COM Port device. 
+!!! tip "Important"
+    This is a vital step and a common failure point. Pay attention.
+
+Windows users should check Device Manager and make sure your device is being detected as **STMicroelectronics Virtual COM Port** device. 
 
 <figure markdown>
 ![Device Manager](../../assets/images/DeviceMngr.png)
 </figure>
 
-If not and you're seeing a bunch of Yellow Warning icons, install the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Windows 10 users can use the `VCP_V1.5.0_Setup_W7_x64_64bits` executable.
+If not and you're seeing a bunch of Yellow Warning icons for the BetaFPV Lite Radio 3 Serial Port, download the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Extract/unzip the contents of the package into a folder and run the `VCP_V1.5.0_Setup_W7_x64_64bits` executable. 
 
 Using the ExpressLRS Configurator, select the appropriate version and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
 
@@ -81,7 +88,7 @@ With the correct target selected and [Firmware Options] set, **Build** your firm
 
 Once it's done, it should open the Target folder for you where the `BETAFPV_2400_TX_LITERADIO3-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
 
-Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`. If the ExpressLRS Lua script is not in the list, download it from [here] (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
+Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`. If the ExpressLRS Lua script is not in the list, download it from [here](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
 
 <figure markdown>
 ![Lua Script](../../assets/images/lua1.jpg)

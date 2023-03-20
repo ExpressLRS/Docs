@@ -18,7 +18,7 @@ jobs:
           python-version: 3.9.16
 
       - name: Setup Caching
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           key: ${{ github.ref }}
           path: .cache
@@ -41,9 +41,8 @@ jobs:
 
       - name: Deploy release version
         run: |
-          mike deploy --config-file mkdocs-insiders.yml 3.0 v3
-          mike set-default v3
-
+          mkdocs gh-deploy --force --config-file mkdocs-insiders.yml
+          
       - name: Push changes to server
         run: |
           git checkout gh-pages

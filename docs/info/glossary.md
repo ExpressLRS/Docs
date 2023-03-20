@@ -10,6 +10,7 @@ Below you can find a list of terms you might not be sure about, as well as some 
 
 - `BL`: Bootloader, loads the FW
 - `CRSF`: TBS Crossfire, more specifialy in our case most often refering to the communication protocol between TX and TX module and RX and FC respectively
+- `ESC`: Electronic Speed Controller
 - `FC`: Flight Controller
 - `FW`: Firmware
 - `LQ`: Link Quality, percentage of expected packets received. Our preferred method of measuring the quality of the control link

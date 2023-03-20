@@ -5,9 +5,11 @@ template: main.html
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
 !!! danger "Advisory"
-    If this is the first time you're flashing/updating your receiver or you're updating it from a previous 2.x firmware, first ensure that it has version 2.5.1. Once it has the 2.5.1 flashed, update to 3.x.
+    If this is the first time you're flashing/updating your receiver or you're updating it from a previous 2.x firmware via WiFi, first ensure that it has version 2.5.2. Once it has the 2.5.2 flashed, update to 3.x.
 
-    If you've flashed it straight to 3.x and you're getting "Not Enough Space" popup during WiFi flashing, flash the receiver to 2.5.1 first, and then flash it to 3.x.
+    If you've flashed it straight to 3.x and you're getting "Not Enough Space" popup during WiFi flashing, flash the receiver to 2.5.2 first, and then flash it to 3.x.
+
+    You can update straight to 3.x via Passthrough or via UART.
 
     The Repartitioner is for **TX only**.
 

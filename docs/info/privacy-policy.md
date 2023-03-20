@@ -3,11 +3,9 @@ template: main.html
 description: Privacy policy
 search:
   exclude: true
-hide:
-- navigation
 ---
 
-# Privacy Policy
+![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
 
 Effective date: 2022-12-01
 
