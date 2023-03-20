@@ -10,7 +10,7 @@ ExpressLRS is hashtag blessed with the benefit of there being many receivers ava
 !!! note Note
     This list will list primarily 2.4GHz hardware with 900MHz only listed in the frequency category, as 2.4GHz has become a significantly larger portion of the ELRS market.
 
-## Manufacturers:
+## Manufacturers
   * [Axisflying](https://www.axisflying.com)
   * [BetaFPV](https://betafpv.com)
   * [Emax](https://emaxmodel.com)
@@ -137,3 +137,142 @@ Each build is different, but these are reccomended things to look for when selec
       * Matek R24-D
       * Radiomaster RP3
       * BetaFPV SuperD
+
+## Transmitter Selection
+This selection lists out some common features of transmitters and some examples of transmitters with those features
+
+Everyone has different needs for a transmitter but the main needs come down to size, range and integration.
+
+??? info "Built-In Transmitters"
+
+    Certain manufacturers have made handsets with built in ELRS modules, which offer tigher integration with ELRS. These can be update through the handset as well as generally over WiFi as is standard.
+
+    Some handsets with built in ELRS include:
+
+      * RadioMaster TX16S ELRS
+      * RadioMaster Zorro ELRS
+      * BetaFPV Lite Radio 3 Pro ELRS
+      * Jumper T-Pro
+      * Jumper T-Lite v2
+
+    A notable exception to this list is the iFlight Commando, which, while including a TX built into the handset is simply wired as an external module, and put within the casing. It does support an external module and notably has both 868/915MHz and 2.4GHz options available
+
+??? info "Frequency"
+
+    ExpressLRS offers both 2.4GHz and 900MHz systems, with each only working with receivers and transmitters of the same frequency. 2.4GHz is the currently most popular frequency given it's legality, featureset and cost. 2.4GHz links offer the fastest packet rates allowing for a more locked in feel while piloting and still offer massive amounts of range. 900MHz is the original long range frequency and still can be great for high wifi pollution environments with slightly better penetration.
+
+    For new users unless you plan on flying hundreds of kilometers or in a high noise environment we reccomend 2.4GHz hardware:
+
+      * Axisflying Thor
+      * RadioMaster Ranger
+      * HappyModel ES24TX Pro
+      * Namimno Flash
+
+    If you want to push the limits of range, a 900MHz system might fit within your needs. Some off the shelf 900MHz transmitters include:
+
+      * Namimno Voyager
+      * Happymodel ES900TX
+      * BetaFPV Micro 915/868MHz
+
+??? info "Size"
+
+    Most ExpressLRS Transmitter modules fit into one of two classes - Micro and Nano. There are some exceptions that fit into multiple or have interesting features that may make them work better for your needs.
+    
+    Micro modules will fit into the JR bay of a standard transmitter such as a TX16s or QX7, with some examples including:
+
+      * RadioMaster Ranger Micro
+      * Namimno Flash
+      * HappyModel ES24TX
+    
+    Nano modules will fit into a lite module bay such as that on a Zorro, T-Pro or X-Lite with some examples including:
+
+      * HappyModel ES24TX Slim Pro
+      * Radimoaster Ranger Nano
+      * Jumper AION Nano
+      * BetaFPV Nano
+
+    Some notable exceptions that can fit into multiple or very specific module bays include:
+
+      * HappyModel ES24TX Lite - Fits onto Jumper T-Lite
+      * Axisflying Thor - Has a wire system to be able to plug into any radio with a CRSF output
+      * Radiomaster Ranger - includes Micro & Nano mounts and wiring for any CRSF compatible radio
+
+??? info "Power"
+
+    Most ELRS Transmitters have a 250mW or 500mW power cap, but for that extra percentage of range, a select few 1W modules exist, packing that punch needed to go even further. These transmitters include large heatsinks, fans and sometimes temperature sensing to cool the power output. Some of these 1W transmitters are:
+
+      * HappyModel ES24TX Pro
+      * RadioMaster Ranger
+      * Axisflying Thor
+      * BetaFPV Micro TX 1W
+      * RadioMaster Boxer
+      * Jumper T-Pro Internal
+      * NamimnoRC Flash OLED
+
+??? info "Screens"
+
+    Some transmitters include a small screen that displays useful information and pairs with a small joystick to quickly change settings on the go. This can be useful when paired with handsets running firmware that does not support lua scripts. The two main types of screens are TFT and OLED:
+
+    <figure>
+      <img class="center-img" src="../../assets/images/hw-selection/screens.png"/>
+    </figure>
+
+    The only transmitter with a TFT screen on the market at the moment is the Axisflying Thor TX.
+
+    Some transmitters with an OLED include:
+
+      * Namimno Flash OLED
+      * RadioMaster Ranger
+      * BetaFPV Micro TX
+
+??? info "Backpack"
+
+    Most current transmitters with include a [backpack](../hardware/backpack/esp-backpack.md), which enables communication with accessories such as a VRX allowing for tighter integration with the transmitter and drone. Transmitters with a built in backpack include:
+
+      * HappyModel ES24TX Pro
+      * HappyModel Slim Pro
+      * NamimnoRC Flash
+      * AxisFlying Thor
+      * RadioMaster Zorro
+      * BetaFPV Micro TX 1W
+
+??? info "Antennas"
+
+    Besides handset integrated transmitters, all ELRS TX modules support many antennas so this serves as a guide to antenna types and connectors.
+
+    ELRS TX Modules have two connecters, which are visually similar - SMA and RP-SMA
+    <figure>
+      <img class="center-img" src="../../assets/images/hw-selection/sma.png"/>
+    </figure>
+
+    These connecters mount many types of antennas which have different types of radiation patterns. The first figure depicts the types of antennas commonly sold with transmitters:
+    <figure>
+      <img class="center-img" src="../../assets/images/hw-selection/antenna-tx.png"/>
+    </figure>
+
+    The most common antennas sold besides simple dipoles are moxons and folded dipoles, which visually look similar which helps distinguish the two:
+    <figure>
+      <img class="center-img" src="../../assets/images/hw-selection/mox-v-dipole-pcb.png"/>
+    </figure>
+
+    The radiation patterns of a moxon and folded dipole are depicted below in a isotropic, lateral and top view
+    <figure>
+      <img class="center-img" src="../../assets/images/hw-selection/mox-folded-radiation.png"/>
+    </figure>
+    <figure>
+      <img class="center-img" src="../../assets/images/hw-selection/mox-folded-lateral.png"/>
+    </figure>
+    <figure>
+      <img class="center-img" src="../../assets/images/hw-selection/mox-folded-top.png"/>
+    </figure>   
+
+
+??? info "Bling Features"
+
+    Certain transmitters have "bling features" which are less important than the other listed features. Some of these include RGB LEDS, Temperature Sensors and G Sensors.
+
+    [RGB LEDs](../quick-start/led-status.md) are included on many modern TXes, and also serve as a useful status indicator.
+
+    Temperature sensors are useful for higher power transmitters, to turn on the fan only when needed instead of constantly running while transmitting which reduces noise. Currently the only transmitter with this feature is the Axisflying Thor.
+
+    G Sensors/Motion sensors use a 3 axis linear accelerometer to detect the orientation of the transmitter and also can use bump to handoff for [loan model](../software/loan-model.md). The transmitters that ship with this feature is the Axisflying Thor & RadioMaster Ranger
