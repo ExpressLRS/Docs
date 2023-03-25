@@ -15,7 +15,7 @@ Likewise, you should also be comfortable with your Flight Controller firmware (B
 
 ### What should I do first?
 
-So you got your ExpressLRS Hardware, be it a new Radio Handset with Internal ExpressLRS module, or an External ExpressLRS Module; and a set of ExpressLRS Receivers in a bundle or a Bind-and-Fly drone with ExpressLRS Receiver already wired up. Where do you start?
+So you got your ExpressLRS Hardware, be it a new Radio Handset with Internal ExpressLRS module, or an External ExpressLRS Module; and a set of ExpressLRS Receivers in a bundle or a Bind-and-Fly drone with the Receiver already wired up. Where do you start?
 
 Here's our recommendation:
 
@@ -34,6 +34,7 @@ After both of these, you can then proceed with the following:
 
 - [Bind](../quick-start/binding.md)
 - Do the [Bench Test](../quick-start/pre-1stflight.md#bench-test)
+- Fly!
 
 ### How to Use or Navigate through the Guide
 
