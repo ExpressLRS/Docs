@@ -6,18 +6,19 @@ description: All-in-one Flight Controllers were released with ExpressLRS receive
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
 !!! note "Supported RF Modes"
-    D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) are not supported by the ExpressLRS SPI code and thus will not bind or sync with a TX module in any of these modes.
+    SPI receivers **DO NOT** support D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) and thus will not bind or sync with a TX module in any of these modes.
 
 A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano longrange rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
-Because the ExpressLRS code is "baked-in" to the flight controller firmware instead of using a second microcontroller, these can not be updated the same way external uart-based receivers are updated. 
+Because the ExpressLRS code is "baked-in" to the flight controller firmware instead of using a second microcontroller, these can not be updated the same way external UART-based receivers are updated. 
 
 !!! info "NOTE"
-    You cannot use the ExpressLRS Configurator to update these FCs.
+    You cannot use the ExpressLRS Configurator to update these FCs. You must update the flight controller software, eg Betaflight.
 
-For these SPI ExpressLRS AIO to work with ExpressLRS 3.x, you will need [Betaflight 4.4](https://github.com/betaflight/betaflight/releases/tag/4.4.0-RC2) flashed into the flight controller. [Betaflight 4.3.0](https://github.com/betaflight/betaflight/releases/tag/4.3.0) and [Betaflight 4.3.1](https://github.com/betaflight/betaflight/releases/tag/4.3.1) only works with ExpressLRS 2.x.
+SPI receiver compatibility with ExpressLRS v3.x *requires* your flight controller be flashed with [Betaflight 4.4](https://github.com/betaflight/betaflight/releases/tag/4.4.0). If you are running [Betaflight 4.3.0](https://github.com/betaflight/betaflight/releases/tag/4.3.0) or [Betaflight 4.3.1](https://github.com/betaflight/betaflight/releases/tag/4.3.1), your receiver will only work with ExpressLRS v2.x. Please update to Betaflight 4.4 for ExpressLRS v3.x compatibility. 
 
-In preparation for updating, you should save a copy of your `diff all` dump. Simply go into the CLI Tab of the Betaflight Configurator and execute the command `diff all` then press enter. A bunch of text will show up on the screen. At the bottom of the page, click the **Save to File** button and navigate to the folder you want the file to be saved. Finally click `Save` after taking note of the folder and filename of the text file. You will need to navigate to this file later on, moreover if you already have customized your settings on the flight controller, like rates, pid tune, OSD. For newly acquired flight controllers, this is often unnecessary.
+
+In preparation for updating, you should save a copy of your `diff all` dump. Simply go into the CLI Tab of the Betaflight Configurator and execute the command `diff all` then press enter. A bunch of text will show up on the screen. At the bottom of the page, click the **Save to File** button and navigate to the folder you want the file to be saved. Finally click `Save` after taking note of the folder and filename of the text file. You will need to navigate to this file later on, moreover if you already have customized your settings on the flight controller, like rates, PID tune, OSD. For newly acquired flight controllers, this is often unnecessary.
 
 Using the latest [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator/releases), navigate into `Firmware Flasher` and select the latest [Betaflight release](https://github.com/betaflight/betaflight/releases/tag/4.4.0-RC2). Depending on your AIO board, the target will differ:
 
@@ -34,11 +35,14 @@ If your Flight Controller model is not in the list above, consult your Flight Co
 
 Once flashed, you will need to paste in the `diff all` you have saved. Don't forget to type in `save` and press enter once done. Power cycle your flight controller, and you should be set. Review your Betaflight settings (no changes needed for the Receiver Type and Protocol; should already be set with `SPI Receiver`, with Provider as `ExpressLRS`).
 
-<figure markdown>
-![BF settings](../assets/images/SPIReceiverSetup.png)
-</figure>
+As of Betaflight 4.4 (with Betaflight Configurator version 10.9.0 or newer), your ExpressLRS Binding Phrase can be set directly on the receiver tab in Betaflight Configurator.
 
-## Binding Procedure
+<figure markdown>
+![BF settings](../assets/images/SPIReceiverSetupBF4.4.png)
+</figure>
+Proper configuration of the Betaflight Receiver tab for ExpressLRS SPI Receivers. Receiver Mode (1) should be set to SPI Rx. SPI Bus Receiver Provider (2) should be set to EXPRESSLRS. Enter your binding phrase in the box (3) and it will be converted to UID bytes (4) and saved to your Betaflight config. You can also take this opportunity to enable Telemetry (5) if desired, and make sure RSSI_ADC (6) and RSSI Channel (7) are disabled as shown. 
+
+## Alternate Binding Procedures
 
 There are two ways to bind the receiver, as shown below
 
@@ -61,7 +65,7 @@ Video Tutorial (thanks to @JyeSmith):
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U2sxqx2oT4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-### Binding Phrase
+### Binding Phrase via CLI
 
 The binding phrase is hashed into 6 bytes represented as numbers. These 6 bytes are referred to as the UID bytes. 
 UID bytes are entered into the Betaflight CLI for binding. Please [look below](#setting-binding-phrase) for instructions. 
@@ -100,10 +104,10 @@ Go to Betaflight CLI and enter the following commands.
   });
 </script>
 
-The new Betaflight Configurator 10.9.0 also has the Passphrase/Binding Phrase field in the Receiver Tab where you can simply enter your Binding Phrase, and it will generate the UID numbers for you. Clicking `Save and Reboot` will set the Binding Phrase into the flight controller configuration.
+As shown above, Betaflight Configurator 10.9.0 also supports entering the Binding Phrase directly in the Receiver Tab. It will generate the UID bytes for you. Clicking `Save and Reboot` will save the Binding Phrase into the flight controller configuration.
 
 !!! note "Supported RF Modes"
-    D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) are not supported by the ExpressLRS SPI code and thus will not bind or sync with a TX module in any of these modes.
+    SPI receivers **DO NOT** support D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) and thus will not bind or sync with a TX module in any of these modes.
 
 ## Acknowledgements
 
