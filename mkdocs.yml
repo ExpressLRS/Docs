@@ -15,7 +15,7 @@ privacy_policy_page_path: "/info/privacy-policy"
 licenses_page_path: "/info/licenses"
 
 # Copyright
-copyright: Copyright &copy; 2022 ExpressLRS
+copyright: Copyright &copy; 2021-2023 ExpressLRS
 
 # Configuration
 theme:
@@ -249,8 +249,7 @@ nav:
           - Unit Testing: software/testing/unit-testing.md
           - RX Testing: software/testing/rx-scoreboard.md
   - Hardware:
-      - Supported Hardware: hardware/supported-hardware.md
-      - Receiver Selection: hardware/receiver-selection.md
+      - Hardware Selection: hardware/hardware-selection.md
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
       - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
@@ -285,5 +284,3 @@ extra_javascript:
   - assets/javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-INHERIT: redirects.yml

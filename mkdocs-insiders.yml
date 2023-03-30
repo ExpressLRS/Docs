@@ -1,4 +1,5 @@
 INHERIT: mkdocs.yml
+INHERIT: redirect.yml
 
 privacy_policy_page_path: "info/privacy-policy"
 licenses_page_path: "info/licenses"
