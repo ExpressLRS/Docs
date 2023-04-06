@@ -148,6 +148,13 @@ It is unlikely that you can close the backplate with the backpack module between
 ![RX5.1 Backpack module located behind the front patches](../../assets/images/RX5.1-Backpack-patch-mounting.jpg)
 </figure>
 
+## Generic RX5808 Connection
+
+Make sure that your RX5808 is running in SPI mode. Then wire it up as shown below:
+<figure markdown>
+![Generic RX5808 wiring](../../assets/images/GenericRX5808.jpg)
+</figure>
+
 ## How to check you have updated the VRx Backpack Firmware?
 
 Navigate to the `WiFi Connectivity` folder of the ExpressLRS v3 Lua script and select `Enable VRx WiFi`.
