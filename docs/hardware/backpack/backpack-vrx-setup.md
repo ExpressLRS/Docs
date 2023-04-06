@@ -150,7 +150,7 @@ It is unlikely that you can close the backplate with the backpack module between
 
 ## Generic RX5808 Connection
 
-Make sure that your RX5808 running in SPI mode. Then wire it up as shown below:
+Make sure that your RX5808 is running in SPI mode. Then wire it up as shown below:
 <figure markdown>
 ![Generic RX5808 wiring](../../assets/images/GenericRX5808.jpg)
 </figure>
