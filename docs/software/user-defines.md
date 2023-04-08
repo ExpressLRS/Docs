@@ -52,7 +52,7 @@ The TX module sends the LinkStats telemetry to the OpenTX frequently to let the 
 ````
 UNLOCK_HIGHER_POWER 
 ````
-By default the max power of the hardware is limited to what it can safely output without extra cooling. Some hardware supports increasing the power by enabling the following option. Check the [supported hardware](../hardware/supported-hardware.md) page to see if this is available and what cooling modifications can be made. By enabling this, you are risking permanent damage to your hardware, sometimes even when you add extra cooling. For example, R9M modules will burn out without cooling.
+By default the max power of the hardware is limited to what it can safely output without extra cooling. Some hardware supports increasing the power by enabling the following option. Check the [supported hardware](../hardware/hardware-selection.md) page to see if this is available and what cooling modifications can be made. By enabling this, you are risking permanent damage to your hardware, sometimes even when you add extra cooling. For example, R9M modules will burn out without cooling.
 
 ## Performance Options
 

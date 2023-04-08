@@ -11,8 +11,8 @@ repo_name: ExpressLRS/ExpressLRS
 repo_url: https://github.com/ExpressLRS/ExpressLRS/releases/
 edit_uri: "https://github.com/ExpressLRS/Docs/tree/master/docs"
 
-privacy_policy_page_path: "/info/privacy-policy"
-licenses_page_path: "/info/licenses"
+# privacy_policy_page_path: "/info/privacy-policy"
+# licenses_page_path: "/info/licenses"
 
 # Copyright
 copyright: Copyright &copy; 2021-2023 ExpressLRS
