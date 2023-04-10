@@ -5,7 +5,7 @@ description: ExpressLRS boasts a great range at any given packet rate. Here's wh
 
 ![FAQ-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/community.png)
 
-One of the most frequently asked questions that are asked by people who are interested in, but haven't yet tried ELRS is "How far does it go, and at what power level?
+One of the most frequently asked questions that are asked by people who are interested in, but haven't yet tried ELRS is "How far does it go, and at what power level?"
 
 The following table is a leaderboard of the current record holder for each packet rate, and the longest distance from home. Note that not every flight resulted in a failsafe at max range, so the link could go further in some cases. The leaderboard is grouped into 2 tables, each with 2 sub-tables. The 2 tables are the frequency of the link used (either 2.4GHz or 900MHz), subdivided into two power levels (50mw or less, 100mW+). This aims to give a sense of how well ELRS performs even at lower power and also demonstrate how far it can be pushed out at higher power levels. Each table will have a maximum of 20 entries, so get up there!
 
