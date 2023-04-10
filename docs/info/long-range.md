@@ -48,8 +48,6 @@ Anyone can add an entry to the table, and entries should include the:
 | 7.14Km | 2.4G | 500hz | 100mw | Wing | No | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
 | 6.43Km | 2.4G | 50Hz | 100mW | Wing | No | DivisionRc | [Link](https://youtu.be/3VAJ14y0ZIY) |
 | 4.11Km | 2.4G | 250Hz | 500mW | Quad | No | ZoFPV | [Link](https://www.youtube.com/watch?v=-9eDdm0dm_E) |
-| 3Km | 2.4G (ceramic antenna) | 500Hz | 100mW | Quad | No | Spec | [Link](https://www.youtube.com/watch?v=kfa6ugX46n8)
-| 1.78Km | 2.4G | 250Hz | 250mW | Quad | No | Thujones | [Link](https://www.youtube.com/watch?v=jhWQvomcCLU) |
 
 ## 900 MHz Rankings
 
