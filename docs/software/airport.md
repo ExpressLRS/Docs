@@ -53,7 +53,7 @@ A good default is:
 
 0. Flash both the TX and RX with the latest ELRS release version (AirPort is available in v3.3.0 onwards). IMPORTANT: Use a bind phrase that is different to whatever you are using for your RC link if you intend to run RC + AirPort side by side in ANY way.
 
-# TX:
+#### TX:
 1. Enable WiFi on the TX module. This can be enabled by inserting the TX into a handset, and in the LUA script select `WiFi Connectivity`->`Enable WiFi`. WiFi can also be enabled via the screen + 5-way if your TX has one (while powered via USB).
 2. Using a computer or mobile device, connect to the TX WiFi using your preferred method (hotspot or home WiFi).
 3. Open the WebUI (`10.0.0.1` for hotspot, or `http://elrs_tx.local` for home WiFi) in a browser.
@@ -61,7 +61,7 @@ A good default is:
 5. In the `AirPort UART baud` field, enter your desired baud rate. IMPORTANT: Pay close attention to the "Data rate vs Baud rate" section above when choosing your baud. A good default is `9600` baud for 2.4GHz, and `4800` baud for 868/900MHz.
 6. Click `SAVE & REBOOT`.
 
-# RX:
+#### RX:
 1. Enable WiFi on the RX. This can be enabled by powering on the RX with no TX powered, and waiting for the WiFi timeout.
 2. Using a computer or mobile device, connect to the RX WiFi using your preferred method (hotspot or home WiFi).
 3. Open the WebUI (`10.0.0.1` for hotspot, or `http://elrs_rx.local` for home WiFi) in a browser.
@@ -89,6 +89,7 @@ Connect the RX to a spare UART on your flight controller, as per normal:
 </figure>
 
 Using the appropriate Configurator tool for your FC firmware, configure your selected UART with your desired telemetry protocol. For example, if using AirPort for MAVLINK in Ardupilot, you would set:
+
 `SERIALN_BAUD` to the baud you entered in the section above,
 `SERIALN_OPTIONS` to `0`,
 `SERIALN_PROTOCOL` to `1` or `2` (for MAVLINKv1 or MAVLINKv2).
