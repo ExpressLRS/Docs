@@ -90,8 +90,8 @@ Connect the RX to a spare UART on your flight controller, as per normal:
 
 Using the appropriate Configurator tool for your FC firmware, configure your selected UART with your desired telemetry protocol. For example, if using AirPort for MAVLINK in Ardupilot, you would set:
 
-`SERIALN_BAUD` to the baud you entered in the section above,
-`SERIALN_OPTIONS` to `0`,
-`SERIALN_PROTOCOL` to `1` or `2` (for MAVLINKv1 or MAVLINKv2).
+* `SERIALN_BAUD` to the baud you entered in the section above,
+* `SERIALN_OPTIONS` to `0`,
+* `SERIALN_PROTOCOL` to `1` or `2` (for MAVLINKv1 or MAVLINKv2).
 
 Connect the TX to a computer via USB, and open the program that you intend to view the telemetry in, then connect to the COM port for your TX module at the baud you entered above. For example, if using AirPort for MAVLINK in Ardupilot, you would open Mission Planner / QGC etc. and select the TX COM port, enter the baud, then click Connect.
