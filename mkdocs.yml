@@ -11,11 +11,11 @@ repo_name: ExpressLRS/ExpressLRS
 repo_url: https://github.com/ExpressLRS/ExpressLRS/releases/
 edit_uri: "https://github.com/ExpressLRS/Docs/tree/master/docs"
 
-privacy_policy_page_path: "/info/privacy-policy"
-licenses_page_path: "/info/licenses"
+# privacy_policy_page_path: "/info/privacy-policy"
+# licenses_page_path: "/info/licenses"
 
 # Copyright
-copyright: Copyright &copy; 2022 ExpressLRS
+copyright: Copyright &copy; 2021-2023 ExpressLRS
 
 # Configuration
 theme:
@@ -253,8 +253,7 @@ nav:
           - Unit Testing: software/testing/unit-testing.md
           - RX Testing: software/testing/rx-scoreboard.md
   - Hardware:
-      - Supported Hardware: hardware/supported-hardware.md
-      - Receiver Selection: hardware/receiver-selection.md
+      - Hardware Selection: hardware/hardware-selection.md
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
       - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
@@ -266,6 +265,7 @@ nav:
           - Backpack Info: hardware/backpack/esp-backpack.md
           - Tx Backpack Setup: hardware/backpack/backpack-tx-setup.md
           - VRx Backpack Setup: hardware/backpack/backpack-vrx-setup.md
+          - HDZero Goggle VRx Backpack: hardware/backpack/hdzero-goggles.md
       - Special Targets:
           - DIY Receiver: hardware/special-targets/diy-rx.md
           - DIY Transmitter: hardware/special-targets/diy-tx.md

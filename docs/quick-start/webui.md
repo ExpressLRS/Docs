@@ -145,9 +145,9 @@ This section is currently only available for the RadioMaster Ranger module.
                 - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
                 - Consult your Radio User's Manual on how to access the System Menu.
             3. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
-                - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+                - If the script is nowhere to be found, download it from [this page](./transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
             4. Press ++enter++ to Load it.
-                - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+                - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](./transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
                 - there should be a C in the top right corner of the Lua Script indicating TX Module and Receiver is Connected.
             5. Scroll down and select `Wifi Connectivity` and press ++enter++.
             6. Select `Enable RX WiFi` and press ++enter++.
@@ -158,7 +158,7 @@ This section is currently only available for the RadioMaster Ranger module.
             </figure>
 
     4. Scan for the `ExpressLRS RX` Access Point. 
-        ![WiFi Hotspot](../../assets/images/WifiHotspot.png){ align=right }
+        ![WiFi Hotspot](../assets/images/WifiHotspot.png){ align=right }
 
         - If your Receiver is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
         - `expresslrs` is the Password for this Access Point.
@@ -201,9 +201,9 @@ This section is currently only available for the RadioMaster Ranger module.
                 - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
                 - Consult your Radio User's Manual on how to access the System Menu.
             2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
-                - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+                - If the script is nowhere to be found, download it from [this page](./transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
             3. Press ++enter++ to Load it.
-                - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+                - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](./transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
             4. Scroll down and select `Wifi Connectivity` and press ++enter++.
             5. Select `Enable WiFi` and press ++enter++.
             6. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
@@ -216,7 +216,7 @@ This section is currently only available for the RadioMaster Ranger module.
                 - TX Modules with an OLED Screen will also show a message regarding WiFi mode.
 
     2. Scan for the `ExpressLRS TX` Access Point. 
-        ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png){ align=right }
+        ![WiFi Hotspot](../assets/images/WifiHotspotTX.png){ align=right }
 
         - If your TX Module is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
         - `expresslrs` is the Password for this Access Point.

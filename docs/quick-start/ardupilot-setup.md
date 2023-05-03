@@ -23,7 +23,7 @@ Once you have set the parameter above, power-cycle the flight controller by disc
  and set the other parameter as below:
 ```
 SERIALx_PROTOCOL = 23 (RCIN)
-SERIALx_BAUDRATE = 115
+SERIALx_BAUD = 115
 RSSI_TYPE = 3 (ReceiverProtocol)
 ```
 

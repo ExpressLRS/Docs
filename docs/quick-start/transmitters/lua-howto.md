@@ -141,7 +141,10 @@ TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXI
 ![VTX Settings BW](../../assets/images/lua/vtx-bw.png)
 </figure>
 
-VTX Administrator allows you to change your VTX settings directly from your radio, and have those VTX settings be applied to any receiver you connect to. The VTX settings are sent every time a new connection is acquired, or when `[Send VTX]` is pressed. **VTX Administrator will only send data when disarmed**
+VTX Administrator allows you to change your VTX settings directly from your radio, and have those VTX settings be applied to any receiver you connect to. The VTX settings are sent every time a new connection is acquired, or when `[Send VTX]` is pressed.
+
+!!! hint "Hot Tip"
+    VTX Administrator will send the current VTX settings to the flight controller whenever the TX module detects a connection to the RX. This means that it will resend them after telemetry lost/recovered. So if you have used any other method to change the VTX power level (i.e. OSD), then that will be overridden if you lose/regain telemetry in flight.
 
 * `Band` sets the VTX band, the options are `Off, A, B, E, F, R & L`, the standard analog FPV bands. `Off` means that VTX Administrator will not adjust any VTX settings.
 
