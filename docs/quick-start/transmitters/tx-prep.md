@@ -7,21 +7,34 @@ description: Get your Radio Handset prepared for ExpressLRS with this setup guid
 
 ## External ExpressLRS Modules
 
-Insert or attach your External ExpressLRS Transmitter Module into your Radio module bay, making sure no pins are bent or missing. External ExpressLRS Modules require three (3) pins to work: VCC/VBAT, GND and S.Port.
+Insert or attach your External ExpressLRS Transmitter Module into your Radio module bay, making sure no pins are bent or missing. External ExpressLRS Modules require three (3) pins to work: VCC/VBAT, GND and S.Port/Data/Signal.
 
--insert image of module bays, full-size and nano, pins marked-
+<figure markdown>
+![ExternalRF Pinout Micro](../../assets/images/pinout-extmicro.jpg)
+<figcaption>Micro External Bay Pinout</figcaption>
+</figure>
+
+<figure markdown>
+![ExternalRF Pinout Nano](../../assets/images/pinout-extnano.jpg)
+<figcaption>Nano External Bay Pinout</figcaption>
+</figure>
 
 ## Internal ExpressLRS Modules
 
-Make sure you do have an Internal ExpressLRS Modules on your shiny new radio. The following handsets come in both ExpressLRS or 4-in-1 variants; with some coming in with a third (CC2500).
+Make sure you do have an Internal ExpressLRS Modules on your shiny new radio. The following handsets come in both ELRS (ExpressLRS) or 4-in-1 variants; with some coming in with a third (CC2500). Only the ELRS variant works with ExpressLRS. The others will not work as they have a different Hardware that are incompatible with ExpressLRS.
 
 - RadioMaster TX16S MKII (ELRS, 4-in-1 CC2500) - ExpressLRS variant will have an ELRS sticker on the box.
 - RadioMaster TX12 MKII (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and an ELRS sticker in the JR module bay.
 - RadioMaster Zorro (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box.
 - RadioMaster Boxer (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and an ELRS sticker in the JR module bay.
 - Jumper T-Lite V2 (ELRS, 4-in-1, CC2500) 
-- Jumper T-Pro (ELRS, 4-in-1)
+- Jumper T-Pro V1/V2 (ELRS, 4-in-1)
 - BetaFPV Lite Radio 3 Pro (ELRS, CC2500) - A sticker with the barcode at the bottom of the box should tell you it's an ELRS variant or the CC2500 variant.
+
+<figure markdown>
+![Internal ELRS Marking](../../assets/images/ELRS-variant-Box.jpg)
+<figcaption>Example Sticker On RadioMaster Handset/Radios</figcaption>
+</figure>
 
 ## Radio Operating System
 
@@ -34,7 +47,15 @@ To determine your Radio Operating System Version, load the Version page from the
     - Consult your Radio User's Manual on how to access the System Menu.
 2. Press ++"PAGE"++ Key until you reach the Version Page.
 
--show images of how to get to the version page on both b&w and colored screens-
+<figure markdown>
+![System Key](../../assets/images/SystemKey.jpg)
+<figcaption>System Key; Short-Press to access the System Menu</figcaption>
+</figure>
+
+<figure markdown>
+![Menu Key](../../assets/images/MenuKey.jpg)
+<figcaption>Menu Key; Long-Press to access the System Menu</figcaption>
+</figure>
 
 If you have an older version, please first update your Radio OS to at least the mentioned versions. Please consult your Radio Operating System Updating Procedure if you don't know how.
 

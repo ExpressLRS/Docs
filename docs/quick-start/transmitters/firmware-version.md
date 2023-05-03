@@ -32,13 +32,24 @@ There's three methods to determine what firmware version you currently have on y
 
     4. Scroll to the bottom of the page and you should see the Current Version flashed into your TX module.
 
-        -insert image of Lua Script showing the version line-
+        <figure markdown>
+        ![ExpressLRS Version Info Color](../../assets/images/LuaColor-version_info.jpg)
+        <figcaption>Colored Screens ExpressLRS Lua Script Version Line</figcaption>
+        </figure>
+
+        <figure markdown>
+        ![ExpressLRS Version Info B&W](../../assets/images/LuaBW-version_info.jpg)
+        <figcaption>Mono Screens ExpressLRS Lua Script Version Line</figcaption>
+        </figure>
 
 === "via OLED Screen"
 
     If your External TX module is equipped with a Screen, the Home Screen should show the different parameters currently configured on the module. It will also show the current firmware version flashed into the module.
 
-    -insert OLED screen image with the version-
+    <figure markdown>
+    ![ExpressLRS Version Info Color](../../assets/images/OLED-version_info.jpg)
+    <figcaption>OLED Screen Version Line</figcaption>
+    </figure>
 
 === "via Web UI"
 
