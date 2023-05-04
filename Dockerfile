@@ -13,4 +13,4 @@ RUN make install-python-packages
 EXPOSE 8000
 
 ENTRYPOINT ["dumb-init"]
-CMD ["mkdocs", "serve", "--livereload", "--dev-addr=127.0.0.1:8000"]
+CMD ["mkdocs", "serve", "--livereload", "--dev-addr=0.0.0.0:8000"]
