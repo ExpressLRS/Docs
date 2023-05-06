@@ -75,7 +75,7 @@ If the Receiver LED doesn't light up at all, quickly disconnect power and check 
 
 If your receiver has the RGB LED ((e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP Dual), and the receiver LED is not lighting up despite making sure it's wired up correctly, this could mean that the Receiver is in Bootloader Mode.
 
-If your Receiver LED lights up but it's just a Solid light, the it could also be in Bootloader mode as the chart above indicates.
+If your Receiver LED lights up but it's just a Solid light, then it could also be in Bootloader mode as the chart above indicates.
 
 ??? danger "My Receiver is in Bootloader Mode!"
 

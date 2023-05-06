@@ -5,9 +5,11 @@ template: main.html
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
 !!! danger "Advisory"
-    If this is the first time you're flashing/updating your receiver or you're updating it from a previous 2.x firmware via WiFi, first ensure that it has version 2.5.2. Once it has the 2.5.2 flashed, update to 3.x.
+    If this is the first time you're flashing/updating your receiver or you're updating it from a previous 2.x firmware via WiFi, first ensure that it has version 2.5.2. Once it has the 2.5.2 flashed, you can then update it to 3.x via WiFi.
 
-    If you've flashed it straight to 3.x and you're getting "Not Enough Space" popup during WiFi flashing, flash the receiver to 2.5.2 first, and then flash it to 3.x.
+    If you're flashing it straight to 3.x and you're getting "Not Enough Space" popup during WiFi flashing, flash the receiver to 2.5.2 first, and then flash it to 3.x.
+
+    If receiver firmware is already 3.x, and you're still getting the "Not Enough Space" error when flashing via WiFi, make sure you are selecting the correct method in the Configurator(via WiFi, in this case). See the steps outlined below.
 
     You can update straight to 3.x via Passthrough or via UART.
 
@@ -52,12 +54,7 @@ There are more `ESP8285` based RXes in the market due to massive shortage of `ST
 
 The images above show the receiver pinouts and their connections. As we're dealing with UART connection, Rx on receiver goes to a TX pad on the FC, and Tx on the receiver goes to an uninverted Rx pad on the FC.
 
-There are Flight Controllers that put their Receiver UART's RX pads Low, which in turn, puts the ESP-based (e.g. EP1 and EP2) receivers to Bootloader mode unintentionally. One remedy is to wire them into a different UART, or wire a pull-up resistor (300-1k ohm) between the Rx pad of the FC and a 3.3v or 5v pad, as shown below.
-
-<figure markdown>
-![pull up](../../assets/images/pull-up.png)
-<figcaption>Wiring up receiver</figcaption>
-</figure>
+See the [Receiver Wiring] page for a more in-depth guide and troubleshooting procedures. Some of the updating procedures below will not go through if your receiver is not wired correctly and behaving properly.
 
 ## Configuring your Flight Controller
 
@@ -67,223 +64,645 @@ Ports Tab should be setup so that Serial RX is on the UART where you have solder
 
 Receiver protocol is `CRSF` with `serialrx_inverted = off` and `serialrx_halfduplex = off`.
 
-The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy (of high importance with the Passthrough Flashing Method).
+The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy.
 
-## Flashing via Passthrough
+Some of the following procedures will not go through, particularly the via Passthrough method; or your receiver will not be fully functional, if these settings are incorrect.
 
-- Targets: 
-    - `NamimnoRC_FLASH_2400_ESP_RX_via_BetaflightPassthrough` 
-    - `NamimnoRC_FLASH_2400_RX_via_BetaflightPassthrough`
-    - `NamimnoRC_FLASH_2400_ESP_RX_PA_via_BetaflightPassthrough`
+## Updating your Receiver Firmware (ESP-based)
 
-- Device Category: 
-    - `NamimnoRC FLASH 2.4 GHz`
+=== "via Passthrough"
 
-- Device:
-    - `NamimnoRC FLASH 2400 ESP RX`
-    - `NamimnoRC FLASH 2400 RX`
-    - `NamimnoRC FLASH 2400 ESP Diversity RX`
+    <figure markdown>
+    ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
+    </figure>
 
-<figure markdown>
-![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
-<figcaption>Flashing via Passthrough</figcaption>
-</figure>
+    1. Make sure you have done your [Receiver Wiring] properly and that your Flight Controller is [Configured].
 
-### STM-based receivers
+        !!! Warning "Important Step!"
+            This is an important step and guarantees updating success. If you haven't done these, GO BACK to those pages.
 
-Once [wired properly] to your FC, connect USB. Did your receiver powered up too (with both LEDs lit)? If so, disconnect USB, hold the bind button on your receiver, and reconnect to USB. The LED should start alternating between the Green and Red LEDs. Once it's alternating, you can then let go of the Bind Button.
+        - Disconnect and close Betaflight Configurator or INAV Configurator.
+        - Power-cycle the Flight Controller.
+            - If you plugged in LiPo, unplug it.
+            - Unplug-replug the USB Cable from your Flight Controller or Computer.
+            - If you will have to plug in LiPo to power up your Receiver, make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-If your receiver didn't get powered from USB, have a lipo ready and continue with the next steps. On the ExpressLRS Configurator, with your [Firmware Options] set, click on **Build & Flash**. Like on the TX module, it will take a while on the first time. Watch out for the `PASSTHROUGH INIT` stage. This stage will check your FC Configuration for the Serial RX UART (Software Inversion via "set serialrx_inverted" and Half Duplex mode via "set serialrx_halfduplex" will be checked; both should be off.)
+    2. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
 
-<figure markdown>
-![Build & Flash]
-</figure>
+        - Make sure Official Releases is active from the horizontal tab.
+        - Make sure you have selected the Released version you want to flash into your TX module.
 
-Once `Retry... ` lines appear, connect a LiPo if your receiver isn't powered by the USB (i.e. power up your receiver and FC). On subsequent flash, you can have the LiPo plugged in and receiver powered up from the start.
+        <br clear="right" />
+    3. Select the Device Category and Device target matching your hardware.
 
-Wait for this process to finish. It's done once the "Success" prompt is shown.
+        - Device Category: 
+            - `NamimnoRC FLASH 2.4 GHz`
 
-### ESP-based receivers
+        - Device:
+            - `NamimnoRC FLASH 2400 ESP RX`
+            - `NamimnoRC FLASH 2400 ESP Diversity RX`
 
-Make sure you have your receiver [wired properly]. Rx pad on the Receiver wired up to a Tx pad on the FC, and the Tx pad on the Receiver wired up to an Rx pad on the FC. Also make sure you have setup your FC firmware to use CRSF Protocol, and that the UART is not inverted or running in half duplex.
+    4. Set the Flashing Method to `BetaflightPassthrough`
 
-For the following steps, you should be disconnected from Betaflight or INAV Configurator. Close the FC Configurator and unplug the FC from USB to refresh the connection.
+        <figure markdown>
+        ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
+        </figure>
 
-You will need to bridge the `Boot` pads on the receiver the first time you'll be updating via this method. The [Wiring Guide] shows where the `Boot` pads are. A solid LED indicates the receiver is in `Bootloader` mode when the TX module is OFF (Solid LED also indicates Radio+module & Receiver is bound and has connection). 
+    5. Set the [firmware options] for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+    6. Click the ++"Build & Flash"++ button.
 
-!!! attention "Note"
-    If you power the receiver and it has solid LED light, your FC is probably pulling the current UART's RX pad `LOW` which will interfere with the normal and passthrough flashing of this receiver. Find another UART and wire your receiver there instead.
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
+        
+    7. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-These procedures will not be needed in subsequent passthrough flashing. This is only needed on the first time you'd update the receiver from its factory firmware.
+    8. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
 
-Select the corresponding target in the ExpressLRS Configurator, set your [Firmware Options] and then click **Build and Flash**. For first time flashing/updating, it would normally take a while.
+        <figure markdonw>
+        ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+        </figure>
 
-<figure markdown>
-![Build & Flash]
-</figure>
 
-A `Success` message will be shown once the process is complete.
+=== "via UART"
 
-## Updating via WiFi (ESP Only - Recommended)
+    <figure markdown>
+    ![via UART](../../assets/images/Method_RX_UART.png)
+    </figure>
 
-- Target: 
-    - `NamimnoRC_FLASH_2400_ESP_RX_via_WIFI` 
-    - `NamimnoRC_FLASH_2400_ESP_RX_PA_via_WIFI`
+    1. Connect your Receiver to your UART Adapter as shown in the image below.
 
-- Device Category: 
-    - `NamimnoRC FLASH 2.4 GHz`
+        <figure markdown>
+        ![FTDI Wiring](../../assets/images/FTDIConn.png)
+        </figure>
 
-- Device:
-    - `NamimnoRC FLASH 2400 ESP RX`
-    - `NamimnoRC FLASH 2400 ESP Diversity RX`
+        - YES, you will need to disconnect your Receiver from your Flight Controller and connect it to a UART/FTDI Adapter.
 
-<figure markdown>
-![via WiFi](../../assets/images/Method_RX_WiFi.png)
-<figcaption>Updating via WiFi</figcaption>
-</figure>
+    2. If your Receiver has Boot Pads instead of a Boot Button, solder the Boot Pads together or connect it to Ground. If your Receiver has a Boot Button, locate it then press & hold it. 
 
-### Method 1
+    3. Plug in your UART Adapter into a USB Port on your Computer.
+        - The LED on the Receiver should light up Solid. If it's Blinking, repeat the previous step.
 
-With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
+        ??? Warning "Receiver LED already Solid"
+            If the Receiver LED has become Solid from a failed update, and you're reflashing through this method, you still need to do the previous step: Manually putting the receiver into Bootloader Mode. This ensures the Receiver is indeed in a Bootloader state rather than some random boot loop.
+        
+    4. Determine whether your UART Adapter is being detected properly as a USB-to-UART Device.
 
-**Build** the firmware. Once done, it should open a new window where the `NamimnoRC_FLASH_2400_ESP_RX-<version>.bin` or `NamimnoRC_FLASH_2400_ESP_RX_PA-<version>.bin` file is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+        ![CP210x]{ align=right }
 
-<figure markdown>
-![Build]
-</figure>
+        - Windows Users can check via Device Manager, Ports device grouping.
+        - Drivers will be needed if the UART Adapter is not being detected properly. This is indicated by a Yellow Caution Triangle :material-alert-outline: in Device Manager.
+        - Common USB-to-UART Adapter chip include: [CP210x](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads), [FTDI FT232](https://ftdichip.com/drivers/vcp-drivers/), [CH340](https://sparks.gogo.co.nz/ch340.html) and the [CH9102](https://sparks.gogo.co.nz/ch340.html) (driver download pages linked).
 
-Power your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Hotspot Mode.
+        <br clear="right" />
 
-<figure markdown>
-![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
-</figure>
+    5. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
 
-Connect to the Wifi Network the receiver has created. It should be named something like `ExpressLRS RX` with the same `expresslrs` password as the TX Module Hotspot.
+        - Make sure Official Releases is active from the horizontal tab.
+        - Make sure you have selected the Released version you want to flash into your TX module.
 
-<figure markdown>
-![WiFi Hotspot](../../assets/images/WifiHotspot.png)
-</figure>
+        <br clear="right" />
+    6. Select the Device Category and Device target matching your hardware.
 
-Navigate to the same web address as the TX Module (usually http://10.0.0.1). The Firmware upload page should load, and using the File Upload Form, navigate where the correct Receiver `NamimnoRC_FLASH_2400_ESP_RX-<version>.bin` or `NamimnoRC_FLASH_2400_ESP_RX_PA-<version>.bin` file is (like with the Tx module, you can also drag-and-drop the firmware file into the form field or use the `Browse` or `Choose File` button). Click on the **Update** button and the firmware file will be uploaded and the update process should commence.
+        - Device Category: 
+            - `NamimnoRC FLASH 2.4 GHz`
 
-A white page should load momentarily with the message **Update Success! Rebooting...**. Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated. Power cycle the receiver and it should be able to bind with your TX module now (given you have updated the Tx Module as well, and that they have the same binding phrase and options).
+        - Device:
+            - `NamimnoRC FLASH 2400 ESP RX`
+            - `NamimnoRC FLASH 2400 ESP Diversity RX`
 
-!!! Info "Update for version 2.0"
-    Once you have updated to firmware version 2.0 or newer, the Web Update page on the Hotspot will get a few updates of its own. It will get the Update progress bar, and a Popup will be shown for Success or Error messages. Additionally, you can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the two methods below.
+    7. Set the Flashing Method to `UART`
 
-<figure markdown>
-![JoinNetwork](../../assets/images/web-joinnetwork.png)
-</figure>
+        <figure markdown>
+        ![via UART](../../assets/images/Method_RX_UART.png)
+        </figure>
 
-### Method 2
+    8. Set the [firmware options] for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+    9. Click the ++"Build & Flash"++ button.
 
-!!! note "Note"
-    This method will only work once the Home Network SSID and Password has been configured with the receiver.
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
+        
+    10. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
+    11. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
 
-**Build** the firmware. Once done, it should open a new window where the `NamimnoRC_FLASH_2400_ESP_RX-<version>.bin`  or `NamimnoRC_FLASH_2400_ESP_RX_PA-<version>.bin` file is. Do not close this window so you can easily navigate to it once it's time to upload the firmware into the receiver.
+        <figure markdonw>
+        ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+        </figure>
 
-<figure markdown>
-![Build]
-</figure>
+=== "via WiFi"
 
-Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi AP Mode. The fast blink will pause and flash fast once again, indicating connection to your Home Network.
+    <figure markdown>
+    ![via WiFi](../../assets/images/Method_RX_WiFi.png)
+    </figure>
 
-<figure markdown>
-![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
-</figure>
+    === "Manual Upload via AP"
 
-Using your browser, navigate to http://elrs_rx.local/. The Wifi Update page should load. It should show your device target along with the version of the firmware it currently has.
+        !!! Info "Heads up!"
+            This option is only possible if you haven't previously flashed or configured your Receiver with your Home WiFi SSID and Password or it's unable to connect to said WiFi Network because the router is Off or unreachable.
 
-Scroll down to the Firmware Update section, shown below:
+        1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+            ![Configurator Release]{ align=right }
 
-<figure markdown>
-![Firmware Update](../../assets/images/web-firmwareupdate.png)
-</figure>
+            - Make sure Official Releases is active from the horizontal tab.
+            - Make sure you have selected the Released version you want to flash into your TX module.
 
-Drag-and-drop the `NamimnoRC_FLASH_2400_ESP_RX-<version>.bin` or `NamimnoRC_FLASH_2400_ESP_RX_PA-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, indicated by a Green popup screen. 
+            <br clear="right" />
 
-Wait a little bit (**you can wait until the LED on the Receiver starts to blink slowly again**) and the receiver should be updated.
+        2. Select the Device Category and Device target matching your hardware.
+            
+            - Device Category: 
+                - `NamimnoRC FLASH 2.4 GHz`
 
-You can now power down your Flight Controller along with the receiver.
+            - Device:
+                - `NamimnoRC FLASH 2400 ESP RX`
+                - `NamimnoRC FLASH 2400 ESP Diversity RX`
 
-### Method 3
+        3. Set the Flashing Method to `WiFi`.
 
-!!! note "Note"
-    This method will only work once the Home Network SSID and Password has been configured with the receiver.
+            <figure markdown>
+            ![via WiFi](../../assets/images/Method_RX_WiFi.png)
+            </figure>
 
-With the receiver [wired properly] to your FC, select the right target and set your [Firmware Options] in the ExpressLRS Configurator.
+        4. Set the [firmware options] for your device.
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+        5. Click the ++"Build"++ button.
+            
+            <figure markdown>
+            ![Build]
+            </figure>
+            
+        6. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
 
-Power up your Flight Controller by either connecting a LiPo or attaching the USB cable (if the receiver gets powered from USB via a 4v5 pad). The receiver's LED will blink slowly at first, and after 20s or 30s (can be adjusted via ExpressLRS Configurator using `AUTO_WIFI_ON_INTERVAL`), it should blink fast indicating it's on Wifi Mode.
+            ![Temp RX]{ align=right }
 
-<figure markdown>
-![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
-</figure>
+            - You can use any of these files.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
 
-**Build & Flash** the firmware using the ExpressLRS Configurator. Wait for the process to complete, indicated by the "Success" prompt and the Receiver LED has gone back to the Slow Blink mode. You can now power down the Flight Controller.
+            <br clear="right" />
+            
+        7. Put your Receiver into WiFi mode.
 
-<figure markdown>
-![Build & Flash]
-</figure>
+            === "using Auto WiFi mode"
 
-<figure markdown>
-![RXUpload Log](../../assets/images/RXWifiUpdateLog.png)
-</figure>
+                1. Power up your Receiver. 
+                            
+                    - If you will have to plug in LiPo to power up your Receiver:
 
-## Updating via FTDI (ESP Only)
+                        - make sure you've already checked the wiring from the [Receiver Wiring] step.
+                        - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-- Target: 
-    - `NamimnoRC_FLASH_2400_ESP_RX_via_UART` 
-    - `NamimnoRC_FLASH_2400_ESP_RX_PA_via_UART`
+                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
 
-- Device Category: 
-    - `NamimnoRC FLASH 2.4 GHz`
+                2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
-- Device: 
-    - `NamimnoRC FLASH 2400 ESP RX`
-    - `NamimnoRC FLASH 2400 ESP Diversity RX`
+                    - The Auto WiFi On Interval setting controls how long the device will wait to initiate WiFi Mode when it's powered up and it's not getting valid CRSF packets.
 
-<figure markdown>
-![via UART](../../assets/images/Method_RX_UART.png)
-<figcaption>Updating via UART</figcaption>
-</figure>
+                    <figure markdown>
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    </figure>
 
-Wire the receiver into the FTDI, with the TX on receiver connected to the Rx on the FTDI, and the RX on receiver connected to the Tx of the FTDI. Wire 5V and GND of the FTDI to 5V and GND of the Receiver. Press the button while powering the RX on, and release - the LED should now be solid.
+            === "using the ExpressLRS Lua Script" 
 
-<figure markdown>
-![FTDI Wiring](../../assets/images/FTDIConn.png)
-</figure>
+                !!! Note
+                    This method only works if your Receiver is already in sync and bound with your TX Module.
 
-Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
+                1. Press the ++"SYS"++ Key on your Radio.
+                    - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+                    - Consult your Radio User's Manual on how to access the System Menu.
+                2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
+                    - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+                3. Press ++enter++ to Load it.
+            
+                    <figure markdown >
+                    ![Lua Running]
+                    </figure> 
 
-<figure markdown>
-![Build & Flash]
-</figure>
+                    - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+                4. Scroll down and select `Wifi Connectivity` and press ++enter++.
+                5. Select `Enable RX WiFi` and press ++enter++.
+            
+                    <figure markdown>
+                    ![Lua WiFi]
+                    </figure>
+            
+                6. The Receiver LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
-## Updating via STLink (STM32 Only)
+                    <figure markdown>
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    </figure>
 
-- Target: `NamimnoRC_FLASH_2400_RX_via_STLINK`
+            ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode!"
+                Go back to the [Receiver Wiring] step.
+                
+                If you have previously attempted updating your receiver, there's a possibility it was soft-bricked. Go over the [Unbricking] procedure to recover it.
 
-- Device Category: `NamimnoRC FLASH 2.4 GHz`
+        8. Using a WiFi-capable device such as your smartphone or laptop, scan for the `ExpressLRS RX` Access Point. Connect to this Access Point.
 
-- Device: `NamimnoRC FLASH 2400 RX`
+            ![WiFi Hotspot](../../assets/images/WifiHotspot.png){ align=right }
 
-<figure markdown>
-![via STLink](../../assets/images/Method_RX_STLink-stm.png)
-<figcaption>Updating via STLink</figcaption>
-</figure>
+            - If your Receiver is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
+            - `expresslrs` is the Password for this Access Point.
 
-The units provided to the documentation team did not have STM32 chips due to the chip shortage, however, the following should apply. Wire CLK, 3v3, GND and DIO to the recievers STLink pins.
+            ??? question "Where's the Access Point?"
+                If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also try putting the devices closer together.
 
-Select the target and set your [Firmware Options] and once done, click on **Build and Flash**.
+                If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
 
-<figure markdown>
-![Build & Flash]
-</figure>
+            <br clear="right" />
 
-[Build]: ../../assets/images/Build.png
+        9. Once you have connected to the `ExpressLRS RX` Access Point, open up a Browser window and type in the IP Address `10.0.0.1` on the Address Bar and press ++enter++. The ExpressLRS Web UI will load.
+        10. Activate the `Update` Tab.
+
+            - If your Receiver is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
+
+            <figure markdown>
+            ![Old File Upload]
+            </figure>
+
+        11. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
+        12. Click the ++"Update"++ button to start the Updating procedure.
+        13. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+        14. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+
+            <figure markdonw>
+            ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+            </figure>
+
+    === "Manual Upload via Local WiFi"
+
+        !!! Info "Heads up!"
+            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
+
+        1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+            ![Configurator Release]{ align=right }
+
+            - Make sure Official Releases is active from the horizontal tab.
+            - Make sure you have selected the Released version you want to flash into your TX module.
+
+            <br clear="right" />
+        2. Select the Device Category and Device target matching your hardware.
+
+            - Device Category: 
+                - `NamimnoRC FLASH 2.4 GHz`
+
+            - Device:
+                - `NamimnoRC FLASH 2400 ESP RX`
+                - `NamimnoRC FLASH 2400 ESP Diversity RX`
+
+        3. Set the Flashing Method to `WiFi`.
+
+            <figure markdown>
+            ![via WiFi](../../assets/images/Method_RX_WiFi.png)
+            </figure>
+
+        4. Set the [firmware options] for your device.
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+        5. Click the ++"Build"++ button.
+            
+            <figure markdown>
+            ![Build]
+            </figure>
+            
+        6. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
+            ![Temp RX]{ align=right }
+
+            - You can use any of these files.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
+
+            <br clear="right" />
+
+        7. Put your Receiver into WiFi mode.
+
+            === "using Auto WiFi mode"
+
+                1. Power up your Receiver. 
+                            
+                    - If you will have to plug in LiPo to power up your Receiver:
+
+                        - make sure you've already checked the wiring from the [Receiver Wiring] step.
+                        - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
+
+                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
+
+                2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
+
+                    - The Auto WiFi On Interval setting controls how long the device will wait to initiate WiFi Mode when it's powered up and it's not getting valid CRSF packets.
+
+                    <figure markdown>
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    </figure>
+
+            === "using the ExpressLRS Lua Script" 
+
+                !!! Note
+                    This method only works if your Receiver is already in sync and bound with your TX Module.
+
+                1. Press the ++"SYS"++ Key on your Radio.
+                    - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+                    - Consult your Radio User's Manual on how to access the System Menu.
+                2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
+                    - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+                3. Press ++enter++ to Load it.
+            
+                    <figure markdown >
+                    ![Lua Running]
+                    </figure> 
+
+                    - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+                4. Scroll down and select `Wifi Connectivity` and press ++enter++.
+                5. Select `Enable RX WiFi` and press ++enter++.
+            
+                    <figure markdown>
+                    ![Lua WiFi]
+                    </figure>
+            
+                6. The Receiver LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
+
+                    <figure markdown>
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    </figure>
+
+            ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode!"
+                Go back to the [Receiver Wiring] step.
+                
+                If you have previously attempted updating your receiver, there's a possibility it was soft-bricked. Go over the [Unbricking] procedure to recover it.
+
+        8. With your Receiver now in WiFi Mode and it was able to connect to your Local WiFi Network, open a Browser window on any WiFi-capable device that is also connected to the same Local WiFi Network. Type in the Address http://elrs_rx.local on your browser's Address Bar. The ExpressLRS Web UI should load.
+            - If your browser cannot resolve this address and it cannot load the ExpressLRS Web UI, this means that MDNS is not working on your device or network.
+
+            ??? tip "MDNS is not working!"
+                === "The `arp` Command"
+
+                    1. Open up a Command Prompt window on your computer.
+                    2. Execute the command `arp -a` which will list all the devices in the Network.
+                    3. Use each of the IP Addresses marked as `Dynamic` as URL into your Browser until you get to the ExpressLRS Web UI.
+
+                === "Router DHCP List"
+                    1. Log in into your Router dashboard.
+                    2. Check the DHCP List and look for the "elrs" device.
+                    3. Take note of the IP Address given by your router.
+                    4. Use this IP address into your Browser as the URL.
+
+        9. Activate the `Update` Tab.
+
+            - If your Receiver is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
+
+            <figure markdown>
+            ![Old File Upload]
+            </figure>
+
+        10. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
+        11. Click the ++"Update"++ button to start the Updating procedure.
+        12. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+        13. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+
+            <figure markdonw>
+            ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+            </figure>
+
+    === "Auto Upload"
+
+        !!! Info "Heads up!"
+            This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network. 
+            
+            MDNS must also be working and that your browser can resolve the address http://elrs_rx.local and it can load the ExpressLRS Web UI from said address.
+
+        1. Put your Receiver into WiFi mode.
+
+            === "using Auto WiFi mode"
+
+                1. Power up your Receiver. 
+                            
+                    - If you will have to plug in LiPo to power up your Receiver:
+
+                        - make sure you've already checked the wiring from the [Receiver Wiring] step.
+                        - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
+
+                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
+
+                2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
+
+                    - The Auto WiFi On Interval setting controls how long the device will wait to initiate WiFi Mode when it's powered up and it's not getting valid CRSF packets.
+
+                    <figure markdown>
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    </figure>
+
+            === "using the ExpressLRS Lua Script" 
+
+                !!! Note
+                    This method only works if your Receiver is already in sync and bound with your TX Module.
+
+                1. Press the ++"SYS"++ Key on your Radio.
+                    - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+                    - Consult your Radio User's Manual on how to access the System Menu.
+                2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
+                    - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+                3. Press ++enter++ to Load it.
+            
+                    <figure markdown >
+                    ![Lua Running]
+                    </figure> 
+
+                    - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+                4. Scroll down and select `Wifi Connectivity` and press ++enter++.
+                5. Select `Enable RX WiFi` and press ++enter++.
+            
+                    <figure markdown>
+                    ![Lua WiFi]
+                    </figure>
+            
+                6. The Receiver LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
+
+                    <figure markdown>
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    </figure>
+
+            ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode!"
+                Go back to the [Receiver Wiring] step.
+                
+                If you have previously attempted updating your receiver, there's a possibility it was soft-bricked. Go over the [Unbricking] procedure to recover it.
+
+        2. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+            ![Configurator Release]{ align=right }
+
+            - Make sure Official Releases is active from the horizontal tab.
+            - Make sure you have selected the Released version you want to flash into your TX module.
+
+            <br clear="right" />
+        3. Select the Device Category and Device target matching your hardware.
+
+            - Device Category: 
+                - `NamimnoRC FLASH 2.4 GHz`
+
+            - Device:
+                - `NamimnoRC FLASH 2400 ESP RX`
+                - `NamimnoRC FLASH 2400 ESP Diversity RX`
+
+        4. Set the Flashing Method to `WiFi`.
+
+            <figure markdown>
+            ![via WiFi](../../assets/images/Method_RX_WiFi.png)
+            </figure>
+
+        5. Set the [firmware options] for your device.
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+        6. Click the ++"Build & Flash"++ button.
+
+            <figure markdown>
+            ![Build & Flash]
+            </figure>
+        
+        7. Wait for the upload to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+
+            <figure markdown>
+            ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
+            </figure>
+
+        8. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+
+            <figure markdonw>
+            ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+            </figure>
+
+## Updating your Receiver Firmware (STM-based)
+
+=== "via Passthrough"
+
+    <figure markdown>
+    ![via Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
+    </figure>
+
+    1. Make sure you have done your [Receiver Wiring] properly and that your Flight Controller is [Configured].
+
+        !!! Warning "Important Step!"
+            This is an important step and guarantees updating success. If you haven't done these, GO BACK to those pages.
+
+        - Disconnect and close Betaflight Configurator or INAV Configurator.
+        - If your receiver powers up with just USB connected to your flight controller, unplug it. Press and Hold the boot button on the receiver (not the FC) and then plug in the USB. Release the button right after the LED turn solid.
+        - If your receiver only powers up with a LiPo connected to your flight controller, unplug it. Then unplug-replug the USB cable to your flight controller. Do not replug LiPo yet.
+
+    2. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
+
+        - Make sure Official Releases is active from the horizontal tab.
+        - Make sure you have selected the Released version you want to flash into your TX module.
+
+        <br clear="right" />
+    3. Select the Device Category and Device target matching your hardware.
+
+        - Device Category: `NamimnoRC FLASH 2.4 GHz`
+
+        - Device: `NamimnoRC FLASH 2400 RX`
+
+    4. Set the Flashing Method to `BetaflightPassthrough`
+
+        <figure markdown>
+        ![via Passthrough](../../assets/images/Method_RX_Passthrough-stm.png)
+        </figure>
+
+    5. Set the [firmware options] for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+
+    6. Click the ++"Build & Flash"++ button.
+
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
+    
+    7. Wait for the `Retry...` lines to appear in the Build Log. Connect the LiPo to power up the Receiver if it only powers up with a LiPo connected.
+
+        - `Retry...` lines will not show up if your receiver is already in bootloader mode and gets powered up by USB.
+        
+    8. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+
+    9. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+
+        <figure markdonw>
+        ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+        </figure> 
+
+=== "via STLink"
+
+    <figure markdown>
+    ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
+    </figure>
+
+    1. Disconnect the Receiver from your Flight Controller.
+
+    2. Wire up the Receiver into an STLink V2 dongle. Find the CLK, DIO, 3v3 and Gnd pads and wire them straight up.
+
+    3. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
+
+        - Make sure Official Releases is active from the horizontal tab.
+        - Make sure you have selected the Released version you want to flash into your TX module.
+
+        <br clear="right" />
+    4. Select the Device Category and Device target matching your hardware.
+
+        - Device Category: `NamimnoRC FLASH 2.4 GHz`
+
+        - Device: `NamimnoRC FLASH 2400 RX`
+
+    5. Set the Flashing Method to `STLink`
+
+        <figure markdown>
+        ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
+        </figure>
+
+    5. Set the [firmware options] for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+
+    6. Click the ++"Build & Flash"++ button.
+
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
+          
+    7. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+
+    8. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+
+        <figure markdonw>
+        ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+        </figure> 
+
+    10. Rewire your receiver to your Flight Controller.
+
+[Lua Running]: ../../assets/images/lua/config-bw.png
+[Lua WiFi]: ../../assets/images/lua/wifi-bw.png
+[Configurator Release]: ../../assets/images/ConfiguratorRelease.png
+[Temp RX]: ../../assets/images/build-temp-rx.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
-[Firmware Options]: ../firmware-options.md
-[wired properly]: #wiring-up-your-receiver
-[Wiring Guide]: #wiring-up-your-receiver
+[Build]: ../../assets/images/Build.png
+[CP210x]: ../../assets/images/device-mngr-cp210x.png
+[Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[Receiver Wiring]: ../receivers/wiring-up.md
+[Unbricking]: ../unbricking.md
+[Configured]: ../receivers/configuring-fc.md
+[firmware options]: ../firmware-options.md
+[Receiver Wiring]: ../wiring-up/#connecting-a-receiver
