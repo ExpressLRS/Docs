@@ -76,7 +76,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device Category: `BETAFPV 2.4 GHz`
 
-        - Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
+        - Device: `BETAFPV Nano 2400 RX` (Nano), `BETAFPV Lite 2400 RX` (Tower & Flattie), `BETAFPV AIO 2400 RX` (AIOs with UART-based Receivers)
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -145,7 +145,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device Category: `BETAFPV 2.4 GHz`
 
-        - Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
+        - Device: `BETAFPV Nano 2400 RX` (Nano), `BETAFPV Lite 2400 RX` (Tower & Flattie)
 
     7. Set the Flashing Method to `UART`
 
@@ -194,7 +194,7 @@ Some of the following procedures will not go through, particularly the via Passt
             
             - Device Category: `BETAFPV 2.4 GHz`
 
-            - Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
+            - Device: `BETAFPV Nano 2400 RX` (Nano), `BETAFPV Lite 2400 RX` (Tower & Flattie), `BETAFPV AIO 2400 RX` (AIOs with UART-based Receivers)
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -336,7 +336,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device Category: `BETAFPV 2.4 GHz`
 
-            - Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
+            - Device: `BETAFPV Nano 2400 RX` (Nano), `BETAFPV Lite 2400 RX` (Tower & Flattie), `BETAFPV AIO 2400 RX` (AIOs with UART-based Receivers)
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -536,7 +536,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device Category: `BETAFPV 2.4 GHz`
 
-            - Device: `BETAFPV Nano 2400 RX`, `BETAFPV Lite 2400 RX` (Tower & Flattie)
+            - Device: `BETAFPV Nano 2400 RX` (Nano), `BETAFPV Lite 2400 RX` (Tower & Flattie), `BETAFPV AIO 2400 RX` (AIOs with UART-based Receivers)
 
         4. Set the Flashing Method to `WiFi`.
 
