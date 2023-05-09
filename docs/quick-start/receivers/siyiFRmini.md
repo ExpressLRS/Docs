@@ -43,9 +43,11 @@ template: main.html
         <br clear="right" />
     4. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `SIYI 2.4 GHz`
+        - Device Category: 
+            - `SIYI 2.4 GHz`
 
-        - Device: `FM30 RX MINI`
+        - Device: 
+            - `FM30 RX MINI`
 
     5. Set the Flashing Method to `STLink`
 
@@ -119,9 +121,11 @@ template: main.html
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `SIYI 2.4 GHz`
+        - Device Category: 
+            - `SIYI 2.4 GHz`
 
-        - Device: `FM30 RX MINI`
+        - Device: 
+            - `FM30 RX MINI`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 

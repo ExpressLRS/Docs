@@ -74,9 +74,12 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Matek 2.4 GHz`
+        - Device Category: 
+            - `Matek 2.4 GHz`
 
-        - Device: `Matek 2400 RX`,`Matek 2400 RX R24D`
+        - Device: 
+            - `Matek 2400 RX`,
+            - `Matek 2400 RX R24D`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -143,9 +146,12 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     6. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Matek 2.4 GHz`
+        - Device Category: 
+            - `Matek 2.4 GHz`
 
-        - Device: `Matek 2400 RX`,`Matek 2400 RX R24D`
+        - Device: 
+            - `Matek 2400 RX`,
+            - `Matek 2400 RX R24D`
 
     7. Set the Flashing Method to `UART`
 
@@ -192,9 +198,12 @@ Some of the following procedures will not go through, particularly the via Passt
 
         2. Select the Device Category and Device target matching your hardware.
             
-            - Device Category: `Matek 2.4 GHz`
+            - Device Category: 
+                - `Matek 2.4 GHz`
 
-            - Device: `Matek 2400 RX`,`Matek 2400 RX R24D`
+            - Device: 
+                - `Matek 2400 RX`,
+                - `Matek 2400 RX R24D`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -334,9 +343,12 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         2. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `Matek 2.4 GHz`
+            - Device Category: 
+                - `Matek 2.4 GHz`
 
-            - Device: `Matek 2400 RX`,`Matek 2400 RX R24D`
+            - Device: 
+                - `Matek 2400 RX`,
+                - `Matek 2400 RX R24D`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -534,9 +546,12 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         3. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `Matek 2.4 GHz`
+            - Device Category: 
+                - `Matek 2.4 GHz`
 
-            - Device: `Matek 2400 RX`,`Matek 2400 RX R24D`
+            - Device: 
+                - `Matek 2400 RX`,
+                - `Matek 2400 RX R24D`
 
         4. Set the Flashing Method to `WiFi`.
 

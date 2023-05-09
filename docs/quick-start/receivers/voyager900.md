@@ -598,9 +598,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `NamimnoRC VOYAGER 900 MHz`
+        - Device Category: 
+            - `NamimnoRC VOYAGER 900 MHz`
 
-        - Device: `NamimnoRC VOYAGER 900 RX`
+        - Device: 
+            - `NamimnoRC VOYAGER 900 RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -649,9 +651,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     4. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `NamimnoRC VOYAGER 900 MHz`
+        - Device Category: 
+            - `NamimnoRC VOYAGER 900 MHz`
 
-        - Device: `NamimnoRC VOYAGER 900 RX`
+        - Device: 
+            - `NamimnoRC VOYAGER 900 RX`
 
     5. Set the Flashing Method to `STLink`
 

@@ -69,9 +69,12 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Foxeer 2.4 GHz`
+        - Device Category: 
+            - `Foxeer 2.4 GHz`
 
-        - Device: `Foxeer Lite 2.4 GHz`, `Foxeer 2.4GHz RX`
+        - Device: 
+            - `Foxeer Lite 2.4 GHz`
+            - `Foxeer 2.4GHz RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -138,9 +141,12 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     6. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Foxeer 2.4 GHz`
+        - Device Category: 
+            - `Foxeer 2.4 GHz`
 
-        - Device: `Foxeer Lite 2.4 GHz`, `Foxeer 2.4GHz RX`
+        - Device: 
+            - `Foxeer Lite 2.4 GHz`
+            - `Foxeer 2.4GHz RX`
 
     7. Set the Flashing Method to `UART`
 
@@ -187,9 +193,12 @@ Some of the following procedures will not go through, particularly the via Passt
 
         2. Select the Device Category and Device target matching your hardware.
             
-            - Device Category: `Foxeer 2.4 GHz`
+            - Device Category: 
+                - `Foxeer 2.4 GHz`
 
-            - Device: `Foxeer Lite 2.4 GHz`, `Foxeer 2.4GHz RX`
+            - Device: 
+                - `Foxeer Lite 2.4 GHz`
+                - `Foxeer 2.4GHz RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -329,9 +338,12 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         2. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `Foxeer 2.4 GHz`
+            - Device Category: 
+                - `Foxeer 2.4 GHz`
 
-            - Device: `Foxeer Lite 2.4 GHz`, `Foxeer 2.4GHz RX`
+            - Device: 
+                - `Foxeer Lite 2.4 GHz`
+                - `Foxeer 2.4GHz RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -529,9 +541,12 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         3. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `Foxeer 2.4 GHz`
+            - Device Category: 
+                - `Foxeer 2.4 GHz`
 
-            - Device: `Foxeer Lite 2.4 GHz`, `Foxeer 2.4GHz RX`
+            - Device: 
+                - `Foxeer Lite 2.4 GHz`
+                - `Foxeer 2.4GHz RX`
 
         4. Set the Flashing Method to `WiFi`.
 

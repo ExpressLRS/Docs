@@ -69,9 +69,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `iFlight 900 MHz`
+        - Device Category: 
+            - `iFlight 900 MHz`
 
-        - Device: `iFlight 900 RX`
+        - Device: 
+            - `iFlight 900 RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -138,9 +140,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     6. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `iFlight 900 MHz`
+        - Device Category: 
+            - `iFlight 900 MHz`
 
-        - Device: `iFlight 900 RX`
+        - Device: 
+            - `iFlight 900 RX`
 
     7. Set the Flashing Method to `UART`
 
@@ -187,9 +191,11 @@ Some of the following procedures will not go through, particularly the via Passt
 
         2. Select the Device Category and Device target matching your hardware.
             
-            - Device Category: `iFlight 900 MHz`
+            - Device Category: 
+                - `iFlight 900 MHz`
 
-            - Device: `iFlight 900 RX`
+            - Device: 
+                - `iFlight 900 RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -329,9 +335,11 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         2. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `iFlight 900 MHz`
+            - Device Category: 
+                - `iFlight 900 MHz`
 
-            - Device: `iFlight 900 RX`
+            - Device: 
+                - `iFlight 900 RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -529,9 +537,11 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         3. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `iFlight 900 MHz`
+            - Device Category: 
+                - `iFlight 900 MHz`
 
-            - Device: `iFlight 900 RX`
+            - Device: 
+                - `iFlight 900 RX`
 
         4. Set the Flashing Method to `WiFi`.
 

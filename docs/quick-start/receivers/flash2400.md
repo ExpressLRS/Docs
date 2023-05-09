@@ -630,9 +630,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `NamimnoRC FLASH 2.4 GHz`
+        - Device Category: 
+            - `NamimnoRC FLASH 2.4 GHz`
 
-        - Device: `NamimnoRC FLASH 2400 RX`
+        - Device: 
+            -`NamimnoRC FLASH 2400 RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -681,9 +683,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     4. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `NamimnoRC FLASH 2.4 GHz`
+        - Device Category: 
+            - `NamimnoRC FLASH 2.4 GHz`
 
-        - Device: `NamimnoRC FLASH 2400 RX`
+        - Device: 
+            - `NamimnoRC FLASH 2400 RX`
 
     5. Set the Flashing Method to `STLink`
 

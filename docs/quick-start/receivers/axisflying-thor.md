@@ -69,9 +69,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `AXIS 2.4GHz`
+        - Device Category: 
+            - `AXIS 2.4GHz`
 
-        - Device: `AXIS THOR 2400RX`
+        - Device: 
+            - `AXIS THOR 2400RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -138,9 +140,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     6. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `AXIS 2.4GHz`
+        - Device Category: 
+            - `AXIS 2.4GHz`
 
-        - Device: `AXIS THOR 2400RX`
+        - Device: 
+            - `AXIS THOR 2400RX`
 
     7. Set the Flashing Method to `UART`
 
@@ -187,9 +191,11 @@ Some of the following procedures will not go through, particularly the via Passt
 
         2. Select the Device Category and Device target matching your hardware.
             
-            - Device Category: `AXIS 2.4GHz`
+            - Device Category: 
+                - `AXIS 2.4GHz`
 
-            - Device: `AXIS THOR 2400RX`
+            - Device: 
+                - `AXIS THOR 2400RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -329,9 +335,11 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         2. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `AXIS 2.4GHz`
+            - Device Category: 
+                - `AXIS 2.4GHz`
 
-            - Device: `AXIS THOR 2400RX`
+            - Device: 
+                - `AXIS THOR 2400RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -450,7 +458,7 @@ Some of the following procedures will not go through, particularly the via Passt
             <figure markdown>
             ![Success WiFi]
             </figure>
-            
+
         13. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
 
             <figure markdonw>
@@ -529,9 +537,11 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         3. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `AXIS 2.4GHz`
+            - Device Category: 
+                - `AXIS 2.4GHz`
 
-            - Device: `AXIS THOR 2400RX`
+            - Device: 
+                - `AXIS THOR 2400RX`
 
         4. Set the Flashing Method to `WiFi`.
 

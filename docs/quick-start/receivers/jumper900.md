@@ -43,9 +43,11 @@ template: main.html
         <br clear="right" />
     5. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Jumper R900`
+        - Device Category: 
+            - `Jumper R900`
 
-        - Device: `Jumper RX R900MINI`
+        - Device: 
+            - `Jumper RX R900MINI`
 
     6. Set the Flashing Method to `STLink`
 
@@ -100,9 +102,11 @@ template: main.html
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Jumper R900`
+        - Device Category: 
+            - `Jumper R900`
 
-        - Device: `Jumper RX R900MINI`
+        - Device: 
+            - `Jumper RX R900MINI`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 

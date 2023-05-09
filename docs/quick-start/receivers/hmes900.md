@@ -69,9 +69,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Happymodel 900 MHz`
+        - Device Category: 
+            - `Happymodel 900 MHz`
 
-        - Device: `HappyModel RX ES900RX`
+        - Device: 
+            - `HappyModel RX ES900RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -139,9 +141,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     6. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Happymodel 900 MHz`
+        - Device Category: 
+            - `Happymodel 900 MHz`
 
-        - Device: `HappyModel RX ES900RX`
+        - Device: 
+            - `HappyModel RX ES900RX`
 
     7. Set the Flashing Method to `UART`
 
@@ -188,9 +192,11 @@ Some of the following procedures will not go through, particularly the via Passt
 
         2. Select the Device Category and Device target matching your hardware.
             
-            - Device Category: `Happymodel 900 MHz`
+            - Device Category: 
+                - `Happymodel 900 MHz`
 
-            - Device: `HappyModel RX ES900RX`
+            - Device: 
+                - `HappyModel RX ES900RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -330,9 +336,11 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         2. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `Happymodel 900 MHz`
+            - Device Category: 
+                - `Happymodel 900 MHz`
 
-            - Device: `HappyModel RX ES900RX`
+            - Device: 
+                - `HappyModel RX ES900RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -530,9 +538,11 @@ Some of the following procedures will not go through, particularly the via Passt
             <br clear="right" />
         3. Select the Device Category and Device target matching your hardware.
 
-            - Device Category: `Happymodel 900 MHz`
+            - Device Category: 
+                - `Happymodel 900 MHz`
 
-            - Device: `HappyModel RX ES900RX`
+            - Device: 
+                - `HappyModel RX ES900RX`
 
         4. Set the Flashing Method to `WiFi`.
 
@@ -588,9 +598,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Happymodel 900 MHz`
+        - Device Category: 
+            - `Happymodel 900 MHz`
 
-        - Device: `HappyModel RX ES915RX`
+        - Device: 
+            - `HappyModel RX ES915RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -639,9 +651,11 @@ Some of the following procedures will not go through, particularly the via Passt
         <br clear="right" />
     4. Select the Device Category and Device target matching your hardware.
 
-        - Device Category: `Happymodel 900 MHz`
+        - Device Category: 
+            - `Happymodel 900 MHz`
 
-        - Device: `HappyModel RX ES915RX`
+        - Device: 
+            - `HappyModel RX ES915RX`
 
     5. Set the Flashing Method to `STLink`
 
