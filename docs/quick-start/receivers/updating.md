@@ -28,7 +28,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
         ![Configurator Release]{ align=right }
 
         - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure you have selected the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
@@ -93,7 +93,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
         ![Configurator Release]{ align=right }
 
         - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure you have selected the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     6. Select the Device Category and Device target matching your hardware.
@@ -137,7 +137,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
             ![Configurator Release]{ align=right }
 
             - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your TX module.
+            - Make sure you have selected the Released version you want to flash into your Receiver.
 
             <br clear="right" />
 
@@ -260,13 +260,13 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
     === "Manual Upload via Local WiFi"
 
         !!! Info "Heads up!"
-            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
+            This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the device is able to connect to said WiFi Network.
 
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
 
             - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your TX module.
+            - Make sure you have selected the Released version you want to flash into your Receiver.
 
             <br clear="right" />
         2. Select the Device Category and Device target matching your hardware.
@@ -388,7 +388,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
     === "Auto Upload"
 
         !!! Info "Heads up!"
-            This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network. 
+            This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the device is able to connect to said WiFi Network. 
             
             MDNS must also be working and that your browser can resolve the address http://elrs_rx.local and it can load the ExpressLRS Web UI from said address.
 
@@ -452,7 +452,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
             ![Configurator Release]{ align=right }
 
             - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your TX module.
+            - Make sure you have selected the Released version you want to flash into your Receiver.
 
             <br clear="right" />
         3. Select the Device Category and Device target matching your hardware.

@@ -19,7 +19,7 @@ There are more `ESP8285` based RXes in the market due to massive shortage of `ST
 ## Wiring up your receiver
 
 !!! attention "Note"
-    There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the Receiver off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
+    There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX Module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
 
 <figure markdown>
 ![NamimnoRC Voyager](../../assets/images/Pinout-Voyager.png)
@@ -235,7 +235,7 @@ Some of the following procedures will not go through, particularly the via Passt
                         - make sure you've already checked the wiring from the [Receiver Wiring] step.
                         - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-                    - If it's already powered and connected or in sync with a Receiver, power Off the Radio & Receiver first then power-cycle (Turn Off, then Turn back On) the Receiver.
+                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
 
                 2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
@@ -248,7 +248,7 @@ Some of the following procedures will not go through, particularly the via Passt
             === "using the ExpressLRS Lua Script" 
 
                 !!! Note
-                    This method only works if your Receiver is already in sync and bound with your Receiver.
+                    This method only works if your Receiver is already in sync and bound with your TX Module.
 
                 1. Press the ++"SYS"++ Key on your Radio.
                     - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
@@ -316,7 +316,7 @@ Some of the following procedures will not go through, particularly the via Passt
     === "Manual Upload via Local WiFi"
 
         !!! Info "Heads up!"
-            This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
+            This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the device is able to connect to said WiFi Network.
 
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
@@ -369,7 +369,7 @@ Some of the following procedures will not go through, particularly the via Passt
                         - make sure you've already checked the wiring from the [Receiver Wiring] step.
                         - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-                    - If it's already powered and connected or in sync with a Receiver, power Off the Radio & Receiver first then power-cycle (Turn Off, then Turn back On) the Receiver.
+                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
 
                 2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
@@ -382,7 +382,7 @@ Some of the following procedures will not go through, particularly the via Passt
             === "using the ExpressLRS Lua Script" 
 
                 !!! Note
-                    This method only works if your Receiver is already in sync and bound with your Receiver.
+                    This method only works if your Receiver is already in sync and bound with your TX Module.
 
                 1. Press the ++"SYS"++ Key on your Radio.
                     - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
@@ -451,7 +451,7 @@ Some of the following procedures will not go through, particularly the via Passt
     === "Auto Upload"
 
         !!! Info "Heads up!"
-            This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network. 
+            This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the device is able to connect to said WiFi Network. 
             
             MDNS must also be working and that your browser can resolve the address http://elrs_rx.local and it can load the ExpressLRS Web UI from said address.
 
@@ -466,7 +466,7 @@ Some of the following procedures will not go through, particularly the via Passt
                         - make sure you've already checked the wiring from the [Receiver Wiring] step.
                         - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-                    - If it's already powered and connected or in sync with a Receiver, power Off the Radio & Receiver first then power-cycle (Turn Off, then Turn back On) the Receiver.
+                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
 
                 2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
@@ -479,7 +479,7 @@ Some of the following procedures will not go through, particularly the via Passt
             === "using the ExpressLRS Lua Script" 
 
                 !!! Note
-                    This method only works if your Receiver is already in sync and bound with your Receiver.
+                    This method only works if your Receiver is already in sync and bound with your TX Module.
 
                 1. Press the ++"SYS"++ Key on your Radio.
                     - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
