@@ -19,7 +19,7 @@ There are more `ESP8285` based RXes in the market due to massive shortage of `ST
 ## Wiring up your receiver
 
 !!! attention "Note"
-    There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
+    There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the Receiver off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
 
 <figure markdown>
 ![NamimnoRC Voyager](../../assets/images/Pinout-Voyager.png)
@@ -64,7 +64,7 @@ Some of the following procedures will not go through, particularly the via Passt
         ![Configurator Release]{ align=right }
 
         - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure you have selected the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
@@ -136,7 +136,7 @@ Some of the following procedures will not go through, particularly the via Passt
         ![Configurator Release]{ align=right }
 
         - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure you have selected the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     6. Select the Device Category and Device target matching your hardware.
@@ -186,7 +186,7 @@ Some of the following procedures will not go through, particularly the via Passt
             ![Configurator Release]{ align=right }
 
             - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your TX module.
+            - Make sure you have selected the Released version you want to flash into your Receiver.
 
             <br clear="right" />
 
@@ -235,7 +235,7 @@ Some of the following procedures will not go through, particularly the via Passt
                         - make sure you've already checked the wiring from the [Receiver Wiring] step.
                         - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
+                    - If it's already powered and connected or in sync with a Receiver, power Off the Radio & Receiver first then power-cycle (Turn Off, then Turn back On) the Receiver.
 
                 2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
@@ -248,7 +248,7 @@ Some of the following procedures will not go through, particularly the via Passt
             === "using the ExpressLRS Lua Script" 
 
                 !!! Note
-                    This method only works if your Receiver is already in sync and bound with your TX Module.
+                    This method only works if your Receiver is already in sync and bound with your Receiver.
 
                 1. Press the ++"SYS"++ Key on your Radio.
                     - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
@@ -316,13 +316,13 @@ Some of the following procedures will not go through, particularly the via Passt
     === "Manual Upload via Local WiFi"
 
         !!! Info "Heads up!"
-            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
+            This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
 
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
 
             - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your TX module.
+            - Make sure you have selected the Released version you want to flash into your Receiver.
 
             <br clear="right" />
         2. Select the Device Category and Device target matching your hardware.
@@ -369,7 +369,7 @@ Some of the following procedures will not go through, particularly the via Passt
                         - make sure you've already checked the wiring from the [Receiver Wiring] step.
                         - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
+                    - If it's already powered and connected or in sync with a Receiver, power Off the Radio & Receiver first then power-cycle (Turn Off, then Turn back On) the Receiver.
 
                 2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
@@ -382,7 +382,7 @@ Some of the following procedures will not go through, particularly the via Passt
             === "using the ExpressLRS Lua Script" 
 
                 !!! Note
-                    This method only works if your Receiver is already in sync and bound with your TX Module.
+                    This method only works if your Receiver is already in sync and bound with your Receiver.
 
                 1. Press the ++"SYS"++ Key on your Radio.
                     - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
@@ -466,7 +466,7 @@ Some of the following procedures will not go through, particularly the via Passt
                         - make sure you've already checked the wiring from the [Receiver Wiring] step.
                         - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
+                    - If it's already powered and connected or in sync with a Receiver, power Off the Radio & Receiver first then power-cycle (Turn Off, then Turn back On) the Receiver.
 
                 2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
@@ -479,7 +479,7 @@ Some of the following procedures will not go through, particularly the via Passt
             === "using the ExpressLRS Lua Script" 
 
                 !!! Note
-                    This method only works if your Receiver is already in sync and bound with your TX Module.
+                    This method only works if your Receiver is already in sync and bound with your Receiver.
 
                 1. Press the ++"SYS"++ Key on your Radio.
                     - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
@@ -515,7 +515,7 @@ Some of the following procedures will not go through, particularly the via Passt
             ![Configurator Release]{ align=right }
 
             - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your TX module.
+            - Make sure you have selected the Released version you want to flash into your Receiver.
 
             <br clear="right" />
         3. Select the Device Category and Device target matching your hardware.
@@ -575,7 +575,7 @@ Some of the following procedures will not go through, particularly the via Passt
         ![Configurator Release]{ align=right }
 
         - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure you have selected the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
@@ -626,7 +626,7 @@ Some of the following procedures will not go through, particularly the via Passt
         ![Configurator Release]{ align=right }
 
         - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure you have selected the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     4. Select the Device Category and Device target matching your hardware.
@@ -641,19 +641,19 @@ Some of the following procedures will not go through, particularly the via Passt
         ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
         </figure>
 
-    5. Set the [firmware options] for your device.
+    6. Set the [firmware options] for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
 
-    6. Click the ++"Build & Flash"++ button.
+    7. Click the ++"Build & Flash"++ button.
 
         <figure markdown>
         ![Build & Flash]
         </figure>
           
-    7. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+    8. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-    8. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+    9. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
 
         <figure markdonw>
         ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
