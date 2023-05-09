@@ -634,7 +634,7 @@ Some of the following procedures will not go through, particularly the via Passt
             - `NamimnoRC FLASH 2.4 GHz`
 
         - Device: 
-            -`NamimnoRC FLASH 2400 RX`
+            - `NamimnoRC FLASH 2400 RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
