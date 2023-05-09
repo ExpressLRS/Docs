@@ -297,6 +297,10 @@ Some of the following procedures will not go through, particularly the via Passt
         9. Once you have connected to the `ExpressLRS RX` Access Point, open up a Browser window and type in the IP Address `10.0.0.1` on the Address Bar and press ++enter++. The ExpressLRS Web UI will load.
         10. Activate the `Update` Tab.
 
+            <figure markdown>
+            ![Web UI Banner]
+            </figure>
+
             - If your Receiver is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
 
             <figure markdown>
@@ -307,6 +311,11 @@ Some of the following procedures will not go through, particularly the via Passt
             - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
         12. Click the ++"Update"++ button to start the Updating procedure.
         13. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+
+            <figure markdown>
+            ![Success WiFi]
+            </figure>
+
         14. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
 
             <figure markdonw>
@@ -432,6 +441,10 @@ Some of the following procedures will not go through, particularly the via Passt
 
         9. Activate the `Update` Tab.
 
+            <figure markdown>
+            ![Web UI Banner]
+            </figure>
+
             - If your Receiver is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
 
             <figure markdown>
@@ -442,6 +455,11 @@ Some of the following procedures will not go through, particularly the via Passt
             - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
         11. Click the ++"Update"++ button to start the Updating procedure.
         12. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+
+            <figure markdown>
+            ![Success WiFi]
+            </figure>
+
         13. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
 
             <figure markdonw>
@@ -668,6 +686,8 @@ Some of the following procedures will not go through, particularly the via Passt
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [CP210x]: ../../assets/images/device-mngr-cp210x.png
+[Web UI Banner]: ../../assets/images/web-update-rx.png
+[Success WiFi]: ../../assets/images/receiverWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
 [Receiver Wiring]: ../receivers/wiring-up.md
 [Unbricking]: ../unbricking.md

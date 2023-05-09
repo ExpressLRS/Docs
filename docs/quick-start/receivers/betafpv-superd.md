@@ -539,6 +539,8 @@ Some of the following procedures will not go through, particularly the via Passt
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [CP210x]: ../../assets/images/device-mngr-cp210x.png
+[Web UI Banner]: ../../assets/images/web-update-rx.png
+[Success WiFi]: ../../assets/images/receiverWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
 [Receiver Wiring]: ../receivers/wiring-up.md
 [Unbricking]: ../unbricking.md
