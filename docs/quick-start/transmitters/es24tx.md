@@ -8,180 +8,417 @@ template: main.html
     This guide applies to all of the following HappyModel TX modules: ES24TX, ES24TX Lite, ES24TX Iron Man, ES24TX Slim Pro and ES24TX Pro Micro. Any module with "Pro" in the name uses the `_Pro_Series` target.
 
 !!! danger "Advisory"
-    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware you will first need to flash it to version 2.5.2 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
+    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.2, then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware via WiFi.
 
     Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
 
-    You can update straight to 3.2.0 without repartitioner or going to 2.5.2 first if flashing via UART.
+    Updating to 3.x via UART or ETX Passthrough doesn't require 2.5.2 firmware or the Repartitioner.
 
-## Flashing via WiFi
+## Flashing/Updating your TX Module Firmware
 
-- Targets:
-    - `HappyModel_ES24TX_2400_TX_via_WIFI`
-    - `HM_ES24TX_Pro_Series_2400_TX_via_WIFI`
+=== "via WiFi"
 
-- Device Category: 
-    - `Happymodel 2.4 GHz`
+    <figure markdown>
+    ![via WiFi](../../assets/images/Method_TX_WiFi.png)
+    </figure>
 
-- Device:
-    - `HappyModel ES24TX 2400 TX` for ES24TX (non-Pro), ES24TX Lite, ES24TX Slim
-    - `HM ES24TX Pro Series 2400 TX` for ES24TX Pro & Slim Pro
+    === "Manual Upload via AP"
 
-<figure markdown>
-![via WiFi](../../assets/images/Method_TX_WiFi.png)
-<figcaption>Flashing via WiFi</figcaption>
-</figure>
+        !!! Info "Heads up!"
+            This option is only possible if you haven't previously flashed or configured your TX Module with your Home WiFi SSID and Password or it's unable to connect to said WiFi Network because the router is Off or unreachable.
 
-!!! attention
-    The methods below apply if you've already updated your Tx modules to 2.x. For modules still in firmwares pre 2.x, you should use [1.x WiFi flashing method](https://www.expresslrs.org/1.0/quick-start/tx-es24tx/) to update to 2.x. Or update to 2.x via USB instead.
+        1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+            ![Configurator Release]{ align=right }
 
-### Method 1
+            - Make sure Official Releases is active from the horizontal tab.
+            - Make sure you have selected the Released version you want to flash into your TX module.
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+            <br clear="right" />
 
-<figure markdown>
-![Build]
-</figure>
+        2. Select the Device Category and Device target matching your hardware.
 
-Once it's done, it should open the Target folder for you where the `HappyModel_ES24TX_2400_TX-<version>.bin` or `HM_ES24TX_Pro_Series_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+            - Device Category: 
+                - `Happymodel 2.4 GHz`
 
-The next steps will require the [ExpressLRS Lua script] (right-click, save as). Download the ExpressLRS Lua script and save it to your Radio's `/Scripts/Tools` folder. Insert/attach your module into your module bay and make sure it's not loose and there's a proper connection with the radio (see the [Radio Preparation] page). Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`.
+            - Device:
+                - `HappyModel ES24TX 2400 TX` for ES24TX (non-Pro), ES24TX Lite, ES24TX Slim
+                - `HM ES24TX Pro Series 2400 TX` for ES24TX Pro & Slim Pro
 
-<figure markdown>
-![Lua Script](../../assets/images/lua1.jpg)
-</figure>
+        3. Set the Flashing Method to `WiFi`.
 
-<figure markdown>
-![Lua Script T16](../../assets/images/lua2.jpg)
-</figure>
+            <figure markdown>
+            ![via WiFi](../../assets/images/Method_TX_WiFi.png)
+            </figure>
 
-If the script is stuck at `Loading...`, then there's a chance your module is still in v1.x firmware, your External RF module is not set to CRSF or your module is not well-connected to the module bay pins.
+        4. Set the [firmware options](../firmware-options.md) for your device.
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+        5. Click the ++"Build"++ button.
+            
+            <figure markdown>
+            ![Build]
+            </figure>
+            
+        6. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
 
-<figure markdown>
-![Lua3](../../assets/images/lua3.jpg)
-</figure>
+            ![Temp TX]{ align=right }
 
-Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**. Press OK once more to activate the WiFi on the Tx Module. Connect to the Access Point the module will create called `ExpressLRS TX`, with the password being `expresslrs`.
+            - You can use any of these files.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
 
-<figure markdown>
-![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
-</figure>
+            <br clear="right" />
+            
+        7. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
+            - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+            - Consult your Radio User's Manual on how to access the System Menu.
 
-Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `HappyModel_ES24TX_2400_TX-<version>.bin` or `HM_ES24TX_Pro_Series_2400_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
+        8. Scroll down and select `ExpressLRS` Lua Script.
 
-Once the file is uploaded, a pop-up confirmation will show up. Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+            <figure markdown>
+            ![Lua Script]
+            </figure>
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
+            - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
 
-!!! Info "Update for version 2.0"
-    Once you have updated to firmware version 2.0 or newer, the Web Update page on the Hotspot will get a few updates of its own. It will get the Update progress bar, and a Popup will be shown for Success or Error messages. Additionally, you can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the two methods below.
+        9. Press ++enter++ to Load it.
 
-<figure markdown>
-![JoinNetwork](../../assets/images/web-joinnetwork.png)
-</figure>
+            <figure markdown>
+            ![Lua Running]
+            </figure>
 
-### Method 2
+            - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+        10. Scroll down and select `Wifi Connectivity` and press ++enter++.
+        11. Select `Enable WiFi` and press ++enter++.
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+            <figure markdown>
+            ![Lua WiFi]
+            </figure>
 
-<figure markdown>
-![Build]
-</figure>
+        12. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
+            - If the Script stopped and is showing a Syntax Error, do not worry. The module is still in WiFi mode. The Syntax Error could be because you're on an older radio, older EdgeTX/OpenTX firmware or both. It could also be due to the fact your TX module is on an earlier firmware version and you're using a more recent Lua Script.
 
-Once it's done, it should open the Target folder for you where the `HappyModel_ES24TX_2400_TX-<version>.bin` or `HM_ES24TX_Pro_Series_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+        13. Using a WiFi-capable device such as your smartphone or laptop, scan for the `ExpressLRS TX` Access Point. Connect to this Access Point.
 
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the local network automatically.
+            ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png){ align=right }
 
-Using your browser, navigate to http://elrs_tx.local and the WiFi Update page should show up. Scroll down towards the Firmware Update section, as shown below:
+            - If your TX Module is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
+            - `expresslrs` is the Password for this Access Point.
 
-<figure markdown>
-![Firmware Update](../../assets/images/web-firmwareupdate.png)
-</figure>
+            ??? question "Where's the Access Point?"
+                If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also try putting the devices closer together.
+                
+                If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
 
-Drag-and-drop the `HappyModel_ES24TX_2400_TX-<version>.bin` or `HM_ES24TX_Pro_Series_2400_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and the module will reboot (~1min).
+            <br clear="right" />
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
+        14. Once you have connected to the `ExpressLRS TX` Access Point, open up a Browser window and type in the IP Address `10.0.0.1` on the Address Bar and press ++enter++. The ExpressLRS Web UI will load.
+        15. Activate the `Update` Tab.
 
-### Method 3
+            <figure markdown>
+            ![TX update tab]
+            </figure>
 
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the network automatically.
+            - If your TX Module is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
 
-Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options]. Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
+            <figure markdown>
+            ![Old File Upload]
+            </figure>
 
-<figure markdown>
-![Build & Flash]
-</figure>
+        16. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
+        17. Click the ++"Update"++ button to start the Updating procedure.
+        18. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
 
-<figure markdown>
-![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
-</figure>
+            <figure markdown>
+            ![Success WiFi]
+            </figure>
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script.
+        19. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
+        20. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
-## Flashing via USB/UART
+    === "Manual Upload via Local WiFi"
 
-- Targets:
-    - `HappyModel_ES24TX_2400_TX_via_UART`
-    - `HM_ES24TX_Pro_Series_2400_TX_via_UART`
+        !!! Info "Heads up!"
+            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
 
-- Device Category: 
-    - `Happymodel 2.4 GHz`
+        1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+            ![Configurator Release]{ align=right }
 
-- Device:
-    - `HappyModel ES24TX 2400 TX` for ES24TX (non-Pro), ES24TX Lite, ES24TX Slim
-    - `HM ES24TX Pro Series 2400 TX` for ES24TX Pro & Slim Pro
+            - Make sure Official Releases is active from the horizontal tab.
+            - Make sure you have selected the Released version you want to flash into your TX module.
 
-<figure markdown>
-![via UART](../../assets/images/Method_TX_UART.png)
-<figcaption>Flashing via UART</figcaption>
-</figure>
+            <br clear="right" />
+        2. Select the Device Category and Device target matching your hardware.
 
-This method requires you to move two jumpers or dipswitches into specific pins or positions in the module board. See the following images for the jumper or dipswitch location and which pin/switches should be toggled for this method to work.
+            - Device Category: 
+                - `Happymodel 2.4 GHz`
 
-<figure markdown>
-![JumperFS](../../assets/images/jumper-es24Micro.png)
-<figcaption>ES24TX Full Size, Non Pro</figcaption>
-</figure>
+            - Device:
+                - `HappyModel ES24TX 2400 TX` for ES24TX (non-Pro), ES24TX Lite, ES24TX Slim
+                - `HM ES24TX Pro Series 2400 TX` for ES24TX Pro & Slim Pro
 
-<figure markdown>
-![JumperLite](../../assets/images/jumper-es24Lite.png)
-<figcaption>ES24TX Lite, for Jumper T-Lite</figcaption>
-</figure>
+        3. Set the Flashing Method to `WiFi`.
 
-<figure markdown>
-![DipswitchSlim](../../assets/images/dipswitch-es24slim.png)
-<figcaption>ES24TX Slim, Iron Man</figcaption>
-</figure>
+            <figure markdown>
+            ![via WiFi](../../assets/images/Method_TX_WiFi.png)
+            </figure>
 
-<figure markdown>
-![DipswitchSlimPro](../../assets/images/dipswitch-es24slimPro.png)
-<figcaption>ES24TX Slim Pro</figcaption>
-</figure>
+        4. Set the [firmware options](../firmware-options.md) for your device.
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+        5. Click the ++"Build"++ button.
+            
+            <figure markdown>
+            ![Build]
+            </figure>
+            
+        6. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
+            ![Temp TX]{ align=right }
 
-<figure markdown>
-![DipswitchPro](../../assets/images/dipswitch-Pro.png)
-<figcaption>ES24TX Pro 1W</figcaption>
-</figure>
+            - You can use any of these files.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
 
-Attach your USB cable to the module and your computer. [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) will have to be installed for this to work properly (Windows). Make sure your computer recognizes the module as a CP210x USB-to-UART Bridge device (check Device Manager; or the Actions section of the ExpressLRS Configurator should show another Com Port with Silabs CP210x designation), otherwise, this method will not work.
+            <br clear="right" />
+        7. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
+            - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+            - Consult your Radio User's Manual on how to access the System Menu.
 
-!!! tip "Important"
-    Check Device Manager on your Windows system before proceeding. Ensure the correct drivers are installed. Some Linux distros might also need drivers. The drivers can be downloaded [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
+        8. Scroll down and select `ExpressLRS` Lua Script.
 
-<figure markdown>
-![CP210x Drivers](../../assets/images/CP210xDriverDownload.png)
-</figure>
+            <figure markdown>
+            ![Lua Script]
+            </figure>
 
-Using the ExpressLRS Configurator with the correct Target selected and [Firmware Options] set, hit **Build & Flash**. Wait for the process to finish, and you should be greeted with the "Success" message.
+            - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
 
-<figure markdown>
-![Build & Flash]
-</figure>
+        9. Press ++enter++ to Load it.
 
-Assemble the module back together (ensure the module PCB is not loose from its mounting points) and attach it to your radio module bay and verify the version and hash in the main screen of the ExpressLRS Lua script.
+            <figure markdown>
+            ![Lua Running]
+            </figure>
 
-[ExpressLRS Lua script]: https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true
-[Build]: ../../assets/images/Build.png
+            - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+        10. Scroll down and select `Wifi Connectivity` and press ++enter++.
+        11. Select `Enable WiFi` and press ++enter++.
+            
+            <figure markdown>
+            ![Lua WiFi]
+            </figure>
+
+        12. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
+            - If the Script stopped and is showing a Syntax Error, do not worry. The module is still in WiFi mode. The Syntax Error could be because you're on an older radio, older EdgeTX/OpenTX firmware or both. It could also be due to the fact your TX module is on an earlier firmware version and you're using a more recent Lua Script.
+
+        13. With your module now in WiFi Mode and it was able to connect to your Local WiFi Network, open a Browser window on any WiFi-capable device that is also connected to the same Local WiFi Network. Type in the Address http://elrs_tx.local on your browser's Address Bar. The ExpressLRS Web UI should load.
+            - If your browser cannot resolve this address and it cannot load the ExpressLRS Web UI, this means that MDNS is not working on your device or network.
+
+            ??? tip "MDNS is not working!"
+                === "The `arp` Command"
+
+                    1. Open up a Command Prompt window on your computer.
+                    2. Execute the command `arp -a` which will list all the devices in the Network.
+                    3. Use each of the IP Addresses marked as `Dynamic` as URL into your Browser until you get to the ExpressLRS Web UI.
+
+                === "Router DHCP List"
+                    1. Log in into your Router dashboard.
+                    2. Check the DHCP List and look for the "elrs" device.
+                    3. Take note of the IP Address given by your router.
+                    4. Use this IP address into your Browser as the URL.
+
+        14. Activate the `Update` Tab.
+
+            <figure markdown>
+            ![TX update tab]
+            </figure>
+
+            - If your TX Module is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
+
+            <figure markdown>
+            ![Old File Upload]
+            </figure>
+
+        15. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
+        16. Click the ++"Update"++ button to start the Updating procedure.
+        17. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+
+            <figure markdown>
+            ![Success WiFi]
+            </figure>
+
+        18. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
+        19. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
+
+    === "Auto Upload"
+
+        !!! Info "Heads up!"
+            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network. 
+            
+            MDNS must also be working and that your browser can resolve the address http://elrs_tx.local and it can load the ExpressLRS Web UI from said address.
+
+        1. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
+            - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+            - Consult your Radio User's Manual on how to access the System Menu.
+
+        2. Scroll down and select `ExpressLRS` Lua Script.
+
+            <figure markdown>
+            ![Lua Script]
+            </figure>
+
+            - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+
+        3. Press ++enter++ to Load it.
+
+            <figure markdown>
+            ![Lua Running]
+            </figure>
+
+            - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+        4. Scroll down and select `Wifi Connectivity` and press ++enter++.
+        5. Select `Enable WiFi` and press ++enter++.
+            
+            <figure markdown>
+            ![Lua WiFi]
+            </figure>
+            
+        6. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
+            - If the Script stopped and is showing a Syntax Error, do not worry. The module is still in WiFi mode. The Syntax Error could be because you're on an older radio, older EdgeTX/OpenTX firmware or both. It could also be due to the fact your TX module is on an earlier firmware version and you're using a more recent Lua Script.
+        7. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+            ![Configurator Release]{ align=right }
+
+            - Make sure Official Releases is active from the horizontal tab.
+            - Make sure you have selected the Released version you want to flash into your TX module.
+
+            <br clear="right" />
+        8. Select the Device Category and Device target matching your hardware.
+
+            - Device Category: 
+                - `Happymodel 2.4 GHz`
+
+            - Device:
+                - `HappyModel ES24TX 2400 TX` for ES24TX (non-Pro), ES24TX Lite, ES24TX Slim
+                - `HM ES24TX Pro Series 2400 TX` for ES24TX Pro & Slim Pro
+
+        9. Set the Flashing Method to `WiFi`.
+
+            <figure markdown>
+            ![via WiFi](../../assets/images/Method_TX_WiFi.png)
+            </figure>
+
+        10. Set the [firmware options](../firmware-options.md) for your device.
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+        11. Click the ++"Build & Flash"++ button.
+
+            <figure markdown>
+            ![Build & Flash]
+            </figure>
+        
+        12. Wait for the upload to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+
+            <figure markdown>
+            ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
+            </figure>
+
+        13. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
+        14. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
+
+=== "via UART"
+
+    <figure markdown>
+    ![via UART](../../assets/images/Method_TX_UART.png)
+    </figure>
+
+    1. Connect your TX Module to your Computer via a USB Data Cable. Best if you remove it from your Radio.
+        - For these TX Modules, you will have to take off the front cover to get access to the USB Port and/or dipswitches/jumper blocks.
+    2. Determine whether your TX Module is being detected properly as a USB-to-UART Device.
+
+        ![CP210x]{ align=right }
+
+        - Windows Users can check via Device Manager, Ports device grouping.
+        - Drivers will be needed if the TX Module is not being detected properly. This is indicated by a Yellow Caution Triangle :material-alert-outline: in Device Manager.
+        - You can download the drivers from here: [CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+            - Windows Users should download the `CP210x Windows Drivers` package for easier installation. Unzip/Extract the contents of the package and run the setup wizard.
+
+        <br clear="right" />
+    3. These TX Modules have switches to change how the USB port interacts with the different components in the module. Make sure to set it in the position for "TX Module Flashing via UART".
+
+        <figure markdown>
+        ![JumperFS](../../assets/images/jumper-es24Micro.png)
+        <figcaption>ES24TX Full Size, Non Pro</figcaption>
+        </figure>
+
+        <figure markdown>
+        ![JumperLite](../../assets/images/jumper-es24Lite.png)
+        <figcaption>ES24TX Lite, for Jumper T-Lite</figcaption>
+        </figure>
+
+        <figure markdown>
+        ![DipswitchSlim](../../assets/images/dipswitch-es24slim.png)
+        <figcaption>ES24TX Slim, Iron Man</figcaption>
+        </figure>
+
+        <figure markdown>
+        ![DipswitchSlimPro](../../assets/images/dipswitch-es24slimPro.png)
+        <figcaption>ES24TX Slim Pro</figcaption>
+        </figure>
+
+        <figure markdown>
+        ![DipswitchPro](../../assets/images/dipswitch-Pro.png)
+        <figcaption>ES24TX Pro 1W</figcaption>
+        </figure>
+
+    4. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
+
+        - Make sure Official Releases is active from the horizontal tab.
+        - Make sure you have selected the Released version you want to flash into your TX module.
+
+        <br clear="right" />
+    5. Select the Device Category and Device target matching your hardware.
+
+        - Device Category: 
+            - `Happymodel 2.4 GHz`
+
+        - Device:
+            - `HappyModel ES24TX 2400 TX` for ES24TX (non-Pro), ES24TX Lite, ES24TX Slim
+            - `HM ES24TX Pro Series 2400 TX` for ES24TX Pro & Slim Pro
+
+    6. Set the Flashing Method to `UART`
+
+        <figure markdown>
+        ![via UART](../../assets/images/Method_TX_UART.png)
+        </figure>
+
+    7. Set the [firmware options](../firmware-options.md) for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+    8. Click the ++"Build & Flash"++ button.
+
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
+        
+    9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+    10. Unplug your module from USB. Return any dipswitches or jumper blocks to their "Normal Operation" position.
+    11. Reattach the TX module cover, making sure no wires are being pinched and the antenna pigtail is connected properly.
+    12. Reconnect your TX module into your Radio's External Module bay.
+    13. Using the ExpressLRS Lua Script from the Tools Menu, check  if the firmware version got updated.
+
+[Lua Script]: ../../assets/images/lua1.jpg
+[Lua Running]: ../../assets/images/lua/config-bw.png
+[Lua WiFi]: ../../assets/images/lua/wifi-bw.png
+[Configurator Release]: ../../assets/images/ConfiguratorRelease.png
+[Temp TX]: ../../assets/images/build-temp-tx.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
-[Firmware Options]: ../firmware-options.md
-[Radio Preparation]: tx-prep.md
+[Build]: ../../assets/images/Build.png
+[CP210x]: ../../assets/images/device-mngr-cp210x.png
+[TX update tab]: ../../assets/images/web-update-tx.png
+[Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
+[Old File Upload]: ../../assets/images/web-firmwareupdate.png

@@ -56,8 +56,15 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
         7. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
             - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
             - Consult your Radio User's Manual on how to access the System Menu.
+
         8. Scroll down and select `ExpressLRS` Lua Script.
+
+            <figure markdown>
+            ![Lua Script]
+            </figure>
+
             - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+
         9. Press ++enter++ to Load it.
 
             <figure markdown>
@@ -92,6 +99,10 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
         14. Once you have connected to the `ExpressLRS TX` Access Point, open up a Browser window and type in the IP Address `10.0.0.1` on the Address Bar and press ++enter++. The ExpressLRS Web UI will load.
         15. Activate the `Update` Tab.
 
+            <figure markdown>
+            ![TX update tab]
+            </figure>
+
             - If your TX Module is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
 
             <figure markdown>
@@ -102,6 +113,11 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
             - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
         17. Click the ++"Update"++ button to start the Updating procedure.
         18. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+
+            <figure markdown>
+            ![Success WiFi]
+            </figure>
+
         19. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
         20. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
@@ -145,8 +161,15 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
         7. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
             - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
             - Consult your Radio User's Manual on how to access the System Menu.
+
         8. Scroll down and select `ExpressLRS` Lua Script.
+
+            <figure markdown>
+            ![Lua Script]
+            </figure>
+
             - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+
         9. Press ++enter++ to Load it.
 
             <figure markdown>
@@ -182,6 +205,10 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
 
         14. Activate the `Update` Tab.
 
+            <figure markdown>
+            ![TX update tab]
+            </figure>
+
             - If your TX Module is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
 
             <figure markdown>
@@ -192,6 +219,11 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
             - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
         16. Click the ++"Update"++ button to start the Updating procedure.
         17. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+
+            <figure markdown>
+            ![Success WiFi]
+            </figure>
+
         18. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
         19. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
@@ -205,8 +237,15 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
         1. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
             - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
             - Consult your Radio User's Manual on how to access the System Menu.
+
         2. Scroll down and select `ExpressLRS` Lua Script.
+
+            <figure markdown>
+            ![Lua Script]
+            </figure>
+
             - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+
         3. Press ++enter++ to Load it.
 
             <figure markdown>
@@ -256,7 +295,6 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
 
         13. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
         14. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
-
 
 === "via UART"
 
@@ -326,6 +364,7 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
     - `TX12 MK2`: Update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
     - `Boxer`: The factory EdgeTX firmware should be based off an early EdgeTX 2.8.0 and wouldn't need an update.
     - `BetaFPV Lite Radio 3 Pro`: Update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
+    - `Jumper T-Pro`: Update it to at least EdgeTX 2.7.1 (a55aff0) for full EdgeTX support.
     - `Jumper T-Lite V2`: Update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
 
     ??? Tip "Simplest EdgeTX Updating Procedure"
@@ -346,6 +385,10 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
     Also make sure you have an internal ELRS module on your Radio. The following steps only applies to handsets with ExpressLRS-specific internal modules. There are stickers marked with "ELRS" attached into your radio packaging or boxes, as well as on the JR module bays indicating the type of internal rf module the radio have.
 
     The current Model on the radio should be using the [Internal ExpressLRS Module](../transmitters/tx-prep.md#rf-protocol). You can test this by loading the ExpressLRS Lua Script from the Tools Menu.
+
+    <figure markdown>
+    ![Lua Running]
+    </figure>
 
     There's one more setting you want to make sure is set properly before you proceed.
 
@@ -417,8 +460,9 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
         
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
     10. Unplug your Radio from USB.
-    1. Using the ExpressLRS Lua Script from the Tools Menu, check  if the firmware version got updated.
+    11. Using the ExpressLRS Lua Script from the Tools Menu, check if the firmware version got updated.
 
+[Lua Script]: ../../assets/images/lua1.jpg
 [Lua Running]: ../../assets/images/lua/config-bw.png
 [Lua WiFi]: ../../assets/images/lua/wifi-bw.png
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
@@ -426,4 +470,6 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
 [Build & Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [CP210x]: ../../assets/images/device-mngr-cp210x.png
+[TX update tab]: ../../assets/images/web-update-tx.png
+[Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png

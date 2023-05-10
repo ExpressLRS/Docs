@@ -4,141 +4,126 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-## Flashing via WiFi
+## Flashing/Updating the TX Module Firmware
 
-- Target: `NamimnoRC_Voyager_900_TX_via_WiFi`
+=== "via Stock_BL"
 
-- Device Category: `NamimnoRC VOYAGER 900 MHz`
+    <figure markdown>
+    ![via BL](../../assets/images/Method_TX_StockBL.png)
+    </figure>
 
-- Device: `NamimnoRC VOYAGER 900 TX`
+    1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
 
-<figure markdown>
-![via WiFi](../../assets/images/Method_TX_WiFi-stm.png)
-<figcaption>Flashing via WiFi</figcaption>
-</figure>
+        - Make sure Official Releases is active from the horizontal tab.
+        - Make sure you have selected the Released version you want to flash into your TX module.
 
-#### Method 1
+        <br clear="right" />
+    2. Select the Device Category and Device target matching your hardware.
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+        - Device Category: 
+            - `NamimnoRC VOYAGER 900 MHz`
 
-<figure markdown>
-![Build]
-</figure>
+        - Device: 
+            - `NamimnoRC VOYAGER 900 TX`
 
-Once it's done, it should open the Target folder for you where the `firmware.elrs` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+    3. Set the Flashing Method to `Stock_BL`
 
-These Tx Modules are STM32-based so they require a separate ESP "backpack" device for Wifi Flashing/Updating. 
+        <figure markdown>
+        ![via BL](../../assets/images/Method_TX_StockBL.png)
+        </figure>
 
-Attach the module to your JR Bays and power it up. Connect to the `ESP Wifi Manager` Hotspot that the device will activate. Once connected, navigate to http://elrs_tx.local/.
+    4. Set the [firmware options](../firmware-options.md) for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
 
-<figure markdown>
-![Wifi Manager](../../assets/images/WifiManager.png)
-</figure>
+    5. Click the ++"Build"++ button.
 
-Press `Configure WiFi` and set your home network SSID and password. This will enable your Tx Module to connect to your local home network.
+        <figure markdown>
+        ![Build]
+        </figure>
+        
+    6. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-On your browser, refresh the http://elrs_tx.local/ and scroll towards the STM32 Firmware Update section, as shown below:
+    7. A Temp folder will open up with the **firmware.elrs** file. Copy-paste the firmware.elrs file into your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access).
 
-<figure markdown>
-![STM32 Firmware Update](../../assets/images/STM32-updater.png)
-</figure>
+    8. On your radio, press the ++"SYS"++ key to open the System Menu. Using the ++"Page"++ key/s, navigate to the SD-HC Card page, scroll-down and open the `FIRMWARE` folder where you can find the **firmware.elrs** file.
 
-Drag-and-drop the `firmware.elrs` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the Choose File button. You can also upload the `firmware.bin` file but change the offset to _0x4000_. Once the correct file is selected, click `Upload`` and Flash` STM32`. Wait for the process to complete, and the module will reboot (~1min). Using the [ExpressLRS Lua] script, verify that you have the latest version.
+    9. Highlight the file and press-hold the ++"Enter"++ button and select "Flash External ELRS". Wait for the firmware to be written.
 
-#### Method 2
+    10. With the ExpressLRS Lua Script in the Tools page, verify if the firmware version has been updated.
 
-These Tx Modules are STM32-based so they require a separate ESP "backpack" device for Wifi Flashing/Updating. 
+=== "via STLink"
 
-Attach the module to your JR Bays and power it up. Connect to the `ESP Wifi Manager` Hotspot that the device will activate. Once connected, navigate to http://elrs_tx.local/.
+    <figure markdown>
+    ![via STLink](../../assets/images/Method_TX_STLink.png)
+    </figure>
 
-<figure markdown>
-![Wifi Manager](../../assets/images/WifiManager.png)
-</figure>
+    !!! attention 
+        Only use this method if the firmware has been corrupted.
 
-Press `Configure WiFi` and set your home network SSID and password. This will enable your Tx Module to connect to your local home network.
+    1. Disassemble your TX Module to get access to the mainboard.
 
-Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options]. Click **Build and Flash** and wait for the compile process to complete. You should see a section as pictured below and the Success message marking the update process complete.
+        <figure markdown>
+            ![NamimnoRC Voyager Backside](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/namimnoback.jpg?raw=true){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
+        </figure>
 
-<figure markdown>
-![Build & Flash]
-</figure>
+        <figure markdown>
+            ![NamimnoRC Voyager cable](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/cable.jpg?raw=true){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
+        </figure>
 
-<figure markdown>
-![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
-</figure>
+    2. Connect your STLink V2 dongle to the pads shown in the image below.
 
-Using the [ExpressLRS Lua] script, verify that you have the latest version.
+        <figure markdown>
+        ![NamimnoRC Pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/namimnopinout.png?raw=true){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
+        </figure>
 
-## Flashing via OpenTX Radio
+    3. Connect your STLink V2 dongle to your Computer's USB Port. Make sure it is being detected properly.
 
-- Target: `NamimnoRC_Voyager_900_TX_via_WiFi`
+    4. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
 
-- Device Category: `NamimnoRC VOYAGER 900 MHz`
+        - Make sure Official Releases is active from the horizontal tab.
+        - Make sure you have selected the Released version you want to flash into your TX module.
 
-- Device: `NamimnoRC VOYAGER 900 TX`
+        <br clear="right" />
+    5. Select the Device Category and Device target matching your hardware.
 
-<figure markdown>
-![via WiFi](../../assets/images/Method_TX_WiFi-stm.png)
-<figcaption>Flashing via WiFi</figcaption>
-</figure>
+        - Device Category: 
+            - `NamimnoRC VOYAGER 900 MHz`
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+        - Device: 
+            - `NamimnoRC VOYAGER 900 TX`
 
-<figure markdown>
-![Build]
-</figure>
+    6. Set the Flashing Method to `STLink`
 
-Once it's done, it should open the Target folder for you where the `NamimnoRC_Voyager_900_TX-<version>.elrs` file is. Do not close this window so you can easily locate the correct file to copy to your Radio SD Card.
+        <figure markdown>
+        ![via STLink](../../assets/images/Method_TX_STLink.png)
+        </figure>
 
-Copy the `NamimnoRC_Voyager_900_TX-<version>.elrs` file into your radio's SD Card `/FIRMWARE` folder.
+    7. Set the [firmware options](../firmware-options.md) for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
 
-Once copied, navigate to the `/FIRMWARE` Folder on your Radio and select/highlight the `NamimnoRC_Voyager_900_TX-<version>.elrs` file, long-press the Enter key and select `Flash external ELRS`. Flashing will then commence and after a few seconds, the radio should show a `Flash Successful` message and you're done!
+    8. Click the ++"Build & Flash"++ button.
 
-Using the [ExpressLRS Lua] script, verify that you have the latest version.
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
+        
+    9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-## Flashing via STLink
+    10. Disconnect the STLink V2 dongle from the TX Module PCB and Reassemble the TX Module.
+    11. Reattach your TX Module into your Radio and, using the ExpressLRS Lua Script, verify if the firmware version has been updated.
 
-- Target: `NamimnoRC_Voyager_900_TX_via_STLINK`
-
-- Device Category: `NamimnoRC VOYAGER 900 MHz`
-
-- Device: `NamimnoRC VOYAGER 900 TX`
-
-<figure markdown>
-![via STLink](../../assets/images/Method_TX_STLink.png)
-<figcaption>Flashing via STLink</figcaption>
-</figure>
-
-!!! attention 
-    Only use this method if the firmware has been corrupted.
-
-Begin by disassembling the module by unscrewing the 4 screws at the rear of the module with a 1.5mm hex wrench. Carefully separate the parts of the module and detach the cable from the main PCB.
-
-<figure markdown>
-<img class="center-img" src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/namimnoback.jpg?raw=true" width="30%">
-</figure>
-
-<figure markdown>
-<img class="center-img" src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/cable.jpg?raw=true" width="30%">
-</figure>
-
-Wire your `STLink v2` to the module's pins as shown below:
-
-<figure markdown>
-<img class="center-img" src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/namimnopinout.png?raw=true" width="40%">
-</figure>
-
-With the module connected shown above, and your configuration set, hit **Build & Flash** in the ExpressLRS Configurator and wait for the process to finish. Once that's done, and the Success Message showing, you can now remove/unsolder the STLink, re-assemble the module, and put it into your Radio's Module Bay. If the Radio has CRSF selected, the light should turn green meaning the module has communication with your radio.
-
-<figure markdown>
-![Build & Flash]
-</figure>
-
-Verification can be done using the [ExpressLRS Lua] script. It should show the Version Number and Hash at the bottom, as well as the options you can set. If it's showing "Loading" at the top, check if External Module is set to CRSF for the selected model in your radio, and that the internal RF module is set to off. See the [General Troubleshooting] section for other ways to determine whether your module is flashed and ready for flying.
-
-[Build]: ../../assets/images/Build.png
+[Lua Script]: ../../assets/images/lua1.jpg
+[Lua Running]: ../../assets/images/lua/config-bw.png
+[Lua WiFi]: ../../assets/images/lua/wifi-bw.png
+[Configurator Release]: ../../assets/images/ConfiguratorRelease.png
+[Temp TX]: ../../assets/images/build-temp-tx.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
-[Firmware Options]: ../firmware-options.md
-[Radio Preparation]: tx-prep.md
-[ExpressLRS Lua]: lua-howto.md
-[General Troubleshooting]: ../troubleshooting.md#general-troubleshooting
+[Build]: ../../assets/images/Build.png
+[CP210x]: ../../assets/images/device-mngr-cp210x.png
+[TX update tab]: ../../assets/images/web-update-tx.png
+[Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
+[Old File Upload]: ../../assets/images/web-firmwareupdate.png
