@@ -24,7 +24,7 @@ Both really. LQI is most important because you can't fly if you're not getting p
 
 This is the lowest theoretical RSSI value that can be distinguished by the radio receiver. It is displayed next to the packet rate in the ELRS.lua script, as different packet rates and frequency bands have different sensitivity limits. Lower rates are more sensitive, -123dBm for 25Hz 915MHz up to -105dBm for 500Hz 2400MHz. This gives you the limit you know you can't fly below. 
 
-A sensible warning value is 5-10dBm higher than the sensitivity limit shown in the [RF Mode Indexes](https://github.com/ExpressLRS/Docs/edit/master/docs/info/signal-health.md#rf-mode-indexes-rfmd) (e.g. 250Hz=-108dBm, so -103dBm to -98dBm for the alarm).
+A sensible warning value is 5-10dBm higher than the sensitivity limit shown in the [RF Mode Indexes](#rf-mode-indexes-rfmd) (e.g. 250Hz=-108dBm, so -103dBm to -98dBm for the alarm).
 
 ## RSSI Channel
 
@@ -33,8 +33,8 @@ RSSI and LQI are included already in the protocol used to communicate to the fli
 ## Available RSSI OSD Fields
 
 * **RSSI dBm** - This is the true RSSI value we've talked about here, and is available on Betaflight after 4.1 (?) and iNav after 2.6 (?)
-* **Link Quality** - This is LQI discussed here, and has the same version requirements. Betaflight and iNav (LQ TYPE2 option) display add the RF Mode to this as well, e.g. `7:100` means mode 7 = 500Hz and 100% LQI.
-* **RSSI Value** - Or sometimes just **RSSI**. This is the old undefined units of Signal Strength value that everyone is used to with no idea what value is good or what value is too bad. What value you'll actually see here varies, even on ExpressLRS, and is covered in the [RSSI Value OSD field](#RSSI-Value-OSD-field) section. It is not recommended to use this field unless you have to (e.g. DJI).
+* **Link Quality** - This is LQI discussed here, and has the same version requirements. Betaflight and iNav (LQ TYPE2 option) display add the RF Mode to this as well, e.g. `7:100` means mode 7 = 250Hz and 100% LQI.
+* **RSSI Value** - Or sometimes just **RSSI**. This is the old undefined units of Signal Strength value that everyone is used to with no idea what value is good or what value is too bad. What value you'll actually see here varies, even on ExpressLRS, and is covered in the [RSSI Value OSD field](#rssi-value-osd-field) section. It is not recommended to use this field unless you have to (e.g. DJI).
 
 ## RSSI Value OSD field
 
