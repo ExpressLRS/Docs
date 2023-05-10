@@ -329,7 +329,7 @@ template: main.html
     </figure>
 
     1. Connect your TX Module to your Computer via a USB Data Cable. Best if you remove it from your Radio.
-        - Some TX Modules would require some disassembly before you can get to the USB port.
+
     2. Determine whether your TX Module is being detected properly as a USB-to-UART Device.
 
         ![CP210x]{ align=right }

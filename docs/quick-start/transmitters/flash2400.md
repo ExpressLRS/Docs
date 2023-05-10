@@ -6,7 +6,7 @@ template: main.html
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 </figure>
 
-## Flashing/Updating the NamimnoRC Flash OLED Firmware
+## Flashing/Updating the Flash OLED Firmware
 
 !!! danger "Advisory"
     If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.2, then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware via WiFi.
@@ -388,7 +388,7 @@ template: main.html
     11. Reconnect your TX module into your Radio's External Module bay.
     12. Using the ExpressLRS Lua Script from the Tools Menu, check  if the firmware version got updated.
 
-## Flashing/Updating the NamimnoRC Flash Non-OLED Firmware
+## Flashing/Updating the Flash Non-OLED Firmware
 
 === "via Stock_BL"
 
@@ -442,6 +442,9 @@ template: main.html
     <figure markdown>
     ![via STLink](../../assets/images/Method_TX_STLink.png)
     </figure>
+
+    !!! attention 
+        Only use this method if the firmware has been corrupted.
 
     1. Disassemble your TX Module to get access to the mainboard.
 

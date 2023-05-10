@@ -472,7 +472,7 @@ template: main.html
 === "via UART Recovery"
 
     <figure markdown>
-    ![via UART](../../assets/images/Method_TX_UART.png)
+    ![via UART](../../assets/images/Method_intTX_UART.png)
     </figure>
 
     1. Disassemble the radio. You will need a small Philips screwdriver for this. 10 small Philips screws keep both halves of the radio together.
@@ -516,7 +516,7 @@ template: main.html
     7. Set the Flashing Method to `UART`
 
         <figure markdown>
-        ![via UART](../../assets/images/Method_TX_UART.png)
+        ![via UART](../../assets/images/Method_intTX_UART.png)
         </figure>
 
     8. Set the [firmware options](../firmware-options.md) for your device.

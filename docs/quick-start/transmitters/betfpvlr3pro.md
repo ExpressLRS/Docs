@@ -361,7 +361,7 @@ template: main.html
     The current Model on the radio should be using the [Internal ExpressLRS Module](../transmitters/tx-prep.md#rf-protocol). You can test this by loading the ExpressLRS Lua Script from the Tools Menu.
 
     <figure markdown>
-    [Lua Running]
+    ![Lua Running]
     </figure>
 
     There's one more setting you want to make sure is set properly before you proceed.
