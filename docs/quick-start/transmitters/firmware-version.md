@@ -28,9 +28,14 @@ There's three methods to determine what firmware version you currently have on y
 
     3. Press ++enter++ Key to activate the Script.
 
+        <figure markdown >
+        ![Lua Running]
+        </figure> 
+
         - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
 
     4. Scroll to the bottom of the page and you should see the Current Version flashed into your TX module.
+        - Shows both have 3.2.1 Firmware Version with the Git Hash 8dbbdb.
 
         <figure markdown>
         ![ExpressLRS Version Info Color](../../assets/images/LuaColor-version_info.jpg)

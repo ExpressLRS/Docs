@@ -39,11 +39,12 @@ After both of these, you can then proceed with the following:
 
 ### How to Use or Navigate through the Guide
 
-This User Guide is organized to cater to both new and seasoned users of the system. The navigation at the side of the Quick Start section is arranged starting from getting the ExpressLRS Configurator installed, an Explanation of the Options available, Steps concerning the Radio and TX module, FC and Receiver setup, a "Before you Fly" page and a Troubleshooting page:
+![Guide Structure](../assets/images/PageOrder.png){ align=right }
 
-<figure markdown>
-![Guide Structure](../assets/images/PageOrder.png)
-</figure>
+<br />
+This User Guide is organized to cater to both new and seasoned users of the system. The navigation menu on the left is arranged starting from getting the ExpressLRS Configurator installed, an Explanation of the Options available, Steps concerning the Radio and TX module, FC and Receiver setup, a "Before you Fly" page and a Troubleshooting page.
+
+<br clear="right" />
 
 You can also use the Footer Navigation shown below to go through these steps:
 
@@ -51,13 +52,31 @@ You can also use the Footer Navigation shown below to go through these steps:
 ![Footer Navigation](../assets/images/FooterNav.png)
 </figure>
 
-For a specific hardware flashing guide, the pages are either in the Flashing Receivers or Flashing Transmitters sections organized semi-alphabetically. You can also use the Search Bar for any topic or info you are after:
+For a specific hardware flashing guide, the pages are either in the Updating Receivers or Updating Transmitters sections organized semi-alphabetically. 
+
+<figure markdown>
+![Menu Updating Receivers](../assets/images/menusectionUpdatingReceivers.png)
+</figure>
+
+<figure markdown>
+![Menu Updating Transmitters](../assets/images/menusectionUpdatingTransmitters.png)
+</figure>
+
+You can also use the Search Bar for any topic or info you are after:
 
 <figure markdown>
 ![Search Bar](../assets/images/SearchBar.png)
 </figure>
 
 Longer pages have a **Table of Contents** menu found on the right hand side of the page.
+
+![Search Bar](../assets/images/website-tabbed.png){ align=right }
+
+<br />
+
+Each Updating Method available for a device can be accessed by clicking on their respective Tab.
+
+<br clear="right">
 
 We hope these pages will help you get started with ExpressLRS and experience one of the best and most innovative RC links in the hobby.
 

@@ -109,7 +109,6 @@ This section is currently only available for the RadioMaster Ranger module.
     </figure>
 
 ## How to get to the Web UI
-
 === "Receivers"
    
     1. Put your Receiver into WiFi Mode.
@@ -145,17 +144,35 @@ This section is currently only available for the RadioMaster Ranger module.
                 - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
                 - Consult your Radio User's Manual on how to access the System Menu.
             3. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
+
+                <figure markdown>
+                ![Lua Script]
+                </figure>
+
                 - If the script is nowhere to be found, download it from [this page](./transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
             4. Press ++enter++ to Load it.
+
+                <figure markdown >
+                ![Lua Running]
+                </figure> 
+
                 - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](./transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
                 - there should be a C in the top right corner of the Lua Script indicating TX Module and Receiver is Connected.
             5. Scroll down and select `Wifi Connectivity` and press ++enter++.
             6. Select `Enable RX WiFi` and press ++enter++.
+
+                <figure markdown>
+                ![Lua WiFi]
+                </figure>
+
             7. The `WiFi Running` screen will briefly show up. Your Receiver is now in WiFi mode as indicated by the rapidly blinking LED.
 
-            <figure markdown>
-            ![RX WiFi](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
-            </figure>
+                <figure markdown>
+                ![RX WiFi](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                </figure>
+
+                !!! info "Note"
+                    It is normal that the receiver will disconnect from the TX Module once it is WiFi Mode. You will hear your radio announce "Telemetry Lost" if you have the sound pack on your Radio SD Card.
 
     4. Scan for the `ExpressLRS RX` Access Point. 
         ![WiFi Hotspot](../assets/images/WifiHotspot.png){ align=right }
@@ -176,7 +193,7 @@ This section is currently only available for the RadioMaster Ranger module.
         - http://elrs_rx.local - If you have previously set your Home WiFi SSID and Password into your Receiver when you flashed it.
 
             !!! Note
-                Some computers and networks cannot resolve this address if MDNS is not working. 
+                If your browser cannot resolve this address, chances are MDNS is not set up and working on your computer or network.
 
             ??? tip "Use the IP Address instead!"
                 === "The `arp` Command"
@@ -201,11 +218,26 @@ This section is currently only available for the RadioMaster Ranger module.
                 - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
                 - Consult your Radio User's Manual on how to access the System Menu.
             2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
+
+                <figure markdown>
+                ![Lua Script]
+                </figure>
+
                 - If the script is nowhere to be found, download it from [this page](./transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
             3. Press ++enter++ to Load it.
+
+                <figure markdown >
+                ![Lua Running]
+                </figure> 
+
                 - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](./transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
             4. Scroll down and select `Wifi Connectivity` and press ++enter++.
             5. Select `Enable WiFi` and press ++enter++.
+
+                <figure markdown>
+                ![Lua WiFi]
+                </figure>
+
             6. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
                 - If the Script stopped and is showing a Syntax Error, do not worry. The module is still in WiFi mode. The Syntax Error could be because you're on an older radio, older EdgeTX/OpenTX firmware or both. It could also be due to the fact your TX module is on an earlier firmware version and you're using a more recent Lua Script.
 
@@ -234,7 +266,7 @@ This section is currently only available for the RadioMaster Ranger module.
         - http://elrs_tx.local - If you have previously set your Home WiFi SSID and Password into your TX Module when you flashed it.
 
             !!! Note
-                Some computers and networks cannot resolve this address if MDNS is not working. 
+                If your browser cannot resolve this address, chances are MDNS is not set up and working on your computer or network.
 
             ??? tip "Use the IP Address instead!"
                 === "The `arp` Command"
@@ -249,3 +281,6 @@ This section is currently only available for the RadioMaster Ranger module.
                     3. Take note of the IP Address given by your router.
                     4. Use this IP address into your Browser as the URL.
 
+[Lua Script]: ../../assets/images/lua1.jpg
+[Lua Running]: ../../assets/images/lua/config-bw.png
+[Lua WiFi]: ../../assets/images/lua/wifi-bw.png

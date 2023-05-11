@@ -128,6 +128,10 @@ It is still recommended that you update your gear to the latest firmware version
 
     3. Press ++enter++ Key to activate the Script.
 
+        <figure markdown >
+        ![Lua Running]
+        </figure> 
+
         - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
 
     4. Scroll to the bottom of the page and select `Other Devices`.
@@ -137,8 +141,12 @@ It is still recommended that you update your gear to the latest firmware version
     6. Select the Receiver Device and Press ++enter++ to query its parameters.
 
     7. The image below shows the Receiver Firmware Version info.
+        - Shows the Happymodel EP Receiver has 3.2.1 Firmware Version with the Git Hash 8dbbdb.
 
-        -insert image of Lua Script showing the version line-
+        <figure markdown>
+        ![ExpressLRS RX Version Info Color](../../assets/images/LuaColor-RXversion_info.jpg)
+        <figcaption>Receiver Version Line on Colored Screen Radio</figcaption>
+        </figure>
 
 <hr />
 
