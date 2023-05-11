@@ -76,7 +76,7 @@ template: main.html
     11. Disconnect the STLink V2 dongle from the TX Module PCB and Reassemble the TX Module.
     12. Reattach your TX Module into your Radio and, using the [ExpressLRS Lua Script], verify if the firmware version has been updated.
 
-=== "via Stock_BL (Updates ONLY)"
+=== "via Stock_BL"
 
     <figure markdown>
     ![via BL](../../assets/images/Method_TX_StockBL.png)
@@ -84,6 +84,8 @@ template: main.html
 
     !!! info
         This method requires OpenTX 2.3.12 or newer; or EdgeTX 2.4.0 or newer.
+
+        This method can only be used to UPDATE the firmware on an already-converted Ghost Module
 
     1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
@@ -121,15 +123,20 @@ template: main.html
 
     7. A Temp folder will open up with the **firmware.elrs** file. Copy-paste the firmware.elrs file into your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access).
 
-    8. On your radio, press the ++"SYS"++ key to open the System Menu. Using the ++"Page"++ key/s, navigate to the SD-HC Card page, scroll-down and open the `FIRMWARE` folder where you can find the **firmware.elrs** file.
+    8. On your radio, to open the System Menu. 
 
-    9. Highlight the file and press-hold the ++"Enter"++ button and select "Flash External ELRS". Wait for the firmware to be written.
+        - On newer radios, you can press the ++"SYS"++ key to open the System Menu
+        - On older radios, or radios that only have a menu key, you will need to long-press the ++context-menu++ key to open the System Menu
+
+    9. Using the ++"Page"++ key/s, navigate to the SD-HC Card page, scroll-down and open the `FIRMWARE` folder where you can find the **firmware.elrs** file.
+
+    10. Highlight the file and press-hold the ++"Enter"++ button and select "Flash External ELRS". Wait for the firmware to be written.
 
         ??? tip "No Sync"
             - Make sure you have updated the OpenTX/EdgeTX firmware of your radio to a newer version
             - Make sure the current model selected on the radio is set up for ExpressLRS Use. See the [Radio Preparation] guide.
 
-    10. With the [ExpressLRS Lua Script] in the Tools page, verify if the firmware version has been updated.
+    11. With the [ExpressLRS Lua Script] in the Tools page, verify if the firmware version has been updated.
 
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
