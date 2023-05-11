@@ -110,7 +110,7 @@ There's three methods to determine what firmware version you currently have on y
         - http://elrs_tx.local - If you have previously set your Home WiFi SSID and Password into your TX Module when you flashed it.
 
             !!! Note
-                Some computers and networks cannot resolve this address if MDNS is not working. 
+                If your browser cannot resolve this address, chances are MDNS is not set up and working on your computer or network.
 
             ??? tip "Use the IP Address instead!"
                 === "The `arp` Command"
