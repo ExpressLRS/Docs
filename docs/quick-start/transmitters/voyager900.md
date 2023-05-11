@@ -51,7 +51,7 @@ template: main.html
 
     9. Highlight the file and press-hold the ++"Enter"++ button and select "Flash External ELRS". Wait for the firmware to be written.
 
-    10. With the ExpressLRS Lua Script in the Tools page, verify if the firmware version has been updated.
+    10. With the [ExpressLRS Lua Script] in the Tools page, verify if the firmware version has been updated.
 
 === "via STLink"
 
@@ -114,7 +114,7 @@ template: main.html
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
     10. Disconnect the STLink V2 dongle from the TX Module PCB and Reassemble the TX Module.
-    11. Reattach your TX Module into your Radio and, using the ExpressLRS Lua Script, verify if the firmware version has been updated.
+    11. Reattach your TX Module into your Radio and, using the [ExpressLRS Lua Script], verify if the firmware version has been updated.
 
 [Lua Script]: ../../assets/images/lua1.jpg
 [Lua Running]: ../../assets/images/lua/config-bw.png
@@ -127,3 +127,4 @@ template: main.html
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[ExpressLRS Lua Script]: lua-howto.md
