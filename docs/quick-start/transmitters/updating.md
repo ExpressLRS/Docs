@@ -344,7 +344,7 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
     10. Unplug your module from USB. Return any dipswitches or jumper blocks to their "Normal Operation" position.
     11. Reconnect your TX module into your Radio's External Module bay.
-    12. Using the ExpressLRS Lua Script from the Tools Menu, check  if the firmware version got updated.
+    12. Using the [ExpressLRS Lua Script] from the Tools Menu, check  if the firmware version got updated.
 
 === "via ETX Passthrough"
 
@@ -460,7 +460,7 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
         
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
     10. Unplug your Radio from USB.
-    11. Using the ExpressLRS Lua Script from the Tools Menu, check if the firmware version got updated.
+    11. Using the [ExpressLRS Lua Script] from the Tools Menu, check if the firmware version got updated.
 
 [Lua Script]: ../../assets/images/lua1.jpg
 [Lua Running]: ../../assets/images/lua/config-bw.png
@@ -473,3 +473,4 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script
