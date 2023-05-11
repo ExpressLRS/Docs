@@ -16,14 +16,17 @@ One important thing to keep in mind is that Aux1 should be used as your Arming s
 !!! warning "WARNING" 
     Please make sure your **ARM mode is on the AUX1 channel, and the armed state is set ~2000.**
 
+<figure markdown>
 ![Modes](../assets/images/Modes.jpg)
-
+</figure>
 
 ## RSSI and Link Quality
 
 To get RSSI and Link Quality displayed in the OSD, set RSSI Channel to "Disabled" in the Receiver tab of the Betaflight/iNav Configurator, and RSSI_ADC should be disabled on the Configuration tab. Both of these are the default. On the OSD menu, use the **Link Quality** and **RSSI dBm value** elements (not "RSSI Value"). iNav have put this in the `CRSF RX Statistics` section.
 
+<figure markdown>
 ![OSD](../assets/images/OSD.jpg)
+</figure>
 
 If you wish to enable the rssi dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm).
 
@@ -111,26 +114,33 @@ The first values (including RSSI and link quality) should always be updated (fla
 
 It should look like this (and if it does not there is something wrong with your setup):
 
+<figure markdown>
 ![Link data update speed](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/link.gif)
+</figure>
 
 The remaining values are updated at a different rate (depending on refresh rate and tlm ratio). So if you use 50 Hz and 1:64 it will happen really slow, and the update takes multiple seconds for each sensor:
 
+<figure markdown>
 ![Slow update rate](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/slow.gif)
+</figure>
 
 If you use 200Hz and 1:2 tlm ratio the stars will not even blink because the update happens so fast:
 
+<figure markdown>
 ![Fast update rate](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/fast.gif)
+</figure>
 
 ## MSP
 
 To configure betaflight from your transmitter it's possible to use the betaflight lua scripts. 
 This requires the telemetry feature enabled for the RX+TX. If the telemetry page of OpenTx does not show regular updates for all sensors the LUA script will also not work.
 
-Mavlink is **not supported** and currently **not planned** to be added.
-
 To get a responsive UI configure ExpressLRS for fast data transfer so make sure to use something like `200Hz/500Hz` with `1:2` tlm and a serial baud rate of `400000`. Currently MSP is limited to `50Hz` on `115200` Baud and does not work with `500 Hz` refresh rate. The initial VTX tables download does take long - but is cached after that. 
 
 If you get a "retrying" message while saving changes it means that the lua script did not receive a response fast enough. But the change usually still goes through so try reloading the page to check if the change was saved. With the recommended settings this does not happen but with slower settings it could happen.
 
+## MAVLINK
+
+See [Airport](https://github.com/ExpressLRS/ExpressLRS/pull/1904).
 
 **Done. Go Fly!**
