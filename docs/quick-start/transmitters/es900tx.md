@@ -383,7 +383,7 @@ template: main.html
     10. Unplug your module from USB. Return the dipswitches to the "Normal Operation" position (1 & 2 is On, 3,4,5,6 are Off).
     11. Reassemble the TX Module, making sure no wires are being pinched and the antenna pigtail is connected properly.
     12. Reconnect your TX module into your Radio's External Module bay.
-    13. Using the ExpressLRS Lua Script from the Tools Menu, check  if the firmware version got updated.
+    13. Using the [ExpressLRS Lua Script] from the Tools Menu, check  if the firmware version got updated.
 
 ## Flashing/Updating the ES915TX/ES868TX Firmware
 
@@ -428,11 +428,20 @@ template: main.html
 
     7. A Temp folder will open up with the **firmware.elrs** file. Copy-paste the firmware.elrs file into your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access).
 
-    8. On your radio, press the ++"SYS"++ key to open the System Menu. Using the ++"Page"++ key/s, navigate to the SD-HC Card page, scroll-down and open the `FIRMWARE` folder where you can find the **firmware.elrs** file.
+    8. On your radio, open the System Menu. 
 
-    9. Highlight the file and press-hold the ++"Enter"++ button and select "Flash External ELRS". Wait for the firmware to be written.
+        - On newer radios, you can press the ++"SYS"++ key to open the System Menu
+        - On older radios, or radios that only have a menu key, you will need to long-press the ++context-menu++ key to open the System Menu
 
-    10. With the ExpressLRS Lua Script in the Tools page, verify if the firmware version has been updated.
+    9. Using the ++"Page"++ key/s, navigate to the SD-HC Card page, scroll-down and open the `FIRMWARE` folder where you can find the **firmware.elrs** file.
+
+    10. Highlight the file and press-hold the ++"Enter"++ button and select "Flash External ELRS". Wait for the firmware to be written.
+
+        ??? tip "No Sync"
+            - Make sure you have updated the OpenTX/EdgeTX firmware of your radio to a newer version
+            - Make sure the current model selected on the radio is set up for ExpressLRS Use. See the [Radio Preparation] guide.
+
+    11. With the [ExpressLRS Lua Script] in the Tools page, verify if the firmware version has been updated.
 
 === "via STLink"
 
@@ -484,7 +493,7 @@ template: main.html
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
     10. Disconnect the STLink V2 dongle from the TX Module PCB and Reassemble the TX Module.
-    11. Reattach your TX Module into your Radio and, using the ExpressLRS Lua Script, verify if the firmware version has been updated.
+    11. Reattach your TX Module into your Radio and, using the [ExpressLRS Lua Script], verify if the firmware version has been updated.
 
 [Lua Script]: ../../assets/images/lua1.jpg
 [Lua Running]: ../../assets/images/lua/config-bw.png
@@ -497,3 +506,4 @@ template: main.html
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script

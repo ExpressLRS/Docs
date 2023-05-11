@@ -394,7 +394,7 @@ template: main.html
     8. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
     9. Unplug your module from USB.
     10. Reassemble the TX module into the Radio properly.
-    11. Using the ExpressLRS Lua Script from the Tools Menu, check  if the firmware version got updated.
+    11. Using the [ExpressLRS Lua Script] from the Tools Menu, check  if the firmware version got updated.
 
 [Lua Script]: ../../assets/images/lua1.jpg
 [Lua Running]: ../../assets/images/lua/config-bw.png
@@ -407,3 +407,4 @@ template: main.html
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script

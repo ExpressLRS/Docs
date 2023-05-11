@@ -388,7 +388,7 @@ template: main.html
     10. Unplug your module from USB. Return the dipswitches at the back into the "Normal Operation" position.
         - Switches 1,2,5,6,7 should be Off; 3 & 4 should be On. Applicable to the Micro-size module only.
     11. Reconnect your TX module into your Radio's External Module bay.
-    12. Using the ExpressLRS Lua Script from the Tools Menu, check  if the firmware version got updated.
+    12. Using the [ExpressLRS Lua Script] from the Tools Menu, check  if the firmware version got updated.
 
 ## Cannot flash?
 
@@ -409,3 +409,4 @@ If you've followed any of the steps above and still cannot get your devices flas
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script

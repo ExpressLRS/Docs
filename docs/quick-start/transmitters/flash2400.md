@@ -431,7 +431,7 @@ template: main.html
 
     7. A Temp folder will open up with the **firmware.elrs** file. Copy-paste the firmware.elrs file into your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access).
 
-    8. On your radio, to open the System Menu. 
+    8. On your radio, open the System Menu. 
 
         - On newer radios, you can press the ++"SYS"++ key to open the System Menu
         - On older radios, or radios that only have a menu key, you will need to long-press the ++context-menu++ key to open the System Menu
@@ -520,4 +520,4 @@ template: main.html
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
-[ExpressLRS Lua Script]: lua-howto.md
+[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script

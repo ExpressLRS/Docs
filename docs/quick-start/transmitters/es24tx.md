@@ -409,7 +409,7 @@ template: main.html
     10. Unplug your module from USB. Return any dipswitches or jumper blocks to their "Normal Operation" position.
     11. Reattach the TX module cover, making sure no wires are being pinched and the antenna pigtail is connected properly.
     12. Reconnect your TX module into your Radio's External Module bay.
-    13. Using the ExpressLRS Lua Script from the Tools Menu, check  if the firmware version got updated.
+    13. Using the [ExpressLRS Lua Script] from the Tools Menu, check  if the firmware version got updated.
 
 [Lua Script]: ../../assets/images/lua1.jpg
 [Lua Running]: ../../assets/images/lua/config-bw.png
@@ -422,3 +422,4 @@ template: main.html
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script

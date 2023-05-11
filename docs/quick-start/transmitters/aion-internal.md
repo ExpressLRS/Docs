@@ -467,7 +467,7 @@ template: main.html
         - If you didn't get it right and it fails, don't worry. Just retry and it should go through.
 
     11. Unplug your Radio from USB.
-    12. Using the ExpressLRS Lua Script from the Tools Menu, check if the firmware version got updated, or you have it recovered.
+    12. Using the [ExpressLRS Lua Script] from the Tools Menu, check if the firmware version got updated, or you have it recovered.
 
 === "via UART Recovery"
 
@@ -540,7 +540,7 @@ template: main.html
         ![tPro Connection](../../assets/images/tproUART-AllSet.jpg)
         </figure>
 
-    11. Reassemble the radio (but do not put in the screws yet) and verify you have a working module once again by running the Lua script.
+    11. Reassemble the radio (but do not put in the screws yet) and verify you have a working module once again by running the [ExpressLRS Lua script].
     12. Once you've verified you have your Internal ExpressLRS module back, replace the screws and tighten things up. Chug one down and celebrate!
 
 [Lua Script]: ../../assets/images/lua1.jpg
@@ -554,3 +554,4 @@ template: main.html
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[ExpressLRS Lua Script]: lua-howto.md

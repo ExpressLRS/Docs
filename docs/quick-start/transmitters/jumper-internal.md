@@ -434,7 +434,7 @@ template: main.html
         
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
     10. Unplug your Radio from USB.
-    11. Using the ExpressLRS Lua Script from the Tools Menu, check if the firmware version got updated.
+    11. Using the [ExpressLRS Lua Script] from the Tools Menu, check if the firmware version got updated.
 
         <figure markdown>
         ![TLite Lua Running](../../assets/images/tliteV2-Lua.jpg)
@@ -451,3 +451,4 @@ template: main.html
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script
