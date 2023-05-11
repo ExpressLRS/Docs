@@ -20,20 +20,21 @@ So you got your ExpressLRS Hardware, be it a new Radio Handset with Internal Exp
 Here's our recommendation:
 
 === "Transmitter Side"
-    1. [Setup your Radio](../quick-start/transmitters/tx-prep.md)
-    2. [Check the TX Firmware Version](../quick-start/transmitters/firmware-version.md)
-    3. [Update the TX Module](../quick-start/transmitters/updating.md)
+    1. [Setup your Radio](transmitters/tx-prep.md)
+    2. [Check the TX Firmware Version](transmitters/firmware-version.md)
+    3. [Update the TX Module](transmitters/updating.md)
 
 === "Receiver Side"
-    1. [Connect your Receiver](../quick-start/receivers/wiring-up.md)
-    2. [Configure your Flight Controller](../quick-start/receivers/configuring-fc.md)
-    3. [Check the Receiver Firmware Version](../quick-start/receivers/firmware-version.md)
-    4. [Update the Receiver Firmware](../quick-start/receivers/updating.md)
+    1. [Wire your Receiver](receivers/wiring-up.md)
+    2. [Configure your Flight Controller](receivers/configuring-fc.md)
+    3. [Check the Receiver Firmware Version](receivers/firmware-version.md)
+    4. [Update the Receiver Firmware](receivers/updating.md)
 
 After both of these, you can then proceed with the following:
 
-- [Bind](../quick-start/binding.md)
-- Do the [Bench Test](../quick-start/pre-1stflight.md#bench-test)
+- [Bind](binding.md)
+- Do the [Bench Test](pre-1stflight.md#bench-test)
+- Other [Radio and Flight Controller Configuration](pre-1stflight.md)
 - Fly!
 
 ### How to Use or Navigate through the Guide

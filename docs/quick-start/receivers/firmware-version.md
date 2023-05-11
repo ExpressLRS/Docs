@@ -166,9 +166,13 @@ For the latest ExpressLRS firmware version, check the [Releases page in Git Hub]
 
 === "I have an old version"
 
-    See the [next page](../receivers/updating.md) for the typical updating procedure or use the links below to find the updating instructions specific to your Receiver.
+    See the [next page](../receivers/updating.md) for the typical updating procedure or expand the `Updating Receivers` section of the Menu on the left like shown below.
 
-    -links-
+    <figure markdown>
+    ![Menu Updating Receivers](../../assets/images/menusectionUpdatingReceivers.png)
+    </figure>
+
+    You can also use the Search Bar on top of this page to search for the specific Updating/Flashing Guide for your Receiver.
 
 === "I have a recent one"
 
