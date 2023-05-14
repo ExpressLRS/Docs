@@ -173,6 +173,9 @@ This section is currently only available for the RadioMaster Ranger module.
 
                 We recommend disconnecting from the network first, or try a different device instead, e.g. smartphone or tablet.
 
+            !!! Note
+                On some devices a network login prompt might pop up. Clicking this will often show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ manually in your browser instead.
+
         - http://elrs_rx.local - If you have previously set your Home WiFi SSID and Password into your Receiver when you flashed it.
 
             !!! Note
@@ -230,6 +233,9 @@ This section is currently only available for the RadioMaster Ranger module.
                 This IP address is also often being used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
 
                 We recommend disconnecting from the network first, or try a different device instead, e.g. smartphone or tablet.
+
+            !!! Note
+                On some devices a network login prompt might pop up. Clicking this will often show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ manually in your browser instead.
 
         - http://elrs_tx.local - If you have previously set your Home WiFi SSID and Password into your TX Module when you flashed it.
 
