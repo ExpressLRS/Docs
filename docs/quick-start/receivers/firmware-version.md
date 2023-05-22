@@ -73,7 +73,7 @@ It is still recommended that you update your gear to the latest firmware version
         - `expresslrs` is the Password for this Access Point.
 
         ??? question "Where's the Access Point?"
-            If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also try putting the devices closer together.
+            If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also, try putting the devices closer together.
                 
             If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
 
@@ -83,9 +83,9 @@ It is still recommended that you update your gear to the latest firmware version
         - http://10.0.0.1/ -If you have connected to the `ExpressLRS RX` Access Point
             
             !!! Note
-                This IP address is also often being used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
+                This IP address is also often used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
 
-                We recommend disconnecting from the network first, or try a different device instead, e.g. smartphone or tablet.
+                We recommend disconnecting from the network first or trying a different device instead, e.g. smartphone or tablet.
         
         - http://elrs_rx.local - If you have previously set your Home WiFi SSID and Password into your Receiver when you flashed it.
 
@@ -97,13 +97,13 @@ It is still recommended that you update your gear to the latest firmware version
 
                     1. Open up a Command Prompt window on your computer.
                     2. Execute the command `arp -a` which will list all the devices in the Network.
-                    3. Use each of the IP Addresses marked as `Dynamic` as URL into your Browser until you get to the ExpressLRS Web UI.
+                    3. Try each of the IP Addresses marked as `Dynamic` as a URL in your Browser until you get to the ExpressLRS Web UI.
 
                 === "Router DHCP List"
-                    1. Log in into your Router dashboard.
+                    1. Log in to your Router dashboard.
                     2. Check the DHCP List and look for the "elrs" device.
                     3. Take note of the IP Address given by your router.
-                    4. Use this IP address into your Browser as the URL.
+                    4. Use this IP address in your Browser as the URL.
 
     4. The Banner of the Web UI should tell you the firmware version flashed into your Receiver.
 
@@ -136,7 +136,7 @@ It is still recommended that you update your gear to the latest firmware version
 
     4. Scroll to the bottom of the page and select `Other Devices`.
 
-    5. Press ++enter++ Key to open the Folder.
+    5. Press the ++enter++ Key to open the Folder.
 
     6. Select the Receiver Device and Press ++enter++ to query its parameters.
 
@@ -174,7 +174,7 @@ For the latest ExpressLRS firmware version, check the [Releases page in Git Hub]
 
 === "I have an old version"
 
-    See the [next page](../receivers/updating.md) for the typical updating procedure or expand the `Updating Receivers` section of the Menu on the left like shown below.
+    See the [next page](../receivers/updating.md) for the typical updating procedure or expand the `Updating Receivers` section of the Menu on the left shown below.
 
     <figure markdown>
     ![Menu Updating Receivers](../../assets/images/menusectionUpdatingReceivers.png)

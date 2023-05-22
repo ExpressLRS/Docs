@@ -21,7 +21,7 @@ Insert or attach your External ExpressLRS Transmitter Module into your Radio mod
 
 ## Internal ExpressLRS Modules
 
-Make sure you do have an Internal ExpressLRS Modules on your shiny new radio. The following handsets come in both ELRS (ExpressLRS) or 4-in-1 variants; with some coming in with a third (CC2500). Only the ELRS variant works with ExpressLRS. The others will not work as they have a different Hardware incompatible with ExpressLRS.
+Make sure you do have an Internal ExpressLRS Module on your shiny new radio. The following handsets come in both ELRS (ExpressLRS) or 4-in-1 variants; with some coming in with a third (CC2500). Only the ELRS variant works with ExpressLRS. The others will not work as they have a different Hardware incompatible with ExpressLRS.
 
 - RadioMaster TX16S MKII (ELRS, 4-in-1 CC2500) - ExpressLRS variant will have an ELRS sticker on the box.
 - RadioMaster TX12 MKII (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and an ELRS sticker in the JR module bay.
@@ -38,7 +38,7 @@ Make sure you do have an Internal ExpressLRS Modules on your shiny new radio. Th
 
 ## Radio Operating System
 
-ExpressLRS **requires** CRSFShot or Mixer Sync to ensure full support for high packet rates. You should have [OpenTX 2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12) or newer; or [EdgeTX 2.4.0](https://github.com/EdgeTX/edgetx/releases/tag/v2.4.0) or newer; These versions have full CRSFShot/Mixer Sync support.
+ExpressLRS **requires** CRSFShot or Mixer Sync to ensure full support for high packet rates. You should have [OpenTX 2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12) or newer, or [EdgeTX 2.4.0](https://github.com/EdgeTX/edgetx/releases/tag/v2.4.0) or newer; These versions have full CRSFShot/Mixer Sync support.
 
 To determine your Radio Operating System Version, load the Version page from the System Menu of your Radio:
 
@@ -59,7 +59,7 @@ To determine your Radio Operating System Version, load the Version page from the
 
 If you have an older version, please first update your Radio OS to at least the mentioned versions. Please consult your Radio Operating System Updating Procedure if you don't know how.
 
-ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases) for best experience and compatibility. EdgeTX have introduced options that old and new Radio handsets will benefit from, like One Bit Sample Mode (mainly for old Frsky Radios like the X9D and the QX7) and Mega Bauds (Baudrates higher than 400K).
+ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases) for the best experience and compatibility. EdgeTX has introduced options that old and new Radio handsets will benefit from, like One Bit Sample Mode (mainly for old Frsky Radios like the X9D and the QX7) and Mega Bauds (baud rates higher than 400K).
 
 ??? Tip "Simplest EdgeTX Updating Procedure"
     1. Visit http://buddy.edgetx.org/.
@@ -153,7 +153,7 @@ However, there are some exceptions:
 
 - The Frsky Taranis QX7 ACCST, Horus X12S and Horus X10S cannot reliably run 400K baud rate without the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/).
 
-- The Frsky Taranis X9D has proven to be finicky even with the default 400K baud rate and will benefit from the One Bit Sample Mode setting and a Hardware Mod. See see [Troubleshooting the X9D](../../hardware/x9d-troubleshooting.md) for more details.
+- The Frsky Taranis X9D has proven to be finicky even with the default 400K baud rate and will benefit from the One Bit Sample Mode setting and a Hardware Mod. See [Troubleshooting the](../../hardware/x9d-troubleshooting.md) X9D](../../hardware/x9d-troubleshooting.md) for more details.
 
 On other Radios, you can set the Baudrate higher than 400K but will highly depend on what TX Module you will use with it.
 
@@ -169,7 +169,7 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | GHOST, Gen1 NamimnoRC no OLED  | 1.87M | STM32-based Modules |
 
 !!! warning
-    Just because you can set the Baudrate higher, doesn't mean you should. If you're experiencing constant Telemetry Lost/Recovered even with the receiver nearby and/or that the Lua Script fails to load properly, then it's a sign your radio and/or module cannot work on the selected Baud Rate. Lower it down a notch or settle with 400K Baud Rate.
+    Just because you can set the Baudrate higher, doesn't mean you should. If you're experiencing constant Telemetry Lost/Recovered even with the receiver nearby and/or if the Lua Script fails to load properly, then it's a sign your radio and/or module cannot work on the selected Baud Rate. Lower it down a notch or settle with a 400K baud rate.
 
 ### ADC Filter
 
@@ -186,7 +186,7 @@ To check and change this setting, follow these steps:
 
 ??? info "EdgeTX 2.7.0 Per-model Settings"
 
-    With EdgeTX 2.7 or newer, you can set this per-model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
+    With EdgeTX 2.7 or newer, you can set this per model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
 
     1. Press ++"MDL"++ Key.
         - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
@@ -204,7 +204,7 @@ To check and change this setting, follow these steps:
 !!! Note
     If you're using an External ExpressLRS Module, make sure the Internal RF Module is **OFF**.
 
-    If your Radio has an Internal ExpressLRS Module, and you want to use it instead of an external module, then set External RF Module to **OFF**, and then set the Internal RF Module to **CRSF** Protocol.
+    If your Radio has an Internal ExpressLRS Module, and you want to use it instead of an external module, then set the External RF Module to **OFF**, and then set the Internal RF Module to **CRSF** Protocol.
 
 ExpressLRS uses the CRSF serial protocol to communicate between the transmitter and the TX module. Follow the following procedure to set it up on the currently selected Model:
 
@@ -217,7 +217,7 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
     3. Scroll down until you reach the Internal RF settings. Set this to `Off`.
     3. Scroll down until you reach the External RF settings.
     4. Set the Mode to `CRSF`.
-        - You can also change the baudrate setting at this point.
+        - You can also change the baud rate setting at this point.
     5. (Optional) Set the Receiver ID to a Unique Number.
     6. Press the ++"RTN"++ Key or Exit the Model Menu
 
@@ -280,7 +280,7 @@ By default, a fresh model does not have any Aux Channels configured (Aux channel
 6. Select Source. Press the ++enter++ Key.
 7. Activate or flick the Switch you'd want to use for this channel. 
     - An example would be for CH5, which will be your Arming switch, you'd want to choose a 2-position switch.
-8. Press ++enter++ Key once more to set the switch.
+8. Press the ++enter++ Key once more to set the switch.
 9. Press ++"RTN"++ Key once to exit the Channel Mix editor.
 10. Repeat steps 3-9 until you have configured all the switches you think you will need.
 

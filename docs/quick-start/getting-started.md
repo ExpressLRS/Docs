@@ -15,7 +15,7 @@ Likewise, you should also be comfortable with your Flight Controller firmware (B
 
 ### What should I do first?
 
-So you got your ExpressLRS Hardware, be it a new Radio Handset with Internal ExpressLRS module, or an External ExpressLRS Module; and a set of ExpressLRS Receivers in a bundle or a Bind-and-Fly drone with the Receiver already wired up. Where do you start?
+So you got your ExpressLRS Hardware, be it a new Radio Handset with an Internal ExpressLRS module, or an External ExpressLRS Module; and a set of ExpressLRS Receivers in a bundle or a Bind-and-Fly drone with the Receiver already wired up. Where do you start?
 
 Here's our recommendation:
 
@@ -42,7 +42,7 @@ After both of these, you can then proceed with the following:
 ![Guide Structure](../assets/images/PageOrder.png){ align=right }
 
 <br />
-This User Guide is organized to cater to both new and seasoned users of the system. The navigation menu on the left is arranged starting from getting the ExpressLRS Configurator installed, an Explanation of the Options available, Steps concerning the Radio and TX module, FC and Receiver setup, a "Before you Fly" page and a Troubleshooting page.
+This User Guide is organized to cater to both new and seasoned users of the system. The navigation menu on the left is arranged to start with getting the ExpressLRS Configurator installed, an Explanation of the Options available, Steps concerning the Radio and TX module, FC and Receiver setup, a "Before you Fly" page and a Troubleshooting page.
 
 <br clear="right" />
 
@@ -68,7 +68,7 @@ You can also use the Search Bar for any topic or info you are after:
 ![Search Bar](../assets/images/SearchBar.png)
 </figure>
 
-Longer pages have a **Table of Contents** menu found on the right hand side of the page.
+Longer pages have a **Table of Contents** menu found on the right-hand side of the page.
 
 ![Search Bar](../assets/images/website-tabbed.png){ align=right }
 
@@ -88,4 +88,4 @@ If you have other questions or concerns, or maybe you need further help that isn
 
 Due to the current fast pace of development, video guides often end up outdated faster than intended. Specific hardware guides sometimes use pre-release firmware targets or targets intended for different hardware which can confuse when specific firmware targets are added. 
 
-We will be adding a separate videos section soon, but for now, until we find high quality, relevant and applicable guides, you are on your own. Please take note of the publication date for these videos to make sure they are still relevant.
+We will be adding a separate videos section soon, but for now, until we find high-quality, relevant and applicable guides, you are on your own. Please take note of the publication date for these videos to make sure they are still relevant.

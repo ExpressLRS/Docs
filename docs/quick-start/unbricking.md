@@ -8,13 +8,13 @@ template: main.html
 
 Take a breath, calm down, relax.
 
-ALL the ESP-based Receivers have a factory installed bootloader onboard which CANNOT be damaged or tampered with. You can completely screw up the upgrade and always get it back using this default bootloader.
+ALL the ESP-based Receivers have a factory-installed bootloader onboard which CANNOT be damaged or tampered with. You can completely screw up the upgrade and always get it back using this default bootloader.
 
 So technically, your receiver is not bricked unless you have damaged the hardware itself.
 
 But for argument's sake, let's use the word "bricked" or "soft-bricked" for a receiver that is not in working order and is not behaving as expected.
 
-Follow the steps below very close to recover your "bricked" Receiver.
+Follow the steps below very closely to recover your "bricked" Receiver.
 
 1. Make sure your Receiver only powers up with a LiPo Connected.
     - If your receiver powers up with just USB connected, move the 5v wire of the receiver into a 5v pad that only powers up with LiPo connected.
@@ -25,10 +25,10 @@ Follow the steps below very close to recover your "bricked" Receiver.
         - Solder your Receiver 5v into this pad.
     - If in the above steps, you're not able to find a 5v pad suitable for this procedure, follow the following:
         - Disconnect the 5v wire of the Receiver from the 5v pad on the Flight Controller.
-        - Solder a different length of wire into any of the 5v pad on the Flight Controller.
+        - Solder a different length of wire into any of the 5v pads on the Flight Controller.
         - Expose a suitable length of conductor of this wire that you can connect with the Receiver's 5v wire LATER.
 
-2. If you've connected a LiPo from the previous step, disconnect it. Also unplug the Flight Controller from your computer.
+2. If you've connected a LiPo from the previous step, disconnect it. Also, unplug the Flight Controller from your computer.
 
 3. Bridge the Boot Pads on the Receiver to put it in Bootloader mode manually.
     - If your Receiver has a button, take an alligator clip to keep the button pressed.
@@ -40,7 +40,7 @@ Follow the steps below very close to recover your "bricked" Receiver.
     </figure>
 
     <figure markdown>
-    ![betafpv SuperD](../../assets/images/BetaFPVSuperD.png)
+    ![betafpv SuperD](../assets/images/BetaFPVSuperD.png)
     <figcaption>Example Receiver with Boot Button</figcaption>
     </figure>
 
@@ -49,14 +49,14 @@ Follow the steps below very close to recover your "bricked" Receiver.
 
 4. Connect to Betaflight or INAV Configurator and make sure you've properly [configured your FC](receivers/configuring-fc.md) for ExpressLRS use. Set `Telemetry` to **disabled** for now.
 
-5. ++"Save & Reboot"++. Close Betaflight Configurator. Also close any other App that's potentially using COM Ports.
+5. ++"Save & Reboot"++. Close Betaflight Configurator. Also, close any other App that's potentially using COM Ports.
 
     !!! info "Cura Slicer"
         We found Cura Slicer and possibly others like it would keep a COM port open or busy preventing successful flashing/recovery via Passthrough.
 
-6. Unplug-replug the USB cable. This will ensure the Flight Controller has a fresh connection to the computer and that the COM port is not busy or in-use.
+6. Unplug-replug the USB cable. This will ensure the Flight Controller has a fresh connection to the computer and that the COM port is not busy or in use.
 
-7. On the ExpressLRS Configurator, select the Firmware Version you're trying to recover to. Select your Device Category and Device Target as well, along with your usual Firmware Options.
+7. On the ExpressLRS Configurator, select the Firmware Version you're trying to recover. Select your Device Category and Device Target as well, along with your usual Firmware Options.
 
 8. Set the Flashing Method to `Betaflight Passthrough`.
 
@@ -71,21 +71,21 @@ Follow the steps below very close to recover your "bricked" Receiver.
     </figure>
 
     ??? tip "Not Seeing PASSTHROUGH DONE?"
-        You've probably skipped steps above or you've misconfigured your flight controller. Go back and make sure to follow EVERY step.
+        You've probably skipped some of the steps above or you've misconfigured your flight controller. Go back and make sure to follow EVERY step.
 
-10. Plug in LiPo or twist the 5v Wires together to power up the receiver (see Step 1). Receiver LED should be Solid.
+10. Plug in LiPo or twist the 5v Wires together to power up the receiver (see Step 1). The receiver LED should be Solid.
 
     <figure markdown>
     ![BOOTLOADER](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)
     </figure>
 
-11. Wait for the process to finish, hopefully with the Success Message. Otherwise repeat the procedure above or try a different approach (like reflashing via FTDI/UART Adapter).
+11. Wait for the process to finish, hopefully with the Success Message. Otherwise, repeat the procedure above or try a different approach (like reflashing via FTDI/UART Adapter).
 
-12. You can now power down the flight controller, disconnect LiPo and/or USB.
+12. You can now power down the flight controller, and disconnect LiPo and/or USB.
 
-13. Remove the boot pads bridging or connection to ground, or, if your Receiver has a button, remove the alligator clip pressing the button.
+13. Remove the boot pads bridging or connection to the ground, or, if your Receiver has a button, remove the alligator clip while pressing the button.
 
-14. Repower up the receiver to verify it is back into normal working state.
+14. Repower up the receiver to verify it is back in its normal working state.
 
     <figure markdown>
     ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)

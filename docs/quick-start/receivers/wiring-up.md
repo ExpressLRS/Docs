@@ -15,7 +15,7 @@ description: Let's get your ExpressLRS Receiver connected to your flight control
 
 UART-based ExpressLRS Receivers use the CRSF Serial Protocol to communicate with a Flight Controller. This protocol uses two pins: one for the Control Signals and the other for the Telemetry Signals. Think of it as a two-lane, no-counterflow highway.
 
-Here's a typical ExpressLRS Receiver pinout indicating to which Flight Controller pads each pin should be connected to:
+Here's a typical ExpressLRS Receiver pinout indicating to which Flight Controller pads each pin should be connected:
 
 <figure markdown>
 ![HM2400 connection](../../assets/images/EPWiring.png)
@@ -26,7 +26,7 @@ The TX pin of an ExpressLRS Receiver sends or transmits the Control Signals it r
 ??? Tip "What's a UART?"
     A UART is a pair of RX and TX pads on the Flight Controller. It's commonplace to refer to it as your Flight Controller's USB ports where you can connect different peripherals like a GPS or a Receiver. Only one device can occupy a UART and it can only do one function.
 
-    R3 and T3 belongs to UART3; RX2 and TX2 belongs to UART2. Flight Controller Manufacturers label their UARTs differently. Some uses just "R" and "T" followed by the UART number. Others uses "RX" and "TX" followed by the UART number.
+    R3 and T3 belongs to UART3; RX2 and TX2 belongs to UART2. Flight Controller Manufacturers label their UARTs differently. Some use just "R" and "T" followed by the UART number. Others use "RX" and "TX" followed by the UART number.
 
     __UART__ is an acronym for Universal Asynchronous Receiver/Transmitter
 
@@ -48,10 +48,10 @@ Check for shorts between pads and clean up flux or any soldering residue if you 
 !!! warning "Not so fast!"
     DO NOT shrink wrap or tuck away the receiver yet. We have to do some preliminary testing first!
 
-Ensure there's no shorts on your wiring and power up the receiver.
+Ensure there are no shorts on your wiring and power up the receiver.
 
-- Best to power up the stack with a LiPo as this can ensure receiver will work normally on flight-ready conditions. 
-- It is important that you made sure there is no shorts on your wiring BEFORE you power up your stack.
+- Best to power up the stack with a LiPo as this can ensure the receiver will work normally on flight-ready conditions. 
+- It is important to ensure there are no shorts on your wiring BEFORE you power up your stack.
 
 Observe the Receiver LED. It should have one of these behaviors:
 
@@ -71,7 +71,7 @@ If the Receiver uses an RGB LED(e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP D
 | Orange Double blink then pause | Binding mode enabled |
 | Green heartbeat | WiFi mode has started. Starts after 60s  |
 
-If the Receiver LED doesn't light up at all, quickly disconnect power and check your wiring.
+If the Receiver LED doesn't light up at all, quickly disconnect the power and check your wiring.
 
 If your receiver has the RGB LED ((e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP Dual), and the receiver LED is not lighting up despite making sure it's wired up correctly, this could mean that the Receiver is in Bootloader Mode.
 
@@ -85,13 +85,13 @@ If your Receiver LED lights up but it's just a Solid light, then it could also b
         - If the button is being pressed or pinched, remove the cause of the pressing or pinching. Heatshrink can sometimes press a button on the receiver.
         - If the button is damaged, remove the button or replace the receiver with a better one. Consider asking the seller for a replacement.
 
-    2. If the receiver doesn't have a Boot button and instead it has a Boot pad, check if the Boot pad is not connected to a Ground pad. 
+    2. If the receiver doesn't have a Boot button and instead has a Boot pad, check if the Boot pad is not connected to a Ground pad. 
         - If the Boot pad is connected to a Ground pad, disconnect or remove the connection.
 
     3. Disconnect the RX and TX wires of the Receiver from the Flight Controller. Reconnect power to the drone or aircraft. Observe the LED on the Receiver once again.
-        - If it starts Blinking Slow (500ms Blink Pattern), you will need to move the receiver wiring to a different UART.
+        - If it starts Blinking Slowly (500ms Blink Pattern), you will need to move the receiver wiring to a different UART.
         - If the other UART is occupied by another peripheral, disconnect it and swap places with the Receiver.
-        - If there is no other Full UART, you can try wiring a Pull-up Resistor: Connect a Resistor (300 Ohm to 1k Ohm value; a lower value is more effective) betweeen this UART's RX pad and either a 5v or 3.3v pad as shown below:        
+        - If there is no other Full UART, you can try wiring a Pull-up Resistor: Connect a Resistor (300 Ohm to 1k Ohm value; a lower value is more effective) between this UART's RX pad and either a 5v or 3.3v pad as shown below:        
 
         <figure markdown>
         ![ExpressLRS Pull-up](../../assets/images/pull-up.png)
