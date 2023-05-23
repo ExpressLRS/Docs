@@ -54,7 +54,7 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
             <br clear="right" />
             
         7. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
-            - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+            - Older Radios or those with only one Menu Key must long-press the ++context-menu++ Key to access the System Menu.
             - Consult your Radio User's Manual on how to access the System Menu.
 
         8. Scroll down and select `ExpressLRS` Lua Script.
@@ -159,7 +159,7 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
 
             <br clear="right" />
         7. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
-            - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+            - Older Radios or those with only one Menu Key must long-press the ++context-menu++ Key to access the System Menu.
             - Consult your Radio User's Manual on how to access the System Menu.
 
         8. Scroll down and select `ExpressLRS` Lua Script.
@@ -235,7 +235,7 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
             MDNS must also be working so your browser can resolve the address http://elrs_tx.local and load the ExpressLRS Web UI from said address.
 
         1. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
-            - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+            - Older Radios or those with only one Menu Key must long-press the ++context-menu++ Key to access the System Menu.
             - Consult your Radio User's Manual on how to access the System Menu.
 
         2. Scroll down and select `ExpressLRS` Lua Script.
@@ -384,16 +384,16 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
 
     Also, make sure you have an internal ELRS module on your Radio. The following steps only apply to handsets with ExpressLRS-specific internal modules. There are stickers marked with "ELRS" attached to your radio packaging or boxes, as well as on the JR module bays indicating the type of internal rf module the radio has.
 
-    The current Model on the radio should be using the [Internal ExpressLRS Module](../transmitters/tx-prep.md#rf-protocol). Ttest this by loading the ExpressLRS Lua Script from the Tools Menu.
+    The current Model on the radio should be using the [Internal ExpressLRS Module](../transmitters/tx-prep.md#rf-protocol). Test this by loading the ExpressLRS Lua Script from the Tools Menu.
 
     <figure markdown>
     ![Lua Running]
     </figure>
 
-    There's one more setting you want to make sure is set properly before proceedingg.
+    There's one more setting you want to make sure is set properly before proceeding.
 
     1. Press the ++"SYS"++ Key on the Radio.
-        - Radios without a dedicated ++"SYS"++ Key will need to long-press the ++context-menu++ Key to access the System Menu.
+        - Radios without a dedicated ++"SYS"++ Key must long-press the ++context-menu++ Key to access the System Menu.
         - Consult your Radio User's Manual on how to get to the System Menu.
     2. Press the ++"PAGE"++ Key until you reach the Hardware Page.
     3. Scroll down until you see the Serial Ports settings.
@@ -402,13 +402,13 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
 
     Now follow the next steps to get your Internal ExpressLRS Module Updated:
 
-    1. Connect your powered up Radio to your Computer via a USB Data Cable.
+    1. Connect your powered-up Radio to your Computer via a USB Data Cable.
 
         <figure markdown>
         ![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
         </figure>
 
-    2. On your Radio, scroll down and select the option `USB Serial(VCP)` then press the ++enter++ Key. Set your Radio aside in the meantime.
+    2. On your Radio, scroll down and select `USB Serial(VCP)` then press the ++enter++ Key. Set your Radio aside in the meantime.
 
         <figure markdown>
         ![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
@@ -425,7 +425,7 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
         ![Device Manager](../../assets/images/DeviceMngr.png)
         </figure>
 
-        :material-alert-outline: Yellow Caution Triangles in the Device Manager, or any mention of `<Radio Name> Serial Port` means that drivers aren't installed.
+        :material-alert-outline: Yellow Caution Triangles in the Device Manager, or any mention of `<Radio Name> Serial Port` means drivers aren't installed.
 
         [Download](https://www.st.com/en/development-tools/stsw-stm32102.html) the Driver package first. Unzip/extract the contents of the package and run/execute (double-click) the installer file (`VCP_V1.5.0_Setup_W7_x64_64bits.exe` for Windows Users). 
         
