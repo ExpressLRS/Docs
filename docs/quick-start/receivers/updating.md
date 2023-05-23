@@ -18,11 +18,11 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
         !!! Warning "Important Step!"
             This is an important step and guarantees updating success. If you haven't done these, GO BACK to those pages.
 
-        - Disconnect and close Betaflight Configurator or INAV Configurator.
+        - Disconnect and close your FC Configurator app (Betaflight Configurator, INAV Configurator, etc).
         - Power-cycle the Flight Controller.
             - If you plugged in LiPo, unplug it.
             - Unplug-replug the USB Cable from your Flight Controller or Computer.
-            - If you will have to plug in LiPo to power up your Receiver, make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
+            - If you have to plug in LiPo to power up your Receiver, make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
     2. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
@@ -71,7 +71,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
 
         - YES, you will need to disconnect your Receiver from your Flight Controller and connect it to a UART/FTDI Adapter.
 
-    2. If your Receiver has Boot Pads instead of a Boot Button, solder the Boot Pads together or connect it to Ground. If your Receiver has a Boot Button, locate it then press & hold it. 
+    2. If your Receiver has Boot Pads instead of a Boot Button, solder the Boot Pads together or connect it to Ground. If your Receiver has a Boot Button, locate it, then press & hold it. 
 
     3. Plug in your UART Adapter into a USB Port on your Computer.
         - The LED on the Receiver should light up Solid. If it's Blinking, repeat the previous step.
@@ -79,7 +79,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
         ??? Warning "Receiver LED already Solid"
             If the Receiver LED has become Solid from a failed update, and you're reflashing through this method, you still need to do the previous step: Manually putting the receiver into Bootloader Mode. This ensures the Receiver is indeed in a Bootloader state rather than some random boot loop.
         
-    4. Determine whether your UART Adapter is being detected corrrectly as a USB-to-UART Device.
+    4. Determine whether your UART Adapter is being detected correctly as a USB-to-UART Device.
 
         ![CP210x]{ align=right }
 
