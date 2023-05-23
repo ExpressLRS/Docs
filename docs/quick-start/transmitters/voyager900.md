@@ -15,8 +15,8 @@ template: main.html
     1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
-        - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your TX module.
 
         <br clear="right" />
     2. Select the Device Category and Device target matching your hardware.
@@ -35,7 +35,7 @@ template: main.html
 
     4. Set the [firmware options](../firmware-options.md) for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
     5. Click the ++"Build"++ button.
 
@@ -50,7 +50,7 @@ template: main.html
     8. On your radio, open the System Menu. 
 
         - On newer radios, you can press the ++"SYS"++ key to open the System Menu
-        - On older radios, or radios that only have a menu key, you will need to long-press the ++context-menu++ key to open the System Menu
+        - On older radios, or radios that only have a menu key, long-press the ++context-menu++ key to open the System Menu
 
     9. Using the ++"Page"++ key/s, navigate to the SD-HC Card page, scroll-down and open the `FIRMWARE` folder where you can find the **firmware.elrs** file.
 
@@ -87,13 +87,13 @@ template: main.html
         ![NamimnoRC Pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/namimnopinout.png?raw=true){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
         </figure>
 
-    3. Connect your STLink V2 dongle to your Computer's USB Port. Make sure it is being detected properly.
+    3. Connect your STLink V2 dongle to your Computer's USB Port. Make sure it is being detected correctly.
 
     4. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
-        - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your TX module.
 
         <br clear="right" />
     5. Select the Device Category and Device target matching your hardware.
@@ -112,7 +112,7 @@ template: main.html
 
     7. Set the [firmware options](../firmware-options.md) for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
     8. Click the ++"Build & Flash"++ button.
 
@@ -122,7 +122,7 @@ template: main.html
         
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-    10. Disconnect the STLink V2 dongle from the TX Module PCB and Reassemble the TX Module.
+    10. Disconnect the STLink V2 dongle from the TX Module PCB and reassemble the module.
     11. Reattach your TX Module into your Radio and, using the [ExpressLRS Lua Script], verify if the firmware version has been updated.
 
 [Lua Script]: ../../assets/images/lua1.jpg

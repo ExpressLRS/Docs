@@ -13,7 +13,7 @@ template: main.html
     </figure>
 
     !!! warning "Warning"
-        This method is an **irreversible** one. You will not be able to go back to ImmersionRC Ghost firmwares with this method. You have been warned!
+        This method is an **irreversible** one. You will not be able to go back to ImmersionRC Ghost firmware with this method. You have been warned!
 
     Video Guide(10 min):
     
@@ -35,15 +35,15 @@ template: main.html
         <img class="center-img" src="https://i.imgur.com/vztruRj.png" width = "49%">
         </figure>
 
-    3. Connect your STLink V2 dongle to your Computer's USB Port. Make sure it is being detected properly.
+    3. Connect your STLink V2 dongle to your Computer's USB Port. Make sure it is being detected correctly.
 
     4. Before flashing, disable `'Readout Protection'`. To do this, download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). After such, you can now disconnect (Target -> Disconnect) and close the ST-Link Utility.
 
     5. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
-        - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your TX module.
 
         <br clear="right" />
     6. Select the Device Category and Device target matching your hardware.
@@ -63,7 +63,7 @@ template: main.html
 
     8. Set the [firmware options](../firmware-options.md) for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
     9. Click the ++"Build & Flash"++ button.
 
@@ -73,7 +73,7 @@ template: main.html
         
     10. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-    11. Disconnect the STLink V2 dongle from the TX Module PCB and Reassemble the TX Module.
+    11. Disconnect the STLink V2 dongle from the TX Module PCB and reassemble the module.
     12. Reattach your TX Module into your Radio and, using the [ExpressLRS Lua Script], verify if the firmware version has been updated.
 
 === "via Stock_BL"
@@ -90,8 +90,8 @@ template: main.html
     1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
-        - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your TX module.
 
         <br clear="right" />
     2. Select the Device Category and Device target matching your hardware.
@@ -111,7 +111,7 @@ template: main.html
 
     4. Set the [firmware options](../firmware-options.md) for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
     5. Click the ++"Build"++ button.
 
@@ -126,7 +126,7 @@ template: main.html
     8. On your radio, open the System Menu. 
 
         - On newer radios, you can press the ++"SYS"++ key to open the System Menu
-        - On older radios, or radios that only have a menu key, you will need to long-press the ++context-menu++ key to open the System Menu
+        - On older radios, or radios that only have a menu key, long-press the ++context-menu++ key to open the System Menu
 
     9. Using the ++"Page"++ key/s, navigate to the SD-HC Card page, scroll-down and open the `FIRMWARE` folder where you can find the **firmware.elrs** file.
 

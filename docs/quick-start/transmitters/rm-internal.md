@@ -24,13 +24,13 @@ template: main.html
     === "Manual Upload via AP"
 
         !!! Info "Heads up!"
-            This option is only possible if you haven't previously flashed or configured your TX Module with your Home WiFi SSID and Password or it's unable to connect to said WiFi Network because the router is Off or unreachable.
+            This option is only possible if you haven't previously flashed or configured your TX Module with your Home WiFi SSID and Password or if it's unable to connect to said WiFi Network because the router is Off or unreachable.
 
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
 
-            - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your TX module.
+            - Make sure `Official Releases` is active from the horizontal tab.
+            - Ensure you select the Released version you want to flash into your TX module.
 
             <br clear="right" />
 
@@ -53,7 +53,7 @@ template: main.html
 
         4. Set the [firmware options](../firmware-options.md) for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
         5. Click the ++"Build"++ button.
             
@@ -61,17 +61,17 @@ template: main.html
             ![Build]
             </figure>
             
-        6. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
+        6. Once the Build process is done, a Temp folder window containing your firmware binaries should pop up.
 
             ![Temp TX]{ align=right }
 
             - You can use any of these files.
             - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
-            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
 
             <br clear="right" />
             
-        7. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
+        7. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
 
         8. Scroll down and select `ExpressLRS` Lua Script.
 
@@ -87,8 +87,8 @@ template: main.html
             ![Lua Running]
             </figure>
 
-            - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
-        10. Scroll down and select `Wifi Connectivity` and press ++enter++.
+            - If the script is stuck on a "Loading..." screen, return to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+        10. Scroll down and select `WiFi Connectivity` and press ++enter++.
         11. Select `Enable WiFi` and press ++enter++.
 
             <figure markdown>
@@ -111,30 +111,30 @@ template: main.html
 
             <br clear="right" />
 
-        14. Once you have connected to the `ExpressLRS TX` Access Point, open up a Browser window and type in the IP Address `10.0.0.1` on the Address Bar and press ++enter++. The ExpressLRS Web UI will load.
+        14. Once connected to the `ExpressLRS TX` Access Point, open up a Browser window, type in the IP Address `10.0.0.1` on the Address Bar, and press ++enter++. The ExpressLRS Web UI will load.
         15. Activate the `Update` Tab.
 
             <figure markdown>
             ![TX update tab]
             </figure>
 
-            - If your TX Module is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
+            - If your TX Module is still on an earlier firmware version, then there's no Update Tab, and instead, you will need to scroll down to find the Firmware Update section.
 
             <figure markdown>
             ![Old File Upload]
             </figure>
 
-        16. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
-            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
+        16. Drag and drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, especially if you've copied/moved it somewhere else on an earlier step.
         17. Click the ++"Update"++ button to start the Updating procedure.
-        18. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+        18. Wait for the firmware file to get uploaded and flashed into your device. It only takes a minute or two, and you will see the Success Popup Message.
 
             <figure markdown>
             ![Success WiFi]
             </figure>
 
-        19. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
-        20. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
+        19. On your Radio, the `WiFi Running` screen should disappear and should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
+        20. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Then reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
     === "Manual Upload via Local WiFi"
 
@@ -144,8 +144,8 @@ template: main.html
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
 
-            - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your TX module.
+            - Make sure `Official Releases` is active from the horizontal tab.
+            - Ensure you select the Released version you want to flash into your TX module.
 
             <br clear="right" />
         2. Select the Device Category and Device target matching your hardware.
@@ -167,7 +167,7 @@ template: main.html
 
         4. Set the [firmware options](../firmware-options.md) for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
         5. Click the ++"Build"++ button.
             
@@ -175,15 +175,15 @@ template: main.html
             ![Build]
             </figure>
             
-        6. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
+        6. Once the Build process is done, a Temp folder window containing your firmware binaries should pop up.
             ![Temp TX]{ align=right }
 
             - You can use any of these files.
             - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
-            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
 
             <br clear="right" />
-        7. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
+        7. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
 
         8. Scroll down and select `ExpressLRS` Lua Script.
 
@@ -199,8 +199,8 @@ template: main.html
             ![Lua Running]
             </figure>
 
-            - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
-        10. Scroll down and select `Wifi Connectivity` and press ++enter++.
+            - If the script is stuck on a "Loading..." screen, return to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+        10. Scroll down and select `WiFi Connectivity` and press ++enter++.
         11. Select `Enable WiFi` and press ++enter++.
             
             <figure markdown>
@@ -216,14 +216,14 @@ template: main.html
                 === "The `arp` Command"
 
                     1. Open up a Command Prompt window on your computer.
-                    2. Execute the command `arp -a` which will list all the devices in the Network.
-                    3. Use each of the IP Addresses marked as `Dynamic` as URL into your Browser until you get to the ExpressLRS Web UI.
+                    2. Execute the command `arp -a`, which will list all the devices in the Network.
+                    3. Use each of the IP Addresses marked as `Dynamic` as a URL in your Browser until you get to the ExpressLRS Web UI.
 
                 === "Router DHCP List"
                     1. Log in into your Router dashboard.
                     2. Check the DHCP List and look for the "elrs" device.
                     3. Take note of the IP Address given by your router.
-                    4. Use this IP address into your Browser as the URL.
+                    4. Use this IP address in your Browser as the URL.
 
         14. Activate the `Update` Tab.
 
@@ -231,32 +231,32 @@ template: main.html
             ![TX update tab]
             </figure>
 
-            - If your TX Module is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
+            - If your TX Module is still on an earlier firmware version, then there's no Update Tab, and instead, you will need to scroll down to find the Firmware Update section.
 
             <figure markdown>
             ![Old File Upload]
             </figure>
 
-        15. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
-            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
+        15. Drag and drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, especially if you've copied/moved it somewhere else on an earlier step.
         16. Click the ++"Update"++ button to start the Updating procedure.
-        17. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+        17. Wait for the firmware file to get uploaded and flashed into your device. It only takes a minute or two, and you will see the Success Popup Message.
 
             <figure markdown>
             ![Success WiFi]
             </figure>
 
-        18. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
-        19. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
+        18. On your Radio, the `WiFi Running` screen should disappear and should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
+        19. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Then reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
     === "Auto Upload"
 
         !!! Info "Heads up!"
-            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network. 
+            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
             
-            MDNS must also be working and that your browser can resolve the address http://elrs_tx.local and it can load the ExpressLRS Web UI from said address.
+            MDNS must also be working so your browser can resolve the address http://elrs_tx.local and load the ExpressLRS Web UI from said address.
 
-        1. On your Radio, press the ++"SYS"++ Key to display the Tools Menu where Lua Scripts can be found.
+        1. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
 
         2. Scroll down and select `ExpressLRS` Lua Script.
 
@@ -272,8 +272,8 @@ template: main.html
             ![Lua Running]
             </figure>
 
-            - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
-        4. Scroll down and select `Wifi Connectivity` and press ++enter++.
+            - If the script is stuck on a "Loading..." screen, return to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+        4. Scroll down and select `WiFi Connectivity` and press ++enter++.
         5. Select `Enable WiFi` and press ++enter++.
             
             <figure markdown>
@@ -285,8 +285,8 @@ template: main.html
         7. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
 
-            - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your TX module.
+            - Make sure `Official Releases` is active from the horizontal tab.
+            - Ensure you select the Released version you want to flash into your TX module.
 
             <br clear="right" />
         8. Select the Device Category and Device target matching your hardware.
@@ -308,7 +308,7 @@ template: main.html
 
         10. Set the [firmware options](../firmware-options.md) for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
         11. Click the ++"Build & Flash"++ button.
 
@@ -319,11 +319,11 @@ template: main.html
         12. Wait for the upload to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
             <figure markdown>
-            ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
+            ![WiFi Update Log](../../assets/images/WifiUpdateLog.png)
             </figure>
 
-        13. On your Radio, the `WiFi Running` screen should disappear and it should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
-        14. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
+        13. On your Radio, the `WiFi Running` screen should disappear and should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
+        14. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Then reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
 === "via ETX Passthrough"
 
@@ -352,8 +352,8 @@ template: main.html
         3. Click the ++"Download .bin"++ button at the bottom of the page.
         4. Save the firmware file into your Radio's SD Card, inside the `Firmware` Folder.
         5. Reboot the Radio into DFU/Bootloader mode.
-            - Start by turning off your radio.
-            - Press and hold the two horizontal Trim switches then press the Power button. The Screen should Light up. Release the buttons.
+            - Turn off your radio.
+            - Press and hold the two horizontal Trim switches then press the Power button. The Screen should Light up. Let go of the buttons.
             - Some Radios have a different procedure, like the BetaFPV Lite Radio 3 Pro. Consult the Manual for the steps to get it into this DFU/Bootloader mode.
         6. Select `Write Firmware`.
         7. Navigate to the EdgeTx firmware file you just downloaded.
@@ -361,14 +361,14 @@ template: main.html
         9. Once Writing is complete, reboot the radio.
         10. Check the Radio's Version Page to verify you have the version you need.
 
-    Also make sure you have an internal ELRS module on your Radio. The following steps only applies to handsets with ExpressLRS-specific internal modules. There are stickers marked with "ELRS" attached into your radio packaging or boxes, as well as on the JR module bays indicating the type of internal rf module the radio have.
+    Also make sure you have an internal ELRS module on your Radio. The following steps only apply to handsets with ExpressLRS-specific internal modules. There are stickers marked with "ELRS" attached to your radio packaging or boxes, as well as on the JR module bays indicating the type of internal rf module the radio have.
 
     <figure markdown>
     ![Internal ELRS Marking](../../assets/images/ELRS-variant-Box.jpg)
     <figcaption>Example Sticker On RadioMaster Handset/Radios</figcaption>
     </figure>
 
-    The current Model on the radio should be using the [Internal ExpressLRS Module](../transmitters/tx-prep.md#rf-protocol). You can test this by loading the ExpressLRS Lua Script from the Tools Menu.
+    The current Model on the radio should be using the [Internal ExpressLRS Module](../transmitters/tx-prep.md#rf-protocol). Test this by loading the ExpressLRS Lua Script from the Tools Menu.
 
     <figure markdown>
     ![Lua Running]
@@ -377,8 +377,6 @@ template: main.html
     There's one more setting you want to make sure is set properly before you proceed.
 
     1. Press the ++"SYS"++ Key on the Radio.
-        - Radios without a dedicated ++"SYS"++ Key will need to long-press the ++context-menu++ Key to access the System Menu.
-        - Consult your Radio User's Manual on how to get to the System Menu.
     2. Press the ++"PAGE"++ Key until you reach the Hardware Page.
     3. Scroll down until you get to the Serial Ports settings.
     4. Scroll down and select USB-VCP. Press ++enter++ and use the Scroll Wheel to set it to `CLI` mode if it is set to a different setting. Press ++enter++ once more to confirm the changes.
@@ -386,42 +384,42 @@ template: main.html
 
     Now follow the next steps to get your Internal ExpressLRS Module Updated:
 
-    1. Connect your powered up Radio to your Computer via a USB Data Cable.
+    1. Connect your powered-up Radio to your Computer via a USB Data Cable.
 
         <figure markdown>
         ![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
         </figure>
 
-    2. On your Radio, scroll down and select the option `USB Serial(VCP)` then press the ++enter++ Key. Set your Radio aside in the meantime.
+    2. On your Radio, scroll down and select `USB Serial(VCP)` then press the ++enter++ Key. Set your Radio aside in the meantime.
 
         <figure markdown>
         ![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
         </figure>
 
-    3. On your Computer, check whether your Radio is being recognized properly as a {==STMicroelectronics Virtual COM Port==} device.
+    3. On your Computer, check whether your Radio is being recognized correctly as a {==STMicroelectronics Virtual COM Port==} device.
 
         !!! tip "Important"
             This is a vital step and a common failure point. Pay attention.
 
-        Windows Users can use Device Manager to check whether the Radio is being detected properly.
+        Windows Users can use Device Manager to check whether the Radio is being recognized correctly.
 
         <figure markdown>
         ![Device Manager](../../assets/images/DeviceMngr.png)
         </figure>
 
-        :material-alert-outline: Yellow Caution Triangles in the Device Manager, or any mention of `<Radio Name> Serial Port` means that drivers aren't installed.
+        :material-alert-outline: Yellow Caution Triangles in the Device Manager, or any mention of `<Radio Name> Serial Port` means drivers aren't installed.
 
         [Download](https://www.st.com/en/development-tools/stsw-stm32102.html) the Driver package first. Unzip/extract the contents of the package and run/execute (double-click) the installer file (`VCP_V1.5.0_Setup_W7_x64_64bits.exe` for Windows Users). 
         
-        Once Drivers are installed, check again if the Radio is now being recognized properly. You may have to unplug-replug the USB Cable first or even reboot your computer.
+        Once Drivers are installed, check again if the Radio is now being recognized correctly. You may have to unplug-replug the USB Cable first or even reboot your computer.
 
         You only have to do this once usually.
     
     4. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
-        - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your TX module.
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your TX module.
 
         <br clear="right" />
     5. Select the Device Category and Device target matching your hardware.
@@ -443,7 +441,7 @@ template: main.html
 
     7. Set the [firmware options](../firmware-options.md) for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
         - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
     8. Click the ++"Build & Flash"++ button.
 
