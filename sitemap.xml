@@ -461,6 +461,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/software/airport/</loc>
+         <lastmod>2023-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/software/dynamic-transmit-power/</loc>
          <lastmod>2023-05-24</lastmod>
          <changefreq>daily</changefreq>
