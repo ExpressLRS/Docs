@@ -7,214 +7,465 @@ template: main.html
 </figure>
 
 !!! danger "Advisory"
-    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware you will first need to flash it to version 2.5.2 then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware following method 1 or 2 from the WiFi Flashing Guide below.
+    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.2, then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware via WiFi.
 
     Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
 
-    You can update straight to 3.2.0 without repartitioner or going to 2.5.2 first if flashing via ETX Passthrough.
+    Updating to 3.x via UART or ETX Passthrough doesn't require 2.5.2 firmware or the Repartitioner.
 
-## Flashing via EdgeTX Passthrough
+## Flashing/Updating your TX Module Firmware
 
-!!! info "Info"
-    This method is the result of the collaborative effort between EdgeTX, RadioMaster and ExpressLRS.
+=== "via WiFi"
 
-- Targets:
-    - `RadioMaster_Zorro_2400_TX_via_ETX`
-    - `RadioMaster_TX16S_2400_TX_via_ETX`
-    - `RadioMaster_Boxer_2400_TX_via_ETX`
+    <figure markdown>
+    ![via WiFi](../../assets/images/Method_intTX_WiFi.png)
+    </figure>
 
-- Device Category:
-    - `RadioMaster 2.4 GHz`
+    === "Manual Upload via AP"
 
-- Device:
-    - `RadioMaster Zorro 2400 TX`
-    - `RadioMaster TX16S 2400 TX`
-    - `RadioMaster TX12 2400 TX`
-    - `RadioMaster Boxer 2400 TX`
+        !!! Info "Heads up!"
+            This option is only possible if you haven't previously flashed or configured your TX Module with your Home WiFi SSID and Password or if it's unable to connect to said WiFi Network because the router is Off or unreachable.
 
-Before you start, ensure you have the latest EdgeTX firmware version on your RadioMaster Radio Handset. Consult the EdgeTX [documentation](https://github.com/EdgeTX/edgetx.github.io/wiki/EdgeTX-Installation-Guide) regarding the updating process.
+        1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+            ![Configurator Release]{ align=right }
 
-- `TX16S MK2`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0).
-- `Zorro`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0). It often comes with an earlier EdgeTX 2.7.0 version (2bdd4974) which results in unsuccessful flashing.
-- `TX12 MK2`: Update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
-- `Boxer`: The factory EdgeTX firmware should be based off an early EdgeTX 2.8.0 and wouldn't need an update.
+            - Make sure `Official Releases` is active from the horizontal tab.
+            - Ensure you select the Released version you want to flash into your TX module.
 
-Also make sure you have an internal ELRS module on your Radio. The following steps only applies to handsets with ExpressLRS-specific internal modules. There are stickers marked with "ELRS" attached into your radio packaging or boxes, as well as on the JR module bays indicating the type of internal rf module the radio have.
+            <br clear="right" />
 
-Also make sure that the Serial Ports, USB-VCP setting is set to `CLI` mode on your Radio. This setting can be found in the `System Menu` -> `Hardware` Page.
+        2. Select the Device Category and Device target matching your hardware.
 
-With your handset turned on, connect a USB data cable to the USB data port of the Radio. Select `USB Serial(Debug)` or `USB Serial(VCP)` in the options window that pops up. 
+            - Device Category:
+                - `RadioMaster 2.4 GHz`
 
-<figure markdown>
-![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
-</figure>
+            - Device:
+                - `RadioMaster Zorro 2400 TX`
+                - `RadioMaster TX16S 2400 TX`
+                - `RadioMaster TX12 2400 TX`
+                - `RadioMaster Boxer 2400 TX`
 
-<figure markdown>
-![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
-</figure>
+        3. Set the Flashing Method to `WiFi`.
 
-!!! tip "Important"
-    This is a vital step and a common failure point. Pay attention.
+            <figure markdown>
+            ![via WiFi](../../assets/images/Method_intTX_WiFi.png)
+            </figure>
 
-Windows users should check Device Manager and make sure your device is being detected as **STMicroelectronics Virtual COM Port** device. 
+        4. Set the [firmware options](../firmware-options.md) for your device.
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+        5. Click the ++"Build"++ button.
+            
+            <figure markdown>
+            ![Build]
+            </figure>
+            
+        6. Once the Build process is done, a Temp folder window containing your firmware binaries should pop up.
 
-<figure markdown>
-![Device Manager](../../assets/images/DeviceMngr.png)
-</figure>
+            ![Temp TX]{ align=right }
 
-If not and you're seeing a bunch of Yellow Warning icons for the RadioMaster Serial Port, download the drivers from [here](https://www.st.com/en/development-tools/stsw-stm32102.html). Extract/unzip the contents of the package into a folder and run the `VCP_V1.5.0_Setup_W7_x64_64bits` executable. 
+            - You can use any of these files.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
 
-Using the ExpressLRS Configurator, select the appropriate version and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
+            <br clear="right" />
+            
+        7. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
 
-<figure markdown>
-![via EdgeTX Passthrough](../../assets/images/Method_intTX_EdgeTXPassthrough.png)
-<figcaption>Flashing via EdgeTX Passthrough</figcaption>
-</figure>
+        8. Scroll down and select `ExpressLRS` Lua Script.
 
-Select the `Regulatory Domain` appropriate for your location.
+            <figure markdown>
+            ![Lua Script]
+            </figure>
 
-Set your Binding Phrase (optional) and other relevant [Firmware Options] like Local WiFi Network SSID and password.
+            - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
 
-Once that's done, click **Build and Flash** and wait for the Success banner from the Configurator.
+        9. Press ++enter++ to Load it.
 
-<figure markdown>
-![Build & Flash]
-</figure>
+            <figure markdown>
+            ![Lua Running]
+            </figure>
 
-Unplug the USB and verify with the [ExpressLRS Lua script] (right-click, save as) you have a working internal module and that you have updated to the version you have selected.
+            - If the script is stuck on a "Loading..." screen, return to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+        10. Scroll down and select `WiFi Connectivity` and press ++enter++.
+        11. Select `Enable WiFi` and press ++enter++.
 
-<figure markdown>
-![Lua Running](../../assets/images/tx-internalLuaCheck.jpg)
-</figure>
+            <figure markdown>
+            ![Lua WiFi]
+            </figure>
 
-## Flashing via WiFi
+        12. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
 
-- Targets:
-    - `RadioMaster_Zorro_2400_TX_via_WIFI`
-    - `RadioMaster_TX16S_2400_TX_via_WIFI`
-    - `RadioMaster_Boxer_2400_TX_via_WIFI`
+        13. Using a WiFi-capable device such as your smartphone or laptop, scan for the `ExpressLRS TX` Access Point. Connect to this Access Point.
 
-- Device Category:
-    - `RadioMaster 2.4 GHz`
+            ![WiFi Hotspot](../../assets/images/WifiHotspotTX.png){ align=right }
 
-- Device: 
-    - `RadioMaster Zorro 2400 TX`
-    - `RadioMaster TX16S 2400 TX`
-    - `RadioMaster TX12 2400 TX`
-    - `RadioMaster Boxer 2400 TX`
+            - If your TX Module is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
+            - `expresslrs` is the Password for this Access Point.
 
-<figure markdown>
-![via WiFi](../../assets/images/Method_intTX_WiFi.png)
-<figcaption>Flashing via WiFi</figcaption>
-</figure>
+            ??? question "Where's the Access Point?"
+                If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also try putting the devices closer together.
+                
+                If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
 
-### Method 1
+            <br clear="right" />
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+        14. Once connected to the `ExpressLRS TX` Access Point, open up a Browser window, type in the IP Address `10.0.0.1` on the Address Bar, and press ++enter++. The ExpressLRS Web UI will load.
+        15. Activate the `Update` Tab.
 
-<figure markdown>
-![Build]
-</figure>
+            <figure markdown>
+            ![TX update tab]
+            </figure>
 
-Once it's done, it should open the Target folder for you where the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+            - If your TX Module is still on an earlier firmware version, then there's no Update Tab, and instead, you will need to scroll down to find the Firmware Update section.
 
-Execute the ExpressLRS Lua script by pressing "System Menu" on your radio and then under Tools, select `ExpressLRS`. If the ExpressLRS Lua script is not in the list, download it from [here](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (right-click, save as) and save it to your Radio's `/Scripts/Tools` folder.
+            <figure markdown>
+            ![Old File Upload]
+            </figure>
 
-<figure markdown>
-![Lua Script](../../assets/images/lua1.jpg)
-</figure>
+        16. Drag and drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, especially if you've copied/moved it somewhere else on an earlier step.
+        17. Click the ++"Update"++ button to start the Updating procedure.
+        18. Wait for the firmware file to get uploaded and flashed into your device. It only takes a minute or two, and you will see the Success Popup Message.
 
-Select **WiFi Connectivity** from the Lua script and then select **Enable WiFi**. Press OK once more to activate the WiFi on the Tx Module. Connect to the Access Point the module will create called `ExpressLRS TX`, with the password being `expresslrs`.
+            <figure markdown>
+            ![Success WiFi]
+            </figure>
 
-<figure markdown>
-![Lua3](../../assets/images/lua/wifi-bw.png)
-</figure>
+        19. On your Radio, the `WiFi Running` screen should disappear and should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
+        20. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Then reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
-<figure markdown>
-![WiFi Hotspot](../../assets/images/WifiHotspotTX.png)
-</figure>
+    === "Manual Upload via Local WiFi"
 
-Using your browser, navigate to the correct page (typically http://10.0.0.1/) and it should show an upload form (you will have to scroll down a bit). You can drag-and-drop the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file that the ExpressLRS Configurator created. You can also click the `Choose File` button and navigate to the folder where the firmware was created. Ensure that you have selected the correct firmware file and click `Update`.
+        !!! Info "Heads up!"
+            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
 
-<figure markdown>
-![Firmware Update](../../assets/images/web-firmwareupdate.png)
-</figure>
+        1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+            ![Configurator Release]{ align=right }
 
-Once the file is uploaded, a pop-up confirmation will show up.
+            - Make sure `Official Releases` is active from the horizontal tab.
+            - Ensure you select the Released version you want to flash into your TX module.
 
-<figure markdown>
-![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
-</figure>
+            <br clear="right" />
+        2. Select the Device Category and Device target matching your hardware.
 
-Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+            - Device Category:
+                - `RadioMaster 2.4 GHz`
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script (you will first need to close it and relaunch the script).
+            - Device:
+                - `RadioMaster Zorro 2400 TX`
+                - `RadioMaster TX16S 2400 TX`
+                - `RadioMaster TX12 2400 TX`
+                - `RadioMaster Boxer 2400 TX`
 
-**Join Local Network**
+        3. Set the Flashing Method to `WiFi`.
 
-You can configure Home Network SSID and Password if you chose not to use ExpressLRS Configurator to set them. Once these are set, you can use the next two methods below.
+            <figure markdown>
+            ![via WiFi](../../assets/images/Method_intTX_WiFi.png)
+            </figure>
 
-<figure markdown>
-![JoinNetwork](../../assets/images/web-joinnetwork.png)
-</figure>
+        4. Set the [firmware options](../firmware-options.md) for your device.
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+        5. Click the ++"Build"++ button.
+            
+            <figure markdown>
+            ![Build]
+            </figure>
+            
+        6. Once the Build process is done, a Temp folder window containing your firmware binaries should pop up.
+            ![Temp TX]{ align=right }
 
-### Method 2
+            - You can use any of these files.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
 
-With the correct target selected and [Firmware Options] set, **Build** your firmware using the ExpressLRS Configurator.
+            <br clear="right" />
+        7. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
 
-<figure markdown>
-![Build]
-</figure>
+        8. Scroll down and select `ExpressLRS` Lua Script.
 
-Once it's done, it should open the Target folder for you where the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file is. Do not close this window so you can easily locate the correct file to upload to the module.
+            <figure markdown>
+            ![Lua Script]
+            </figure>
 
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the local network automatically.
+            - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
 
-<figure markdown>
-![Lua3](../../assets/images/lua/wifi-bw.png)
-</figure>
+        9. Press ++enter++ to Load it.
 
-Using your browser, navigate to http://elrs_tx.local and the WiFi Update page should show up. Scroll down towards the Firmware Update section, as shown below:
+            <figure markdown>
+            ![Lua Running]
+            </figure>
 
-<figure markdown>
-![Firmware Update](../../assets/images/web-firmwareupdate.png)
-</figure>
+            - If the script is stuck on a "Loading..." screen, return to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+        10. Scroll down and select `WiFi Connectivity` and press ++enter++.
+        11. Select `Enable WiFi` and press ++enter++.
+            
+            <figure markdown>
+            ![Lua WiFi]
+            </figure>
 
-Drag-and-drop the `RadioMaster_Zorro_2400_TX-<version>.bin` or `RadioMaster_TX16S_2400_TX-<version>.bin` file created by the ExpressLRS Configurator into the Choose File field, or manually navigate to the Folder by clicking the `Choose File` button. Once the correct file is selected, click the `Update`. Wait for the process to complete, and once the file is uploaded, a pop-up confirmation will show up.
+        12. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
 
-<figure markdown>
-![Update Success](../../assets/images/web-firmwareupdateSuccess.png)
-</figure>
+        13. With your module now in WiFi Mode and it was able to connect to your Local WiFi Network, open a Browser window on any WiFi-capable device that is also connected to the same Local WiFi Network. Type in the Address http://elrs_tx.local on your browser's Address Bar. The ExpressLRS Web UI should load.
+            - If your browser cannot resolve this address and it cannot load the ExpressLRS Web UI, this means that MDNS is not working on your device or network.
 
-Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+            ??? tip "MDNS is not working!"
+                === "The `arp` Command"
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script (you will first need to close it and relaunch the script).
+                    1. Open up a Command Prompt window on your computer.
+                    2. Execute the command `arp -a`, which will list all the devices in the Network.
+                    3. Use each of the IP Addresses marked as `Dynamic` as a URL in your Browser until you get to the ExpressLRS Web UI.
 
-### Method 3
+                === "Router DHCP List"
+                    1. Log in into your Router dashboard.
+                    2. Check the DHCP List and look for the "elrs" device.
+                    3. Take note of the IP Address given by your router.
+                    4. Use this IP address in your Browser as the URL.
 
-Using the [ExpressLRS Lua script] (right-click, save as), select `Wifi Connectivity` then choose `Enable WiFi` and if you have flashed your Tx Module with your Home WiFi Network details or have set it in the Join Network section of the Update Page, it will connect to the network automatically.
+        14. Activate the `Update` Tab.
 
-<figure markdown>
-![Lua3](../../assets/images/lua/wifi-bw.png)
-</figure>
+            <figure markdown>
+            ![TX update tab]
+            </figure>
 
-Using the ExpressLRS Configurator, select the correct Target and set your [Firmware Options]. Click **Build and Flash** and wait for the compile process to complete. 
+            - If your TX Module is still on an earlier firmware version, then there's no Update Tab, and instead, you will need to scroll down to find the Firmware Update section.
 
-<figure markdown>
-![Build & Flash]
-</figure>
+            <figure markdown>
+            ![Old File Upload]
+            </figure>
 
-You should see a section as pictured below and the Success message marking the update process complete.
+        15. Drag and drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, especially if you've copied/moved it somewhere else on an earlier step.
+        16. Click the ++"Update"++ button to start the Updating procedure.
+        17. Wait for the firmware file to get uploaded and flashed into your device. It only takes a minute or two, and you will see the Success Popup Message.
 
-<figure markdown>
-![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
-</figure>
+            <figure markdown>
+            ![Success WiFi]
+            </figure>
 
-Wait for the Lua script screen to close the "WiFi Running" screen and your module should be updated now.
+        18. On your Radio, the `WiFi Running` screen should disappear and should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
+        19. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Then reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
-Verify the version and hash in the main screen of the ExpressLRS Lua script (you will first need to close it and relaunch the script).
+    === "Auto Upload"
 
-[ExpressLRS Lua script]: https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true
-[Build]: ../../assets/images/Build.png
+        !!! Info "Heads up!"
+            This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
+            
+            MDNS must also be working so your browser can resolve the address http://elrs_tx.local and load the ExpressLRS Web UI from said address.
+
+        1. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
+
+        2. Scroll down and select `ExpressLRS` Lua Script.
+
+            <figure markdown>
+            ![Lua Script]
+            </figure>
+
+            - If the script is nowhere to be found, download it from [this page](../transmitters/lua-howto.md) and save it into your Radio SD Card Scripts/Tools/ folder.
+
+        3. Press ++enter++ to Load it.
+
+            <figure markdown>
+            ![Lua Running]
+            </figure>
+
+            - If the script is stuck on a "Loading..." screen, return to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+        4. Scroll down and select `WiFi Connectivity` and press ++enter++.
+        5. Select `Enable WiFi` and press ++enter++.
+            
+            <figure markdown>
+            ![Lua WiFi]
+            </figure>
+            
+        6. The `WiFi Running` screen will show up. Your TX module is now in WiFi mode.
+
+        7. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+            ![Configurator Release]{ align=right }
+
+            - Make sure `Official Releases` is active from the horizontal tab.
+            - Ensure you select the Released version you want to flash into your TX module.
+
+            <br clear="right" />
+        8. Select the Device Category and Device target matching your hardware.
+
+            - Device Category:
+                - `RadioMaster 2.4 GHz`
+
+            - Device:
+                - `RadioMaster Zorro 2400 TX`
+                - `RadioMaster TX16S 2400 TX`
+                - `RadioMaster TX12 2400 TX`
+                - `RadioMaster Boxer 2400 TX`
+
+        9. Set the Flashing Method to `WiFi`.
+
+            <figure markdown>
+            ![via WiFi](../../assets/images/Method_intTX_WiFi.png)
+            </figure>
+
+        10. Set the [firmware options](../firmware-options.md) for your device.
+            - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+            - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
+            - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+        11. Click the ++"Build & Flash"++ button.
+
+            <figure markdown>
+            ![Build & Flash]
+            </figure>
+        
+        12. Wait for the upload to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+
+            <figure markdown>
+            ![WiFi Update Log](../../assets/images/WifiUpdateLog.png)
+            </figure>
+
+        13. On your Radio, the `WiFi Running` screen should disappear and should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
+        14. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Then reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
+
+=== "via ETX Passthrough"
+
+    <figure markdown>
+    ![via EdgeTX Passthrough](../../assets/images/Method_intTX_EdgeTXPassthrough.png)
+    </figure>
+
+    !!! info "Info"
+        ETX Passthrough is the result of the collaborative effort between RadioMaster, EdgeTX and ExpressLRS.
+
+        It is only available on Radios with Internal ExpressLRS Modules.
+    
+    Before you start, ensure you have the latest EdgeTX firmware version on your Radio. Consult the EdgeTX [documentation](https://github.com/EdgeTX/edgetx.github.io/wiki/EdgeTX-Installation-Guide) regarding the updating process.
+
+    - `TX16S MK2`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0).
+    - `Zorro`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0). It often comes with an earlier EdgeTX 2.7.0 version (2bdd4974) which results in unsuccessful flashing.
+    - `TX12 MK2`: Update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
+    - `Boxer`: The factory EdgeTX firmware should be based off an early EdgeTX 2.8.0 and wouldn't need an update.
+
+    !!! tip "Hot Tip"
+        To ensure updating success with this method, update the EdgeTX firmware on the radio as mentioned above.
+
+    ??? Tip "Simplest EdgeTX Updating Procedure"
+        1. Visit http://buddy.edgetx.org/.
+        2. Select the EdgeTX version and the Radio Model you want to update from the Left-hand side column.
+        3. Click the ++"Download .bin"++ button at the bottom of the page.
+        4. Save the firmware file into your Radio's SD Card, inside the `Firmware` Folder.
+        5. Reboot the Radio into DFU/Bootloader mode.
+            - Turn off your radio.
+            - Press and hold the two horizontal Trim switches then press the Power button. The Screen should Light up. Let go of the buttons.
+            - Some Radios have a different procedure, like the BetaFPV Lite Radio 3 Pro. Consult the Manual for the steps to get it into this DFU/Bootloader mode.
+        6. Select `Write Firmware`.
+        7. Navigate to the EdgeTx firmware file you just downloaded.
+        8. Follow the screen prompts.
+        9. Once Writing is complete, reboot the radio.
+        10. Check the Radio's Version Page to verify you have the version you need.
+
+    Also make sure you have an internal ELRS module on your Radio. The following steps only apply to handsets with ExpressLRS-specific internal modules. There are stickers marked with "ELRS" attached to your radio packaging or boxes, as well as on the JR module bays indicating the type of internal rf module the radio have.
+
+    <figure markdown>
+    ![Internal ELRS Marking](../../assets/images/ELRS-variant-Box.jpg)
+    <figcaption>Example Sticker On RadioMaster Handset/Radios</figcaption>
+    </figure>
+
+    The current Model on the radio should be using the [Internal ExpressLRS Module](../transmitters/tx-prep.md#rf-protocol). Test this by loading the ExpressLRS Lua Script from the Tools Menu.
+
+    <figure markdown>
+    ![Lua Running]
+    </figure>
+
+    There's one more setting you want to make sure is set properly before you proceed.
+
+    1. Press the ++"SYS"++ Key on the Radio.
+    2. Press the ++"PAGE"++ Key until you reach the Hardware Page.
+    3. Scroll down until you get to the Serial Ports settings.
+    4. Scroll down and select USB-VCP. Press ++enter++ and use the Scroll Wheel to set it to `CLI` mode if it is set to a different setting. Press ++enter++ once more to confirm the changes.
+    5. Exit the Hardware menu by long-pressing ++"RTN"++ Key.
+
+    Now follow the next steps to get your Internal ExpressLRS Module Updated:
+
+    1. Connect your powered-up Radio to your Computer via a USB Data Cable.
+
+        <figure markdown>
+        ![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
+        </figure>
+
+    2. On your Radio, scroll down and select `USB Serial(VCP)` then press the ++enter++ Key. Set your Radio aside in the meantime.
+
+        <figure markdown>
+        ![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
+        </figure>
+
+    3. On your Computer, check whether your Radio is being recognized correctly as a {==STMicroelectronics Virtual COM Port==} device.
+
+        !!! tip "Important"
+            This is a vital step and a common failure point. Pay attention.
+
+        Windows Users can use Device Manager to check whether the Radio is being recognized correctly.
+
+        <figure markdown>
+        ![Device Manager](../../assets/images/DeviceMngr.png)
+        </figure>
+
+        :material-alert-outline: Yellow Caution Triangles in the Device Manager, or any mention of `<Radio Name> Serial Port` means drivers aren't installed.
+
+        [Download](https://www.st.com/en/development-tools/stsw-stm32102.html) the Driver package first. Unzip/extract the contents of the package and run/execute (double-click) the installer file (`VCP_V1.5.0_Setup_W7_x64_64bits.exe` for Windows Users). 
+        
+        Once Drivers are installed, check again if the Radio is now being recognized correctly. You may have to unplug-replug the USB Cable first or even reboot your computer.
+
+        You only have to do this once usually.
+    
+    4. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
+
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your TX module.
+
+        <br clear="right" />
+    5. Select the Device Category and Device target matching your hardware.
+
+        - Device Category:
+            - `RadioMaster 2.4 GHz`
+
+        - Device:
+            - `RadioMaster Zorro 2400 TX`
+            - `RadioMaster TX16S 2400 TX`
+            - `RadioMaster TX12 2400 TX`
+            - `RadioMaster Boxer 2400 TX`
+
+    6. Set the Flashing Method to `EdgeTXPassthrough`
+
+        <figure markdown>
+        ![via EdgeTX Passthrough](../../assets/images/Method_intTX_EdgeTXPassthrough.png)
+        </figure>
+
+    7. Set the [firmware options](../firmware-options.md) for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
+        - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
+    8. Click the ++"Build & Flash"++ button.
+
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
+        
+    9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+    10. Unplug your Radio from USB.
+    11. Using the [ExpressLRS Lua Script] from the Tools Menu, check if the firmware version got updated.
+    
+        <figure markdown>
+        ![Lua Loaded](../../assets/images/tx-internalLuaCheck.jpg)
+        </figure>
+
+[Lua Script]: ../../assets/images/lua2.jpg
+[Lua Running]: ../../assets/images/lua3.jpg
+[Lua WiFi]: ../../assets/images/lua/wifirm.png
+[Configurator Release]: ../../assets/images/ConfiguratorRelease.png
+[Temp TX]: ../../assets/images/build-temp-tx.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
-[Firmware Options]: ../firmware-options.md
+[Build]: ../../assets/images/Build.png
+[CP210x]: ../../assets/images/device-mngr-cp210x.png
+[TX update tab]: ../../assets/images/web-update-tx.png
+[Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
+[Old File Upload]: ../../assets/images/web-firmwareupdate.png
+[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script

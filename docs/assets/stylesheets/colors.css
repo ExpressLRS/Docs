@@ -4,6 +4,7 @@
   --md-primary-fg-color--dark: #007a6c;
   --md-primary-bg-color: #fff;
   --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+  --md-typeset-kbd-color:hsla(0, 0%, 95%, 1);
 }
 
 [data-md-color-accent="expresslrs"] {

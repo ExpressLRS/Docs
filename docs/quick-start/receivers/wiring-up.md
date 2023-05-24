@@ -8,303 +8,95 @@ description: Let's get your ExpressLRS Receiver connected to your flight control
 !!! tip "Hot Tip"
     Manufacturer-suggested Receiver UARTs, or UARTs alloted for Receivers usually have a pull-down resistor to aid with SBUS (RX pad inversion) which will result into SOLID LEDs on the ESP-based ExpressLRS Receivers. It is best to avoid those UARTs unless you know your UARTs.
 
-    > When in doubt, avoid that UART. --deadbyte
-
 !!! tip "Hint!"
     KISS FCs may label its UARTs differently. You might have to wire up the Rx pin into an RX pad, and the Tx pin into a TX pad. Always check your FC wiring guide/manual.
 
-## Preparations
+## Introduction
 
-Have your Flight Controller Wiring Manual handy before you proceed. Make sure you have the right wiring diagram for your flight controller. Some Flight Controllers have different board revisions and they could have changed the board layout or pin assignments.
+UART-based ExpressLRS Receivers use the CRSF Serial Protocol to communicate with a Flight Controller. This protocol uses two pins: one for the Control Signals and the other for the Telemetry Signals. Think of it as a two-lane, no-counterflow highway.
 
-Determine if your Flight Controller have specific UARTs (RX and TX pair) for specific purpose. An example of such were ESC Telemetry UARTs or VTX SmartAudio/Tramp UARTs. Some Flight Controllers, specially those based off the F4 MCUs with limited UARTs, tend to have two of the same UART pads in different locations. You would want to make sure no other peripheral is wired up on the UART you chose for your ExpressLRS Receiver. You can move your existing wiring to other UARTs to make sure your ExpressLRS receiver will get a full UART connection (Rx and Tx pair of pads). Think of a UART as a USB port on your computer that can host different USB devices at one time.
+Here's a typical ExpressLRS Receiver pinout indicating to which Flight Controller pads each pin should be connected:
 
 <figure markdown>
-![mamba405mk2](../../assets/images/mambaF405mk2.jpg)
-<figcaption>An FC Pinout Diagram <br />with RX6 & TX3 in two locations</figcaption>
+![HM2400 connection](../../assets/images/EPWiring.png)
 </figure>
 
-Flight Controllers have at least 2 UARTs. One for the VTX Smartaudio/Tramp Protocol connection (only requires a TX pad), and another for a Receiver. There are Flight Controllers that often only have an RX pad for the Receiver UART, which you can still use for your ExpressLRS Receiver although you will have to forego Telemetry and Passthrough Updates. If you must have Telemetry from the FC to your radio, you will need a full UART (RX and TX pair) and in such cases you can use Soft Serial for your VTX Smartaudio/Tramp connection and use the other UART for your Receiver.
+The TX pin of an ExpressLRS Receiver sends or transmits the Control Signals it received from the Radio to the Flight Controller. Meanwhile, the RX pin of an ExpressLRS Receiver accepts or receives the Telemetry Data (like Battery Voltage, Current Draw, GPS Coordinates and/or Craft Attitude) from the Flight Controller for sending back to the Radio Handset.
 
-F7-based Flight Controllers, like those with F722 or F745 MCUs, often suggests wiring receivers on a particular UART. Because you can invert the UART signal for these MCUs, there's no specific pad for SBUS, and as such, these suggested *Receiver UARTS* often have a pull-down resistor to aid with the signal inversion. If you have wired your ESP-based ExpressLRS Receiver (e.g. EP1 or EP2) to these UARTs and the LED doesn't blink at all and stays solid (indicating it is in bootloader mode), there's a high chance that the UART's RX pad have such pull-down resistor. To test for this, unsolder the rx and tx wires of the Receiver from the FC, and verify the LED blinks slow and after some 20-30s (or 60s), the LED would blink fast to indicate WiFi mode.
+??? Tip "What's a UART?"
+    A UART is a pair of RX and TX pads on the Flight Controller. It's commonplace to refer to it as your Flight Controller's USB ports where you can connect different peripherals like a GPS or a Receiver. Only one device can occupy a UART and it can only do one function.
 
-There are F4-based Flight Controllers that also use the same UART for SBUS and other protocols. An example is the iFlight F405 Succex Flight Controllers. They often suggest using UART2 for Receivers. An inverted R2 pad is provided for SBUS receivers (sometimes labeled iR2 or nR2) and the regular R2 pad for other protocols. We suggest avoiding such UARTs altogether.
+    R3 and T3 belongs to UART3; RX2 and TX2 belongs to UART2. Flight Controller Manufacturers label their UARTs differently. Some use just "R" and "T" followed by the UART number. Others use "RX" and "TX" followed by the UART number.
 
-Here's some Receiver LED patterns:
+    __UART__ is an acronym for Universal Asynchronous Receiver/Transmitter
+
+## Connecting a Receiver
+
+Now that you have some basic info, connect your receiver to any free UART on your Flight controller. Check your Flight Controller Wiring Manual which UARTs you can use.
+
+- The GND or G pad should be connected to any Ground pad on the Flight Controller(FC)
+- The VCC or 5 pad should be connected to any 5v (or 4v5) pad on the Flight Controller(FC)
+- The TX or T pad should be connected to an RX pad of the same UART number where the RX or R wire is on the Flight Controller(FC)
+- The RX or R pad should be connected to a TX pad of the same UART number where the TX or T wire is on the Flight Controller(FC)
+
+<figure markdown>
+![Receiver-to-FC Wiring](../../assets/images/receiver-wiring-to-FC.png)
+</figure>
+
+Check for shorts between pads and clean up flux or any soldering residue if you have soldered the receiver yourself. 
+
+!!! warning "Not so fast!"
+    DO NOT shrink wrap or tuck away the receiver yet. We have to do some preliminary testing first!
+
+Ensure there are no shorts on your wiring and power up the receiver.
+
+- Best to power up the flight controller with a LiPo to ensure the receiver will work normally on flight-ready conditions. 
+- It is important to ensure there are no shorts on your wiring BEFORE you power up the system.
+
+Observe the Receiver LED. It should have one of these behaviors:
 
 || LED Indication | Status |
 |---|---|---|
 |![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)| Slow blink 500ms on/off | Waiting for connection from transmitter |
-|![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)| Fast blinking 25ms on/off | WiFi mode enabled |
-|![CONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)| Solid on | Connected to a transmitter, or bootloader mode enabled |
+|![LEDSEQ_BINDING](https://cdn.discordapp.com/attachments/738450139693449258/921065812763218010/LEDSEQ_BINDING_10_10_10_100.gif)| Double blink then pause | Binding mode is active |
+|![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)| Fast blinking 25ms on/off | WiFi mode has started. Starts after 60s. |
+|![CONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)| Solid on | Bootloader mode is active |
 
-For other modes, see the [LED Status page](../led-status.md).
+If the Receiver uses an RGB LED(e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP Dual), the following can be observed:
 
-Should you really need to use that particular UART that puts your ESP-based ExpressLRS Receiver into Bootloader mode, you can wire up a pull-up resistor between the RX pad of the FC UART and a 3.3v or 5v pad. You can use any resistor with values ranging from 300ohm to 1K ohm. The wattage rating isn't as important as this will be a signal pull-up, but choose an appropriate size.
+| LED Indication | Status |
+|---|---|
+| Rainbow fade effect | Starting Up |
+| Slow blink 500ms on/off | Waiting for connection from transmitter |
+| Orange Double blink then pause | Binding mode enabled |
+| Green heartbeat | WiFi mode has started. Starts after 60s  |
 
-<figure markdown>
-![pull up](../../assets/images/pull-up.png)
-<figcaption>Pull up resistor wiring</figcaption>
-</figure>
+If the Receiver LED doesn't light up at all, quickly disconnect the power and check your wiring.
 
-Those using DJI Air Units require another set of UARTs. The SBUS connection from the Air Unit to the FC is not needed and sometimes interfere with the ExpressLRS Receiver, moreover if it's wired up to the same UART as the Receiver. It's generally a good idea to disconnect that SBUS wire altogether. If the UART that's left for your ExpressLRS Receiver has a pull-down resistor making your Receiver stay in Bootloader Mode, swap the two devices (i.e. Air Unit goes to the Receiver UART, ExpressLRS Receiver goes into the Air Unit UART).
+If your receiver has the RGB LED (e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP Dual), and the receiver LED is not lighting up despite making sure it's wired up correctly, this could mean that the Receiver is in Bootloader Mode.
 
-## Axisflying Receivers
+If your Receiver LED lights up but it's just a Solid light, it is in Bootloader mode as the chart above indicates.
 
-<figure markdown>
-![Axis Thor RX](../../assets/images/rx-axis-thor.jpg)
-<figcaption>Axisflying Thor, ESP-based</figcaption>
-</figure>
+??? danger "My Receiver is in Bootloader Mode!"
 
-Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
+    Here are the things you can do if the Receiver is in Bootloader Mode:
 
-This is an ESP-based receivers and updating via WiFi is supported.
+    1. Check if the Boot button on the Receiver is being pressed or if it's damaged.
+        - If the button is being pressed or pinched, remove the cause of the pressing or pinching. Heatshrink can sometimes press a button on the receiver.
+        - If the button is damaged, remove the button or replace the receiver with a better one. Consider asking the seller for a replacement.
 
-Connect your FC to USB and configure your FC firmware as shown on the [next page].
+    2. If the receiver doesn't have a Boot button and instead has a Boot pad, check if the Boot pad is not connected to a Ground pad. 
+        - If the Boot pad is connected to a Ground pad, disconnect or remove the connection.
 
-## BetaFPV Receivers
+    3. Disconnect the RX and TX wires of the Receiver from the Flight Controller. Reconnect power to the drone or aircraft. Observe the LED on the Receiver once again.
+        - If it starts Blinking Slowly (500ms Blink Pattern), you will need to move the receiver wiring to a different UART.
+        - If the other UART is occupied by another peripheral, disconnect it and swap places with the Receiver.
+        - If there is no other Full UART, you can try wiring a Pull-up Resistor: Connect a Resistor (300 Ohm to 1k Ohm value; a lower value is more effective) between this UART's RX pad and either a 5v or 3.3v pad as shown below:        
 
-<figure markdown>
-![betafpv 900Mhz](../../assets/images/betaFPVrx900.png)
-<figcaption>BetaFPV 900MHz Nano, ESP-based</figcaption>
-</figure>
+        <figure markdown>
+        ![ExpressLRS Pull-up](../../assets/images/pull-up.png)
+        </figure>
 
-<figure markdown>
-![betafpv 2.4Ghz](../../assets/images/betaFPVrx2400.png)
-<figcaption>BetaFPV 2.4GHz Nano, ESP-based</figcaption>
-</figure>
+    4. If you are using any of the Digital FPV systems like the DJI FPV Air Unit, Caddx Vista or DJI O3 Air Unit, and you wired or connected all six wires to your Flight Controller, you will need to remove the SBUS/DJI HDL wire.
 
-<figure markdown>
-![betafpv Lite](../../assets/images/betaFPVrxLite.png)
-<figcaption>BetaFPV 2.4GHz Lite (Flat & Tower), ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![betafpv SuperD](../../assets/images/BetaFPVSuperD.png)
-<figcaption>BetaFPV SuperD Diversity Receiver, ESP-based</figcaption>
-</figure>
-
-Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Don't forget to also wire up 5v(VCC) and Gnd.
-
-These are ESP-based receivers and updating via WiFi is supported.
-
-Connect your FC to USB and configure your FC firmware as shown on the [next page].
-
-## Foxeer Receivers
-
-<figure markdown>
-![Foxeer ExpressLRS Receivers](../../assets/images/FoxeerWiring.png)
-<figcaption>Foxeer LNA and Lite 2.4GHz, ESP-based</figcaption>
-</figure>
-
-Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Don't forget to also wire up 5v(VCC) and Gnd.
-
-These are ESP-based receivers and updating via WiFi is supported.
-
-Connect your FC to USB and configure your FC firmware as shown on the [next page].
-
-Also shown were the locations of the boot pads and boot button.
-
-## Frsky R9MM/mini, R9mx, R9Slim, R9Slim+
-
-<figure markdown>
-![FC Wiring](../../assets/images/FCWiringR9.jpg" width ="100%")
-</figure>
-
-!!! attention "Note"
-    This will be the same wiring you'll use for flying and the subsequent firmware updates (via Passthrough). Forget the factory wiring guide!
-
-After you've flashed the [bootloader](r9.md#bootloaders) and wired your receiver as above, proceed to configure up your flight controller as shown on the [next page].
-
-!!! attention "Note"
-    R9 Slim requires flashing via STLink first. Passthrough should work for updates.
-
-## GEPRC 900MHz & 2.4GHz
-
-<figure markdown>
-![GEPRC 900MHz](../../assets/images/GEPRC-Nano900.png)
-<figcaption>GEPRC Nano 900MHz, ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![GEPRC Nano 2.4GHz](../../assets/images/GEPRC-Nano2400.png)
-<figcaption>GEPRC Nano, ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![GEPRC NanoSE 2.4GHz](../../assets/images/GEPRC-NanoSE.png)
-<figcaption>GEPRC Nano SE, ESP-based</figcaption>
-</figure>
-
-Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Take note the location of the Nano SE Boot pad, and the Boot buttons of the Nano.
-
-As this is an ESP-based receiver, be aware that there are certain FCs that puts their Receiver UART's RX pads Low, which in turn, puts the receiver to Bootloader mode unintentionally.
-
-After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
-
-## Happymodel EP1, EP2, PP
-
-<figure markdown>
-![HM2400 connection](../../assets/images/EPWiring.png)
-<figcaption>Happymodel EP1 & EP2, ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![HM2400 connection](../../assets/images/PPWiring.png)
-<figcaption>Happymodel PP</figcaption>
-</figure>
-
-The EP receivers require their Boot pads (see figure above) be bridged on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the bridge needs to be removed, and is no longer needed for subsequent passthrough flashing.
-
-Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode (indicated with a solid LED) and won't activate the wifi hotspot.
-
-The PP doesn't have boot pads and also do not support WiFi as it uses an STM-based MCU.
-
-After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
-
-## Happymodel ES900RX
-
-<figure markdown>
-![ES900RX](../../assets/images/es900rx-conn.png)
-<figcaption>ES900RX, ESP-based</figcaption>
-</figure>
-
-Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Additionally, the Boot Pads, encircled in the photo above, needs to be bridged for the first-time passthrough flash from the factory firmware.
-
-As this is an ESP-based receiver, be aware that there are certain FCs that puts their Receiver UART's RX pads Low, which in turn, puts the receiver to Bootloader mode unintentionally.
-
-Should you be updating via Wifi, the bridging of the boot pads is not needed. 
-
-After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
-
-## Happymodel ES915/868RX
-
-<figure markdown>
-![ES915RX](../../assets/images/ES915rx.jpg)
-</figure>
-
-Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
-
-These receivers are STM-based, and thus no support for WiFi Flashing/Updating.
-
-Connect your FC to USB and configure your FC firmware as shown on the [next page].
-
-## iFlight 900MHz & 2.4GHz
-
-<figure markdown>
-![iFlight Dipole](../../assets/images/iFlight-2400Dipole.png)
-<figcaption>iFlight 900MHz & 2.4GHz Dipole, ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![iFlight SMD](../../assets/images/iFlight-2400smd.png)
-<figcaption>iFlight 2.4GHz SMD, ESP-based</figcaption>
-</figure>
-
-Connect Rx to a Tx pad on the FC and Tx to an Rx pad on the FC. Boot buttons are indicated above.
-
-As this is an ESP-based receiver, be aware that there are certain FCs that puts their Receiver UART's RX pads Low, which in turn, puts the receiver to Bootloader mode unintentionally.
-
-After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
-
-## Jumper Aion
-
-<figure markdown>
-![Jumper Aion RX](../../assets/images/JumperAionRX.png)
-<figcaption>Jumper Aion, ESP-based</figcaption>
-</figure>
-
-Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
-
-This is an ESP-based receivers and updating via WiFi is supported.
-
-Connect your FC to USB and configure your FC firmware as shown on the [next page].
-
-## MatekSys Receivers
-
-<figure markdown>
-![mateksys r24-d](../../assets/images/ELRS-R24-D.jpg)
-<figcaption>R24-D (Antenna) Diversity, ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![mateksys r24-d](../../assets/images/ELRS-R24-S.jpg)
-<figcaption>R24-S SMD Antenna, ESP-based</figcaption>
-</figure>
-
-Connect Rx/R to a Tx pad on the FC and Tx/T to an Rx pad on the FC. Don't forget to also wire up 5v and Gnd.
-
-These are ESP-based receivers and updating via WiFi is supported.
-
-Connect your FC to USB and configure your FC firmware as shown on the [next page].
-
-## NamimnoRC Voyager & Flash
-
-<figure markdown>
-![Namimno Voyager](../../assets/images/Pinout-Voyager.png)
-<figcaption>Namimno Voyager 900MHz Receiver</figcaption>
-</figure>
-
-<figure markdown>
-![Namimno Flash](../../assets/images/Pinout-Flash.png)
-<figcaption>Namimno Flash 2.4GHz Receiver v1</figcaption>
-</figure>
-
-<figure markdown>
-![NamimnoRC Flash V2 SMD](../../assets/images/Namimno-Flash-RX-V2_S.png)
-<figcaption>Namimno Flash V2 SMD; ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![NamimnoRC Flash V2 T](../../assets/images/Namimno-Flash-RX-V2_T.png)
-<figcaption>Namimno Flash V2 T-Dipole; ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![NamimnoRC Flash V2 Diversity](../../assets/images/Namimno-Flash-RX-V2_D.png)
-<figcaption>Namimno Flash V2 Diversity; ESP-based</figcaption>
-</figure>
-
-Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
-
-Also shown above were the boot pads for the V2 of these receivers.
-
-Connect your FC to USB and configure your FC firmware as shown on the [next page].
-
-## RadioMaster RP
-
-<figure markdown>
-![RadioMaster RP1 2.4GHz wiring pinout](../../assets/images/RM-RP1.png)
-<figcaption>RadioMaster RP1, ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![RadioMaster RP2 2.4GHz wiring pinout](../../assets/images/RM-RP2.png)
-<figcaption>RadioMaster RP2, ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![RadioMaster RP3 2.4GHz wiring pinout](../../assets/images/RM-RP3.png)
-<figcaption>RadioMaster RP3, ESP-based</figcaption>
-</figure>
-
-The RP receivers require their Boot pad (see figure above) shorted to ground on first time Passthrough Flash from their factory firmwares. After the first passthrough flashing, the Boot pad connection needs to be removed, and is no longer needed for subsequent passthrough flashing.
-
-Flashing via Wifi doesn't need the Boot Pads bridged. Moreover, if it is bridged, the receiver will stay in bootloader mode (indicated with a solid LED) and won't activate the wifi hotspot.
-
-After you've wired your receiver, proceed to configuring your FC firmware as shown on the [next page].
-
-## Vantac ELRS
-
-<figure markdown>
-![Vantac ELRS](../../assets/images/vantac-elrs2.4_rx.png)
-<figcaption>Vantac, ESP-based</figcaption>
-</figure>
-
-Connect Rx to a Tx pad in the FC and the Tx to an Rx pad in the FC. Of course, don't forget to connect VCC to a 5V pad, and GND to a GND pad on the FC.
-
-This is an ESP-based receivers and updating via WiFi is supported.
-
-Connect your FC to USB and configure your FC firmware as shown on the [next page].
-
-[next page]: configuring-fc.md
+If your receiver is behaving normally (i.e. not in Bootloader Mode), then you can power down your aircraft and proceed to the next step: [Configuring your Flight Controller](../receivers/configuring-fc.md)

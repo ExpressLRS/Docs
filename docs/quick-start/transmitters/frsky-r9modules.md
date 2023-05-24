@@ -5,123 +5,161 @@ template: main.html
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
 !!! warning
-    The R9M Lite Pro **can not** be flashed via OpenTx or EdgeTX, and therefore requires an STLink v2 to flash. See the guide [below](#flashing-using-stlink)
+    The R9M Lite Pro **can not** be flashed via OpenTx or EdgeTX (Stock_BL method), and therefore requires an STLink v2 to flash. See the guide [below](#via-stlink)
 
-## Flashing via OpenTX
+## Flashing/Updating TX Module Firmware
 
-!!! info
-    This method requires OpenTX 2.3.12 or newer; or EdgeTX 2.4.0 or newer.
+=== "via Stock_BL"
 
-### Flashing the Bootloader
+    <figure markdown>
+    ![via BL](../../assets/images/Method_TX_StockBL.png)
+    </figure>
 
-The bootloader is required to be flashed first prior to flashing the ExpressLRS firmware as the bootloader will replace the factory-bootloader, and enable the hardware to instead use the ExpressLRS code.
+    !!! info
+        This method requires OpenTX 2.3.12 or newer; or EdgeTX 2.4.0 or newer.
 
-!!! info "FYI"
-    You only need to flash the Bootloader ONCE. After it's flashed into the receiver, you **don't** have to reflash it in every update.
+    1. Download and save [`r9m_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9m_elrs_bl.frk?raw=true)(14kb) onto the SD card of your radio, in the `/FIRMWARE` folder.
 
-Using an `OpenTX` transmitter, you flash the bootloader, and then flash ELRS.
+    2. Flash `r9m_elrs_bl.frk` to your TX module:
 
-Here is a quick 2 minute demo if you would rather watch a video than read the steps:
-<figure markdown>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DG3f-lnNlms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+        - Access the System Menu on your radio. 
+            - On newer radios, you can press the ++"SYS"++ key to open the System Menu
+            - On older radios, or radios that only have a menu key, long-press the ++context-menu++ key to open the System Menu
+        - Using the ++"Page"++ key/s, navigate to the SD-HC Card page.
+        - Scroll-down and open the `FIRMWARE` folder where you can find the **r9m_elrs_bl.frk** file.
+        - Flash the frk file by holding ++"Enter"++ key and selecting "Flash external module"
 
-With the previous step ([Radio Preparation]) done, you should now readily flash your R9 Transmitter Module.
+        !!! info "FYI"
+            You only need to flash the Bootloader ONCE. After it's flashed into the module, you **don't** have to reflash it in every update.
 
-Copy [`r9m_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9m_elrs_bl.frk?raw=true)(14kb) onto the SD card of your radio, in the `/FIRMWARE` folder.
+        Video Guide:
+        <figure markdown>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DG3f-lnNlms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </figure>
 
-Flash `r9m_elrs_bl.frk` to your TX module:
+    3. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
 
-* Navigate in OpenTX to the TOOLS menu (hold SYS button)
-* Page to the SD-HC CARD page, then the `FIRMWARE` folder
-* Flash the frk file by holding OK and selecting "Flash external module"
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your TX module.
 
-### Flashing the firmware
+        <br clear="right" />
+    4. Select the Device Category and Device target matching your hardware.
 
-- Targets: 
-    - `Frsky_TX_R9M_via_stock_BL`
-    - `Frsky_TX_R9M_LITE_via_stock_BL`
+        - Device Category: 
+            - `Frsky R9`
 
-- Device Category: 
-    - `Frsky R9`
+        - Device:
+            - `Frsky TX R9M`
+            - `Frsky TX R9M LITE`
 
-- Device:
-    - `Frsky TX R9M`
-    - `Frsky TX R9M LITE`
+    5. Set the Flashing Method to `Stock_BL`
 
-<figure markdown>
-![via BL](../../assets/images/Method_TX_StockBL.png)
-<figcaption>Flashing via Stock_BL</figcaption>
-</figure>
+        <figure markdown>
+        ![via BL](../../assets/images/Method_TX_StockBL.png)
+        </figure>
 
-In the ExpressLRS Configurator, select the correct target for your module and set your [Firmware Options]. 
+    6. Set the [firmware options](../firmware-options.md) for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
-Click on **Build** and wait for the firmware to be compiled.
+    7. Click the ++"Build"++ button.
 
-<figure markdown>
-![Build]
-</figure>
+        <figure markdown>
+        ![Build]
+        </figure>
+        
+    8. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-After that's done, ExpressLRS Configurator Log should show the `Success` Message, and it will automatically open the folder where the **firmware.elrs** can be found. Put (copy-paste) the firmware.elrs to your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access). Once on your radio, navigate to the `/FIRMWARE` folder, select the firmware.elrs and click-hold the Enter button and select "Flash External ELRS".
+    9. A Temp folder will open up with the **firmware.elrs** file. Copy-paste the firmware.elrs file into your Radio's SD Card (preferably to the `/FIRMWARE` folder for easy access).
 
-By this point, the bootloader (r9m_elrs_bl.frk) should've been flashed already. Wait for the flashing to finish, and if your module is equipped with a speaker (full size R9Ms), you should hear the tune and two beeps (if the external module is now set to CRSF protocol).
+    10. On your radio, open the System Menu. 
 
-## Flashing via STLink
+        - On newer radios, you can press the ++"SYS"++ key to open the System Menu
+        - On older radios, or radios that only have a menu key, long-press the ++context-menu++ key to open the System Menu
 
-- Targets:
-    - `Frsky_TX_R9M_via_STLINK`
-    - `Frsky_TX_R9M_LITE_via_STLINK`
-    - `Frsky_TX_R9M_LITE_PRO_via_STLINK`
+    11. Using the ++"Page"++ key/s, navigate to the SD-HC Card page, scroll-down and open the `FIRMWARE` folder where you can find the **firmware.elrs** file.
 
-- Device Category: 
-    - `Frsky R9`
+    12. Highlight the file and press-hold the ++"Enter"++ button and select "Flash External ELRS". Wait for the firmware to be written.
 
-- Device:
-    - `Frsky TX R9M`
-    - `Frsky TX R9M LITE`
-    - `Frsky TX R9M LITE PRO`
+        ??? tip "No Sync"
+            - Make sure you have updated the OpenTX/EdgeTX firmware of your radio to a newer version
+            - Make sure the current model selected on the radio is set up for ExpressLRS Use. See the [Radio Preparation] guide.
 
-<figure markdown>
-![via STLink](../../assets/images/Method_TX_STLink.png)
-<figcaption>Flashing via STLink</figcaption>
-</figure>
+    13. With the [ExpressLRS Lua Script] in the System Menu's Tools page, verify if the firmware version has been updated.
 
-This method is an **irreversible** one. You will not be able to go back to Frsky firmwares with this method. You have been warned!
+=== "via STLink"
 
-This method also involves taking apart your module and soldering wires directly into its board. If you're not comfortable doing this, **STOP** now.
+    <figure markdown>
+    ![via STLink](../../assets/images/Method_TX_STLink.png)
+    </figure>
 
-<figure markdown>
-![R9M-stlink](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/FrSky%20R9M%20(2018%20model)%20st%20link%20connection.png)
-<figcaption>R9M STLink Connection</figcaption>
-</figure>
+    !!! warning "Warning"
+        This method is an **irreversible** one. You will not be able to go back to Frsky firmware with this method. You have been warned!
 
-<figure markdown>
-![R9M Lite](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS/de61d9f59d5b606ccd5b92ceb5f666d33646c938/img/stlink_connection_r9m_lite.JPG)
-<figcaption>R9M Lite STLink Connection</figcaption>
-</figure>
+    1. Carefully disassemble your TX Module to get access to the mainboard.
 
-<figure markdown>
-![R9M Lite Pro](../../assets/images/R9LitePro-STLINK.jpg)
-<figcaption>R9M Lite Pro STLink Connection</figcaption>
-</figure>
+    2. Connect your STLink V2 dongle to the pads shown in the images below:
 
-Wire up your module as shown above to your STLink device. This is important before any of the steps below.
+        <figure markdown>
+        ![R9M-stlink](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/FrSky%20R9M%20(2018%20model)%20st%20link%20connection.png)
+        <figcaption>R9M STLink Connection</figcaption>
+        </figure>
 
-Before flashing, disable `'Readout Protection'`. To do this download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). After such, you can now disconnect (Target -> Disconnect) and close the ST-Link Utility.
+        <figure markdown>
+        ![R9M Lite](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS/de61d9f59d5b606ccd5b92ceb5f666d33646c938/img/stlink_connection_r9m_lite.JPG)
+        <figcaption>R9M Lite STLink Connection</figcaption>
+        </figure>
 
-With the module still connected to the STLink, and your [Firmware Options] set, hit **Build & Flash** in the ExpressLRS Configurator and wait for the process to finish.
+        <figure markdown>
+        ![R9M Lite Pro](../../assets/images/R9LitePro-STLINK.jpg)
+        <figcaption>R9M Lite Pro STLink Connection</figcaption>
+        </figure>
 
-<figure markdown>
-![Build & Flash]
-</figure>
+    3. Connect your STLink V2 dongle to your Computer's USB Port. Make sure it is being detected correctly.
 
-Once that's done, and the Success Message showing, you can now remove/unsolder the STLink, re-assemble the module, and put it into your Radio's Module Bay. The ExpressLRS tune should play and then two beeps after that can be heard, for units that have a speaker (R9Ms) and if the External Module is set to CRSF Protocol.
+    4. Before flashing, disable `'Readout Protection'`. To do this, download the [ST-LINK Utility](https://www.st.com/en/development-tools/stsw-link004.html) and follow this quick [how to video](https://youtu.be/SEYQ1HpRmk0). After such, you can now disconnect (Target -> Disconnect) and close the ST-Link Utility.
 
-Verification can be done using the [ExpressLRS Lua] script. It should show the Version Number and Hash at the bottom, as well as the options you can set. If it's showing "Loading" at the top, check if External Module is set to CRSF for the selected model in your radio, and that the internal RF module is set to off. See the [General Troubleshooting] section for other ways to determine whether your module is flashed and ready for flying.
+    5. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+        ![Configurator Release]{ align=right }
 
-[Build]: ../../assets/images/Build.png
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your TX module.
+
+        <br clear="right" />
+    6. Select the Device Category and Device target matching your hardware.
+
+        - Device Category: 
+            - `Frsky R9`
+
+        - Device:
+            - `Frsky TX R9M`
+            - `Frsky TX R9M LITE`
+            - `Frsky TX R9M LITE PRO`
+
+    7. Set the Flashing Method to `STLink`
+
+        <figure markdown>
+        ![via STLink](../../assets/images/Method_TX_STLink.png)
+        </figure>
+
+    8. Set the [firmware options](../firmware-options.md) for your device.
+        - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
+
+    9. Click the ++"Build & Flash"++ button.
+
+        <figure markdown>
+        ![Build & Flash]
+        </figure>
+        
+    10. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+
+    11. Disconnect the STLink V2 dongle from the TX Module PCB and reassemble the module.
+    12. Reattach your TX Module into your Radio and, using the [ExpressLRS Lua Script], verify if the firmware version has been updated.
+
+[Configurator Release]: ../../assets/images/ConfiguratorRelease.png
 [Build & Flash]: ../../assets/images/BuildFlash.png
-[Firmware Options]: ../firmware-options.md
+[Build]: ../../assets/images/Build.png
 [Radio Preparation]: tx-prep.md
-[ExpressLRS Lua]: lua-howto.md
-[General Troubleshooting]: ../troubleshooting.md#general-troubleshooting
+[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script
