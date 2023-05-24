@@ -9,7 +9,7 @@ template: main.html
 === "via STLink"
 
     !!! note "Note"
-        The only way to flash the Ghost Atto/Zepto to ExpressLRS for the first time is using STLink. This is a one-way process, there is no returning to the stock firmware after flashing.
+        The only way to flash the Ghost Atto/Zepto to ExpressLRS for the first time is by using STLink. This is a one-way process. There is no returning to the factory firmware after flashing.
 
     <figure markdown>
     ![via STLink](../../assets/images/Method_RX_STLink-stm.png)
@@ -17,7 +17,7 @@ template: main.html
 
     1. Disconnect the Receiver from your Flight Controller.
 
-    2. Wire up the Receiver into an STLink V2 dongle. Find the CLK, DIO,RST, 3v3 and Gnd pads and wire them straight up.
+    2. Wire up the Receiver into an STLink V2 dongle. Find the CLK, DIO, 3v3 and Gnd pads and wire them to the corresponding pins of the dongle.
 
         <figure markdown>
         ![ghost atto](../../assets/images/GHST_ATTO_V1.1_PINOUT.png)
@@ -27,8 +27,8 @@ template: main.html
     3. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
-        - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your Receiver.
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     4. Select the Device Category and Device target matching your hardware.
@@ -47,7 +47,7 @@ template: main.html
 
     6. Set the [firmware options] for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
     7. Click the ++"Build & Flash"++ button.
 
@@ -57,7 +57,7 @@ template: main.html
           
     8. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-    9. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+    9. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
         ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
@@ -79,17 +79,15 @@ template: main.html
         !!! Warning "Important Step!"
             This is an important step and guarantees updating success. If you haven't done these, GO BACK to those pages.
 
-        - Disconnect and close Betaflight Configurator or INAV Configurator.
-        - Power-cycle the Flight Controller.
-            - If you plugged in LiPo, unplug it.
-            - Unplug-replug the USB Cable from your Flight Controller or Computer.
-            - If you will have to plug in LiPo to power up your Receiver, make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
+        - Disconnect and close your FC Configurator app (Betaflight Configurator, INAV Configurator, etc).
+        - If your receiver powers up with just USB connected to your flight controller, unplug it. Press and Hold the boot button on the receiver (not the FC) and then plug in the USB. Release the button right after the LED turn solid.
+        - If your receiver only powers up with a LiPo connected to your flight controller, unplug it. Then unplug-replug the USB cable to your flight controller. Do not replug LiPo yet.
 
     2. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
-        - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your Receiver.
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
@@ -108,7 +106,7 @@ template: main.html
 
     5. Set the [firmware options] for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
     6. Click the ++"Build & Flash"++ button.
 
@@ -122,7 +120,7 @@ template: main.html
         
     8. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-    9. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+    9. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
         ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)

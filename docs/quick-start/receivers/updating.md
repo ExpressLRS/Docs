@@ -39,7 +39,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
         ![via Passthrough](../../assets/images/Method_RX_Passthrough.png)
         </figure>
 
-    5. Set the [firmware options](../firmware-options.md) for your device.
+    5. Set the [firmware options] for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
         - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
@@ -104,7 +104,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
         ![via UART](../../assets/images/Method_RX_UART.png)
         </figure>
 
-    8. Set the [firmware options](../firmware-options.md) for your device.
+    8. Set the [firmware options] for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
         - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
@@ -148,7 +148,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
             ![via WiFi](../../assets/images/Method_RX_WiFi.png)
             </figure>
 
-        4. Set the [firmware options](../firmware-options.md) for your device.
+        4. Set the [firmware options] for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
             - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
@@ -228,7 +228,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
 
             ![WiFi Hotspot](../../assets/images/WifiHotspot.png){ align=right }
 
-            - If your Receiver flashed or configured with your Home WiFi SSID and Password, and can connect to that WiFi Network, then the Access Point will not appear.
+            - If your Receiver is flashed or configured with your Home WiFi SSID and Password, and can connect to that WiFi Network, then the Access Point will not appear.
             - `expresslrs` is the Password for this Access Point.
 
             ??? question "Where's the Access Point?"
@@ -285,7 +285,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
             ![via WiFi](../../assets/images/Method_RX_WiFi.png)
             </figure>
 
-        4. Set the [firmware options](../firmware-options.md) for your device.
+        4. Set the [firmware options] for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
             - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
@@ -481,7 +481,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
             ![via WiFi](../../assets/images/Method_RX_WiFi.png)
             </figure>
 
-        5. Set the [firmware options](../firmware-options.md) for your device.
+        5. Set the [firmware options] for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
             - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
@@ -516,3 +516,4 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
 [Receiver Wiring]: ../receivers/wiring-up.md
 [Unbricking]: ../unbricking.md
 [Configured]: ../receivers/configuring-fc.md
+[firmware options]: ../firmware-options.md

@@ -25,19 +25,19 @@ template: main.html
 <figcaption>Foxeer LNA and Lite ELRS 2.4GHz</figcaption>
 </figure>
 
-The image above show the receiver pinouts and their connections. As we're dealing with UART connection, Rx on receiver goes to a TX pad on the FC, and Tx on the receiver goes to an uninverted Rx pad on the FC.
+The image above shows the receiver pinouts and their connections. As we're dealing with a UART connection, Rx on the receiver goes to a TX pad on the FC, and Tx on the receiver goes to an uninverted Rx pad on the FC.
 
 See the [Receiver Wiring] page for a more in-depth guide and troubleshooting procedures. Some of the updating procedures below will not go through if your receiver is not wired correctly and behaving properly.
 
 ## Configuring your Flight Controller
 
-To configure your flight controller properly, please go through [Configure FC page](configuring-fc.md). These settings apply on INAV, Betaflight and other flight controller software.
+To configure your flight controller properly, please go through [Configure FC page](configuring-fc.md). These settings apply to INAV, Betaflight, and other flight controller software.
 
-Ports Tab should be setup so that Serial RX is on the UART where you have soldered the receiver.
+Ports Tab should be set up so that Serial RX is on the UART where you have soldered the receiver.
 
 Receiver protocol is `CRSF` with `serialrx_inverted = off` and `serialrx_halfduplex = off`.
 
-The next step will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer. This will refresh the connection and you'll be ensured that the port is not busy .
+The next steps will not be able to proceed properly and you'll have issues later if any of these are set differently. Once you have configured your Flight Controller software, close its Configurator and unplug-replug the USB cable from the FC or your computer to refresh the connection and you'll be ensured that the port is not busy.
 
 Some of the following procedures will not go through, particularly the via Passthrough method; or your receiver will not be fully functional, if these settings are incorrect.
 
@@ -54,17 +54,17 @@ Some of the following procedures will not go through, particularly the via Passt
         !!! Warning "Important Step!"
             This is an important step and guarantees updating success. If you haven't done these, GO BACK to those pages.
 
-        - Disconnect and close Betaflight Configurator or INAV Configurator.
+        - Disconnect and close your FC Configurator app (Betaflight Configurator, INAV Configurator, etc).
         - Power-cycle the Flight Controller.
             - If you plugged in LiPo, unplug it.
             - Unplug-replug the USB Cable from your Flight Controller or Computer.
-            - If you will have to plug in LiPo to power up your Receiver, make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
+            - If you have to plug in LiPo to power up your Receiver, make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
     2. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
-        - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your Receiver.
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     3. Select the Device Category and Device target matching your hardware.
@@ -84,7 +84,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
     5. Set the [firmware options] for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
         - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
     6. Click the ++"Build & Flash"++ button.
 
@@ -94,7 +94,7 @@ Some of the following procedures will not go through, particularly the via Passt
         
     7. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-    8. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+    8. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
         ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
@@ -122,12 +122,12 @@ Some of the following procedures will not go through, particularly the via Passt
         ??? Warning "Receiver LED already Solid"
             If the Receiver LED has become Solid from a failed update, and you're reflashing through this method, you still need to do the previous step: Manually putting the receiver into Bootloader Mode. This ensures the Receiver is indeed in a Bootloader state rather than some random boot loop.
         
-    4. Determine whether your UART Adapter is being detected properly as a USB-to-UART Device.
+    4. Determine whether your UART Adapter is being detected correctly as a USB-to-UART Device.
 
         ![CP210x]{ align=right }
 
         - Windows Users can check via Device Manager, Ports device grouping.
-        - Drivers will be needed if the UART Adapter is not being detected properly. This is indicated by a Yellow Caution Triangle :material-alert-outline: in Device Manager.
+        - Drivers will be needed if the UART Adapter is not being detected corrrectly. This is indicated by a Yellow Caution Triangle :material-alert-outline: in Device Manager.
         - Common USB-to-UART Adapter chip include: [CP210x](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads), [FTDI FT232](https://ftdichip.com/drivers/vcp-drivers/), [CH340](https://sparks.gogo.co.nz/ch340.html) and the [CH9102](https://sparks.gogo.co.nz/ch340.html) (driver download pages linked).
 
         <br clear="right" />
@@ -135,8 +135,8 @@ Some of the following procedures will not go through, particularly the via Passt
     5. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
-        - Make sure Official Releases is active from the horizontal tab.
-        - Make sure you have selected the Released version you want to flash into your Receiver.
+        - Make sure `Official Releases` is active from the horizontal tab.
+        - Ensure you select the Released version you want to flash into your Receiver.
 
         <br clear="right" />
     6. Select the Device Category and Device target matching your hardware.
@@ -156,7 +156,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
     8. Set the [firmware options] for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-        - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+        - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
         - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
     9. Click the ++"Build & Flash"++ button.
 
@@ -166,7 +166,7 @@ Some of the following procedures will not go through, particularly the via Passt
         
     10. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-    11. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+    11. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
         ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
@@ -186,8 +186,8 @@ Some of the following procedures will not go through, particularly the via Passt
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
 
-            - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your Receiver.
+            - Make sure `Official Releases` is active from the horizontal tab.
+            - Ensure you select the Released version you want to flash into your Receiver.
 
             <br clear="right" />
 
@@ -208,7 +208,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         4. Set the [firmware options] for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
         5. Click the ++"Build"++ button.
             
@@ -216,13 +216,13 @@ Some of the following procedures will not go through, particularly the via Passt
             ![Build]
             </figure>
             
-        6. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
+        6. Once the Build process is done, a Temp folder window containing your firmware binaries should pop up.
 
             ![Temp RX]{ align=right }
 
             - You can use any of these files.
             - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
-            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
 
             <br clear="right" />
             
@@ -237,7 +237,7 @@ Some of the following procedures will not go through, particularly the via Passt
                         - make sure you've already checked the wiring from the [Receiver Wiring] step.
                         - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
+                    - If it's already powered and connected or in-sync with a TX Module, power Off the Radio & TX Module first, then power-cycle (Turn Off, then Turn back On) the Receiver.
 
                 2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
@@ -263,7 +263,7 @@ Some of the following procedures will not go through, particularly the via Passt
                     ![Lua Running]
                     </figure> 
 
-                    - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+                    - If the script is stuck on a "Loading..." screen, return to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
                 4. Scroll down and select `Wifi Connectivity` and press ++enter++.
                 5. Select `Enable RX WiFi` and press ++enter++.
             
@@ -286,7 +286,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             ![WiFi Hotspot](../../assets/images/WifiHotspot.png){ align=right }
 
-            - If your Receiver is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
+            - If your Receiver is flashed or configured with your Home WiFi SSID and Password, and can connect to that WiFi Network, then the Access Point will not appear.
             - `expresslrs` is the Password for this Access Point.
 
             ??? question "Where's the Access Point?"
@@ -303,22 +303,22 @@ Some of the following procedures will not go through, particularly the via Passt
             ![Web UI Banner]
             </figure>
 
-            - If your Receiver is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
+            - If your Receiver is still on an earlier firmware version, then there's no Update Tab, and instead, you will need to scroll down to find the Firmware Update section.
 
             <figure markdown>
             ![Old File Upload]
             </figure>
 
-        11. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
-            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
+        11. Drag and drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, especially if you've copied/moved it somewhere else on an earlier step.
         12. Click the ++"Update"++ button to start the Updating procedure.
-        13. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+        13. Wait for the firmware file to get uploaded and flashed into your device. It only takes a minute or two, and you will see the Success Popup Message.
 
             <figure markdown>
             ![Success WiFi]
             </figure>
 
-        14. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+        14. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
             <figure markdonw>
             ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
@@ -332,8 +332,8 @@ Some of the following procedures will not go through, particularly the via Passt
         1. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
 
-            - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your Receiver.
+            - Make sure `Official Releases` is active from the horizontal tab.
+            - Ensure you select the Released version you want to flash into your Receiver.
 
             <br clear="right" />
         2. Select the Device Category and Device target matching your hardware.
@@ -353,7 +353,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         4. Set the [firmware options] for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
         5. Click the ++"Build"++ button.
             
@@ -366,7 +366,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - You can use any of these files.
             - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
-            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder, so you know what firmware version it is and for which device it is.
+            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
 
             <br clear="right" />
 
@@ -381,7 +381,7 @@ Some of the following procedures will not go through, particularly the via Passt
                         - make sure you've already checked the wiring from the [Receiver Wiring] step.
                         - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
+                    - If it's already powered and connected or in-sync with a TX Module, power Off the Radio & TX Module first, then power-cycle (Turn Off, then Turn back On) the Receiver.
 
                 2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
@@ -407,7 +407,7 @@ Some of the following procedures will not go through, particularly the via Passt
                     ![Lua Running]
                     </figure> 
 
-                    - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+                    - If the script is stuck on a "Loading..." screen, return to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
                 4. Scroll down and select `Wifi Connectivity` and press ++enter++.
                 5. Select `Enable RX WiFi` and press ++enter++.
             
@@ -426,21 +426,21 @@ Some of the following procedures will not go through, particularly the via Passt
                 
                 If you have previously attempted updating your receiver, there's a possibility it was soft-bricked. Go over the [Unbricking] procedure to recover it.
 
-        8. With your Receiver now in WiFi Mode and it was able to connect to your Local WiFi Network, open a Browser window on any WiFi-capable device that is also connected to the same Local WiFi Network. Type in the Address http://elrs_rx.local on your browser's Address Bar. The ExpressLRS Web UI should load.
+        8. With your receiver now in WiFi Mode and it was able to connect to your Local WiFi Network, open a Browser window on any WiFi-capable device that is also connected to the same Local WiFi Network. Type in the Address http://elrs_rx.local on your browser's Address Bar. The ExpressLRS Web UI should load.
             - If your browser cannot resolve this address and it cannot load the ExpressLRS Web UI, this means that MDNS is not working on your device or network.
 
             ??? tip "MDNS is not working!"
                 === "The `arp` Command"
 
                     1. Open up a Command Prompt window on your computer.
-                    2. Execute the command `arp -a` which will list all the devices in the Network.
-                    3. Use each of the IP Addresses marked as `Dynamic` as URL into your Browser until you get to the ExpressLRS Web UI.
+                    2. Execute the command `arp -a`, which will list all the devices in the Network.
+                    3. Use each of the IP Addresses marked as `Dynamic` as a URL in your Browser until you get to the ExpressLRS Web UI.
 
                 === "Router DHCP List"
                     1. Log in into your Router dashboard.
                     2. Check the DHCP List and look for the "elrs" device.
                     3. Take note of the IP Address given by your router.
-                    4. Use this IP address into your Browser as the URL.
+                    4. Use this IP address in your Browser as the URL.
 
         9. Activate the `Update` Tab.
 
@@ -448,22 +448,22 @@ Some of the following procedures will not go through, particularly the via Passt
             ![Web UI Banner]
             </figure>
 
-            - If your Receiver is still on an earlier firmware version, then there's no Update Tab and instead you will need to scroll down to find the Firmware Update section.
+            - If your Receiver is still on an earlier firmware version, then there's no Update Tab, and instead, you will need to scroll down to find the Firmware Update section.
 
             <figure markdown>
             ![Old File Upload]
             </figure>
 
-        10. Drag-and-drop the Firmware file from the Temp folder into the File Upload field.
-            - You can also use the Browse or Choose File button and browse for the file yourself, specially if you've copied/moved it somewhere else on an earlier step.
+        10. Drag and drop the Firmware file from the Temp folder into the File Upload field.
+            - You can also use the Browse or Choose File button and browse for the file yourself, especially if you've copied/moved it somewhere else on an earlier step.
         11. Click the ++"Update"++ button to start the Updating procedure.
-        12. Wait for the firmware file to get uploaded and flashed into your device. It would only take a minute or two and you will see the Success Popup Message.
+        12. Wait for the firmware file to get uploaded and flashed into your device. It only takes a minute or two, and you will see the Success Popup Message.
 
             <figure markdown>
             ![Success WiFi]
             </figure>
 
-        13. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+        13. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
             <figure markdonw>
             ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
@@ -474,7 +474,7 @@ Some of the following procedures will not go through, particularly the via Passt
         !!! Info "Heads up!"
             This option is only possible if you have previously flashed or configured your Receiver with your Home WiFi SSID and Password and the device is able to connect to said WiFi Network. 
             
-            MDNS must also be working and that your browser can resolve the address http://elrs_rx.local and it can load the ExpressLRS Web UI from said address.
+            MDNS must also be working so your browser can resolve the address http://elrs_rx.local and load the ExpressLRS Web UI from said address.
 
         1. Put your Receiver into WiFi mode.
 
@@ -487,7 +487,7 @@ Some of the following procedures will not go through, particularly the via Passt
                         - make sure you've already checked the wiring from the [Receiver Wiring] step.
                         - make sure you have some airflow blowing over your Video Transmitter (VTX). You can also temporarily unplug it from the Flight Controller.
 
-                    - If it's already powered and connected or in sync with a TX Module, power Off the Radio & TX Module first then power-cycle (Turn Off, then Turn back On) the Receiver.
+                    - If it's already powered and connected or in-sync with a TX Module, power Off the Radio & TX Module first, then power-cycle (Turn Off, then Turn back On) the Receiver.
 
                 2. Let it be for at least 60s and the LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
@@ -513,7 +513,7 @@ Some of the following procedures will not go through, particularly the via Passt
                     ![Lua Running]
                     </figure> 
 
-                    - If the script is stuck on a "Loading..." screen, go back to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
+                    - If the script is stuck on a "Loading..." screen, return to the [Radio Preparation](../transmitters/tx-prep.md) Page and make sure you have configured your radio properly for ExpressLRS use.
                 4. Scroll down and select `Wifi Connectivity` and press ++enter++.
                 5. Select `Enable RX WiFi` and press ++enter++.
             
@@ -535,8 +535,8 @@ Some of the following procedures will not go through, particularly the via Passt
         2. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
             ![Configurator Release]{ align=right }
 
-            - Make sure Official Releases is active from the horizontal tab.
-            - Make sure you have selected the Released version you want to flash into your Receiver.
+            - Make sure `Official Releases` is active from the horizontal tab.
+            - Ensure you select the Released version you want to flash into your Receiver.
 
             <br clear="right" />
         3. Select the Device Category and Device target matching your hardware.
@@ -556,7 +556,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         5. Set the [firmware options] for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
-            - Binding Phrase (Optional, but Highly Recommended. Take note of this phrase as this should be the same on your other devices or they will not bind or sync).
+            - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
         6. Click the ++"Build & Flash"++ button.
 
@@ -570,7 +570,7 @@ Some of the following procedures will not go through, particularly the via Passt
             ![Wifi Update Log](../../assets/images/WifiUpdateLog.png)
             </figure>
 
-        8. The LED on the Receiver should return to Slow Blinking LED after a few seconds.
+        8. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
             <figure markdonw>
             ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)

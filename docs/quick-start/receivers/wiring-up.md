@@ -50,8 +50,8 @@ Check for shorts between pads and clean up flux or any soldering residue if you 
 
 Ensure there are no shorts on your wiring and power up the receiver.
 
-- Best to power up the stack with a LiPo as this can ensure the receiver will work normally on flight-ready conditions. 
-- It is important to ensure there are no shorts on your wiring BEFORE you power up your stack.
+- Best to power up the flight controller with a LiPo to ensure the receiver will work normally on flight-ready conditions. 
+- It is important to ensure there are no shorts on your wiring BEFORE you power up the system.
 
 Observe the Receiver LED. It should have one of these behaviors:
 
@@ -73,9 +73,9 @@ If the Receiver uses an RGB LED(e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP D
 
 If the Receiver LED doesn't light up at all, quickly disconnect the power and check your wiring.
 
-If your receiver has the RGB LED ((e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP Dual), and the receiver LED is not lighting up despite making sure it's wired up correctly, this could mean that the Receiver is in Bootloader Mode.
+If your receiver has the RGB LED (e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP Dual), and the receiver LED is not lighting up despite making sure it's wired up correctly, this could mean that the Receiver is in Bootloader Mode.
 
-If your Receiver LED lights up but it's just a Solid light, then it could also be in Bootloader mode as the chart above indicates.
+If your Receiver LED lights up but it's just a Solid light, it is in Bootloader mode as the chart above indicates.
 
 ??? danger "My Receiver is in Bootloader Mode!"
 
