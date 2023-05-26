@@ -58,6 +58,18 @@ Follow the steps below to set up your Serial Receiver Protocol:
 ![INAV Config](../../assets/images/FC-config-INAV.png)
 </figure>
 
+### Ardupilot
+
+TODO: copied from https://ardupilot.org/plane/docs/common-holybro-pix32v6.html#rc-input, redact
+To allow CRSF and embedded telemetry a full UART, such as SERIAL6 (UART3) would need to be used for receiver connections.
+Any UART can be used for RC system connections in ArduPilot also, and is compatible with all protocols except PPM. See Radio Control Systems for details.
+
+### PX4 Autopilot
+
+TODO: copied from https://discuss.px4.io/t/connecting-elrs-receiver-to-pixhawk-2-4-8-under-px4-pro-possible-or-not-need-guidance/31199/3?u=not7cd
+The setup is more involved as it requires firmware compilation. Use `boardconfig`, go to `drivers/rc_inputs`, and enable `crsf_rc`. Compile and upload the firmware to the FC.
+After that, you need to set RC_CRSF_PRT_CFG parameter to the serial that you’re using. 
+
 ## Software Inversion and Duplex Modes
 
 The CRSF Protocol requires a full UART pair, uninverted and in full-duplex mode. To check for these settings, use the ++"CLI"++ Tab of your Flight Controller Configurator and execute `get serialrx`.
