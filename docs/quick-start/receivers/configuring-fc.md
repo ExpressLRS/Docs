@@ -60,9 +60,8 @@ Follow the steps below to set up your Serial Receiver Protocol:
 
 ### Ardupilot
 
-TODO: copied from https://ardupilot.org/plane/docs/common-holybro-pix32v6.html#rc-input, redact
-To allow CRSF and embedded telemetry a full UART, such as SERIAL6 (UART3) would need to be used for receiver connections.
-Any UART can be used for RC system connections in ArduPilot also, and is compatible with all protocols except PPM. See Radio Control Systems for details.
+This would involve setting proper parameters for a chosen serial port.
+Refer to the [guide in Ardupilots documentation](https://ardupilot.org/plane/docs/common-tbs-rc.html#common-tbs-rc). Consult [guides for your hardware](https://ardupilot.org/plane/docs/common-autopilots.html) for specific configs and avaiable serial ports.
 
 ### PX4 Autopilot
 
