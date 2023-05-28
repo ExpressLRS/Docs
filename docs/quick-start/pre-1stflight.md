@@ -141,6 +141,6 @@ If you get a "retrying" message while saving changes it means that the Lua scrip
 
 ## MAVLINK
 
-See [Airport](https://github.com/ExpressLRS/ExpressLRS/pull/1904).
+See [Airport](../software/airport.md).
 
 **Done. Go Fly!**
