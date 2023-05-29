@@ -252,8 +252,6 @@ template: main.html
 
     === "Auto Upload"
 
-   === "Auto Upload"
-
         !!! Info "Heads up!"
             This option is only possible if you have previously flashed or configured your TX Module with your Home WiFi SSID and Password and the module is able to connect to said WiFi Network.
             
