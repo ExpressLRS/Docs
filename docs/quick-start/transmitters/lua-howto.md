@@ -200,7 +200,7 @@ Pressing the `[BLE Joystick]` selection activates BluetoothLE Joystick mode whic
 
 ### Other Devices
 
-The Other Devices folder, if present, allows changing the configuration of other connected devices, such as the current receiver. Options can include Telemetry Power, Diversity Mode, and the [Loan Model](../../software/loan-model.md) features.
+The Other Devices folder, if present, allows changing the configuration of other connected devices, such as the current receiver. `Init rate` lets you set which packet rate it starts from when cycling through rates looking for a TX, this is particularly helpful when using lower packet rates where it might take some time for the receiver to get around to your chosen rate. Options can also include Telemetry Power, Diversity Mode, and the [Loan Model](../../software/loan-model.md) features.
 
 ## Recommendations
 
