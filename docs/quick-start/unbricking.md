@@ -30,8 +30,9 @@ Follow the steps below very closely to recover your "bricked" Receiver.
 
 2. If you've connected a LiPo from the previous step, disconnect it. Also, unplug the Flight Controller from your computer.
 
-3. Bridge the Boot Pads on the Receiver to put it in Bootloader mode manually.
-    - If your Receiver has a button, take an alligator clip to keep the button pressed.
+3. Prepare the receiver for bootloader mode.
+    - If your Receiver have boot pads, bridge them together with solder.
+    - If your Receiver has a button, use an alligator clip to keep the button pressed.
     - If your Receiver only has one Boot pad, connect it to a Ground pad.
 
     <figure markdown>
@@ -83,7 +84,7 @@ Follow the steps below very closely to recover your "bricked" Receiver.
 
 12. You can now power down the flight controller, and disconnect LiPo and/or USB.
 
-13. Remove the boot pads bridging or connection to the ground, or, if your Receiver has a button, remove the alligator clip while pressing the button.
+13. Remove the boot pads bridging or connection to Ground, or, if your Receiver has a button, remove the alligator clip used to press the button.
 
 14. Repower up the receiver to verify it is back in its normal working state.
 
