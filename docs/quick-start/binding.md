@@ -117,6 +117,8 @@ Using the [ExpressLRS Lua Script](transmitters/lua-howto.md), look for a `C` in 
 
     Otherwise, simply set the Model Match item to Off.
 
+    If Model Match is set to Off, briefly set it to On and after a second or so, set it back to Off. This should clear the Model Match ID in the receiver.
+
     This should be done WHILE the TX module and Receiver are both powered up and connected/bound.
 
 [Lua Script]: ../assets/images/lua1.jpg
