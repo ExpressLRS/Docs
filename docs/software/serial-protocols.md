@@ -16,11 +16,11 @@ ExpressLRS receivers can communicate using a variety of serial protocols:
 
 ## Receiver Protocol Selection
 
-On a serial based receiver, or a PWM receiver with output pins configured for serial commiunication (as above), the protocol used for serial communication can be selected from the recevier WebUI in the `Serial Protocol` section.
+On a serial based receiver, or a PWM receiver with output pins configured for serial communication (as above), the protocol used for serial communication can be selected from the receiver WebUI in the `Serial Protocol` section.
 
 !!! note "Note"
-    For R9MM and R9-Mini receivers `SBUS`, `DJI RS2 Pro` and `CRSF Inverted` protocols will be output on the SBUS (A2) pad,
-    this is a hardware limitation of this receiver, as it does not have a software controllable inverter.
+    For R9MM and R9-Mini receivers `SBUS`, `DJI RS2 Pro` and `CRSF Inverted` protocols will be output on the SBUS (A2) pad.
+    This is a hardware limitation of this receiver, as it does not have a software controllable inverter.
 
 <figure markdown>
 <img class="center-img" src="../../assets/images/pwm-serial-protocol.png" width="auto">
@@ -34,14 +34,14 @@ Or in the Lua script, enter `> Other Devices` and change the value of the `Proto
 
 ## PWM Receiver Serial Pin Selection
 
-A PWM receiver may also be configured to communicate via serial on two of it's pins, these pins will vary depending on the receiver. This can be configured in either the recevier WebUI or in the receiver Lua script.
+A PWM receiver may also be configured to communicate via serial on two of it's pins, these pins will vary depending on the receiver. This can be configured in either the receiver WebUI or in the receiver Lua script.
 
 !!! note "Note"
     Not all pins support serial communication. Only the pins that support serial will have the option in the `Mode` dropdown in the WebUI or the `Output Mode` field in the Lua script.
 
 ### WebUI
 
-Start the WebUI on the recevier and go to the `Model` tab, from there you will be able to select `Serial TX` or `Serial Rx` on an output pin that supports serial communication.
+Start the WebUI on the receiver and go to the `Model` tab. From there you will be able to select `Serial TX` or `Serial Rx` on an output pin that supports serial communication.
 
 <figure markdown>
 <img class="center-img" src="../../assets/images/receiver-serial.png" width="auto">
@@ -52,7 +52,7 @@ Once you've configured the output pins to allow Serial communications you will b
 ### Lua Script
 
 When connected to the receiver with the transmitter, enter the ExpressLRS Lua script and select `> Other Devices` then select
-`> Output Mapping`. In that screen sleect the output channel/pin that supports serial (either Serial TX or RX) and set that as the output mode. Setting one automatically enables the other matching pin for serial communications.
+`> Output Mapping`. In that screen select the output channel/pin that supports serial (either Serial TX or RX) and set that as the output mode. Setting one automatically enables the other matching pin for serial communications.
 
 <figure markdown>
 <img class="center-img" src="../../assets/screenshots/receiver-serial.png" width="auto">
