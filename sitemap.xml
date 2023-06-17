@@ -491,6 +491,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.expresslrs.org/software/serial-protocols/</loc>
+         <lastmod>2023-06-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.expresslrs.org/software/stlink-fix/</loc>
          <lastmod>2023-06-17</lastmod>
          <changefreq>daily</changefreq>
