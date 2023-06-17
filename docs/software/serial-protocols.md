@@ -16,17 +16,17 @@ ExpressLRS receivers can communicate using a variety of serial protocols:
 
 ## Receiver Protocol Selection
 
-On a serial based receiver, or a PWM receiver with output pins configured for serial communication (as above), the protocol used for serial communication can be selected from the receiver WebUI in the `Serial Protocol` section.
-
 !!! note "Note"
     For R9MM and R9-Mini receivers `SBUS`, `DJI RS2 Pro` and `CRSF Inverted` protocols will be output on the SBUS (A2) pad.
-    This is a hardware limitation of this receiver, as it does not have a software controllable inverter.
+    This is a hardware limitation of these receivers, as they do not have software controllable inverters.
+
+On a serial based receiver or a PWM receiver with output pins configured for serial communication (as shown below), the protocol used for serial communication can be selected from the receiver WebUI in the `Serial Protocol` section.
 
 <figure markdown>
 <img class="center-img" src="../../assets/images/pwm-serial-protocol.png" width="auto">
 </figure>
 
-Or in the Lua script, enter `> Other Devices` and change the value of the `Protocol` field.
+Alternately, in the Lua script, enter `> Other Devices` and change the value of the `Protocol` field.
 
 <figure markdown>
 <img class="center-img" src="../../assets/screenshots/receiver-protocol.png" width="auto">
@@ -34,7 +34,7 @@ Or in the Lua script, enter `> Other Devices` and change the value of the `Proto
 
 ## PWM Receiver Serial Pin Selection
 
-A PWM receiver may also be configured to communicate via serial on two of it's pins, these pins will vary depending on the receiver. This can be configured in either the receiver WebUI or in the receiver Lua script.
+A PWM receiver may also be configured to communicate via serial on two of its pins. The exact pins will vary depending on the receiver. This can be configured in either the receiver WebUI or in the receiver Lua script.
 
 !!! note "Note"
     Not all pins support serial communication. Only the pins that support serial will have the option in the `Mode` dropdown in the WebUI or the `Output Mode` field in the Lua script.

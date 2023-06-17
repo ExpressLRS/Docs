@@ -245,11 +245,11 @@ nav:
           - Betaflight Passthrough: software/updating/betaflight-passthrough.md
           - Wifi Updating: software/updating/wifi-updating.md
       - Features:
+          - Receiver Serial Protocols: software/serial-protocols.md
           - AirPort: software/airport.md
           - Model Matching: software/model-config-match.md
           - Dynamic Transmit Power: software/dynamic-transmit-power.md
           - Loan Model: software/loan-model.md
-          - Receiver Serial Protocols: software/serial-protocols.md
       - Testing:
           - CRC Testing: software/testing/crc-testing.md
           - Unit Testing: software/testing/unit-testing.md
