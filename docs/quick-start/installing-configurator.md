@@ -7,7 +7,7 @@ description: The ExpressLRS Configurator has made improvements on ExpressLRS acc
 
 There are two ways to build and flash ExpressLRS:
 
-1. ExpressLRS Configuration (**Recommended**)
+1. [ExpressLRS Configurator](https://github.com/ExpressLRS/ExpressLRS-Configurator/releases) (**Recommended**)
 2. [Development toolchain setup](../software/toolchain-install.md) (For advanced users) 
 
 ## Configurator Setup
