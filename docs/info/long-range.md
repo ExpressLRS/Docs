@@ -50,7 +50,7 @@ Anyone can add an entry to the table, and entries should include the:
 | 11.47Km | 2.4G | 50hz | 500mW | Wing | No | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
 | 7.14Km | 2.4G | 500hz | 100mw | Wing | No | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
 | 6.43Km | 2.4G | 50Hz | 100mW | Wing | No | DivisionRc | [Link](https://youtu.be/3VAJ14y0ZIY) |
-| 4.11Km | 2.4G | 250Hz | 500mW | Quad | No | ZoFPV | [Link](https://www.youtube.com/watch?v=-9eDdm0dm_E) |
+| 5.07Km | 2.4G | 250Hz | 500mw | Quad | No | ZoFPV | [Link]([[https://www.youtube.com/watch?v=-9eDdm0dm_E](https://youtu.be/JyNvywwi90s)](https://youtu.be/JyNvywwi90s)) |
 
 ## 900 MHz Rankings
 
