@@ -104,22 +104,21 @@ Using the [ExpressLRS Lua Script](transmitters/lua-howto.md), look for a `C` in 
 ??? tip "Model Mismatch"
     If the ExpressLRS Lua Script is showing a `C` in the top-right corner alright, but then that line disappears and is replaced with a line saying "Model Mismatch", do not worry. ExpressLRS has detected that the set Model ID in the Receiver is different from the Receiver ID set in the current Model in your Radio Model Configuration.
 
-    This is also indicated by the Receiver LED as shown:
+    This is also indicated by the Receiver LED as 3 fast blinks then a pause:
     
     <figure markdown>
     ![LEDSEQ_MODEL_MISMATCH](https://cdn.discordapp.com/attachments/738450139693449258/921065813425934446/LEDSEQ_MODEL_MISMATCH_10_10_10_10_10_100.gif)
     </figure>
 
-
     If you've deliberately set up Model Matching following [this page](../software/model-config-match.md), make sure your settings are correct.
-    
-    If the Model Match item in the ExpressLRS Configurator is set to On, and you do want to use the Model Matching Feature, briefly set it to Off, then set it back to On to assign the current Receiver and Model ID to the Receiver.
+
+    If the Model Match item in the ExpressLRS Lua is set to On, and you do want to use the Model Matching Feature, briefly set it to Off, then set it back to On to assign the current Receiver and Model ID to the Receiver.
 
     Otherwise, simply set the Model Match item to Off.
 
     If Model Match is set to Off, briefly set it to On and after a second or so, set it back to Off. This should clear the Model Match ID in the receiver.
 
-    This should be done WHILE the TX module and Receiver are both powered up and connected/bound.
+    This must be done while the TX module and Receiver are both powered up and connected/bound.
 
 [Lua Script]: ../assets/images/lua1.jpg
 [Lua Running]: ../assets/images/lua/config-bw.png
