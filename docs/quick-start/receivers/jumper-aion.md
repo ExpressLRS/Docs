@@ -74,6 +74,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device: 
             - `Jumper AION Mini 2400 RX`
+            - `Jumper AION Nano 2400 RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -145,6 +146,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device: 
             - `Jumper AION Mini 2400 RX`
+            - `Jumper AION Nano 2400 RX`
 
     7. Set the Flashing Method to `UART`
 
@@ -196,6 +198,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `Jumper AION Mini 2400 RX`
+                - `Jumper AION Nano 2400 RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -340,6 +343,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `Jumper AION Mini 2400 RX`
+                - `Jumper AION Nano 2400 RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -542,6 +546,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `Jumper AION Mini 2400 RX`
+                - `Jumper AION Nano 2400 RX`
 
         4. Set the Flashing Method to `WiFi`.
 
