@@ -47,11 +47,11 @@ template: main.html
     4. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `Frsky R9`
+            - `Frsky 900 MHz`
 
         - Device:
-            - `Frsky TX R9M`
-            - `Frsky TX R9M LITE`
+            - `FrSky R9M 900MHz TX`
+            - `FrSky R9M Lite 900MHz TX`
 
     5. Set the Flashing Method to `Stock_BL`
 
@@ -130,12 +130,12 @@ template: main.html
     6. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `Frsky R9`
+            - `Frsky 900 MHz`
 
         - Device:
-            - `Frsky TX R9M`
-            - `Frsky TX R9M LITE`
-            - `Frsky TX R9M LITE PRO`
+            - `FrSky R9M 900MHz TX`
+            - `FrSky R9M Lite 900MHz TX`
+            - `FrSky R9M Lite Pro 900MHz TX`
 
     7. Set the Flashing Method to `STLink`
 
@@ -147,10 +147,10 @@ template: main.html
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
-    9. Click the ++"Build & Flash"++ button.
+    9. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
         
     10. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -159,7 +159,7 @@ template: main.html
     12. Reattach your TX Module into your Radio and, using the [ExpressLRS Lua Script], verify if the firmware version has been updated.
 
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
-[Build & Flash]: ../../assets/images/BuildFlash.png
+[Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [Radio Preparation]: tx-prep.md
 [ExpressLRS Lua Script]: ../firmware-version/#via-lua-script

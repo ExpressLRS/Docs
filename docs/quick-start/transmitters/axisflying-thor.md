@@ -35,10 +35,10 @@ template: main.html
         2. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `AXIS 2.4 GHz`
+                - `Axisflying 2.4 GHz`
 
             - Device: 
-                - `AXIS THOR 2400TX`
+                - `AXIS Thor 2.4GHz TX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -60,9 +60,10 @@ template: main.html
 
             ![Temp TX]{ align=right }
 
-            - You can use any of these files.
-            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
-            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the firmware file into your device.
+
+            !!! tip "NOTICE"
+                With the release of ExpressLRS 3.3.0 and ExpressLRS Configurator 1.6.0, only one file will show up. Use the `firmware.bin` file for the next steps.
 
             <br clear="right" />
             
@@ -149,10 +150,10 @@ template: main.html
         2. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `AXIS 2.4 GHz`
+                - `Axisflying 2.4 GHz`
 
             - Device: 
-                - `AXIS THOR 2400TX`
+                - `AXIS Thor 2.4GHz TX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -173,9 +174,10 @@ template: main.html
         6. Once the Build process is done, a Temp folder window containing your firmware binaries should pop up.
             ![Temp TX]{ align=right }
 
-            - You can use any of these files.
-            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
-            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the firmware file into your device.
+
+            !!! tip "NOTICE"
+                With the release of ExpressLRS 3.3.0 and ExpressLRS Configurator 1.6.0, only one file will show up. Use the `firmware.bin` file for the next steps.
 
             <br clear="right" />
         7. Press the ++"SYS"++ Key on your Radio to display the Tools Menu, where you can find the Lua Scripts.
@@ -292,10 +294,10 @@ template: main.html
         8. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `AXIS 2.4 GHz`
+                - `Axisflying 2.4 GHz`
 
             - Device: 
-                - `AXIS THOR 2400TX`
+                - `AXIS Thor 2.4GHz TX`
 
         9. Set the Flashing Method to `WiFi`.
 
@@ -307,10 +309,10 @@ template: main.html
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
             - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
-        11. Click the ++"Build & Flash"++ button.
+        11. Click the ++"Flash"++ button.
 
             <figure markdown>
-            ![Build & Flash]
+            ![Flash]
             </figure>
         
         12. Wait for the upload to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -359,10 +361,10 @@ template: main.html
     5. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `AXIS 2.4 GHz`
+            - `Axisflying 2.4 GHz`
 
         - Device: 
-            - `AXIS THOR 2400TX`
+            - `AXIS Thor 2.4GHz TX`
 
     6. Set the Flashing Method to `UART`
 
@@ -374,10 +376,10 @@ template: main.html
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
         - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
-    8. Click the ++"Build & Flash"++ button.
+    8. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
         
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -403,7 +405,7 @@ This guide is contributed by discord user ChaserP.
 [Lua WiFi]: ../../assets/images/lua/wifi-bw.png
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
 [Temp TX]: ../../assets/images/build-temp-tx.png
-[Build & Flash]: ../../assets/images/BuildFlash.png
+[Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [CP210x]: ../../assets/images/device-mngr-cp210x.png
 [TX update tab]: ../../assets/images/web-update-tx.png
