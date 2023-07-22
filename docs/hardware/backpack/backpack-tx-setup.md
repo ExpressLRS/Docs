@@ -102,6 +102,8 @@ Wait for a bit (~10s) after the message "Update Success! Rebooting..." appears b
 - Targets: 
     - `RadioMaster Zorro TX Backpack`
     - `RadioMaster TX16S Backpack`
+    - `RadioMaster TX12 Backpack`
+    - `RadioMaster Boxer Backpack`
 
 !!! info "FYI"
     This method is the result of the collaborative effort between EdgeTX, RadioMaster and ExpressLRS.
