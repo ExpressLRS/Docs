@@ -4,25 +4,14 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-!!! danger "Advisory"
-    If this is the first time you're flashing/updating your receiver or you're updating it from a previous 2.x firmware via WiFi, first ensure that it has version 2.5.2. Once it has the 2.5.2 flashed, you can then update it to 3.x via WiFi.
-
-    If you're flashing it straight to 3.x and you're getting "Not Enough Space" popup during WiFi flashing, flash the receiver to 2.5.2 first, and then flash it to 3.x.
-
-    If receiver firmware is already 3.x, and you're still getting the "Not Enough Space" error when flashing via WiFi, make sure you are selecting the correct method in the Configurator(via WiFi, in this case). See the steps outlined below.
-
-    You can update straight to 3.x via Passthrough or via UART.
-
-    The Repartitioner is for **TX only**.
-
 ## Wiring up your receiver
 
 !!! attention "Note"
-    There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.  
+    There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. As this receiver uses an RGB LED as indicator, it will appear as if the receiver is OFF when in Bootloader mode. The firmware that drives the RGB LED is inactive when the ESP Chip is in Bootloader mode, thus the RGB LED will not function when in this state.
 
 <figure markdown>
-![iFlight Dipole](../../assets/images/iFlight-2400Dipole.png)
-<figcaption>IFlight 900MHz</figcaption>
+![betafpv SuperD](../../assets/images/BetaFPVSuperD.png)
+<figcaption>BetaFPV SuperD Diversity Receiver, ESP-based</figcaption>
 </figure>
 
 The image above shows the receiver pinouts and their connections. As we're dealing with a UART connection, Rx on the receiver goes to a TX pad on the FC, and Tx on the receiver goes to an uninverted Rx pad on the FC.
@@ -33,7 +22,7 @@ See the [Receiver Wiring] page for a more in-depth guide and troubleshooting pro
 
 To configure your flight controller properly, please go through [Configure FC page](configuring-fc.md). These settings apply to INAV, Betaflight, and other flight controller software.
 
-Ports Tab should be set up so that Serial RX is on the UART where you have soldered the receiver.
+Ports Tab should be set up so that Serial RX is on the UART where you have connected the receiver.
 
 Receiver protocol is `CRSF` with `serialrx_inverted = off` and `serialrx_halfduplex = off`.
 
@@ -70,10 +59,10 @@ Some of the following procedures will not go through, particularly the via Passt
     3. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `iFlight 900 MHz`
+            - `BETAFPV 900 MHz`
 
-        - Device: 
-            - `iFlight 900MHz RX`
+        - Device:
+            - `BETAFPV SuperD 900MHz RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -141,10 +130,10 @@ Some of the following procedures will not go through, particularly the via Passt
     6. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `iFlight 900 MHz`
+            - `BETAFPV 900 MHz`
 
-        - Device: 
-            - `iFlight 900MHz RX`
+        - Device:
+            - `BETAFPV SuperD 900MHz RX`
 
     7. Set the Flashing Method to `UART`
 
@@ -192,10 +181,10 @@ Some of the following procedures will not go through, particularly the via Passt
         2. Select the Device Category and Device target matching your hardware.
             
             - Device Category: 
-                - `iFlight 900 MHz`
+                - `BETAFPV 900 MHz`
 
-            - Device: 
-                - `iFlight 900MHz RX`
+            - Device:
+                - `BETAFPV SuperD 900MHz RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -220,7 +209,7 @@ Some of the following procedures will not go through, particularly the via Passt
             - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the firmware file into your device.
 
             !!! tip "NOTICE"
-                With the release of ExpressLRS 3.3.0 and ExpressLRS Configurator 1.6.0, only one file will show up. The file will be in a gzip format (`firmware.bin.gz`). Use this file as is, without extracting or unzipping.
+                With the release of ExpressLRS 3.3.0 and ExpressLRS Configurator 1.6.0, only one file will show up. Use the `firmware.bin` file for the next steps.
 
             <br clear="right" />
             
@@ -337,10 +326,10 @@ Some of the following procedures will not go through, particularly the via Passt
         2. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `iFlight 900 MHz`
+                - `BETAFPV 900 MHz`
 
-            - Device: 
-                - `iFlight 900MHz RX`
+            - Device:
+                - `BETAFPV SuperD 900MHz RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -348,7 +337,7 @@ Some of the following procedures will not go through, particularly the via Passt
             ![via WiFi](../../assets/images/Method_RX_WiFi.png)
             </figure>
 
-        4. Set the [firmware options] for your device.
+        4. Set the [firmware options](../firmware-options.md) for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
             - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
@@ -364,7 +353,7 @@ Some of the following procedures will not go through, particularly the via Passt
             - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the firmware file into your device.
 
             !!! tip "NOTICE"
-                With the release of ExpressLRS 3.3.0 and ExpressLRS Configurator 1.6.0, only one file will show up. The file will be in a gzip format (`firmware.bin.gz`). Use this file as is, without extracting or unzipping.
+                With the release of ExpressLRS 3.3.0 and ExpressLRS Configurator 1.6.0, only one file will show up. Use the `firmware.bin` file for the next steps.
 
             <br clear="right" />
 
@@ -540,10 +529,10 @@ Some of the following procedures will not go through, particularly the via Passt
         3. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `iFlight 900 MHz`
+                - `BETAFPV 900 MHz`
 
-            - Device: 
-                - `iFlight 900MHz RX`
+            - Device:
+                - `BETAFPV SuperD 900MHz RX`
 
         4. Set the Flashing Method to `WiFi`.
 
@@ -551,7 +540,7 @@ Some of the following procedures will not go through, particularly the via Passt
             ![via WiFi](../../assets/images/Method_RX_WiFi.png)
             </figure>
 
-        5. Set the [firmware options] for your device.
+        5. Set the [firmware options](../firmware-options.md) for your device.
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
             - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
