@@ -38,7 +38,7 @@ template: main.html
                 - `BETAFPV 2.4 GHz`
 
             - Device: 
-                - `BETAFPV 2.4GHz LiteRadio 3`
+                - `BETAFPV 2.4GHz LiteRadio 3 Pro`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -153,7 +153,7 @@ template: main.html
                 - `BETAFPV 2.4 GHz`
 
             - Device: 
-                - `BETAFPV 2.4GHz LiteRadio 3`
+                - `BETAFPV 2.4GHz LiteRadio 3 Pro`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -297,7 +297,7 @@ template: main.html
                 - `BETAFPV 2.4 GHz`
 
             - Device: 
-                - `BETAFPV 2.4GHz LiteRadio 3`
+                - `BETAFPV 2.4GHz LiteRadio 3 Pro`
 
         9. Set the Flashing Method to `WiFi`.
 
@@ -422,7 +422,7 @@ template: main.html
             - `BETAFPV 2.4 GHz`
 
         - Device: 
-            - `BETAFPV 2.4GHz LiteRadio 3`
+            - `BETAFPV 2.4GHz LiteRadio 3 Pro`
 
     6. Set the Flashing Method to `EdgeTXPassthrough`
 
