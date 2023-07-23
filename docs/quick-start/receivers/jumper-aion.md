@@ -22,7 +22,7 @@ template: main.html
 
 <figure markdown>
 ![Jumper Aion RX](../../assets/images/JumperAionRX.png)
-<figcaption>Jumper Aion Nano</figcaption>
+<figcaption>Jumper Aion Mini/Nano</figcaption>
 </figure>
 
 The image above shows the receiver pinouts and their connections. As we're dealing with a UART connection, Rx on the receiver goes to a TX pad on the FC, and Tx on the receiver goes to an uninverted Rx pad on the FC.
