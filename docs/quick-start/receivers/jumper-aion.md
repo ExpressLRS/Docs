@@ -29,6 +29,10 @@ The image above shows the receiver pinouts and their connections. As we're deali
 
 See the [Receiver Wiring] page for a more in-depth guide and troubleshooting procedures. Some of the updating procedures below will not go through if your receiver is not wired correctly and behaving properly.
 
+!!! Note "Take Note" 
+    The Jumper Aion Mini has its antenna near the center, beside the boot button.
+    The Jumper Aion Nano has its antenna near the edge, with another chip beside it.
+
 ## Configuring your Flight Controller
 
 To configure your flight controller properly, please go through [Configure FC page](configuring-fc.md). These settings apply to INAV, Betaflight, and other flight controller software.
