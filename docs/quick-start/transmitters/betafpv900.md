@@ -38,7 +38,7 @@ template: main.html
                 - `BETAFPV 900 MHz`
 
             - Device:
-                - `BETAFPV 900MHz Nano TX``
+                - `BETAFPV 900MHz Nano TX`
                 - `BETAFPV 900MHz Micro TX`
 
         3. Set the Flashing Method to `WiFi`.
@@ -154,7 +154,7 @@ template: main.html
                 - `BETAFPV 900 MHz`
 
             - Device:
-                - `BETAFPV 900MHz Nano TX``
+                - `BETAFPV 900MHz Nano TX`
                 - `BETAFPV 900MHz Micro TX`
 
         3. Set the Flashing Method to `WiFi`.
@@ -299,7 +299,7 @@ template: main.html
                 - `BETAFPV 900 MHz`
 
             - Device:
-                - `BETAFPV 900MHz Nano TX``
+                - `BETAFPV 900MHz Nano TX`
                 - `BETAFPV 900MHz Micro TX`
 
         9. Set the Flashing Method to `WiFi`.
@@ -367,7 +367,7 @@ template: main.html
             - `BETAFPV 900 MHz`
 
         - Device:
-            - `BETAFPV 900MHz Nano TX``
+            - `BETAFPV 900MHz Nano TX`
             - `BETAFPV 900MHz Micro TX`
 
     6. Set the Flashing Method to `UART`
