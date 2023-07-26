@@ -153,7 +153,7 @@ However, there are some exceptions:
 
 - The Frsky Taranis QX7 ACCST, Horus X12S and Horus X10S cannot reliably run 400K baud rate without the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/).
 
-- The Frsky Taranis X9D has proven to be finicky even with the default 400K baud rate and will benefit from the One Bit Sample Mode setting and a Hardware Mod. See [Troubleshooting the](../../hardware/x9d-troubleshooting.md) X9D](../../hardware/x9d-troubleshooting.md) for more details.
+- The Frsky Taranis X9D has proven to be finicky even with the default 400K baud rate and will benefit from the One Bit Sample Mode setting and a Hardware Mod. See [Troubleshooting the X9D](../../hardware/x9d-troubleshooting.md) for more details.
 
 On other Radios, you can set the Baudrate higher than 400K but will highly depend on what TX Module you will use with it.
 
