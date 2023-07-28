@@ -53,6 +53,7 @@ OSDs report the packet rate using an index instead of the actual rate, either as
 
 | RFMD | Lua | Packet Rate | Sensitivity <br />Limit | TX duration <br />(us) | TX Interval <br/>(us) |
 |:---:|:---:|:---:|---:|---:|---:|
+| 14 | D50 | 50Hz | -112dBm | 4640.0 | 5000 |
 | 13 | F1000 | 1000Hz | -104dBm | 388.8 | 1000 |
 | 12 | F500 | 500Hz | -104dBm | 388.8 | 2000 |
 | 11 | D500 | 500Hz | -104dBm | 388.8 | 1000 |
