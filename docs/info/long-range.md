@@ -28,9 +28,9 @@ Anyone can add an entry to the table, and entries should include the:
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
 | 31.56km | 2.4G | 50Hz | 50mW | Wing | No | Les Y | [Link] (https://www.youtube.com/watch?v=sK-OAQUwgyU)|
+| 31.2km | 2.4G | 50Hz | 25mW | Wing | No | Shawn U | [Link](https://youtu.be/tzSeGs0FQ3E) |
 | 19.61km | 2.4G | 50Hz | 25mW | Wing | Yes | Les Y | [Link](https://www.youtube.com/watch?v=VDqrNhLCXE8)|
 | 18.97Km| 2.4G | 150Hz | 50mW | Wing | yes | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
-| 23.18km | 2.4G | 50Hz | 25mW | Wing | No | Shawn U | [Link](https://youtu.be/uyLBCt80HaA) |
 | 12.1km | 2.4G | 50Hz | 25mW | Wing | No | Les Y | [Link](https://youtu.be/_RfU0aEost0)|
 | 10Km | 2.4G | 500Hz | 10mW | Quad | Yes | mrscythe | [Link](https://youtu.be/IpiPEZrCGtg) |
 | 10Km | 2.4G | 50Hz | 10mW |  Wing| No | Padcom | [Link](https://www.youtube.com/watch?v=8Xm_bNlywQA) |
