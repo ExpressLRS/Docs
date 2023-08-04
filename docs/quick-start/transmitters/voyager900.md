@@ -22,10 +22,10 @@ template: main.html
     2. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `NamimnoRC VOYAGER 900 MHz`
+            - `NamimnoRC 900 MHz`
 
         - Device: 
-            - `NamimnoRC VOYAGER 900 TX`
+            - `NamimnoRC Voyager 900MHz TX`
 
     3. Set the Flashing Method to `Stock_BL`
 
@@ -99,10 +99,10 @@ template: main.html
     5. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `NamimnoRC VOYAGER 900 MHz`
+            - `NamimnoRC 900 MHz`
 
         - Device: 
-            - `NamimnoRC VOYAGER 900 TX`
+            - `NamimnoRC Voyager 900MHz TX`
 
     6. Set the Flashing Method to `STLink`
 
@@ -114,10 +114,10 @@ template: main.html
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
-    8. Click the ++"Build & Flash"++ button.
+    8. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
         
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -130,7 +130,7 @@ template: main.html
 [Lua WiFi]: ../../assets/images/lua/wifi-bw.png
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
 [Temp TX]: ../../assets/images/build-temp-tx.png
-[Build & Flash]: ../../assets/images/BuildFlash.png
+[Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [CP210x]: ../../assets/images/device-mngr-cp210x.png
 [TX update tab]: ../../assets/images/web-update-tx.png

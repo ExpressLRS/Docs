@@ -70,10 +70,10 @@ Some of the following procedures will not go through, particularly the via Passt
     3. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `NamimnoRC VOYAGER 900 MHz`
+            - `NamimnoRC 900 MHz`
 
         - Device:
-            - `NamimnoRC VOYAGER 900 ESP RX`
+            - `NamimnoRC Voyager ESP 900MHz RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -85,10 +85,10 @@ Some of the following procedures will not go through, particularly the via Passt
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
         - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
-    6. Click the ++"Build & Flash"++ button.
+    6. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
         
     7. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -142,10 +142,10 @@ Some of the following procedures will not go through, particularly the via Passt
     6. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `NamimnoRC VOYAGER 900 MHz`
+            - `NamimnoRC 900 MHz`
 
         - Device:
-            - `NamimnoRC VOYAGER 900 ESP RX`
+            - `NamimnoRC Voyager ESP 900MHz RX`
 
     7. Set the Flashing Method to `UART`
 
@@ -157,10 +157,10 @@ Some of the following procedures will not go through, particularly the via Passt
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
         - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
-    9. Click the ++"Build & Flash"++ button.
+    9. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
         
     10. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -193,10 +193,10 @@ Some of the following procedures will not go through, particularly the via Passt
         2. Select the Device Category and Device target matching your hardware.
             
             - Device Category: 
-                - `NamimnoRC VOYAGER 900 MHz`
+                - `NamimnoRC 900 MHz`
 
             - Device:
-                - `NamimnoRC VOYAGER 900 ESP RX`
+                - `NamimnoRC Voyager ESP 900MHz RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -218,9 +218,10 @@ Some of the following procedures will not go through, particularly the via Passt
 
             ![Temp RX]{ align=right }
 
-            - You can use any of these files.
-            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
-            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the firmware file into your device.
+
+            !!! tip "NOTICE"
+                With the release of ExpressLRS 3.3.0 and ExpressLRS Configurator 1.6.0, only one file will show up. The file will be in a gzip format (`firmware.bin.gz`). Use this file as is, without extracting or unzipping.
 
             <br clear="right" />
             
@@ -337,10 +338,10 @@ Some of the following procedures will not go through, particularly the via Passt
         2. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `NamimnoRC VOYAGER 900 MHz`
+                - `NamimnoRC 900 MHz`
 
             - Device:
-                - `NamimnoRC VOYAGER 900 ESP RX`
+                - `NamimnoRC Voyager ESP 900MHz RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -361,9 +362,10 @@ Some of the following procedures will not go through, particularly the via Passt
         6. Once the Build process is done, a Temp folder window should popup containing your firmware binaries.
             ![Temp RX]{ align=right }
 
-            - You can use any of these files.
-            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the named file into it for later (see the next point).
-            - the firmware file named in the format `<device target name>-<version>.bin` is best used if you'll be moving these firmware files into one folder so you know what firmware version it is and for which device it is.
+            - Do not close this Temp folder because this is where you will take your firmware from in the later steps. If you are planning on using your phone or tablet to upload the firmware file later, copy the firmware file into your device.
+
+            !!! tip "NOTICE"
+                With the release of ExpressLRS 3.3.0 and ExpressLRS Configurator 1.6.0, only one file will show up. The file will be in a gzip format (`firmware.bin.gz`). Use this file as is, without extracting or unzipping.
 
             <br clear="right" />
 
@@ -539,10 +541,10 @@ Some of the following procedures will not go through, particularly the via Passt
         3. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `NamimnoRC VOYAGER 900 MHz`
+                - `NamimnoRC 900 MHz`
 
             - Device:
-                - `NamimnoRC VOYAGER 900 ESP RX`
+                - `NamimnoRC Voyager ESP 900MHz RX`
 
         4. Set the Flashing Method to `WiFi`.
 
@@ -554,10 +556,10 @@ Some of the following procedures will not go through, particularly the via Passt
             - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
             - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
             - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
-        6. Click the ++"Build & Flash"++ button.
+        6. Click the ++"Flash"++ button.
 
             <figure markdown>
-            ![Build & Flash]
+            ![Flash]
             </figure>
         
         7. Wait for the upload to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -599,10 +601,10 @@ Some of the following procedures will not go through, particularly the via Passt
     3. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `NamimnoRC VOYAGER 900 MHz`
+            - `NamimnoRC 900 MHz`
 
         - Device: 
-            - `NamimnoRC VOYAGER 900 RX`
+            - `NamimnoRC Voyager STM 900MHz RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -614,10 +616,10 @@ Some of the following procedures will not go through, particularly the via Passt
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
-    6. Click the ++"Build & Flash"++ button.
+    6. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
     
     7. Wait for the `Retry...` lines to appear in the Build Log. Connect the LiPo to power up the Receiver if it only powers up with a LiPo connected.
@@ -652,10 +654,10 @@ Some of the following procedures will not go through, particularly the via Passt
     4. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `NamimnoRC VOYAGER 900 MHz`
+            - `NamimnoRC 900 MHz`
 
         - Device: 
-            - `NamimnoRC VOYAGER 900 RX`
+            - `NamimnoRC Voyager STM 900MHz RX`
 
     5. Set the Flashing Method to `STLink`
 
@@ -667,10 +669,10 @@ Some of the following procedures will not go through, particularly the via Passt
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
-    7. Click the ++"Build & Flash"++ button.
+    7. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
           
     8. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -687,7 +689,7 @@ Some of the following procedures will not go through, particularly the via Passt
 [Lua WiFi]: ../../assets/images/lua/wifi-bw.png
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
 [Temp RX]: ../../assets/images/build-temp-rx.png
-[Build & Flash]: ../../assets/images/BuildFlash.png
+[Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [CP210x]: ../../assets/images/device-mngr-cp210x.png
 [Web UI Banner]: ../../assets/images/web-update-rx.png

@@ -44,10 +44,10 @@ template: main.html
     5. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `Jumper R900`
+            - `Jumper 900 MHz`
 
         - Device: 
-            - `Jumper RX R900MINI`
+            - `Jumper 900 Mini RX`
 
     6. Set the Flashing Method to `STLink`
 
@@ -59,10 +59,10 @@ template: main.html
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
-    8. Click the ++"Build & Flash"++ button.
+    8. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
           
     9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -105,10 +105,10 @@ template: main.html
     3. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `Jumper R900`
+            - `Jumper 900 MHz`
 
         - Device: 
-            - `Jumper RX R900MINI`
+            - `Jumper 900 Mini RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -120,10 +120,10 @@ template: main.html
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
-    6. Click the ++"Build & Flash"++ button.
+    6. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
     
     7. Wait for the `Retry...` lines to appear in the Build Log. Connect the LiPo to power up the Receiver if it only powers up with a LiPo connected.
@@ -139,7 +139,7 @@ template: main.html
         </figure> 
 
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
-[Build & Flash]: ../../assets/images/BuildFlash.png
+[Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [Receiver Wiring]: ../receivers/wiring-up.md
 [Configured]: ../receivers/configuring-fc.md

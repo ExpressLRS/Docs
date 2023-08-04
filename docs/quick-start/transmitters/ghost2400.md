@@ -49,11 +49,11 @@ template: main.html
     6. Select the Device Category and Device target matching your hardware.
 
         - Device Category:
-            - `ImmersionRC Ghost`
+            - `ImmersionRC 2.4 GHz`
 
         - Device:
-            - `GHOST 2400 TX`
-            - `GHOST 2400 TX LITE`
+            - `Ghost 2.4GHz TX`
+            - `Ghost Lite 2.4GHz TX`
 
     7. Set the Flashing Method to `STLink`
 
@@ -65,10 +65,10 @@ template: main.html
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
 
-    9. Click the ++"Build & Flash"++ button.
+    9. Click the ++"Flash"++ button.
 
         <figure markdown>
-        ![Build & Flash]
+        ![Flash]
         </figure>
         
     10. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
@@ -97,11 +97,11 @@ template: main.html
     2. Select the Device Category and Device target matching your hardware.
 
         - Device Category:
-            - `ImmersionRC Ghost`
+            - `ImmersionRC 2.4 GHz`
 
         - Device:
-            - `GHOST 2400 TX`
-            - `GHOST 2400 TX LITE`
+            - `Ghost 2.4GHz TX`
+            - `Ghost Lite 2.4GHz TX`
 
     3. Set the Flashing Method to `Stock_BL`
 
@@ -139,7 +139,7 @@ template: main.html
     11. With the [ExpressLRS Lua Script] in the Tools page, verify if the firmware version has been updated.
 
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
-[Build & Flash]: ../../assets/images/BuildFlash.png
+[Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [Radio Preparation]: tx-prep.md
 [ExpressLRS Lua Script]: ../firmware-version/#via-lua-script
