@@ -43,11 +43,11 @@ More information about signal metrics is found in this great [article on signal 
 
 Shown above is a Bench Test to determine if you're getting a good signal from your radio. This aims to provide you with information on whether you should check your antennas (particularly the R9's Super 8) or if you have good hardware overall. 
 
-- Set your ExpressLRS module to just 10mW using the Lua script. The packet rate doesn't matter much here.
+- Set your ExpressLRS module to the lowest power level using the Lua script. The packet rate doesn't matter much here.
 - Put your radio 1m (3ft) from your receiver and power it up. Make sure the receiver and TX module antennas are oriented in the same way. (You might want to disconnect your vtx/air unit temporarily, put vtx on pit mode or have a fan blowing on it).
 - Using your OSD or the Telemetry Page of your radio, take note of the RSSI dBm or the 1RSS telemetry data.
 
-On the 900Mhz hardware, a -20dBm or thereabouts is a good indication your hardware is in working order. On the 2.4 GHz hardware, around -40dBm to -30dBm should be good. If you're getting lower numbers than these, here are a few things you could check:
+On the 900Mhz hardware, a -20dBm or thereabouts is a good indication your hardware is in working order. On the 2.4 GHz hardware, around -40dBm up to -25dBm should be good. If you're getting lower numbers than these (closer to 0 is higher and better), here are a few things you could check:
 
 - The ExpressLRS module antenna could be loose. On some 3D printed module cases, the print may be too thick at the part where the pigtail's RP-SMA/SMA end would be attached; if so, tighten the nut on the RP-SMA/SMA to give the antenna some more space to get tightened up.
 - The antenna pigtail may be damaged or not connected properly to the module's mainboard.
