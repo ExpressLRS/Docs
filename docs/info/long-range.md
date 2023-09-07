@@ -28,7 +28,7 @@ Anyone can add an entry to the table, and entries should include the:
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
 | 31.56km | 2.4G | 50Hz | 50mW | Wing | No | Les Y | [Link] (https://www.youtube.com/watch?v=sK-OAQUwgyU)|
-| 31.2km | 2.4G | 50Hz | 25mW | Wing | No | Shawn U | [Link](https://youtu.be/tzSeGs0FQ3E) |
+| 40.6km | 2.4G | 50Hz | 25mW | Wing | No | Shawn U | [Link](https://youtu.be/TmSVSCLTUGI?si=nKfhwG8HgvqX104B) |
 | 19.61km | 2.4G | 50Hz | 25mW | Wing | Yes | Les Y | [Link](https://www.youtube.com/watch?v=VDqrNhLCXE8)|
 | 18.97Km| 2.4G | 150Hz | 50mW | Wing | yes | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
 | 12.1km | 2.4G | 50Hz | 25mW | Wing | No | Les Y | [Link](https://youtu.be/_RfU0aEost0)|
