@@ -48,6 +48,7 @@ Anyone can add an entry to the table, and entries should include the:
 | 20Km | 2.4G | 50Hz | 250mW | Wing | No | Padcom | [Link](https://www.youtube.com/watch?v=Fu0fHgSrOqw) |
 | 12.2Km | 2.4G | 500Hz | 250mW | Wing | No | Börner | [Link](https://youtu.be/GUUngM6NcAg) |
 | 11.47Km | 2.4G | 50hz | 500mW | Wing | No | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
+| 10Km | 2.4G | 50Hz | 250mW | Quad | No | Disnator | [Link](https://youtu.be/p6USo0VsLag?si=kP8Bq-XUWoSEWVlV) |
 | 7.14Km | 2.4G | 500hz | 100mw | Wing | No | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
 | 6.43Km | 2.4G | 50Hz | 100mW | Wing | No | DivisionRc | [Link](https://youtu.be/3VAJ14y0ZIY) |
 | 5.07Km | 2.4G | 250Hz | 500mW | Quad | No | ZoFPV | [Link](https://youtu.be/JyNvywwi90s) |
