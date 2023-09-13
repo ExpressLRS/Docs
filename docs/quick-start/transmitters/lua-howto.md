@@ -214,7 +214,7 @@ The Other Devices folder, if present, allows changing the configuration of other
 ### <span class="custom-heading" data-id="1">ExpressLRS Lua Script is stuck at `Loading...`</span>
 
 ??? Note "ExpressLRS Lua Script is stuck at `Loading...`"
-    Go back to the [Radio Setup Guide](tx-prep.md) and make sure your radio is prepped up for ExpressLRS.
+    Go back to the [Radio Setup Guide](tx-prep.md) and make sure your radio is prepped up for ExpressLRS. Check that the ExpressLRS Tx module is enabled - otherwise the script cannot be loaded.
 
     Also, make sure your module has been flashed with v3.0 firmware. V3 Lua for V3.0-flashed modules, V2 Lua for v2.x-flashed modules (including some modules fresh from the factory).
 
