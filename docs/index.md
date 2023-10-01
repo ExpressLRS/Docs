@@ -1,4 +1,4 @@
 ---
 template: home.html
-title: High-performance Open Source Radio Control Link
+title: High Performance Open Source Radio Control Link
 ---
