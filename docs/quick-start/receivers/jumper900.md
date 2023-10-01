@@ -145,4 +145,4 @@ template: main.html
 [Configured]: ../receivers/configuring-fc.md
 [FC Configuration Guide]: ../receivers/configuring-fc.md
 [firmware options]: ../firmware-options.md
-[Receiver Wiring]: ../wiring-up/#connecting-a-receiver
+[Receiver Wiring]: wiring-up.md#connecting-a-receiver

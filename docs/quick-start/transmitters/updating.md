@@ -475,4 +475,4 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
-[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script
+[ExpressLRS Lua Script]: firmware-version.md#via-lua-script

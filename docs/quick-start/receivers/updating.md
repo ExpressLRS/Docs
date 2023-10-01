@@ -515,7 +515,7 @@ description: General Guidelines for ExpressLRS Receiver firmware updating.
 [Web UI Banner]: ../../assets/images/web-update-rx.png
 [Success WiFi]: ../../assets/images/receiverWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
-[Receiver Wiring]: ../receivers/wiring-up.md
+[Receiver Wiring]: wiring-up.md#connecting-a-receiver
 [Unbricking]: ../unbricking.md
 [Configured]: ../receivers/configuring-fc.md
 [firmware options]: ../firmware-options.md
