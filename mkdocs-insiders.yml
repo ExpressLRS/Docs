@@ -1,4 +1,28 @@
 INHERIT: mkdocs.yml
 
+# these will throw a warning but exist to inject privacy and license links post build to footer
 privacy_policy_page_path: "info/privacy-policy"
 licenses_page_path: "info/licenses"
+
+theme:
+  features:
+    - navigation.path
+    - announce.dismiss
+    - navigation.sections
+    - navigation.tabs
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - toc.follow
+
+plugins:
+  social:
+    cards_layout: default/accent
+    cards_layout_options:
+      background_color: "#00000000"
+      background_image: layouts/social.png
+      font_family: Open Sans
+  git-committers:
+    repository: ExpressLRS/Docs
+    branch: master
+
