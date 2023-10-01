@@ -142,4 +142,4 @@ template: main.html
 [Flash]: ../../assets/images/BuildFlash.png
 [Build]: ../../assets/images/Build.png
 [Radio Preparation]: tx-prep.md
-[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script
+[ExpressLRS Lua Script]: firmware-version.md#via-lua-script

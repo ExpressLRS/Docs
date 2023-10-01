@@ -411,4 +411,4 @@ If you've followed any of the steps above and still cannot get your devices flas
 [TX update tab]: ../../assets/images/web-update-tx.png
 [Success WiFi]: ../../assets/images/txmoduleWiFiUpdateSuccess.jpg
 [Old File Upload]: ../../assets/images/web-firmwareupdate.png
-[ExpressLRS Lua Script]: ../firmware-version/#via-lua-script
+[ExpressLRS Lua Script]: firmware-version.md#via-lua-script
