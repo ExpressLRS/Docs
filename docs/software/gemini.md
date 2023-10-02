@@ -43,7 +43,7 @@ For data links a single missed packet can mean more than 1 missed packet. If a s
 
 ## Will Gemini increase my range?
 
-No. The packet sensitivity remains the same for the RF mode used.  Gemini will help maintain a higher LQ to the point of failsafe.  However failsafe will still happen at approximately the same distance e.g. the moon.
+No. The packet sensitivity remains the same for the RF Mode (or Packet Rate) used.  Gemini will help maintain a higher LQ to the point of failsafe.  However failsafe will still happen at approximately the same distance e.g. the moon.
 
 ## Comparison with other Antenna Modes
 
@@ -51,13 +51,21 @@ No. The packet sensitivity remains the same for the RF mode used.  Gemini will h
 ![Gemini Info](../assets/images/gemini-sunjun.png)
 </figure>
 
+## Is there antenna switching with Gemini? Can Antenna 1 of Receiver talk with Antenna 2 of TX if they are in the same polarization during a flight?
+
+Yes, there is antenna switching.
+
 ## What happens if I use a Gemini Tx, in Gemini Mode, with a single Antenna Receiver?
 
-The Gemini Tx will function as designed, in Gemini Mode. The Receiver will only get the signal from the TX it has sync'd with. The other Tx, will act as a noise generator.
+The Gemini Tx will function as designed, in Gemini Mode. The Receiver will only get the signal from the TX it has sync'd with. The other Tx, will act as a noise generator. Therefore, you should set the Tx in either Switch or Single Antenna (Ant1/Ant2) Mode.
+
+## What happens if I use a Gemini Tx, in Gemini Mode, with Gemini-incapable Diversity Receivers?
+
+As above, with the Receiver antennas only getting sync from one Tx. We recommend setting the TX to non-Gemini Modes.
 
 ## How does a Gemini Rx behave when paired with a non-Gemini Tx?
 
-The Receiver will still listen on both Antennas, and only get sync on one. Both Rx will send out Telemetry, but only one of them will be used.
+The Receiver will still listen on both Antennas, but only get sync on one. Both Rx will send out Telemetry, but only one of them will be used.
 
 ## Recommendations
 
