@@ -355,10 +355,9 @@ template: main.html
 
     There's one more setting you want to make sure is set properly before proceeding.
 
-    1. Long-press the ++"SYS"++ Key on the Radio.
+    1. Long-press the ++context-menu++ "Menu" Key on the Radio.
         - Consult your Radio User's Manual on how to get to the System Menu.
     2. Press the ++"PAGE"++ Keys until you reach the Hardware Page.
-        - On this radio, a short-press on the ++"SYS"++ Key is equivalent to ++"< PAGE"++ while a short-press on the ++"MDL"++ Key is equivalent to ++"PAGE >"++ .
     3. Scroll down until you see the Serial Ports settings.
         - Press the ++"Down"++ button.
     4. Select or highlight USB-VCP by pressing the ++"Down"++ or ++"Up"++ Keys. Press ++enter++ to edit the setting and use the ++"Down"++ or ++"Up"++ Keys to set it to `CLI` mode. Press ++enter++ once more to confirm the changes.
