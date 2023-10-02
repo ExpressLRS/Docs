@@ -11,6 +11,13 @@ Gemini is a dual channel 2.4GHz OR 900MHz system. However, it is currently NOT D
 
 In Gemini Mode, a TX module simultaneously transmits a packet in two frequencies 40MHz apart for 2.4GHz and ~10MHz apart for 900MHz users.  The packet separation used is half of the frequency domain selected and will vary a little. A true diversity Receiver is used to receive both packets simultaneously. Transmitting on 2 separate frequencies provides better interference avoidance and/or mitigation, in a similar way DVDA does by sending repeat packets sequentially on different frequencies. This means, the Receiver has an increased chance of receiving the packet. This results in a much higher and stable LQ.
 
+## Setup
+
+**Via Lua set your Tx AND Rx Antenna Modes to Gemini.**
+
+Use [Model Config Matching](model-config-match.md) to set the correct antenna mode based on the active Model on the radio.
+e.g. use Model 5 for single antenna receivers, Model 6 for Gemini-capable receivers.
+
 ## Introductory Video and Testing
 
 <figure markdown>
@@ -66,8 +73,3 @@ As above, with the Receiver antennas only getting sync from one Tx. We recommend
 ## How does a Gemini Rx behave when paired with a non-Gemini Tx?
 
 The Receiver will still listen on both Antennas, but only get sync on one. Both Rx will send out Telemetry, but only one of them will be used.
-
-## Recommendations
-
-Set your Tx and Rx Antenna Mode appropriately. Use [Model Config Matching](model-config-match.md) to set the correct antenna mode based on the active Model on the radio.
-e.g. use Model 5 for single antenna receivers, Model 6 for Gemini-capable receivers.
