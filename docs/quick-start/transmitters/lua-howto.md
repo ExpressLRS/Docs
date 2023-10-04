@@ -250,6 +250,28 @@ This section contains all the WiFi-related functions.
 
 * `Enable VRx WiFi` will put the VRx [Backpack](https://github.com/ExpressLRS/Backpack) that is bound and connected to the onboard TX Backpack into WiFi mode to facilitate updating via WiFi.
 
+### Backpack Options
+
+The parameters in this folder allow users to change how their TX Backpack behaves in conjunction with their VRX Backpacks.
+
+<figure markdown>
+![Backpack Color](../../assets/images/lua/backpack-color.png)
+</figure>
+
+<figure markdown>
+![Backpack B&W](../../assets/images/lua/backpack-bw.png)
+</figure>
+
+* `Backpack` - Turn the Backpack function On or Off.
+* `DVR Rec` - Set which Aux Channel and what channel position will trigger DVR Recording on the goggles. Only possible on FPV Goggles with VRX Backpack integration.
+* `DVR Srt Delay` - How soon should the DVR start Recording upon activation of the Aux switch?
+* `DVR Stp Delay` - How soon should the DVR stop Recording upon deactivation of the Aux switch?
+* `HT Enable` - Turn Headtracking On or Off. Only available on some FPV Goggles with VRX Backpack integration.
+* `HT Start Channel` - Starting Channel to send Head Tracking positions to.
+* `Version` - The Backpack Firmware version flashed into the TX Backpack.
+
+For more information, see the [Backpack Guide](../../hardware/backpack/esp-backpack.md).
+
 ### Bind
 
 !!! info "Take Notice!"
