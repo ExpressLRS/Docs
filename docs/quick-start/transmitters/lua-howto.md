@@ -81,6 +81,31 @@ If you do not meant to have your system Armed and ready for flying, make sure to
 !!! warning "WARNING"
 	Do not change parameters while ARMED. When a parameter is changed, the module goes into Parameter Commit mode, interrupting the normal loop. This could result in a desync on some hardware combination which would result in a FAILSAFE.
 
+### Version Line
+
+The Version Line, found near the bottom of the Lua Script, indicates the firmware version flashed into the Device. This is present on both TX Modules and Receivers.
+
+<figure markdown>
+![Lua Version Color](../../assets/images/lua/lua-other.png)
+</figure>
+
+<figure markdown>
+![Lua Version B&W](../../assets/images/lua/lua-version-bw.jpg)
+</figure>
+
+<figure markdown>
+![Lua Version Receiver](../../assets/images/lua/lua-otherRX-gemini.png)
+</figure>
+
+From these examples:
+
+* `3.3.0` - The numerical Version Number, in the form of `Major.Minor.Patch`.
+    - See [semantic versioning scheme](https://semver.org/) for the origins of these numbers.
+
+* `ISM2G4` - The Regulatory Domain set into the Device. TX and RX Regulatory Domains should match.
+
+* `ae9df3` - The Git commit hash for the version or branch.
+
 ### Folder Titles
 
 Items with `>` before the name is a folder that when selected shows another level of customization. `TX Power`, `VTX Administrator`, `Wifi Connectivity` are examples of these items.
@@ -334,6 +359,10 @@ This folder is only available to PWM receivers. This will allow users to set opt
 * `Invert` - Set this option to On or Off to toggle the direction for the Output Channel.
 
 For more information, see [PWM Receivers](../../hardware/pwm-receivers.md) page.
+
+### Model ID
+
+This line shows the currently set Model ID for the receiver when Model Matching is enabled. This number should match the Receiver ID set with the current active Model on the Radio handset, otherwise, there will be Model Mismatch! See [Model Match](../../software/model-config-match.md) for more details.
 
 ## Recommendations
 
