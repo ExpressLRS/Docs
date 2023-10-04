@@ -9,51 +9,38 @@ description: Here is a simple ExpressLRS Lua Script guide explaining the differe
 
 Download the [ELRSv3 Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (you can simply right-click, save-as) into your radio's SD Card under the `Scripts/Tools` folder.
 
-Access the script by navigating to your Radio's System Menu.
+<figure markdown>
+    ![Lua Folder](../../assets/images/LuaFolder.jpg)
+</figure>
 
-    1. Press the ++"SYS"++ Key on your Radio.
-        - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
-        - Consult your Radio User's Manual on how to access the System Menu.
-    2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
+Access the script by navigating to your radio's System Menu.
+
+1. Press the ++"SYS"++ Key on your Radio.
+    - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+    - Consult your Radio User's Manual on how to access the System Menu.
+2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
         
-        Here's how it looks in the Tools menu (B&W and Color Screens):
+     Here's how it looks in the Tools menu (B&W and Color Screens):
 
-        <figure markdown>
-            ![Lua Script](../../assets/images/lua1.jpg)
-        </figure>
+    <figure markdown>
+        ![Lua Script](../../assets/images/lua1.jpg)
+    </figure>
 
-        <figure markdown>
-            ![Lua Script T16](../../assets/images/lua2.jpg)
-        </figure>
+    <figure markdown>
+        ![Lua Script T16](../../assets/images/lua2.jpg)
+    </figure>
 
-    3. Press ++enter++ to Load it.
+3. Press ++enter++ to Load it.
 
+??? failure "Stuck at `Loading...` (click to expand)"
+    Go back to [Radio Preparation Guide](tx-prep.md) and make sure the current model is configured for ExpressLRS use.
 
-## Check if your TX is Connected
+    Also set your Internal or External RF Baudrate to a higher value if the Script won't still load after proper configuration of your Model. As of 3.3.0:
 
-If the parameter list does not populate after a few seconds, and it's stuck at `Loading...`, first verify the ExpressLRS module has power by checking its LED. If there is no LED lit up, it is possible the Protocol set for the External Module is incorrect (should be set to CRSF) or that the module is not properly connected to the pins of the JR bay of the radio. Another possible reason is that you haven't updated the firmware of the module to version 2.x.
+    - 500Hz or faster packet rates require >400K Baudrate.
+    - 333Hz is the fastest packet rate you can use with 400K Baudrate.
 
-If parameters do show up, but the Bad/Good section on the right side of the header is showing an unstable value, have a look at your model settings and make sure the Internal RF module is set to Off. If the Bad/Good indicates something other than `0/<your selected packet rate>` this means `CRSFshot` is not working-- verify that you properly followed the [Radio Preparation](tx-prep.md) Guide.
-
-<figure markdown>
-![Lua3](../../assets/images/lua3.jpg)
-</figure>
-
-<figure markdown>
-![Lua Script Config BW](../../assets/images/lua/config-bw.png)
-</figure>
-
-The `master 942c40` from the photo above is the git branch and commit hash of the firmware version that the module has. You can reference this hash from [Releases](https://github.com/ExpressLRS/ExpressLRS/releases). In the first photo above, `master` means the module is flashed with the `Master Branch` with the git commit `942c40`. If you're on a Released version or a Release Candidate, this will read something like `3.0` or `3.0-RC1` plus the commit hash of the release.
-
-!!! note "Note"
-    Colors may differ from Handset to Handset, depending on the current theme in use.
-
-## Understanding and using the Lua Script
-Now, we can explore the complexities of the Lua script, and how to interpret each of its many sections. ExpressLRS supports multiple configuration profiles, and the configuration profile is selected by setting the "Receiver" property in handset Model Setup -> External Module -> Receiver (number).
-
-<figure markdown>
-![Model CFG](../../assets/images/modelcfg.jpg)
-</figure>
+## Understanding and Using the Lua Script
 
 !!! warning "WARNING"
 	Do not change parameters while ARMED. When a parameter is changed, the module goes into Parameter Commit mode, interrupting the normal loop. This could result in a desync on some hardware combination which would result in a FAILSAFE.
