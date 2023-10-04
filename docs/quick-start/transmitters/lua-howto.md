@@ -42,9 +42,6 @@ Access the script by navigating to your radio's System Menu.
 
 ## Understanding and Using the Lua Script
 
-!!! warning "WARNING"
-	Do not change parameters while ARMED. When a parameter is changed, the module goes into Parameter Commit mode, interrupting the normal loop. This could result in a desync on some hardware combination which would result in a FAILSAFE.
-
 ### The Header
 
 The first line, "Header", will show you some information about your ExpressLRS link. 
@@ -73,11 +70,16 @@ The `Model Mismatch` message will also show up to indicate you are connected to 
 ![Lua Model Mismatch](../../assets/images/lua/lua-mismatch.jpg)
 </figure>
 
-The `Armed` message will show up if you have the Arming Switch active (High, ~2000us). If you do not meant to have your system Armed and ready for flying, make sure to toggle this switch to the Disarmed position (Low, ~1000us). See [Switch Configs](../../software/switch-config.md).
+The `Armed` message will show up if you have the Arming Switch active (High, ~2000us). This is meant to warn users that changing parameters could result in a desync or disconnection with a receiver, resulting into a FAILSAFE.
+
+If you do not meant to have your system Armed and ready for flying, make sure to toggle this switch to the Disarmed position (Low, ~1000us). Update your CH5 settings on the radio so that the output of this switch is correct (Low = disarmed; High = armed). See [Switch Configs](../../software/switch-config.md).
 
 <figure markdown>
 ![Lua Armed](../../assets/images/lua/lua-armed.jpg)
 </figure>
+
+!!! warning "WARNING"
+	Do not change parameters while ARMED. When a parameter is changed, the module goes into Parameter Commit mode, interrupting the normal loop. This could result in a desync on some hardware combination which would result in a FAILSAFE.
 
 ### Folder Titles
 
