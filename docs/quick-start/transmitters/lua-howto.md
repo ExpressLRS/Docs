@@ -33,9 +33,11 @@ Access the script by navigating to your radio's System Menu.
 3. Press ++enter++ to Load it.
 
 ??? failure "Stuck at `Loading...` (click to expand)"
-    Go back to [Radio Preparation Guide](tx-prep.md) and make sure the current model is configured for ExpressLRS use.
+    Go back to the [Radio Preparation Guide](tx-prep.md) and make sure the current model is configured for ExpressLRS use.
 
-    Also set your Internal or External RF Baudrate to a higher value if the Script won't still load after proper configuration of your Model. As of 3.3.0:
+    Also set your Internal or External RF Baudrate to a higher value if the Script still doesn't load after proper configuration of your Model. 
+    
+    As of 3.3.0:
 
     - 500Hz or faster packet rates require >400K Baudrate.
     - 333Hz is the fastest packet rate you can use with 400K Baudrate.
@@ -159,7 +161,7 @@ The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver
 
 ### Antenna Mode
 
-This option is only available to Gemini-Capable TX Modules. See the Gemini Page for more details.
+This option is only available to Gemini-capable TX Modules. See the Gemini Page for more details.
 
 Available Options:
 
@@ -197,7 +199,7 @@ The Receiver ID of the active model is shown after the option value.
 ![Power Settings BW](../../assets/images/lua/power-bw.png)
 </figure>
 
-TX Power is a folder, press ENTER to enter the TX Power settings and use RTN/EXIT to exit the folder.
+The `TX Power` folder is where you can set your TX Module's Transmission Power settings. Press ++enter++ once to access the settings and Press ++"RTN"++ key to go back to the previous page.
 
 * `Max Power` sets the maximum power level your TX will transmit at. Selecting a power level higher or lower than your TX supports will revert to the closest supported level. The options are `10, 25, 50, 100, 250, 500, 1000 & 2000` mW. If Dynamic Power is set to `Off` this is the power level your TX always uses. 
 
@@ -252,7 +254,7 @@ This section contains all the WiFi-related functions.
 
 ### Backpack Options
 
-The parameters in this folder allow users to change how their TX Backpack behaves in conjunction with their VRX Backpacks.
+The parameters in this folder enables you to change the Backpack-related parameters.
 
 <figure markdown>
 ![Backpack Color](../../assets/images/lua/backpack-color.png)
