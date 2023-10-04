@@ -5,25 +5,31 @@ description: Here is a simple ExpressLRS Lua Script guide explaining the differe
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-Now that you have flashed your TX it is time to learn how to use the ELRS Lua script!
-
 ## Installing the Lua Script
 
-Download the [ELRSv3 Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (you can simply right-click, save-as) into your radio's SD Card under the `Scripts/Tools` folder and Long Press the "SYS" button (for T16 or similar Radios) or the "Menu" button (for Taranis X9D or similar Radios) to access the Tools Menu where you can find the ExpressLRS script ready to run with only one click.
+Download the [ELRSv3 Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (you can simply right-click, save-as) into your radio's SD Card under the `Scripts/Tools` folder.
 
-Here's how it looks in the Tools menu (X9D+ and T16 Shown):
+Access the script by navigating to your Radio's System Menu.
 
-<figure markdown>
-![Lua Script](../../assets/images/lua1.jpg)
-</figure>
+    1. Press the ++"SYS"++ Key on your Radio.
+        - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+        - Consult your Radio User's Manual on how to access the System Menu.
+    2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
+        
+        Here's how it looks in the Tools menu (B&W and Color Screens):
 
-<figure markdown>
-![Lua Script T16](../../assets/images/lua2.jpg)
-</figure>
+        <figure markdown>
+            ![Lua Script](../../assets/images/lua1.jpg)
+        </figure>
+
+        <figure markdown>
+            ![Lua Script T16](../../assets/images/lua2.jpg)
+        </figure>
+
+    3. Press ++enter++ to Load it.
+
 
 ## Check if your TX is Connected
-
-Enter the Lua script by selecting "ExpressLRS" in the Tools menu and pressing ENTER.
 
 If the parameter list does not populate after a few seconds, and it's stuck at `Loading...`, first verify the ExpressLRS module has power by checking its LED. If there is no LED lit up, it is possible the Protocol set for the External Module is incorrect (should be set to CRSF) or that the module is not properly connected to the pins of the JR bay of the radio. Another possible reason is that you haven't updated the firmware of the module to version 2.x.
 
