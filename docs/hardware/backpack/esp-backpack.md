@@ -53,7 +53,7 @@ See the tables below for the list of supported devices:
 | Jumper Aion T-Pro Internal | ❌ Not compatible  |
 | Jumper Aion Nano | ❌ Not compatible  |
 | Vantac Lite | ❌ Not compatible  |
-| Jumper T-Pro | ❌ Not compatible  |
+| Jumper T-Pro V1 4-in-1 + external ELRS | ❌ Not compatible  |
 | ImmersionRC Ghost TX | ❌ Not compatible  |
 | QuadKopters 2.4 TX | ❌ Not compatible  |
 | SIYI FM30 | ❌ Not compatible  |
