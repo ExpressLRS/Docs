@@ -49,9 +49,11 @@ See the tables below for the list of supported devices:
 | BETAFPV 2.4 TX | ❌ Not compatible  |
 | BETAFPV 900 TX | ❌ Not compatible  |
 | Radiomaster Zorro  | ✔️ Fully supported |
+| Radiomaster Pocket  | ✔️ Fully supported |
 | Jumper Aion T-Pro Internal | ❌ Not compatible  |
 | Jumper Aion Nano | ❌ Not compatible  |
 | Vantac Lite | ❌ Not compatible  |
+| Jumper T-Pro | ❌ Not compatible  |
 | ImmersionRC Ghost TX | ❌ Not compatible  |
 | QuadKopters 2.4 TX | ❌ Not compatible  |
 | SIYI FM30 | ❌ Not compatible  |
