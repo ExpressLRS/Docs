@@ -9,6 +9,8 @@ template: main.html
 !!! warning "WARNING"
     Make sure you are selecting the right Device Category (2.4GHz or 900MHz) that's appropriate for the hardware you have. You cannot flash a 2.4GHz module with the firmware for the 900MHz module and expect it to work properly. Likewise, you cannot flash a 900MHz module with the firmware for the 2.4GHz module. They have different sets of hardware.
 
+    The T20 Gemini firmware will ONLY work on the T20 Gemini. Do not Flash this target on the other T20 variants.
+
     You can damage your hardware if you do so. You have been warned!
 
 ## Flashing/Updating your TX Module Firmware
@@ -39,11 +41,11 @@ template: main.html
                 - `Jumper 900 MHz`
 
             - Device: 
+                - `Jumper Gemini T-20 2.4GHz TX`
                 - `Jumper AION T-20 2.4GHz TX`
                 - `Jumper AION T-20 900M TX`
 
         3. Set the Flashing Method to `WiFi`.
-
             <figure markdown>
             ![via WiFi](../../assets/images/Method_intTX_WiFi.png)
             </figure>
@@ -149,6 +151,7 @@ template: main.html
                 - `Jumper 900 MHz`
 
             - Device: 
+                - `Jumper Gemini T-20 2.4GHz TX`
                 - `Jumper AION T-20 2.4GHz TX`
                 - `Jumper AION T-20 900M TX`
 
@@ -289,6 +292,7 @@ template: main.html
                 - `Jumper 900 MHz`
 
             - Device: 
+                - `Jumper Gemini T-20 2.4GHz TX`
                 - `Jumper AION T-20 2.4GHz TX`
                 - `Jumper AION T-20 900M TX`
 
@@ -330,7 +334,7 @@ template: main.html
     
     Before you start, ensure you have the latest EdgeTX firmware version on your Radio. Consult the EdgeTX [documentation](https://github.com/EdgeTX/edgetx.github.io/wiki/EdgeTX-Installation-Guide) regarding the updating process.
 
-    For the `Jumper T20`, the EdgeTX firmware that came with it (pre EdgeTX 2.9.0) should work fine and there's no need to update it.
+    For any of the variants of the `Jumper T20`, the EdgeTX firmware that came with it (pre EdgeTX 2.9.0) should work fine and there's no need to update it.
 
     ??? Tip "Simplest EdgeTX Updating Procedure"
         1. Visit http://buddy.edgetx.org/.
@@ -368,13 +372,13 @@ template: main.html
     1. Connect your powered-up Radio to your Computer via a USB Data Cable.
 
         <figure markdown>
-        ![usb picture](../../assets/images/tliteV2-usb.jpg)
+        ![usb picture](../../assets/images/t20-usb.jpg)
         </figure>
 
     2. On your Radio, scroll down and select `USB Serial(VCP)` then press the ++enter++ Key. Set your Radio aside in the meantime.
 
         <figure markdown>
-        ![Debug option](../../assets/images/tliteV2-usbVCP.jpg)
+        ![Debug option](../../assets/images/t20-usbVCP.jpg)
         </figure>
 
     3. On your Computer, check whether your Radio is being recognized correctly as a {==STMicroelectronics Virtual COM Port==} device.
@@ -410,6 +414,7 @@ template: main.html
             - `Jumper 900 MHz`
 
         - Device: 
+            - `Jumper Gemini T-20 2.4GHz TX`
             - `Jumper AION T-20 2.4GHz TX`
             - `Jumper AION T-20 900M TX`
 
