@@ -30,9 +30,19 @@ To get RSSI and Link Quality displayed in the OSD set RSSI Channel to "Disabled"
 
 If you wish to enable the RSSI dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm).
 
-If using DJI Goggles, you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab.
+If using DJI Goggles V1 or V2 (unrooted/unmodded), you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab.
 
-More information about signal metrics is found in this great [article on signal health](../info/signal-health.md).
+For digital fpv systems with "canvas mode" or full native OSD support via MSP Displayport (Walksnail Avatar, HDZero, DJI O3), you can treat the config as any analog fpv setup. Therefore, you do NOT have to set RSSI Channel (leave it at disabled; ++"5"++). 
+
+<figure markdown>
+![Conf Tab](../../assets/images/ConfigurationTab.png)
+</figure>
+
+<figure markdown>
+![INAV Config](../../assets/images/FC-rxconfig-INAV.png)
+</figure>
+
+More information about signal metrics can be found in this great [article on signal health](../info/signal-health.md).
 
 ## Bench Test
 
