@@ -24,6 +24,14 @@ One important thing to keep in mind is that Aux1 should be used as your Arming s
 
 To get RSSI and Link Quality displayed in the OSD, set both **RSSI Channel** and **RSSI_ADC** to {==Disabled==}. Both settings can be found in the Receiver Tab.
 
+<figure markdown>
+![Conf Tab](../../assets/images/ConfigurationTab.png)
+</figure>
+
+<figure markdown>
+![INAV Config](../../assets/images/FC-rxconfig-INAV.png)
+</figure>
+
 On the OSD Tab, use the **Link Quality** and **RSSI dBm value** elements (not "RSSI Value"). INAV has put this in the `CRSF RX Statistics` section.
 
 <figure markdown>
@@ -34,17 +42,9 @@ If you wish to enable the RSSI dBm warning, you'll have to change the alarm leve
 
 Likewise, if you want to change the LQ Alarm level, you can use the CLI command `set osd_link_quality_alarm = x` with `x` as your LQ Alarm level. `60` is a good value to start with.
 
-If you're using DJI Goggles V1 or V2 (unrooted/unmodded), you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab (see ++"5"++).
+If you're using DJI Goggles V1 or V2 (unrooted/unmodded), you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab (see images above).
 
-For digital FPV systems with "Canvas Mode" or full native OSD support via MSP Displayport (Walksnail Avatar, HDZero, DJI O3), you can treat the config as any analog FPV setup. Therefore, you do NOT have to set RSSI Channel (leave it at disabled; ++"5"++). 
-
-<figure markdown>
-![Conf Tab](../../assets/images/ConfigurationTab.png)
-</figure>
-
-<figure markdown>
-![INAV Config](../../assets/images/FC-rxconfig-INAV.png)
-</figure>
+For digital FPV systems with "Canvas Mode" or full native OSD support via MSP Displayport (Walksnail Avatar, HDZero, DJI O3), you can treat the config as any analog FPV setup. Therefore, you do NOT have to set RSSI Channel (leave it at disabled). 
 
 More information about signal metrics can be found in this great [article on signal health](../info/signal-health.md).
 
