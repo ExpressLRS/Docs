@@ -32,7 +32,7 @@ On the OSD Tab, use the **Link Quality** and **RSSI dBm value** elements (not "R
 
 If you wish to enable the RSSI dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm).
 
-Likewise, if you want to change the LQ Alarm level, you can use the cli command `set osd_link_quality_alarm = x` with `x` as your LQ alarm level. `60` is a good value to start with.
+Likewise, if you want to change the LQ Alarm level, you can use the CLI command `set osd_link_quality_alarm = x` with `x` as your LQ Alarm level. `60` is a good value to start with.
 
 If you're using DJI Goggles V1 or V2 (unrooted/unmodded), you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab (see ++"5"++).
 
