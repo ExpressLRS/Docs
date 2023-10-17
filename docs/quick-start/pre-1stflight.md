@@ -22,7 +22,9 @@ One important thing to keep in mind is that Aux1 should be used as your Arming s
 
 ## RSSI and Link Quality
 
-To get RSSI and Link Quality displayed in the OSD set RSSI Channel to "Disabled" in the Receiver tab of the Betaflight/iNav Configurator, and RSSI_ADC should be disabled on the Configuration tab. Both of these are the default. On the OSD menu, use the **Link Quality** and **RSSI dBm value** elements (not "RSSI Value"). iNav has put this in the `CRSF RX Statistics` section.
+To get RSSI and Link Quality displayed in the OSD set **RSSI Channel** to {==Disabled==} in the Receiver tab of the Betaflight/INAV Configurator, and **RSSI_ADC** should be {==Disabled==} on the Configuration tab. Both of these are the default.
+
+On the OSD Tab, use the **Link Quality** and **RSSI dBm value** elements (not "RSSI Value"). INAV has put this in the `CRSF RX Statistics` section.
 
 <figure markdown>
 ![OSD](../assets/images/OSD.jpg)
