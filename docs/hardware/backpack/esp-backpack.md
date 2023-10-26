@@ -45,7 +45,8 @@ See the tables below for the list of supported devices:
 | NamimnoRC Voyager OLED(ESP version)  | ✔️ Fully supported |
 | Axis Flying THOR  | ✔️ Fully supported |
 | HGLRC Hermes | ❌ Not compatible  |
-| BETAFPV 2.4 TX 1W Micro | ✔️ Fully supported  |
+| BETAFPV 2.4 Micro TX 1W | ✔️ Fully supported  |
+| BETAFPV 2.4 Micro Tx 500mW | ❌ Not compatible  |
 | BETAFPV 2.4 TX | ❌ Not compatible  |
 | BETAFPV 900 TX | ❌ Not compatible  |
 | Radiomaster Zorro  | ✔️ Fully supported |
