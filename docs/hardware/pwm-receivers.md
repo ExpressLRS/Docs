@@ -22,7 +22,7 @@ PWM output is still subject to the resolution of the ELRS protocol, which means 
 
 ## Serial Output
 PWM receivers can also output any [serial protocol](https://www.expresslrs.org/software/serial-protocols/) supported by ELRS, such as CRSF or SBUS. [Select the desired output protocol](https://www.expresslrs.org/software/serial-protocols/#receiver-protocol-selection) using the ELRS lua, or on the Model tab in the receiver's webui. 
-The pins used for serial output vary by receiver. If your receiver has a dedicated serial port (e.g. BetaFPV SuperP, Radiomaster ER6, ER8, ER8G(V)), serial output will always be over this port. Otherwise, [check the Model tab](https://www.expresslrs.org/software/serial-protocols/l#pwm-receiver-serial-pin-selection) in the receiver's webui to see which pins can be mapped to Serial TX and RX (usually Ch2 and Ch3).
+The pins used for serial output vary by receiver. If your receiver has a dedicated serial port (e.g. BetaFPV SuperP, Radiomaster ER6, ER8, ER8G(V)), serial output will always be over this port. Otherwise, [check the Model tab](https://www.expresslrs.org/software/serial-protocols/#pwm-receiver-serial-pin-selection) in the receiver's webui to see which pins can be mapped to Serial TX and RX (usually Ch2 and Ch3).
 
 <figure markdown>
 ![Radiomaster ER6 Serial Output](../assets/images/ER6-serial.png)
