@@ -19,3 +19,12 @@ Failsafe values are set using this UI as well with values that can range from 98
 
 ## Channel Resolution
 PWM output is still subject to the resolution of the ELRS protocol, which means there are still only 4x full resolution channels (10-bit CH1-CH4) and 8x switch channels (CH5-CH12). For the best resolution on the switch channels, use `Switch Mode: Wide` and a `TLM Ratio` of `1:8` to `1:256` for 7-bit (128 pos) switch channel resolution. Higher TLM Ratios (1:2 and 1:4) are reduced to 6-bit (64 pos) resolution. Remember that switch channels are sent one per packet in Wide mode, taking 8 packets to send all 7 channels (e.g. 150Hz mode 1:64 = 18.657Hz updates to CH6-CH12). AUX1/CH5 is sent in every packet in all switch modes but is only 1-bit (2-pos).
+
+## Serial Output
+PWM receivers can also output any [serial protocol](https://www.expresslrs.org/software/serial-protocols/) supported by ELRS, such as CRSF or SBUS. [Select the desired output protocol](https://www.expresslrs.org/software/serial-protocols/#receiver-protocol-selection) using the ELRS lua, or on the Model tab in the receiver's webui. 
+The pins used for serial output vary by receiver. If your receiver has a dedicated serial port (e.g. BetaFPV SuperP, Radiomaster ER6, ER8, ER8G(V)), serial output will always be over this port. Otherwise, [check the Model tab](https://www.expresslrs.org/software/serial-protocols/l#pwm-receiver-serial-pin-selection) in the receiver's webui to see which pins can be mapped to Serial TX and RX (usually Ch2 and Ch3).
+
+<figure markdown>
+![Radiomaster ER6 Serial Output](../assets/images/ER6-serial.png)
+<figcaption>JST-GH Serial Port on Radiomaster ER6 PWM Receiver</figcaption>
+</figure>
