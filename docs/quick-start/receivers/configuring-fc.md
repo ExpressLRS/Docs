@@ -39,7 +39,7 @@ Follow the steps below to set up your Serial Receiver Protocol:
 4. Set `Telemetry` to {==Enabled==}.
     - On INAV, `Telemetry` can be found under the ++"Configuration"++ Tab.
 
-5. Make sure you set `RSSI Channel` to {==Disabled==} if you are using an Analog FPV System.
+5. Make sure you set `RSSI Channel` to {==Disabled==} if you are using an Analog FPV System, or any FPV System with MSP DisplayPort or "Canvas Mode" support.
     - Also make sure `RSSI ADC` is {==Disabled==}.
 
 

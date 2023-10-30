@@ -22,7 +22,17 @@ One important thing to keep in mind is that Aux1 should be used as your Arming s
 
 ## RSSI and Link Quality
 
-To get RSSI and Link Quality displayed in the OSD set RSSI Channel to "Disabled" in the Receiver tab of the Betaflight/iNav Configurator, and RSSI_ADC should be disabled on the Configuration tab. Both of these are the default. On the OSD menu, use the **Link Quality** and **RSSI dBm value** elements (not "RSSI Value"). iNav has put this in the `CRSF RX Statistics` section.
+To get RSSI and Link Quality displayed in the OSD, set both **RSSI Channel** and **RSSI_ADC** to {==Disabled==}. Both settings can be found in the Receiver Tab.
+
+<figure markdown>
+![Conf Tab](../../assets/images/ConfigurationTab.png)
+</figure>
+
+<figure markdown>
+![INAV Config](../../assets/images/FC-rxconfig-INAV.png)
+</figure>
+
+On the OSD Tab, use the **Link Quality** and **RSSI dBm value** elements (not "RSSI Value"). INAV has put this in the `CRSF RX Statistics` section.
 
 <figure markdown>
 ![OSD](../assets/images/OSD.jpg)
@@ -30,9 +40,13 @@ To get RSSI and Link Quality displayed in the OSD set RSSI Channel to "Disabled"
 
 If you wish to enable the RSSI dBm warning, you'll have to change the alarm level using `set osd_rssi_dbm_alarm = -100` in CLI. A sensible value is 5-10 higher than the sensitivity shown in the ELRS.lua for the packet rate (e.g. 250Hz=-108, so -103 to -98 for the alarm).
 
-If using DJI Goggles, you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab.
+Likewise, if you want to change the LQ Alarm level, you can use the CLI command `set osd_link_quality_alarm = x` with `x` as your LQ Alarm level. `60` is a good value to start with.
 
-More information about signal metrics is found in this great [article on signal health](../info/signal-health.md).
+If you're using DJI Goggles V1 or V2 (unrooted/unmodded), you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab (see images above).
+
+For digital FPV systems with "Canvas Mode" or full native OSD support via MSP Displayport (Walksnail Avatar, HDZero, DJI O3), you can treat the config as any analog FPV setup. Therefore, you do NOT have to set RSSI Channel (leave it at disabled). 
+
+More information about signal metrics can be found in this great [article on signal health](../info/signal-health.md).
 
 ## Bench Test
 
