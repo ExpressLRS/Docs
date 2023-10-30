@@ -5,6 +5,24 @@ description: Binding ExpressLRS is easy! With the Binding Phrase, no button pres
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)
 
+??? note "Compatibility (click to expand)"
+    The first number in the Version string should match between a TX Module and a Receiver. Examples:
+
+    - a TX Module with version string of 3.1.2 will sync and work with a Receiver with firmware version 3.0.1
+    - a TX Module with version string of 3.2.0 will NOT sync or bind with a Receiver with firmware version 2.4.0
+    - a Receiver with version string of 3.1.2 will sync and work with a TX Module with firmware version 3.0.1
+    - a Receiver with version string of 3.2.0 will NOT sync or bind with a TX Module with firmware version 2.4.0
+    - SPI-based Receivers on (official) Betaflight 4.3.1 and older will only sync or bind with ExpressLRS 2.x firmware
+    - SPI-based Receivers on Betaflight 4.4.0 and newer will only sync or bind with ExpressLRS 3.x firmware
+
+    If your firmware versions are incompatible, NONE of the methods below will work. 
+
+    See these pages on how to check the firmware version on your ExpressLRS devices:
+
+    - [TX Modules](../quick-start/transmitters/firmware-version.md)
+    - [Receivers](../quick-start/receivers/firmware-version.md)
+    - [SPI Receivers](../hardware/spi-receivers.md)
+
 Binding can be done with either a hard-coded unique Binding Phrase or in a more traditional way where you put the receiver and transmitter into bind mode, and they link up.
 
 If you'll be updating or reflashing your ExpressLRS firmware into your device anyway, using a Binding Phrase is a no-brainer. 
@@ -30,8 +48,8 @@ Alternatively, you can also change the Binding Phrase via the WebUI if your devi
 
 We recommend using a **unique** phrase with at least 8 alpha-numeric characters. The best candidate is your Pilot Handle. This phrase need not be complicated or super-secret as it isn't a password or encryption key. 
 
-??? info "Is my binding phrase a secret?"
-    No, just like what channel your VTX is on is not a secret. The binding phrase is not security, it is anti-collision. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally are pretty high. To provide the best chance of not interfering with other pilots and them not interfering with you, be sure you're not using the same dumb bind phrase as someone else. Express your style with a hilarious or saucy bind phrase.
+??? info "Is my binding phrase a secret? (click to expand)"
+    No, just like what channel your VTX is on is not a secret. The binding phrase is not for security, it is for anti-collision. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally are pretty high. To provide the best chance of not interfering with other pilots and them not interfering with you, be sure you're not using the same dumb bind phrase as someone else. Express your style and some creativity with a hilarious or saucy bind phrase.
 
 ## Traditional Binding
 
@@ -39,6 +57,35 @@ For traditional binding to work, a Binding Phrase must not be set, at least for 
 
 !!! warning "Notice"
     A Receiver flashed or set with a Binding Phrase WILL NOT initiate Manual Binding mode, however many times you try the procedure below. You must first reflash the receiver with the Binding Phrase field disabled and/or unset. Why would you not use a bind phrase though if you're already having to flash the RX anyway? :grin:
+
+The Receiver LED should also be blinking when powered up.
+
+<figure markdown>
+![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+</figure>
+
+??? danger "Receiver LED doesn't Blink (click to expand)"
+    Here are the things you can do if the Receiver is in Bootloader Mode:
+
+    1. Check if the Boot button on the Receiver is being pressed or if it's damaged.
+        - If the button is being pressed or pinched, remove the cause of the pressing or pinching. Heatshrink can sometimes press a button on the receiver.
+        - If the button is damaged, remove the button or replace the receiver with a better one. Consider asking the seller for a replacement.
+
+    2. If the receiver doesn't have a Boot button and instead has a Boot pad, check if the Boot pad is not connected to a Ground pad. 
+        - If the Boot pad is connected to a Ground pad, disconnect or remove the connection.
+
+    3. Disconnect the RX and TX wires of the Receiver from the Flight Controller. Reconnect power to the drone or aircraft. Observe the LED on the Receiver once again.
+        - If it starts Blinking Slowly (500ms Blink Pattern), you will need to move the receiver wiring to a different UART.
+        - If the other UART is occupied by another peripheral, disconnect it and swap places with the Receiver.
+        - If there is no other Full UART, you can try wiring a Pull-up Resistor: Connect a Resistor (300 Ohm to 1k Ohm value; a lower value is more effective) between this UART's RX pad and either a 5v or 3.3v pad as shown below:        
+
+        <figure markdown>
+        ![ExpressLRS Pull-up](../../assets/images/pull-up.png)
+        </figure>
+
+    4. If you are using any of the Digital FPV systems like the DJI FPV Air Unit, Caddx Vista or DJI O3 Air Unit, and you wired or connected all six wires to your Flight Controller, you will need to remove the SBUS/DJI HDL wire.
+
+The procedure is as follows:
 
 1. Power off your transmitter/radio.
 2. Power-cycle the receiver 3 times. 
@@ -67,9 +114,6 @@ For traditional binding to work, a Binding Phrase must not be set, at least for 
     <figure markdown>
     ![CONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)
     </figure>
-
-??? danger "Receiver LED doesn't Blink"
-    Consult the [Receiver Wiring](receivers/wiring-up.md) guide, particularly the expandable section near the bottom titled "My Receiver is in Bootloader Mode".
 
 ## Connection Check
 
@@ -101,7 +145,7 @@ Using the [ExpressLRS Lua Script](transmitters/lua-howto.md), look for a `C` in 
     ![Lua Loaded](../assets/images/tx-internalLuaCheck.jpg)
     </figure>
 
-??? tip "Model Mismatch"
+??? tip "Model Mismatch (click to expand)"
     If the ExpressLRS Lua Script is showing a `C` in the top-right corner alright, but then that line disappears and is replaced with a line saying "Model Mismatch", do not worry. ExpressLRS has detected that the set Model ID in the Receiver is different from the Receiver ID set in the current Model in your Radio Model Configuration.
 
     This is also indicated by the Receiver LED as 3 fast blinks then a pause:
