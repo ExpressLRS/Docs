@@ -47,8 +47,7 @@ See the tables below for the list of supported devices:
 | HGLRC Hermes | ❌ Not compatible  |
 | BETAFPV 2.4 Micro TX 1W | ✔️ Fully supported  |
 | BETAFPV 2.4 Micro Tx 500mW | ❌ Not compatible  |
-| BETAFPV 2.4 TX | ❌ Not compatible  |
-| BETAFPV 900 TX | ❌ Not compatible  |
+| BETAFPV 900 Micro TX | ❌ Not compatible  |
 | Radiomaster Zorro  | ✔️ Fully supported |
 | Jumper Aion T-Pro Internal | ❌ Not compatible  |
 | Jumper Aion Nano | ❌ Not compatible  |
