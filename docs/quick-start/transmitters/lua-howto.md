@@ -199,7 +199,7 @@ The Receiver ID of the active model is shown after the option value.
 ![Power Settings BW](../../assets/images/lua/power-bw.png)
 </figure>
 
-The `TX Power` folder is where you can set your TX Module's Transmission Power settings. Press ++enter++ once to access the settings and Press ++"RTN"++ key to go back to the previous page.
+The `TX Power` folder is where you can change your TX Module's Transmission Power settings. Press ++enter++ once to access the settings and Press ++"RTN"++ key to go back to the previous page.
 
 * `Max Power` sets the maximum power level your TX will transmit at. Selecting a power level higher or lower than your TX supports will revert to the closest supported level. The options are `10, 25, 50, 100, 250, 500, 1000 & 2000` mW. If Dynamic Power is set to `Off` this is the power level your TX always uses. 
 
