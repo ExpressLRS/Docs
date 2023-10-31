@@ -511,6 +511,12 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/jumper-internal/"/>
     </url>
     <url>
+        <loc>https://www.expresslrs.org/quick-start/transmitters/jumper-t20-internal/</loc>
+        <lastmod>2023-10-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/jumper-t20-internal/"/>
+    </url>
+    <url>
         <loc>https://www.expresslrs.org/quick-start/transmitters/lua-howto/</loc>
         <lastmod>2023-10-31</lastmod>
         <changefreq>daily</changefreq>
