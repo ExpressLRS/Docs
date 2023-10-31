@@ -194,6 +194,7 @@ nav:
               - Internal RadioMaster: quick-start/transmitters/rm-internal.md
               - Internal Jumper T-Pro: quick-start/transmitters/aion-internal.md
               - Internal Jumper TLite V2: quick-start/transmitters/jumper-internal.md
+              - Internal Jumper T20: quick-start/transmitters/jumper-t20-internal.md
               - Jumper Aion Nano: quick-start/transmitters/jumper-aion.md
               - NamimnoRC Flash: quick-start/transmitters/flash2400.md
               - NamimnoRC Voyager: quick-start/transmitters/voyager900.md
