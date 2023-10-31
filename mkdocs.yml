@@ -202,7 +202,7 @@ nav:
               - Vantac Lite: quick-start/transmitters/vantac-lite.md
               - DIY 900TX: quick-start/transmitters/diy900.md
               - DIY 2400TX: quick-start/transmitters/diy2400.md
-          - Using The Lua Script: quick-start/transmitters/lua-howto.md
+          - The ExpressLRS Lua Script: quick-start/transmitters/lua-howto.md
       - Receivers:
           - Receiver Wiring: quick-start/receivers/wiring-up.md
           - Configuring FC: quick-start/receivers/configuring-fc.md
