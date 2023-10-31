@@ -161,7 +161,7 @@ The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver
 
 ### Antenna Mode
 
-This option is only available to Gemini-capable TX Modules. See the Gemini Page for more details.
+This option is only available to Gemini-capable TX Modules. See the [Gemini Page](../../software/gemini.md) for more details.
 
 Available Options:
 
