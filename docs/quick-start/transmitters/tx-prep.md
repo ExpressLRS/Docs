@@ -147,7 +147,7 @@ To get to the baud rate setting on your radio:
 
 **So what should I set it to?**
 
-400K (400000bps) Baudrate is the safest setting to use. This setting should work on most Radios and TX Modules.
+400K (400000bps) Baudrate is the safest setting to use. This setting should work on most Radios and TX Modules on 333Hz or lower Packet Rates.
 
 However, there are some exceptions:
 
