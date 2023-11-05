@@ -50,7 +50,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
         - Move the receiver into another free UART.
         - If there's no other UART, wire up a resistor with a value between 300 Ohm to 1k Ohm between a 3.3v pad and the FC's RX pad (where the TX from the receiver connects to).
 
-    * If, however, despite unsoldering the Tx and Rx wires, the LED is still solid, you probably have a soft-bricked receiver due to a failed WiFi flash as a result of not letting the receiver reboot normally. See [this section](#i-updated-via-wifi-but-now-receiver-wont-work-and-has-solid-led) for the fix.
+    * If, however, despite unsoldering the Tx and Rx wires, the LED is still solid, you probably have a soft-bricked receiver due to a failed WiFi flash as a result of not letting the receiver reboot normally. Follow the [unbricking procedure](../quick-start/unbricking.md) to recover the receiver.
 
 ### <span class="custom-heading" data-id="5">My OSD is showing LQ 0:0 and RSSI dbm at -130 dbm, but I have stick inputs and more than 10 Telemetry sensors</span>
 
