@@ -1,28 +1,28 @@
 ---
 template: main.html
-description: How to connect, setup, flash and update your ExpressLRS Goggle VRX Backpack.
+description: How to connect, setup, flash, and update your ExpressLRS Goggle VRX Backpack.
 ---
 
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
 
-## Flashing methods for Backpack Device:
+## Flashing Methods for Backpack Device:
 
-Before wiring up your VRx Backpack, you NEED to first flash the VRx Backpack firmware into it either via WiFi or UART/FTDI.
+Before wiring up your VRx Backpack, you MUST first flash the VRx Backpack firmware, either via WiFi or UART/FTDI.
 
-Good VRx Backpack candidates are the EP1 or EP2 receivers from Happymodel as these have Boot pads, instead of Boot buttons. The Boot pad will be repurposed for the SPI Clock signal from the VRx module.
+Good VRx Backpack candidates are the EP1 or EP2 receivers from Happymodel as these have Boot pads instead of Boot buttons. The Boot pad will be repurposed for the SPI Clock signal from the VRx module.
 
-The VRx firmware you will flash into your Backpack Device will depend on what VRx module you want to connect it to or it will not work properly.
+The VRx firmware you will flash into your Backpack Device will depend on what VRx module you want to connect it to. If you do not flash the correct firmware, it will not work properly.
 
 ### Flashing via WiFi (ESP-based ExpressLRS Receivers)
 
 Power up your selected VRx Backpack device (connect 5v and gnd pads to any 5v power source). Let it go into WiFi Update mode (fast blinking LED) and load up the WiFi Update page. In the Address bar of your browser, add `?force=true` to ensure it will accept the VRx Backpack firmware. The resulting URL should read `http://10.0.0.1/?force=true` (if you connected via Access Point) or `http://elrs_rx.local/?force=true` (if your device has connected to your local WiFi network).
 
 !!! note "Note"
-    The `?force=true` is not needed for these ESP-based receivers with factory-firmware. It will only be needed if you have flashed the receiver into ExpressLRS v3.x and wanted to repurpose it for VRx Backpack.
+    The `?force=true` is not needed for ESP-based receivers with factory firmware. It is only required if you have previously flashed the receiver and want to repurpose it as a VRx Backpack.
 
-On the Assets section of the [Backpack Release](https://github.com/ExpressLRS/Backpack/releases) on Git Hub, `Download` the binary suited for your VRx module. Upload this binary into the VRx device using the Web Update page. Wait (~30s) until the LED on the VRx device has turned on again.
+Go to the Assets section of the [Backpack Release](https://github.com/ExpressLRS/Backpack/releases) on GitHub, `Download` the binary suited for your VRx module. Upload this binary into the VRx device using the Web Update page. Wait (~30s) until the LED on the VRx device has turned on again.
 
-Alternatively, you can use the ExpressLRS Configurator to create your binaries for you. **Build** your binary, with the set `binding phrase` (Optional) as well as Home Network SSID and Password (Optional; available starting 0.2.0). Upload the resulting binary into the WiFi Update page as outlined above.
+Alternatively, you can use the ExpressLRS Configurator to create your binaries for you. **Build** your binary, with the set `binding phrase` (Optional) as well as Home Network SSID and Password (Optional; available starting 0.2.0). Upload the resulting binary on the WiFi Update page as outlined above.
 
 ### Flashing via UART/FTDI
 
@@ -37,19 +37,19 @@ You will need an FTDI dongle (USB to UART Bridge) to flash the VRx Backpack firm
 
 Any subsequent firmware updates can be done via WiFi.
 
-## Starting 0.2.0, you can Update via your Home WiFi
+## Starting with 0.2.0, you can also Update via your Home WiFi
 
-With your Home Network SSID and Password set, when you activate the WiFi mode via the lua script (`WiFi Connectivity` -> `Enabled VRx WiFi`), the Backpack will try to connect to your Home WiFi Network. Once connected, you can access the Web Update page via http://elrs_vrx.local/ and upload your firmware there.
+With your Home Network SSID and Password set, when you activate the WiFi mode via the Lua script (`WiFi Connectivity` -> `Enabled VRx WiFi`), the Backpack will try to connect to your Home WiFi Network. Once connected, you can access the Web Update page via http://elrs_vrx.local/ and upload your firmware there.
 
 The ExpressLRS Configurator will also detect the device after it has been connected. It will be listed in the "Device List" section, and you can press `SELECT`, so that the correct target is automatically selected for **Build**.
 
 Alternatively, you can also **Build and Flash** via the Configurator through WiFi without having to access the Web Update page (just like any ESP-based ExpressLRS receiver).
 
-## VRx Module Setup before wiring it all up
+## VRx Module Setup Before Wiring It All Up
 
-You will need to set your VRx module to the highest band and channel it can go, usually Race 8 (5917MHz) before wiring up any VRx Backpack. This is to ensure the VRx Backpack knows "where it is" in the selectable channels.
+**IMPORTANT:** You will need to set your VRx module to the highest band and channel it can go, usually Race 8 (5917MHz) before wiring up any VRx Backpack. This is to ensure the VRx Backpack knows "where it is" in the selectable channels.
 
-## Connecting the VRx Backpacks to your VRx Modules
+## Connecting the VRx Backpack to Your VRx Module
 
 Currently supported VRx Modules include:
 
@@ -59,7 +59,7 @@ Currently supported VRx Modules include:
 * FENIX Module
 * Shark Byte RX5.1 HDZero Module
 
-The VRx Backpacks communicate to these modules via SPI bus and involves 3 signal lines: `CLK`, `DATA`, `CS`. Depending on your VRx Backpack, they will either need `5v` (ExpressLRS ESP-based Receiver) or `3.3v` (ESP01F module) and of course the `GND` line.
+VRx Backpacks communicate with these modules via SPI, and require 3 signal lines: `CLK`, `DATA`, `CS`. Additionally, depending on your VRx Backpack, they will either need `5v` (ExpressLRS ESP-based Receiver) or `3.3v` (ESP01F module) and of course the `GND` line.
 
 <figure markdown>
 ![backpack EP](../../assets/images/backpackEP.png)
@@ -142,7 +142,7 @@ Solder your VRx backpack as shown below:
 It is unlikely that you can close the backplate with the backpack module between the plate and the main board. There are two solutions:
 
 * Route the wires out of the cooling vents and mount them externally
-* Mount the backpack in the front patch, routing the wirse through the goggle mount as shown below:
+* Mount the backpack in the front patch, routing the wires through the goggle mount as shown below:
 
 <figure markdown>
 ![RX5.1 Backpack module located behind the front patches](../../assets/images/RX5.1-Backpack-patch-mounting.jpg)
@@ -167,8 +167,8 @@ The main banner will show you what kind of device it is and the firmware version
 
 ## Setup your TX Backpack
 
-The [TX Backpack Setup](backpack-tx-setup.md) section discusses the methodology of setting up a TX Backpack. If you want to setup, please go through it.
+Proceed to the [TX Backpack Setup](backpack-tx-setup.md) section to setup your TX Backpack.
 
 ## Operation
 
-The [Backpack Usage](esp-backpack.md#backpack-usage) section discusses the Operation of the Backpacks in detail, including Binding, LED Status codes and more.
+The [Backpack Usage](esp-backpack.md#backpack-usage) section provides further details on ExpressLRS Backpack Operation, including Binding, LED Status codes, and more.
