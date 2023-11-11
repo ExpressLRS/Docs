@@ -147,7 +147,7 @@ Some of the following procedures will not go through, particularly the via Passt
     3. Plug in your UART Adapter into a USB Port on your Computer.
         - The LED on the Receiver should light up Solid. If it's Blinking, repeat the previous step.
 
-        ??? Warning "Receiver LED already Solid"
+        ??? Warning "Receiver LED already Solid (click/tap to expand)"
             If the Receiver LED has become Solid from a failed update, and you're reflashing through this method, you still need to do the previous step: Manually putting the receiver into Bootloader Mode. This ensures the Receiver is indeed in a Bootloader state rather than some random boot loop.
         
     4. Determine whether your UART Adapter is being detected correctly as a USB-to-UART Device.
@@ -306,7 +306,7 @@ Some of the following procedures will not go through, particularly the via Passt
                     ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                     </figure>
 
-            ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode!"
+            ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode! (click/tap to expand)"
                 Go back to the [Receiver Wiring] step.
                 
                 If you have previously attempted updating your receiver, there's a possibility it was soft-bricked. Go over the [Unbricking] procedure to recover it.
@@ -318,7 +318,7 @@ Some of the following procedures will not go through, particularly the via Passt
             - If your Receiver is flashed or configured with your Home WiFi SSID and Password, and can connect to that WiFi Network, then the Access Point will not appear.
             - `expresslrs` is the Password for this Access Point.
 
-            ??? question "Where's the Access Point?"
+            ??? question "Where's the Access Point? (click/tap to expand)"
                 If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also try putting the devices closer together.
 
                 If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
@@ -451,7 +451,7 @@ Some of the following procedures will not go through, particularly the via Passt
                     ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                     </figure>
 
-            ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode!"
+            ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode! (click/tap to expand)"
                 Go back to the [Receiver Wiring] step.
                 
                 If you have previously attempted updating your receiver, there's a possibility it was soft-bricked. Go over the [Unbricking] procedure to recover it.
@@ -459,7 +459,7 @@ Some of the following procedures will not go through, particularly the via Passt
         8. With your receiver now in WiFi Mode and it was able to connect to your Local WiFi Network, open a Browser window on any WiFi-capable device that is also connected to the same Local WiFi Network. Type in the Address http://elrs_rx.local on your browser's Address Bar. The ExpressLRS Web UI should load.
             - If your browser cannot resolve this address and it cannot load the ExpressLRS Web UI, this means that MDNS is not working on your device or network.
 
-            ??? tip "MDNS is not working!"
+            ??? tip "MDNS is not working! (click/tap to expand)"
                 === "The `arp` Command"
 
                     1. Open up a Command Prompt window on your computer.
@@ -557,7 +557,7 @@ Some of the following procedures will not go through, particularly the via Passt
                     ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                     </figure>
 
-            ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode!"
+            ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode! (click/tap to expand)"
                 Go back to the [Receiver Wiring] step.
                 
                 If you have previously attempted updating your receiver, there's a possibility it was soft-bricked. Go over the [Unbricking] procedure to recover it.

@@ -32,7 +32,7 @@ Access the script by navigating to your radio's System Menu.
 
 3. Press ++enter++ to Load it.
 
-??? failure "Stuck at `Loading...` (click to expand)"
+??? failure "Stuck at `Loading...` (click/tap to expand)"
     Go back to the [Radio Preparation Guide](tx-prep.md) and make sure the current model is configured for ExpressLRS use.
 
     Also set your Internal or External RF Baudrate to a higher value if the Script still doesn't load after proper configuration of your Model. 

@@ -16,7 +16,7 @@ Put your device in WiFi Updating mode. For TX modules, this is accomplished usin
 
 Connect to the hotspot that the device has created. For Tx modules, this hotspot should show up as **ExpressLRS TX** while for receivers, the hotspot will have a name such as **ExpressLRS RX**. They have the same password: `expresslrs`. 
 
-??? Warning "Updating on Phones"
+??? Warning "Updating on Phones (click/tap to expand)"
     In case your computer does not have wifi capabilities, you can use a wifi capable smartphone as well. Most phones will display a notification after a successfull connection. This is because the phone does not recognize an internet connection. It is recommended to acknowledge this notification because the phone might disconnect again.
 
     On iOS, the WiFi Update Page may open immediately. You can close it via the "Cancel" button on the top right and choose "Use without internet"

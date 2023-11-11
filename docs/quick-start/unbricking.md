@@ -71,7 +71,7 @@ Follow the steps below very closely to recover your "bricked" Receiver.
     ![Passthrough Done](../assets/images/passthrough-done.jpg)
     </figure>
 
-    ??? tip "Not Seeing PASSTHROUGH DONE?"
+    ??? tip "Not Seeing PASSTHROUGH DONE? (click/tap to expand)"
         You've probably skipped some of the steps above or you've misconfigured your flight controller. Go back and make sure to follow EVERY step.
 
 10. Plug in LiPo or twist the 5v Wires together to power up the receiver (see Step 1). The receiver LED should be Solid.

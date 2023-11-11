@@ -132,7 +132,7 @@ template: main.html
 
     10. Highlight the file and press-hold the ++"Enter"++ button and select "Flash External ELRS". Wait for the firmware to be written.
 
-        ??? tip "No Sync"
+        ??? tip "No Sync (click/tap to expand)"
             - Make sure you have updated the OpenTX/EdgeTX firmware of your radio to a newer version
             - Make sure the current model selected on the radio is set up for ExpressLRS Use. See the [Radio Preparation] guide.
 

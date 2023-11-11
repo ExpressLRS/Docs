@@ -5,7 +5,7 @@ description: Binding ExpressLRS is easy! With the Binding Phrase, no button pres
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)
 
-??? note "Compatibility (click to expand)"
+??? note "Compatibility (click/tap to expand)"
     The first number in the Version string should match between a TX Module and a Receiver. Examples:
 
     - a TX Module with version string of 3.1.2 will sync and work with a Receiver with firmware version 3.0.1
@@ -48,7 +48,7 @@ Alternatively, you can also change the Binding Phrase via the WebUI if your devi
 
 We recommend using a **unique** phrase with at least 8 alpha-numeric characters. The best candidate is your Pilot Handle. This phrase need not be complicated or super-secret as it isn't a password or encryption key. 
 
-??? info "Is my binding phrase a secret? (click to expand)"
+??? info "Is my binding phrase a secret? (click/tap to expand)"
     No, just like what channel your VTX is on is not a secret. The binding phrase is not for security, it is for anti-collision. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally are pretty high. To provide the best chance of not interfering with other pilots and them not interfering with you, be sure you're not using the same dumb bind phrase as someone else. Express your style and some creativity with a hilarious or saucy bind phrase.
 
 ## Traditional Binding
@@ -64,7 +64,7 @@ The Receiver LED should also be blinking when powered up.
 ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
 </figure>
 
-??? danger "Receiver LED doesn't Blink (click to expand)"
+??? danger "Receiver LED doesn't Blink (click/tap to expand)"
     Here are the things you can do if the Receiver is in Bootloader Mode:
 
     1. Check if the Boot button on the Receiver is being pressed or if it's damaged.
@@ -145,7 +145,7 @@ Using the [ExpressLRS Lua Script](transmitters/lua-howto.md), look for a `C` in 
     ![Lua Loaded](../assets/images/tx-internalLuaCheck.jpg)
     </figure>
 
-??? tip "Model Mismatch (click to expand)"
+??? tip "Model Mismatch (click/tap to expand)"
     If the ExpressLRS Lua Script is showing a `C` in the top-right corner alright, but then that line disappears and is replaced with a line saying "Model Mismatch", do not worry. ExpressLRS has detected that the set Model ID in the Receiver is different from the Receiver ID set in the current Model in your Radio Model Configuration.
 
     This is also indicated by the Receiver LED as 3 fast blinks then a pause:

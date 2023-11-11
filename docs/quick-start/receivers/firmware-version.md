@@ -72,7 +72,7 @@ It is still recommended that you update your gear to the latest firmware version
         - If your Receiver is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
         - `expresslrs` is the Password for this Access Point.
 
-        ??? question "Where's the Access Point?"
+        ??? question "Where's the Access Point? (click/tap to expand)"
             If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also, try putting the devices closer together.
                 
             If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
@@ -92,7 +92,7 @@ It is still recommended that you update your gear to the latest firmware version
             !!! Note
                 If your browser cannot resolve this address, chances are MDNS is not set up and working on your computer or network.
 
-            ??? tip "Use the IP Address instead!"
+            ??? tip "Use the IP Address instead! (click/tap to expand)"
                 === "The `arp` Command"
 
                     1. Open up a Command Prompt window on your computer.
