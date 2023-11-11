@@ -187,5 +187,5 @@ For the latest ExpressLRS firmware version, check the [Releases page in Git Hub]
     See the [Binding Procedure](../binding.md) to sync your Receiver with your TX Module.
 
 [Lua Running]: ../../assets/images/lua/config-bw.png
-[Lua WiFi]: ../../assets/images/lua/wifi-bw.png
+[Lua WiFi]: ../../assets/images/lua/wifi-bw-rx.png
 [WiFi Hotspot]: ../../assets/images/WifiHotspot.png

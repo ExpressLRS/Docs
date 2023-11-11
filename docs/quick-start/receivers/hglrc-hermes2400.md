@@ -574,7 +574,7 @@ Some of the following procedures will not go through, particularly the via Passt
             </figure>
 
 [Lua Running]: ../../assets/images/lua/config-bw.png
-[Lua WiFi]: ../../assets/images/lua/wifi-bw.png
+[Lua WiFi]: ../../assets/images/lua/wifi-bw-rx.png
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
 [Temp RX]: ../../assets/images/build-temp-rx.png
 [Flash]: ../../assets/images/BuildFlash.png

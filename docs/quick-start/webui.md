@@ -162,7 +162,7 @@ This section is currently only available for the RadioMaster Ranger module.
             6. Select `Enable RX WiFi` and press ++enter++.
 
                 <figure markdown>
-                ![Lua WiFi]
+                ![Lua WiFi RX]
                 </figure>
 
             7. The `WiFi Running` screen will briefly show up. Your Receiver is now in WiFi mode as indicated by the rapidly blinking LED.
@@ -290,3 +290,4 @@ This section is currently only available for the RadioMaster Ranger module.
 [Lua Script]: ../assets/images/lua1.jpg
 [Lua Running]: ../assets/images/lua/config-bw.png
 [Lua WiFi]: ../assets/images/lua/wifi-bw.png
+[Lua WiFi RX]: ../../assets/images/lua/wifi-bw-rx.png
