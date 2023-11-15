@@ -93,7 +93,7 @@ Updates are done through OpenTX's built-in firmware flashing tool.
 
 ### <span class="custom-heading" data-id="1">Unable to connect to the target device</span>
 
-??? Note "Unable to connect to the target device"
+??? Note "Unable to connect to the target device (click/tap to expand)"
     If the flash fails with "Unable to connect to target device" (not "No STLINK found!") it is likely your STLINK clone does not have the RST line connected, but you can trigger the needed reset manually with a little more effort. The reason this is needed is that SIYI has disabled "Software Reset" to protect you from stealing their firmware binary.
 
     * Verify your wiring
@@ -104,7 +104,7 @@ Updates are done through OpenTX's built-in firmware flashing tool.
 
 ### <span class="custom-heading" data-id="2">Flash loader run error</span>
 
-??? Note "Flash loader run error"
+??? Note "Flash loader run error (click/tap to expand)"
     Before both the TX and RX can be flashed using the `st-flash` utility used by PlatformIO on Linux, the STM32 chip must have its "Readout Protection" (RDP) disabled, which was set by SIYI at the factory to make our lives more difficult. The windows flashing utility usually automatically disables this, but the Linux utility does not. If you do not disable readout protection you'll get this cryptic error when flashing:
     ```
     2021-07-06T21:08:42 ERROR flash_loader.c: flash loader run error

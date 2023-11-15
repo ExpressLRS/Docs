@@ -61,7 +61,7 @@ If you have an older version, please first update your Radio OS to at least the 
 
 ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases) for the best experience and compatibility. EdgeTX has introduced options that old and new Radio handsets will benefit from, like One Bit Sample Mode (mainly for old Frsky Radios like the X9D and the QX7) and Mega Bauds (baud rates higher than 400K).
 
-??? Tip "Simplest EdgeTX Updating Procedure"
+??? Tip "Simplest EdgeTX Updating Procedure (click/tap to expand)"
     1. Visit http://buddy.edgetx.org/.
     2. Select the EdgeTX version and the Radio Model you want to update from the Left-hand side column.
     3. Click the ++"Download .bin"++ button at the bottom of the page.
@@ -184,7 +184,7 @@ To check and change this setting, follow these steps:
 3. Scroll down until you reach the `ADC Filter` setting.
 4. Press ++enter++ Key to toggle it On or Off.
 
-??? info "EdgeTX 2.7.0 Per-model Settings"
+??? info "EdgeTX 2.7.0 Per-model Settings (click/tap to expand)"
 
     With EdgeTX 2.7 or newer, you can set this per model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
 
@@ -241,7 +241,7 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
     6. Scroll down until you reach the External RF settings. Set this to Off.
     7. Press the ++"RTN"++ Key or Exit the Model Menu
 
-    ??? info "No CRSF Mode Option?"
+    ??? info "No CRSF Mode Option? (click/tap to expand)"
         If for some reason, you cannot find the CRSF Protocol under the Internal RF Modes, set the `Internal Module Type` to CRSF via your Radio's `System Menu -> Hardware` page.
 
         1. Press the ++"SYS"++ Key. 

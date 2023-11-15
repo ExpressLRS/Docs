@@ -104,7 +104,7 @@ template: main.html
             - If your TX Module is previously flashed with your Home WiFi SSID and Password, and it is able to connect to that WiFi Network, then the Access Point will not show up.
             - `expresslrs` is the Password for this Access Point.
 
-            ??? question "Where's the Access Point?"
+            ??? question "Where's the Access Point? (click/tap to expand)"
                 If you cannot find the Access Point, make sure the device you're using is capable of connecting to 2.4GHz WiFi Networks. Also try putting the devices closer together.
                 
                 If you still cannot find the Access Point, chances are that you have set it with your WiFi SSID and Password before, and it has connected to your WiFi Network.
@@ -214,7 +214,7 @@ template: main.html
         13. With your module now in WiFi Mode and it was able to connect to your Local WiFi Network, open a Browser window on any WiFi-capable device that is also connected to the same Local WiFi Network. Type in the Address http://elrs_tx.local on your browser's Address Bar. The ExpressLRS Web UI should load.
             - If your browser cannot resolve this address and it cannot load the ExpressLRS Web UI, this means that MDNS is not working on your device or network.
 
-            ??? tip "MDNS is not working!"
+            ??? tip "MDNS is not working! (click/tap to expand)"
                 === "The `arp` Command"
 
                     1. Open up a Command Prompt window on your computer.

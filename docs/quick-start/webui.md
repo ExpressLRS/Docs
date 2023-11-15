@@ -123,7 +123,7 @@ This section is currently only available for the RadioMaster Ranger module.
                 ![RX Waiting](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
                 </figure>
 
-                ??? warning "Receiver LED not Blinking!"
+                ??? warning "Receiver LED not Blinking! (click/tap to expand)"
                     If it has a Solid LED light, it may be in bootloader mode if you've only just wired it up. [Rewire](../quick-start/receivers/wiring-up.md) your receiver into a different uart. If you have attempted to update it before, then it could be soft-bricked. Follow the [Unbricking](../quick-start/unbricking.md) procedure to get it back into normal working condition.
 
             3. Wait for about 60 seconds or until the Receiver LED blinks rapidly indicating it is now in WiFi Mode.
@@ -162,7 +162,7 @@ This section is currently only available for the RadioMaster Ranger module.
             6. Select `Enable RX WiFi` and press ++enter++.
 
                 <figure markdown>
-                ![Lua WiFi]
+                ![Lua WiFi RX]
                 </figure>
 
             7. The `WiFi Running` screen will briefly show up. Your Receiver is now in WiFi mode as indicated by the rapidly blinking LED.
@@ -198,7 +198,7 @@ This section is currently only available for the RadioMaster Ranger module.
             !!! Note
                 If your browser cannot resolve this address, chances are MDNS is not set up and working on your computer or network.
 
-            ??? tip "Use the IP Address instead!"
+            ??? tip "Use the IP Address instead! (click/tap to expand)"
                 === "The `arp` Command"
 
                     1. Open up a Command Prompt window on your computer.
@@ -274,7 +274,7 @@ This section is currently only available for the RadioMaster Ranger module.
             !!! Note
                 If your browser cannot resolve this address, chances are MDNS is not set up and working on your computer or network.
 
-            ??? tip "Use the IP Address instead!"
+            ??? tip "Use the IP Address instead! (click/tap to expand)"
                 === "The `arp` Command"
 
                     1. Open up a Command Prompt window on your computer.
@@ -290,3 +290,4 @@ This section is currently only available for the RadioMaster Ranger module.
 [Lua Script]: ../assets/images/lua1.jpg
 [Lua Running]: ../assets/images/lua/config-bw.png
 [Lua WiFi]: ../assets/images/lua/wifi-bw.png
+[Lua WiFi RX]: ../../assets/images/lua/wifi-bw-rx.png

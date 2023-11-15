@@ -23,7 +23,7 @@ Here's a typical ExpressLRS Receiver pinout indicating to which Flight Controlle
 
 The TX pin of an ExpressLRS Receiver sends or transmits the Control Signals it received from the Radio to the Flight Controller. Meanwhile, the RX pin of an ExpressLRS Receiver accepts or receives the Telemetry Data (like Battery Voltage, Current Draw, GPS Coordinates and/or Craft Attitude) from the Flight Controller for sending back to the Radio Handset.
 
-??? Tip "What's a UART?"
+??? Tip "What's a UART? (click/tap to expand)"
     A UART is a pair of RX and TX pads on the Flight Controller. It's commonplace to refer to it as your Flight Controller's USB ports where you can connect different peripherals like a GPS or a Receiver. Only one device can occupy a UART and it can only do one function.
 
     R3 and T3 belongs to UART3; RX2 and TX2 belongs to UART2. Flight Controller Manufacturers label their UARTs differently. Some use just "R" and "T" followed by the UART number. Others use "RX" and "TX" followed by the UART number.
@@ -77,7 +77,7 @@ If your receiver has the RGB LED (e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP
 
 If your Receiver LED lights up but it's just a Solid light, it is in Bootloader mode as the chart above indicates.
 
-??? danger "My Receiver is in Bootloader Mode!"
+??? danger "My Receiver is in Bootloader Mode! (click/tap to expand)"
 
     Here are the things you can do if the Receiver is in Bootloader Mode:
 
