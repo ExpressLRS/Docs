@@ -44,6 +44,8 @@ template: main.html
                 - `RadioMaster TX16S Internal 2.4GHz TX`
                 - `RadioMaster TX12 Internal 2.4GHz TX`
                 - `RadioMaster Boxer Internal 2.4GHz TX`
+                - `RadioMaster Pocket Internal 2.4GHz TX`
+                - `RadioMaster MT12 Internal 2.4GHz TX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -159,6 +161,8 @@ template: main.html
                 - `RadioMaster TX16S Internal 2.4GHz TX`
                 - `RadioMaster TX12 Internal 2.4GHz TX`
                 - `RadioMaster Boxer Internal 2.4GHz TX`
+                - `RadioMaster Pocket Internal 2.4GHz TX`
+                - `RadioMaster MT12 Internal 2.4GHz TX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -301,6 +305,8 @@ template: main.html
                 - `RadioMaster TX16S Internal 2.4GHz TX`
                 - `RadioMaster TX12 Internal 2.4GHz TX`
                 - `RadioMaster Boxer Internal 2.4GHz TX`
+                - `RadioMaster Pocket Internal 2.4GHz TX`
+                - `RadioMaster MT12 Internal 2.4GHz TX`
 
         9. Set the Flashing Method to `WiFi`.
 
@@ -344,6 +350,8 @@ template: main.html
     - `Zorro`: Update it to at least EdgeTX 2.7.0 (f79978b) or EdgeTX 2.7.1 (a55aff0). It often comes with an earlier EdgeTX 2.7.0 version (2bdd4974) which results in unsuccessful flashing.
     - `TX12 MK2`: Update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
     - `Boxer`: The factory EdgeTX firmware should be based off an early EdgeTX 2.8.0 and wouldn't need an update.
+    - `Pocket`: The factory EdgeTX firmware shouldn't need an update.
+    - `MT12`: The factory EdgeTX firmware shouldn't need an update.
 
     !!! tip "Hot Tip"
         To ensure updating success with this method, update the EdgeTX firmware on the radio as mentioned above.
@@ -434,6 +442,8 @@ template: main.html
             - `RadioMaster TX16S Internal 2.4GHz TX`
             - `RadioMaster TX12 Internal 2.4GHz TX`
             - `RadioMaster Boxer Internal 2.4GHz TX`
+            - `RadioMaster Pocket Internal 2.4GHz TX`
+            - `RadioMaster MT12 Internal 2.4GHz TX`
 
     6. Set the Flashing Method to `EdgeTXPassthrough`
 
