@@ -65,7 +65,7 @@ Follow the steps below very closely to recover your "bricked" Receiver.
     ![via Passthrough](../assets/images/Method_RX_Passthrough.png)
     </figure>
 
-9. Click the `Build and Flash` button. Wait for the Line **PASSTHROUGH DONE** to appear in the Build Log.
+9. Click the `Flash` button. Wait for the Line **PASSTHROUGH DONE** to appear in the Build Log.
 
     <figure markdown>
     ![Passthrough Done](../assets/images/passthrough-done.jpg)
