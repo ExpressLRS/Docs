@@ -74,7 +74,7 @@ Example: Microbeast flybarless controller without RPM governor
 
 Follow the Microbeast manual to setup the single line receiver mode.
 
-Microbeast SRXL/SUMD expected channel order for SRXL/SUMD:
+Microbeast expected channel order for SRXL/SUMD:
 
 <figure markdown>
 <img class="center-img" src="../../assets/images/sumd2.png" width="auto">
