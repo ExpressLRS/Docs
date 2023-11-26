@@ -57,3 +57,31 @@ When connected to the receiver with the transmitter, enter the ExpressLRS Lua sc
 <figure markdown>
 <img class="center-img" src="../../assets/screenshots/receiver-serial.png" width="auto">
 </figure>
+
+## SUMD Notes
+
+SUMD is the Graupner HoTT bus protocol to transmit multiple channel data over a single serial line. It transports up to 16 full res channels at a rate of 100Hz and is mainly used to provide digital channel data to Flybarless Control Systems for helicopters and older Flight Controllers.
+
+As already stated many times in this manual ExpressLRS expects AUX1 (channel 5) to control the arm state. This may lead to a conflict using serial protocols like SUMD in conjunction with device having fixed channel assignments. To circumvent the problem SUMD implements a channel remapping by swapping channels 5 and 8 in its serial output:
+
+<figure markdown>
+<img class="center-img" src="../../assets/images/sumd1.png" width="auto">
+</figure>
+
+This opens the possibility to assign a linear output channel order for channels 1 to 7 using an appropriate OpenTX/EdgeTX mixer setup.
+
+Example: Microbeast flybarless controller without RPM governor
+
+Follow the Microbeast manual to setup the single line receiver mode.
+
+Microbeast SRXL/SUMD expected channel order for SRXL/SUMD:
+
+<figure markdown>
+<img class="center-img" src="../../assets/images/sumd2.png" width="auto">
+</figure>
+
+Required OpenTX/EdgeTX mixer setup to satisfy the Microbeast expected channel order:
+
+<figure markdown>
+<img class="center-img" src="../../assets/images/sumd3.png" width="auto">
+</figure>
