@@ -5,7 +5,7 @@ description: ExpressLRS supports PWM output without the need of converters.
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
 
-ExpressLRS now supports direct PWM output from receivers. This documentation refers to only receivers with native PWM output, not receivers attached to external CRSF to PWM converters such as the [CRServoF](https://github.com/CapnBry/CRServoF/) or Matek CRSF-PWM-C.
+ExpressLRS now supports direct PWM output from receivers. This documentation refers to only receivers with native PWM output, not receivers attached to external CRSF to PWM converters such as the [CRServoF](https://github.com/CapnBry/CRServoF/) or [Matek CRSF-PWM-C](http://www.mateksys.com/?portfolio=crsf-pwm).
 
 ## Channel Mapping and Failsafe
 The default channel mapping is straight through: CH1 from the TX goes to PWM Output 1, CH2 to Output 2, etc. To change this on ESP-based receivers, allow the receiver to go into WiFi mode then use the WebUI to configure the mapping. Any input channel can be mapped to any output channel, and the same input can be used for as many outputs as desired. AUX1/CH5 is always 1-bit, so you'll likely want to change this mapping to a channel with more resolution.
@@ -29,9 +29,12 @@ ELRS receivers support the following PWM output modes:
 
 ## Serial Output
 PWM receivers can also output any supported [serial protocol](https://www.expresslrs.org/software/serial-protocols/), such as CRSF or SBUS. [Select the desired output protocol](https://www.expresslrs.org/software/serial-protocols/#receiver-protocol-selection) using the ELRS lua, or on the Model tab in the receiver's webui. 
-The pins used for serial output vary by receiver. If your receiver has a dedicated serial port (e.g. BetaFPV SuperP, Radiomaster ER6, ER8, ER8G(V)), serial output will always be over this port. Otherwise, [check the Model tab](https://www.expresslrs.org/software/serial-protocols/#pwm-receiver-serial-pin-selection) in the receiver's webui to see which pins can be mapped to Serial TX and RX (usually Ch2 and Ch3).
+The default pins used for serial output vary by receiver. If your receiver has a dedicated serial port (e.g. Radiomaster ER6, ER8, ER8G(V)), serial output will be over this port. Otherwise, [check the Model tab](https://www.expresslrs.org/software/serial-protocols/#pwm-receiver-serial-pin-selection) in the receiver's webui to see which pins can be mapped to Serial TX and RX (usually Ch2 and Ch3). 
 
 <figure markdown>
 ![Radiomaster ER6 Serial Output](../assets/images/ER6-serial.png)
 <figcaption>JST-GH Serial Port on Radiomaster ER6 PWM Receiver</figcaption>
 </figure>
+
+!!! warning "Advanced Output Mapping"
+	Advanced users can remap serial, I2C, and PWM outputs to any available pin using the hardware.html page in the receiver's webui. Please ask on the [ELRS Discord](https://discord.gg/dS6ReFY) if you need help configuring non-standard receiver output mapping. 
