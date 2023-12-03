@@ -23,7 +23,10 @@ description: Binding ExpressLRS is easy! With the Binding Phrase, no button pres
     - [Receivers](../quick-start/receivers/firmware-version.md)
     - [SPI Receivers](../hardware/spi-receivers.md)
 
-Binding can be done with either a hard-coded unique Binding Phrase or in a more traditional way where you put the receiver and transmitter into bind mode, and they link up.
+There are **TWO** methods to Bind/Sync an ExpressLRS TX Module and a Receiver:
+
+1. [Using a unique Binding Phrase](#unique-phrase)
+2. [The Traditional Binding Method](#traditional-binding)
 
 If you'll be updating or reflashing your ExpressLRS firmware into your device anyway, using a Binding Phrase is a no-brainer. 
 
