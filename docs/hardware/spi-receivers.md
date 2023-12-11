@@ -18,7 +18,7 @@ Because the ExpressLRS code is "baked-in" to the flight controller firmware inst
 SPI receiver compatibility with ExpressLRS v3.x *requires* your flight controller be flashed with [Betaflight 4.4](https://github.com/betaflight/betaflight/releases/tag/4.4.0). If you are running [Betaflight 4.3.0](https://github.com/betaflight/betaflight/releases/tag/4.3.0) or [Betaflight 4.3.1](https://github.com/betaflight/betaflight/releases/tag/4.3.1), your receiver will only work with ExpressLRS v2.x. Please update to Betaflight 4.4 for ExpressLRS v3.x compatibility. 
 
 
-In preparation for updating, you should save a copy of your `diff all` dump. Simply go into the CLI Tab of the Betaflight Configurator and execute the command `diff all` then press enter. A bunch of text will show up on the screen. At the bottom of the page, click the **Save to File** button and navigate to the folder you want the file to be saved. Finally click `Save` after taking note of the folder and filename of the text file. You will need to navigate to this file later on, moreover if you already have customized your settings on the flight controller, like rates, PID tune, OSD. For newly acquired flight controllers, this is often unnecessary.
+In preparation for updating, you should save a copy of your `diff all` dump. Simply go into the CLI Tab of the Betaflight Configurator and execute the command `diff all` then press enter. A bunch of text will show up on the screen. At the bottom of the page, click the **Save to File** button and navigate to the folder you want the file to be saved. Finally click `Save` after taking note of the folder and filename of the text file. You will need to navigate to this file later on, moreover if you already have customized your settings on the flight controller, like rates, PID tune, OSD.
 
 Using the latest [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator/releases), navigate into `Firmware Flasher` and select the latest [Betaflight release](https://github.com/betaflight/betaflight/releases/tag/4.4.0-RC2). Depending on your AIO board, the target will differ:
 
@@ -33,7 +33,13 @@ If your Flight Controller model is not in the list above, consult your Flight Co
     
     Likewise, the [v2.0 BetaFPV F4 1S 5A](https://betafpv.com/collections/brushless-flight-controller/products/f4-1s-5a-aio-brushless-flight-controller-elrs-2-4g) comes with an on-board UART-based ExpressLRS Receiver and doesn't use the SPI ExpressLRS implementation. Use the `BETAFPV AIO 2400 RX` Device target.
 
-Once flashed, you will need to paste in the `diff all` you have saved. Don't forget to type in `save` and press enter once done. Power cycle your flight controller, and you should be set. Review your Betaflight settings (no changes needed for the Receiver Type and Protocol; should already be set with `SPI Receiver`, with Provider as `ExpressLRS`).
+If you're using Windows and flashing fails to start, you may need to correct the drivers using a tool like [ImpulseRC Driver Fixer](https://impulserc.com/pages/downloads#:~:text=Driver%20Fixer) or [Zadig](https://zadig.akeo.ie) (for advanced users). These tools and other drivers are also linked in the Welcome tab of Betaflight Configurator.
+
+<figure markdown>
+![BF settings](../assets/images/BetaflightConfiguratorTools.png)
+</figure>
+
+Once flashed, you will need to connect and restore settings from the `diff all` you have saved. Go into the CLI Tab of the Betaflight Configurator and press the Load From File button. Select the `diff all` file you made previously and press execute. If there were any errors, you will need to manually type in the `save` command and press enter. Betaflight Configurator should disconnect. After reconnecting, review your Betaflight settings (for example the Receiver Type and Protocol in Receiver tab; it should be set to `SPI Receiver`, with Provider as `ExpressLRS`).
 
 As of Betaflight 4.4 (with Betaflight Configurator version 10.9.0 or newer), your ExpressLRS Binding Phrase can be set directly on the receiver tab in Betaflight Configurator.
 
