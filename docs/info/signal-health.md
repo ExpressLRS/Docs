@@ -69,8 +69,32 @@ OSDs report the packet rate using an index instead of the actual rate, either as
 | 1 | 25Hz | 25Hz | -123dBm | 30980 | 40000 |
 
 ## What about SNR?
+SNR stands for Signal to Noise ratio and compares RSSI dBm to the RF background noise level and is in dB units (not dBm), higher is better. Notice it compares the background noise level and not the Sensitivity Limit. The reported value changes quite a bit from packet to packet and what values are good depend on what packet rate is being used. The RF chip can only approximate the noise level and only registers a value so high above the noise floor leading to this value getting clipped. Add to that, LoRa modulation can actually receive data below the noise floor to some degree.
 
-Wow look at you smarty pants! SNR stands for Signal to Noise ratio and compares RSSI dBm to the RF background noise level and is in dB units (not dBm). Notice it compares the background noise level and not the Sensitivity Limit. The value is of limited usefulness because the RF chip can only approximate the noise level and can only register a value so high above it leading to this value getting clipped. Add to that, LoRa modulation can actually receive data **below the noise floor** to some degree, so just ignore this number really, but positive values are better.
+* All FLRC modes (F1000, F500, D500, D250) always report 0 for SNR.
+* TBS Crossfire _I believe_ reports `SNR * 4`-- their values can be much higher.
+
+ExpressLRS uses an averaged SNR to control dynamic power, with the following low/high values. The lowest possible SNR a packet can still be received is 5-10dB lower than the "Raise Power" limit.
+
+### Team2.4
+| Packet Rate | "Raise Power" (bad) SNR | "Lower Power" (good) SNR |
+|--|--|--|
+| 500Hz | 5.0dB | 9.5dB |
+| 333Hz Full | 5.0dB | 9.5dB |
+| 250Hz | 3.0dB | 8.5dB |
+| 150Hz | 0.0dB | 8.5dB |
+| 100Hz Full | 0.0dB | 8.5dB |
+| 50Hz | -1.0dB | 6.5dB |
+
+### Team900
+| Packet Rate | "Raise Power" (bad) SNR | "Lower Power" (good) SNR |
+|--|--|--|
+| 200Hz | 1.0dB | 3.0dB |
+| 100Hz Full | 1.0dB | 3.0dB |
+| 100Hz | 1.0dB | 2.5dB |
+| 50Hz | 1.0dB | 1.5dB |
+| D50 | 1.0dB | 3.0dB |
+| 25Hz | -3.0dB | 0.5dB |
 
 ## How far can I go on XmW?
 
