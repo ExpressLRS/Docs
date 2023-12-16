@@ -41,6 +41,7 @@ template: main.html
                 - `BETAFPV 2.4GHz Nano TX`
                 - `BETAFPV 2.4GHz Micro TX`
                 - `BETAFPV 2.4GHz 1W Micro TX`
+                - `BETAFPV SuperG 2.4GHz Gemini TX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -158,6 +159,7 @@ template: main.html
                 - `BETAFPV 2.4GHz Nano TX`
                 - `BETAFPV 2.4GHz Micro TX`
                 - `BETAFPV 2.4GHz 1W Micro TX`
+                - `BETAFPV SuperG 2.4GHz Gemini TX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -304,6 +306,7 @@ template: main.html
                 - `BETAFPV 2.4GHz Nano TX`
                 - `BETAFPV 2.4GHz Micro TX`
                 - `BETAFPV 2.4GHz 1W Micro TX`
+                - `BETAFPV SuperG 2.4GHz Gemini TX`
 
         9. Set the Flashing Method to `WiFi`.
 
@@ -373,6 +376,7 @@ template: main.html
             - `BETAFPV 2.4GHz Nano TX`
             - `BETAFPV 2.4GHz Micro TX`
             - `BETAFPV 2.4GHz 1W Micro TX`
+            - `BETAFPV SuperG 2.4GHz Gemini TX`
 
     6. Set the Flashing Method to `UART`
 
