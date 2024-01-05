@@ -7,7 +7,7 @@ description: TeamRacing allows selection between multiple connected models, fail
 
 ## What is Team Racing?
 
-Team Racing is a recveiver feature that allows multiple models to be connected to one transmitter at the same time. Each model is assigned to a different switch position and will select that model to control. Any non-selected model is failsafed and will have its telemetry disabled.
+Team Racing is a receiver feature that allows multiple models to be connected to one transmitter at the same time. Each model is assigned to a different switch position and will select that model to control. Any non-selected model is failsafed and will have its telemetry disabled.
 
 The purpose of the receiver selection is to allow a downed model (which is physically unreachable mid-race) to be deactivated and allow the pilot to take control of another model using the same controller. In a default setup, if the pilot plugged in a new model and armed, both models will respond and arm which is incredibly undesirable. This would be used in a Team Race event such as MultiGP Mayhem.
 
