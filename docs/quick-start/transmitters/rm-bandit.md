@@ -31,7 +31,7 @@ template: main.html
         2. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `Radiomaster 2.4 GHz`
+                - `Radiomaster 900MHz`
 
             - Device: 
                 - `RadioMaster Bandit 900MHz TX`
