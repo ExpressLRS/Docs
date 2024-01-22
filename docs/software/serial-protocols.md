@@ -88,8 +88,8 @@ Required OpenTX/EdgeTX mixer setup to satisfy the Microbeast expected channel or
 
 Here's a few things to be aware of when using this Receiver Mode:
 
-- The ELRS tx should be set to 100Hz Full, and switches to 8ch.
-- Channels 1, 2, 4 are pan, tilt, roll
+- The ELRS tx should be set to 100Hz Full, and Switch Mode to 8ch.
+- Channels 1, 2, 4 are Pan, Tilt, Roll
 - Aux1/CH5 is unused but should be set as an arm switch and left in the unarmed position (Low).
 - Aux2/CH6 should be a 3 way switch. From the switch center position to high/low, Rec start/stop or photos can be captured.
 - Aux3/CH7 should be a 3 way switch. Each of the 3 positions corresponds to Modes 1, 2 or 3.
