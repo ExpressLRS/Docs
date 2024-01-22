@@ -83,3 +83,18 @@ Required OpenTX/EdgeTX mixer setup to satisfy the Microbeast expected channel or
 <figure markdown>
 <img class="center-img" src="../../assets/images/sumd3.png" width="auto">
 </figure>
+
+## DJI RS2 Pro Notes
+
+Here's a few things to be aware of when using this Receiver Mode:
+
+- The ELRS tx should be set to 100Hz Full, and switches to 8ch.
+- Channels 1, 2, 4 are pan, tilt, roll
+- Aux1/CH5 is unused but should be set as an arm switch and left in the unarmed position (Low).
+- Aux2/CH6 should be a 3 way switch. From the switch center position to high/low, Rec start/stop or photos can be captured.
+- Aux3/CH7 should be a 3 way switch. Each of the 3 positions corresponds to Modes 1, 2 or 3.
+- Aux4/CH8 should be a 3 way switch. From the switch center position to high/low, Selfie or Recenter can be activated.
+- Rec, photos, recenter, and selfies are done by toggling the switch from the center position to high/low, and back to center in a quick 0.4s movement. With some ETX and mixer magic these functions can be improved and mapped to buttons etc.
+- ETX Outputs for the channels should be -100 to 100.
+
+For more information, please see [PR 2140](https://github.com/ExpressLRS/ExpressLRS/pull/2140)
