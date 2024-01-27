@@ -10,55 +10,46 @@ hide:
 ## <span class="custom-heading" data-id="1">Why ExpressLRS?</span>
 
 ??? faq "Why ExpressLRS?"
-    ExpressLRS is competing with some of the best commercial solutions out there, but all are expensive 🙁. Well, ELRS is not 😄, it can be set up for around 60$ (Using second-hand r9 hardware). It also is better than many (higher sensitivity, lower latency👌).
-## <span class="custom-heading" data-id="2">Is it better than the commercial solutions?</span>
+    ExpressLRS is a high-performance, open-source radio control protocol built from the ground up to be an extremely fast (**E**xpress), extremely sensitive (**L**ong **R**ange) **S**ystem. ELRS uses Semtech SX12xx LoRa transceivers and a lightweight, highly optimized over-the-air (OTA) protocol to provide superior performance compared to legacy RC links. While ExpressLRS started with DIY and repurposed hardware, a large number of manufacturers are now producing high-quality, low-cost transmitters and receviers to make it easy for anyone to get started!
+## <span class="custom-heading" data-id="2">How does ExpressLRS compare to other systems?</span>
 
-??? faq "Is it better than the commercial solutions?"
-    It is faster than most links out there with a latency of 6.5ms (at 200hz). At 250hz 100mW 2.4GHz it is capable of ranges 30km+.
-## <span class="custom-heading" data-id="3">Which OpenTX version works with ExpressLRS</span>
+??? faq "How does ExpressLRS compare to other systems?"
+    ExpressLRS is capable of extremely high packet rates (up to 1000 Hz) and extreme sensitivity (ranges well over 100+ km have been achieved with 2.4 GHz hardware), making it extremely competetive with any commercially available system. And since ExpressLRS is open-source, it costs much less than other systems too!
+## <span class="custom-heading" data-id="3">Which OpenTX/EdgeTX version do I need and why should I update?</span>
 
-??? faq "Which OpenTX version works with ExpressLRS"
-    [OpenTX 2.3.12](https://www.open-tx.org/downloads.html#Releases23-ref) or newer should work just fine. No need to use OpenTX Nightly, unless you have requirements not present in the Stable versions.
+??? faq "Which OpenTX/EdgeTX version do I need and why should I update?"
+    ExpressLRS requires [OpenTX 2.3.12](https://www.open-tx.org/downloads.html#Releases23-ref) or newer, as it depends on CRSFshot (a.k.a mixer sync) to work properly. However, as OpenTX is no longer being maintained, it is strongly recommended that you update to [EdgeTX](https://github.com/EdgeTX/edgetx) in order to take advantage of the latest performance improvements and bug fixes. 
+	
+	Click [here](https://www.expresslrs.org/quick-start/transmitters/tx-prep.md) to read more about radio firmware requirements and setup.
 
-    [EdgeTX 2.4.0](https://github.com/EdgeTX/edgetx) or newer should work too.
-## <span class="custom-heading" data-id="4">Why do I need to update OpenTX?</span>
+## <span class="custom-heading" data-id="4">How do I flash/update my receiver/module?</span>
 
-??? faq "Why do I need to update OpenTX?"
-    ExpressLRS needs your radio to support crsfshot (a.k.a. Mixersync) to work properly. This will give you the lowest possible latency and optimal consistency of the RC link. When your radio does not have crsfshot working, this often shows in your ExpressLRS Lua script. The Lua script top bar will show inconsistent numbers like 0:63 or is stuck at 0:250 at every packet rate rate you select.
+??? faq "How do I flash/update my receiver/module?"
+    See [Getting Started](https://www.expresslrs.org/quick-start/getting-started.md) for a Quick Setup guide and detailed instructions on flashing, features, hardware, and troubleshooting.
 
-    **The Lua script top bar should always show a stable 0/[user selected packet rate]**
-
-    For example: 0/50, 0/150, 0/250, 0/500, ...
-
-    When that is the case your radio has crsfshot working and you're good to go. Click [here](quick-start/transmitters/tx-prep.md) to read more on OpenTX.
-
-## <span class="custom-heading" data-id="5">How can I flash/update x receiver/module?</span>
-
-??? faq "How can I flash/update x receiver/module?"
-    See [Getting Started](quick-start/getting-started.md) page
-
-## <span class="custom-heading" data-id="6">Will x Receiver work with y TX Module from z Manufacturer?</span>
+## <span class="custom-heading" data-id="5">Will x Receiver work with y TX Module from z Manufacturer?</span>
 
 ??? faq "Will x Receiver work with y TX Module from z Manufacturer?"
-    Any Receiver and TX Module from the same Band (2.4GHz or 900Mhz) will work together. Supported R9 receivers will work with the 900Mhz modules from Happy Model, Namimno RC and the R9M, same with the other 900Mhz receivers, DIY or off-the-shelf. Likewise, any 2.4Ghz receivers should work with any 2.4Ghz TX Modules, from any manufacturer and even the DIY ones. This is as long as they have the same binding phrase and configuration options (Regulatory Domain, Performance Options and Extra Data).
+    Any Receiver and TX Module from the same Band (e.g. 2.4 GHz or 900 MHz) will work together. For example, a 900 MHz receiver from BetaFPV will work with a 900 MHz TX module from HappyModel. Likewise, any 2.4 GHz receiver will work with any 2.4 GHz TX Modules, from any manufacturer (including DIY ones). This of course assumes the hardware is working properly, flashed with the same major ELRS version (e.g. 3.x), and is using the same binding phrase and configuration options (e.g. Regulatory Domain).
 
-## <span class="custom-heading" data-id="7">What's the difference between the different Happymodel 2.4GHz receivers (PP, EP1, EP2)?</span>
+## <span class="custom-heading" data-id="6">What's the difference between the different 2.4 GHz receivers (PP, EP1/RP1, EP2/RP2, EP1 Dual, RP3, RP4TD, TCXO)?</span>
 
-??? faq "What's the difference between the different Happymodel 2.4GHz receivers (PP, EP1, EP2)?"
-    The difference between the PP and the EP1/EP2 is only the processor. The PP is the original design and uses an STM32 while the EP1/EP2 use an ESP82xx. Both offer firmware update through Betaflight passthrough, but the EPx also support firmware upload over wifi. The EP1 is the same as the EP2 except it has a U.FL/IPEX1 connector for an external antenna. The wifi capability of the ESP is not used apart from the update procedure, and the wifi is only enabled shortly after power-up if no TX connection is received (`AUTO_WIFI_ON_INTERVAL` if bound, 60s otherwise). Receiver performance should be identical between the two.
-    If you're confused by the PP being more expensive, it's because there is a shortage of the STM part.
+??? faq "What's the difference between the different 2.4 GHz receivers (PP, EP1/RP1, EP2/RP2, EP1 Dual, RP3, RP4TD, TCXO)?"
+    Early ELRS receivers like the HappyModel PP used an STM32 MCU, while later designs EP1/EP2/etc use ESP MCUs. All offer firmware updates via UART or Betaflight Passthrough, but the ESP-based hardware also support firmware update and configuration over WiFi. The EP1/RP1 receivers use u.fl (external) antennas, while the EP2/RP2 receivers use on-board ceramic antennas. Receivers like the RP3 and R24D have two antennas for antenna diversity, while receivers like the EP1 Dual, RP4TD, and SuperD add a second parallel RF path to provide full receiver diversity. 
+	
+	See [here](https://www.expresslrs.org/software/gemini/#comparison-with-other-antenna-modes) for more about different antenna configurations. 
 
-## <span class="custom-heading" data-id="8">What is required to achieve a 500hz update rate on 2.4ghz?</span>
+## <span class="custom-heading" data-id="7">What is required to achieve a 1000 Hz update rate on 2.4 GHz?</span>
 
-??? faq "What is required to achieve a 500hz update rate on 2.4ghz?"
-    Make sure that your radio is set to use 400K Baud Rate and you're running at least OpenTX 2.3.12 or EdgeTX 2.4.0. These firmware versions have Mixer Sync or CRSFShot.
+??? faq "What is required to achieve a 1000 Hz packet rate on 2.4 GHz?"
+    In order to achieve the fastest packet rate, your radio must be running a supported [firmware](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#radio-operating-system), set to a minimum [hardware baud rate](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#serial-baud-rate) of 921000, and be connected to a serial ELRS receiver (SPI receivers do not support the FLRC modes required). Also make absoultely sure [ADC filter](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#adc-filter) is disabled on your radio, and that you have applied the appropriate RC Link [Preset](https://betaflight.com/docs/wiki/configurator/presets-tab) in Betaflight. 
 
-    To confirm your update rate is working as intended, you can use the ExpressLRS Lua script to check the current update rate and confirm you are getting 500hz. See [Using the Lua Script](quick-start/transmitters/lua-howto.md).
+    You can use the ELRS lua to check your current packet rate and ensure the radio mixer sync is working properly. See [Using the Lua Script](https://www.expresslrs.org/quick-start/transmitters/lua-howto.md) for more details.
 
-## <span class="custom-heading" data-id="9">How many channels does ELRS support?</span>
+## <span class="custom-heading" data-id="8">How many channels does ELRS support?</span>
 
 ??? faq "How many channels does ELRS support?"
-    16 channels*. With more than 8 aux channels, there are tradeoffs that must be made, therefore ELRS offers the following aux modes:
+    ELRS supports up to 16 channels*. Channels 1-4 are always sent at full-resolution (10-bit). The resolution and update rate of the remaining channels can be configured as follows, based on your requirements:
 
       * 4x full-resolution (10-bit) channels for sticks (CH1-4) with either:
         * **HYBRID Mode** 1x 2-position channel, AUX1 (CH5; Must be used for Arming), 6x 2-position/3-position/6-position (AUX2-7) and 1x 16-position (AUX8), OR
@@ -67,16 +58,16 @@ hide:
       * 16x full-resolution (10-bit, ext-limits, all half rate) with 1x 2-position channel, AUX1
       * 12x full-resolution (10-bit, ext-limits) with 1x 2-position channel, AUX1, channels AUX2-9 run at half rate.
         
-      See [Switch Modes](software/switch-config.md) for more details on switch modes and how they work
+      See [Switch Modes](https://www.expresslrs.org/software/switch-config.md) for more details on switch modes and how they work.
 
-## <span class="custom-heading" data-id="10">Is my binding phrase a secret?</span>
+## <span class="custom-heading" data-id="9">Is my binding phrase a secret?</span>
 
 ??? faq "Is my binding phrase a secret?"
-    No, just like what channel your VTX is on is not a secret. The binding phrase is not security, it is anti-collision. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally is pretty high. To provide the best chance of not interfering with other pilots and them not interfering with you, be sure you're not using the same dumb bind phrase as someone else. Express your style with a hilarious or saucy bind phrase.
+    No, just like what channel your VTX is on is not a secret. The binding phrase is not used for security, it is used for anti-collision. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally is pretty high. To provide the best chance of not interfering with other pilots and them not interferingwith you, be sure you're not using the same dumb bind phrase as someone else. Express your style with a hilarious or saucy bind phrase.
 
-## <span class="custom-heading" data-id="11">What does RQLY, TQLY, RSSI x2, SNR x2 mean?</span>
+## <span class="custom-heading" data-id="10">What does RQLY, TQLY, RSSI x2, SNR x2 mean?</span>
 
-??? faq "What does RQLY, TQLY, RSSI x2, SNR x2 mean?"
+??? faq "What do RQLY, TQLY, RSSI x2, SNR x2 mean?"
 
     | Datapoint| Description   |   Range | Info |
     |------|-----------------------------------------|---|---|
@@ -90,6 +81,8 @@ hide:
     | TQly | Downlink - link quality (valid packets)              |  0 - 100  | An LQ indicator of telemetry packets received by TX. RX → TX |
     | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX. RX → TX |
     | TSNR | Downlink - signal-to-noise ratio                     |           | SNR reported by the TX for telemetry packets. RX → TX |
+
+    See the [Signal Health](https://www.expresslrs.org/info/signal-health/) page for more info on interpreting link stats. 
 
 If you have other questions or concerns, or maybe you need further help that is not covered by this Guide, head over to our Discord Channel or Facebook Group!
 
