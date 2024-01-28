@@ -10,11 +10,11 @@ hide:
 ## <span class="custom-heading" data-id="1">Why ExpressLRS?</span>
 
 ??? faq "Why ExpressLRS?"
-    ExpressLRS is a high-performance, open-source radio control protocol built from the ground up to be an extremely fast (**E**xpress), extremely sensitive (**L**ong **R**ange) **S**ystem. ELRS uses Semtech SX12xx LoRa transceivers and a lightweight, highly optimized over-the-air (OTA) protocol to provide superior performance compared to legacy RC links. While ExpressLRS started with DIY and repurposed hardware, a large number of manufacturers are now producing high-quality, low-cost transmitters and receviers to make it easy for anyone to get started!
+    ExpressLRS is a high-performance, open-source radio control protocol built from the ground up to be an extremely fast (**E**xpress), extremely sensitive (**L**ong **R**ange) **S**ystem. ELRS uses Semtech SX12xx LoRa transceivers and a lightweight, highly optimized over-the-air (OTA) protocol to provide superior performance compared to legacy RC links. While ExpressLRS started with DIY and repurposed hardware, a large number of manufacturers are now producing high-quality, low-cost transmitters and receivers to make it easy for anyone to get started!
 ## <span class="custom-heading" data-id="2">How does ExpressLRS compare to other systems?</span>
 
 ??? faq "How does ExpressLRS compare to other systems?"
-    ExpressLRS is capable of extremely high packet rates (up to 1000 Hz) and extreme sensitivity (ranges well over 100+ km have been achieved with 2.4 GHz hardware), making it extremely competetive with any commercially available system. And since ExpressLRS is open-source, it costs much less than other systems too!
+    ExpressLRS is capable of extremely high packet rates (up to 1000 Hz) and extreme sensitivity (ranges well over 100+ km have been achieved with 2.4 GHz hardware), making it extremely competitive with any commercially available system. And since ExpressLRS is open-source, it costs much less than other systems too!
 ## <span class="custom-heading" data-id="3">Which OpenTX/EdgeTX version do I need and why should I update?</span>
 
 ??? faq "Which OpenTX/EdgeTX version do I need and why should I update?"
@@ -42,7 +42,7 @@ hide:
 ## <span class="custom-heading" data-id="7">What is required to achieve a 1000 Hz update rate on 2.4 GHz?</span>
 
 ??? faq "What is required to achieve a 1000 Hz packet rate on 2.4 GHz?"
-    In order to achieve the fastest packet rate, your radio must be running a supported [firmware](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#radio-operating-system), set to a minimum [hardware baud rate](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#serial-baud-rate) of 921000, and be connected to a serial ELRS receiver (SPI receivers do not support the FLRC modes required). Also make absoultely sure [ADC filter](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#adc-filter) is disabled on your radio, and that you have applied the appropriate RC Link [Preset](https://betaflight.com/docs/wiki/configurator/presets-tab) in Betaflight. 
+    In order to achieve the fastest packet rate, your radio must be running a supported [firmware](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#radio-operating-system), set to a minimum [hardware baud rate](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#serial-baud-rate) of 921000, and be connected to a serial ELRS receiver (SPI receivers do not support the FLRC modes required). Also make absolutely sure [ADC filter](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#adc-filter) is disabled on your radio, and that you have applied the appropriate RC Link [Preset](https://betaflight.com/docs/wiki/configurator/presets-tab) in Betaflight. 
 
     You can use the ELRS lua to check your current packet rate and ensure the radio mixer sync is working properly. See [Using the Lua Script](https://www.expresslrs.org/quick-start/transmitters/lua-howto.md) for more details.
 
@@ -63,7 +63,7 @@ hide:
 ## <span class="custom-heading" data-id="9">Is my binding phrase a secret?</span>
 
 ??? faq "Is my binding phrase a secret?"
-    No, just like what channel your VTX is on is not a secret. The binding phrase is not used for security, it is used for anti-collision. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally is pretty high. To provide the best chance of not interfering with other pilots and them not interferingwith you, be sure you're not using the same dumb bind phrase as someone else. Express your style with a hilarious or saucy bind phrase.
+    No, just like what channel your VTX is on is not a secret. The binding phrase is not used for security, it is used for anti-collision. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally is pretty high. To provide the best chance of not interfering with other pilots and them not interfering with you, be sure you're not using the same dumb bind phrase as someone else. Express your style with a hilarious or saucy bind phrase.
 
 ## <span class="custom-heading" data-id="10">What does RQLY, TQLY, RSSI x2, SNR x2 mean?</span>
 
