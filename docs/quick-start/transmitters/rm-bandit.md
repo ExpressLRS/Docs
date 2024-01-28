@@ -4,12 +4,8 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-!!! danger "Advisory"
-    If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.2, then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware via WiFi.
-
-    Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
-
-    Updating to 3.x via UART or ETX Passthrough doesn't require 2.5.2 firmware or the Repartitioner.
+!!! Info
+    These devices come pre-installed with a 3.x-ready firmware. You don't need to reflash these devices. You can use the Web UI of these devices to update the Binding Phrase or any of the firmware options.
 
 ## Flashing/Updating your TX Module Firmware
 
@@ -35,13 +31,12 @@ template: main.html
         2. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `BETAFPV 2.4 GHz`
+                - `Radiomaster 900MHz`
 
-            - Device:
-                - `BETAFPV 2.4GHz Nano TX`
-                - `BETAFPV 2.4GHz Micro TX`
-                - `BETAFPV 2.4GHz 1W Micro TX`
-                - `BETAFPV SuperG 2.4GHz Gemini TX`
+            - Device: 
+                - `RadioMaster Bandit 900MHz TX`
+                - `RadioMaster Bandit Micro 900MHz TX`
+                - `RadioMaster Bandit nano 900MHz TX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -153,13 +148,12 @@ template: main.html
         2. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `BETAFPV 2.4 GHz`
+                - `Radiomaster 2.4 GHz`
 
-            - Device:
-                - `BETAFPV 2.4GHz Nano TX`
-                - `BETAFPV 2.4GHz Micro TX`
-                - `BETAFPV 2.4GHz 1W Micro TX`
-                - `BETAFPV SuperG 2.4GHz Gemini TX`
+            - Device: 
+                - `RadioMaster Bandit 900MHz TX`
+                - `RadioMaster Bandit Micro 900MHz TX`
+                - `RadioMaster Bandit nano 900MHz TX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -300,13 +294,12 @@ template: main.html
         8. Select the Device Category and Device target matching your hardware.
 
             - Device Category: 
-                - `BETAFPV 2.4 GHz`
+                - `Radiomaster 2.4 GHz`
 
-            - Device:
-                - `BETAFPV 2.4GHz Nano TX`
-                - `BETAFPV 2.4GHz Micro TX`
-                - `BETAFPV 2.4GHz 1W Micro TX`
-                - `BETAFPV SuperG 2.4GHz Gemini TX`
+            - Device: 
+                - `RadioMaster Bandit 900MHz TX`
+                - `RadioMaster Bandit Micro 900MHz TX`
+                - `RadioMaster Bandit nano 900MHz TX`
 
         9. Set the Flashing Method to `WiFi`.
 
@@ -333,7 +326,6 @@ template: main.html
         13. On your Radio, the `WiFi Running` screen should disappear and should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
         14. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Then reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
-
 === "via UART"
 
     <figure markdown>
@@ -352,61 +344,44 @@ template: main.html
             - Windows Users should download the `CP210x Windows Drivers` package for easier installation. Unzip/Extract the contents of the package and run the setup wizard.
 
         <br clear="right" />
-    3. Some TX Modules have switches to change how the USB port interacts with the different components in the module. Make sure to set it in the position for "Flashing the TX Module via UART".
 
-        - The BetaFPV Micro modules have dipswitches at the back. Set switches 1 & 2 to On, set the rest of the switches to Off.
-
-        <figure markdown>
-        ![BetaFPV Micro Switches](https://user-images.githubusercontent.com/1081265/208266962-2e00a222-d44f-48b8-8ea0-e4a9a8433e64.png)
-        </figure>
-
-    4. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
+    3. Launch the [ExpressLRS Configurator](../installing-configurator.md) on your Computer.
         ![Configurator Release]{ align=right }
 
         - Make sure `Official Releases` is active from the horizontal tab.
         - Ensure you select the Released version you want to flash into your TX module.
 
         <br clear="right" />
-    5. Select the Device Category and Device target matching your hardware.
+    4. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `BETAFPV 2.4 GHz`
+            - `Radiomaster 2.4 GHz`
 
-        - Device:
-            - `BETAFPV 2.4GHz Nano TX`
-            - `BETAFPV 2.4GHz Micro TX`
-            - `BETAFPV 2.4GHz 1W Micro TX`
-            - `BETAFPV SuperG 2.4GHz Gemini TX`
+        - Device: 
+            - `RadioMaster Bandit 900MHz TX`
+            - `RadioMaster Bandit Micro 900MHz TX`
+            - `RadioMaster Bandit nano 900MHz TX`
 
-    6. Set the Flashing Method to `UART`
+    5. Set the Flashing Method to `UART`
 
         <figure markdown>
         ![via UART](../../assets/images/Method_TX_UART.png)
         </figure>
 
-    7. Set the [firmware options](../firmware-options.md) for your device.
+    6. Set the [firmware options](../firmware-options.md) for your device.
         - Regulatory Domain (Mandatory. Choose the domain appropriate for the location or country you're flying).
         - Binding Phrase (Optional, but Highly Recommended. Note this phrase as it should be the same on your other devices, or they will not bind or sync).
         - Local WiFi Network Credentials (Optional. Will be used the next time the device goes into WiFi mode).
-    8. Click the ++"Flash"++ button.
+    7. Click the ++"Flash"++ button.
 
         <figure markdown>
         ![Flash]
         </figure>
         
-    9. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
-    10. Unplug your module from USB. Return the dipswitches at the back into the "Normal Operation" position.
-        - Switches 1,2,5,6,7 should be Off; 3 & 4 should be On. Applicable to the Micro-size module only.
-    11. Reconnect your TX module into your Radio's External Module bay.
-    12. Using the [ExpressLRS Lua Script] from the Tools Menu, check if the firmware version got updated.
-
-## Cannot flash?
-
-If you've followed any of the steps above and still cannot get your devices flashed and updated, see this video for the explanation of why and the fix to get your devices flashed and updated (applies to the Nano modules only).
-
-<figure markdown>
-<iframe width="688" height="387" src="https://www.youtube.com/embed/Pt5rMp7Zs8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+    8. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
+    9. Unplug your module from USB.
+    10. Reconnect your TX module into your Radio's External Module bay.
+    11. Using the [ExpressLRS Lua Script] from the Tools Menu, check if the firmware version got updated.
 
 [Lua Script]: ../../assets/images/lua1.jpg
 [Lua Running]: ../../assets/images/lua/config-bw.png

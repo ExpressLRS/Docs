@@ -33,7 +33,7 @@ On module powerup with Dynamic Power enabled, transmit power is set to the minim
 
 ### Lowering Power
 
-For non-FLRC modes, Dynamic Power uses the average signal to noise ratio (SNR) reported by the receiver. If the SNR is above a threshold, the power will be lowered by one level. SNR is used because it takes into account interference (the "noise" in signal-to-noise) and is not affected by receivers with LNAs, which boost RSSI dBm. The thresholds for lowering the power are specific to each packet rate. For example, 250Hz (LoRa) will lower the power if SNR is <= 9.5 but 150Hz (LoRa) will lower power if the SNR is <= 8.5.
+For non-FLRC modes, Dynamic Power uses the average signal to noise ratio (SNR) reported by the receiver. If the SNR is above a threshold, the power will be lowered by one level. SNR is used because it takes into account interference (the "noise" in signal-to-noise) and is not affected by receivers with LNAs, which boost RSSI dBm. The thresholds for lowering the power are specific to each packet rate. For example, 250Hz (LoRa) will lower the power if SNR is >= 9.5 but 150Hz (LoRa) will lower power if the SNR is >= 8.5.
 
 For FLRC modes (packet rates beginning with `F` or `D`) Dynamic Power averages the last few RSSI dBm readings from the RX. If the RSSI is >= -83dBm, the transmit power is lowered by one level.
 
@@ -60,6 +60,8 @@ In addition to the slow power ramp up, three LQ-based conditions will raise the 
 1. If the LQ ever drops below the hard limit (50% LQ), the power will jump to the max.
 2. If the LQ drops suddenly in a single telemetry update compared to the moving average. This is intended to react to flying behind a structure where the LQ suddenly takes a hit and is expected to drop further. Example: LQ is running 100% (as ExpressLRS does under most conditions) and the TX receives a telemetry packet with 80% LQ, the power will jump to the max.
 3. If telemetry is lost entirely with the arm switch high. Any time the TX is "disconnected" while armed, the power will jump to the max.
+
+Finally, if reported LQ is below 85% and no other condition has been met this period, increase the power one level.
 
 ## Notes
 
