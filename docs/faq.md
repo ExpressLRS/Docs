@@ -63,7 +63,7 @@ hide:
 ## <span class="custom-heading" data-id="9">Is my binding phrase a secret?</span>
 
 ??? faq "Is my binding phrase a secret?"
-    No, just like what channel your VTX is on is not a secret. The binding phrase is not used for security, it is used for anti-collision. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally is pretty high. To provide the best chance of not interfering with other pilots and them not interfering with you, be sure you're not using the same dumb bind phrase as someone else. Express your style with a hilarious or saucy bind phrase.
+    No, just like what channel your VTX is on is not a secret. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally is high. The binding phrase is *not* used for security, it is used to prevent collisions. Specifically, the binding phrase is hashed and used to seed the random number generator that determines the frequency hopping pattern. Thus, each binding phrase results in a unique hopping pattern, minimizing the likelihood of collisions with other users.  To provide the best chance of not interfering with other pilots and them not interfering with you, be sure you're not using the same dumb bind phrase as someone else. Express your style with a hilarious or saucy bind phrase.
 
 ## <span class="custom-heading" data-id="10">What does RQLY, TQLY, RSSI x2, SNR x2 mean?</span>
 
