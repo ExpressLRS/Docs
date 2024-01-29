@@ -10,7 +10,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="1">My RX and TX are bound, but FC is not responding to inputs, and I can only see 10 Telemetry sensors</span>
 
 ??? Note "My RX and TX are bound, but FC is not responding to inputs, and I can only see 10 Telemetry sensors"
-    Check whether you have wired the receiver correctly and that Rx and Tx wires aren't swapped.
+    Check whether you have wired the receiver correctly and that RX and TX wires aren't swapped.
     
     Also, check that you have the correct SerialRX configuration. You might want to revisit the [FC Preparation](receivers/configuring-fc.md#serial-rx-setup) page for the Flight Controller setup.
     
@@ -19,7 +19,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="2">My RX and TX are bound, and I'm getting more than 10 Telemetry sensors on my Radio, but I'm not getting stick inputs</span>
 
 ??? Note "My RX and TX are bound, and I'm getting more than 10 Telemetry sensors on my Radio, but I'm not getting stick inputs"
-    This is due to a [model mismatch](../software/model-config-match.md) between the receiver and the tx module. The LED on the receiver will have 3 short blinks and then a 1s pause indicating the mismatch.
+    This is due to a [model mismatch](../software/model-config-match.md) between the receiver and the TX module. The LED on the receiver will have 3 short blinks and then a 1s pause indicating the mismatch.
     
     To "fix" this, you might want to turn On Model Matching. Please see [Model Matching](../software/model-config-match.md) for more notes.
     
@@ -32,7 +32,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ??? Note "My RX and TX are bound, and I'm getting stick inputs, but I can only get 10 Telemetry sensors"
     Check if you have Telemetry Feature enabled in your FC Configuration.
 
-    Also, verify the Rx pad from the receiver is connected properly to a Tx pad in the FC in the same UART as the Tx wire from the receiver.
+    Also, verify the RX pad from the receiver is connected properly to a TX pad in the FC in the same UART as the TX wire from the receiver.
 
     Also, make sure you have deleted and rediscovered the sensors. It's good to increase the TLM Ratio so the acquisition of the sensors will be faster.
 
@@ -45,16 +45,16 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
     * Make sure you have unbridged the boot pads if you flashed it via passthrough.
 
-    * Turn off your Radio and if the LED is still solid, but boot pads aren't bridged, the UART where the receiver is on is putting it into bootloader mode unintentionally. This is primarily caused by pull-down resistor on the RX pad to aid with SBUS line inversion. To verify it is the case with the UART, disconnect the Rx and Tx wires from the FC UART, and it should start blinking slowly then after the set interval (20s - 30s by default), it will blink fast indicating it's on WiFi Mode. To "fix" the issue, you have two options:
+    * Turn off your Radio and if the LED is still solid, but boot pads aren't bridged, the UART where the receiver is on is putting it into bootloader mode unintentionally. This is primarily caused by pull-down resistor on the RX pad to aid with SBUS line inversion. To verify it is the case with the UART, disconnect the RX and TX wires from the FC UART, and it should start blinking slowly then after the set interval (20s - 30s by default), it will blink fast indicating it's on WiFi Mode. To "fix" the issue, you have two options:
 
         - Move the receiver into another free UART.
         - If there's no other UART, wire up a resistor with a value between 300 Ohm to 1k Ohm between a 3.3v pad and the FC's RX pad (where the TX from the receiver connects to).
 
-    * If, however, despite unsoldering the Tx and Rx wires, the LED is still solid, you probably have a soft-bricked receiver due to a failed WiFi flash as a result of not letting the receiver reboot normally. Follow the [unbricking procedure](../quick-start/unbricking.md) to recover the receiver.
+    * If, however, despite unsoldering the TX and RX wires, the LED is still solid, you probably have a soft-bricked receiver due to a failed WiFi flash as a result of not letting the receiver reboot normally. Follow the [unbricking procedure](../quick-start/unbricking.md) to recover the receiver.
 
-### <span class="custom-heading" data-id="5">My OSD is showing LQ 0:0 and RSSI dbm at -130 dbm, but I have stick inputs and more than 10 Telemetry sensors</span>
+### <span class="custom-heading" data-id="5">My OSD is showing LQ 0:0 and RSSI dBm at -130 dBm, but I have stick inputs and more than 10 Telemetry sensors</span>
 
-??? Note "My OSD is showing LQ 0:0 and RSSI dbm at -130 dbm, but I have stick inputs and more than 10 Telemetry sensors"
+??? Note "My OSD is showing LQ 0:0 and RSSI dBm at -130 dBm, but I have stick inputs and more than 10 Telemetry sensors"
     Check whether you have RSSI Channel set to either Aux11 or Aux12. If you do, set it to disabled.
 
     If it's still not fixed with that, check if you have RSSI ADC enabled. If so, set it to disabled.
@@ -174,17 +174,17 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
     This can be due to several things:
 
     - Incorrect bootloader is flashed or it's not flashed properly. This mainly happens on the R9 receivers. Go checkout [Bootloader Flashing Guide](receivers/r9.md#bootloaders).
-    - Incorrect wiring. Make sure that Rx in the Receiver is connected to a Tx pad in the FC and the Tx in the Receiver is connected to an Rx pad in the FC. Also, make sure the receiver is getting enough voltage (min 4v5) from the FC or voltage supply. Wiring guide is [here](receivers/wiring-up.md)
+    - Incorrect wiring. Make sure that RX in the Receiver is connected to a TX pad in the FC and the TX in the Receiver is connected to an RX pad in the FC. Also, make sure the receiver is getting enough voltage (min 4v5) from the FC or voltage supply. Wiring guide is [here](receivers/wiring-up.md)
     - Receiver is OFF. Check whether the LED on the receiver is lit, indicating it's powered and in a working state.
-    - The UART has hardware inversion. Make sure that the UART you've connected the receiver to is not an SBUS UART that usually has hardware inversion (most common among F4 Flight Controllers). There are Flight controllers that require you to bridge a pair of pads to enable or disable the Hardware inversion of an Rx pad. You can simply try a different UART.
-    - The LED on the receiver is SOLID, while the radio is off, which could only mean that the Rx pad in the FC is being pulled LOW, putting the ESP-based receiver (EPs, ES900Rx, etc.) into Bootloader mode unintentionally, which will hinder normal passthrough operations. Feel free to try a different UART.
+    - The UART has hardware inversion. Make sure that the UART you've connected the receiver to is not an SBUS UART that usually has hardware inversion (most common among F4 Flight Controllers). There are Flight controllers that require you to bridge a pair of pads to enable or disable the Hardware inversion of an RX pad. You can simply try a different UART.
+    - The LED on the receiver is SOLID, while the radio is off, which could only mean that the RX pad in the FC is being pulled LOW, putting the ESP-based receiver (EPs, ES900RX, etc.) into Bootloader mode unintentionally, which will hinder normal passthrough operations. Feel free to try a different UART.
 
 ### <span class="custom-heading" data-id="22">Failed to connect to ESP8266: Timed out waiting for packet header.</span>
 
 ??? Note "Failed to connect to ESP8266: Timed out waiting for packet header."
     This can be due to several things:
 
-    - Receiver is wired incorrectly. Please check if the Rx and Tx wires aren't swapped and connected Rx to Rx and Tx to Tx on the FC. Revisit the Receiver Wiring Guide [here](receivers/wiring-up.md).
+    - Receiver is wired incorrectly. Please check if the RX and TX wires aren't swapped and connected RX to RX and TX to TX on the FC. Revisit the Receiver Wiring Guide [here](receivers/wiring-up.md).
     - The receiver's "boot" pads aren't bridged (or the button wasn't pressed and held during power up) for passthrough flashing. This is required for Passthrough flashing if the receiver is fresh from the packet and has a firmware version before 1.0.0-RC6.
     - The receiver UART is putting it in Bootloader mode and is interfering with passthrough flashing. Move it into another UART.
 
@@ -195,7 +195,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="23">I updated via WiFi but now the receiver won't work and has SOLID LED</span>
 
 ??? Note "I updated via WiFi but now the receiver won't work and has SOLID LED"
-    This is a sign that the Wifi flashing didn't go through properly due to a premature power cycle. To fix this, you will have to bridge the boot pads (see [here](receivers/wiring-up.md)) and reflash using the Passthrough method (**Telemetry** option on Betaflight/iNav set to `OFF`. This is important!) or using an FTDI adapter.
+    This is a sign that the WiFi flashing didn't go through properly due to a premature power cycle. To fix this, you will have to bridge the boot pads (see [here](receivers/wiring-up.md)) and reflash using the Passthrough method (**Telemetry** option on Betaflight/iNav set to `OFF`. This is important!) or using an FTDI adapter.
 
     This video shows the steps albeit using a VSCode development environment but the ExpressLRS Configurator will work just fine. 
 

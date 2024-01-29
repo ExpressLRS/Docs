@@ -40,7 +40,7 @@ As of Betaflight 4.4 (with Betaflight Configurator version 10.9.0 or newer), you
 <figure markdown>
 ![BF settings](../assets/images/SPIReceiverSetupBF4.4.png)
 </figure>
-Proper configuration of the Betaflight Receiver tab for ExpressLRS SPI Receivers. Receiver Mode (1) should be set to SPI Rx. SPI Bus Receiver Provider (2) should be set to EXPRESSLRS. Enter your binding phrase in the box (3) and it will be converted to UID bytes (4) and saved to your Betaflight config. You can also take this opportunity to enable Telemetry (5) if desired, and make sure RSSI_ADC (6) and RSSI Channel (7) are disabled as shown. 
+Proper configuration of the Betaflight Receiver tab for ExpressLRS SPI Receivers. Receiver Mode (1) should be set to SPI RX. SPI Bus Receiver Provider (2) should be set to EXPRESSLRS. Enter your binding phrase in the box (3) and it will be converted to UID bytes (4) and saved to your Betaflight config. You can also take this opportunity to enable Telemetry (5) if desired, and make sure RSSI_ADC (6) and RSSI Channel (7) are disabled as shown. 
 
 ## Alternate Binding Procedures
 
@@ -109,7 +109,7 @@ As shown above, Betaflight Configurator 10.9.0 also supports entering the Bindin
 !!! note "Supported RF Modes"
     SPI receivers **DO NOT** support D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) and thus will not bind or sync with a TX module in any of these modes.
 
-## Acknowledgements
+## Acknowledgments
 
 The SPI ExpressLRS implementation would not have been possible without the work and huge efforts from the following developers:
 

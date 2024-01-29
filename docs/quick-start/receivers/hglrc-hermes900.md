@@ -25,7 +25,7 @@ template: main.html
 <figcaption>HGLRC Hermes 900MHz</figcaption>
 </figure>
 
-The image above shows the receiver pinouts and their connections. As we're dealing with a UART connection, Rx on the receiver goes to a TX pad on the FC, and Tx on the receiver goes to an uninverted Rx pad on the FC.
+The image above shows the receiver pinouts and their connections. As we're dealing with a UART connection, RX on the receiver goes to a TX pad on the FC, and TX on the receiver goes to an uninverted RX pad on the FC.
 
 See the [Receiver Wiring] page for a more in-depth guide and troubleshooting procedures. Some of the updating procedures below will not go through if your receiver is not wired correctly and behaving properly.
 

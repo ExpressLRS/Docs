@@ -58,15 +58,15 @@ More information about signal metrics can be found in this great [article on sig
 Shown above is a Bench Test to determine if you're getting a good signal from your radio. This aims to provide you with information on whether you should check your antennas (particularly the R9's Super 8) or if you have good hardware overall. 
 
 - Set your ExpressLRS module to the lowest power level using the Lua script. The packet rate doesn't matter much here.
-- Put your radio 1m (3ft) from your receiver and power it up. Make sure the receiver and TX module antennas are oriented in the same way. (You might want to disconnect your vtx/air unit temporarily, put vtx on pit mode or have a fan blowing on it).
+- Put your radio 1m (3ft) from your receiver and power it up. Make sure the receiver and TX module antennas are oriented in the same way. (You might want to disconnect your VTX/Air Unit temporarily, put VTX in pit mode, or have a fan blowing on it).
 - Using your OSD or the Telemetry Page of your radio, take note of the RSSI dBm or the 1RSS telemetry data.
 
-On the 900Mhz hardware, a -20dBm or thereabouts is a good indication your hardware is in working order. On the 2.4 GHz hardware, around -40dBm up to -25dBm should be good. If you're getting lower numbers than these (closer to 0 is higher and better), here are a few things you could check:
+On the 900MHz hardware, a value of -20dBm or thereabouts is a good indication your hardware is in working order. On the 2.4GHz hardware, around -40dBm up to -25dBm should be good. If you're getting lower numbers than these (closer to 0 is higher and better), here are a few things you could check:
 
 - The ExpressLRS module antenna could be loose. On some 3D printed module cases, the print may be too thick at the part where the pigtail's RP-SMA/SMA end would be attached; if so, tighten the nut on the RP-SMA/SMA to give the antenna some more space to get tightened up.
 - The antenna pigtail may be damaged or not connected properly to the module's mainboard.
 - On receivers using SMD antennas, expect lower values than those equipped with wire antennas. If the receiver with the SMD antenna has heat shrink, enclosed in a whoop canopy, surrounded with carbon parts or buried inside a plane/fixed wing, expect some more attenuation of the signal.
-- The Super 8 antenna from Frsky, which most of the R9Ms came with is notorious for being faulty or would degrade from just a few weeks of use. Replace it or as a temporary fix, solder all around the junction where the coax shielding and the RP-SMA meet. Another failure point is the connection of the coax to the active elements itself. It would seem okay, but due to the twisting of the antenna, the connection could be severed.
+- The Super 8 antenna from FrSky, which most of the R9Ms came with is notorious for being faulty or would degrade from just a few weeks of use. Replace it or as a temporary fix, solder all around the junction where the coax shielding and the RP-SMA meet. Another failure point is the connection of the coax to the active elements itself. It would seem okay, but due to the twisting of the antenna, the connection could be severed.
 
 <figure markdown>
 ![NotSuper8](../assets/images/super8notsuper.jpg)
@@ -146,8 +146,8 @@ If you use 200Hz and 1:2 tlm ratio the stars will not even blink because the upd
 
 ## MSP
 
-To configure betaflight from your transmitter it's possible to use the betaflight lua scripts. 
-This requires the telemetry feature enabled for the RX+TX. If the telemetry page of OpenTx does not show regular updates for all sensors the LUA script will also not work.
+To configure Betaflight from your transmitter it's possible to use the Betaflight lua scripts. 
+This requires the telemetry feature enabled for the RX+TX. If the telemetry page of OpenTX does not show regular updates for all sensors the LUA script will also not work.
 
 To get a responsive UI configure ExpressLRS for fast data transfer so make sure to use something like `200Hz/500Hz` with `1:2` tlm and a serial baud rate of `400000`. Currently, MSP is limited to `50Hz` on `115200` Baud and does not work with a `500`` Hz` refresh rate. The initial VTX tables download does take some time - but is cached after that. 
 

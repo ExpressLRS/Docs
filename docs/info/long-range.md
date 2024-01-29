@@ -7,7 +7,7 @@ description: ExpressLRS boasts a great range at any given packet rate. Here's wh
 
 One of the most frequently asked questions that are asked by people who are interested in, but haven't yet tried ELRS is "How far does it go, and at what power level?"
 
-The following table is a leaderboard of the current record holder for each packet rate, and the longest distance from home. Note that not every flight resulted in a failsafe at max range, so the link could go further in some cases. The leaderboard is grouped into 2 tables, each with 2 sub-tables. The 2 tables are the frequency of the link used (either 2.4GHz or 900MHz), subdivided into two power levels (50mw or less, 100mW+). This aims to give a sense of how well ELRS performs even at lower power and also demonstrate how far it can be pushed out at higher power levels. Each frequency will have a maximum of 20 entries, so get up there!
+The following table is a leaderboard of the current record holder for each packet rate, and the longest distance from home. Note that not every flight resulted in a failsafe at max range, so the link could go further in some cases. The leaderboard is grouped into 2 tables, each with 2 sub-tables. The 2 tables are the frequency of the link used (either 2.4GHz or 900MHz), subdivided into two power levels (50mW or less, 100mW+). This aims to give a sense of how well ELRS performs even at lower power and also demonstrate how far it can be pushed out at higher power levels. Each frequency will have a maximum of 20 entries, so get up there!
 
 To enter, press the pencil in the upper left corner of this page, and enter your record's info into the table, sorted by distance, and then PR it into the docs repo.
 
@@ -49,13 +49,13 @@ Anyone can add an entry to the table, and entries should include the:
 | 12.2Km | 2.4G | 500Hz | 250mW | Wing | No | Börner | [Link](https://youtu.be/GUUngM6NcAg) |
 | 11.47Km | 2.4G | 50hz | 500mW | Wing | No | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
 | 10Km | 2.4G | 50Hz | 250mW | Quad | No | Disnator | [Link](https://youtu.be/p6USo0VsLag?si=kP8Bq-XUWoSEWVlV) |
-| 7.14Km | 2.4G | 500hz | 100mw | Wing | No | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
+| 7.14Km | 2.4G | 500Hz | 100mW | Wing | No | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
 | 6.43Km | 2.4G | 50Hz | 100mW | Wing | No | DivisionRc | [Link](https://youtu.be/3VAJ14y0ZIY) |
 | 5.07Km | 2.4G | 250Hz | 500mW | Quad | No | ZoFPV | [Link](https://youtu.be/JyNvywwi90s) |
 
 ## 900 MHz Rankings
 
-### 50mw or less
+### 50mW or less
 | Max Dist. | Freq | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle | Link to DVR |
 | ---- | -------- | -------- | --------- | --------- | ---------------------- | ------------ | ----------- |
 | 40.7Km | 900M | 50Hz | 10mW | Wing | No | Leslie Yagin | [Link](https://www.youtube.com/watch?v=HRqTklpWDIM) |

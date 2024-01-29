@@ -28,7 +28,7 @@ All other configuration parameters are global across all Receiver numbers. Note:
 
 ## Model Match
 
-ExpressLRS uses a binding phrase, which means the transmitter will connect to any receiver built with that binding phrase. Model Match is a feature which prevents a full connection if the Model Match number does not match. In this mode, the receiver will connect to the handset, but no data will be sent from the receiver to the flight controller. This allows a user to force that the model selected in OpenTX only connects to a specific receiver, for example preventing using a quad opentx model definition with a fixed wing model.
+ExpressLRS uses a binding phrase, which means the transmitter will connect to any receiver built with that binding phrase. Model Match is a feature which prevents a full connection if the Model Match number does not match. In this mode, the receiver will connect to the handset, but no data will be sent from the receiver to the flight controller. This allows a user to force that the model selected in OpenTX only connects to a specific receiver, for example preventing using a quad OpenTX model definition with a fixed wing model.
 
 The terms Receiver number (set in OpenTX/EdgeTX) and Model Match number (set in the receiver) are used interchangeably here-- they are the same.
 
@@ -53,7 +53,7 @@ The implementation follows this set of rules for handling half connections / ful
 
 **_Alternatively_**
 
-* For wifi-enabled RX modules, use the WebUI to set the Model Match directly. "Model Match" must still be set to "On" in the Lua config.
+* For WiFi-enabled RX modules, use the WebUI to set the Model Match directly. "Model Match" must still be set to "On" in the Lua config.
 
 <figure markdown>
 ![Model Match webui](https://cdn.discordapp.com/attachments/738450139693449258/887054111495831583/unknown.png)
@@ -67,4 +67,4 @@ The implementation follows this set of rules for handling half connections / ful
 
 **_Alternatively_**
 
-* For wifi-enabled RX modules, use the WebUI to set the Model Match to 255 to disable matching. "Model Match" must still be set to "Off" in the Lua config.
+* For WiFi-enabled RX modules, use the WebUI to set the Model Match to 255 to disable matching. "Model Match" must still be set to "Off" in the Lua config.

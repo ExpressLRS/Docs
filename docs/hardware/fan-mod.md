@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: A short guide on how to add a fan on your Frsky R9M module flashed with ExpressLRS.
+description: A short guide on how to add a fan on your FrSky R9M module flashed with ExpressLRS.
 ---
 
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)

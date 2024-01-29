@@ -48,15 +48,15 @@ This table summarizes the switch configuration modes, available channel switch p
     **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
 !!! note
-    If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the wifi interface of the receiver and map any of the other channels to PWM Output 5. Please always still use AUX1 for the 2-pos Arm switch.
+    If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the WiFi interface of the receiver and map any of the other channels to PWM Output 5. Please always still use AUX1 for the 2-pos Arm switch.
 
 ### Channel Update Rate versus Packet Rate
 
 | Label | Description |
 |:---:| --- |
-| **Bolded** | This channel will be included in every packet at the selected packet rate (So a 150hz Packet Rate = 150hz Channel Update Rate) |
-| H <br> Half Rate | Half of the channels are included in each packet - Rate/2 (So a 100hz Packet Rate cut in half = 50hz Channel Update Rate) |
-| RR <br> Round Robin | These channels wait their turn to be sent in a packet (So a 150hz Packet Rate sends a channel every 7th packet = 22hz Channel Update Rate) |
+| **Bolded** | This channel will be included in every packet at the selected packet rate (So a 150Hz Packet Rate = 150Hz Channel Update Rate) |
+| H <br> Half Rate | Half of the channels are included in each packet - Rate/2 (So a 100Hz Packet Rate cut in half = 50Hz Channel Update Rate) |
+| RR <br> Round Robin | These channels wait their turn to be sent in a packet (So a 150Hz Packet Rate sends a channel every 7th packet = 22Hz Channel Update Rate) |
 | 50 thru<br>F1000 | The **Hybrid** and **Wide** switch modes are only available on packet rates of 50Hz, 150Hz, 250Hz, 500Hz, D250Hz, D500Hz, F500Hz, and F1000Hz |
 | 100&333<br>Only | The **Full Resolution** switch modes (**8ch**, **16ch Rate/2**, **12ch Mixed**) are only available on packet rates of 100Hz Full and 333Hz Full |
  

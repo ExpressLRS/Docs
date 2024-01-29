@@ -59,7 +59,7 @@ To determine your Radio Operating System Version, load the Version page from the
 
 If you have an older version, please first update your Radio OS to at least the mentioned versions. Please consult your Radio Operating System Updating Procedure if you don't know how.
 
-ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases) for the best experience and compatibility. EdgeTX has introduced options that old and new Radio handsets will benefit from, like One Bit Sample Mode (mainly for old Frsky Radios like the X9D and the QX7) and Mega Bauds (baud rates higher than 400K).
+ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases) for the best experience and compatibility. EdgeTX has introduced options that old and new Radio handsets will benefit from, like One Bit Sample Mode (mainly for old FrSky Radios like the X9D and the QX7) and Mega Bauds (baud rates higher than 400K).
 
 ??? Tip "Simplest EdgeTX Updating Procedure (click/tap to expand)"
     1. Visit http://buddy.edgetx.org/.
@@ -71,7 +71,7 @@ ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases)
         - Press and hold the two horizontal Trim switches then press the Power button. The Screen should Light up. Release the buttons.
         - Some Radios have a different procedure, like the BetaFPV Lite Radio 3 Pro. Consult the Manual for the steps to get it into this DFU/Bootloader mode.
     6. Select `Write Firmware`.
-    7. Navigate to the EdgeTx firmware file you just downloaded.
+    7. Navigate to the EdgeTX firmware file you just downloaded.
     8. Follow the screen prompts.
     9. Once Writing is complete, reboot the radio.
     10. Check the Radio's Version Page to verify you have the version you need.
@@ -151,9 +151,9 @@ To get to the baud rate setting on your radio:
 
 However, there are some exceptions:
 
-- The Frsky Taranis QX7 ACCST, Horus X12S and Horus X10S cannot reliably run 400K baud rate without the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/).
+- The FrSky Taranis QX7 ACCST, Horus X12S and Horus X10S cannot reliably run 400K baud rate without the [Crossfire Mod](https://blog.seidel-philipp.de/fixed-inverter-mod-for-tbs-crossfire-and-frsky-qx7/).
 
-- The Frsky Taranis X9D has proven to be finicky even with the default 400K baud rate and will benefit from the One Bit Sample Mode setting and a Hardware Mod. See [Troubleshooting the X9D](../../hardware/x9d-troubleshooting.md) for more details.
+- The FrSky Taranis X9D has proven to be finicky even with the default 400K baud rate and will benefit from the One Bit Sample Mode setting and a Hardware Mod. See [Troubleshooting the X9D](../../hardware/x9d-troubleshooting.md) for more details.
 
 On other Radios, you can set the Baudrate higher than 400K but will highly depend on what TX Module you will use with it.
 

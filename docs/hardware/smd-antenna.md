@@ -20,7 +20,7 @@ This perky little fellow is worse at receiving signals than his snaky brothers, 
 
 ## Range Tests
 
-* 3km flight on 500hz: https://www.youtube.com/watch?v=kfa6ugX46n8
+* 3km flight on 500Hz: https://www.youtube.com/watch?v=kfa6ugX46n8
 * Parking Garage on 500Hz: https://www.youtube.com/watch?v=Fr7CCeni2dY
 * Range Comparison to Dipole: https://www.youtube.com/watch?v=A5w81n5qV1M
 * RSSI Comparison Dipole: https://youtu.be/CnaEe7YZB-Q
