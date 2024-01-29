@@ -167,7 +167,7 @@ Available Options:
 
 - `Gemini`
 
-    * Transmit on two Tx antennas simultaneously at different frequencies 40MHz apart (for 2.4GHz) or ~10MHz apart (for 900MHz).
+    * Transmit on two TX antennas simultaneously at different frequencies 40MHz apart (for 2.4GHz) or ~10MHz apart (for 900MHz).
 
 - `Ant 1/Ant 2`
 
@@ -244,11 +244,11 @@ VTX Administrator allows you to change your VTX settings directly from your radi
 
 This section contains all the WiFi-related functions.
 
-* `Enable WiFi` will activate the Tx module WiFi mode for updating via WiFi (if the Tx Module has WiFi Capabilities). Visit [this page](../../software/updating/wifi-updating.md) for instructions on how the updating process works.
+* `Enable WiFi` will activate the TX module WiFi mode for updating via WiFi (if the TX Module has WiFi Capabilities). Visit [this page](../../software/updating/wifi-updating.md) for instructions on how the updating process works.
 
-* `Enable Rx WiFi` will put the bound and connected receiver into WiFi mode to facilitate updating via WiFi (if the receiver has WiFi capabilities).
+* `Enable RX WiFi` will put the bound and connected receiver into WiFi mode to facilitate updating via WiFi (if the receiver has WiFi capabilities).
 
-* `Enable Backpack WiFi` will put the Tx Backpack into WiFi mode (available only to TX modules with backpacks connected and updated to the new [Backpack](https://github.com/ExpressLRS/Backpack) firmwares).
+* `Enable Backpack WiFi` will put the TX Backpack into WiFi mode (available only to TX modules with backpacks connected and updated to the new [Backpack](https://github.com/ExpressLRS/Backpack) firmwares).
 
 * `Enable VRx WiFi` will put the VRx [Backpack](https://github.com/ExpressLRS/Backpack) that is bound and connected to the onboard TX Backpack into WiFi mode to facilitate updating via WiFi.
 
@@ -353,7 +353,7 @@ The `Antenna Mode` setting is only available for Receivers with Antenna Diversit
 
 The `Receiver Mode` setting is only available for True Diversity receivers. These options are available:
 
-* `Gemini` - Receive on two Rx antennas simultaneously at different frequency 40MHz apart (for 2.4GHz) or ~10MHz apart (for 900MHz). Best used when you have a Gemini-capable TX Module.
+* `Gemini` - Receive on two RX antennas simultaneously at different frequency 40MHz apart (for 2.4GHz) or ~10MHz apart (for 900MHz). Best used when you have a Gemini-capable TX Module.
 * `Diversity` - Both Antennas will be active. Receiver will switch to the antenna with better RSSI.
 * `Ant1/Ant2` - Only one antenna will be working to receive RC commands (and send Telemetry).
 
@@ -401,7 +401,7 @@ This line shows the currently set Model ID for the receiver when Model Matching 
 ### <span class="custom-heading" data-id="1">ExpressLRS Lua Script is stuck at `Loading...`</span>
 
 ??? Note "ExpressLRS Lua Script is stuck at `Loading...`"
-    Go back to the [Radio Setup Guide](tx-prep.md) and make sure your radio is prepped up for ExpressLRS. Check that the ExpressLRS Tx module is enabled - otherwise the script cannot be loaded.
+    Go back to the [Radio Setup Guide](tx-prep.md) and make sure your radio is prepped up for ExpressLRS. Check that the ExpressLRS TX module is enabled - otherwise the script cannot be loaded.
 
     Also, make sure your module has been flashed with v3.0 firmware. V3 Lua for V3.0-flashed modules, V2 Lua for v2.x-flashed modules (including some modules fresh from the factory).
 

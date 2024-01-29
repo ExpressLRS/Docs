@@ -83,7 +83,7 @@ On startup, the output power will be set to the lowest possible value. If teleme
 
 ### OSD Power Display
 
-To see the current output power on your FPV OSD, enable the `Tx uplink power` OSD element. Uplink power is not available if `Switch Mode` is set to `Hybrid`, or older Betaflight (<4.3.0) and iNav (<2.6.0) versions. This value updates 8x more quickly in fullres packet modes.
+To see the current output power on your FPV OSD, enable the `TX uplink power` OSD element. Uplink power is not available if `Switch Mode` is set to `Hybrid`, or older Betaflight (<4.3.0) and iNav (<2.6.0) versions. This value updates 8x more quickly in fullres packet modes.
 
 ### EdgeTX / OpenTX Power Readout
 

@@ -334,7 +334,7 @@ template: main.html
     For the `Jumper T-Lite V2`, update it to at least EdgeTX 2.8.0 (f6d140e) for full EdgeTX support.
 
     !!! tip "Hot Tip"
-        To ensure updating success with this method, update the EdgeTX firmware on the radio to at least EdgeTX 2.8.0 (f6d140e, released Nov. 27, 2022). The EdgeTx Firmware that comes with this radio is a pre-release version.
+        To ensure updating success with this method, update the EdgeTX firmware on the radio to at least EdgeTX 2.8.0 (f6d140e, released Nov. 27, 2022). The EdgeTX Firmware that comes with this radio is a pre-release version.
 
     ??? Tip "Simplest EdgeTX Updating Procedure (click/tap to expand)"
         1. Visit http://buddy.edgetx.org/.
@@ -346,7 +346,7 @@ template: main.html
             - Press and hold the two horizontal Trim switches then press the Power button. The Screen should Light up. Let go of the buttons.
             - Some Radios have a different procedure, like the BetaFPV Lite Radio 3 Pro. Consult the Manual for the steps to get it into this DFU/Bootloader mode.
         6. Select `Write Firmware`.
-        7. Navigate to the EdgeTx firmware file you just downloaded.
+        7. Navigate to the EdgeTX firmware file you just downloaded.
         8. Follow the screen prompts.
         9. Once Writing is complete, reboot the radio.
         10. Check the Radio's Version Page to verify you have the version you need.

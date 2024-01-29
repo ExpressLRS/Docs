@@ -9,7 +9,7 @@ description: Let's get your ExpressLRS Receiver connected to your flight control
     Manufacturer-suggested Receiver UARTs, or UARTs alloted for Receivers usually have a pull-down resistor to aid with SBUS (RX pad inversion) which will result into SOLID LEDs on the ESP-based ExpressLRS Receivers. It is best to avoid those UARTs unless you know your UARTs.
 
 !!! tip "Hint!"
-    KISS FCs may label its UARTs differently. You might have to wire up the Rx pin into an RX pad, and the Tx pin into a TX pad. Always check your FC wiring guide/manual.
+    KISS FCs may label its UARTs differently. You might have to wire up the RX pin into an RX pad, and the TX pin into a TX pad. Always check your FC wiring guide/manual.
 
 ## Introduction
 

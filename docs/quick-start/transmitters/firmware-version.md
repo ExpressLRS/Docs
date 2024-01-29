@@ -85,7 +85,7 @@ There are three methods to determine what firmware version you currently have on
 
         === "using Auto WiFi mode"
 
-            1. With your Tx module disconnected from your Radio module bay, power it up either via an external power source (2S) or by plugging in a USB cable into its USB Port.
+            1. With your TX module disconnected from your Radio module bay, power it up either via an external power source (2S) or by plugging in a USB cable into its USB Port.
             2. Let it be for at least 60s and the RGB LED will turn into a Green Breathing LED pattern indicating it is now in WiFi Mode.
                 - The Auto WiFi On Interval setting controls how long the device will wait to initiate WiFi Mode when it's powered up and it's not getting valid CRSF packets.
                 - TX Modules with an OLED Screen will also show a message to indicate it is in WiFi Mode.
@@ -129,7 +129,7 @@ There are three methods to determine what firmware version you currently have on
                     3. Take note of the IP Address given by your router.
                     4. Use this IP address in your Browser as the URL.
 
-    4. The Banner of the Web UI should tell you the firmware version flashed into your Tx module.
+    4. The Banner of the Web UI should tell you the firmware version flashed into your TX module.
 
         <figure markdown>
         ![Web UI Banner](../../assets/images/web-banner.png)

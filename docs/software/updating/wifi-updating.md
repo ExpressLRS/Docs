@@ -14,7 +14,7 @@ template: main.html
 
 Put your device in WiFi Updating mode. For TX modules, this is accomplished using the ExpressLRS Lua Script. Simply select `WiFi Update` from the script and it should start the Update Hotspot. For receivers, power the receiver and wait until `AUTO_WIFI_ON_INTERVAL` time has elapsed and the LED on the receiver is blinking fast.
 
-Connect to the hotspot that the device has created. For Tx modules, this hotspot should show up as **ExpressLRS TX** while for receivers, the hotspot will have a name such as **ExpressLRS RX**. They have the same password: `expresslrs`. 
+Connect to the hotspot that the device has created. For TX modules, this hotspot should show up as **ExpressLRS TX** while for receivers, the hotspot will have a name such as **ExpressLRS RX**. They have the same password: `expresslrs`. 
 
 ??? Warning "Updating on Phones (click/tap to expand)"
     In case your computer does not have wifi capabilities, you can use a wifi capable smartphone as well. Most phones will display a notification after a successfull connection. This is because the phone does not recognize an internet connection. It is recommended to acknowledge this notification because the phone might disconnect again.
@@ -64,7 +64,7 @@ Once the Update process completes, a Popup should show the result of the Update.
 ![Web Update Success](../../assets/images/web-firmwareupdateSuccess.png)
 </figure>
 
-**DO NOT** unplug/turn off the device yet. For Tx Modules, wait for the Lua Script to return to its Main Screen, indicating that the Tx Module has rebooted. For receivers, wait until the LED started blinking again, or you can even wait for it to activate WiFi Mode again for good measure.
+**DO NOT** unplug/turn off the device yet. For TX Modules, wait for the Lua Script to return to its Main Screen, indicating that the TX Module has rebooted. For receivers, wait until the LED started blinking again, or you can even wait for it to activate WiFi Mode again for good measure.
 
 Additionally, using this same Wifi Update page, you can also configure the receiver to connect to your local Wifi Network, in preparation for the other (better) methods.
 
@@ -100,7 +100,7 @@ Once the Update process completes, a Popup should show the result of the Update.
 ![Web Update Success](../../assets/images/web-firmwareupdateSuccess.png)
 </figure>
 
-**DO NOT** unplug/turn off the device yet. For Tx Modules, wait for the Lua Script to return to its Main Screen, indicating that the Tx Module has rebooted. For receivers, wait until the LED started blinking again, or you can even wait for it to activate WiFi Mode again for good measure.
+**DO NOT** unplug/turn off the device yet. For TX Modules, wait for the Lua Script to return to its Main Screen, indicating that the TX Module has rebooted. For receivers, wait until the LED started blinking again, or you can even wait for it to activate WiFi Mode again for good measure.
 
 ### Method 3: Build and Flash
 
@@ -116,4 +116,4 @@ With PlatformIO, select **Upload** with the Wifi Target. With the ExpressLRS Con
 ![WiFi Update Log](../../assets/images/WifiUpdateLog.png)
 </figure>
 
-**DO NOT** unplug/turn off the device yet. For Tx Modules, wait for the Lua Script to return to its Main Screen, indicating that the Tx Module has rebooted. For receivers, wait until the LED started blinking again, or you can even wait for it to activate WiFi Mode again for good measure.
+**DO NOT** unplug/turn off the device yet. For TX Modules, wait for the Lua Script to return to its Main Screen, indicating that the TX Module has rebooted. For receivers, wait until the LED started blinking again, or you can even wait for it to activate WiFi Mode again for good measure.

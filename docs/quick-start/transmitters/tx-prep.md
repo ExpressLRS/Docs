@@ -71,7 +71,7 @@ ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases)
         - Press and hold the two horizontal Trim switches then press the Power button. The Screen should Light up. Release the buttons.
         - Some Radios have a different procedure, like the BetaFPV Lite Radio 3 Pro. Consult the Manual for the steps to get it into this DFU/Bootloader mode.
     6. Select `Write Firmware`.
-    7. Navigate to the EdgeTx firmware file you just downloaded.
+    7. Navigate to the EdgeTX firmware file you just downloaded.
     8. Follow the screen prompts.
     9. Once Writing is complete, reboot the radio.
     10. Check the Radio's Version Page to verify you have the version you need.

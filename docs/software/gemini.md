@@ -13,7 +13,7 @@ In Gemini Mode, a TX module simultaneously transmits a packet in two frequencies
 
 ## Setup
 
-**Via Lua set your TX AND Rx Antenna Modes to Gemini.**
+**Via Lua set your TX AND RX Antenna Modes to Gemini.**
 
 Use [Model Config Matching](model-config-match.md) to set the correct antenna mode based on the active Model on the radio.
 e.g. use Model 5 for single antenna receivers, Model 6 for Gemini-capable receivers.
@@ -42,7 +42,7 @@ Flying at events with 6 to 8 up racers, plus who knows how many handsets left po
 
 ### Lovers of Telemetry
 
-A Gemini TX has the advantage of not only sending simultaneous packets, but also receiving simultaneous packets.  Or when used in single antenna mode (or switch mode) both antennas will listen for the same TLM packet, in the same way a diversity Rx listens for RC packets.  So your TLM link becomes stronger with fewer missed packets, even when not used in Gemini mode and with single antenna receivers.
+A Gemini TX has the advantage of not only sending simultaneous packets, but also receiving simultaneous packets.  Or when used in single antenna mode (or switch mode) both antennas will listen for the same TLM packet, in the same way a diversity RX listens for RC packets.  So your TLM link becomes stronger with fewer missed packets, even when not used in Gemini mode and with single antenna receivers.
 
 ### Airport and Mavlink users
 
@@ -70,6 +70,6 @@ The Gemini TX will function as designed, in Gemini Mode. The Receiver will only 
 
 As above, with the Receiver antennas only getting sync from one TX. We recommend setting the TX to non-Gemini Modes.
 
-## How does a Gemini Rx behave when paired with a non-Gemini TX?
+## How does a Gemini RX behave when paired with a non-Gemini TX?
 
-The Receiver will still listen on both Antennas, but only get sync on one. Both Rx will send out Telemetry, but only one of them will be used.
+The Receiver will still listen on both Antennas, but only get sync on one. Both RX will send out Telemetry, but only one of them will be used.

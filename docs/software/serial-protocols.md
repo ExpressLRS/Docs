@@ -41,7 +41,7 @@ A PWM receiver may also be configured to communicate via serial on two of its pi
 
 ### WebUI
 
-Start the WebUI on the receiver and go to the `Model` tab. From there you will be able to select `Serial TX` or `Serial Rx` on an output pin that supports serial communication.
+Start the WebUI on the receiver and go to the `Model` tab. From there you will be able to select `Serial TX` or `Serial RX` on an output pin that supports serial communication.
 
 <figure markdown>
 <img class="center-img" src="../../assets/images/receiver-serial.png" width="auto">
