@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: Lend your ExpressLRS models to your friends without having to reflash Binding Phrase everytime.
+description: Lend your ExpressLRS models to your friends without having to reflash Binding Phrase every time.
 ---
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
@@ -44,7 +44,7 @@ description: Lend your ExpressLRS models to your friends without having to refla
 
 ### On the borrowers handset
 * From the main ExpressLRS LUA screen select `[Bind]`
-* The receiver LED should turn solid on, and the handset should connect to the recevier
+* The receiver LED should turn solid on, and the handset should connect to the receiver
 
 <figure markdown>
 ![CONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)

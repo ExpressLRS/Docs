@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: Recevier serial protocol for PWM and regular serial receivers.
+description: Receiver serial protocol for PWM and regular serial receivers.
 ---
 
 <img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
@@ -88,7 +88,7 @@ Required OpenTX/EdgeTX mixer setup to satisfy the Microbeast expected channel or
 
 Here's a few things to be aware of when using this Receiver Mode:
 
-- The ELRS tx should be set to 100Hz Full, and Switch Mode to 8ch.
+- The ELRS TX should be set to 100Hz Full, and Switch Mode to 8ch.
 - Channels 1, 2, 4 are Pan, Tilt, Roll
 - Aux1/CH5 is unused but should be set as an arm switch and left in the unarmed position (Low).
 - Aux2/CH6 should be a 3 way switch. From the switch center position to high/low, Rec start/stop or photos can be captured.

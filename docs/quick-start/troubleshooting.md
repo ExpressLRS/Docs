@@ -10,7 +10,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="1">My RX and TX are bound, but FC is not responding to inputs, and I can only see 10 Telemetry sensors</span>
 
 ??? Note "My RX and TX are bound, but FC is not responding to inputs, and I can only see 10 Telemetry sensors"
-    Check whether you have wired the receiver correctly and that Rx and Tx wires aren't swapped.
+    Check whether you have wired the receiver correctly and that Rx and TX wires aren't swapped.
     
     Also, check that you have the correct SerialRX configuration. You might want to revisit the [FC Preparation](receivers/configuring-fc.md#serial-rx-setup) page for the Flight Controller setup.
     
@@ -19,7 +19,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="2">My RX and TX are bound, and I'm getting more than 10 Telemetry sensors on my Radio, but I'm not getting stick inputs</span>
 
 ??? Note "My RX and TX are bound, and I'm getting more than 10 Telemetry sensors on my Radio, but I'm not getting stick inputs"
-    This is due to a [model mismatch](../software/model-config-match.md) between the receiver and the tx module. The LED on the receiver will have 3 short blinks and then a 1s pause indicating the mismatch.
+    This is due to a [model mismatch](../software/model-config-match.md) between the receiver and the TX module. The LED on the receiver will have 3 short blinks and then a 1s pause indicating the mismatch.
     
     To "fix" this, you might want to turn On Model Matching. Please see [Model Matching](../software/model-config-match.md) for more notes.
     
@@ -52,9 +52,9 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
     * If, however, despite unsoldering the Tx and Rx wires, the LED is still solid, you probably have a soft-bricked receiver due to a failed WiFi flash as a result of not letting the receiver reboot normally. Follow the [unbricking procedure](../quick-start/unbricking.md) to recover the receiver.
 
-### <span class="custom-heading" data-id="5">My OSD is showing LQ 0:0 and RSSI dbm at -130 dbm, but I have stick inputs and more than 10 Telemetry sensors</span>
+### <span class="custom-heading" data-id="5">My OSD is showing LQ 0:0 and RSSI dBm at -130 dBm, but I have stick inputs and more than 10 Telemetry sensors</span>
 
-??? Note "My OSD is showing LQ 0:0 and RSSI dbm at -130 dbm, but I have stick inputs and more than 10 Telemetry sensors"
+??? Note "My OSD is showing LQ 0:0 and RSSI dBm at -130 dBm, but I have stick inputs and more than 10 Telemetry sensors"
     Check whether you have RSSI Channel set to either Aux11 or Aux12. If you do, set it to disabled.
 
     If it's still not fixed with that, check if you have RSSI ADC enabled. If so, set it to disabled.
@@ -195,7 +195,7 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="23">I updated via WiFi but now the receiver won't work and has SOLID LED</span>
 
 ??? Note "I updated via WiFi but now the receiver won't work and has SOLID LED"
-    This is a sign that the Wifi flashing didn't go through properly due to a premature power cycle. To fix this, you will have to bridge the boot pads (see [here](receivers/wiring-up.md)) and reflash using the Passthrough method (**Telemetry** option on Betaflight/iNav set to `OFF`. This is important!) or using an FTDI adapter.
+    This is a sign that the WiFi flashing didn't go through properly due to a premature power cycle. To fix this, you will have to bridge the boot pads (see [here](receivers/wiring-up.md)) and reflash using the Passthrough method (**Telemetry** option on Betaflight/iNav set to `OFF`. This is important!) or using an FTDI adapter.
 
     This video shows the steps albeit using a VSCode development environment but the ExpressLRS Configurator will work just fine. 
 

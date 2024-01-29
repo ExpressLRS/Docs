@@ -13,7 +13,7 @@ In Gemini Mode, a TX module simultaneously transmits a packet in two frequencies
 
 ## Setup
 
-**Via Lua set your Tx AND Rx Antenna Modes to Gemini.**
+**Via Lua set your TX AND Rx Antenna Modes to Gemini.**
 
 Use [Model Config Matching](model-config-match.md) to set the correct antenna mode based on the active Model on the radio.
 e.g. use Model 5 for single antenna receivers, Model 6 for Gemini-capable receivers.
@@ -26,7 +26,7 @@ e.g. use Model 5 for single antenna receivers, Model 6 for Gemini-capable receiv
 
 ## What about using Gemini with DVDA?
 
-Gemini doubles the redundancy of DVDA modes.  For example, D500 sends 2 repeat packets on 2 different frequencies. When using D500 with a Gemini Tx you will now have 4 packets sent across 4 different frequencies.
+Gemini doubles the redundancy of DVDA modes.  For example, D500 sends 2 repeat packets on 2 different frequencies. When using D500 with a Gemini TX you will now have 4 packets sent across 4 different frequencies.
 
 When using D250 which sends 4 repeat packets across 3 frequencies.  With Gemini you will now have 8 repeat packets across 6 different frequencies.
 
@@ -42,7 +42,7 @@ Flying at events with 6 to 8 up racers, plus who knows how many handsets left po
 
 ### Lovers of Telemetry
 
-A Gemini Tx has the advantage of not only sending simultaneous packets, but also receiving simultaneous packets.  Or when used in single antenna mode (or switch mode) both antennas will listen for the same TLM packet, in the same way a diversity Rx listens for RC packets.  So your TLM link becomes stronger with fewer missed packets, even when not used in Gemini mode and with single antenna receivers.
+A Gemini TX has the advantage of not only sending simultaneous packets, but also receiving simultaneous packets.  Or when used in single antenna mode (or switch mode) both antennas will listen for the same TLM packet, in the same way a diversity Rx listens for RC packets.  So your TLM link becomes stronger with fewer missed packets, even when not used in Gemini mode and with single antenna receivers.
 
 ### Airport and Mavlink users
 
@@ -62,14 +62,14 @@ No. The packet sensitivity remains the same for the RF Mode (or Packet Rate) use
 
 Yes, there is antenna switching.
 
-## What happens if I use a Gemini Tx, in Gemini Mode, with a single Antenna Receiver?
+## What happens if I use a Gemini TX, in Gemini Mode, with a single Antenna Receiver?
 
-The Gemini Tx will function as designed, in Gemini Mode. The Receiver will only get the signal from the TX it has sync'd with. The other Tx, will act as a noise generator. Therefore, you should set the Tx in either Switch or Single Antenna (Ant1/Ant2) Mode.
+The Gemini TX will function as designed, in Gemini Mode. The Receiver will only get the signal from the TX it has sync'd with. The other TX, will act as a noise generator. Therefore, you should set the TX in either Switch or Single Antenna (Ant1/Ant2) Mode.
 
-## What happens if I use a Gemini Tx, in Gemini Mode, with Gemini-incapable Diversity Receivers?
+## What happens if I use a Gemini TX, in Gemini Mode, with Gemini-incapable Diversity Receivers?
 
-As above, with the Receiver antennas only getting sync from one Tx. We recommend setting the TX to non-Gemini Modes.
+As above, with the Receiver antennas only getting sync from one TX. We recommend setting the TX to non-Gemini Modes.
 
-## How does a Gemini Rx behave when paired with a non-Gemini Tx?
+## How does a Gemini Rx behave when paired with a non-Gemini TX?
 
 The Receiver will still listen on both Antennas, but only get sync on one. Both Rx will send out Telemetry, but only one of them will be used.

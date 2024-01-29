@@ -95,16 +95,16 @@ USE_R9MM_R9MINI_SBUS
 ```
 AUTO_WIFI_ON_INTERVAL=30
 ```
-⚠️ Must be defined if you plan to update your RX over wifi without using a button on the RX ⚠️ This will automatically turn the wifi 📶 on for **any module** that has an `ESP8285` on it if no TX connection is established after N seconds from boot (the 30 is the time). This enables pushing firmware updates to the RX by connecting to its wifi network and visiting `http://10.0.0.1`.
+⚠️ Must be defined if you plan to update your RX over WiFi without using a button on the RX ⚠️ This will automatically turn the WiFi 📶 on for **any module** that has an `ESP8285` on it if no TX connection is established after N seconds from boot (the 30 is the time). This enables pushing firmware updates to the RX by connecting to its WiFi network and visiting `http://10.0.0.1`.
 
 ```
 HOME_WIFI_SSID
 HOME_WIFI_PASSWORD
 ```
 
-These options set Home Network Access for your Wifi-enabled hardware. With these sets, the devices will try connecting to your existing WiFi Network when you click on "(Wifi) Update" on the ExpressLRS Lua script (for some Tx Modules) or automatically after your set interval time. Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, from any device on the same network. The Tx Module Wifi update page can be reached using the address http://elrs_tx.local, while the receivers' update page can be reached via http://elrs_rx.local.
+These options set Home Network Access for your WiFi-enabled hardware. With these sets, the devices will try connecting to your existing WiFi Network when you click on "(WiFi) Update" on the ExpressLRS Lua script (for some TX Modules) or automatically after your set interval time. Once the devices connect to your Home WiFi, the Update page can be accessed anywhere, from any device on the same network. The TX Module WiFi update page can be reached using the address http://elrs_tx.local, while the receivers' update page can be reached via http://elrs_rx.local.
 
-Wifi mode will first try to connect to the network specified before falling back and creating a new wifi network. The Home Network can also be modified from the website.
+WiFi mode will first try to connect to the network specified before falling back and creating a new WiFi network. The Home Network can also be modified from the website.
 
 ## Other Options
 
@@ -134,7 +134,7 @@ Disables all TX buzzer beeps at any state
 ```
 USE_TX_BACKPACK
 ```
-Enables code for talking to a connected [ESP8266 backpack](https://github.com/ExpressLRS/Backpack) on the TX module, and associated Lua params. The device target should enable this automatically for devices that come with this built-in, but can be added to any device. The TX backpack allows wireless integration with VRx modules and planned telemetry mirroring over wifi.
+Enables code for talking to a connected [ESP8266 backpack](https://github.com/ExpressLRS/Backpack) on the TX module, and associated Lua params. The device target should enable this automatically for devices that come with this built-in, but can be added to any device. The TX backpack allows wireless integration with VRx modules and planned telemetry mirroring over WiFi.
 
 ## Debug Options
 

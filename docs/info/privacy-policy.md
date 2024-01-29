@@ -121,7 +121,7 @@ ExpressLRS uses the collected data for various purposes:
 
 0.7. to detect, prevent and address technical issues;
 
-0.8. to fulfil any other purpose for which you provide it;
+0.8. to fulfill any other purpose for which you provide it;
 
 0.9. to carry out our obligations and enforce our rights arising from any contracts entered into between you and us,
 including for billing and collection;
@@ -130,7 +130,7 @@ including for billing and collection;
 email-instructions, etc.;
 
 0.11. to provide you with news, special offers and general information about other goods, services and events which we
-offer that are similar to those that you have already purchased or enquired about unless you have opted not to receive
+offer that are similar to those that you have already purchased or inquired about unless you have opted not to receive
 such information;
 
 0.12. in any other way we may describe when you provide the information;

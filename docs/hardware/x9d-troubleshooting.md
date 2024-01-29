@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: If you're having issues with your Frsky X9D or QX7 while using ExpressLRS, check this page out!
+description: If you're having issues with your FrSky X9D or QX7 while using ExpressLRS, check this page out!
 ---
 
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
@@ -9,7 +9,7 @@ For quite some time we had the impression that the X9D(+) radio works well with 
 
 - ExpressLRS Lua script just shows `Loading...`
 - ExpressLRS Lua script shows unstable behavior, especially on the higher packet rates, showing values different from `0/[SELECTED PACKET RATE]`
-- Constant Telemety Lost/Telemetry Recovered Notification.
+- Constant Telemetry Lost/Telemetry Recovered Notification.
 
 ## Potential Problem
 

@@ -47,7 +47,7 @@ template: main.html
     4. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `Frsky 900 MHz`
+            - `FrSky 900 MHz`
 
         - Device:
             - `FrSky R9M 900MHz TX`
@@ -95,7 +95,7 @@ template: main.html
     </figure>
 
     !!! warning "Warning"
-        This method is an **irreversible** one. You will not be able to go back to Frsky firmware with this method. You have been warned!
+        This method is an **irreversible** one. You will not be able to go back to FrSky firmware with this method. You have been warned!
 
     1. Carefully disassemble your TX Module to get access to the mainboard.
 
@@ -130,7 +130,7 @@ template: main.html
     6. Select the Device Category and Device target matching your hardware.
 
         - Device Category: 
-            - `Frsky 900 MHz`
+            - `FrSky 900 MHz`
 
         - Device:
             - `FrSky R9M 900MHz TX`

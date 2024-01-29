@@ -102,7 +102,7 @@ Very far? This question is usually used in place of the actual question "Will I 
 
 ExpressLRS 2.4GHz can go over 40km at 250Hz 100mW on omnidirectional antennas with excellent LQI, or it can go 400m with less stellar LQI. By far the biggest factor in determining maximum range is direct line of sight. Blocking line of sight reduces RSSI dBm. A few trees or a building isn't going to keep you from flying due to ExpressLRS's excellent sensitivity even when line of sight isn't available, but range is reduced a bit for every physical object between you and the receiver. Piloting from an elevated position can eliminate some ground obstacles and provide a measurable boost in range.
 
-The second largest factor is interference. Interference is the clobbering of our packets by outside sources, such as wifi on 2.4GHz or other ISM transmissions on 868/915MHz, and is seen as a drop in LQI well before the sensitivity limit. Increasing TX power output is usually not the solution you'd expect, where each doubling in output power only might only add 10% to the usable range due to interference.
+The second largest factor is interference. Interference is the clobbering of our packets by outside sources, such as WiFi on 2.4GHz or other ISM transmissions on 868/915MHz, and is seen as a drop in LQI well before the sensitivity limit. Increasing TX power output is usually not the solution you'd expect, where each doubling in output power only might only add 10% to the usable range due to interference.
 
 ## #Team868/#Team915 or #Team2.4
 
@@ -110,7 +110,7 @@ Unfortunately, there is a misconception about the 2.4GHz range thanks to other r
 
 ## RF noise
 
-We have all heard the stories of racers powering up his TBS crossfire full module at 2W and causing people to fail-safe during a race. This happens because the 868/915mhz band has limited bandwidth. The solution for this is to use a low power mode during races, so you do not blast anyone out of the sky. 2.4ghz does not have this issue. Flite Test has a world record of having [179 RC airplanes](https://www.guinnessworldrecords.com/world-records/most-rc-model-aircraft-airborne-simultaneously#:~:text=The%20most%20RC%20model%20aircraft,USA%2C%20on%2016%20July%202016) in the sky using 2.4 GHz.
+We have all heard the stories of racers powering up his TBS crossfire full module at 2W and causing people to fail-safe during a race. This happens because the 868/915MHz band has limited bandwidth. The solution for this is to use a low power mode during races, so you do not blast anyone out of the sky. 2.4GHz does not have this issue. Flite Test has a world record of having [179 RC airplanes](https://www.guinnessworldrecords.com/world-records/most-rc-model-aircraft-airborne-simultaneously#:~:text=The%20most%20RC%20model%20aircraft,USA%2C%20on%2016%20July%202016) in the sky using 2.4 GHz.
 
 2.4GHz LoRa can also handle WiFi noise very well. [Studies](https://link.springer.com/article/10.1007/s11235-020-00658-w) have been conducted with the coexistence of WiFi and LoRa bands. 
 

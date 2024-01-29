@@ -7,7 +7,7 @@ description: Get your ExpressLRS Devices setup as you deemed fit! Customize your
 
 This page aims to explain only the key options in ExpressLRS Configurator you may need for your initial setup. For a full description of **all** the options available, see the [User Defines page](../software/user-defines.md).
 
-Some of these options are present on both the Tx and Rx Targets. It is important that these options match to both the TX module and receiver in order for them to bind. `team2400` and `team900` also share a few options and some options are unique to that frequency band. Shown below are common options available on `team2400` and `team900` TXes respectively.
+Some of these options are present on both the TX and Rx Targets. It is important that these options match to both the TX module and receiver in order for them to bind. `team2400` and `team900` also share a few options and some options are unique to that frequency band. Shown below are common options available on `team2400` and `team900` TXes respectively.
 
 <figure markdown>
 ![2400 TX Options](../assets/images/ConfigurationOptions2400tx.png)
@@ -41,7 +41,7 @@ Entering a binding phrase allows you to skip the binding step with your receiver
 HOME_WIFI_SSID
 HOME_WIFI_PASSWORD
 ```
-Set these to have the "Wifi Update" mode try to connect to an existing wifi network using these credentials. Configure them with the wifi settings for where you'll be flashing your firmware, to save the step of switching wifi networks on your computer or phone during the flashing process. If the device is unable to connect to this network, it will create its own network.
+Set these to have the "WiFi Update" mode try to connect to an existing WiFi network using these credentials. Configure them with the WiFi settings for where you'll be flashing your firmware, to save the step of switching WiFi networks on your computer or phone during the flashing process. If the device is unable to connect to this network, it will create its own network.
 
 ## Other Options
 

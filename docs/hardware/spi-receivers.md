@@ -109,7 +109,7 @@ As shown above, Betaflight Configurator 10.9.0 also supports entering the Bindin
 !!! note "Supported RF Modes"
     SPI receivers **DO NOT** support D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) and thus will not bind or sync with a TX module in any of these modes.
 
-## Acknowledgements
+## Acknowledgments
 
 The SPI ExpressLRS implementation would not have been possible without the work and huge efforts from the following developers:
 

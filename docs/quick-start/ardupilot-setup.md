@@ -14,7 +14,7 @@ In mission planner, you will need to go to the ```config tab -> parameter tree``
 SERIALx_PROTOCOL = 23 (RCIN)
 RSSI_TYPE = 3 (ReceiverProtocol)
 ```
-our packet rate is different than CRSF packet rate, and ardupilot will keep on reporting the missmatch, but recently they have an option to suppress the report. Currently Ardupilot provide a way to suppress this notification with the parameter below. (this will not cause any effect to RC link or telemetry Link.)
+our packet rate is different than CRSF packet rate, and Ardupilot will keep on reporting the mismatch, but recently they have an option to suppress the report. Currently Ardupilot provide a way to suppress this notification with the parameter below. (this will not cause any effect to RC link or telemetry Link.)
 ```
 RC_OPTIONS turn on Bit 9th which is  "Suppress CRSF mode/rate message for ELRS systems".
 ```
@@ -32,7 +32,7 @@ Ardupilot default flightmodes channel is channel 8, but ELRS 8 position channel 
 ```
 FLTMODE_CH=12
 ```
-if you are using WideSwitch mode (only available in elrs V2 and above), you can use any channel for your 8 flightmode selection (beside channel 15 which is LQ and channel 16 which is RSSI).
+if you are using Wide Switch mode (only available in ELRS V2 and above), you can use any channel for your 8 flightmode selection (beside channel 15 which is LQ and channel 16 which is RSSI).
 ## Ardupilot RSSI and Link Quality
 To get RSSI and LQ shown in OSD (in %) set:
 ```

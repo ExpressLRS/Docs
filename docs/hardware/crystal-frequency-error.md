@@ -15,7 +15,7 @@ Real-world TX and RX modules deviate from the reference frequency, depending on 
 <img width="927" alt="TX/RX frequency mismatch" src="https://user-images.githubusercontent.com/12195507/155923027-7eda810e-d874-432e-ac87-7833870f50f9.png">
 </figure>
 
-This issue may affect both 2.4g and 900M units. To compensate for this, 900Mhz modules do online frequency correction, which tunes the RX frequency automatically to the TX unit once connected. Even in this case, if the TX/RX frequency error is too large to make any connection,  the frequency correction won't help. 2.4g modules are more vulnerable to frequency error because they can't do frequency correction due to some technical issues, which has risks of a connection drop due to frequency drift from the change of unit temperature.
+This issue may affect both 2.4g and 900M units. To compensate for this, 900MHz modules do online frequency correction, which tunes the RX frequency automatically to the TX unit once connected. Even in this case, if the TX/RX frequency error is too large to make any connection,  the frequency correction won't help. 2.4g modules are more vulnerable to frequency error because they can't do frequency correction due to some technical issues, which has risks of a connection drop due to frequency drift from the change of unit temperature.
 
 ### Recommendation to ELRS hardware manufacturers
 
@@ -133,6 +133,6 @@ You can also follow the below video which helps to fix ELRS RX Frequency Error b
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gLLw2dC4Vt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-## Acknowledgement
+## Acknowledgment
 
 The Crystal Oscillator error documentation would not have been possible without the work and huge effort from the [@SunjunKim](https://github.com/SunjunKim)
