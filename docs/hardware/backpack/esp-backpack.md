@@ -24,7 +24,10 @@ You already have the majority of the hardware needed. Most of the ESP-based Expr
 
 An off-the-shelf VRX Backpack has also appeared from Happymodel: the [EP82](https://www.happymodel.cn/index.php/2021/11/10/ep82-vrx-backpack-module-for-control-rapidfire-vrx-with-elrs-tx-module/)
 
-See the tables below for the list of supported devices:
+See the tables below for a partial list of supported devices:
+
+!!! info "Backpack Requirement"
+    All new ExpressLRS TX releases after October 10th, 2023 require a TX backpack to be integrated into the hardware
 
 ### Supported TX-Backpack Targets
 
@@ -53,7 +56,6 @@ See the tables below for the list of supported devices:
 | Jumper Aion T-Pro Internal | ❌ Not compatible  |
 | Jumper Aion Nano | ❌ Not compatible  |
 | Vantac Lite | ❌ Not compatible  |
-| Jumper T-Pro V1 4-in-1 + external ELRS | ❌ Not compatible  |
 | ImmersionRC Ghost TX | ❌ Not compatible  |
 | QuadKopters 2.4 TX | ❌ Not compatible  |
 | SIYI FM30 | ❌ Not compatible  |
