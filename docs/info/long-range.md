@@ -31,6 +31,7 @@ Anyone can add an entry to the table, and entries should include the:
 | 40.6km | 2.4G | 50Hz | 25mW | Wing | No | Shawn U | [Link](https://youtu.be/TmSVSCLTUGI?si=nKfhwG8HgvqX104B) |
 | 19.61km | 2.4G | 50Hz | 25mW | Wing | Yes | Les Y | [Link](https://www.youtube.com/watch?v=VDqrNhLCXE8)|
 | 18.97Km| 2.4G | 150Hz | 50mW | Wing | yes | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
+| 17.1km | 2.4G | 50hz | 10mW | Wing | No | Denks | [Link](https://www.youtube.com/watch?v=VEkl7GaNszs) |
 | 12.1km | 2.4G | 50Hz | 25mW | Wing | No | Les Y | [Link](https://youtu.be/_RfU0aEost0)|
 | 10Km | 2.4G | 500Hz | 10mW | Quad | Yes | mrscythe | [Link](https://youtu.be/IpiPEZrCGtg) |
 | 10Km | 2.4G | 50Hz | 10mW |  Wing| No | Padcom | [Link](https://www.youtube.com/watch?v=8Xm_bNlywQA) |
