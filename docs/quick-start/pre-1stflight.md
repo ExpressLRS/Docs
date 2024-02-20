@@ -25,11 +25,11 @@ One important thing to keep in mind is that Aux1 should be used as your Arming s
 To get RSSI and Link Quality displayed in the OSD, set both **RSSI Channel** and **RSSI_ADC** to {==Disabled==}. Both settings can be found in the Receiver Tab.
 
 <figure markdown>
-![Conf Tab](../../assets/images/ConfigurationTab.png)
+![Conf Tab](../assets/images/ConfigurationTab.png)
 </figure>
 
 <figure markdown>
-![INAV Config](../../assets/images/FC-rxconfig-INAV.png)
+![INAV Config](../assets/images/FC-rxconfig-INAV.png)
 </figure>
 
 On the OSD Tab, use the **Link Quality** and **RSSI dBm value** elements (not "RSSI Value"). INAV has put this in the `CRSF RX Statistics` section.

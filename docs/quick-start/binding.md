@@ -83,7 +83,7 @@ The Receiver LED should also be blinking when powered up.
         - If there is no other Full UART, you can try wiring a Pull-up Resistor: Connect a Resistor (300 Ohm to 1k Ohm value; a lower value is more effective) between this UART's RX pad and either a 5v or 3.3v pad as shown below:        
 
         <figure markdown>
-        ![ExpressLRS Pull-up](../../assets/images/pull-up.png)
+        ![ExpressLRS Pull-up](../assets/images/pull-up.png)
         </figure>
 
     4. If you are using any of the Digital FPV systems like the DJI FPV Air Unit, Caddx Vista or DJI O3 Air Unit, and you wired or connected all six wires to your Flight Controller, you will need to remove the SBUS/DJI HDL wire.

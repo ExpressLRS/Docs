@@ -290,4 +290,4 @@ This section is currently only available for the RadioMaster Ranger module.
 [Lua Script]: ../assets/images/lua1.jpg
 [Lua Running]: ../assets/images/lua/config-bw.png
 [Lua WiFi]: ../assets/images/lua/wifi-bw.png
-[Lua WiFi RX]: ../../assets/images/lua/wifi-bw-rx.png
+[Lua WiFi RX]: ../assets/images/lua/wifi-bw-rx.png
