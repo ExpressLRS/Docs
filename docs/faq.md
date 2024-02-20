@@ -20,12 +20,12 @@ hide:
 ??? faq "Which OpenTX/EdgeTX version do I need and why should I update?"
     ExpressLRS requires [OpenTX 2.3.12](https://www.open-tx.org/downloads.html#Releases23-ref) or newer, as it depends on CRSFshot (a.k.a mixer sync) to work properly. However, as OpenTX is no longer being maintained, it is strongly recommended that you update to [EdgeTX](https://github.com/EdgeTX/edgetx) in order to take advantage of the latest performance improvements and bug fixes. 
 	
-	Click [here](/quick-start/transmitters/tx-prep.md) to read more about radio firmware requirements and setup.
+	Click [here](quick-start/transmitters/tx-prep.md) to read more about radio firmware requirements and setup.
 
 ## <span class="custom-heading" data-id="4">How do I flash/update my receiver/module?</span>
 
 ??? faq "How do I flash/update my receiver/module?"
-    See [Getting Started](/quick-start/getting-started.md) for a Quick Setup guide and detailed instructions on flashing, features, hardware, and troubleshooting.
+    See [Getting Started](quick-start/getting-started.md) for a Quick Setup guide and detailed instructions on flashing, features, hardware, and troubleshooting.
 
 ## <span class="custom-heading" data-id="5">Will x Receiver work with y TX Module from z Manufacturer?</span>
 
@@ -37,14 +37,14 @@ hide:
 ??? faq "What's the difference between the different 2.4 GHz receivers (PP, EP1/RP1, EP2/RP2, EP1 Dual, RP3, RP4TD, TCXO)?"
     Early ELRS receivers like the HappyModel PP used an STM32 MCU, while later designs EP1/EP2/etc use ESP MCUs. All offer firmware updates via UART or Betaflight Passthrough, but the ESP-based hardware also support firmware update and configuration over WiFi. The EP1/RP1 receivers use u.fl (external) antennas, while the EP2/RP2 receivers use on-board ceramic antennas. Receivers like the RP3 and R24D have two antennas for antenna diversity, while receivers like the EP1 Dual, RP4TD, and SuperD add a second parallel RF path to provide full receiver diversity. 
 	
-	See [here](https://www.expresslrs.org/software/gemini/#comparison-with-other-antenna-modes) for more about different antenna configurations. 
+	See [here](software/gemini/#comparison-with-other-antenna-modes) for more about different antenna configurations. 
 
 ## <span class="custom-heading" data-id="7">What is required to achieve a 1000 Hz update rate on 2.4 GHz?</span>
 
 ??? faq "What is required to achieve a 1000 Hz packet rate on 2.4 GHz?"
-    In order to achieve the fastest packet rate, your radio must be running a supported [firmware](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#radio-operating-system), set to a minimum [hardware baud rate](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#serial-baud-rate) of 921000, and be connected to a serial ELRS receiver (SPI receivers do not support the FLRC modes required). Also make absolutely sure [ADC filter](https://www.expresslrs.org/quick-start/transmitters/tx-prep/#adc-filter) is disabled on your radio, and that you have applied the appropriate RC Link [Preset](https://betaflight.com/docs/wiki/configurator/presets-tab) in Betaflight. 
+    In order to achieve the fastest packet rate, your radio must be running a supported [firmware](quick-start/transmitters/tx-prep/#radio-operating-system), set to a minimum [hardware baud rate](quick-start/transmitters/tx-prep/#serial-baud-rate) of 921000, and be connected to a serial ELRS receiver (SPI receivers do not support the FLRC modes required). Also make absolutely sure [ADC filter](quick-start/transmitters/tx-prep/#adc-filter) is disabled on your radio, and that you have applied the appropriate RC Link [Preset](https://betaflight.com/docs/wiki/configurator/presets-tab) in Betaflight. 
 
-    You can use the ELRS lua to check your current packet rate and ensure the radio mixer sync is working properly. See [Using the Lua Script](https://www.expresslrs.org/quick-start/transmitters/lua-howto.md) for more details.
+    You can use the ELRS lua to check your current packet rate and ensure the radio mixer sync is working properly. See [Using the Lua Script](quick-start/transmitters/lua-howto.md) for more details.
 
 ## <span class="custom-heading" data-id="8">How many channels does ELRS support?</span>
 
@@ -58,7 +58,7 @@ hide:
       * 16x full-resolution (10-bit, ext-limits, all half rate) with 1x 2-position channel, AUX1
       * 12x full-resolution (10-bit, ext-limits) with 1x 2-position channel, AUX1, channels AUX2-9 run at half rate.
         
-      See [Switch Modes](https://www.expresslrs.org/software/switch-config.md) for more details on switch modes and how they work.
+      See [Switch Modes](software/switch-config.md) for more details on switch modes and how they work.
 
 ## <span class="custom-heading" data-id="9">Is my binding phrase a secret?</span>
 
@@ -82,7 +82,7 @@ hide:
     | TRSS | Downlink - received signal strength (RSSI)           |           | RSSI dBm of telemetry packets received by TX. RX → TX |
     | TSNR | Downlink - signal-to-noise ratio                     |           | SNR reported by the TX for telemetry packets. RX → TX |
 
-    See the [Signal Health](https://www.expresslrs.org/info/signal-health/) page for more info on interpreting link stats. 
+    See the [Signal Health](info/signal-health/) page for more info on interpreting link stats. 
 
 If you have other questions or concerns, or maybe you need further help that is not covered by this Guide, head over to our Discord Channel or Facebook Group!
 
