@@ -1,15 +1,15 @@
 ---
 template: main.html
 description: Terms and Conditions
-hide:
-
-- navigation
-
+search:
+  exclude: true
 ---
 
 # Terms and Conditions
 
-Effective date: 2022-12-01
+![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
+
+Effective date: 2024-20-02
 
 ## 1. Introduction
 
