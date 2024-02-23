@@ -57,10 +57,10 @@ Observe the Receiver LED. It should have one of these behaviors:
 
 || LED Indication | Status |
 |---|---|---|
-|![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)| Slow blink 500ms on/off | Waiting for connection from transmitter |
-|![LEDSEQ_BINDING](https://cdn.discordapp.com/attachments/738450139693449258/921065812763218010/LEDSEQ_BINDING_10_10_10_100.gif)| Double blink then pause | Binding mode is active |
-|![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)| Fast blinking 25ms on/off | WiFi mode has started. Starts after 60s. |
-|![CONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)| Solid on | Bootloader mode is active |
+|![LEDSEQ_DISCONNECTED](../../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)| Slow blink 500ms on/off | Waiting for connection from transmitter |
+|![LEDSEQ_BINDING](../../assets/images/receiverLED/LEDSEQ_BINDING_10_10_10_100.gif)| Double blink then pause | Binding mode is active |
+|![LEDSEQ_WIFI_UPDATE](../../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)| Fast blinking 25ms on/off | WiFi mode has started. Starts after 60s. |
+|![CONNECTED](../../assets/images/receiverLED/LED_ON.gif)| Solid on | Bootloader mode is active |
 
 If the Receiver uses an RGB LED(e.g. Foxeer LNA, BetaFPV SuperD, Happymodel EP Dual), the following can be observed:
 

@@ -64,7 +64,7 @@ For traditional binding to work, a Binding Phrase must not be set, at least for 
 The Receiver LED should also be blinking when powered up.
 
 <figure markdown>
-![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+![LEDSEQ_DISCONNECTED](../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)
 </figure>
 
 ??? danger "Receiver LED doesn't Blink (click/tap to expand)"
@@ -103,7 +103,7 @@ The procedure is as follows:
 3. Make sure the LED is doing a quick double-blink, which indicates the receiver is in bind mode.
 
     <figure markdown>
-    ![LEDSEQ_BINDING](https://cdn.discordapp.com/attachments/738450139693449258/921065812763218010/LEDSEQ_BINDING_10_10_10_100.gif)
+    ![LEDSEQ_BINDING](../assets/images/receiverLED/LEDSEQ_BINDING_10_10_10_100.gif)
     </figure>
 
 4. Power up your transmitter/radio and use the ++"[BIND]"++ button on the ExpressLRS Lua script, which sends out a binding pulse. The Popup will briefly show up and then disappear.
@@ -115,7 +115,7 @@ The procedure is as follows:
 5. If the receiver LED turned into a solid light, it's bound!
 
     <figure markdown>
-    ![CONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)
+    ![CONNECTED](../assets/images/receiverLED/LED_ON.gif)
     </figure>
 
 ## Connection Check
@@ -154,7 +154,7 @@ Using the [ExpressLRS Lua Script](transmitters/lua-howto.md), look for a `C` in 
     This is also indicated by the Receiver LED as 3 fast blinks then a pause:
     
     <figure markdown>
-    ![LEDSEQ_MODEL_MISMATCH](https://cdn.discordapp.com/attachments/738450139693449258/921065813425934446/LEDSEQ_MODEL_MISMATCH_10_10_10_10_10_100.gif)
+    ![LEDSEQ_MODEL_MISMATCH](../assets/images/receiverLED/LEDSEQ_MODEL_MISMATCH_10_10_10_10_10_100.gif)
     </figure>
 
     If you've deliberately set up Model Matching following [this page](../software/model-config-match.md), make sure your settings are correct.

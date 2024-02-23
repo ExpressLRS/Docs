@@ -77,7 +77,7 @@ Follow the steps below very closely to recover your "bricked" Receiver.
 10. Plug in LiPo or twist the 5v Wires together to power up the receiver (see Step 1). The receiver LED should be Solid.
 
     <figure markdown>
-    ![BOOTLOADER](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)
+    ![BOOTLOADER](../assets/images/receiverLED/LED_ON.gif)
     </figure>
 
 11. Wait for the process to finish, hopefully with the Success Message. Otherwise, repeat the procedure above or try a different approach (like reflashing via FTDI/UART Adapter).
@@ -89,7 +89,7 @@ Follow the steps below very closely to recover your "bricked" Receiver.
 14. Repower up the receiver to verify it is back in its normal working state.
 
     <figure markdown>
-    ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+    ![LEDSEQ_DISCONNECTED](../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)
     </figure>
 
 ### Wall of Text? Here's a vid!

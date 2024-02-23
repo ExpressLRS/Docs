@@ -70,7 +70,7 @@ template: main.html
     9. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
-        ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+        ![LEDSEQ_DISCONNECTED](../../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)
         </figure> 
 
     10. Rewire your receiver to your Flight Controller.

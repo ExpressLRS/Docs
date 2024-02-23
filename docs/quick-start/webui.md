@@ -120,7 +120,7 @@ This section is currently only available for the RadioMaster Ranger module.
             2. Power-cycle your receiver (turn it Off then turn it back On). The Receiver LED should be blinking slowly as shown below. 
         
                 <figure markdown>
-                ![RX Waiting](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+                ![RX Waiting](../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)
                 </figure>
 
                 ??? warning "Receiver LED not Blinking! (click/tap to expand)"
@@ -129,7 +129,7 @@ This section is currently only available for the RadioMaster Ranger module.
             3. Wait for about 60 seconds or until the Receiver LED blinks rapidly indicating it is now in WiFi Mode.
 
                 <figure markdown>
-                ![RX WiFi](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                ![RX WiFi](../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
                 </figure>
 
 
@@ -137,7 +137,7 @@ This section is currently only available for the RadioMaster Ranger module.
             1. Make sure the Receiver and TX Module are in sync and bound. RSSI indicators on your Radio Home screen should be visible and the Receiver LED should be Solid as shown.
 
                 <figure markdown>
-                ![RX Bound](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)
+                ![RX Bound](../assets/images/receiverLED/LED_ON.gif)
                 </figure>
 
             2. Press the ++"SYS"++ Key on your Radio.
@@ -168,7 +168,7 @@ This section is currently only available for the RadioMaster Ranger module.
             7. The `WiFi Running` screen will briefly show up. Your Receiver is now in WiFi mode as indicated by the rapidly blinking LED.
 
                 <figure markdown>
-                ![RX WiFi](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                ![RX WiFi](../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
                 </figure>
 
                 !!! info "Note"
