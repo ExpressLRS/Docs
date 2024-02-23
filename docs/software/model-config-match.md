@@ -56,7 +56,7 @@ The implementation follows this set of rules for handling half connections / ful
 * For WiFi-enabled RX modules, use the WebUI to set the Model Match directly. "Model Match" must still be set to "On" in the Lua config.
 
 <figure markdown>
-![Model Match webui](https://cdn.discordapp.com/attachments/738450139693449258/887054111495831583/unknown.png)
+![Model Match webui](../assets/images/modelmatchwebui.png)
 </figure>
 
 ### Clearing Model Match number

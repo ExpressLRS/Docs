@@ -80,7 +80,7 @@ On the 900MHz hardware, a value of -20dBm or thereabouts is a good indication yo
 - Check if there aren't any missing components in your receivers, like the RF filter (can be found near the antenna or ufl). Also check if the SMD antenna is not broken or damaged and it's soldered in properly.
 
 <figure markdown>
-![missing filter](https://cdn.discordapp.com/attachments/899260365555249192/899263539951304714/WhatsApp_Image_2021-07-09_at_1.png)
+![missing filter](../assets/images/missingfilter.png)
 </figure>
 
 - Most DIY modules require moving the 0-ohm resistor on the E28 from the PCB antenna side towards the UFL side. A solder bridge will work just fine as well, but make sure it is on the correct pads.

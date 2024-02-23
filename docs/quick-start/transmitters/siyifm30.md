@@ -58,7 +58,7 @@ JR Module Pin | FR Mini Pin | Description
 | SPORT | TX2 | Use the TX2 pad on the receiver and remove the 4.7K pullup resistor. Without removing the resistor, the module will work okish as a transmitter, but firmware updates through OpenTX will fail with NoSync
 
 <figure markdown>
-![FR Mini RX as TX Wiring](https://cdn.discordapp.com/attachments/738450139693449258/864205774251229224/frmini-rx-as-tx-wiring.jpg)
+![FR Mini RX as TX Wiring](../../assets/images/frmini-rx-as-tx-wiring.jpg)
 </figure>
 
 ### Flashing via STLink
@@ -114,7 +114,7 @@ Updates are done through OpenTX's built-in firmware flashing tool.
     The only way I know of to disable the RDP is to use the STM32CubeProgrammer for Linux, or use a Windows VM / machine to use the ST-LINK.exe GUI / CLI to clear the RDP.
 
     <figure markdown>
-    ![STM32CubeProgrammerSteps](https://cdn.discordapp.com/attachments/798006228450017290/862145434311196682/unknown.png)
+    ![STM32CubeProgrammerSteps](../../assets/images/stm32cubesteps.png)
     </figure>
 
     * Click the "Connect" button to connect to the ST-LINK device. You'll probably get a popup error **Error: Data read failed**. That's normal. If it says it can't connect or no device is present, you'll have to figure that out first.
