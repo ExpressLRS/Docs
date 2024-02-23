@@ -121,7 +121,7 @@ Just to note, we've had some mismatching cases as follows:
 </figure>
 
 <figure markdown>
-![flywoo_caps](https://cdn.discordapp.com/attachments/798006228450017290/1008232318135193611/SimoneFrascarelli.jpg)
+![flywoo_caps](../assets/images/SimoneFrascarelli.jpg)
 <figcaption>Flywoo Caps</figcaption>
 </figure>
 
