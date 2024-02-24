@@ -85,7 +85,7 @@ Some of the following procedures will not go through, particularly the via Passt
     8. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
-        ![LEDSEQ_DISCONNECTED](../../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)
+        ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
         </figure> 
 
 === "via UART"
@@ -156,7 +156,7 @@ Some of the following procedures will not go through, particularly the via Passt
     11. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
-        ![LEDSEQ_DISCONNECTED](../../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)
+        ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
         </figure>
 
 === "via WiFi"
@@ -231,7 +231,7 @@ Some of the following procedures will not go through, particularly the via Passt
                     - The Auto WiFi On Interval setting controls how long the device will wait to initiate WiFi Mode when it's powered up and it's not getting valid CRSF packets.
 
                     <figure markdown>
-                    ![LEDSEQ_WIFI_UPDATE](../../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                     </figure>
 
             === "using the ExpressLRS Lua Script" 
@@ -261,7 +261,7 @@ Some of the following procedures will not go through, particularly the via Passt
                 6. The Receiver LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
                     <figure markdown>
-                    ![LEDSEQ_WIFI_UPDATE](../../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                     </figure>
 
             ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode! (click/tap to expand)"
@@ -308,7 +308,7 @@ Some of the following procedures will not go through, particularly the via Passt
         14. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
             <figure markdonw>
-            ![LEDSEQ_DISCONNECTED](../../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)
+            ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
             </figure>
 
     === "Manual Upload via Local WiFi"
@@ -375,7 +375,7 @@ Some of the following procedures will not go through, particularly the via Passt
                     - The Auto WiFi On Interval setting controls how long the device will wait to initiate WiFi Mode when it's powered up and it's not getting valid CRSF packets.
 
                     <figure markdown>
-                    ![LEDSEQ_WIFI_UPDATE](../../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                     </figure>
 
             === "using the ExpressLRS Lua Script" 
@@ -405,7 +405,7 @@ Some of the following procedures will not go through, particularly the via Passt
                 6. The Receiver LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
                     <figure markdown>
-                    ![LEDSEQ_WIFI_UPDATE](../../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                     </figure>
 
             ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode! (click/tap to expand)"
@@ -453,7 +453,7 @@ Some of the following procedures will not go through, particularly the via Passt
         13. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
             <figure markdonw>
-            ![LEDSEQ_DISCONNECTED](../../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)
+            ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
             </figure>
 
     === "Auto Upload"
@@ -481,7 +481,7 @@ Some of the following procedures will not go through, particularly the via Passt
                     - The Auto WiFi On Interval setting controls how long the device will wait to initiate WiFi Mode when it's powered up and it's not getting valid CRSF packets.
 
                     <figure markdown>
-                    ![LEDSEQ_WIFI_UPDATE](../../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                     </figure>
 
             === "using the ExpressLRS Lua Script" 
@@ -511,7 +511,7 @@ Some of the following procedures will not go through, particularly the via Passt
                 6. The Receiver LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
                     <figure markdown>
-                    ![LEDSEQ_WIFI_UPDATE](../../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                    ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                     </figure>
 
             ??? Warning "My Receiver has Solid LED and won't go into WiFi Mode! (click/tap to expand)"
@@ -559,7 +559,7 @@ Some of the following procedures will not go through, particularly the via Passt
         8. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
             <figure markdonw>
-            ![LEDSEQ_DISCONNECTED](../../assets/images/receiverLED/LEDSEQ_DISCONNECTED_50_50.gif)
+            ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
             </figure>
 
 [Lua Running]: ../../assets/images/lua/config-bw.png

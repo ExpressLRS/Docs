@@ -33,7 +33,7 @@ It is still recommended that you update your gear to the latest firmware version
                 - The Auto WiFi On Interval setting controls how long the device will wait to initiate WiFi Mode when it's powered up and it's not getting valid CRSF packets.
 
                 <figure markdown>
-                ![LEDSEQ_WIFI_UPDATE](../../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                 </figure>
 
         === "using the ExpressLRS Lua Script" 
@@ -63,7 +63,7 @@ It is still recommended that you update your gear to the latest firmware version
             6. The Receiver LED will turn into either a Rapid Blinking pattern or a Green Breathing LED pattern(for Receivers using an RGB LED) indicating it is now in WiFi Mode.
 
                 <figure markdown>
-                ![LEDSEQ_WIFI_UPDATE](../../assets/images/receiverLED/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                ![LEDSEQ_WIFI_UPDATE](https://cdn.discordapp.com/attachments/738450139693449258/921065813983760384/LEDSEQ_WIFI_UPDATE_2_3.gif)
                 </figure>
 
     2. Scan for the `ExpressLRS RX` Access Point. 
