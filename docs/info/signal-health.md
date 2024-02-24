@@ -49,9 +49,9 @@ In iNAV, the RSSI Value on the OSD is called RSSI (Signal Strength), and will al
 ## RF Mode Indexes (RFMD)
 OSDs report the packet rate using an index instead of the actual rate, either as a `RATE:LQ%` or with rate in the hundreds digit such as `799` where 7 is the RATE and 99 is the LQ%. Handsets display the rate using the RFMD telemetry item.
 
-![OSD RFMD](https://cdn.discordapp.com/attachments/738450139693449258/886313969638334484/unknown.png)
+![OSD RFMD](../assets/images/OSD_RFMD.png)
 
-| RFMD | Lua | Packet Rate | Sensitivity <br />Limit | TX duration <br />(us) | TX Interval <br/>(us) |
+| RFMD | Lua | Packet Rate | Sensitivity <br/>Limit | TX Duration <br/>(us) | TX Interval <br/>(us) |
 |:---:|:---:|:---:|---:|---:|---:|
 | 14 | D50 | 50Hz | -112dBm | 4640.0 | 5000 |
 | 13 | F1000 | 1000Hz | -104dBm | 388.8 | 1000 |

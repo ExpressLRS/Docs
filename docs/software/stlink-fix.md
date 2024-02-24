@@ -19,10 +19,10 @@ Swapping out PIO's STLink folder contents with the current STLink will allow usi
 - **Copy contents of "ST-Link Utility"**  
 `C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility`
 
-![Folder details](https://cdn.discordapp.com/attachments/738450139693449258/840702633383428096/stlink.jpg)
+![Folder details](../assets/images/stlink.jpg)
 
 - **Paste files from "st-link utility" folder into "stlink" folder in your user PIO location**  
 `C:\Users\username\ .platformio\packages\tool-stm32duino`
 
-![Destination Folder](https://cdn.discordapp.com/attachments/738450139693449258/840703335015383140/pio.jpg)
+![Destination Folder](../assets/images/pio.jpg)
 

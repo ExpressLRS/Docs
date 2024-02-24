@@ -39,7 +39,7 @@ description: Lend your ExpressLRS models to your friends without having to refla
 * The receiver LED should go into the bind flashing state
 
 <figure markdown>
-![LEDSEQ_BINDING](https://cdn.discordapp.com/attachments/738450139693449258/921065812763218010/LEDSEQ_BINDING_10_10_10_100.gif)
+![LEDSEQ_BINDING](../assets/images/LEDSEQ_BINDING_10_10_10_100.gif)
 </figure>
 
 ### On the borrowers handset
@@ -47,7 +47,7 @@ description: Lend your ExpressLRS models to your friends without having to refla
 * The receiver LED should turn solid on, and the handset should connect to the receiver
 
 <figure markdown>
-![CONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812507373568/LED_ON.gif)
+![CONNECTED](../assets/images/LED_ON.gif)
 </figure>
 
 ## Returning a "Loaned" Model

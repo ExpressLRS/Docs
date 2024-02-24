@@ -39,7 +39,7 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 * Enter `Git: Clone` 
 
 <figure markdown>
-<img class="center-img" src="https://cdn.discordapp.com/attachments/738450139693449258/771844893642457128/Screen_Shot_2020-10-30_at_2.15.56_PM.png" width=100%>
+<img class="center-img" src="../assets/images/gitclone.png" width=100%>
 </figure>
 
 * Click that! 👈 
@@ -50,11 +50,11 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 Before we can do any building, you need to select a release build of ELRS. For example, release [0.1.0-RC1](https://github.com/AlessandroAU/ExpressLRS/releases/tag/0.1.0-RC1). In Visual Studio Code select that tag. The location of the selector is shown below. 🖱️ 
 
 <figure markdown>
-<img class="center-img" src="https://media.discordapp.net/attachments/738450139693449258/796510597041881088/Screen_Shot_2021-01-06_at_2.48.38_PM.png?width=2330&height=1456" width=100%>
+<img class="center-img" src="../assets/images/src.png" width=100%>
 </figure>
 
 <figure markdown>
-<img class="center-img" src="https://cdn.discordapp.com/attachments/738450139693449258/796510905605029918/Screen_Shot_2021-01-06_at_2.49.52_PM.png" width=100%>
+<img class="center-img" src="../assets/images/selector.png" width=100%>
 </figure>
 
 Click the selector, and then type in the name of the tag, in this case `0.1.0-RC1`. 

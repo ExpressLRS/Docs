@@ -70,7 +70,7 @@ template: main.html
     10. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
-        ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+        ![LEDSEQ_DISCONNECTED](../../assets/images/LEDSEQ_DISCONNECTED_50_50.gif)
         </figure> 
 
     11. Rewire your receiver to your Flight Controller. Connect RX2 and TX2 (you will need to solder on the STM32 pins; see step 2 above) to a flight controller. Configure your flight controller per the [FC Configuration Guide].
@@ -135,7 +135,7 @@ template: main.html
     9. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
-        ![LEDSEQ_DISCONNECTED](https://cdn.discordapp.com/attachments/738450139693449258/921065812985520268/LEDSEQ_DISCONNECTED_50_50.gif)
+        ![LEDSEQ_DISCONNECTED](../../assets/images/LEDSEQ_DISCONNECTED_50_50.gif)
         </figure> 
 
 [Configurator Release]: ../../assets/images/ConfiguratorRelease.png
