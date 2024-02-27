@@ -86,13 +86,13 @@ Follow the steps below very closely to recover your "bricked" Receiver.
 
 13. Remove the boot pads bridging or connection to Ground, or, if your Receiver has a button, remove the alligator clip used to press the button.
 
-14. Repower up the receiver to verify it is back in its normal working state.
+14. Re-power up the receiver to verify it is back in its normal working state.
 
     <figure markdown>
     ![LEDSEQ_DISCONNECTED](../assets/images/LEDSEQ_DISCONNECTED_50_50.gif)
     </figure>
 
-### Wall of Text? Here's a vid!
+### Wall of Text? Here's a video!
 
 <figure markdown>
 <iframe width="640" height="390" src="https://www.youtube.com/embed/jYLwaWBkM_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -21,7 +21,7 @@ template: main.html
 * Connect wires to SWDIO, SWCLK, NRST, and GND to the header points shown in red above on the TX. Attach 5V to the VCC pad, not the 3.3V pad!
 * Connect the other side to a STLINK programmer
 * Flash using the `FM30_TX_via_STLINK` target
-* After the flashing procedure, it is safe to leave the STLINK device connected to test that the firmware is operational, but uplug the USB connection before inserting the module into your handset for testing.
+* After the flashing procedure, it is safe to leave the STLINK device connected to test that the firmware is operational, but unplug the USB connection before inserting the module into your handset for testing.
 * Be sure your handset has the External Module type set to CRSF. See the general Troubleshooting section for other ways to determine your module is flashed and ready for flying.
 
 ### Updating via DFU
@@ -53,9 +53,9 @@ JR Module Pin | FR Mini Pin | Description
 |--|--|--|
 | CPPM | None | |
 | Heartbeat | None | |
-| VMain | VIN | Use the VIN pin on the pinheader (middle pin), 3.3-3.4V. Do not connect directly to handset battery voltage-- this will burn out the 3.3V regulator even at 10mW output. Use either a 3.3V boost converter (to raise voltage from 1S provided by the handset) or 3.3V buck converter (to lower 2S or 3S handset voltage). The LDO has a very small dropout voltage, so there's not much benefit to bypassing this soldering directly to the VDD pad on the programming header. Expect over 250mA current draw in practice at 100mW. |
-| GND | GND | Use either the GND pin on the pinheader (outermost pin) or the GND pad on the programming header.
-| SPORT | TX2 | Use the TX2 pad on the receiver and remove the 4.7K pullup resistor. Without removing the resistor, the module will work okish as a transmitter, but firmware updates through OpenTX will fail with NoSync
+| VMain | VIN | Use the VIN pin on the pin header (middle pin), 3.3-3.4V. Do not connect directly to handset battery voltage-- this will burn out the 3.3V regulator even at 10mW output. Use either a 3.3V boost converter (to raise voltage from 1S provided by the handset) or 3.3V buck converter (to lower 2S or 3S handset voltage). The LDO has a very small dropout voltage, so there's not much benefit to bypassing this soldering directly to the VDD pad on the programming header. Expect over 250mA current draw in practice at 100mW. |
+| GND | GND | Use either the GND pin on the pin header (outermost pin) or the GND pad on the programming header.
+| SPORT | TX2 | Use the TX2 pad on the receiver and remove the 4.7K pull-up resistor. Without removing the resistor, the module will work okay-ish as a transmitter, but firmware updates through OpenTX will fail with NoSync
 
 <figure markdown>
 ![FR Mini RX as TX Wiring](../../assets/images/frmini-rx-as-tx-wiring.jpg)
@@ -80,8 +80,8 @@ The flashing procedure is similar to the FM30 TX module flashing listed above bu
 
 Updates are done through OpenTX's built-in firmware flashing tool.
 
-* Build the firmware using Configurator and selecting the `FM30_RX_MINI_AS_TX_via_UART` target. The build process will generate a `firmware`.elrs` file.
-* Copy this file to the handset `FIRMWARE/` directory on the sd card.
+* Build the firmware using Configurator and selecting the `FM30_RX_MINI_AS_TX_via_UART` target. The build process will generate a `firmware.elrs` file.
+* Copy this file to the handset `FIRMWARE/` directory on the SD card.
 * Flash the firmware to the module using OpenTX
 * Hold the MENU/SYS button on the handset to open the system menu
 * Press PAGE to navigate to the SD card browser

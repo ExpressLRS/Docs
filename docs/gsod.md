@@ -79,7 +79,7 @@ The ELRS development team includes a range of expertise, from software professio
 
 Organization Description:
 
-ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best, completely open source, high refresh radio control link, minimizing latency and maximising range. A vast range of hardware in both 900 MHz and 2.4 GHz frequencies is available.
+ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best, completely open source, high refresh radio control link, minimizing latency and maximizing range. A vast range of hardware in both 900 MHz and 2.4 GHz frequencies is available.
 
 FPV is a community built on top of open source projects such as [flight controller firmware Betaflight](https://github.com/betaflight) and [RC handset firmware EdgeTX](https://github.com/EdgeTX).  ELRS fills a void for an open source and high performance RC link with an active development team of about 20 volunteers.
 
@@ -107,7 +107,7 @@ $1,849.42 of the proposed $2000 hardware budget has been spent.
 
 $600 of the proposed $1000 volunteer stipend has been claimed.
 
-The project was able to stay within the initial budget.  Some ExpressLRS hardware manufacturers were even able to help with additional hardware and we thank (in alphabetical order) [BETAFPV](https://betafpv.com/), [Happymodel](https://www.happymodel.cn/), and [Radiomaster](https://www.radiomasterrc.com/) for their assistance in providing hundreds of dollars of free hardware to our technical writer.
+The project was able to stay within the initial budget.  Some ExpressLRS hardware manufacturers were even able to help with additional hardware and we thank (in alphabetical order) [BETAFPV](https://betafpv.com/), [Happymodel](https://www.happymodel.cn/), and [RadioMaster](https://www.radiomasterrc.com/) for their assistance in providing hundreds of dollars of free hardware to our technical writer.
 
 **Participants**
 

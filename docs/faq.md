@@ -18,7 +18,7 @@ hide:
 ## <span class="custom-heading" data-id="3">Which OpenTX/EdgeTX version do I need and why should I update?</span>
 
 ??? faq "Which OpenTX/EdgeTX version do I need and why should I update?"
-    ExpressLRS requires [OpenTX 2.3.12](https://www.open-tx.org/downloads.html#Releases23-ref) or newer, as it depends on CRSFshot (a.k.a mixer sync) to work properly. However, as OpenTX is no longer being maintained, it is strongly recommended that you update to [EdgeTX](https://github.com/EdgeTX/edgetx) in order to take advantage of the latest performance improvements and bug fixes. 
+    ExpressLRS requires [OpenTX 2.3.12](https://www.open-tx.org/downloads.html#Releases23-ref) or newer, as it depends on CRSFShot (a.k.a mixer sync) to work properly. However, as OpenTX is no longer being maintained, it is strongly recommended that you update to [EdgeTX](https://github.com/EdgeTX/edgetx) in order to take advantage of the latest performance improvements and bug fixes. 
 	
 	Click [here](quick-start/transmitters/tx-prep.md) to read more about radio firmware requirements and setup.
 

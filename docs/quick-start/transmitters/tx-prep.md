@@ -23,8 +23,8 @@ Insert or attach your External ExpressLRS Transmitter Module into your Radio mod
 
 Make sure you do have an Internal ExpressLRS Module on your shiny new radio. The following handsets come in both ELRS (ExpressLRS) or 4-in-1 variants; with some coming in with a third (CC2500). Only the ELRS variant works with ExpressLRS. The others will not work as they have a different Hardware incompatible with ExpressLRS.
 
-- RadioMaster TX16S MKII (ELRS, 4-in-1 CC2500) - ExpressLRS variant will have an ELRS sticker on the box.
-- RadioMaster TX12 MKII (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and an ELRS sticker in the JR module bay.
+- RadioMaster TX16S Mark II (ELRS, 4-in-1 CC2500) - ExpressLRS variant will have an ELRS sticker on the box.
+- RadioMaster TX12 Mark II (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and an ELRS sticker in the JR module bay.
 - RadioMaster Zorro (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box.
 - RadioMaster Boxer (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and an ELRS sticker in the JR module bay.
 - Jumper T-Lite V2 (ELRS, 4-in-1, CC2500) 

@@ -390,13 +390,13 @@ template: main.html
 ## Using the module on a DX9
 
 - Install the latest DX9 firmware with CRSF v2 support via Serial port.
-- Wire up Power (Vbat & GND) as per Crossfire install instructions.
+- Wire up Power (VBAT & GND) as per Crossfire install instructions.
 - Use Signal from DX9 to S.Port pin of the Thor TX module.
 - Optional: Connect an external power source via XT30.
 - Flash the TX module with `UART_INVERTED` **unchecked**.
 - Adjust your Packet Rate to 250Hz using the Screen & Joystick.
 
-### Acknowledgement
+### Acknowledgment
 
 This guide is contributed by discord user ChaserP.
 

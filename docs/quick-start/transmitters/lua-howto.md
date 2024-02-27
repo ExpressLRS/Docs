@@ -15,8 +15,8 @@ Download the [ELRS v3 Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/
 
 Access the script by navigating to your radio's System Menu.
 
-1. Press the ++`SYS`++ Key on your Radio.
-    - Older Radios or those with only one Menu Key will need to long-press the ++`context-menu`++ Key to access the System Menu.
+1. Press the ++"SYS"++ Key on your Radio.
+    - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
     - Consult your Radio User's Manual on how to access the System Menu.
 2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
         
@@ -30,7 +30,7 @@ Access the script by navigating to your radio's System Menu.
     ![Lua Script Colored](../../assets/images/lua2.jpg)
     </figure>
 
-3. Press ++`enter`++ to Load it.
+3. Press ++enter++ to Load it.
 
 ??? failure "Stuck at `Loading...` (click/tap to expand)"
     Go back to the [Radio Preparation Guide](tx-prep.md) and make sure the current model is configured for ExpressLRS use.
@@ -199,7 +199,7 @@ The Receiver ID of the active model is shown after the option value.
 ![Power Settings BW](../../assets/images/lua/power-bw.png)
 </figure>
 
-The `TX Power` folder is where you can change your TX Module's Transmission Power settings. Press ++`enter`++ once to access the settings and Press the ++`RTN`++ key to go back to the previous page.
+The `TX Power` folder is where you can change your TX Module's Transmission Power settings. Press ++enter++ once to access the settings and Press the ++"RTN"++ key to go back to the previous page.
 
 * `Max Power` sets the maximum power level your TX will transmit at. Selecting a power level higher or lower than your TX supports will revert to the closest supported level. The options are `10, 25, 50, 100, 250, 500, 1000 & 2000` mW. If Dynamic Power is set to `Off` this is the power level your TX always uses. 
 
