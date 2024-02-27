@@ -22,7 +22,7 @@ The Nuclear RX is designed to be as small as possible, using the same software t
 
 When you get your Nuclear RX, it will likely be on the latest release firmware. You'll probably have to update it to work with your TX. To update, follow the steps in the [WiFi updating](../../software/updating/wifi-updating.md) page. Alternatively, you can use [betaflight passthrough](../../software/updating/betaflight-passthrough.md) should work, but the boot jumper must be bridged while applying power to the RX.
 
-When building, use one of the `DIY_2400_RX_ESP8285_SX1280_via_X` targets. To use `via_wifi`, put your RX in binding mode, connect your computer to the RX's Wi-Fi, and hit upload.
+When building, use one of the `DIY_2400_RX_ESP8285_SX1280_via_X` targets. To use `via_wifi`, put your RX in binding mode, connect your computer to the RX's WiFi, and hit upload.
 
 | LED | Status |
 | --- | ------ |

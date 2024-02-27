@@ -7,7 +7,7 @@ description: How to setup, flash, and update your HDZero Goggles ExpressLRS Back
 
 ## Flashing the HDZero Goggles Backpack:
 
-After building the VRx firmware, copy the following 4 files into a folder named `ELRS` on the root of the SD card:
+After building the VRX firmware, copy the following 4 files into a folder named `ELRS` on the root of the SD card:
 - firmware.bin
 - partitions.bin
 - bootloader.bin
@@ -33,7 +33,7 @@ When the upload has completed, the page will display the version (or branch) of 
 
 ## Starting Backpack WiFi
 
-To start the WiFi endpoint on the backpack, navigate to the `Connections` page of the goggles UI and select the `Start Backpack WiFi` option. If you have configured your backpack with your home WiFi credentials, it will attempt to connect to that and will fallback to creating an access point if it cannot connect, with the name `ExpressLRS VRx Backpack` and password `expresslrs`. The web UI will be available as `http://elrs_vrx` or `http://elrs_vrx.local`.
+To start the WiFi endpoint on the backpack, navigate to the `Connections` page of the goggles UI and select the `Start Backpack WiFi` option. If you have configured your backpack with your home WiFi credentials, it will attempt to connect to that and will fallback to creating an access point if it cannot connect, with the name `ExpressLRS VRX Backpack` and password `expresslrs`. The web UI will be available as `http://elrs_vrx` or `http://elrs_vrx.local`.
 
 ## Binding to Your Transmitter
 

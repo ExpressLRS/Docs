@@ -51,8 +51,8 @@ See the tables below for a partial list of supported devices:
 | BETAFPV 2.4 Micro TX 1W | ✔️ Fully supported  |
 | BETAFPV 2.4 Micro TX 500mW | ❌ Not compatible  |
 | BETAFPV 900 Micro TX | ❌ Not compatible  |
-| Radiomaster Zorro  | ✔️ Fully supported |
-| Radiomaster Pocket  | ✔️ Fully supported |
+| RadioMaster Zorro  | ✔️ Fully supported |
+| RadioMaster Pocket  | ✔️ Fully supported |
 | Jumper Aion T-Pro Internal | ❌ Not compatible  |
 | Jumper Aion Nano | ❌ Not compatible  |
 | Vantac Lite | ❌ Not compatible  |

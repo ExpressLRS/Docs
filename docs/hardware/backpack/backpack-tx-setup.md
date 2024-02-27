@@ -16,7 +16,7 @@ You need to activate the `Backpack Flashing` jumper or DIP switch (middle pair).
 
 For the NamimnoRC Flash and Voyager TX Modules without an OLED screen (Gen 1 STM-based), make sure you're able to access the Backpack Web Update page (see [Flashing Guide](../../quick-start/transmitters/flash2400.md)) via WiFi.
 
-NamimnoRC OLED-equipped TX Modules and AxisFlying Thor modules should come preflashed with Backpack firmware.
+NamimnoRC OLED-equipped TX Modules and Axisflying Thor modules should come preflashed with Backpack firmware.
 
 ## Backpack Firmware Flashing
 
@@ -72,7 +72,7 @@ These devices use the base `HappyModel TX Backpack` as a target.
 ### Flashing via WiFi (ESP-based TX Modules)
 
 !!! info "Note"
-    The following section applies to more recently released TX modules like the NamimnoRC OLED-equipped Modules. If you have the older Happymodel modules and have updated their backpack firmwares to at least 0.1.0, then this can be used for future updates.
+    The following section applies to more recently released TX modules like the NamimnoRC OLED-equipped Modules. If you have the older Happymodel modules and have updated their backpack firmware to at least 0.1.0, then this can be used for future updates.
 
 Using the ExpressLRS v2.0 Lua script, navigate to `WiFi Connectivity` and select `Enable Backpack WiFi`. The Backpack WiFi Access Point will immediately activate. Connect to the `ExpressLRS TX Backpack` AP (password is `expresslrs`). Navigate your browser to http://10.0.0.1/.
 
