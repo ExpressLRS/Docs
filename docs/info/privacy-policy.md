@@ -340,7 +340,7 @@ We have no control over and assume no responsibility for the content, privacy po
 sites or services.
 
 For example, the outlined privacy policy has been made using PolicyMaker.io, a free tool that helps create high-quality
-legal documents. PolicyMaker’s privacy policy generator is an easy-to-use tool for creating a privacy policy for blog,
+legal documents. The PolicyMaker privacy policy generator is an easy-to-use tool for creating a privacy policy for blog,
 website, e-commerce store or mobile app.
 
 ## 18. Children’s Privacy
