@@ -9,7 +9,7 @@ Review and Expand ExpressLRS User Documentation - [expresslrs.org](https://www.e
 
 ## About the organisation
 
-ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best completely open source, high refresh radio control link, minimising latency while maximising range. A vast range of hardware in both 900 MHz and 2.4 GHz frequencies is available.
+ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best completely open source, high refresh radio control link, minimizing latency while maximising range. A vast range of hardware in both 900 MHz and 2.4 GHz frequencies is available.
 
 FPV is a community built on top of open source projects such as [flight controller firmware Betaflight](https://github.com/betaflight) and [RC handset firmware EdgeTX](https://github.com/EdgeTX).  ELRS fills a void for an open source and high performance RC link with an active development team of about 20 volunteers.
 
@@ -46,7 +46,7 @@ The ELRS project runs a [Facebook group](https://www.facebook.com/groups/6364417
 
 The project would be a success if we could provide a link to users for 90% of new user questions.
 
-ELRS Developers also volunteer a lot of time communicating with commercial manufacturers.  For a majority of the manufacturers English is not their native language and current ELRS documentation may be confusing.  A long term goal of the project is to minimise design errors in commercial hardware releases.
+ELRS Developers also volunteer a lot of time communicating with commercial manufacturers.  For a majority of the manufacturers English is not their native language and current ELRS documentation may be confusing.  A long term goal of the project is to minimize design errors in commercial hardware releases.
 
 ## Timeline
 
@@ -79,7 +79,7 @@ The ELRS development team includes a range of expertise, from software professio
 
 Organization Description:
 
-ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best, completely open source, high refresh radio control link, minimising latency and maximising range. A vast range of hardware in both 900 MHz and 2.4 GHz frequencies is available.
+ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best, completely open source, high refresh radio control link, minimizing latency and maximising range. A vast range of hardware in both 900 MHz and 2.4 GHz frequencies is available.
 
 FPV is a community built on top of open source projects such as [flight controller firmware Betaflight](https://github.com/betaflight) and [RC handset firmware EdgeTX](https://github.com/EdgeTX).  ELRS fills a void for an open source and high performance RC link with an active development team of about 20 volunteers.
 
@@ -136,7 +136,7 @@ Therefore, we can say that we observed significant growth as a project & organiz
 
 **Analysis**
 
-A number of challenges were met during this project.  With the final hurdle being the import of FPV hardware to the Technical Writer.  In the end the hardware required for learning FPV, building, and flying were confiscated by the country's Ministry of Defence.  This massively limited what could/can be completed during the project.
+A number of challenges were met during this project.  With the final hurdle being the import of FPV hardware to the Technical Writer.  In the end the hardware required for learning FPV, building, and flying were confiscated by the country's Ministry of Defense.  This massively limited what could/can be completed during the project.
 
 In good faith, the ExpressLRS devs can not call this project a success, as without hardware to write about the documentation that most affects new users did not see many significant improvements.
 
@@ -147,5 +147,5 @@ A number of [PRs were merged](https://github.com/ExpressLRS/Docs/pulls?q=is%3Apr
   - Is FPV legal in their country?
   - Is the import of FPV/RC hardware legal in their country?
 
-Hot tip for other organisations participating in GSoD and dealing with hardware (especially within the RC & FPV communities).  Potentially look to hire someone in a country, or in close proximity to one of the participating developers or volunteers.  Local expertise to help with delivery and hand up assistance will be invaluable, as well as an existing understanding of complex regulations surrounding the project.
+Hot tip for other organizations participating in GSoD and dealing with hardware (especially within the RC & FPV communities).  Potentially look to hire someone in a country, or in close proximity to one of the participating developers or volunteers.  Local expertise to help with delivery and hand up assistance will be invaluable, as well as an existing understanding of complex regulations surrounding the project.
 
