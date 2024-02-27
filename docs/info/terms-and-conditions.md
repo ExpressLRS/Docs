@@ -187,7 +187,7 @@ third party web sites or services. We do not warrant the offerings of any of the
 websites.
 
 For example, the outlined Terms of Use have been created using PolicyMaker.io, a free web application for generating
-high-quality legal documents. PolicyMaker’s Terms and Conditions generator is an easy-to-use free tool for creating an
+high-quality legal documents. The PolicyMaker Terms and Conditions generator is an easy-to-use free tool for creating an
 excellent standard Terms of Service template for a website, blog, e-commerce store or app.
 
 YOU ACKNOWLEDGE AND AGREE THAT COMPANY SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR
