@@ -28,11 +28,11 @@ RSSI_TYPE = 3 (ReceiverProtocol)
 ```
 
 ## Ardupilot Flightmodes
-Ardupilot default flightmodes channel is channel 8, but ELRS 8 position channel is on channel 12 (in hybrid switchMode). you will need to set your handset to use channel 12 as flightmodes and set Ardupilot parameter:
+Ardupilot default flight modes channel is channel 8, but ELRS 8 position channel is on channel 12 (in hybrid switch mode). you will need to set your handset to use channel 12 as flight modes and set Ardupilot parameter:
 ```
 FLTMODE_CH=12
 ```
-if you are using Wide Switch mode (only available in ELRS V2 and above), you can use any channel for your 8 flightmode selection (beside channel 15 which is LQ and channel 16 which is RSSI).
+if you are using Wide Switch mode (only available in ELRS V2 and above), you can use any channel for your 8 flight mode selection (beside channel 15 which is LQ and channel 16 which is RSSI).
 ## Ardupilot RSSI and Link Quality
 To get RSSI and LQ shown in OSD (in %) set:
 ```

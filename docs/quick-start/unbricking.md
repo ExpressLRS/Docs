@@ -55,7 +55,7 @@ Follow the steps below very closely to recover your "bricked" Receiver.
     !!! info "Cura Slicer"
         We found Cura Slicer and possibly others like it would keep a COM port open or busy preventing successful flashing/recovery via Passthrough.
 
-6. Unplug-replug the USB cable. This will ensure the Flight Controller has a fresh connection to the computer and that the COM port is not busy or in use.
+6. Unplug and replug the USB cable. This will ensure the Flight Controller has a fresh connection to the computer and that the COM port is not busy or in use.
 
 7. On the ExpressLRS Configurator, select the Firmware Version you're trying to recover. Select your Device Category and Device Target as well, along with your usual Firmware Options.
 

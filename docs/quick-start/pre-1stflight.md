@@ -44,7 +44,7 @@ Likewise, if you want to change the LQ Alarm level, you can use the CLI command 
 
 If you're using DJI Goggles V1 or V2 (unrooted/unmodded), you're required to use "RSSI Value" as the OSD element. Therefore you have to decide between LQ or RSSI, by selecting either AUX11 (LQ) or AUX12 (RSSI) as RSSI Channel on the Receiver tab (see images above).
 
-For digital FPV systems with "Canvas Mode" or full native OSD support via MSP Displayport (Walksnail Avatar, HDZero, DJI O3), you can treat the config as any analog FPV setup. Therefore, you do NOT have to set RSSI Channel (leave it at disabled). 
+For digital FPV systems with "Canvas Mode" or full native OSD support via MSP DisplayPort (Walksnail Avatar, HDZero, DJI O3), you can treat the config as any analog FPV setup. Therefore, you do NOT have to set RSSI Channel (leave it at disabled). 
 
 More information about signal metrics can be found in this great [article on signal health](../info/signal-health.md).
 
@@ -77,7 +77,7 @@ On the 900MHz hardware, a value of -20dBm or thereabouts is a good indication yo
 <figcaption>Super8 Antenna's common points of failure</figcaption>
 </figure>
 
-- Check if there aren't any missing components in your receivers, like the RF filter (can be found near the antenna or ufl). Also check if the SMD antenna is not broken or damaged and it's soldered in properly.
+- Check if there aren't any missing components in your receivers, like the RF filter (can be found near the antenna or UFL). Also check if the SMD antenna is not broken or damaged and it's soldered in properly.
 
 <figure markdown>
 ![missing filter](../assets/images/missingfilter.png)
@@ -132,13 +132,13 @@ It should look like this (and if it does not there is something wrong with your 
 ![Link data update speed](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/link.gif)
 </figure>
 
-The remaining values are updated at a different rate (depending on refresh rate and tlm ratio). So if you use 50 Hz and 1:64 it will happen slowly, and the update takes multiple seconds for each sensor:
+The remaining values are updated at a different rate (depending on refresh rate and telemetry ratio). So if you use 50 Hz and 1:64 it will happen slowly, and the update takes multiple seconds for each sensor:
 
 <figure markdown>
 ![Slow update rate](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/slow.gif)
 </figure>
 
-If you use 200Hz and 1:2 tlm ratio the stars will not even blink because the update happens so fast:
+If you use 200Hz and 1:2 Tlm ratio the stars will not even blink because the update happens so fast:
 
 <figure markdown>
 ![Fast update rate](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/fast.gif)
@@ -149,7 +149,7 @@ If you use 200Hz and 1:2 tlm ratio the stars will not even blink because the upd
 To configure Betaflight from your transmitter it's possible to use the Betaflight lua scripts. 
 This requires the telemetry feature enabled for the RX+TX. If the telemetry page of OpenTX does not show regular updates for all sensors the LUA script will also not work.
 
-To get a responsive UI configure ExpressLRS for fast data transfer so make sure to use something like `200Hz/500Hz` with `1:2` tlm and a serial baud rate of `400000`. Currently, MSP is limited to `50Hz` on `115200` Baud and does not work with a `500`` Hz` refresh rate. The initial VTX tables download does take some time - but is cached after that. 
+To get a responsive UI configure ExpressLRS for fast data transfer so make sure to use something like `200Hz/500Hz` with `1:2` Tlm and a serial baud rate of `400000`. Currently, MSP is limited to `50Hz` on `115200` Baud and does not work with a `500`` Hz` refresh rate. The initial VTX tables download does take some time - but is cached after that. 
 
 If you get a "retrying" message while saving changes it means that the Lua script did not receive a response fast enough. But the change usually still goes through so try reloading the page to check if the change was saved. With the recommended settings this does not happen but with slower settings, it could happen.
 

@@ -25,7 +25,7 @@ There are more `ESP8285` based RXes in the market due to massive shortage of `ST
 </figure>
 
 !!! Note
-    New versions of the receiver also have the PCB Wifi Antenna, and doesn't have the Rainsun SMD Antenna mentioned above. These will use the same ESP-based Target, not the STM-based target.
+    New versions of the receiver also have the PCB Wifi Antenna, and doesn't have the RainSun SMD Antenna mentioned above. These will use the same ESP-based Target, not the STM-based target.
 
 ## Wiring up your receiver
 
