@@ -7,9 +7,9 @@ hide:
 
 Review and Expand ExpressLRS User Documentation - [expresslrs.org](https://www.expresslrs.org)
 
-## About the organisation
+## About the organization
 
-ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best completely open source, high refresh radio control link, minimizing latency while maximising range. A vast range of hardware in both 900 MHz and 2.4 GHz frequencies is available.
+ExpressLRS (ELRS) is an open source project focusing on developing a radio control (RC) link. The link is primarily designed for first-person view (FPV) crafts (e.g Multicopters, Planes). ELRS aims to provide the best completely open source, high refresh radio control link, minimizing latency while maximizing range. A vast range of hardware in both 900 MHz and 2.4 GHz frequencies is available.
 
 FPV is a community built on top of open source projects such as [flight controller firmware Betaflight](https://github.com/betaflight) and [RC handset firmware EdgeTX](https://github.com/EdgeTX).  ELRS fills a void for an open source and high performance RC link with an active development team of about 20 volunteers.
 
@@ -129,7 +129,7 @@ Our initial timeline has been heavily delayed through the delivery of hardware t
 
 **Metrics**
 
-A key metric for the success of the project was to address common user issues in the documentation. Another key metric is the project's userbase & growth: at the time of the proposal the Facebook group had 8.4k and Discord 8.1k users.  These groups have now grown to 12.4k and 13k respectively!
+A key metric for the success of the project was to address common user issues in the documentation. Another key metric is the project's user base & growth: at the time of the proposal the Facebook group had 8.4k and Discord 8.1k users.  These groups have now grown to 12.4k and 13k respectively!
 
 Therefore, we can say that we observed significant growth as a project & organization within the months of Google Season of Docs, but have no strong metrics correlating to use of documentation, as compared to the beginning of the project.
 

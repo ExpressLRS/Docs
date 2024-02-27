@@ -7,7 +7,7 @@ description: Here is a simple ExpressLRS Lua Script guide explaining the differe
 
 ## Installing the Lua Script
 
-Download the [ELRSv3 Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (you can simply right-click, save-as) into your radio's SD Card under the `Scripts/Tools` folder.
+Download the [ELRS v3 Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (you can simply right-click, save-as) into your radio's SD Card under the `Scripts/Tools` folder.
 
 <figure markdown>
 ![Lua Folder](../../assets/images/LuaFolder.jpg)
@@ -15,8 +15,8 @@ Download the [ELRSv3 Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/3
 
 Access the script by navigating to your radio's System Menu.
 
-1. Press the ++"SYS"++ Key on your Radio.
-    - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
+1. Press the ++`SYS`++ Key on your Radio.
+    - Older Radios or those with only one Menu Key will need to long-press the ++`context-menu`++ Key to access the System Menu.
     - Consult your Radio User's Manual on how to access the System Menu.
 2. You are now in the Tools Menu where Lua Scripts can be found. Scroll down and select `ExpressLRS` Lua Script.
         
@@ -30,7 +30,7 @@ Access the script by navigating to your radio's System Menu.
     ![Lua Script Colored](../../assets/images/lua2.jpg)
     </figure>
 
-3. Press ++enter++ to Load it.
+3. Press ++`enter`++ to Load it.
 
 ??? failure "Stuck at `Loading...` (click/tap to expand)"
     Go back to the [Radio Preparation Guide](tx-prep.md) and make sure the current model is configured for ExpressLRS use.
@@ -199,7 +199,7 @@ The Receiver ID of the active model is shown after the option value.
 ![Power Settings BW](../../assets/images/lua/power-bw.png)
 </figure>
 
-The `TX Power` folder is where you can change your TX Module's Transmission Power settings. Press ++enter++ once to access the settings and Press ++"RTN"++ key to go back to the previous page.
+The `TX Power` folder is where you can change your TX Module's Transmission Power settings. Press ++`enter`++ once to access the settings and Press the ++`RTN`++ key to go back to the previous page.
 
 * `Max Power` sets the maximum power level your TX will transmit at. Selecting a power level higher or lower than your TX supports will revert to the closest supported level. The options are `10, 25, 50, 100, 250, 500, 1000 & 2000` mW. If Dynamic Power is set to `Off` this is the power level your TX always uses. 
 
@@ -226,9 +226,9 @@ VTX Administrator allows you to change your VTX settings directly from your radi
 
 * `Channel` sets the VTX channel, the options are `1, 2, 3, 4, 5, 6, 7 & 8` which are the standard channels in the above bands.
 
-* `Pwr Lvl` sets the VTX power by index, the options are `-, 1, 2, 3, 4, 5, 6, 7, & 8` which are the power levels that your VTX can do. Refer to your VTX table settings on the flight controller for the exact power levels. For example a VTX may have 1 = 25mW, 2 = 100mwW, 3 = 200mW, 4 = 500mW.
+* `Pwr Lvl` sets the VTX power by index, the options are `-, 1, 2, 3, 4, 5, 6, 7, & 8` which are the power levels that your VTX can do. Refer to your VTX table settings on the flight controller for the exact power levels. For example a VTX may have 1 = 25mW, 2 = 100mW, 3 = 200mW, 4 = 500mW.
 
-* `Pitmode` the options are `On & Off` which allow you to quickly switch into or out of pitmode
+* `Pitmode` the options are `On & Off` which allow you to quickly switch into or out of pit mode
 
 * Finally pressing the `[Send VTX]` button sends the configured settings to the receiver and on to the VTX. These settings are also sent every time a connection is established.
 
@@ -248,9 +248,9 @@ This section contains all the WiFi-related functions.
 
 * `Enable RX WiFi` will put the bound and connected receiver into WiFi mode to facilitate updating via WiFi (if the receiver has WiFi capabilities).
 
-* `Enable Backpack WiFi` will put the TX Backpack into WiFi mode (available only to TX modules with backpacks connected and updated to the new [Backpack](https://github.com/ExpressLRS/Backpack) firmwares).
+* `Enable Backpack WiFi` will put the TX Backpack into WiFi mode (available only to TX modules with backpacks connected and updated to the new [Backpack](https://github.com/ExpressLRS/Backpack) firmware).
 
-* `Enable VRx WiFi` will put the VRx [Backpack](https://github.com/ExpressLRS/Backpack) that is bound and connected to the onboard TX Backpack into WiFi mode to facilitate updating via WiFi.
+* `Enable VRX WiFi` will put the VRX [Backpack](https://github.com/ExpressLRS/Backpack) that is bound and connected to the onboard TX Backpack into WiFi mode to facilitate updating via WiFi.
 
 ### Backpack Options
 
@@ -334,7 +334,7 @@ The Other Devices folder, if present, allows changing the configuration of other
 The `Protocol` setting controls the output of the connected receiver. The following options are available:
 
 * `CRSF` - The regular CRSF Protocol Output. Recommended for most application.
-* `Inverted CRSF` - The CRSF Protocol inverted for use in Flight Controllers that doesn't have any other uarts available and the only option is to connect the receiver TX pin into an SBUS pad (Inverted RX). This is the old `Invert TX Pin` option.
+* `Inverted CRSF` - The CRSF Protocol inverted for use in Flight Controllers that doesn't have any other UARTs available and the only option is to connect the receiver TX pin into an SBUS pad (Inverted RX). This is the old `Invert TX Pin` option.
 * `SBUS` - Let the receiver output SBUS signal for use with devices that doesn't support CRSF protocol, like Stabilizers, Heli Controllers etc.
 * `Inverted SBUS` - Like the above, but inverted.
 * `SUMD` - Graupner/HoTT
