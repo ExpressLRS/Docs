@@ -166,6 +166,6 @@ All of these 10-bit or 1024 positions are mapped to PWM 885us to 2115us (1 bit =
 ### <span class="custom-heading" data-id="4">Every time I change switch mode in Lua, it changes back! Is my transmitter broken?</span>
 
 ??? Note "Every time I change switch mode in Lua, it changes back! Is my transmitter broken?"
-    If the Lua loads then you know its communicating with your transmitter. However, the switch mode can only be changed when a receiver is not connected and makes it appear as if the changes are not saving. This is done to ensure consistency between the RX's and TX's interpretation of the switch data being actively transmitted. This is a safeguard. Power down your receiver, wait for the "Telemetry Lost" callout, and the switch mode change will stick / save. The receiver will talk to the transmitted when it is powered up to handshake on the new settings.
+    If the Lua loads then you know its communicating with your transmitter. However, the switch mode can only be changed when a receiver is not connected and makes it appear as if the changes are not saving. This is done to ensure consistency between the RX and TX interpretation of the switch data being actively transmitted. This is a safeguard. Power down your receiver, wait for the "Telemetry Lost" callout, and the switch mode change will stick / save. The receiver will talk to the transmitted when it is powered up to handshake on the new settings.
 
 <script src="../../assets/javascripts/admonition-enhancement.js"></script>

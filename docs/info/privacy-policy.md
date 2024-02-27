@@ -161,7 +161,7 @@ Your consent to this Privacy Policy followed by your submission of such informat
 transfer.
 
 ExpressLRS will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance
-with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless
+with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless
 there are adequate controls in place including the security of your data and other personal information.
 
 ## 8. Disclosure of Data
@@ -313,7 +313,7 @@ find out more, visit the official California Legislative Information website. Th
 ## 13. Service Providers
 
 We may employ third party companies and individuals to facilitate our Service (“Service Providers”), provide Service on
-our behalf, perform Service-related services or assist us in analysing how our Service is used.
+our behalf, perform Service-related services or assist us in analyzing how our Service is used.
 
 These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to
 disclose or use it for any other purpose.
@@ -329,7 +329,7 @@ We may use third-party Service Providers to automate the development process of 
 ## 16. Behavioral Remarketing
 
 We may use remarketing services to advertise on third party websites to you after you visited our Service. We and our
-third-party vendors use cookies to inform, optimise and serve ads based on your past visits to our Service.
+third-party vendors use cookies to inform, optimize and serve ads based on your past visits to our Service.
 
 ## 17. Links to Other Sites
 

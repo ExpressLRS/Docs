@@ -25,8 +25,8 @@ Converting the number on the top right corner to bits, you can decode the on goi
 ## DEBUG Logging
 | Defines | Description |
 | -------------------------------- | ----------------------------------------------------------------- |
-| -DDEBUG_LOG | Turn on debug messages, if disabled then all debugging options (starting with DEBUG_) are disabled |
-| -DDEBUG_LOG_VERBOSE | Use DEBUG_LOG_VERBOSE instead (or both) to see verbose debug logging (spammy stuff) |
-| -DDEBUG_RX_SCOREBOARD | Print a letter for each packet received or missed (RX debugging) |
-| -DDEBUG_CRSF_NO_OUTPUT | Don't send RC msgs over UART |
-| -DDEBUG_BF_LINK_STATS | These debugging options send extra information to Betaflight in the LinkStatistics packet |
+| `-DDEBUG_LOG` | Turn on debug messages, if disabled then all debugging options (starting with DEBUG_) are disabled |
+| `-DDEBUG_LOG_VERBOSE` | Use DEBUG_LOG_VERBOSE instead (or both) to see verbose debug logging (spammy stuff) |
+| `-DDEBUG_RX_SCOREBOARD` | Print a letter for each packet received or missed (RX debugging) |
+| `-DDEBUG_CRSF_NO_OUTPUT` | Don't send RC messages over UART |
+| `-DDEBUG_BF_LINK_STATS` | These debugging options send extra information to Betaflight in the LinkStatistics packet |

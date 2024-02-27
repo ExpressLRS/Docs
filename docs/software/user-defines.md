@@ -115,9 +115,9 @@ MY_STARTUP_MELODY="<rtttl string>"
 ```
 For TXes like the R9M, this sets if the TX only beeps one-time **versus** playing a startup song. Currently, it is set to play the startup song 🎼 , but if you don't prefer it, uncomment this to turn it off. ✖️
  
-For all your customization needs, use `DMY_STARTUP_MELODY` to define your own startup melody using the BlHeli32 or RTTTL syntax. For BLHeli32, the parameters `music string` and `bpm` are required, whereas `semitone offset` is optional to transpose the entire melody up or down by the defined amount of semitones.
+For all your customization needs, use `DMY_STARTUP_MELODY` to define your own startup melody using the BLHeli32 or RTTTL syntax. For BLHeli32, the parameters `music string` and `bpm` are required, whereas `semitone offset` is optional to transpose the entire melody up or down by the defined amount of semitones.
 
-For example, BlHeli32 melodies are available on [Rox Wolf's youtube channel](https://www.youtube.com/playlist?list=PL_O0XT_1mZinetucKyuBUvkju8P7DEg-v), some experimentation may be required though. :musical_note: To write your own melody, **[this (Sheet Music 101)](https://github.com/nseidle/AxelF_DoorBell/wiki/How-to-convert-sheet-music-into-an-Arduino-Sketch)** and **[this (BLHeli Piano)](https://dra6n.github.io/blhelikeyboard.github.io/)** are useful resources.
+For example, BLHeli32 melodies are available on [Rox Wolf's youtube channel](https://www.youtube.com/playlist?list=PL_O0XT_1mZinetucKyuBUvkju8P7DEg-v), some experimentation may be required though. :musical_note: To write your own melody, **[this (Sheet Music 101)](https://github.com/nseidle/AxelF_DoorBell/wiki/How-to-convert-sheet-music-into-an-Arduino-Sketch)** and **[this (BLHeli Piano)](https://dra6n.github.io/blhelikeyboard.github.io/)** are useful resources.
 
 The build process also supports RTTTL-formatted ringtone strings. RTTTL melodies are delimited by colons `:` and start with a description versus the BLHeli style with pipes `|`. e.g. `Mario:d=4,o=5,b=100:32p,16e6,16e6,16p,16e6,16p,16c6,16e6,16p,16g6,8p,16p,16g`
 
@@ -166,7 +166,7 @@ Prints a log line for every channels packet received at the RX `ID,Antenna,RSSI,
 ```
 DEBUG_FREQ_CORRECTION
 ```
-Enable reporting of RF FreqCorrection in RX's SNR LinkStatistics, also decreases packet rate on Team2.4 for the additional time needed to include the packet header / enable FreqCorrection. The current FreqCorrection value will be reported in RSNR in the LinkStats scaled -127 to +127, where 127 is the maximum allowable deviation. 200kHz for Team2.4, 100kHz for Team900. Dynamic power must be OFF, or else it will adjust based on the FreqCorrection reported in SNR. **Both the TX and RX must have this definition enabled otherwise they will not bind.**
+Enable reporting of RF FreqCorrection in receiver's SNR LinkStatistics, also decreases packet rate on Team2.4 for the additional time needed to include the packet header / enable FreqCorrection. The current FreqCorrection value will be reported in RSNR in the LinkStats scaled -127 to +127, where 127 is the maximum allowable deviation. 200kHz for Team2.4, 100kHz for Team900. Dynamic power must be OFF, or else it will adjust based on the FreqCorrection reported in SNR. **Both the TX and RX must have this definition enabled otherwise they will not bind.**
 
 ## Obsolete user_defines
 

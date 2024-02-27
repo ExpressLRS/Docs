@@ -113,7 +113,7 @@ As shown above, Betaflight Configurator 10.9.0 also supports entering the Bindin
 
 The SPI ExpressLRS implementation would not have been possible without the work and huge efforts from the following developers:
 
-- Paweł Stefański ([@phobos-](https://github.com/phobos-))
+- Paweł Stefanski ([@phobos-](https://github.com/phobos-))
 - Dominic Clifton ([@hydra](https://github.com/hydra))
 - Hans Christian Olaussen ([@klutvott123](https://github.com/klutvott123))
 - Steve Evans ([@SteveCEvans](https://github.com/SteveCEvans))

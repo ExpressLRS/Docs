@@ -44,7 +44,7 @@ What appears in the RSSI Value field is based on what is selected as the RSSI Ch
 * AUX11/ch15 is set as the "RSSI Channel" - Simply LQI although the value might be slightly off due to rounding.
 * AUX12/ch16 is set as the "RSSI Channel" - Displays the RSSI dBm scaled as a percentage from the current Sensitivity Limit to -50dBm and is a decent indicator of how much range is left before the LQI cliff (0 here = Sensitivity Limit).
 
-In iNAV, the RSSI Value on the OSD is called RSSI (Signal Strength), and will always display 0. To show a filtered (by iNav) LQI in that field, set the rssi_source to protocol using the CLI with `set rssi_source = PROTOCOL`.
+In iNav, the RSSI Value on the OSD is called RSSI (Signal Strength), and will always display 0. To show a filtered (by iNav) LQI in that field, set the rssi_source to protocol using the CLI with `set rssi_source = PROTOCOL`.
 
 ## RF Mode Indexes (RFMD)
 OSDs report the packet rate using an index instead of the actual rate, either as a `RATE:LQ%` or with rate in the hundreds digit such as `799` where 7 is the RATE and 99 is the LQ%. Handsets display the rate using the RFMD telemetry item.
@@ -96,7 +96,7 @@ ExpressLRS uses an averaged SNR to control dynamic power, with the following low
 | D50 | 1.0dB | 3.0dB |
 | 25Hz | -3.0dB | 0.5dB |
 
-## How far can I go on XmW?
+## How far can I go on X mW?
 
 Very far? This question is usually used in place of the actual question "Will I get good signal where I fly?" which is impossible to answer.
 

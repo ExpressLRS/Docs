@@ -6,13 +6,13 @@ template: main.html
 
 ## Overview 
 
-PlatformIO has an older version of STLink. It is unable to communicate with the STM32L MCUs on some RX's.  
+PlatformIO has an older version of STLink. It is unable to communicate with the STM32L MCUs on some RXs.  
 
-### Affected RX's
+### Affected Receivers
 
 - (DIY) PP
 
-Swapping out PIO's STLink folder contents with the current STLink will allow using the configurator with these RX's.
+Swapping out PIO's STLink folder contents with the current STLink will allow using the configurator with these RXs.
 
 **Go to your STLink folder**
 

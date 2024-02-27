@@ -31,7 +31,7 @@ Anyone can add an entry to the table, and entries should include the:
 | 40.6km | 2.4G | 50Hz | 25mW | Wing | No | Shawn U | [Link](https://youtu.be/TmSVSCLTUGI?si=nKfhwG8HgvqX104B) |
 | 19.61km | 2.4G | 50Hz | 25mW | Wing | Yes | Les Y | [Link](https://www.youtube.com/watch?v=VDqrNhLCXE8)|
 | 18.97Km| 2.4G | 150Hz | 50mW | Wing | yes | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
-| 17.1km | 2.4G | 50hz | 10mW | Wing | No | Denks | [Link](https://www.youtube.com/watch?v=VEkl7GaNszs) |
+| 17.1km | 2.4G | 50Hz | 10mW | Wing | No | Denks | [Link](https://www.youtube.com/watch?v=VEkl7GaNszs) |
 | 12.1km | 2.4G | 50Hz | 25mW | Wing | No | Les Y | [Link](https://youtu.be/_RfU0aEost0)|
 | 10Km | 2.4G | 500Hz | 10mW | Quad | Yes | mrscythe | [Link](https://youtu.be/IpiPEZrCGtg) |
 | 10Km | 2.4G | 50Hz | 10mW |  Wing| No | Padcom | [Link](https://www.youtube.com/watch?v=8Xm_bNlywQA) |
@@ -48,7 +48,7 @@ Anyone can add an entry to the table, and entries should include the:
 | 20Km | 2.4G | 150Hz | 100mW | Wing | Yes | Pairan | [Link](https://youtu.be/B9-AItJ9WS0) |
 | 20Km | 2.4G | 50Hz | 250mW | Wing | No | Padcom | [Link](https://www.youtube.com/watch?v=Fu0fHgSrOqw) |
 | 12.2Km | 2.4G | 500Hz | 250mW | Wing | No | Börner | [Link](https://youtu.be/GUUngM6NcAg) |
-| 11.47Km | 2.4G | 50hz | 500mW | Wing | No | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
+| 11.47Km | 2.4G | 50Hz | 500mW | Wing | No | TitanDynamics | [Link](https://www.youtube.com/watch?v=LPDKBW9XNKM) |
 | 10Km | 2.4G | 50Hz | 250mW | Quad | No | Disnator | [Link](https://youtu.be/p6USo0VsLag?si=kP8Bq-XUWoSEWVlV) |
 | 7.14Km | 2.4G | 500Hz | 100mW | Wing | No | Bri'ish | [Link](https://youtu.be/FsQiL0LYnaY) |
 | 6.43Km | 2.4G | 50Hz | 100mW | Wing | No | DivisionRc | [Link](https://youtu.be/3VAJ14y0ZIY) |
