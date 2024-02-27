@@ -146,9 +146,9 @@ If you have set your Home Network SSID and Password, point your browser to http:
 
 The main banner will show you what kind of device it is and the firmware version that's flashed into it.
 
-## Setup your VRx Backpack
+## Setup your VRX Backpack
 
-Proceed to the [VRx Backpack Setup](backpack-vrx-setup.md) section to setup your VRx Backpack, if desired.
+Proceed to the [VRX Backpack Setup](backpack-vrx-setup.md) section to setup your VRX Backpack, if desired.
 
 ## Operation
 

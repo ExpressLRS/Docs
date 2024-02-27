@@ -69,7 +69,7 @@ For example, this might look like (which is safe to just copy-paste in general):
 
 #### Procedure
 
- - Using the configurator and user defines, include the `-DDEBUG_FREQ_CORRECTION` define for **BOTH TX AND RX** builds of any version of ELRS past v3.0.0 (ie V3.0.0 RC2)
+ - Using the configurator and user defines, include the `-DDEBUG_FREQ_CORRECTION` define for **BOTH TX AND RX** builds of any version of ELRS past v3.0.0 (i.e. V3.0.0 RC2)
  - After loading the new firmware on both TX and RX, go to the telemetry screen in your model settings on the TX side. Note the "RSNR" value. This is the relative difference between your TX and RX clocks.
  - *The closer this value is to 0, the better!*. Negative means the RX clock is slower than TX, and positive means that it is faster.
  - +/- 20 ticks (~30 kHz offset) is nearly perfect. +/-60 ticks (~95 kHz) will still likely be completely fine, though not ideal. +/-70 ticks and further is marginal and might be fine, but you should be careful.

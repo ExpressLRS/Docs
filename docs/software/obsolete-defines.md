@@ -7,7 +7,7 @@ template: main.html
 !!! note
     This page contains old user_defines.txt that have been removed or superseded by new defines.
 
-New items should be added to the top of the list so the last entry here is the oldest. The order of each entry should be [code]definename[/code] followed by the original text of the documentation, ending with a separate paragraph "**REMOVED** [version] [replacement or reason for removal]".
+New items should be added to the top of the list so the last entry here is the oldest. The order of each entry should be `[code]definename[/code]` followed by the original text of the documentation, ending with a separate paragraph "**REMOVED** [version] [replacement or reason for removal]".
 
 ## Obsolete Defines
 
@@ -44,7 +44,7 @@ These features enable **lower latency** 🏃‍♂️ and **offset** from the Op
 
 Both require [OpenTX `2.3.12`](https://www.open-tx.org/) or above. To install it, you will have to use OpenTX companion application.
 
-Deviation radio users such as those with the T8SGv2/v3 should disable this feature.
+Deviation radio users such as those with the T8SG v2/v3 should disable this feature.
 
 You can also use [EdgeTX](https://github.com/EdgeTX/edgetx).
 

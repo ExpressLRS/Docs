@@ -8,7 +8,7 @@ template: main.html
 
 After performing CRC tests using the CRC-13 it was found that CRC includes parity checking so adding a separate parity check was wasteful. CRC checking has now been updated to 14-bit.
 
-The following tests were performed using the new CRC-14 bit implementation with a polynomial of 0x372B, which gives a hamming distance of 6 in a 57-bit range. What this means is that it can detect up to 5 randomly flipped bits of a message that is 57 bits long.
+The following tests were performed using the new CRC-14 bit implementation with a polynomial of `0x372B`, which gives a hamming distance of 6 in a 57-bit range. What this means is that it can detect up to 5 randomly flipped bits of a message that is 57 bits long.
 
 Three stress tests have been performed on the 50-bit data with CRC-14. The tests create random data in 7 bytes (the first byte only has the lower 2 bits set) and then perform random bit flipping based on three styles.
 
@@ -125,7 +125,7 @@ Also this is where the built-in parity shows up as it detects the odd numbered b
 
 ## OTA Testing
 
-A 5hr OTA soak test was done at RSSI -108dBm (2.4GHz, 500Hz) and branch https://github.com/ExpressLRS/ExpressLRS/commit/e3ddcc.  RC data bytes were hard coded 0xAA and checked for CRC14 pass/fail, and the number of bits flipped counted.
+A 5hr OTA soak test was done at RSSI -108dBm (2.4GHz, 500Hz) and branch [`counting-flipped-bits@e3ddcc`](https://github.com/ExpressLRS/ExpressLRS/commit/e3ddcc).  RC data bytes were hard coded `0xAA` and checked for CRC14 pass/fail, and the number of bits flipped counted.
 
 The below table columns are the number of bits flipped, crc passed tally, crc failed tally. Where passed means a bad packet that passes the CRC check and would accepted by the RX. On the `0` row, `Passed` is good, `Failed` is where the data is good, but the CRC itself was changed by bit-flips.
 ```

@@ -6,7 +6,7 @@ template: main.html
 
 ## Tools
 
-Assuming you have Visual Studio Code and platformIO installed
+Assuming you have Visual Studio Code and PlatformIO installed
 
 ## Windows Prerequisite
 
@@ -19,4 +19,4 @@ Assuming you have Visual Studio Code and platformIO installed
 * In VSCode with the ExpressLRS project open, click on the `New Terminal` button in the status bar
 * Ensure the native platform is installed by entering `pio platform install native` in the terminal window.
 * Now you can enter `pio test -e native` to run the tests.
-* It is also possible to use the pio module and select native/Advanced/Test in the target selection list.
+* It is also possible to use the PlatformIO module and select Native/Advanced/Test in the target selection list.

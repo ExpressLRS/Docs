@@ -8,12 +8,12 @@ description: All-in-one Flight Controllers were released with ExpressLRS receive
 !!! note "Supported RF Modes"
     SPI receivers **DO NOT** support D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) and thus will not bind or sync with a TX module in any of these modes.
 
-A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano longrange rig without the need for an external receiver. More of these flight controllers are coming into stores.
+A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano long range rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
 Because the ExpressLRS code is "baked-in" to the flight controller firmware instead of using a second microcontroller, these can not be updated the same way external UART-based receivers are updated. 
 
 !!! info "NOTE"
-    You cannot use the ExpressLRS Configurator to update these FCs. You must update the flight controller software, eg Betaflight.
+    You cannot use the ExpressLRS Configurator to update these FCs. You must update the flight controller software, e.g. Betaflight.
 
 SPI receiver compatibility with ExpressLRS v3.x *requires* your flight controller be flashed with [Betaflight 4.4](https://github.com/betaflight/betaflight/releases/tag/4.4.0). If you are running [Betaflight 4.3.0](https://github.com/betaflight/betaflight/releases/tag/4.3.0) or [Betaflight 4.3.1](https://github.com/betaflight/betaflight/releases/tag/4.3.1), your receiver will only work with ExpressLRS v2.x. Please update to Betaflight 4.4 for ExpressLRS v3.x compatibility. 
 
@@ -22,8 +22,8 @@ In preparation for updating, you should save a copy of your `diff all` dump. Sim
 
 Using the latest [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator/releases), navigate into `Firmware Flasher` and select the latest [Betaflight release](https://github.com/betaflight/betaflight/releases/tag/4.4.0-RC2). Depending on your AIO board, the target will differ:
 
-* Happymodel AIO: CRAZYBEEF4SX1280
-* BetaFPV AIO: BETAFPVF4SX1280
+* Happymodel AIO: `CRAZYBEEF4SX1280`
+* BetaFPV AIO: `BETAFPVF4SX1280`
 * SPRacing SPH7RF: Coming soon!
 
 If your Flight Controller model is not in the list above, consult your Flight Controller manufacturer for details.
@@ -117,4 +117,4 @@ The SPI ExpressLRS implementation would not have been possible without the work 
 - Dominic Clifton ([@hydra](https://github.com/hydra))
 - Hans Christian Olaussen ([@klutvott123](https://github.com/klutvott123))
 - Steve Evans ([@SteveCEvans](https://github.com/SteveCEvans))
-- Ctzsnooze ([@ctzsnooze](https://github.com/ctzsnooze))
+- ctzsnooze ([@ctzsnooze](https://github.com/ctzsnooze))

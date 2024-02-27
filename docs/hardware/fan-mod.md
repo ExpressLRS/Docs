@@ -27,7 +27,7 @@ Initially, this mod is brought to life by [Niklas Voigt](https://discordapp.com/
 
 You need a **20x20mm** or **25x25mm** **fan** in **5V** version. 
 Both sizes are supported. To secure the fan into the cover you can use **2x M2 screws**, a thread is already in the print.
-U can solder the pins of the fan directly to the **5v port of the R9M** or use the [**Controllable Fan Mod**](#controllable-fan-mod) which can control the fan out of software (fan blows only at >250mw). 
+You can solder the pins of the fan directly to the **5v port of the R9M** or use the [**Controllable Fan Mod**](#controllable-fan-mod) which can control the fan out of software (fan blows only at >250mW). 
 
 R9M Fan Mod Cover is built out of four Parts and a Sticker:
 
@@ -41,13 +41,13 @@ R9M Fan Mod Cover is built out of four Parts and a Sticker:
 * [R9M-Fan-Case-Pins.stl](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/STL/R9M-Fan-Mod-Case/R9M-Fan-Case-Pins.stl)
 * [R9M-Fan-Case-XT30.stl](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/STL/R9M-Fan-Mod-Case/R9M-Fan-Case-XT30.stl)
 * [R9M-Fan-Case-Standoff.stl](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/STL/R9M-Fan-Mod-Case/R9M-Fan-Case-Standoff.stl) (2x)
-* [R9M-ExpressLRS-900Mhz.pdf](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/STL/R9M-Fan-Mod-Case/R9M-ExpressLRS-900Mhz.pdf)
+* [R9M-ExpressLRS-900MHz.pdf](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/STL/R9M-Fan-Mod-Case/R9M-ExpressLRS-900Mhz.pdf)
 
 or from [Thingiverse](https://www.thingiverse.com/thing:4829360)
 
 ## Controllable Fan Mod
 
-Additionally to the fan, you'll need one NPN Transistor (e.g. `2N4401`) or N-Channel MOSFET (e.g. `BS170` has built-in Shotky-Diode) and a resistor (200-3k7)
+Additionally to the fan, you'll need one NPN Transistor (e.g. `2N4401`) or N-Channel MOSFET (e.g. `BS170` has built-in Schottky-Diode) and a resistor (200-3k7)
 
 <figure markdown>
 <img class="center-img" src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/n-channel-mosfet.png?raw=true" width="40%">
@@ -74,7 +74,7 @@ The PB9 pad location on the R9M2019 module is a bit different. Please see the ph
 In addition to the [3D printed Cover](#download) & the [**Controllable Fan Mod**](#controllable-fan-mod) you'll need:
 
 * Fan + Heatsink `"2507 25MM 25x25x13MM Hydraulic bearing Graphics card Cooling fan with heat sink 5V 12V m.2 SSD Fan with 2pin"`
-* Thermalpad 0.5mm `"1pc 100mmx100mmx0.5mm GPU Northbridge IC LED Chipset Heatsink Cooling Conductive Silicone Thermal Pad,100x100x0.5mm w/ 3.2W/M-K"`
+* Thermal Pad 0.5mm `"1pc 100mmx100mmx0.5mm GPU Northbridge IC LED Chipset Heatsink Cooling Conductive Silicone Thermal Pad,100x100x0.5mm w/ 3.2W/M-K"`
 
 The screw heads are cut off to reduce height.
 

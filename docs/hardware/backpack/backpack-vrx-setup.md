@@ -15,7 +15,7 @@ The VRX firmware you will flash into your Backpack Device will depend on what VR
 
 ### Flashing via WiFi (ESP-based ExpressLRS Receivers)
 
-Power up your selected VRX Backpack device (connect 5v and gnd pads to any 5v power source). Let it go into WiFi Update mode (fast blinking LED) and load up the WiFi Update page. In the Address bar of your browser, add `?force=true` to ensure it will accept the VRX Backpack firmware. The resulting URL should read `http://10.0.0.1/?force=true` (if you connected via Access Point) or `http://elrs_rx.local/?force=true` (if your device has connected to your local WiFi network).
+Power up your selected VRX Backpack device (connect 5v and GND pads to any 5v power source). Let it go into WiFi Update mode (fast blinking LED) and load up the WiFi Update page. In the Address bar of your browser, add `?force=true` to ensure it will accept the VRX Backpack firmware. The resulting URL should read `http://10.0.0.1/?force=true` (if you connected via Access Point) or `http://elrs_rx.local/?force=true` (if your device has connected to your local WiFi network).
 
 !!! note "Note"
     The `?force=true` is not needed for ESP-based receivers with factory firmware. It is only required if you have previously flashed the receiver and want to repurpose it as a VRX Backpack.

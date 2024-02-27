@@ -83,7 +83,7 @@ For the remaining 7 switches (Chan 6 thru 12 /  AUX 2 thru AUX 8), only one swit
 
 In **Hybrid** mode, AUX2-AUX7 / Chan6-11 are 3-bit and can be used as either 2-position, 3-position, or 6-position switches or selector buttons. These are mapped to a PWM of 1000us to 2000us.
 
-|2-pos<br>Switch |3-pos<br>Switch |6-pos<br>Switch | Approx. Channel<br>Input PWM (us) | Channel<br>Output (us) | Ardupilot Mode
+|2-pos<br>Switch |3-pos<br>Switch |6-pos<br>Switch | Approx. Channel<br>Input PWM (us) | Channel<br>Output (us) | ArduPilot Mode
 |:--: | :--: | :--: | :--: | :--: | --
 |1|1|1|988 | 1000 | Mode1 (up position for 2-pos / 3-pos)
 |||2|1192 | 1275 | Mode2
@@ -102,7 +102,7 @@ In **Hybrid** mode, AUX8 / Chan12 is 4-bit / 16-position and is mapped to the PW
 
 In **Wide** mode, AUX2-AUX8 / Chan6-12 are 6-bit / 64-position for telemetry ratios of 1:2 and 1:4. For all other telemetry ratios, these 7 switches are 7-bit / 128-position. It takes 8 packets to send the complete set of switches before cycling back to AUX2 (one more than **Hybrid**). **Wide** uses the 8th slot to transmit extra data to the receiver, including the current transmitter power. This is the only switch mode which can show the transmitter power `TPwr` on the flight controller's OSD. These behave more like traditional channels although with lower precision. You can tell you're operating in **Wide** mode when a switch in the middle position shows up as 1503 instead of 1500.
 
-If using Ardupilot in **Wide** mode you will see that the channel outputs don't line up very well with the standard -100% (988us) to +100% (2012us) output range in EdgeTX / OpenTX when using a 6-position selector as input. Both the first two and the last two positions get binned into Mode 1 and Mode 6 respectively. To get the full 6 Ardupilot modes, go to the Outputs page on the OpenTX model setup and set the min / max for the channels to -75% / +75%.
+If using ArduPilot in **Wide** mode you will see that the channel outputs don't line up very well with the standard -100% (988us) to +100% (2012us) output range in EdgeTX / OpenTX when using a 6-position selector as input. Both the first two and the last two positions get binned into Mode 1 and Mode 6 respectively. To get the full 6 ArduPilot modes, go to the Outputs page on the OpenTX model setup and set the min / max for the channels to -75% / +75%.
 
 ### Full Resolution Switch Configuration Modes :new:
 

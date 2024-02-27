@@ -7,7 +7,7 @@ description: A short guide on how to add a resistor for the R9M ACCST Inverter M
 
 ## Overview
 
-- To benefit from the higher bitrate of 400 kilobits per second using `OpenTX`/`EdgeTX` you need to **add a pullup resistor to the inverter** of the serial port on the R9M 2018🗻🆙
+- To benefit from the higher bitrate of 400 kilobits per second using `OpenTX`/`EdgeTX` you need to **add a pull-up resistor to the inverter** of the serial port on the R9M 2018🗻🆙
 - Strongly suggested being done for anybody looking for higher than standard packet rates using `ExpressLRS` 🔮
 
 ## Identification
