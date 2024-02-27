@@ -1,7 +1,12 @@
 name: spellcheck
-on: [ push, pull_request ]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 jobs:
-  if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name
   check-spelling:
     runs-on: ubuntu-latest
     steps:
