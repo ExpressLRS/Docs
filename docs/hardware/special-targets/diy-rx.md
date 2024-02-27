@@ -60,4 +60,4 @@ Possibly one of the biggest benefits of using `ExpressLRS` is custom hardware!
 * Connect the serial adapter to `GND`, `TX`, `RX`, and the appropriate `3V3` or `5V`.
 * Additionally, connect `IO0` to `GND` to activate the bootloader and enable flashing
 * Quite some serial adapters have `TX` and `RX` swapped, mislabeled, or both 😸. Please double-check!
-* Finally, select the appropriate RX target, make sure your user defines are correct, and press `Upload` in platformio
+* Finally, select the appropriate RX target, make sure your user defines are correct, and press `Upload` in PlatformIO

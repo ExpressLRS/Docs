@@ -27,7 +27,7 @@ SERIALx_BAUD = 115
 RSSI_TYPE = 3 (ReceiverProtocol)
 ```
 
-## Ardupilot Flightmodes
+## Ardupilot Flight Modes
 Ardupilot default flight modes channel is channel 8, but ELRS 8 position channel is on channel 12 (in hybrid switch mode). you will need to set your handset to use channel 12 as flight modes and set Ardupilot parameter:
 ```
 FLTMODE_CH=12

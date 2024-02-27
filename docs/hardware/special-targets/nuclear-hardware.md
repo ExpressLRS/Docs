@@ -13,14 +13,14 @@ The Nuclear RX is designed to be as small as possible, using the same software t
  
 - 20x20 stack mounting with break-off tabs for compact applications  
 - [SMD Antenna](../../hardware/smd-antenna.md)
-- [Wi-Fi updating](../../software/updating/wifi-updating.md)
+- [WiFi updating](../../software/updating/wifi-updating.md)
 - Up to 500Hz packet rate  
 
 <figure markdown>
 <img class="center-img" src="../../assets/images/IMG_0665.jpg" width="40%">
 </figure>
 
-When you get your Nuclear RX, it will likely be on the latest release firmware. You'll probably have to update it to work with your TX. To update, follow the steps in the [Wi-Fi updating](../../software/updating/wifi-updating.md) page. Alternatively, you can use [betaflight passthrough](../../software/updating/betaflight-passthrough.md) should work, but the boot jumper must be bridged while applying power to the RX.
+When you get your Nuclear RX, it will likely be on the latest release firmware. You'll probably have to update it to work with your TX. To update, follow the steps in the [WiFi updating](../../software/updating/wifi-updating.md) page. Alternatively, you can use [betaflight passthrough](../../software/updating/betaflight-passthrough.md) should work, but the boot jumper must be bridged while applying power to the RX.
 
 When building, use one of the `DIY_2400_RX_ESP8285_SX1280_via_X` targets. To use `via_wifi`, put your RX in binding mode, connect your computer to the RX's Wi-Fi, and hit upload.
 
@@ -28,7 +28,7 @@ When building, use one of the `DIY_2400_RX_ESP8285_SX1280_via_X` targets. To use
 | --- | ------ |
 | Blinking Slowly | Waiting for Connection  |
 | Fast Double Blink | Binding Mode  |
-| Super Fast Blink | Wi-Fi Updating Mode  |
+| Super Fast Blink | WiFi Updating Mode  |
 | Solid On | Connected  |
 
 If for some reason the RX needs to be in boot mode, bridge the jumpers as shown here:
@@ -64,7 +64,7 @@ Slap it together as seen below. Solder the wires to the pin header in the order 
 
 #### Upload firmware
 
-When you get your Nuclear RX, it will likely be on the latest release firmware. You'll probably have to update it to work with the RX you have. To update, follow the steps in the [Wi-Fi updating](../../software/updating/wifi-updating.md) page. If your transmitter module ever becomes bricked from a bad upload, connect it with a serial adapter as shown here. **MAKE SURE THE ADAPTER IS SET TO 3.3V; 5V WILL KILL THE MODULE!** Use tweezers or solder to bridge the boot jumper while you power on the module to put it in boot mode. Use the target `DIY_2400_TX_ESP32_SX1280_E28_via_UART`.  
+When you get your Nuclear RX, it will likely be on the latest release firmware. You'll probably have to update it to work with the RX you have. To update, follow the steps in the [WiFi updating](../../software/updating/wifi-updating.md) page. If your transmitter module ever becomes bricked from a bad upload, connect it with a serial adapter as shown here. **MAKE SURE THE ADAPTER IS SET TO 3.3V; 5V WILL KILL THE MODULE!** Use tweezers or solder to bridge the boot jumper while you power on the module to put it in boot mode. Use the target `DIY_2400_TX_ESP32_SX1280_E28_via_UART`.  
 
 <figure markdown>
 <img class="center-img" src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/ftdi.png?raw=true" width="40%">
