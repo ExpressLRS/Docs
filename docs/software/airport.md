@@ -8,7 +8,7 @@ description: ExpressLRS can be configured as a bi-directional transparent serial
 ## Description
 
 AirPort provides a firmware option that allows you to turn a regular ExpressLRS transmitter and receiver pair into a bi-directional transparent serial data link, over the air.
-The TX module is intended to connect via USB to a laptop, and the RX connects to a free UART on your FC, as per usual. This then allows serial data comms between the peers, in any protocol you wish to use, for example, MAVLINK (Ardupilot), MSP (Betaflight and INAV), or any other telemetry protocol you might wish to use. This may also be useful for wireless ground comms, for example: transmitting CRSF from your handset to an antenna tracker.
+The TX module is intended to connect via USB to a laptop, and the RX connects to a free UART on your FC, as per usual. This then allows serial data comms between the peers, in any protocol you wish to use, for example, MAVLink (ArduPilot), MSP (Betaflight and INAV), or any other telemetry protocol you might wish to use. This may also be useful for wireless ground comms, for example: transmitting CRSF from your handset to an antenna tracker.
 
 !!! warning "Warning"
     The AirPort option completely replaces the RC link, and repurposes it as a data link. If you intend to retain RC control via ELRS, you will need to run 2x TXs and 2x RXs on the ground and air, respectively. One TX+RX pair sends your normal RC link data, just as it does now, and the other TX+RX pair sends the serial data.
@@ -109,10 +109,10 @@ Connect the RX to a spare UART on your flight controller, as per normal:
 <figcaption>Example AirPort Receiver Wiring</figcaption>
 </figure>
 
-Using the appropriate Configurator tool for your FC firmware, configure your selected UART with your desired telemetry protocol. For example, if using AirPort for MAVLINK in Ardupilot, you would set:
+Using the appropriate Configurator tool for your FC firmware, configure your selected UART with your desired telemetry protocol. For example, if using AirPort for MAVLink in ArduPilot, you would set:
 
 * `SERIALN_BAUD` to the baud you entered in the section above,
 * `SERIALN_OPTIONS` to `0`,
-* `SERIALN_PROTOCOL` to `1` or `2` (for MAVLINKv1 or MAVLINKv2).
+* `SERIALN_PROTOCOL` to `1` or `2` (for MAVLink v1 or MAVLink v2).
 
-Connect the TX to a computer via USB, open the program that you intend to view the telemetry in, then connect to the COM port for your TX module at the baud you entered above. For example, if using AirPort for MAVLINK in Ardupilot, you would open Mission Planner / QGC etc. and select the TX COM port, enter the baud, then click Connect.
+Connect the TX to a computer via USB, open the program that you intend to view the telemetry in, then connect to the COM port for your TX module at the baud you entered above. For example, if using AirPort for MAVLink in ArduPilot, you would open Mission Planner / QGC etc. and select the TX COM port, enter the baud, then click Connect.

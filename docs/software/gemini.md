@@ -44,9 +44,9 @@ Flying at events with 6 to 8 up racers, plus who knows how many handsets left po
 
 A Gemini TX has the advantage of not only sending simultaneous packets, but also receiving simultaneous packets.  Or when used in single antenna mode (or switch mode) both antennas will listen for the same TLM packet, in the same way a diversity RX listens for RC packets.  So your TLM link becomes stronger with fewer missed packets, even when not used in Gemini mode and with single antenna receivers.
 
-### Airport and Mavlink users
+### AirPort and MAVLink users
 
-For data links a single missed packet can mean more than 1 missed packet. If a single packet is missed, this means the rest of the data that was received for that Mavlink packet is now wasted. As the Mavlink packet may have been split across multiple OTA packets and will not be complete. The single missed packet can turn into 10 packets missed. Gemini will help with making sure you get the highest Mav packet rate possible!
+For data links a single missed packet can mean more than 1 missed packet. If a single packet is missed, this means the rest of the data that was received for that MAVLink packet is now wasted. As the MAVLink packet may have been split across multiple OTA packets and will not be complete. The single missed packet can turn into 10 packets missed. Gemini will help with making sure you get the highest MAVLink packet rate possible!
 
 ## Will Gemini increase my range?
 
@@ -64,7 +64,7 @@ Yes, there is antenna switching.
 
 ## What happens if I use a Gemini TX, in Gemini Mode, with a single Antenna Receiver?
 
-The Gemini TX will function as designed, in Gemini Mode. The Receiver will only get the signal from the TX it has sync'd with. The other TX, will act as a noise generator. Therefore, you should set the TX in either Switch or Single Antenna (Ant1/Ant2) Mode.
+The Gemini TX will function as designed, in Gemini Mode. The Receiver will only get the signal from the TX it has synchronized with. The other TX, will act as a noise generator. Therefore, you should set the TX in either Switch or Single Antenna (Ant1/Ant2) Mode.
 
 ## What happens if I use a Gemini TX, in Gemini Mode, with Gemini-incapable Diversity Receivers?
 

@@ -29,7 +29,7 @@ Another important setting is to make sure your craft is **armed** on AUX1=`high`
 
 ### Starting Power
 
-On module powerup with Dynamic Power enabled, transmit power is set to the minimum supported power.
+On module power up with Dynamic Power enabled, transmit power is set to the minimum supported power.
 
 ### Lowering Power
 

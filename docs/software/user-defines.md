@@ -134,7 +134,7 @@ Disables all TX buzzer beeps at any state
 ```
 USE_TX_BACKPACK
 ```
-Enables code for talking to a connected [ESP8266 backpack](https://github.com/ExpressLRS/Backpack) on the TX module, and associated Lua params. The device target should enable this automatically for devices that come with this built-in, but can be added to any device. The TX backpack allows wireless integration with VRx modules and planned telemetry mirroring over WiFi.
+Enables code for talking to a connected [ESP8266 backpack](https://github.com/ExpressLRS/Backpack) on the TX module, and associated Lua params. The device target should enable this automatically for devices that come with this built-in, but can be added to any device. The TX backpack allows wireless integration with VRX modules and planned telemetry mirroring over WiFi.
 
 ## Debug Options
 

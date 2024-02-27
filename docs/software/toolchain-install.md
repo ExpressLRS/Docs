@@ -11,13 +11,13 @@ template: main.html
 
 `ExpressLRS` is written in C++ using the Arduino framework. 
 
- * Rather than using the Arduino IDE (which let's face it, 🗿 is pretty clunky), we use [platformIO](https://platformio.org/)
+ * Rather than using the Arduino IDE (which let's face it, 🗿 is pretty clunky), we use [PlatformIO](https://platformio.org/)
  * To ease the use of `pio` we recommend using the [extension ](https://platformio.org/install/ide?install=vscode)  for `Visual Studio Code`
 
 ### PlatformIO
 
-1. 🔽 **Download** a copy of [vscode](https://code.visualstudio.com/) for your computer 
-2. 📂 **Open** vscode, and click on the "__Extensions__" icon in the toolbar on the right (see [Managing Extensions](https://code.visualstudio.com/docs/editor/extension-gallery) 📘)
+1. 🔽 **Download** a copy of [VSCode](https://code.visualstudio.com/) for your computer 
+2. 📂 **Open** VSCode, and click on the "__Extensions__" icon in the toolbar on the right (see [Managing Extensions](https://code.visualstudio.com/docs/editor/extension-gallery) 📘)
 3. 🔎 In the search box, enter `platformio`, and **install** the **extension** (see [the `pio install` documentation](https://platformio.org/install/ide?install=vscode) 📚)
 
 ### Git Setup
@@ -28,7 +28,7 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 2. Install `git`, click **yes** to the default options (there are a **LOT** 💯)
 
 !!! important
-    Make sure you select this option during installation, it adds git to PATH which is necessary for VScode cloning (the next step). 
+    Make sure you select this option during installation, it adds git to PATH which is necessary for VSCode cloning (the next step). 
 
 <figure markdown>
 <img class="center-img" src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/git_path_option.png" width=100%>
