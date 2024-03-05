@@ -365,6 +365,13 @@ The `Telemetry Power` setting is used to adjust the telemetry transmit power of 
 
 The `Initialization Rate` setting controls the packet rate that the receiver will start checking for the Sync Packet. On boot, the receiver will listen for the Sync Packet starting with the fastest RF Mode or Packet Rate, down to the slowest, then cycles, until it finally Syncs and Binds. Setting this parameter closer or equal to the Packet Rate you've set for the TX module will allow the receiver to Bind or Connect much faster.
 
+### Team Race
+
+Team Racing allows selection between multiple connected models, failsafing all unselected models. See [Team Racing](../../software/teamracing.md)
+
+* `Channel` (default CH11 / AUX7) TeamRace Channel - The channel that is checked on the receiver to determine the currently selected model. Has no effect if the TeamRace Position is set to Disabled.
+* `Position` (default Disabled) TeamRace Position - Which position of the TeamRace Channel activates this model. 6-position switches are supported (1-6) as well as Low/Mid/High for using a 2 or 3-position switch.
+
 ### Loan Model/Return Model
 
 These commands allow the user to Loan/Return the model. For more information, see the [Loan Model](../../software/loan-model.md) guide.
