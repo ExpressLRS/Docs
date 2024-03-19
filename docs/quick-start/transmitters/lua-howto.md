@@ -363,7 +363,7 @@ The `Telemetry Power` setting is used to adjust the telemetry transmit power of 
 
 ### Init Rate
 
-The `Initialization Rate` setting controls the packet rate that the receiver will start checking for the Sync Packet. On boot, the receiver will listen for the Sync Packet starting with the fastest RF Mode or Packet Rate, down to the slowest, then cycles, until it finally Syncs and Binds. Setting this parameter closer or equal to the Packet Rate you've set for the TX module will allow the receiver to Bind or Connect much faster.
+Removed in ExpressLRS 3.4, see [Init Rate](../../info/init-rate.md). The `Initialization Rate` setting controls the packet rate that the receiver will start checking for the Sync Packet. On boot, the receiver will listen for the Sync Packet starting with the fastest RF Mode or Packet Rate, down to the slowest, then cycles, until it finally Syncs and Binds. Setting this parameter closer or equal to the Packet Rate you've set for the TX module will allow the receiver to Bind or Connect much faster.
 
 ### Loan Model/Return Model
 
