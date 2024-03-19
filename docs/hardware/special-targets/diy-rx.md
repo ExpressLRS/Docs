@@ -32,15 +32,15 @@ Possibly one of the biggest benefits of using `ExpressLRS` is custom hardware!
 ### Custom ESP 900 MHz RX
 
 <figure markdown>
-<img class="center-img" src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/900MHz/RX_Mini_v0.1/img/front.jpg?raw=true" width="20%" alt="Mini_Rx_v0.1">
+![900 Mini](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/900MHz/RX_Mini_v0.1/img/front.jpg?raw=true){ class="center-img" width=20% }
 </figure>
 
 <figure markdown>
-<img class="center-img" src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/900MHz/RX_20x20_0805_SMD/img/populated_side_1.jpg?raw=true" width="20%" alt="20x20_RX_0805_SMD">
+![20x20 900 RX](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/900MHz/RX_20x20_0805_SMD/img/populated_side_1.jpg?raw=true){ class="center-img" width=20% }
 </figure>
 
 <figure markdown>
-<img class="center-img" src="https://images-na.ssl-images-amazon.com/images/I/51BwxcbSjoL._AC_SL1440_.jpg?raw=true" width = "20%" alt="Esp 01f">
+![esp01F 900 RX](https://images-na.ssl-images-amazon.com/images/I/51BwxcbSjoL._AC_SL1440_.jpg?raw=true){ class="center-img" width=20% }
 </figure>
 
 * Uses the `ESP-01F` for WiFi and a `RFM95` for our business 🕴️
