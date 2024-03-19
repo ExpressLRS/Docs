@@ -3,7 +3,7 @@ template: main.html
 description: ExpressLRS can be configured as a bi-directional transparent serial data link, over the air.
 ---
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 ## Description
 

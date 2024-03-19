@@ -56,8 +56,8 @@ Each build is different, but these are recommended things to look for when selec
 
     Antennas are where the radio waves come and go from the receiver. ExpressLRS offers many different antenna types, with dipoles and ceramic antennas (see [SMD Antennas](../hardware/smd-antenna.md)) being the most common types of reciever antennas. In terms of range: Ceramic antenna < Mini Dipole ("Minimortal-T" style) < sleeved dipole < Half-wave Dipole. A diagram of the antennas and their sizes for the 2.4GHz band is shown below:
 
-    <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/antennas.png"/>
+    <figure markdown>
+      ![antenna type](../assets/images/hw-selection/antennas.png){ class="center-img" }
     </figure>
 
     Unless otherwise noted, most receivers will have a U.FL/IPEX connecter which supports external antennas. Some receivers with ceramic antennas are:
@@ -71,7 +71,7 @@ Each build is different, but these are recommended things to look for when selec
     Diversity improves reception compared to standard receivers by using multiple antennas. A standard receiver has a single antenna, while antenna diversity uses two antennas and a switch to route the signal from one or the other. True diversity takes it a step further by using two radio chips, each connected to a different antenna, and choosing the one with the strongest reception at any given time. This provides a level of redundancy which is particularly beneficial for flight where the antenna nulls can point towards the pilot (e.g. freestyle flight)
 
     <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/diversity.png"/>
+      ![diversity](../assets/images/hw-selection/diversity.png){ class="center-img" }
     </figure>
 
     Some receivers with antenna diversity include:
@@ -115,7 +115,7 @@ Each build is different, but these are recommended things to look for when selec
     The FPV world shook when ELRS released receivers that were half the size of "nano" sized receivers, included the antenna onboard, and still had kilometers of range at 250Hz/100mW. A small receiver can fit in tight places, but remember that tucking a tiny receiver's ceramic antenna deep inside a stack behind carbon reduces its performance, which was already compromised by the elimination of amplifiers to make it that small. Larger ELRS receivers regain these amplifiers offering better reception and telemetry range at the cost of size and weight. The common size classes are shown below, but there are other receivers with slightly different sizes:
 
     <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/sizes.png"/>
+      ![receiver size](../assets/images/hw-selection/sizes.png){ class="center-img" }
     </figure>
 
     PP Sized Receivers (absolute smallest, lowest range regardless of antennas):
@@ -214,7 +214,7 @@ Everyone has different needs for a transmitter but the main needs come down to s
     Some transmitters include a small screen that displays useful information and pairs with a small joystick to quickly change settings on the go. This can be useful when paired with handsets running firmware that does not support lua scripts. The two main types of screens are TFT and OLED:
 
     <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/screens.png"/>
+      ![tx screens](../assets/images/hw-selection//screens.png){ class="center-img" }
     </figure>
 
     The only transmitter with a TFT screen on the market at the moment is the Axisflying Thor TX.
@@ -243,28 +243,28 @@ Everyone has different needs for a transmitter but the main needs come down to s
 
     ELRS TX Modules have two connecters, which are visually similar - SMA and RP-SMA
     <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/sma.png"/>
+      ![SMA vs RP-SMA](../assets/images/hw-selection/sma.png){ class="center-img" }
     </figure>
 
     These connecters mount many types of antennas which have different types of radiation patterns. The first figure depicts the types of antennas commonly sold with transmitters:
     <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/antenna-tx.png"/>
+      ![TX antenna](../assets/images/hw-selection/antenna-tx.png){ class=center-img" }
     </figure>
 
     The most common antennas sold besides simple dipoles are moxons and folded dipoles, which visually look similar which helps distinguish the two:
     <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/mox-v-dipole-pcb.png"/>
+      ![TX moxon vs dipole](../assets/images/hw-selection/mox-v-dipole-pcb.png){ class=center-img" }
     </figure>
 
     The radiation patterns of a moxon and folded dipole are depicted below in a isotropic, lateral and top view
     <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/mox-folded-radiation.png"/>
+      ![rad pattern folded dipole](../assets/images/hw-selection/mox-folded-radiation.png){ class=center-img" }
     </figure>
     <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/mox-folded-lateral.png"/>
+      ![rad pattern folded lateral](../assets/images/hw-selection/mox-folded-lateral.png){ class=center-img" }
     </figure>
     <figure>
-      <img class="center-img" src="../../assets/images/hw-selection/mox-folded-top.png"/>
+      ![rad pattern folded top](../assets/images/hw-selection/mox-folded-top.png{ class=center-img" })
     </figure>   
 
 

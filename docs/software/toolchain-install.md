@@ -2,7 +2,8 @@
 template: main.html
 ---
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
+
 
 !!! note "Note" 
     The following section is intended for advanced users who intend to dabble with the source code directly.
@@ -31,7 +32,7 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
     Make sure you select this option during installation, it adds git to PATH which is necessary for VSCode cloning (the next step). 
 
 <figure markdown>
-<img class="center-img" src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/git_path_option.png" width=100%>
+![git install](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/git_path_option.png){ class="center-img" }
 </figure>
 
 ### Cloning the Repo
@@ -39,7 +40,7 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 * Enter `Git: Clone` 
 
 <figure markdown>
-<img class="center-img" src="../../assets/images/gitclone.png" width=100%>
+![clone repo](../assets/images/gitclone.png){ class="center-img" }
 </figure>
 
 * Click that! 👈 
@@ -50,11 +51,11 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 Before we can do any building, you need to select a release build of ELRS. For example, release [0.1.0-RC1](https://github.com/AlessandroAU/ExpressLRS/releases/tag/0.1.0-RC1). In Visual Studio Code select that tag. The location of the selector is shown below. 🖱️ 
 
 <figure markdown>
-<img class="center-img" src="../../assets/images/src.png" width=100%>
+![latest release](../assets/images/src.png){ class="center-img" }
 </figure>
 
 <figure markdown>
-<img class="center-img" src="../../assets/images/selector.png" width=100%>
+![branch selecttion](../assets/images/selector.png){ class="center-img" }
 </figure>
 
 Click the selector, and then type in the name of the tag, in this case `0.1.0-RC1`. 

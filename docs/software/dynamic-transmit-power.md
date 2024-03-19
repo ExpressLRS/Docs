@@ -3,7 +3,7 @@ template: main.html
 description: ExpressLRS can limit its transmit power to the level it needs to maintain good Signal Health.
 ---
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 ## Description
 
