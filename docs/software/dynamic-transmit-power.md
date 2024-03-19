@@ -83,23 +83,23 @@ On startup, the output power will be set to the lowest possible value. If teleme
 
 ### OSD Power Display
 
-To see the current output power on your FPV OSD, enable the `TX uplink power` OSD element. Uplink power is not available if `Switch Mode` is set to `Hybrid`, or older Betaflight (<4.3.0) and iNav (<2.6.0) versions. This value updates 8x more quickly in fullres packet modes.
+To see the current output power on your FPV OSD, enable the `TX Uplink Power` OSD element and set `Switch Mode` to `Wide` in the ELRS lua. `TX Uplink Power` is not available if `Switch Mode` is set to `Hybrid`, or on older Betaflight (<4.3.0) and iNav (<2.6.0) versions. 
 
 ### EdgeTX / OpenTX Power Readout
 
-Alternatively, a handset special function can be used to generate an audio notification when changes in the power level changes.
+Alternatively, a handset special function can be used to generate an audio notification when the TX power level changes.
 
 * Set a logical switch to `|Δ|>x` / `TPWR` / `1mW` as shown in L04 below. The logical switch triggers when the power changes by at least 1mW.
 
 <figure markdown>
-![OpenTX logical switch page, L04 is set to absolute delta equal or larger than x, TPWR, 1mW](../assets/imagesIMG_9220.JPG)
+![OpenTX logical switch page, L04 is set to absolute delta equal or larger than x, TPWR, 1mW](../../assets/images/IMG_9220.png)
 </figure>
 
 * For a readout when the power changes, set a special function triggered from the logical switch, and assign `Play Value` / `TPWR` / `1x` (SF10 in the picture). If instead you'd prefer the power to be read out periodically, choose a switch to enable the special function, and assign `Play Value` / `TPWR` / (SF11 in the picture, with 10s interval).
 
 <figure markdown>
-![OpenTX Special function page, SF10 is set to L04, Play Value, TPWR, 1x. SF11 is set to SB1 down, Play Value, TPWR, 10s](../assets/images/IMG_9221.JPG)
+![OpenTX Special function page, SF10 is set to L04, Play Value, TPWR, 1x. SF11 is set to SB1 down, Play Value, TPWR, 10s](../../assets/images/IMG_9221.png)
 </figure>
 
 !!! note "Note"
-    OpenTX has no value for 50mW in the CRSF Telemetry protocol and instead will be read as 0mW. EdgeTX starting 2.5.0 have the proper 50mW readout.
+    OpenTX has no value for 50mW in the CRSF Telemetry protocol and instead will be read as 0mW. EdgeTX versions 2.5.0 and newer have the proper 50mW readout.

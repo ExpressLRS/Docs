@@ -39,7 +39,7 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 * Enter `Git: Clone` 
 
 <figure markdown>
-<img class="center-img" src="../assets/images/gitclone.png" width=100%>
+<img class="center-img" src="../../assets/images/gitclone.png" width=100%>
 </figure>
 
 * Click that! 👈 
@@ -50,11 +50,11 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 Before we can do any building, you need to select a release build of ELRS. For example, release [0.1.0-RC1](https://github.com/AlessandroAU/ExpressLRS/releases/tag/0.1.0-RC1). In Visual Studio Code select that tag. The location of the selector is shown below. 🖱️ 
 
 <figure markdown>
-<img class="center-img" src="../assets/images/src.png" width=100%>
+<img class="center-img" src="../../assets/images/src.png" width=100%>
 </figure>
 
 <figure markdown>
-<img class="center-img" src="../assets/images/selector.png" width=100%>
+<img class="center-img" src="../../assets/images/selector.png" width=100%>
 </figure>
 
 Click the selector, and then type in the name of the tag, in this case `0.1.0-RC1`. 
