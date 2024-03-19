@@ -75,7 +75,7 @@ Example: Microbeast flybarless controller without RPM governor. (Follow the Micr
 Microbeast expected channel order for SRXL/SUMD:
 
 <figure markdown>
-![sumd ch order](../assets/images/sumd2.png) {class="center-img" }
+![sumd ch order](../assets/images/sumd2.png){class="center-img" }
 </figure>
 
 Required OpenTX/EdgeTX mixer setup to satisfy the Microbeast expected channel order:

@@ -22,7 +22,7 @@ Initially, this mod is brought to life by [Niklas Voigt](https://discordapp.com/
 </figure>
 
 <figure markdown>
-![1w mod bottom](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottom.png)){ class="center-img" width=40% }
+![1w mod bottom](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/STL/R9M-Fan-Mod-Case/view-bottom.png){ class="center-img" width=40% }
 </figure>
 
 You need a **20x20mm** or **25x25mm** **fan** in **5V** version. 
