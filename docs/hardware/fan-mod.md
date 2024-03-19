@@ -54,7 +54,7 @@ Additionally to the fan, you'll need one NPN Transistor (e.g. `2N4401`) or N-Cha
 </figure>
 
 <figure markdown>
-![Fan Mode Controllable via NPN transistor](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/npn-transistor.png?raw=true){ class="center-img" width=40% }
+![Fan Mod Controllable via NPN transistor](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/wiki-from-discord/npn-transistor.png?raw=true){ class="center-img" width=40% }
 </figure>
 
 ### R9M2019 Build notice
@@ -99,6 +99,7 @@ If you don't know how to allow the 2W in the firmware, don't do this mod!🤦‍
 
 ## Here are some makes
 
+<figure markdown>
 ![make 1](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/STL/R9M-Fan-Mod-Case/view-real.jpg){ class="center-img" width=40% }
 </figure>
 
