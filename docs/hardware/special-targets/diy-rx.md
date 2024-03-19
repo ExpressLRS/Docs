@@ -14,14 +14,18 @@ Possibly one of the biggest benefits of using `ExpressLRS` is custom hardware!
 ### Custom ESP 2.4 GHz RX
 
 <figure markdown>
-<a href="https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/RX_20x20"><img class="center-img" src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/RX_20x20/v2.0/img/top.PNG?raw=true" width="20%" alt="2.4 GHz 20x20"></a>
+![20x20 RX](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/RX_20x20/v2.0/img/top.PNG?raw=true){ class="center-img" width=20% }
 </figure>
+
+[20x20 RX](a href="https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/RX_20x20")
 
 - 20x20 footprint and uses 0805 size SMD components. SMD components have been positioned on the PCB in a soldering iron friendly way. 🚸 
 
 <figure markdown>
-<a href="https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/RX_Nano"><img class="center-img" src="https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/RX_Nano/img/front.jpg?raw=true" width="20%" alt="2.4 GHz Nano"></a>
+![RX Nano](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/RX_Nano/img/front.jpg?raw=true){ class="center-img" width=20% }
 </figure>
+
+[ELRS Nano](a href="https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/RX_Nano")
 
 - The `ELRS Nano` RX is 18mm x 11mm and uses the same pinout as the `Crossfire Nano` RX. This allows for direct mounting to compatible flight controllers. ⚠️ This PCB uses 0402 SMD components and will require a hot air rework station and probably a microscope. 🔬 
 
