@@ -17,7 +17,7 @@ The Nuclear RX is designed to be as small as possible, using the same software t
 - Up to 500Hz packet rate  
 
 <figure markdown>
-<img class="center-img" src="../../assets/images/IMG_0665.jpg" width="40%">
+<img class="center-img" src="../../../assets/images/IMG_0665.jpg" width="40%">
 </figure>
 
 When you get your Nuclear RX, it will likely be on the latest release firmware. You'll probably have to update it to work with your TX. To update, follow the steps in the [WiFi updating](../../software/updating/wifi-updating.md) page. Alternatively, you can use [betaflight passthrough](../../software/updating/betaflight-passthrough.md) should work, but the boot jumper must be bridged while applying power to the RX.
@@ -34,7 +34,7 @@ When building, use one of the `DIY_2400_RX_ESP8285_SX1280_via_X` targets. To use
 If for some reason the RX needs to be in boot mode, bridge the jumpers as shown here:
 
 <figure markdown>
-<img class="center-img" src="../../assets/images/Capture.png" width="40%">
+<img class="center-img" src="../../../assets/images/Capture.png" width="40%">
 </figure>
 
 ## Nuclear TX
