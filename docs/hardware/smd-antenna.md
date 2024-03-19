@@ -12,7 +12,7 @@ Have you ever wished you could build a quad without worrying about how to mount 
 If so, the SMD Antenna is for you!  
 
 <figure markdown>
-<img class="center-img" src="../../assets/images/IMG_0665.png" width="40%">
+![smd antenna](../assets/images/IMG_0665.jpg){ width=40% class="center-img" }
 <figcaption>SMD Antenna</figcaption>
 </figure>
 
@@ -32,11 +32,11 @@ This perky little fellow is worse at receiving signals than his snaky brothers, 
     The antenna is sort of fragile and can break off or be melted by a stray soldering iron. If this happens, you can save your receiver by soldering a U.FL/IPEX1 connector onto the pads as shown here. Just make sure the center pin has continuity with the filter at the other end of the trace, and no continuity with the ground.  
 
 <figure markdown>
-<img class="center-img" src="../../assets/images/IMG_0456.jpg" width="40%">
+![smd maintenance](../assets/images/IMG_0456.jpg){ width=40% class="center-img" }
 </figure>
 
 Conversely, the SMD antenna can be soldered to regular U.FL footprints if you're brave.  
 
 <figure markdown>
-<img class="center-img" src="../../assets/images/IMG_0380_1.jpg">
+![smd ufl](../assets/images/IMG_0380_1.jpg){ class="center-img" }
 </figure>

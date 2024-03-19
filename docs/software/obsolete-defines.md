@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 !!! note
     This page contains old user_defines.txt that have been removed or superseded by new defines.

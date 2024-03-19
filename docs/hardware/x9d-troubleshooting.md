@@ -25,12 +25,12 @@ Well, the final verdict is not out yet, but the following may help to resolve th
 - Download a OneBit_Status firmware using [this OpenTX version](https://heatermeter.com/dl/elrs/), based on OpenTX(2.3.12 or 2.3.14) and enable `ONEBIT` Sample Mode (System Menu -> Hardware). One Bit Sample Mode is also available on EdgeTX.
 
 <figure markdown>
-<img class="center-img" src = "https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/wiki/SampleMode_Normal.jpg" width = "45%" />
+![normal Sample Mode](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/wiki/SampleMode_Normal.jpg){ class="center-img" width=45% }
 <figcaption>Sample Mode: Normal</figcaption>
 </figure>
 
 <figure markdown>
-<img class="center-img" src = "https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/wiki/SampleMode_OneBit.jpg" width = "45%" />
+![One-Bit Sample Mode](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/wiki/SampleMode_OneBit.jpg){ class="center-img" width=45% }
 <figcaption>Sample Mode: OneBit</figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ The nice thing about the OpenTX build above is that it also adds two additional 
 This will show in your Model Setup (Page 2/11) where you select the external module type (where you selected CRSF to enable ELRS):
 
 <figure markdown>
-<img class="center-img" src = "https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/wiki/Sync.jpg" width = "60%" />
+![Sync Line](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/wiki/Sync.jpg){ class="center-img" width=60% }
 </figure>
 
 - The first `Sync` line shows something like `L00002R04000u`. `L` and `R` indicate the microseconds of Lag and Rate.
