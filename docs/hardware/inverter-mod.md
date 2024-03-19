@@ -19,7 +19,7 @@ description: A short guide on how to add a resistor for the R9M ACCST Inverter M
 Easy - connect a **300Ω to 1000Ω resistor** between the `3.3V` and inverter pin as shown in the picture 👧
 
 <figure markdown>
-<img class="center-img" src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/FrSky%20R9M%20(2018%20model)%20resistor%20mod.png" width="100%">
+![resistor mod](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/FrSky%20R9M%20(2018%20model)%20resistor%20mod.png){ class="center-img" }
 </figure>
 
 ## Transmitter Notes
