@@ -4,7 +4,7 @@ install-python-packages:
       "mkdocs-minify-plugin==0.7.1" \
       "mkdocs-redirects==1.2.1" \
       "mkdocs-static-i18n==1.2.2" \
-      "mkdocs-git-committers-plugin-2==2.3.0" \
+      "mkdocs-git-committers-plugin-2==1.2.0" \
       "mkdocs-git-revision-date-localized-plugin==1.2.4" \
       "cairosvg==2.7.1" \
       "jinja2==3.1.3"
