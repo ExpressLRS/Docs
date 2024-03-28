@@ -31,8 +31,9 @@ jobs:
           git checkout master
 
       - name: Install Dependencies
-        run: make install-python-packages
-        run: apt-get install pngquant
+        run: |
+          make install-python-packages
+          apt-get install pngquant
 
       - name: Install MkDocs Insiders
         if: github.event.repository.fork == false
