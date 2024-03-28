@@ -33,7 +33,7 @@ If your Flight Controller model is not in the list above, consult your Flight Co
     
     Likewise, the [v2.0 BetaFPV F4 1S 5A](https://betafpv.com/collections/brushless-flight-controller/products/f4-1s-5a-aio-brushless-flight-controller-elrs-2-4g) comes with an on-board UART-based ExpressLRS Receiver and doesn't use the SPI ExpressLRS implementation. Use the `BETAFPV AIO 2400 RX` Device target.
 
-If you're using Windows and flashing fails to start, you may need to correct the drivers using a tool like [ImpulseRC Driver Fixer](https://impulserc.com/pages/downloads#:~:text=Driver%20Fixer) or [Zadig](https://zadig.akeo.ie) (for advanced users). These tools and other drivers are also linked in the Welcome tab of Betaflight Configurator.
+If you're using Windows and flashing fails to start, you may need to correct the drivers using a tool like [ImpulseRC Driver Fixer](https://impulserc.com/pages/downloads#:~:text=Driver%20Fixer). These tools and other drivers are also linked in the Welcome tab of Betaflight Configurator.
 
 <figure markdown>
 ![BF settings](../assets/images/BetaflightConfiguratorTools.png)
