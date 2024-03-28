@@ -27,5 +27,4 @@ plugins:
     enabled: !ENV [CI, false]
     repository: ExpressLRS/Docs
     branch: master
-  optimize:
-    enabled: !ENV [CI, false]
+
