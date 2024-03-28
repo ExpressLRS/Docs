@@ -38,6 +38,7 @@ ChaserP
 Choppage
 Configs
 Configurator
+Configurator's
 CrazyF
 CubeProgrammer
 Cura
@@ -109,6 +110,7 @@ HoTT
 Hotspot
 IPEX
 ImmersionRC
+ImpulseRC
 Init
 Ironman
 JHEMCU

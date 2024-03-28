@@ -64,7 +64,7 @@ theme:
 plugins:
   search:
     lang: en
-  tags: { }
+  tags: {}
   minify:
     minify_html: true
   social:
@@ -162,8 +162,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
-          kwds:
-            case: lower
+        kwds:
+          case: lower
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde

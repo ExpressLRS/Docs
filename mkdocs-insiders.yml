@@ -27,4 +27,3 @@ plugins:
     enabled: !ENV [CI, false]
     repository: ExpressLRS/Docs
     branch: master
-
