@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout latest push
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Python env
         uses: actions/setup-python@v5
@@ -33,9 +31,7 @@ jobs:
           git checkout master
 
       - name: Install Dependencies
-        run: |
-          make install-python-packages
-          sudo apt-get install pngquant
+        run: make install-python-packages
 
       - name: Install MkDocs Insiders
         if: github.event.repository.fork == false
