@@ -6,9 +6,8 @@ install-python-packages:
       "mkdocs-static-i18n==1.2.2" \
       "mkdocs-git-committers-plugin-2==2.3.0" \
       "mkdocs-git-revision-date-localized-plugin==1.2.4" \
-      "CairoSVG==2.7.1" \
-      "jinja2==3.1.3" \
-      "pngquant==3.0.3"
+      "cairosvg==2.7.1" \
+      "jinja2==3.1.3"
 
 .PHONY: build
 build:
