@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout latest push
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python env
         uses: actions/setup-python@v5
@@ -31,13 +33,15 @@ jobs:
           git checkout master
 
       - name: Install Dependencies
-        run: make install-python-packages
+        run: |
+          make install-python-packages
+          sudo apt-get install pngquant
 
       - name: Install MkDocs Insiders
         if: github.event.repository.fork == false
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.4.2-insiders-4.42.0
+        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.5.15-insiders-4.53.3
 
       - name: Deploy release version
         run: |

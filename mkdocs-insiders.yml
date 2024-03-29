@@ -17,14 +17,15 @@ theme:
     - toc.follow
 
 plugins:
-  social:
-    cards_layout: default/accent
-    cards_layout_options:
-      background_color: "#00000000"
-      background_image: layouts/social.png
-      font_family: Open Sans
+  # social:
+  #   cards_layout: default/accent
+  #   cards_layout_options:
+  #     background_color: "#00000000"
+  #     background_image: layouts/social.png
+  #     font_family: Open Sans
   git-committers:
     enabled: !ENV [CI, false]
     repository: ExpressLRS/Docs
     branch: master
-
+  optimize:
+    enabled: !ENV [CI, false]
