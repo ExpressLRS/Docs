@@ -7,7 +7,17 @@ terms_and_conditions_page_path: "info/terms-and-conditions"
 
 theme:
   features:
-    - navigation.path
+    - announce.dismiss
+    - navigation.sections
+    - navigation.tabs
+    - navigation.footer
+    - navigation.tracking
+    - nvavigation.path
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    - content.action.edit
+    - content.action.view
 
 plugins:
   # social:

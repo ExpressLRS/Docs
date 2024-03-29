@@ -61,6 +61,7 @@ theme:
   favicon: assets/favicon.png
   logo: assets/images/logotype.svg
 
+# Plugins
 plugins:
   search:
     lang: en
@@ -91,6 +92,7 @@ extra_css:
   - assets/stylesheets/main.css
   - assets/stylesheets/colors.css
 
+# Analytics
 extra:
   analytics:
     provider: google
@@ -129,6 +131,7 @@ extra:
       name: Send a Donation!
   generator: true
 
+# Markdown Extensions
 markdown_extensions:
   - admonition
   - abbr
@@ -173,6 +176,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+# Navigation
 nav:
   - Home: index.md
   - Quick Start:
