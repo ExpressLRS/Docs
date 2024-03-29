@@ -5,23 +5,28 @@ on:
       - master
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout latest push
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python env
         uses: actions/setup-python@v5
         with:
           python-version: 3.9.16
 
-      - name: Setup Caching
-        uses: actions/cache@v4
+      - name: Set up build cache
+        uses: actions/cache/restore@v4
         with:
-          key: ${{ github.ref }}
+          key: docs-${{ hashfiles('.cache/**') }}
           path: .cache
+          restore-keys: |
+            docs-
 
       - name: Setup Github
         run: |
@@ -31,13 +36,15 @@ jobs:
           git checkout master
 
       - name: Install Dependencies
-        run: make install-python-packages
+        run: |
+          make install-python-packages
+          sudo apt-get install pngquant
 
       - name: Install MkDocs Insiders
         if: github.event.repository.fork == false
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.4.2-insiders-4.42.0
+        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.5.15-insiders-4.53.3
 
       - name: Deploy release version
         run: |
