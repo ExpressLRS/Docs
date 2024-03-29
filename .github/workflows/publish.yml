@@ -46,12 +46,18 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.5.15-insiders-4.53.3
 
-      - name: Deploy release version
+      - name: Deploy Release Version
         run: |
           mkdocs gh-deploy --force --config-file mkdocs-insiders.yml
 
-      - name: Push changes to server
+      - name: Deploy to Server
         run: |
           git checkout gh-pages
           git remote set-url --push origin https://actions:$GITHUB_TOKEN@github.com/ExpressLRS/Docs
           git push -f origin gh-pages
+
+      - name: Save build cache
+        uses: actions/cache/save@v4
+        with:
+          key: docs-${{ hashfiles('.cache/**') }}
+          path: .cache
