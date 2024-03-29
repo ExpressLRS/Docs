@@ -9,11 +9,7 @@ site_description: >-
 # Repository
 repo_name: ExpressLRS/ExpressLRS
 repo_url: https://github.com/ExpressLRS/ExpressLRS/releases/
-edit_uri: "https://github.com/ExpressLRS/Docs/tree/master/docs"
-
-# privacy_policy_page_path: "/info/privacy-policy"
-# licenses_page_path: "/info/licenses"
-# terms_and_conditions_page_path: "info/terms-and-conditions"
+edit_uri: "https://github.com/ExpressLRS/Docs/tree/master/docs/"
 
 # Copyright
 copyright: Copyright &copy; 2021-2023 ExpressLRS
@@ -36,9 +32,13 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.footer
+    - navigation.tracking
     - search.highlight
     - search.suggest
     - toc.follow
+    - content.action.edit
+    - content.action.view
+
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -79,7 +79,13 @@ plugins:
         default: true
   git-revision-date-localized:
     enabled: !ENV [CI, false]
+    type: timeago
     enable_creation_date: true
+
+  git-committers:
+    enabled: !ENV [CI, false]
+    repository: ExpressLRS/Docs
+    branch: master
 
 extra_css:
   - assets/stylesheets/main.css

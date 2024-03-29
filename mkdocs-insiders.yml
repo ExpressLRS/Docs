@@ -8,13 +8,6 @@ terms_and_conditions_page_path: "info/terms-and-conditions"
 theme:
   features:
     - navigation.path
-    - announce.dismiss
-    - navigation.sections
-    - navigation.tabs
-    - navigation.footer
-    - search.highlight
-    - search.suggest
-    - toc.follow
 
 plugins:
   # social:
@@ -23,9 +16,6 @@ plugins:
   #     background_color: "#00000000"
   #     background_image: layouts/social.png
   #     font_family: Open Sans
-  git-committers:
-    enabled: !ENV [CI, false]
-    repository: ExpressLRS/Docs
-    branch: master
+
   optimize:
     enabled: !ENV [CI, false]
