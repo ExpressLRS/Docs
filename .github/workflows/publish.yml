@@ -19,11 +19,13 @@ jobs:
         with:
           python-version: 3.9.16
 
-      - name: Setup Caching
-        uses: actions/cache@v4
+      - name: Set up build cache
+        uses: actions/cache/restore@v4
         with:
-          key: ${{ github.ref }}
+          key: docs-${{ hashfiles('.cache/**') }}
           path: .cache
+          restore-keys: |
+            docs-
 
       - name: Setup Github
         run: |
