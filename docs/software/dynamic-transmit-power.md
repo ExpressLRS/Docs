@@ -92,13 +92,13 @@ Alternatively, a handset special function can be used to generate an audio notif
 * Set a logical switch to `|Δ|>x` / `TPWR` / `1mW` as shown in L04 below. The logical switch triggers when the power changes by at least 1mW.
 
 <figure markdown>
-![OpenTX logical switch page, L04 is set to absolute delta equal or larger than x, TPWR, 1mW](../../assets/images/IMG_9220.png)
+![OpenTX logical switch page, L04 is set to absolute delta equal or larger than x, TPWR, 1mW](../assets/images/IMG_9220.png)
 </figure>
 
 * For a readout when the power changes, set a special function triggered from the logical switch, and assign `Play Value` / `TPWR` / `1x` (SF10 in the picture). If instead you'd prefer the power to be read out periodically, choose a switch to enable the special function, and assign `Play Value` / `TPWR` / (SF11 in the picture, with 10s interval).
 
 <figure markdown>
-![OpenTX Special function page, SF10 is set to L04, Play Value, TPWR, 1x. SF11 is set to SB1 down, Play Value, TPWR, 10s](../../assets/images/IMG_9221.png)
+![OpenTX Special function page, SF10 is set to L04, Play Value, TPWR, 1x. SF11 is set to SB1 down, Play Value, TPWR, 10s](../assets/images/IMG_9221.png)
 </figure>
 
 !!! note "Note"
