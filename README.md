@@ -1,15 +1,25 @@
-# ExpressLRS.org Website
+![Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/banner.png?raw=true)
 
-![License](https://img.shields.io/github/license/ExpressLRS/Website)
-[![Chat](https://img.shields.io/discord/596350022191415318)](http://discord.gg/dS6ReFY)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-253B80.svg)](https://www.paypal.com/donate?hosted_button_id=FLHGG9DAFYQZU)
+<center>
 
-ExpressLRS.org website source code
+[![License](https://img.shields.io/github/license/ExpressLRS/Docs?style=flat-square)](https://github.com/ExpressLRS/Docs/blob/master/LICENSE)
+[![Chat](https://img.shields.io/discord/596350022191415318?color=%235865F2&logo=discord&logoColor=%23FFFFFF&style=flat-square)](https://discord.gg/expresslrs)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ExpressLRS/Docs/publish.yml?logo=github&style=flat-square)](https://github.com/ExpressLRS/Docs/actions)
 
-## Need help? Confused? Join the Community!
+</center>
 
-- [Discord Chat](https://discord.gg/dS6ReFY)
-- [Facebook Group](https://www.facebook.com/groups/636441730280366)
+# ExpressLRS.org Documentation Repository
+
+## Community
+We have both a [Discord Server](https://discord.gg/expresslrs) and [Facebook Group](https://www.facebook.com/groups/636441730280366), which have great support for new users and constant ongoing development discussion
+
+## Support ExpressLRS
+You can support ExpressLRS by contributing code, testing new features, sharing your ideas, or helping others get started. We are exceptionally grateful for those who donate their time to our passion.
+
+If you don't have time to lend a hand in that way but still want to have an impact, consider donating. Donations are used for infrastructure costs and to buy test equipment needed to further the project and make it securely accessible. ExpressLRS accepts donations through Open Collective, which provides recognition of donors and transparency on how that support is utilized.
+
+[![Open Collective backers](https://img.shields.io/opencollective/backers/expresslrs?label=Open%20Collective%20backers&style=flat-square)](https://opencollective.com/expresslrs)
+
 
 ## Installation
 
@@ -31,3 +41,5 @@ docker compose up
 ```
 
 After server is running visit [http://localhost:8000/](http://localhost:8000/).
+
+![](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/community.png?raw=true)
