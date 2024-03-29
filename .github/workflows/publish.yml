@@ -5,6 +5,7 @@ on:
       - master
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
 jobs:
   deploy:
     runs-on: ubuntu-latest
