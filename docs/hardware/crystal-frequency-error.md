@@ -9,13 +9,13 @@ description: A short guide to control the Crystal Oscillator frequency error wit
 
 ExpressLRS TX and RX modules generate RF signals based on an external clock source, such as a crystal oscillator (XO). For example, an ExpressLRS 2.4GHz module has an SX1280/1281 RF transceiver chip with a 52 MHz XO. Theoretically, XO is desired to be 52 MHz exactly to generate an accurate 2.4GHz RF signal. However, a real-world XO has deviation for various reasons, such as manufacturing error and ambient temperature.
 
-Real-world TX and RX modules deviate from the reference frequency, depending on the quality of XO used and circuit design. Despite that, if the frequency difference is within a certain threshold, they can communicate with each other (`working pairs #1 and #2` in the picture). However, the last malfunctioning TX/RX pair will not communicate. In ELRS 2.4g@500Hz, the threshold is around 190 kHz.
+Real-world TX and RX modules deviate from the reference frequency, depending on the quality of XO used and circuit design. Despite that, if the frequency difference is within a certain threshold, they can communicate with each other (`working pairs #1 and #2` in the picture). However, the last malfunctioning TX/RX pair will not communicate. In ELRS 2.4GHz@500Hz, the threshold is around 190 kHz.
 
 <figure markdown>
-![TX/RX frequency mismatch](https://user-images.githubusercontent.com/12195507/155923027-7eda810e-d874-432e-ac87-7833870f50f9.png){ width=927px }
+![TX/RX frequency mismatch](https://user-images.githubusercontent.com/12195507/155923027-7eda810e-d874-432e-ac87-7833870f50f9.png)
 </figure>
 
-This issue may affect both 2.4g and 900M units. To compensate for this, 900MHz modules do online frequency correction, which tunes the RX frequency automatically to the TX unit once connected. Even in this case, if the TX/RX frequency error is too large to make any connection,  the frequency correction won't help. 2.4g modules are more vulnerable to frequency error because they can't do frequency correction due to some technical issues, which has risks of a connection drop due to frequency drift from the change of unit temperature.
+This issue may affect both 2.4GHz and 900MHz units. To compensate for this, 900MHz modules do online frequency correction, which tunes the RX frequency automatically to the TX unit once connected. Even in this case, if the TX/RX frequency error is too large to make any connection,  the frequency correction won't help. 2.4GHz modules are more vulnerable to frequency error because they can't do frequency correction due to some technical issues, which has risks of a connection drop due to frequency drift from the change of unit temperature.
 
 ### Recommendation to ELRS hardware manufacturers
 
@@ -42,7 +42,7 @@ So far, we have established two ways of measuring the XO frequency error:
 The current ELRS `master` branch (after PR #1785) equips a test-tone mode. After flashing a TX/RX unit with `master` branch, get into WiFi update mode, and access `http://10.0.0.1/cw.html` which should look like the figure below:
 
 <figure markdown>
-![A WebUI page for continuous wave test mode](https://user-images.githubusercontent.com/512740/185773219-9e2488d1-f889-4b93-b616-5060e1a14020.png){ width=600px }
+![A WebUI page for continuous wave test mode](https://user-images.githubusercontent.com/512740/185773219-9e2488d1-f889-4b93-b616-5060e1a14020.png){ width=90% }
 </figure>
 
 By clicking the `START CONTINUOUS WAVE` button, the unit will generate a continuous wave at 2440 MHz. By measuring the output frequency with a spectrum analyzer (e.g., HackRF SDR), you can determine how the XO deviates from the reference frequency (2440 MHz). Within 20 ppm (=~50 kHz) absolute error over the entire working operating temperature (from -20 to 85 degC) is expected for a good unit. Up to 40 ppm error (=~100 kHz) is acceptable.
@@ -93,7 +93,7 @@ We measured the frequency deviation of RX modules from various makers and sample
 Please note that they are only a few samples acquired by the devs, which may not represent the entire product batches.
 
 <figure markdown>
-![A bar chart of frequency errors from various TX and RX modules](https://user-images.githubusercontent.com/12195507/163925580-58e2366f-e2ff-4cf5-aa56-9feb324f1086.png){ width=968px }
+![A bar chart of frequency errors from various TX and RX modules](https://user-images.githubusercontent.com/12195507/163925580-58e2366f-e2ff-4cf5-aa56-9feb324f1086.png)
 </figure>
 
 There are a few interesting points in the graph.
@@ -113,15 +113,9 @@ Just to note, we've had some mismatching cases as follows:
 <figure markdown>
 ![The position of two caps to be removed](https://user-images.githubusercontent.com/45789971/148380518-4cf323d7-7741-4081-83c8-5e438a97b62d.png)
 <figcaption>Caps to be removed</figcaption>
-</figure>
-
-<figure markdown>
 ![jumper_aion_caps](https://user-images.githubusercontent.com/12195507/157823663-4f2f8982-0b6d-4626-b4c6-15ba4c24ffed.png)
 <figcaption>Jumper Aion Caps</figcaption>
-</figure>
-
-<figure markdown>
-![flywoo_caps](../assets/images/SimoneFrascarelli.jpg)
+![flywoo_caps](../assets/images/SimoneFrascarelli.jpg){ width=40% }
 <figcaption>Flywoo Caps</figcaption>
 </figure>
 

@@ -32,7 +32,7 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
     Make sure you select this option during installation, it adds git to PATH which is necessary for VSCode cloning (the next step). 
 
 <figure markdown>
-![git install](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/git_path_option.png){ class="center-img" }
+![git install](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/git_path_option.png)
 </figure>
 
 ### Cloning the Repo
@@ -40,7 +40,7 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 * Enter `Git: Clone` 
 
 <figure markdown>
-![clone repo](../assets/images/gitclone.png){ class="center-img" }
+![clone repo](../assets/images/gitclone.png)
 </figure>
 
 * Click that! 👈 
@@ -51,11 +51,11 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 Before we can do any building, you need to select a release build of ELRS. For example, release [0.1.0-RC1](https://github.com/AlessandroAU/ExpressLRS/releases/tag/0.1.0-RC1). In Visual Studio Code select that tag. The location of the selector is shown below. 🖱️ 
 
 <figure markdown>
-![latest release](../assets/images/src.png){ class="center-img" }
+![latest release](../assets/images/src.png)
 </figure>
 
 <figure markdown>
-![branch selecttion](../assets/images/selector.png){ class="center-img" }
+![branch selecttion](../assets/images/selector.png)
 </figure>
 
 Click the selector, and then type in the name of the tag, in this case `0.1.0-RC1`. 

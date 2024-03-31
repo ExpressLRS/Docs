@@ -23,13 +23,13 @@ ExpressLRS receivers can communicate using a variety of serial protocols:
 On a serial based receiver or a PWM receiver with output pins configured for serial communication (as shown below), the protocol used for serial communication can be selected from the receiver WebUI in the `Serial Protocol` section.
 
 <figure markdown>
-![pwm Serial Protocols](../assets/images/pwm-serial-protocol.png){ class="center-img" }
+![pwm Serial Protocols](../assets/images/pwm-serial-protocol.png)
 </figure>
 
 Alternately, in the Lua script, enter `> Other Devices` and change the value of the `Protocol` field.
 
 <figure markdown>
-![Lua Protocol Selection](../assets/screenshots/receiver-protocol.png){ class="center-img" }
+![Lua Protocol Selection](../assets/screenshots/receiver-protocol.png)
 </figure>
 
 ## PWM Receiver Serial Pin Selection
@@ -44,7 +44,7 @@ A PWM receiver may also be configured to communicate via serial on two of its pi
 Start the WebUI on the receiver and go to the `Model` tab. From there you will be able to select `Serial TX` or `Serial RX` on an output pin that supports serial communication.
 
 <figure markdown>
-![webui protocol selection](../assets/images/receiver-serial.png){ class="center-img" }
+![webui protocol selection](../assets/images/receiver-serial.png)
 </figure>
 
 Once you've configured the output pins to allow Serial communications you will be presented with a new section, `Serial Protocol`, underneath the `PWM Output` section. In this section you can choose the serial protocol you wish to use.
@@ -55,7 +55,7 @@ When connected to the receiver with the transmitter, enter the ExpressLRS Lua sc
 `> Output Mapping`. In that screen select the output channel/pin that supports serial (either Serial TX or RX) and set that as the output mode. Setting one automatically enables the other matching pin for serial communications.
 
 <figure markdown>
-![output mapping serial](../assets/screenshots/receiver-serial.png){ class="center-img" }
+![output mapping serial](../assets/screenshots/receiver-serial.png)
 </figure>
 
 ## SUMD Notes
@@ -65,7 +65,7 @@ SUMD is the Graupner HoTT bus protocol used to transmit multiple channel data ov
 As already stated many times in this manual, ExpressLRS expects AUX1 (channel 5) to control the arm state. This may lead to a conflict using serial protocols like SUMD in conjunction with devices having fixed channel assignments. To circumvent the problem, SUMD implements a channel remapping by swapping channels 5 and 8 in its serial output:
 
 <figure markdown>
-![sumd](../assets/images/sumd1.png){ class="center-img" }
+![sumd](../assets/images/sumd1.png)
 </figure>
 
 This opens the possibility to assign a linear output channel order for channels 1 to 7 using an appropriate OpenTX/EdgeTX mixer setup.
@@ -75,13 +75,13 @@ Example: Microbeast flybarless controller without RPM governor. (Follow the Micr
 Microbeast expected channel order for SRXL/SUMD:
 
 <figure markdown>
-![sumd ch order](../assets/images/sumd2.png){class="center-img" }
+![sumd ch order](../assets/images/sumd2.png)
 </figure>
 
 Required OpenTX/EdgeTX mixer setup to satisfy the Microbeast expected channel order:
 
 <figure markdown>
-![sumd mixer](../assets/images/sumd3.png){ class="center-img" }
+![sumd mixer](../assets/images/sumd3.png)
 </figure>
 
 ## DJI RS2 Pro Notes

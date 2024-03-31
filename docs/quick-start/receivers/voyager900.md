@@ -9,7 +9,7 @@ template: main.html
 There are more `ESP8285` based RXes in the market due to massive shortage of `STM32` Chips. These support WiFi updating, and can be easily distinguished with a few tricks. The simplest way to tell is if on the rear of the RX (the side without the U.fl/SMD antenna) there is a large white component with the label **RainSun** (pictured below). If this is not there, you have an STM32 based target, if it is you have an `_ESP_` target, and can update using Wifi!
 
 <figure markdown>
-![RainSun Antenna](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/antenna.jpg?raw=true){ width=30% style="display: block; margin-left: auto; margin-right: auto;" }
+![RainSun Antenna](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/antenna.jpg?raw=true){ width=30% }
 <figcaption>RainSun Antenna</figcaption>
 </figure>
 
@@ -22,7 +22,7 @@ There are more `ESP8285` based RXes in the market due to massive shortage of `ST
     There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX Module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
 
 <figure markdown>
-![NamimnoRC Voyager](../../assets/images/Pinout-Voyager.png)
+![NamimnoRC Voyager](../../assets/images/Pinout-Voyager.png){ width=80% }
 </figure>
 
 The image above shows the receiver pinouts and their connections. As we're dealing with a UART connection, RX on the receiver goes to a TX pad on the FC, and TX on the receiver goes to an uninverted RX pad on the FC.
