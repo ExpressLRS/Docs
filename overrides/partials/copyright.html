@@ -23,29 +23,12 @@
 <!-- Copyright and theme information -->
 <div class="md-copyright">
   {% if config.copyright %}
-    <div class="md-copyright__highlight">
-      {{ config.copyright }}
-    </div>
+  <div class="md-copyright__highlight">{{ config.copyright }}</div>
   {% endif %}
 
-  <a
-    href="{{ config.privacy_policy_page_path | url }}"
-    target="_blank"
-  >
-    Privacy Policy
-  </a>
+  <a href="/info/privacy-policy" target="_blank"> Privacy Policy </a>
   &#8226;
-  <a
-    href="{{ config.licenses_page_path | url }}"
-    target="_blank"
-  >
-    Licenses
-  </a>
+  <a href="/info/licenses" target="_blank"> Licenses </a>
   &#8226;
-  <a
-    href="{{ config.terms_and_conditions_page_path | url }}"
-    target="_blank"
-  >
-    Terms & Conditions
-  </a>
+  <a href="/info/terms-and-conditions" target="_blank"> Terms & Conditions </a>
 </div>
