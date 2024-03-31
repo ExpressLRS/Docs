@@ -20,7 +20,7 @@ template: main.html
 There are more `ESP8285` based RXes in the market due to massive shortage of `STM32` Chips. These support WiFi updating, and can be easily distinguished with a few tricks. The simplest way to tell is if on the rear of the RX (the side without the U.fl/SMD antenna) there is a large white component with the label **RainSun** (pictured below). If this is not there, you have an STM32 based target, if it is you have an `_ESP_` target, and can update using Wifi!
 
 <figure markdown>
-<img style="display: block; margin-left: auto; margin-right: auto;" src = "https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/antenna.jpg?raw=true" width = "30%">
+![RainSun Antenna](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/antenna.jpg?raw=true){ width=30% }
 <figcaption>RainSun Antenna</figcaption>
 </figure>
 
@@ -33,22 +33,13 @@ There are more `ESP8285` based RXes in the market due to massive shortage of `ST
     There are Flight Controllers that will pull the RX pads `LOW` which will put the ESP-based receivers into `Bootloader Mode` unintentionally. A solid LED light on these receivers even with the TX Module off is a sign they are in Bootloader Mode. If this is the case, rewire the receiver to a different UART.
 
 <figure markdown>
-![NamimnoRC Flash](../../assets/images/Pinout-Flash.png)
+![NamimnoRC Flash](../../assets/images/Pinout-Flash.png){ width=80% }
 <figcaption>Flash v1; ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![NamimnoRC Flash V2 SMD](../../assets/images/Namimno-Flash-RX-V2_S.png)
+![NamimnoRC Flash V2 SMD](../../assets/images/Namimno-Flash-RX-V2_S.png){ width=80% }
 <figcaption>Flash V2 SMD; ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![NamimnoRC Flash V2 T](../../assets/images/Namimno-Flash-RX-V2_T.png)
+![NamimnoRC Flash V2 T](../../assets/images/Namimno-Flash-RX-V2_T.png){ width=80% }
 <figcaption>Flash V2 T-Dipole; ESP-based</figcaption>
-</figure>
-
-<figure markdown>
-![NamimnoRC Flash V2 Diversity](../../assets/images/Namimno-Flash-RX-V2_D.png)
+![NamimnoRC Flash V2 Diversity](../../assets/images/Namimno-Flash-RX-V2_D.png){ width=80% }
 <figcaption>Flash V2 Diversity; ESP-based</figcaption>
 </figure>
 

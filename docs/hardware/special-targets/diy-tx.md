@@ -17,7 +17,7 @@ Possibly one of the biggest benefits of using `ExpressLRS` is custom hardware!
 All of the info on this topic can be found [here](https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/TX_SX1280)
 
 <figure markdown>
-<img class="center-img" src="../../../assets/images/diytx0.jpg" width=40%>
+![custom tx](../../assets/images/diytx0.jpg){ width=50% }
 </figure>
 
 ### Custom Super Slim ESP 2.4 GHz TX (for lite module bay)
@@ -25,7 +25,7 @@ All of the info on this topic can be found [here](https://github.com/ExpressLRS/
 The super slim is an evolution of the slim. It uses the same base hardware as the JR size one. It's the same size as an R9M Lite, and fits in all handsets with a lite module bay such as the X-Lite, X9 Lite, and Tango 2 (with the proper adapter). The rest of the info can be found [here](https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/TX_SX1280_Super_Slim)
 
 <figure markdown>
-<img class="center-img" src="../../../assets/images/diytx1.jpg" width=40%>
+![custom tx slim](../../assets/images/diytx1.jpg){ width=50% }
 </figure>
 
 ### Custom 900 MHz TX (not built anymore)

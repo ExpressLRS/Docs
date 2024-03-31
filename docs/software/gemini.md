@@ -3,7 +3,7 @@ template: main.html
 description: ExpressLRS Gemini is a Dual Channel 2.4GHz or 900MHz System. Gemini is not Dual Band.
 ---
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 ## What is Gemini?
 
