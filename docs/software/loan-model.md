@@ -3,9 +3,7 @@ template: main.html
 description: Lend your ExpressLRS models to your friends without having to reflash Binding Phrase every time.
 ---
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
-
-## Loan Model
+![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 !!! note "Scenario"
     You are flying with your buddies and your friend has crashed all his models. You'd like to be able to lend him one of yours but you

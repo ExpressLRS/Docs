@@ -28,11 +28,8 @@ template: main.html
         - Wire `3.3v`, `GND`, `CLK`, and `DIO` to their respective pins on your part from the StLink. (You can power with the StLink but in the second image, the radio is used to power the module). 
 
         <figure markdown>
-        <img class="center-img" src="https://i.imgur.com/58wxHZe.png" width = "49%">
-        </figure>
-
-        <figure markdown>
-        <img class="center-img" src="https://i.imgur.com/vztruRj.png" width = "49%">
+        ![STLink Wiring Guide](https://i.imgur.com/58wxHZe.png){ width=45% }
+        ![STLink Radio-powered](https://i.imgur.com/vztruRj.png){ width=45% }
         </figure>
 
     3. Connect your STLink V2 dongle to your Computer's USB Port. Make sure it is being detected correctly.

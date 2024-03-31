@@ -3,7 +3,7 @@ template: main.html
 description: To optimize the performance of ExpressLRS, it has different Switch Modes explained in detail here.
 ---
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 !!! warning "WARNING" 
     **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.

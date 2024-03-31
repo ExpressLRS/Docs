@@ -3,14 +3,14 @@ template: main.html
 description: ExpressLRS can retain a per-Model configuration eliminating the need to tweak your settings every time you change models in the radio.
 ---
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 ## Model Configuration
 
 ExpressLRS stores separate configurations for each CRSF Receiver number configured in OpenTX/EdgeTX. This can be used with or without model matching - for example, a single drone being used for long-range and freestyle can have its RF params switched quickly by changing the model on the radio. The value is shown highlighted below on a TX16s.
 
 <figure markdown>
-<img class="center-img" src="../../assets/images/modelcfg.jpg" width="50%">
+![model config](../assets/images/modelcfg.jpg){ width=80% }
 </figure>
 
 The parameters stored per-Receiver number are:

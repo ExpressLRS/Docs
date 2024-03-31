@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-<img src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png">
+![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 ## General Instructions
 
