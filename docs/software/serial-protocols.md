@@ -13,6 +13,7 @@ ExpressLRS receivers can communicate using a variety of serial protocols:
 - SBUS + Inverted
 - SUMD
 - DJI RS2 Pro (Modified SBUS with pre-configured limits)
+- HoTT Telemetry
 
 ## Receiver Protocol Selection
 
@@ -98,3 +99,90 @@ Here's a few things to be aware of when using this Receiver Mode:
 - ETX Outputs for the channels should be -100 to 100.
 
 For more information, please see [PR 2140](https://github.com/ExpressLRS/ExpressLRS/pull/2140)
+
+## HoTT Telemetry Notes
+
+The HoTT Telemetry Serial Protocol allows to connect multiple Graupner HoTT telemetry devices and intends to support the growing community of ELRS enthusiasts flying fixed wing or helicopter models by providing access to commercially available external telemetry devices without the use of flight controllers or DIY data hubs.
+
+A typical use case for an electric fixed wing model could make use of a the electric Swiss knife SM Unisens-E to downlink flight battery data like voltage, current, consumed capacity and flight data like altitude, vertical velocity while an electric glider pilot could choose a YGE or Graupner telemetry ESC to downlink flight battery data and a GPS/Vario to downlink flight data like GPS position, GPS speed, GPS (MSL) altitude together with barometric vertical velocity and barometric altitude.
+
+HoTT Telemetry example setup - GPS/Vario and Voltage Module connected to ER6:
+
+<figure markdown>
+![HoTT Telemetry example setup - GPS/Vario and Voltage Module connected to ER6](../assets/images/HoTT-TLM-P1.png)
+</figure>
+
+Tested receivers:
+
+- BetaFPV Nano RX 2.4 GHz
+- BetaFPV SuperD 900Mhz
+- BetaFPV SuperP 14ch
+- RM ER6 (G and V variants too)
+- RM ER8 (G and V variants too)
+- Happymodel EPW6
+
+Tested telemetry devices (OEM and 3rd party):
+
+- Graupner 33600 GPS/Vario
+- Graupner 336001 Vario
+- Graupner 33631 Voltage Module
+- Graupner S3046 ESC +T50 (all other +T ESCs work too)
+- SM GPSLogger 3
+- SM Unisens-E
+- SM Microvario (with TEK support)
+- YGE 35LVT. ESC (all other YGE Telemetry ESCs will work toos)
+- VSpeak Vario Pro
+- X-Vario 2
+
+HoTT Telemetry protocol is running on a multi-device capable single wire half duplex bus and requires a bus master to orchestrate the communication between the bus master and the connected devices. The ELRS receiver acts as the bus master communicating with the devices. The bus master uses selected telemetry data to be forward to the ELRS CRSF protocol based over-the-air telemetry down link. The list of additional telemetry sensors provided shows the telemetry sensors available for EdgeTX depending on the specific devices connected to the HoTT Telemetry bus:
+
+- Baro altitude (AGL)
+- Baro vertical speed (Vario)
+
+- GPS latitude
+- GPS longitude
+- GPS groundspeed
+- GPS heading
+- GPS altitude (MSL)
+- GPS number of satellites
+
+- Batt voltage
+- Batt current
+- Batt capacity
+- Batt remaining
+
+To set up HoTT Telemetry the following is required:
+
+- Serial interface enabled (default on some receivers, other receivers need enabling using the WebUI or LUA script)
+- Serial Protocol set to HoTT Telemetry
+- Adapter cable with a Shottky diode (e.g. BAT43) to allow the serial interface to act as single wire half duplex bus  
+
+The adapter cable is easy to DIY following this schematic:
+
+<figure markdown>
+![Adapter cable](../assets/images/HoTT-TLM-P2.png)
+</figure>
+
+Example realization of the adapter cable:
+
+<figure markdown>
+![Adapter cable realization](../assets/images/HoTT-TLM-P3.png)
+</figure>
+
+Example setup BetaFPV SuperP 14ch. Don't forget to enable Serial on ch13/14 using the WebUI or LUA script
+
+<figure markdown>
+![SuperP 2](../assets/images/HoTT-TLM-P6.png)
+</figure>
+<figure markdown>
+![SuperP 1](../assets/images/HoTT-TLM-P4.png)
+</figure>
+
+
+For Radiomaster RM ER6 and ER8 receivers use the 4-pin CRSF JST connector and the Radiomaster provided pigtail. Serial is already enabled by default.
+
+<figure markdown>
+![RM ER6 and ER8](../assets/images/HoTT-TLM-P5.png)
+</figure>
+
+
