@@ -102,11 +102,11 @@ For more information, please see [PR 2140](https://github.com/ExpressLRS/Express
 
 ## HoTT Telemetry Notes
 
-The HoTT Telemetry Serial Protocol allows to connect multiple Graupner HoTT telemetry devices and intends to support the growing community of ELRS enthusiasts flying fixed wing or helicopter models by providing access to commercially available external telemetry devices without the use of flight controllers or DIY data hubs.
+The HoTT Telemetry Serial Protocol allows to connect multiple Graupner HoTT Telemetry devices and intends to support the growing community of ELRS enthusiasts flying fixed wing or helicopter models by providing access to commercially available external telemetry devices without the use of flight controllers or DIY data hubs.
 
-A typical use case for an electric fixed wing model could make use of a the electric Swiss knife SM Unisens-E to downlink flight battery data like voltage, current, consumed capacity and flight data like altitude, vertical velocity while an electric glider pilot could choose a YGE or Graupner telemetry ESC to downlink flight battery data and a GPS/Vario to downlink flight data like GPS position, GPS speed, GPS (MSL) altitude together with barometric vertical velocity and barometric altitude.
+A typical use case for an electric fixed wing model could make use of a the electric Swiss knife SM Unisens-E to downlink flight battery data like voltage, current, consumed capacity and flight data like altitude, vertical velocity while an electric glider pilot could choose a YGE or Graupner Telemetry ESC to downlink flight battery data and a GPS/Vario to downlink flight data like GPS position, GPS speed, GPS (MSL) altitude together with barometric vertical velocity and barometric altitude.
 
-HoTT Telemetry example setup - GPS/Vario and Voltage Module connected to ER6:
+HoTT Telemetry example setup - GPS/Vario and Voltage Module connected to a Radiomaster ER6 receiver:
 
 <figure markdown>
 ![HoTT Telemetry example setup - GPS/Vario and Voltage Module connected to ER6](../assets/images/HoTT-TLM-P1.png)
@@ -114,14 +114,19 @@ HoTT Telemetry example setup - GPS/Vario and Voltage Module connected to ER6:
 
 Tested receivers:
 
+ESP8285 platform
+
 - BetaFPV Nano RX 2.4 GHz
+- Happymodel EPW6
+
+ESP32 platform
+
 - BetaFPV SuperD 900Mhz
 - BetaFPV SuperP 14ch
 - RM ER6 (G and V variants too)
 - RM ER8 (G and V variants too)
-- Happymodel EPW6
 
-Tested telemetry devices (OEM and 3rd party):
+Tested HoTT Telemetry devices (OEM and 3rd party):
 
 - Graupner 33600 GPS/Vario
 - Graupner 336001 Vario
@@ -134,7 +139,7 @@ Tested telemetry devices (OEM and 3rd party):
 - VSpeak Vario Pro
 - X-Vario 2
 
-HoTT Telemetry protocol is running on a multi-device capable single wire half duplex bus and requires a bus master to orchestrate the communication between the bus master and the connected devices. The ELRS receiver acts as the bus master communicating with the devices. The bus master uses selected telemetry data to be forward to the ELRS CRSF protocol based over-the-air telemetry down link. The list of additional telemetry sensors provided shows the telemetry sensors available for EdgeTX depending on the specific devices connected to the HoTT Telemetry bus:
+HoTT Telemetry protocol is running on a multi-device capable single wire half duplex bus and requires a bus master to orchestrate the communication between the bus master and the connected devices. The ELRS receiver acts as the bus master communicating with the devices. The bus master receives selected HoTT Telemetry data to be forward to the ELRS CRSF protocol based over-the-air telemetry down link. The list of additional telemetry sensors provided shows the telemetry sensors available for EdgeTX depending on the HoTT Telemetry devices connected to the HoTT Telemetry bus:
 
 - Baro altitude (AGL)
 - Baro vertical speed (Vario)
@@ -151,38 +156,48 @@ HoTT Telemetry protocol is running on a multi-device capable single wire half du
 - Batt capacity
 - Batt remaining
 
-To set up HoTT Telemetry the following is required:
+Requirements for using HoTT Telemetry:
 
-- Serial interface enabled (default on some receivers, other receivers need enabling using the WebUI or LUA script)
-- Serial Protocol set to HoTT Telemetry
-- Adapter cable with a Shottky diode (e.g. BAT43) to allow the serial interface to act as single wire half duplex bus  
+- The Serial port must be enabled. The Serial port is enabled by default on some receivers, e.g. Radiomaster ER6x/ER8x receivers. On other receivers the Serial port must be enabled using the WebUI or LUA script, see above section WebUI and Lua Script.
+- The Serial Protocol must be set to HoTT Telemetry, see above section WebUI and Lua Script.
+- On some receivers adapter cables are required.
 
-The adapter cable is easy to DIY following this schematic:
+Adapter cables
+
+If an adapter cable is required depends on the platform the receiver is based on (ESP8285 or ESP32) and the way the serial port is designed on the specific receiver. Radiomaster uses a dedicated JST connector, on other receivers including the BetaFPV SuperP one or two of the PWM servo connectors are used.
+
+ESP32 based receivers with Serial on dedicated PWM servo connectors like the BetaFPV SuperP 14ch:
+
+- No adapter cable is required. HoTT sensors can be directly connected to the PWM servo connector dedicated for Serial TX.
+
+ESP32 based receivers with Serial on the JST connector.
+
+- Radiomaster ER6x/ER8x need a JST to JR adapter. The JST pig tail Radiomaster included in the package can be used.
+- The SuperP 14ch also has a JST connector but it can't be used a Serial port, see the first ESP32 category.
+
+<figure markdown>
+![RM ER6 and ER8](../assets/images/HoTT-TLM-P5.png)
+</figure>
+<figure markdown>
+![Adapter cable no diode](../assets/images/HoTT-TLM-P7.png)
+</figure>
+
+ESP8285 based receivers:
+
+- Require a Shottky diode between Serial RX and Serial TX:  
 
 <figure markdown>
 ![Adapter cable](../assets/images/HoTT-TLM-P2.png)
 </figure>
 
-Example realization of the adapter cable:
+Example realization of an adapter cable with diode for ESP8285 non-PWM receivers like the BetaFPV Nano RX:
 
 <figure markdown>
 ![Adapter cable realization](../assets/images/HoTT-TLM-P3.png)
 </figure>
 
-Example setup BetaFPV SuperP 14ch. Don't forget to enable Serial on ch13/14 using the WebUI or LUA script
+Example adapter cable setup for ESP8285 PWM receivers like the Happymodel EPW6:
 
 <figure markdown>
 ![SuperP 2](../assets/images/HoTT-TLM-P6.png)
 </figure>
-<figure markdown>
-![SuperP 1](../assets/images/HoTT-TLM-P4.png)
-</figure>
-
-
-For Radiomaster RM ER6 and ER8 receivers use the 4-pin CRSF JST connector and the Radiomaster provided pigtail. Serial is already enabled by default.
-
-<figure markdown>
-![RM ER6 and ER8](../assets/images/HoTT-TLM-P5.png)
-</figure>
-
-
