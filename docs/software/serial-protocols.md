@@ -131,11 +131,11 @@ Tested HoTT Telemetry devices (OEM and 3rd party):
 - Graupner 33600 GPS/Vario
 - Graupner 336001 Vario
 - Graupner 33631 Voltage Module
-- Graupner S3046 ESC +T50 (all other +T ESCs work too)
+- Graupner S3046 ESC +T50 (all other +T ESCs will work too)
 - SM GPSLogger 3
 - SM Unisens-E
 - SM Microvario (with TEK support)
-- YGE 35LVT. ESC (all other YGE Telemetry ESCs will work toos)
+- YGE 35LVT. ESC (all other YGE Telemetry ESCs will work too)
 - VSpeak Vario Pro
 - X-Vario 2
 
