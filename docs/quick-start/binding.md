@@ -128,7 +128,7 @@ The procedure is as follows:
 
 With [PR#2542](https://github.com/ExpressLRS/ExpressLRS/pull/2542) being part of the 3.4.0 update, users now have the following methods to bind an ExpressLRS receiver with a TX module:
 
-1. Binding Phrase, flashed or set (via the webUI) into the devices.
+1. Binding Phrase, flashed or set (via the WebUI) into the devices.
 2. 3x Power Cycle, Traditional Binding.
 3. Bind Receiver button in Betaflight Configurator 10.10 Receiver Tab (`bind_rx` CLI command also works). This will ONLY work if your flight controller is flashed with Betaflight 4.5.0.
 4. 1.5s Button Press on the Receiver itself.
