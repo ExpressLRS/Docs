@@ -141,6 +141,8 @@ With the last 3 methods, the Receiver LED will blink twice, then cycles, until t
 
 Receivers, however they are bound to a TX before, can be put into Bind Mode using any of the 3 methods above. This means that even if the Receiver has been flashed or set with a Binding Phrase, users can put them into Binding Mode any time. The Bind will persist or stay with the receiver until another Binding Procedure is done, with any of the methods above.
 
+To cancel the Bind Mode, a reboot or power-cycle is needed, or Binding the receiver with a Transmitter. If Bind Mode is cancelled, the old Binding Info will be used.
+
 A Lua Script or WebUI option can be toggled to make the Bind volatile upon power-cycle or reboot. Volatile Bind means that the Bind is only valid while the receiver is powered up. Once the receiver is power-cycled or rebooted, the Bind information is wiped and the receiver will boot up in Bind Mode. 
 
 ## Connection Check
