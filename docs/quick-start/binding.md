@@ -5,23 +5,29 @@ description: Binding ExpressLRS is easy! With the Binding Phrase, no button pres
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)
 
-??? note "Compatibility (click/tap to expand)"
-    The first number in the Version string should match between a TX Module and a Receiver. Examples:
+## Compatibility Check
 
-    - a TX Module with version string of 3.1.2 will sync and work with a Receiver with firmware version 3.0.1
-    - a TX Module with version string of 3.2.0 will NOT sync or bind with a Receiver with firmware version 2.4.0
-    - a Receiver with version string of 3.1.2 will sync and work with a TX Module with firmware version 3.0.1
-    - a Receiver with version string of 3.2.0 will NOT sync or bind with a TX Module with firmware version 2.4.0
-    - SPI-based Receivers on (official) Betaflight 4.3.1 and older will only sync or bind with ExpressLRS 2.x firmware
-    - SPI-based Receivers on Betaflight 4.4.0 and newer will only sync or bind with ExpressLRS 3.x firmware
+The first number in the Version string should match between a TX Module and a Receiver. 
+    
+Examples:
 
-    If your firmware versions are incompatible, NONE of the methods below will work. 
+- a TX Module with version string of 3.1.2 will sync and work with a Receiver with firmware version 3.0.1
+- a TX Module with version string of 3.2.0 will NOT sync or bind with a Receiver with firmware version 2.4.0
+- a Receiver with version string of 3.1.2 will sync and work with a TX Module with firmware version 3.0.1
+- a Receiver with version string of 3.2.0 will NOT sync or bind with a TX Module with firmware version 2.4.0
+- SPI-based Receivers on (official) Betaflight 4.3.1 and older will only sync or bind with ExpressLRS 2.x firmware
+- SPI-based Receivers on Betaflight 4.4.0 and newer will only sync or bind with ExpressLRS 3.x firmware
 
-    See these pages on how to check the firmware version on your ExpressLRS devices:
+If your firmware versions are incompatible, NONE of the methods below will work. 
 
-    - [TX Modules](../quick-start/transmitters/firmware-version.md)
-    - [Receivers](../quick-start/receivers/firmware-version.md)
-    - [SPI Receivers](../hardware/spi-receivers.md)
+See these pages on how to check the firmware version on your ExpressLRS devices:
+
+- [TX Modules](../quick-start/transmitters/firmware-version.md)
+- [Receivers](../quick-start/receivers/firmware-version.md)
+- [SPI Receivers](../hardware/spi-receivers.md)
+
+
+## How to Bind ExpressLRS Devices Together
 
 There are **TWO** methods to Bind/Sync an ExpressLRS TX Module and a Receiver:
 
@@ -117,6 +123,25 @@ The procedure is as follows:
     <figure markdown>
     ![CONNECTED](../assets/images/LED_ON.gif)
     </figure>
+
+## Updated Binding Procedure since ExpressLRS 3.4.0
+
+With [PR#2542](https://github.com/ExpressLRS/ExpressLRS/pull/2542) being part of the 3.4.0 update, users now have the following methods to bind an ExpressLRS receiver with a TX module:
+
+1. Binding Phrase, flashed or set (via the webUI) into the devices.
+2. 3x Power Cycle, Traditional Binding.
+3. Bind Receiver button in Betaflight Configurator 10.10 Receiver Tab (`bind_rx` CLI command also works). This will ONLY work if your flight controller is flashed with Betaflight 4.5.0.
+4. 1.5s Button Press on the Receiver itself.
+
+With the last 3 methods, the Receiver LED will blink twice, then cycles, until the Bind is established indicated by a solid LED light.
+
+<figure markdown>
+![LEDSEQ_BINDING](../assets/images/LEDSEQ_BINDING_10_10_10_100.gif)
+</figure>
+
+Receivers, however they are bound to a TX before, can be put into Bind Mode using any of the 3 methods above. This means that even if the Receiver has been flashed or set with a Binding Phrase, users can put them into Binding Mode any time. The Bind will persist or stay with the receiver until another Binding Procedure is done, with any of the methods above.
+
+A Lua Script or WebUI option can be toggled to make the Bind volatile upon power-cycle or reboot. Volatile Bind means that the Bind is only valid while the receiver is powered up. Once the receiver is power-cycled or rebooted, the Bind information is wiped and the receiver will boot up in Bind Mode. 
 
 ## Connection Check
 
