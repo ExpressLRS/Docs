@@ -355,7 +355,6 @@ The `Receiver Mode` setting is only available for True Diversity receivers. Thes
 
 * `Gemini` - Receive on two RX antennas simultaneously at different frequency 40MHz apart (for 2.4GHz) or ~10MHz apart (for 900MHz). Best used when you have a Gemini-capable TX Module.
 * `Diversity` - Both Antennas will be active. Receiver will switch to the antenna with better RSSI.
-* `Ant1/Ant2` - Only one antenna will be working to receive RC commands (and send Telemetry).
 
 ### Tlm Power
 
