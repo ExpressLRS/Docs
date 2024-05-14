@@ -426,7 +426,6 @@ MSL
 Unisens
 Vario
 YGE
-Radiomaster
 Vario
 EPW
 SuperP
@@ -440,4 +439,3 @@ AGL
 Baro
 groundspeed
 Batt
-SuperP
