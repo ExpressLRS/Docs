@@ -150,6 +150,8 @@ HoTT Telemetry protocol is running on a multi-device capable single wire half du
 - GPS heading
 - GPS altitude (MSL)
 - GPS number of satellites
+- GPS distance - possible if added as EdgeTX calculated sensor
+- GPS traveled distance - possible with LUA script
 
 - Batt voltage
 - Batt current
