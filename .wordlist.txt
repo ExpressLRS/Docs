@@ -41,6 +41,7 @@ Configs
 Configurator
 Configurator's
 CrazyF
+Crossband
 CubeProgrammer
 Cura
 DFU
@@ -91,6 +92,7 @@ Freestylers
 FreqCorrection
 GCS
 GDPR
+GemX
 GEPRC
 GH
 GND
