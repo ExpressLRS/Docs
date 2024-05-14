@@ -287,7 +287,7 @@ For more information, see the [Backpack Guide](../../hardware/backpack/esp-backp
 ### Bind
 
 !!! info "Take Notice!"
-    This command will only work on receivers that are already in `Bind Mode` (indicated by two blinks LED pattern). Receivers with a binding phrase set/flashed into them will NOT EVER go into this Bind Mode, and thus this command will not do anything.
+    This command will only work on receivers that are already in `Bind Mode` (indicated by two blinks LED pattern). Receivers (with version 3.3.2 and earlier) flashed or set with a binding phrase will NOT go into this Bind Mode, and thus this command will not do anything.
 
     Devices with the same binding phrase and compatible firmware versions should automatically sync/bind upon power up.
 
@@ -382,9 +382,13 @@ Team Racing allows selection between multiple connected models, failsafing all u
 * `Channel` (default CH11 / AUX7) TeamRace Channel - The channel that is checked on the receiver to determine the currently selected model. Has no effect if the TeamRace Position is set to Disabled.
 * `Position` (default Disabled) TeamRace Position - Which position of the TeamRace Channel activates this model. 6-position switches are supported (1-6) as well as Low/Mid/High for using a 2 or 3-position switch.
 
+This is deprecated and removed in ExpressLRS 3.4.0.
+
 ### Loan Model/Return Model
 
 These commands allow the user to Loan/Return the model. For more information, see the [Loan Model](../../software/loan-model.md) guide.
+
+This is deprecated and removed in ExpressLRS 3.4.0 in favor of the new Binding Procedures. See the [binding](../binding.md) page for details.
 
 ### Output Mapping
 
@@ -400,6 +404,19 @@ This folder is only available to PWM receivers. This will allow users to set opt
 * `Invert` - Set this option to On or Off to toggle the direction for the Output Channel.
 
 For more information, see [PWM Receivers](../../hardware/pwm-receivers.md) page.
+
+### Bind Storage
+
+* `Persistent` - Binding info is kept across power-cycles. 
+* `Volatile` - Binding info is forgotten after a power-cycle.
+
+This option is available on ExpressLRS 3.4.0 and newer. See the details [here](https://github.com/ExpressLRS/ExpressLRS/pull/2542).
+
+### Enter Bind Mode command
+
+This will put the receiver into Bind Mode. It works even if the receiver is already flashed with a binding phrase or already bound traditionally.
+
+This command is available on ExpressLRS 3.4.0 and newer. See the details [here](https://github.com/ExpressLRS/ExpressLRS/pull/2542).
 
 ### Model ID
 
