@@ -139,8 +139,18 @@ These are shown as `Packet Rate` and `Telem Ratio` in the Lua script, which allo
 
 	- `25Hz, 50Hz, 100Hz & 200Hz`: LoRa-based options. Higher means lower latency at the expense of sensitivity. Since v1.0.
 	- `100Hz Full` :new: : Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
+    - `250Hz` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+    - `200Hz Full` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
 
-	The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.
+    The following options are available for `GemX`:
+
+    - `X150Hz`:new: : Crossband mode, combining 900MHz and 2.4GHz in Gemini Mode.
+    - `X100Hz Full` :new: : Crossband mode, combining 900MHz and 2.4GHz in Gemini Mode, Full Resolution with 8ch/12ch/16 Switch Mode options
+
+    !!! info "GemX is a 3.4.0 feature"
+        Gemini Crossband (GemX) is available on select hardware, requiring the LR1121 RF Chip. GemX is an ExpressLRS 3.4.0 feature. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+
+	The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI dBm value where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.
 
 !!! warning "WARNING"
 	Never change the packet rate while flying as this **FORCES A DISCONNECT** between the TX and RX. 
