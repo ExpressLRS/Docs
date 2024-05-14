@@ -174,8 +174,8 @@ ESP32 based receivers with Serial on dedicated PWM servo connectors like the Bet
 
 ESP32 based receivers with Serial on the JST connector.
 
-- RadioMaster ER6x/ER8x need a JST to JR adapter. The JST pig tail RadioMaster included in the package can be used.
-- The SuperP 14ch also has a JST connector but it can't be used a Serial port, see the first ESP32 category.
+- RadioMaster ER6x/ER8x need a JST to JR adapter. The JST pigtail RadioMaster included in the package can be used.
+- Caveat: the SuperP 14ch also has a JST connector but it can't be used as a Serial port, see the first ESP32 category.
 
 <figure markdown>
 ![RM ER6 and ER8](../assets/images/HoTT-TLM-P5.png)
