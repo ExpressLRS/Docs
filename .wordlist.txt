@@ -429,7 +429,6 @@ YGE
 Radiomaster
 Vario
 EPW
-Mhz
 SuperP
 OEM
 GPSLogger
@@ -441,6 +440,4 @@ AGL
 Baro
 groundspeed
 Batt
-Radiomaster
 SuperP
-Shottky
