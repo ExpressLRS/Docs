@@ -47,6 +47,8 @@ The current ELRS `master` branch (after PR #1785) equips a test-tone mode. After
 
 By clicking the `START CONTINUOUS WAVE` button, the unit will generate a continuous wave at 2440 MHz. By measuring the output frequency with a spectrum analyzer (e.g., HackRF SDR), you can determine how the XO deviates from the reference frequency (2440 MHz). Within 20 ppm (=~50 kHz) absolute error over the entire working operating temperature (from -20 to 85 degC) is expected for a good unit. Up to 40 ppm error (=~100 kHz) is acceptable.
 
+Caution: don't use Continuous Wave mode for longer periods of time to avoid excessive heat up of the RF unit.
+
 ### Measuring relative XO error between a TX-RX pair
 
 You'll need to use "Manual mode" in the configurator to enable a special debug mode. In addition to this debug mode flag, you should add any other user defines you need to get your TX/RX to connect (check the [user defines section](https://www.expresslrs.org/3.0/software/user-defines/)).
