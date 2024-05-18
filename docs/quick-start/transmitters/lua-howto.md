@@ -335,10 +335,11 @@ The `Protocol` setting controls the output of the connected receiver. The follow
 
 * `CRSF` - The regular CRSF Protocol Output. Recommended for most application.
 * `Inverted CRSF` - The CRSF Protocol inverted for use in Flight Controllers that doesn't have any other UARTs available and the only option is to connect the receiver TX pin into an SBUS pad (Inverted RX). This is the old `Invert TX Pin` option.
-* `SBUS` - Let the receiver output SBUS signal for use with devices that doesn't support CRSF protocol, like Stabilizers, Heli Controllers etc.
+* `SBUS` - Lets the receiver output SBUS signal for use with devices that don't support CRSF protocol, like Stabilizers, Heli Controllers etc.
 * `Inverted SBUS` - Like the above, but inverted.
-* `SUMD` - Graupner/HoTT
+* `SUMD` - Lets the receiver output Graupner HoTT SUMD signal for use with devices that don't support CRSF protocol, like Stabilizers, Heli Controllers etc.
 * `DJI RS2 Pro` - Mainly used for the RS2 Pro Gimbals
+* `HoTT Telemetry` - Allows to use Graupner HoTT enabled telemetry sensors (Graupner and 3rd party)
 
 For more information, see [Receiver Serial Protocols](../../software/serial-protocols.md)
 
