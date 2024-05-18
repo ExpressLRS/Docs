@@ -340,6 +340,7 @@ febbyeka
 flybarless
 fontawesome
 fullres
+FullRes
 github
 hotspot
 html
