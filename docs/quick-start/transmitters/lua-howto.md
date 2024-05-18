@@ -382,8 +382,6 @@ Team Racing allows selection between multiple connected models, failsafing all u
 * `Channel` (default CH11 / AUX7) TeamRace Channel - The channel that is checked on the receiver to determine the currently selected model. Has no effect if the TeamRace Position is set to Disabled.
 * `Position` (default Disabled) TeamRace Position - Which position of the TeamRace Channel activates this model. 6-position switches are supported (1-6) as well as Low/Mid/High for using a 2 or 3-position switch.
 
-This is deprecated and removed in ExpressLRS 3.4.0.
-
 ### Loan Model/Return Model
 
 These commands allow the user to Loan/Return the model. For more information, see the [Loan Model](../../software/loan-model.md) guide.
