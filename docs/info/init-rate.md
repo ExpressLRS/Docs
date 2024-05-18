@@ -6,7 +6,7 @@ template: main.html
 
 ### What happened to the Lua Init Rate option?
 
-The `Init Rate` receiver Lua option was removed in ExpressLRS 3.4 in favor of automatic init rate storage.
+The `Init Rate` receiver Lua option was removed in ExpressLRS 3.4 in favor of automatic Init rate storage.
 
 ### What is Init Rate?
 
