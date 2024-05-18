@@ -148,6 +148,7 @@ Mobula
 ModelMatch
 Multicopter
 Multicopters
+MultiGP
 NDA
 NPN
 NRST
@@ -176,10 +177,12 @@ Pairan
 Passthrough
 Pawe
 Pinout
+pinio
 PlatformIO
 PolicyMaker
 PolicyMaker’s
 PuTTY
+PitMode
 QGC
 QX
 QuadKopters
@@ -243,6 +246,8 @@ StonedDawg
 SunjunKim
 SuperD
 TCXO
+TeamRace
+TeamRacing
 TLite
 TQLY
 TTGo
@@ -329,6 +334,7 @@ facebook
 failsafe
 failsafed
 failsafes
+failsafing
 faq
 febbyeka
 flybarless
@@ -408,6 +414,7 @@ unmodded
 unpowered
 unrooted
 unstaged
+unselected
 vrx
 webpage
 www

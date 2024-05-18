@@ -18,7 +18,7 @@ Team Racing is defined in this context as:
 * 0 or 1 active transmitters with a distinct binding phrase. "One pilot operating their transmitter"
 * Multiple receivers bound to that transmitter's binding phrase, all powered at the same time.
 * Pilot has the ability to direct which receiver is currently "active" including:
-  * Sending channels data and linkstats information to flight controller
+  * Sending channels data and LinkStats information to flight controller
   * Transmitting telemetry to the TX
   * Updating servo positions
 
