@@ -1,3 +1,4 @@
+AAT
 ACCST
 AFHDS
 AIO
@@ -65,6 +66,7 @@ ESCs
 ESPnow
 ETX
 EdgeTX
+Espressif
 ExpressLRS
 ExpressLRS's
 FAILSAFE
@@ -157,6 +159,7 @@ NamimnoRC
 Nano
 Niklas
 NoSync
+OFDM
 OLED
 OSD
 OSDs
@@ -293,6 +296,7 @@ Yarillo
 YeOldePirate
 Zepto
 ZoFPV
+aat
 accelerometer
 alloted
 ange
@@ -447,3 +451,4 @@ AGL
 Baro
 groundspeed
 Batt
+onwards
