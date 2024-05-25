@@ -64,6 +64,9 @@ We recommend using a **unique** phrase with at least 8 alpha-numeric characters.
 
 For traditional binding to work, a Binding Phrase must not be set, at least for the Receiver.
 
+!!! info "Updated on 3.4.0"
+    Any Receiver flashed with 3.4.0 or newer can be put into Bind Mode, even with a set Binding UID.
+
 !!! warning "Notice"
     A Receiver flashed or set with a Binding Phrase WILL NOT initiate Manual Binding mode, however many times you try the procedure below. You must first reflash the receiver with the Binding Phrase field disabled and/or unset. Why would you not use a bind phrase though if you're already having to flash the RX anyway? :grin:
 
