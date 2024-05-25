@@ -139,9 +139,9 @@ These are shown as `Packet Rate` and `Telem Ratio` in the Lua script, which allo
 
 	- `25Hz, 50Hz, 100Hz & 200Hz`: LoRa-based options. Higher means lower latency at the expense of sensitivity. Since v1.0.
 	- `100Hz Full`: Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
+    - `D50Hz` :new: : Lora-based Redundant transmit mode via DVDA. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2089)
     - `250Hz` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
     - `200Hz Full` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
-    = `D50Hz` :new: : Lora-based Redundant transmit mode via DVDA. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2089)
 
     The following options are available for `GemX`:
 
