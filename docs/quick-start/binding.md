@@ -128,20 +128,20 @@ The procedure is as follows:
 
 With [PR#2542](https://github.com/ExpressLRS/ExpressLRS/pull/2542) being part of the 3.4.0 update, users now have the following methods to bind an ExpressLRS receiver with a TX module:
 
-1. Binding Phrase, flashed or set (via the WebUI) into the devices.
-2. 3x Power Cycle, Traditional Binding.
-3. Bind Receiver button in Betaflight Configurator 10.10 Receiver Tab (`bind_rx` CLI command also works). This will ONLY work if your flight controller is flashed with Betaflight 4.5.0.
-4. 1.5s Button Press on the Receiver itself.
+1. Binding Phrase, flashed or set (via the WebUI) into both devices.
+2. 3x Power Cycle.
+3. `Bind Receiver` button in Betaflight Configurator 10.10 (or newer) Receiver Tab (`bind_rx` CLI command also works). This will ONLY work if your flight controller is flashed with Betaflight 4.5.0 or newer. 
+4. 1.5s Button Press on the Receiver itself (or Boot pad shorting to Ground).
 
-With the last 3 methods, the Receiver LED will blink twice, then cycles, until the Bind is established indicated by a solid LED light.
+With the last 3 methods, the Receiver LED will blink twice, pause then repeats, until the Bind is established indicated by a solid LED light. Pressing `[Bind]` in the ExpressLRS Lua Script should establish the Bind, per the Traditional Binding Procedure above.
 
 <figure markdown>
 ![LEDSEQ_BINDING](../assets/images/LEDSEQ_BINDING_10_10_10_100.gif)
 </figure>
 
-Receivers, however they are bound to a TX before, can be put into Bind Mode using any of the 3 methods above. This means that even if the Receiver has been flashed or set with a Binding Phrase, users can put them into Binding Mode any time. The Bind will persist or stay with the receiver until another Binding Procedure is done, with any of the methods above.
+After a Receiver is bound using any of the methods above, users can put the Receiver back into Bind Mode anytime following any of the last 3 methods above. The Bind will persist or stay with the receiver until another Binding Procedure is initiated, with any of the methods above.
 
-To cancel the Bind Mode, a reboot or power-cycle is needed, or Binding the receiver with a Transmitter. The old Binding Info will be used if the receiver is rebooted without the new Bind.
+To cancel Bind Mode, a reboot or power-cycle is needed, or Binding the receiver with a Transmitter. The old Binding Info will be used if the receiver is rebooted without the new Bind.
 
 A Lua Script or WebUI option can be toggled to make the Bind volatile upon power-cycle or reboot. Volatile Bind means that the Bind is only valid while the receiver is powered up. Once the receiver is power-cycled or rebooted, the Bind information is wiped and the receiver will boot up in Bind Mode. 
 
