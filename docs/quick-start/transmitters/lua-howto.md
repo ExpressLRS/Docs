@@ -281,6 +281,7 @@ The parameters in this folder enables you to change the Backpack-related paramet
 * `DVR Stp Delay` - How soon should the DVR stop Recording upon deactivation of the Aux switch?
 * `HT Enable` - Turn Headtracking On or Off. Only available on some FPV Goggles with VRX Backpack integration.
 * `HT Start Channel` - Starting Channel to send Head Tracking positions to.
+* `Telemetry` - Allow the Backpack to Send the Telemetry frames via ESPNOW. See [Backpack Telemetry](../../software/backpack-telemetry.md)
 * `Version` - The Backpack Firmware version flashed into the TX Backpack.
 
 For more information, see the [Backpack Guide](../../hardware/backpack/esp-backpack.md).
