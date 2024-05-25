@@ -159,6 +159,7 @@ NamimnoRC
 Nano
 Niklas
 NoSync
+OFDM
 OLED
 OSD
 OSDs
@@ -450,3 +451,4 @@ AGL
 Baro
 groundspeed
 Batt
+onwards
