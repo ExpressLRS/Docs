@@ -5,23 +5,29 @@ description: Binding ExpressLRS is easy! With the Binding Phrase, no button pres
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)
 
-??? note "Compatibility (click/tap to expand)"
-    The first number in the Version string should match between a TX Module and a Receiver. Examples:
+## Compatibility Check
 
-    - a TX Module with version string of 3.1.2 will sync and work with a Receiver with firmware version 3.0.1
-    - a TX Module with version string of 3.2.0 will NOT sync or bind with a Receiver with firmware version 2.4.0
-    - a Receiver with version string of 3.1.2 will sync and work with a TX Module with firmware version 3.0.1
-    - a Receiver with version string of 3.2.0 will NOT sync or bind with a TX Module with firmware version 2.4.0
-    - SPI-based Receivers on (official) Betaflight 4.3.1 and older will only sync or bind with ExpressLRS 2.x firmware
-    - SPI-based Receivers on Betaflight 4.4.0 and newer will only sync or bind with ExpressLRS 3.x firmware
+The first number in the Version string should match between a TX Module and a Receiver. 
+    
+Examples:
 
-    If your firmware versions are incompatible, NONE of the methods below will work. 
+- a TX Module with version string of 3.1.2 will sync and work with a Receiver with firmware version 3.0.1
+- a TX Module with version string of 3.2.0 will NOT sync or bind with a Receiver with firmware version 2.4.0
+- a Receiver with version string of 3.1.2 will sync and work with a TX Module with firmware version 3.0.1
+- a Receiver with version string of 3.2.0 will NOT sync or bind with a TX Module with firmware version 2.4.0
+- SPI-based Receivers on (official) Betaflight 4.3.1 and older will only sync or bind with ExpressLRS 2.x firmware
+- SPI-based Receivers on Betaflight 4.4.0 and newer will only sync or bind with ExpressLRS 3.x firmware
 
-    See these pages on how to check the firmware version on your ExpressLRS devices:
+If your firmware versions are incompatible, NONE of the methods below will work. 
 
-    - [TX Modules](../quick-start/transmitters/firmware-version.md)
-    - [Receivers](../quick-start/receivers/firmware-version.md)
-    - [SPI Receivers](../hardware/spi-receivers.md)
+See these pages on how to check the firmware version on your ExpressLRS devices:
+
+- [TX Modules](../quick-start/transmitters/firmware-version.md)
+- [Receivers](../quick-start/receivers/firmware-version.md)
+- [SPI Receivers](../hardware/spi-receivers.md)
+
+
+## How to Bind ExpressLRS Devices Together
 
 There are **TWO** methods to Bind/Sync an ExpressLRS TX Module and a Receiver:
 
@@ -57,6 +63,9 @@ We recommend using a **unique** phrase with at least 8 alpha-numeric characters.
 ## Traditional Binding
 
 For traditional binding to work, a Binding Phrase must not be set, at least for the Receiver.
+
+!!! info "Updated on 3.4.0"
+    Any Receiver flashed with 3.4.0 or newer can be put into Bind Mode, even with a set Binding UID.
 
 !!! warning "Notice"
     A Receiver flashed or set with a Binding Phrase WILL NOT initiate Manual Binding mode, however many times you try the procedure below. You must first reflash the receiver with the Binding Phrase field disabled and/or unset. Why would you not use a bind phrase though if you're already having to flash the RX anyway? :grin:
@@ -117,6 +126,27 @@ The procedure is as follows:
     <figure markdown>
     ![CONNECTED](../assets/images/LED_ON.gif)
     </figure>
+
+## Updated Binding Procedure since ExpressLRS 3.4.0
+
+With [PR#2542](https://github.com/ExpressLRS/ExpressLRS/pull/2542) being part of the 3.4.0 update, users now have the following methods to bind an ExpressLRS receiver with a TX module:
+
+1. Binding Phrase, flashed or set (via the WebUI) into both devices.
+2. 3x Power Cycle.
+3. `Bind Receiver` button in Betaflight Configurator 10.10 (or newer) Receiver Tab (`bind_rx` CLI command also works). This will ONLY work if your flight controller is flashed with Betaflight 4.5.0 or newer. 
+4. 1.5s Button Press on the Receiver itself (or Boot pad shorting to Ground).
+
+With the last 3 methods, the Receiver LED will blink twice, pause then repeats, until the Bind is established indicated by a solid LED light. Pressing `[Bind]` in the ExpressLRS Lua Script should establish the Bind, per the Traditional Binding Procedure above.
+
+<figure markdown>
+![LEDSEQ_BINDING](../assets/images/LEDSEQ_BINDING_10_10_10_100.gif)
+</figure>
+
+After a Receiver is bound using any of the methods above, users can put the Receiver back into Bind Mode anytime following any of the last 3 methods above. The Bind will persist or stay with the receiver until another Binding Procedure is initiated, with any of the methods above.
+
+To cancel Bind Mode, a reboot or power-cycle is needed, or Binding the receiver with a Transmitter. The old Binding Info will be used if the receiver is rebooted without the new Bind.
+
+A Lua Script or WebUI option can be toggled to make the Bind volatile upon power-cycle or reboot. Volatile Bind means that the Bind is only valid while the receiver is powered up. Once the receiver is power-cycled or rebooted, the Bind information is wiped and the receiver will boot up in Bind Mode. 
 
 ## Connection Check
 
