@@ -112,7 +112,7 @@ From these examples:
 
 Items with `>` before the name is a folder that when selected shows another level of customization. `TX Power`, `VTX Administrator`, `Wifi Connectivity` are examples of these items.
 
-:new: These items will now show what is currently set for the items within. An example would be on `TX Power`, which will show the current Power set, and if Dynamic Power is enabled, it will show the current set Max Power, followed by the indicator `Dyn`.
+These items will now show what is currently set for the items within. An example would be on `TX Power`, which will show the current Power set, and if Dynamic Power is enabled, it will show the current set Max Power, followed by the indicator `Dyn`.
 
 ### Packet Rate and Telemetry Ratio
 
@@ -131,22 +131,33 @@ These are shown as `Packet Rate` and `Telem Ratio` in the Lua script, which allo
 	The following options are available for `2.4GHz`:
 
 	- `50Hz, 150Hz, 250Hz & 500Hz`: Lora-based options. Higher means lower latency at the expense of sensitivity. Since v1.0.
-	- `F500 & F1000` :new: : Pure FLRC for lowest latency, reduced range compared to LoRa, 500Hz and 1000Hz. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1277)
-	- `D250 & D500` :new: : Redundant transmit FLRC modes.  `D` stands for `Déjà Vu`, 250Hz and 500Hz. Higher latency, reduced packet jitter and higher LQ. Same range as other FLRC modes. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1527)
-	- `100Hz Full & 333Hz Full` :new: : Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
+	- `F500 & F1000`: Pure FLRC for lowest latency, reduced range compared to LoRa, 500Hz and 1000Hz. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1277)
+	- `D250 & D500`: Redundant transmit FLRC modes.  `D` stands for `Déjà Vu`, 250Hz and 500Hz. Higher latency, reduced packet jitter and higher LQ. Same range as other FLRC modes. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1527)
+	- `100Hz Full & 333Hz Full`: Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
 	
 	The following options are available for `900MHz`:
 
 	- `25Hz, 50Hz, 100Hz & 200Hz`: LoRa-based options. Higher means lower latency at the expense of sensitivity. Since v1.0.
-	- `100Hz Full` :new: : Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
+	- `100Hz Full`: Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
+    - `D50Hz` :new: : Lora-based Redundant transmit mode via DVDA. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2089)
+    - `250Hz` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+    - `200Hz Full` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
 
-	The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.
+    The following options are available for `GemX`:
+
+    - `X150Hz`:new: : Crossband mode, combining 900MHz and 2.4GHz in Gemini Mode.
+    - `X100Hz Full` :new: : Crossband mode, combining 900MHz and 2.4GHz in Gemini Mode, Full Resolution with 8ch/12ch/16 Switch Mode options
+
+    !!! info "GemX is a 3.4.0 feature"
+        Gemini Crossband (GemX) is available on select hardware, requiring the LR1121 RF Chip. GemX is an ExpressLRS 3.4.0 feature. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+
+	The number following the rate in parentheses (e.g. -105dBm for 500Hz) is the Sensitivity Limit for the rate, the lowest RSSI dBm value where packets will still be received. See [Signal Health](../../info/signal-health.md) for more information about the sensitivity limit.
 
 !!! warning "WARNING"
 	Never change the packet rate while flying as this **FORCES A DISCONNECT** between the TX and RX. 
 
 * `Telem Ratio` sets the telemetry ratio or how much of the packet rate is used to send telemetry. The options, in order of increasing telemetry rate, are: `Off, 1:128, 1:64, 1:32, 1:16, 1:8, 1:4, 1:2`. A Telem Ratio of 1:64 means one out of every 64 packets are used for telemetry data.
-	- :new: v3.0 comes with `Std` and `Race` options. `Std` changes ratio depending on the Packet Rate, and `Race` is the same as Std, but will disable telemetry and sync while Armed.
+	- v3.0 comes with `Std` and `Race` options. `Std` changes ratio depending on the Packet Rate, and `Race` is the same as Std, but will disable telemetry and sync while Armed.
 
 	For information on telemetry setup, see [First Flight: Telemetry](../pre-1stflight.md#telemetry) and [Telemetry Bandwidth](../../info/telem-bandwidth.md).
 
@@ -154,7 +165,7 @@ These are shown as `Packet Rate` and `Telem Ratio` in the Lua script, which allo
 
 The Switch Mode setting controls how channels AUX1-AUX8 are sent to the receiver (the 4 main channels are always 10-bit). The options are `Hybrid & Wide`. **Hybrid** mode is 6x 2, 3 or 6-position + 1x 16-position, and **Wide** is 7x 64 or 128-position. For detail about the differences, see the [Switch Configs](../../software/switch-config.md) documentation.
 
-:new: In full resolution modes, the Switch Mode parameter selects the number of channels to be used. [Full Resolution Switch Modes](../../software/switch-config.md#full-resolution-switch-configuration-modes) 
+In full resolution modes, the Switch Mode parameter selects the number of channels to be used. [Full Resolution Switch Modes](../../software/switch-config.md#full-resolution-switch-configuration-modes) 
 
 !!! hint "Hot Tip"
 	The Switch Mode can only be changed when not connected to a receiver. The top right corner of the Lua script will show a `-` if you're not connected.
@@ -270,6 +281,7 @@ The parameters in this folder enables you to change the Backpack-related paramet
 * `DVR Stp Delay` - How soon should the DVR stop Recording upon deactivation of the Aux switch?
 * `HT Enable` - Turn Headtracking On or Off. Only available on some FPV Goggles with VRX Backpack integration.
 * `HT Start Channel` - Starting Channel to send Head Tracking positions to.
+* `Telemetry` - Allow the Backpack to Send the Telemetry frames via ESPNOW. See [Backpack Telemetry](../../software/backpack-telemetry.md)
 * `Version` - The Backpack Firmware version flashed into the TX Backpack.
 
 For more information, see the [Backpack Guide](../../hardware/backpack/esp-backpack.md).
@@ -277,7 +289,7 @@ For more information, see the [Backpack Guide](../../hardware/backpack/esp-backp
 ### Bind
 
 !!! info "Take Notice!"
-    This command will only work on receivers that are already in `Bind Mode` (indicated by two blinks LED pattern). Receivers with a binding phrase set/flashed into them will NOT EVER go into this Bind Mode, and thus this command will not do anything.
+    This command will only work on receivers that are already in `Bind Mode` (indicated by two blinks LED pattern). Receivers (with version 3.3.2 and earlier) flashed or set with a binding phrase will NOT go into this Bind Mode, and thus this command will not do anything.
 
     Devices with the same binding phrase and compatible firmware versions should automatically sync/bind upon power up.
 
@@ -376,6 +388,8 @@ Team Racing allows selection between multiple connected models, failsafing all u
 
 These commands allow the user to Loan/Return the model. For more information, see the [Loan Model](../../software/loan-model.md) guide.
 
+This is deprecated and removed in ExpressLRS 3.4.0 in favor of the new Binding Procedures. See the [binding](../binding.md) page for details.
+
 ### Output Mapping
 
 <figure markdown>
@@ -390,6 +404,19 @@ This folder is only available to PWM receivers. This will allow users to set opt
 * `Invert` - Set this option to On or Off to toggle the direction for the Output Channel.
 
 For more information, see [PWM Receivers](../../hardware/pwm-receivers.md) page.
+
+### Bind Storage
+
+* `Persistent` - Binding info is kept across power-cycles. 
+* `Volatile` - Binding info is forgotten after a power-cycle.
+
+This option is available on ExpressLRS 3.4.0 and newer. See the details [here](https://github.com/ExpressLRS/ExpressLRS/pull/2542).
+
+### Enter Bind Mode command
+
+This will put the receiver into Bind Mode. It works even if the receiver is already flashed with a binding phrase or already bound traditionally.
+
+This command is available on ExpressLRS 3.4.0 and newer. See the details [here](https://github.com/ExpressLRS/ExpressLRS/pull/2542).
 
 ### Model ID
 
