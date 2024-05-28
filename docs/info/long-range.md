@@ -71,5 +71,6 @@ Anyone can add an entry to the table, and entries should include the:
 | 50Km | 900M | 25Hz | 500mW | Wing | No | Yarillo | [Link](https://youtu.be/EJeTSvX5jrA) |
 | 30Km | 900M | 50Hz | 100mW | Wing | No | Slickshot | [Link](https://www.youtube.com/watch?v=PpJuhhFvYpM&t) |
 | 13.1Km | 900M | 50Hz | 100mW | Quad | No | Taufik | [Link](https://youtu.be/Thrz9QuZGWE) |
+| 10.05Km | 900M | 100Hz | 100mW | Wing | No | Flight Cub | [Link](https://youtu.be/fg4MxRdKryU) |
 | 4.77Km | 900M | 200Hz | 250mW | Quad | No | DaBit | [Link](https://www.youtube.com/watch?v=k0lY0XwB6Ko) |
 | 4.00Km | 900M | 100Hz | 500mW | Wing | No | Aaron Vergara | [Link](https://www.youtube.com/watch?v=o_DbErp85cQ) |
