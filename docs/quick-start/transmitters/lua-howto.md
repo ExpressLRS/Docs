@@ -371,7 +371,9 @@ The `Receiver Mode` setting is only available for True Diversity receivers. Thes
 
 ### Tlm Power
 
-The `Telemetry Power` setting is used to adjust the telemetry transmit power of the receiver. You can only adjust this on receivers with Power Amplifiers.
+The `Telemetry Power` setting is used to adjust the telemetry transmit power of the receiver. This option is only available on receivers with a Power Amplifier.
+
+The `MatchTX` setting will automatically change the telemetry output power to match what the transmitter reports it is using. In MatchTX mode, the receiver will boot at default power output (usually maximum power) until a power update is received from the transmitter, which is only available in Wide Switch Mode or any FullRes mode.
 
 ### Init Rate
 
