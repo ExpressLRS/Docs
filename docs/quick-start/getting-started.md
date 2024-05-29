@@ -5,6 +5,15 @@ description: Start your ExpressLRS experience here! This is the most comprehensi
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
+!!! warning "Be informed!"
+    The ExpressLRS team work closely with manufacturers to review and test hardware.  It isn't until after testing that a specific ExpressLRS Configurator Target is added.
+
+    Hardware not found in the ExpressLRS Configurator means the hardware did not pass requirements, or the manufacturer has chosen not to collaborate.  In this case the manufacturer should be contacted for tech support.
+
+    Generic targets are meant for pre-production or DIY hardware. Off-the-shelf Hardware should be using Hardware-specific targets.
+
+    Take away message... Check the Configurator before purchase and support manufacturers that support open source and the ExpressLRS project. 
+
 ## Welcome to the Quick Start Guide
 
 ### Prerequisites
