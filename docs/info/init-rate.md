@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: ExpressLRS Init Rate or the Packet Rate that the receiver will start chacking for the Sync Packet.
+description: ExpressLRS Init Rate or the Packet Rate that the receiver will start checking for the Sync Packet.
 ---
 
 ![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
