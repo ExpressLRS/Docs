@@ -45,3 +45,4 @@ Receivers with RGB LED show status as indicated below:
 | Orange Double blink then pause | Binding mode enabled |
 | Orange Triple blink then pause | Connected to transmitter but mismatched model-match configuration |
 | Solid single color | Connected to a transmitter, color indicates packet rate |
+| No Light | Off or in Bootloader Mode |
