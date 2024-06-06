@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: This will guide you on how to select the best ExpressLRS (ELRS) radio for your needs
+description: Which ExpressLRS (ELRS) Hardware to buy? What's the difference between ExpressLRS Hardware?
 ---
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)
