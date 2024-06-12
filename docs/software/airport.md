@@ -86,7 +86,7 @@ A good baseline is:
 
       5. In the ELRS WebUI, check the `Use as AirPort Serial device` checkbox.
 
-      6. In the `AirPort UART baud` field, enter your desired baud rate. IMPORTANT: Pay close attention to the "Data rate vs Baud rate" section above when choosing your baud. A good default is `9600` baud for 2.4GHz and `4800`` baud for 868/900MHz.
+      6. In the `UART baud` field, enter your desired baud rate. IMPORTANT: Pay close attention to the "Data rate vs Baud rate" section above when choosing your baud. A good default is `9600` baud for 2.4GHz and `4800`` baud for 868/900MHz.
 
       7. Click `SAVE & REBOOT`.
 
