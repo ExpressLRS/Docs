@@ -370,13 +370,13 @@ template: main.html
     1. Connect your powered-up Radio to your Computer via a USB Data Cable.
 
         <figure markdown>
-        ![usb picture](../../assets/images/t20-usb.jpg)
+        ![usb picture](../../assets/images/jumper-t14-usb.jpg)
         </figure>
 
     2. On your Radio, scroll down and select `USB Serial(VCP)` then press the ++enter++ Key. Set your Radio aside in the meantime.
 
         <figure markdown>
-        ![Debug option](../../assets/images/t20-usbVCP.jpg)
+        ![Debug option](../../assets/images/jumper-t14-vcp.jpg)
         </figure>
 
     3. On your Computer, check whether your Radio is being recognized correctly as a {==STMicroelectronics Virtual COM Port==} device.
