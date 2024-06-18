@@ -6,7 +6,7 @@ description: ExpressLRS Bi-directional MAVLink support
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 !!! warning "Warning"
-    Although MAVLink has been in development for some time, and has been tested by a community of early adopters using Ardupilot crafts, MAVLink support is still a recent addition. There may be unexpected bugs; Exercise due caution.
+    Although MAVLink has been in development for some time, and has been tested by a community of early adopters using ArduPilot crafts, MAVLink support is still a recent addition. There may be unexpected bugs; Exercise due caution.
 
 !!! note "NOTE"
     MAVLink is only available to receivers with ESP hardware, and **NOT STM32**. Enabling MAVLink forces the use of Hybrid or 16ch/2 switch mode. Wide switch mode is not supported.
@@ -33,9 +33,9 @@ ExpressLRS now has full bi-directional [MAVLink](https://mavlink.io/en/) support
 1. Wire the RX to a free UART that is suitable for TLM + RC
 
 
-## Using MAVLink on Ardupilot
+## Using MAVLink on ArduPilot
 
-1. Configure the UART in ardupilot for MAVLink 2, at `460800` baud
+1. Configure the UART in ArduPilot for MAVLink 2, at `460800` baud
     - For example, if you're using UART 3, you'd set `SERIAL3_PROTOCOL=2` and `SERIAL3_BAUD=460`
 2. Connect the TX module to the computer running the Ground Control Station via a USB cable
 
