@@ -422,6 +422,7 @@ unpowered
 unrooted
 unstaged
 unselected
+uplink
 vrx
 webpage
 www
