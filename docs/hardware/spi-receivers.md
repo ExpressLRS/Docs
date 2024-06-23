@@ -8,6 +8,8 @@ description: All-in-one Flight Controllers were released with ExpressLRS receive
 !!! note "Supported RF Modes"
     SPI receivers **DO NOT** support D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) and thus will not bind or sync with a TX module in any of these modes.
 
+    These are the packet rates that will work: 50Hz, 150Hz, 250Hz, 500Hz.
+
 A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano long range rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
 Because the ExpressLRS code is "baked-in" to the flight controller firmware instead of using a second microcontroller, these can not be updated the same way external UART-based receivers are updated. 
