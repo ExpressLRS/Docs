@@ -7,8 +7,6 @@ template: main.html
 !!! danger "Advisory"
     If you are flashing/updating your TX module via WiFi for the first time from the factory firmware, or from an older firmware, to ExpressLRS 3.x firmware, you will first need to flash it to version 2.5.2, then flash it with the [Repartitioner](https://github.com/ExpressLRS/repartitioner) binary [file](https://github.com/ExpressLRS/repartitioner/releases/download/1.0/repartitioner.bin) (right click, save as/save file as). Should it complain about Target Mismatch, just click `Flash Anyway`. Only then you can flash to 3.x firmware via WiFi.
 
-    Joshua Bardwell has a video about it [here](https://www.youtube.com/watch?v=2kcRi1cHejM).
-
     Updating to 3.x via UART or ETX Passthrough doesn't require 2.5.2 firmware or the Repartitioner.
 
 ## Flashing/Updating your TX Module Firmware
