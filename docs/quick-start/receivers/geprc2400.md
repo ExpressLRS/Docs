@@ -28,11 +28,23 @@ template: main.html
 <figure markdown>
 ![GEPRC NanoSE 2.4GHz](../../assets/images/GEPRC-NanoSE.png)
 <figcaption>GEPRC Nano SE</figcaption>
-</figure>
+</figure> 
 
 The images above show the receiver pinouts and their connections. As we're dealing with a UART connection, RX on the receiver goes to a TX pad on the FC, and TX on the receiver goes to an uninverted RX pad on the FC.
 
 See the [Receiver Wiring] page for a more in-depth guide and troubleshooting procedures. Some of the updating procedures below will not go through if your receiver is not wired correctly and behaving properly.
+
+## Identify your receiver and flash the correct target
+
+!!! Warning "Important Step!"
+You MUST flash the correct firmware target to your receiver in order for it to work properly. Look closely at your receiver and make sure you are select the correct firmware target. Flashing the wrong target will result in extremely poor range or failure to connect.
+
+    <figure markdown>
+    ![GEPRC Receiver Identification](../../assets/images/GEPRC_24_Receivers.png)
+	<figcaption>How to identify the correct GEPRC 2.4GHz receiver target</figcaption>
+    </figure>
+
+
 
 ## Configuring your Flight Controller
 
