@@ -37,7 +37,7 @@ See the [Receiver Wiring] page for a more in-depth guide and troubleshooting pro
 ## Identify your receiver and flash the correct target
 
 !!! Warning "Important Step!"
-You MUST flash the correct firmware target to your receiver in order for it to work properly. Look closely at your receiver and make sure you are select the correct firmware target. Flashing the wrong target will result in extremely poor range or failure to connect.
+	You MUST flash the correct firmware target to your receiver in order for it to work properly. Look closely at your receiver and make sure you are select the correct firmware target. Flashing the wrong target will result in extremely poor range or failure to connect.
 
     <figure markdown>
     ![GEPRC Receiver Identification](../../assets/images/GEPRC_24_Receivers.png)
