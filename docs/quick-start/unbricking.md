@@ -65,7 +65,7 @@ Follow the steps below very closely to recover your "bricked" Receiver.
     ![via Passthrough](../assets/images/Method_RX_Passthrough.png)
     </figure>
 
-9. Click the `Flash` button. Wait for the Line **PASSTHROUGH DONE** to appear in the Build Log.
+9. Click the `Flash` button. Wait for the Line **PASSTHROUGH DONE** to appear in the Build Log and power up the receiver. 
 
     <figure markdown>
     ![Passthrough Done](../assets/images/passthrough-done.jpg)
@@ -74,19 +74,19 @@ Follow the steps below very closely to recover your "bricked" Receiver.
     ??? tip "Not Seeing PASSTHROUGH DONE? (click/tap to expand)"
         You've probably skipped some of the steps above or you've misconfigured your flight controller. Go back and make sure to follow EVERY step.
 
-10. Plug in LiPo or twist the 5v Wires together to power up the receiver (see Step 1). The receiver LED should be Solid.
+    - Plug in LiPo or twist the 5v Wires together to power up the receiver (see Step 1). The receiver LED should be Solid.
 
     <figure markdown>
     ![BOOTLOADER](../assets/images/LED_ON.gif)
     </figure>
 
-11. Wait for the process to finish, hopefully with the Success Message. Otherwise, repeat the procedure above or try a different approach (like reflashing via FTDI/UART Adapter).
+10. Wait for the process to finish, hopefully with the Success Message. Otherwise, repeat the procedure above or try a different approach (like reflashing via FTDI/UART Adapter).
 
-12. You can now power down the flight controller, and disconnect LiPo and/or USB.
+11. You can now power down the flight controller, and disconnect LiPo and/or USB.
 
-13. Remove the boot pads bridging or connection to Ground, or, if your Receiver has a button, remove the alligator clip used to press the button.
+12. Remove the boot pads bridging or connection to Ground, or, if your Receiver has a button, remove the alligator clip used to press the button.
 
-14. Re-power up the receiver to verify it is back in its normal working state.
+13. Re-power up the receiver to verify it is back in its normal working state.
 
     <figure markdown>
     ![LEDSEQ_DISCONNECTED](../assets/images/LEDSEQ_DISCONNECTED_50_50.gif)
