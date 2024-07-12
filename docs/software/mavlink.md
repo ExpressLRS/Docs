@@ -41,17 +41,33 @@ To start using MAVLink, you just need one ESP ELRS transmitter, and one ESP ELRS
 1. Wire the RX to a free UART that is suitable for TLM + RC
 
 
-## Using MAVLink on ArduPilot
+=== "ArduPilot"
+    For the below steps, when a UART connection is mentioned, it will be written as `SERIALx`. Replace `x` with the uart number you are using.
 
-1. Configure the UART in ArduPilot for MAVLink 2, at `460800` baud
-    - For example, if you're using UART 3, you'd set `SERIAL3_PROTOCOL=2` and `SERIAL3_BAUD=460`
-2. Connect the TX module to the computer running the Ground Control Station via a USB cable
+    1. Configure `SERIALx_PROTOCOL=2`, and `SERIALx_BAUD=460`
+    1. Connect the TX module to the computer running the Ground Control Station via a USB cable
+    1. Select the COM port on the GCS, and connect using `460800` baud
 
-3. Select the COM port on the GCS, and connect using `460800` baud
+=== "PX4"
+    For the below steps, when a UART connection is mentioned, it will be written as `SER_TELx`. Replace `x` with the uart number you are using.
 
-## Using MAVLink on INAV / Betaflight
+    1. Configure SER_TELx_BAUD to `460800 8N1`
+    1. Configure MAVLink with MAV_0_CONFIG to `TELEM2`
+    1. Configure MAVLink sending rate with MAV_0_RATE to `9600 B/s`
 
-- INAV and Betaflight contain an incomplete implementation of the MAVLink protocol standard (lacking RADIO_STATUS flow control). This causes an INAV/Betaflight aircraft to saturate the bandwidth of a telemetry link using soft flow control, and renders it unusable, ergo breaking support with ExpressLRS MAVLink.
+=== "INAV"
+    **CURRENTLY IN DEVELOPMENT** -
+    As of update 8.0, which is currently not released yet, INAV has support for proper MAVLink integrations. Until then, refer to the Betaflight tab.
+
+    For the below steps, when a UART connection is mentioned, it will be written as `UARTx`. Replace `x` with the uart number you are using.
+
+    1. In the Ports tab, set the UARTx `Telemetry Protocol` to `MAVLink`, and the baud rate to `460800`. Make sure `RX Serial` is disabled.
+    1. In the Receiver tab, set the Receiver type to `SERIAL` and the `Serial Receiver Provider` to `MAVLink`. Leave inverted & half-duplex `disabled`.
+
+=== "Betaflight"
+
+    Betaflight contains an incomplete implementation of the MAVLink protocol standard (lacking RADIO_STATUS flow control). This causes an Betaflight aircraft to saturate the bandwidth of a telemetry link using soft flow control, and renders it unusable, ergo breaking support with ExpressLRS MAVLink.
+
 
 ## Implementation Details
 
