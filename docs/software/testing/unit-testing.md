@@ -12,7 +12,7 @@ Assuming you have Visual Studio Code and PlatformIO installed
 
 * Install mingw-w64 from [sourceforge.net](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download)
 * In the windows search bar type `env` and select __Edit the system environment variables__
-* Click the `Environment Variables...` button and in the `System variables` section double-click `Path` and click `New` then paste `C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin`. This path may be different on your system, but it is the path that mingw-w64 was installed previously.
+* Click the `Environment Variables...` button and in the `System variables` section double-click `Path` and click `New` then paste `C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin`. This path may be different on your system, but it is the path that mingw-w64 was installed previously and where `g++.exe` is located.
 
 ## Running the tests
 
