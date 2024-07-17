@@ -44,7 +44,7 @@ To start using MAVLink, you just need one ESP ELRS transmitter, and one ESP ELRS
 === "ArduPilot"
     For the below steps, when a UART connection is mentioned, it will be written as `SERIALx`. Replace `x` with the uart number you are using.
 
-    1. Configure `SERIALx_PROTOCOL=2`, and `SERIALx_BAUD=460`
+    1. Configure `SERIALx_PROTOCOL=2`, `SERIALx_BAUD=460`, and `RSSI_TYPE=5`
     1. Connect the TX module to the computer running the Ground Control Station via a USB cable
     1. Select the COM port on the GCS, and connect using `460800` baud
 
