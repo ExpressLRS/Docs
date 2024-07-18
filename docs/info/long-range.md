@@ -29,31 +29,31 @@ Anyone can add an entry to the table, and entries should include the:
 [comment]: <> (3: The person is NOT using a different craft type than someone else that achieved better in conditions 1 and 2)
 
 === "2.4 GHz Rankings"
-    | Max Dist. | Pkt Rate| TX Power | Type | Failsafe at Max Range? | Pilot Handle  | Link to DVR |
-    | --------- | --------| -------- | ---- | ---------------------- | ------------- | ----------- |
-    |   101.3Km |    50Hz |   2000mW | Wing |                     No | Snipes        | [Link](https://www.youtube.com/watch?v=IjQYLyvai6s) |
-    |    43.7Km |   150Hz |    250mW | Wing |                     No | Slickshot     | [Link](https://youtu.be/Fidq5O3IvZs) |
-    |    40.6km |    50Hz |     25mW | Wing |                     No | Shawn U       | [Link](https://youtu.be/TmSVSCLTUGI) |
-    |    35.0Km |   250Hz |    100mW | Wing |                     No | Snipes        | [Link](https://youtu.be/dBmTRhgVcyY) |
-    |    20.0Km |   150Hz |    100mW | Wing |                    Yes | Pairan        | [Link](https://youtu.be/B9-AItJ9WS0) |
-    |    18.9Km |   150Hz |     50mW | Wing |                    yes | TitanDynamics | [Link](https://youtu.be/LPDKBW9XNKM) |
-    |    17.1km |    50Hz |     10mW | Wing |                     No | Denks         | [Link](https://youtu.be/VEkl7GaNszs) |
-    |    12.2Km |   500Hz |    250mW | Wing |                     No | Börner        | [Link](https://youtu.be/GUUngM6NcAg) |
-    |    10.2Km |   500Hz |     10mW | Quad |                    Yes | mrscythe      | [Link](https://youtu.be/IpiPEZrCGtg) |
-    |    10.0Km |    50Hz |    250mW | Quad |                     No | Disnator      | [Link](https://youtu.be/p6USo0VsLag) |
-    |     7.1Km |   500Hz |    100mW | Wing |                     No | Bri'ish       | [Link](https://youtu.be/FsQiL0LYnaY) |
-    |     7.0Km |   150Hz |     50mW | Quad |                     No | Taufik        | [Link](https://youtu.be/bUlUGCup48I) |
-    |     5.0Km |   250Hz |    500mW | Quad |                     No | ZoFPV         | [Link](https://youtu.be/JyNvywwi90s) |
-    |     4.6Km |    50Hz |     25mW | Quad |                     No | febbyeka      | [Link](https://youtu.be/jtiu6GdsKhA) |
-    |     3.0Km |   150Hz |     25mW | Quad |                     No | Taufik        | [Link](https://youtu.be/vG_hxHndXdI) |
+    | Max Dist. (km) | Packet Rate (Hz) | TX Power (mW) | Type | Failsafe at Max Range? | Pilot Handle  | Link to DVR                                         |
+    |----------------|------------------|---------------|------|------------------------|---------------|-----------------------------------------------------|
+    | 101.3          | 50               | 2000          | Wing | No                     | Snipes        | [Link](https://www.youtube.com/watch?v=IjQYLyvai6s) |
+    | 43.7           | 150              | 250           | Wing | No                     | Slickshot     | [Link](https://youtu.be/Fidq5O3IvZs)                |
+    | 40.6           | 50               | 25            | Wing | No                     | Shawn U       | [Link](https://youtu.be/TmSVSCLTUGI)                |
+    | 35.0           | 250              | 100           | Wing | No                     | Snipes        | [Link](https://youtu.be/dBmTRhgVcyY)                |
+    | 20.0           | 150              | 100           | Wing | Yes                    | Pairan        | [Link](https://youtu.be/B9-AItJ9WS0)                |
+    | 18.9           | 150              | 50            | Wing | yes                    | TitanDynamics | [Link](https://youtu.be/LPDKBW9XNKM)                |
+    | 17.1           | 50               | 10            | Wing | No                     | Denks         | [Link](https://youtu.be/VEkl7GaNszs)                |
+    | 12.2           | 500              | 250           | Wing | No                     | Börner        | [Link](https://youtu.be/GUUngM6NcAg)                |
+    | 10.2           | 500              | 10            | Quad | Yes                    | mrscythe      | [Link](https://youtu.be/IpiPEZrCGtg)                |
+    | 10.0           | 50               | 250           | Quad | No                     | Disnator      | [Link](https://youtu.be/p6USo0VsLag)                |
+    | 7.1            | 500              | 100           | Wing | No                     | Bri'ish       | [Link](https://youtu.be/FsQiL0LYnaY)                |
+    | 7.0            | 150              | 50            | Quad | No                     | Taufik        | [Link](https://youtu.be/bUlUGCup48I)                |
+    | 5.0            | 250              | 500           | Quad | No                     | ZoFPV         | [Link](https://youtu.be/JyNvywwi90s)                |
+    | 4.6            | 50               | 25            | Quad | No                     | febbyeka      | [Link](https://youtu.be/jtiu6GdsKhA)                |
+    | 3.0            | 150              | 25            | Quad | No                     | Taufik        | [Link](https://youtu.be/vG_hxHndXdI)                |
 
 === "900 MHz Rankings"
-    | Max Dist. | Pkt Rate | TX Power | Type | Failsafe at Max Range? | Pilot Handle  | Link to DVR |
-    | --------- | -------- | -------- | ---- | ---------------------- | ------------- | ----------- |
-    |    50.1Km |     25Hz |    500mW | Wing |                     No | Yarillo       | [Link](https://youtu.be/EJeTSvX5jrA) |
-    |    40.7Km |     50Hz |     10mW | Wing |                     No | Leslie Yagin  | [Link](https://youtu.be/HRqTklpWDIM) |
-    |    13.1Km |     50Hz |    100mW | Quad |                     No | Taufik        | [Link](https://youtu.be/Thrz9QuZGWE) |
-    |    10.0Km |    100Hz |    100mW | Wing |                     No | Flight Cub    | [Link](https://youtu.be/fg4MxRdKryU) |
-    |     6.0Km |    100Hz |     50mW | Wing |                     No | Snipes        | [Link](https://youtu.be/kN89mINbmQc) |
-    |     4.7Km |    200Hz |    250mW | Quad |                     No | DaBit         | [Link](https://youtu.be/k0lY0XwB6Ko) |
-    |     2.2Km |     50Hz |     10mW | Quad |                     No | Mike Malagoli | [Link](https://youtu.be/qi4OygUAZxA) |
+    | Max Dist. (km) | Packet Rate (Hz) | TX Power (mW) | Type | Failsafe at Max Range? | Pilot Handle  | Link to DVR                          |
+    |----------------|------------------|---------------|------|------------------------|---------------|--------------------------------------|
+    | 50.1           | 25               | 500           | Wing | No                     | Yarillo       | [Link](https://youtu.be/EJeTSvX5jrA) |
+    | 40.7           | 50               | 10            | Wing | No                     | Leslie Yagin  | [Link](https://youtu.be/HRqTklpWDIM) |
+    | 13.1           | 50               | 100           | Quad | No                     | Taufik        | [Link](https://youtu.be/Thrz9QuZGWE) |
+    | 10.0           | 100              | 100           | Wing | No                     | Flight Cub    | [Link](https://youtu.be/fg4MxRdKryU) |
+    | 6.0            | 100              | 50            | Wing | No                     | Snipes        | [Link](https://youtu.be/kN89mINbmQc) |
+    | 4.7            | 200              | 250           | Quad | No                     | DaBit         | [Link](https://youtu.be/k0lY0XwB6Ko) |
+    | 2.2            | 50               | 10            | Quad | No                     | Mike Malagoli | [Link](https://youtu.be/qi4OygUAZxA) |
