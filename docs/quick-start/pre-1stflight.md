@@ -114,7 +114,7 @@ set telemetry_disabled_mode = ON
 
 Since telemetry messages are sent with low priority it may take some time to transmit the data. The telemetry rate in the Lua settings script controls how often a telemetry message should be sent. So a ratio of 1:2 means that every second message is a telemetry message, so the telemetry data is transferred very fast. A ratio of 1:64 means that only one of 64 messages is a telemetry message and so the transfer happens much slower.
 
-The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 200 Hz. So if you need fast a fast telemetry update rate choose a high refresh rate, and a ratio that favors telemetry messages e.g. 200 Hz and 1:16 usually works well. For detailed information on telemetry bandwidth at different rates and ratios, see [this page on telemetry bandwidth](../info/telem-bandwidth.md).
+The refresh rate also impacts the transfer speed. 50 Hz is slower compared to 200 Hz. So if you need a fast telemetry update rate choose a high refresh rate, and a ratio that favors telemetry messages e.g. 200 Hz and 1:16 usually works well. For detailed information on telemetry bandwidth at different rates and ratios, see [this page on telemetry bandwidth](../info/telem-bandwidth.md).
 
 To finish the telemetry setup open the telemetry page on your transmitter and select "Discover new sensors" and wait for the list to fill. 
 
