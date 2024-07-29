@@ -19,7 +19,7 @@ ExpressLRS now has full bi-directional [MAVLink](https://mavlink.io/en/) support
 
 Unlike airport, you do **NOT** need a second RX/TX pair for RC control, since ELRS' implementation allows you to do BOTH telemetry and RC control over **one** link. 
 
-To start using MAVLink, you just need one ESP ELRS transmitter, and one ESP ELRS reciever. The majority of recent ELRS hardware is ESP based, and will be compatible with MAVLink. An easy way to check is, if the RX/TX have WiFi, then it is ESP based. 
+To start using MAVLink, you just need one ESP ELRS transmitter, and one ESP ELRS receiver. The majority of recent ELRS hardware is ESP based, and will be compatible with MAVLink. An easy way to check is, if the RX/TX have WiFi, then it is ESP based. 
 
 !!! note "NOTE"
     If you are planning to use 915/868MHz, note that the data rate will be significantly slower than on 2.4GHz. This will result in especially slow parameter downloading, and with 200Hz packet rate at 915MHz, it takes about 2.5 minutes to pull parameters.
@@ -42,14 +42,14 @@ To start using MAVLink, you just need one ESP ELRS transmitter, and one ESP ELRS
 
 
 === "ArduPilot"
-    For the below steps, when a UART connection is mentioned, it will be written as `SERIALx`. Replace `x` with the uart number you are using.
+    For the below steps, when a UART connection is mentioned, it will be written as `SERIALx`. Replace `x` with the UART number you are using.
 
     1. Configure `SERIALx_PROTOCOL=2`, `SERIALx_BAUD=460`, and `RSSI_TYPE=5`
     1. Connect the TX module to the computer running the Ground Control Station via a USB cable
     1. Select the COM port on the GCS, and connect using `460800` baud
 
 === "PX4"
-    For the below steps, when a UART connection is mentioned, it will be written as `SER_TELx`. Replace `x` with the uart number you are using.
+    For the below steps, when a UART connection is mentioned, it will be written as `SER_TELx`. Replace `x` with the UART number you are using.
 
     1. Configure SER_TELx_BAUD to `460800 8N1`
     1. Configure MAVLink with MAV_0_CONFIG to `TELEM2`
@@ -59,7 +59,7 @@ To start using MAVLink, you just need one ESP ELRS transmitter, and one ESP ELRS
     **CURRENTLY IN DEVELOPMENT** -
     As of update 8.0, which is currently not released yet, INAV has support for proper MAVLink integrations. Until then, refer to the Betaflight tab.
 
-    For the below steps, when a UART connection is mentioned, it will be written as `UARTx`. Replace `x` with the uart number you are using.
+    For the below steps, when a UART connection is mentioned, it will be written as `UARTx`. Replace `x` with the UART number you are using.
 
     1. In the Ports tab, set the UARTx `Telemetry Protocol` to `MAVLink`, and the baud rate to `460800`. Make sure `RX Serial` is disabled.
     1. In the Receiver tab, set the Receiver type to `SERIAL` and the `Serial Receiver Provider` to `MAVLink`. Leave inverted & half-duplex `disabled`.
