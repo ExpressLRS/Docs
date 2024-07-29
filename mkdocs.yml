@@ -218,6 +218,7 @@ nav:
               - Internal RadioMaster: quick-start/transmitters/rm-internal.md
               - Internal Jumper T-Pro: quick-start/transmitters/aion-internal.md
               - Internal Jumper TLite V2: quick-start/transmitters/jumper-internal.md
+              - Internal Jumper T14/T15: quick-start/transmitters/jumper-t14-t15-internal.md
               - Internal Jumper T20: quick-start/transmitters/jumper-t20-internal.md
               - Jumper Aion Nano: quick-start/transmitters/jumper-aion.md
               - NamimnoRC Flash: quick-start/transmitters/flash2400.md
@@ -325,6 +326,7 @@ nav:
 extra_javascript:
   - assets/javascripts/binding-phrase.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js
   - assets/javascripts/tablesort.js
   - assets/javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
