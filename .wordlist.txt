@@ -354,6 +354,7 @@ http
 https
 iFlight
 iNav
+integrations
 io
 ish
 jitter
@@ -422,6 +423,7 @@ unpowered
 unrooted
 unstaged
 unselected
+uplink
 vrx
 webpage
 www
