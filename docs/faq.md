@@ -10,7 +10,7 @@ hide:
 ## <span class="custom-heading" data-id="1">Why ExpressLRS?</span>
 
 ??? faq "Why ExpressLRS?"
-    ExpressLRS is a high-performance, open-source radio control protocol built from the ground up to be an extremely fast (**E**xpress), extremely sensitive (**L**ong **R**ange) **S**ystem. ELRS uses Semtech `SX12xx` LoRa transceivers and a lightweight, highly optimized over-the-air (OTA) protocol to provide superior performance compared to legacy RC links. While ExpressLRS started with DIY and repurposed hardware, a large number of manufacturers are now producing high-quality, low-cost transmitters and receivers to make it easy for anyone to get started!
+    ExpressLRS is a high-performance, open-source radio control protocol built from the ground up to be an extremely fast (<strong>E</strong>xpress), extremely sensitive (<strong>L</strong>ong <strong>R</strong>ange) <strong>S</strong>ystem. ELRS uses Semtech `SX12xx` LoRa transceivers and a lightweight, highly optimized over-the-air (OTA) protocol to provide superior performance compared to legacy RC links. While ExpressLRS started with DIY and repurposed hardware, a large number of manufacturers are now producing high-quality, low-cost transmitters and receivers to make it easy for anyone to get started!
 ## <span class="custom-heading" data-id="2">How does ExpressLRS compare to other systems?</span>
 
 ??? faq "How does ExpressLRS compare to other systems?"
