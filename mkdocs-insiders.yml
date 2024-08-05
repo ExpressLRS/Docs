@@ -23,5 +23,6 @@ plugins:
       font_family: Open Sans
   optimize:
     enabled: !ENV [CI, false]
+    print_gain_summary: false
   privacy:
     enabled: !ENV [CI, false]
