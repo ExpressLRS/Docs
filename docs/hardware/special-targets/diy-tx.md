@@ -44,12 +44,12 @@ Within [`targets.json`](https://github.com/ExpressLRS/targets/blob/master/target
 
 To access your target's configuration, you must add a new entry to the `targets.json` file - mimic the closest existing one and change the values to match your hardware. It's critical the `firmware` field match your processor.
 
-![](/assets/images/targetsFirmwareSelection.png)
+![](../../assets/images/targetsFirmwareSelection.png)
 
 Select the matching build target from PlatformIO:
 
-![](/assets/images/platformioSetEnv.png)
+![](../../assets/images/platformioSetEnv.png)
 
 After you run a build, you should be met with a hardware configuration selector and your new configuration!
 
-![](/assets/images/UnifiedConfigurationSelector.png)
+![](../../assets/images/UnifiedConfigurationSelector.png)

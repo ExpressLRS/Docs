@@ -31,7 +31,7 @@ Using the latest [Betaflight Configurator](https://github.com/betaflight/betafli
 If your Flight Controller model is not in the list above, consult your Flight Controller manufacturer for details.
 
 !!! info "NOTE"
-    The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../quick-start/receivers/hmes900.md#es915868rx-discontinued) instead.
+    The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../quick-start/receivers/hmes900.md/#updating-your-receiver-firmware-es915rxes868rx) instead.
     
     Likewise, the [v2.0 BetaFPV F4 1S 5A](https://betafpv.com/collections/brushless-flight-controller/products/f4-1s-5a-aio-brushless-flight-controller-elrs-2-4g) comes with an on-board UART-based ExpressLRS Receiver and doesn't use the SPI ExpressLRS implementation. Use the `BETAFPV AIO 2400 RX` Device target.
 
@@ -58,7 +58,7 @@ There are two ways to bind the receiver, as shown below
 
 Put the receiver into bind mode using any of these procedures:
 
-- "Bind" button in the Betaflight Configurator, Receiver Page (if can't be found, [update](#updating) the Betaflight firmware).
+- "Bind" button in the Betaflight Configurator, Receiver Page (if can't be found, update the Betaflight firmware).
 - Using the CLI, type in `bind_rx` and press enter once.
 - Press the bind button on the flight controller.
 - Using the CLI, type in `set expresslrs_uid = 0`, press enter once, then save and reboot
