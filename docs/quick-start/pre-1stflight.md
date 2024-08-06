@@ -103,10 +103,7 @@ To install the correct 'RC Link Preset', follow these steps in **Betaflight Conf
 
     
 
-1. Read through the options by selecting the dropdown list
-
-    !!! note "NOTE" 
-        These are all optional, if none of them apply to your circumstances, it is OK to leave everything unticked
+1. Read through the options by selecting the dropdown list. NOTE: These are all optional, if none of them apply to your circumstances, it is OK to leave everything unticked
 
 1. Select 'Pick' to stage the preset
 
