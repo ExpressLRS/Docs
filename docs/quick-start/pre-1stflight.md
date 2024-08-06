@@ -87,7 +87,9 @@ On the 900MHz hardware, a value of -20dBm or thereabouts is a good indication yo
 - Swap out antennas on the receiver and/or the TX module; Most ExpressLRS receiver antennas use IPEX 1/UFL connectors and as long as the frequency tuning of the antenna is appropriate for the frequency you're in, it should work. You can also use old 2.4GHz WiFi Router antennas for your 2.4GHz modules, but avoid those that are dual-band. Also, make sure that the connector on the antenna is the appropriate one (RP-SMA on R9 modules; SMA on most off-the-shelf ExpressLRS modules)
 
 ## RC Link Preset
-For flight controllers based on Betaflight, there are 'RC Link Presets' available that configure feedforward smoothing and associated link settings based on your packet rate and usage case. Using no link preset, or using the incorrect one for your packet rate, can result in unwanted disturbances in feedforward, which can affect setpoint tracking.
+For flight controllers based on Betaflight, there are 'RC Link Presets' available that configure feedforward smoothing and associated link settings based on your packet rate and usage case.
+
+Using no link preset, or using the incorrect one for your packet rate, can result in unwanted noise and jitter in feedforward, which can affect setpoint tracking.
 
 To install the correct 'RC Link Preset', follow these steps in **Betaflight Configurator**:
 
