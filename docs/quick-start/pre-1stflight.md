@@ -93,15 +93,11 @@ Using no link preset, or using the incorrect one for your packet rate, can resul
 
 To install the correct 'RC Link Preset', follow these steps in **Betaflight Configurator**:
 
-
-
 1. Select **Preset** tab
 1. Select **Save backup** before applying any preset
 1. Search for 'ExpressLRS' and select the Link Preset that matches your link rate. If no direct match is available, choose the next highest
 
     ![Presets Home](../assets/images/preset_home.png)
-
-    
 
 1. Read through the options by selecting the dropdown list. NOTE: These are all optional, if none of them apply to your circumstances, it is OK to leave everything unticked
 
@@ -112,10 +108,6 @@ To install the correct 'RC Link Preset', follow these steps in **Betaflight Conf
 1. Select **Save and Reboot** to apply the preset
 
     ![Presets Save](../assets/images/preset_save.png)
-
-
-
-
 
 ## Blackbox
 
