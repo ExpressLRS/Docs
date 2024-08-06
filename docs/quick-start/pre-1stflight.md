@@ -93,18 +93,22 @@ To install the correct 'RC Link Preset', follow these steps:
 
 ![Presets Home](../assets/images/preset_home.png)
 
-1. Go to "Preset" tab
-1. Save a backup before applying any preset
-1. Search for 'ExpressLRS' and click on the Link Preset that matches your link rate. If no direct match is available, choose the next highest
+1. Select **Preset** tab
+1. Select **Save backup** before applying any preset
+1. Search for 'ExpressLRS' and select the Link Preset that matches your link rate. If no direct match is available, choose the next highest
 
     ![Presets Pick](../assets/images/preset_pick.png)
 
-1. Read through the options. NOTE: These are all optional, if none of them apply to your circumstances, it is OK to leave everything unticked
-1. Click the 'Pick' button to stage the preset
+1. Read through the options by selecting the dropdown list
+
+    !!! note "NOTE" 
+        These are all optional, if none of them apply to your circumstances, it is OK to leave everything unticked
+
+1. Select 'Pick' to stage the preset
 
     ![Presets Save](../assets/images/preset_save.png)
 
-1. Click 'Save and Reboot' to apply the preset
+1. Select **Save and Reboot** to apply the preset
 
 
 
