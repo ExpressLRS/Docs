@@ -89,15 +89,17 @@ On the 900MHz hardware, a value of -20dBm or thereabouts is a good indication yo
 ## RC Link Preset
 For flight controllers based on Betaflight, there are 'RC Link Presets' available that configure feedforward smoothing and associated link settings based on your packet rate and usage case. Using no link preset, or using the incorrect one for your packet rate, can result in unwanted disturbances in feedforward, which can affect setpoint tracking.
 
-To install the correct 'RC Link Preset', follow these steps:
+To install the correct 'RC Link Preset', follow these steps in **Betaflight Configurator**:
 
-![Presets Home](../assets/images/preset_home.png)
+
 
 1. Select **Preset** tab
 1. Select **Save backup** before applying any preset
 1. Search for 'ExpressLRS' and select the Link Preset that matches your link rate. If no direct match is available, choose the next highest
 
-    ![Presets Pick](../assets/images/preset_pick.png)
+    ![Presets Home](../assets/images/preset_home.png)
+
+    
 
 1. Read through the options by selecting the dropdown list
 
@@ -106,9 +108,12 @@ To install the correct 'RC Link Preset', follow these steps:
 
 1. Select 'Pick' to stage the preset
 
+    ![Presets Pick](../assets/images/preset_pick.png)
+    
+1. Select **Save and Reboot** to apply the preset
+
     ![Presets Save](../assets/images/preset_save.png)
 
-1. Select **Save and Reboot** to apply the preset
 
 
 
