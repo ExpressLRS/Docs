@@ -66,7 +66,31 @@ The CRSF Protocol requires a full UART pair, uninverted and in full-duplex mode.
 - `serialrx_halfduplex` should be **OFF**; configure it with `set serialrx_halfduplex = off`.
 - Don't forget to use `save` once you're done setting these up.
 
+## RC Link Preset (BETAFLIGHT ONLY)
+For flight controllers based on Betaflight, there are 'RC Link Presets' available that configure feedforward smoothing and associated link settings based on your packet rate and usage case.
+
+!!! Warning
+    Using no link preset, or using the incorrect one for your packet rate, can result in unwanted noise and jitter in feedforward, which can affect setpoint tracking and thus flight characteristics.
+
+To install the correct 'RC Link Preset', follow these steps in **Betaflight Configurator**:
+
+1. Select the **Preset** tab
+1. In the preset tab, select **Save Backup** and save a backup to a safe location before applying any preset.
+1. Search for 'ExpressLRS' and select the Link Preset that matches your [Packet Rate](../transmitters/lua-howto.md#packet-rate-and-telemetry-ratio). If no direct match is available, choose the closest preset below your packet rate.
+
+    ![Presets Home](../../assets/images/preset_home.png)
+
+1. Read through the options by selecting the dropdown list. NOTE: These are all optional, if none of them apply to your circumstances, it is OK to leave everything unticked.
+
+1. Select 'Pick' to stage the preset:
+
+    ![Presets Pick](../../assets/images/preset_pick.png)
+    
+1. Select **Save and Reboot** to apply the preset:
+
+    ![Presets Save](../../assets/images/preset_save.png)
+
 !!! important
     Close your Flight Controller Configurator once you've set it up for ExpressLRS. Keeping it open could prevent the next steps from completing properly, particularly flashing via Passthrough. You must also unplug the FC from USB before proceeding to the next steps to refresh the connection.
 
-With your Flight Controller configured, you can now proceed to the next step: [Checking RX Firmware Version](../receivers/firmware-version.md).
+With your Flight Controller configured, you can now proceed to the next step: [Checking RX Firmware Version](./firmware-version.md).
