@@ -290,6 +290,7 @@ nav:
           - Team Racing: software/teamracing.md
           - Backpack Telemetry (aka Sentinel Tracker Integration): software/backpack-telemetry.md
           - MAVLink: software/mavlink.md
+          - MFD Crossbow Tracker Integration: software/mfd-crossbow.md
       - Testing:
           - CRC Testing: software/testing/crc-testing.md
           - Unit Testing: software/testing/unit-testing.md
