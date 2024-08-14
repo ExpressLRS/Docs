@@ -5,7 +5,7 @@ description: How to setup, flash, and update your ExpressLRS Transmitter Backpac
 
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
 
-## Transmitter Backpack Firmware Flashing
+## Transmitter Backpack Firmware Guide
 
 <figure markdown>
 ![Backpack Configurator](../../assets/images/backpackconf.png)
@@ -44,7 +44,7 @@ For the Happymodel TX modules, connect to your computer via USB. As stated above
 <figcaption>Module Buttons</figcaption>
 </figure>
 
-- Select the `UART` option under `Flashing Method`.
+- In the Configurator, select the `UART` option under `Flashing Method`.
 - Ensure you have completed the steps in the Setup section above, then click `Flash` on the ExpressLRS Configurator.
 - Wait for the process to complete and you should see the green `Success` notification.
 - Unplug the USB and change the position of the jumpers/DIP switches for the `Normal Operation` (refer back to the module's Flashing Guide page for the correct position).
@@ -55,7 +55,7 @@ For the Happymodel TX modules, connect to your computer via USB. As stated above
 Applies to: Newer TX modules that do NOT have DIP switches / jumper pins, e.g. `Radiomaster Ranger Series`
 
 - Plug a USB Data Cable into the TX module.
-- Select the `Passthrough` option under `Flashing Method`.
+- In the Configurator, select the `Passthrough` option under `Flashing Method`.
 - Ensure you have completed the steps in the Setup section above, then click `Flash` on the ExpressLRS Configurator.
 - Wait for the process to complete and you should see the green `Success` notification.
 
@@ -72,7 +72,7 @@ Applies to: All TX modules that have a Backpack (this method assumes that the Ba
 
 - If you are NOT using Home WiFi, connect to the `ExpressLRS TX Backpack` WiFi access point (password is `expresslrs`) and navigate your browser to http://10.0.0.1/.
 - If you ARE using Home WiFi, navigate your browser to http://elrs_txbp.local/.
-- Select the `WIFI` option under `Flashing Method`.
+- In the Configurator, select the `WIFI` option under `Flashing Method`.
 - Ensure you have completed the steps in the Setup section above, then click `Build` on the ExpressLRS Configurator.
 - Grab the built `firmware.bin` and drag-and-drop it into the File Upload section of the webpage and click `Update`. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
 
@@ -110,7 +110,7 @@ Applies to: Internal ExpressLRS TX modules, e.g. `RadioMaster Zorro TX Backpack`
 ![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
 </figure>
 
-- Select the `EdgeTXPassthrough` option under `Flashing Method`.
+- In the Configurator, select the `EdgeTXPassthrough` option under `Flashing Method`.
 - Ensure you have completed the steps in the Setup section above, then click `Flash` on the ExpressLRS Configurator.
 - Wait for the process to complete and you should see the green `Success` notification.
 - Unplug the USB from the handset and you're set!
