@@ -165,9 +165,7 @@ For example, on the Crossbow mini, assuming you are using the L-Port:
       - Exit the script.
       - Your TX module is now configured to broadcast telemetry to the Backpack receiver.
 
-**A note on Backpack Telemetry:**
-
-      Backpack telemetry is transmitted on the 2.4G WiFi band, via ESPNOW (this should have a very limited impact on any LoRa signals, as it is modulated via OFDM like a normal WiFi hotspot). Every telemetry message that your transmitter receives from the craft will be re-transmitted via ESPNOW. You may want to disable Backpack Telemetry to reduce your footprint on the RF noise floor when you aren't using it, especially if you are at something like a race day, where there is often contention on the RF spectrum. Disabling Backpack Telemetry will cause the Crossbow integration to stop working.
+      **NOTE** Backpack telemetry is transmitted on the 2.4G WiFi band, via ESPNOW (this should have a very limited impact on any LoRa signals, as it is modulated via OFDM like a normal WiFi hotspot). Every telemetry message that your transmitter receives from the craft will be re-transmitted via ESPNOW. You may want to disable Backpack Telemetry to reduce your footprint on the RF noise floor when you aren't using it, especially if you are at something like a race day, where there is often contention on the RF spectrum. Disabling Backpack Telemetry will cause the Crossbow integration to stop working.
       
       To disable Backpack Telemetry (only do this if you are NOT using the Crossbow integration):
 
