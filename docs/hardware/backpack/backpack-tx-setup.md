@@ -64,7 +64,7 @@ Applies to: Newer TX modules that do NOT have DIP switches / jumper pins, e.g. `
 Applies to: All TX modules that have a Backpack (this method assumes that the Backpack firmware has been flashed in the past and is functional).
 
 - Using the ExpressLRS Lua script, navigate to `WiFi Connectivity` and select `Enable Backpack WiFi`.
-- The LUA script will breifly show `Sending`, then return to the WiFi menu.
+- The LUA script will briefly show `Sending`, then return to the WiFi menu.
 - The Backpack WiFi Access Point (or Home WiFi, if you enabled it) will activate.
 
 !!! info "Home WiFi"
