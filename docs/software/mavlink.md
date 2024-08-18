@@ -38,6 +38,16 @@ To start using MAVLink, you just need one ESP ELRS transmitter, and one ESP ELRS
 
 1. Configure your usual power, packet rate, etc. Use 1:2 for telemetry ratio (it will be auto-set)
 
+1. (Optional) Configure Source and Target SysIDs
+
+    1. Power-cycle the receiver
+
+    2. Go to `Other Devices` and select your receiver
+
+    3. Set `Target SysID` to the vehicle SysID
+
+    4. Set `Source SysID` to preferred GCS SysID
+
 1. Wire the RX to a free UART that is suitable for TLM + RC
 
 
@@ -77,7 +87,6 @@ When set to MAVLink mode, ELRS changes the allocation of uplink and downlink fra
 
 - Uplink frames from TX to RX continue to include stick/switch data in the standard ELRS format
 - Uplink frames are opportunistically replaced with MAVLink data from your GCS to your aircraft, which is limited to a maximum of 50% of the link's upstream bandwidth. In general, MAVLink from GCS to the aircraft consumes very little bandwidth, due to it being mainly GCS heartbeats.
-
 
 - Downlink telemetry frames from RX to TX are completely replaced by MAVLink data
 - Your TX converts the MAVLink telemetry into standard CRSF format which is understood by EdgeTX
