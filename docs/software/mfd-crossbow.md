@@ -11,7 +11,7 @@ ExpressLRS provides an integration with the MFD [Crossbow](https://myflydream.co
 ![Crossbow Integration](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/crossbow-bokeh.jpg)
 
 ### How does it work?
-In order to forward the telemetry data (that the TX is receiving from the craft) over to the MFD Crossbow, we have leveraged the "Backpack" functionality that is built-in to many ELRS trasnmitter modules. The Backpack allows an ELRS TX module to communicate with nearby devices using [ESP-NOW](https://www.espressif.com/en/solutions/low-power-solutions/esp-now), which is a peer to peer WiFi-based protocol.
+In order to forward the telemetry data (that the TX is receiving from the craft) over to the MFD Crossbow, we have leveraged the "Backpack" functionality that is built-in to many ELRS transmitter modules. The Backpack allows an ELRS TX module to communicate with nearby devices using [ESP-NOW](https://www.espressif.com/en/solutions/low-power-solutions/esp-now), which is a peer to peer WiFi-based protocol.
 
 By flashing the `MFD Crossbow Antenna Tracker Backpack` firmware to a receiver, it will now listen for ESP-NOW telemetry packets, and forward them as MAVLink (via UART) to the Crossbow.
 
@@ -19,7 +19,7 @@ When the main ELRS firmware receives the telemetry from the craft, it sends it t
 
 ### What do I need?
 - An ELRS transmitter module with internal TX-Backpack.
-- A Backpack-capable receiver - this can be an ESP-based ExpressLRS receiver, or for better WiFi perfomance, you can also use an ESP32 dev board, etc.
+- A Backpack-capable receiver - this can be an ESP-based ExpressLRS receiver, or for better WiFi performance, you can also use an ESP32 dev board, etc.
 - An MFD Crossbow (mini or full size) tracker
 - ELRS LUA script installed on your handset
 - A GPS-equipped craft with an ELRS receiver
@@ -28,7 +28,7 @@ When the main ELRS firmware receives the telemetry from the craft, it sends it t
 
 To work through this guide, you will need to:
 - Update the firmware on your TX and TX-Backpack (depending on your current version)
-- Flash an ELRS reciever, or an ESP-based dev board as a Backpack receiver
+- Flash an ELRS receiver, or an ESP-based dev board as a Backpack receiver
 - Wire the receiver to the Crossbow
 - Setup the Crossbow for MAVLink protocol
 - Setup ELRS via LUA for telemetry forwarding on the Backpack
@@ -70,7 +70,7 @@ If you are using an ELRS receiver, you can look this up (for supported hardware)
 
 <figure markdown>
 ![RP1Platform](../assets/images/esp32-dev-board.png)
-<figcaption>Platform for the Radiomaster RP1</figcaption>
+<figcaption>Platform for the RadioMaster RP1</figcaption>
 </figure>
 
 If you are using an ESP32 dev board, check the listing to see if it's an `ESP32`, an `ESP32C3` or an `ESP32S3`.
@@ -88,7 +88,7 @@ If you are using an ESP32 dev board, check the listing to see if it's an `ESP32`
 Use this method if you have an FTDI (USB to serial converter), or if you are using an ESP32 dev board connected to the PC via a USB cable.
 
 - Ensure you have the drivers installed for your FTDI, and the device shows up as a COM port in Device Manager when plugged in.
-- Connect the reciever to the FTDI:
+- Connect the receiver to the FTDI:
 
 <figure markdown>
 ![FTDIConnection](../../assets/images/FTDIConn.png)
@@ -193,7 +193,7 @@ To change the telemetry ratio:
 Once configured, power up your GPS-equipped craft and establish the link between your ELRS Transmitter and Receiver.
 Ensure that GPS telemetry is being received on your handset (go to the `Model` menu in EdgeTX, and inspect the Telemetry page to make sure you are getting GPS coordinates).
 
-The Crossbow status screen should now be showing `DLink:100%` and `GPS:` should reflect the number of sats aquired. Once `GPS:` is greater than 6, press the right button to set home, as per the user manual.
+The Crossbow status screen should now be showing `DLink:100%` and `GPS:` should reflect the number of sats acquired. Once `GPS:` is greater than 6, press the right button to set home, as per the user manual.
 
 ## Troubleshooting
 If you encounter issues:
