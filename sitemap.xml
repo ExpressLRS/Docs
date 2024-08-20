@@ -625,6 +625,12 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/mavlink/"/>
     </url>
     <url>
+        <loc>https://www.expresslrs.org/software/mfd-crossbow/</loc>
+        <lastmod>2024-08-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/mfd-crossbow/"/>
+    </url>
+    <url>
         <loc>https://www.expresslrs.org/software/model-config-match/</loc>
         <lastmod>2024-08-20</lastmod>
         <changefreq>daily</changefreq>
