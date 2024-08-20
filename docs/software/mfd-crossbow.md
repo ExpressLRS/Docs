@@ -8,7 +8,7 @@ description: ExpressLRS Backpack integration with the MFD Crossbow AAT.
 ## Introduction
 ExpressLRS provides an integration with the MFD [Crossbow](https://myflydream.com/trackers-c-1/crossbow-tracker-p-1) and [mini Crossbow](https://myflydream.com/trackers-c-1/mini-crossbow-p-4) antenna trackers, which wirelessly forwards the telemetry from an ELRS TX module to the Crossbow in order to track the craft.
 
-![Crossbow Integration](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/crossbow-bokeh.jpg)
+![Crossbow Integration](../assets/images/crossbow-bokeh.jpg)
 
 ### How does it work?
 In order to forward the telemetry data (that the TX is receiving from the craft) over to the MFD Crossbow, we have leveraged the "Backpack" functionality that is built-in to many ELRS transmitter modules. The Backpack allows an ELRS TX module to communicate with nearby devices using [ESP-NOW](https://www.espressif.com/en/solutions/low-power-solutions/esp-now), which is a peer to peer WiFi-based protocol.
