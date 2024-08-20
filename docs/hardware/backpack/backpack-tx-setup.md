@@ -73,8 +73,11 @@ Applies to: All TX modules that have a Backpack (this method assumes that the Ba
 - If you are NOT using Home WiFi, connect to the `ExpressLRS TX Backpack` WiFi access point (password is `expresslrs`) and navigate your browser to http://10.0.0.1/.
 - If you ARE using Home WiFi, navigate your browser to http://elrs_txbp.local/.
 - In the Configurator, select the `WIFI` option under `Flashing Method`.
-- Ensure you have completed the steps in the Setup section above, then click `Build` on the ExpressLRS Configurator.
-- Grab the built `firmware.bin` and drag-and-drop it into the File Upload section of the webpage and click `Update`. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
+- Ensure you have completed the steps in the Setup section above, then click `Flash` on the ExpressLRS Configurator.
+- Wait for the process to complete and you should see the green `Success` notification.
+
+- Alternatively, you can build the firmware file, then drag it to the WebUI. To do this, ensure you have completed the steps in the Setup section above, then click `Build` on the ExpressLRS Configurator.
+- Grab the built `firmware.bin.gz` (do NOT extract it) and drag-and-drop it into the File Upload section of the webpage and click `Update`. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
 
 <figure markdown>
 ![WiFi ESP](../../assets/images/backpackwifiESP.png)
