@@ -77,7 +77,8 @@ Applies to: All TX modules that have a Backpack (this method assumes that the Ba
 - Wait for the process to complete and you should see the green `Success` notification.
 
 - Alternatively, you can build the firmware file, then drag it to the WebUI. To do this, ensure you have completed the steps in the Setup section above, then click `Build` on the ExpressLRS Configurator.
-- Grab the built `firmware.bin.gz` (do NOT extract it) and drag-and-drop it into the File Upload section of the webpage and click `Update`. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
+- Grab the built `firmware.bin.gz` (do NOT extract it) and drag-and-drop it into the File Upload section of the webpage. If you are using an ESP32 based Backpack, the filename may be `firmware.bin`. Drag-and-drop it into the File Upload section of the webpage.
+- Click `Update`. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
 
 <figure markdown>
 ![WiFi ESP](../../assets/images/backpackwifiESP.png)

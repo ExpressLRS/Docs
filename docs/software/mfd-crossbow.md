@@ -109,7 +109,8 @@ If you are flashing an ExpressLRS receiver, you may chose to use WiFi to flash t
 - If you ARE using Home WiFi, navigate your browser to http://elrs_rx.local/?force=true **NOTE THE EXTRA ?force=true ON THE url**
 - In the Configurator, select the `WIFI` option under `Flashing Method`.
 - Ensure you have completed the steps in the "Flash the Backpack Receiver" section above, then click `Build` on the ExpressLRS Configurator.
-- Grab the built `firmware.bin` and drag-and-drop it into the File Upload section of the webpage and click `Update`. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
+- Grab the built `firmware.bin.gz` (do NOT extract it) and drag-and-drop it into the File Upload section of the webpage. If you are using an ESP32 based device, the filename may be `firmware.bin`. Drag-and-drop it into the File Upload section of the webpage.
+- Click `Update`. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
 
 <figure markdown>
 ![WiFi ESP](../../assets/images/backpackwifiESP.png)
