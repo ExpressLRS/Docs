@@ -54,9 +54,11 @@ DVDA
 DX
 DaBit
 Denks
+Dev
 Disnator
 DisplayPort
 DivisionRc
+DLink
 EEA
 EL
 ELRS
@@ -65,6 +67,7 @@ EP
 ESC
 ESCs
 ESPnow
+ESPxxxx
 ETX
 EdgeTX
 Espressif
@@ -139,6 +142,7 @@ MAVLink
 MCU
 MCUs
 MDL
+MFD
 MHz
 MOSFET
 MSP
@@ -291,6 +295,7 @@ Walksnail
 WebSocket
 WebUI
 Wifi
+Wirelessly
 XO
 XT
 Yagin
@@ -327,6 +332,7 @@ degC
 desolder
 desync
 devs
+dev
 distro's
 dodecatillion
 downlink
@@ -357,6 +363,7 @@ iNav
 integrations
 io
 ish
+json
 jitter
 jurgelenas
 kB
@@ -405,6 +412,7 @@ repurposes
 rssi
 runtime
 rx
+sats
 selectable
 sourceforge
 spammy
@@ -424,8 +432,10 @@ unrooted
 unstaged
 unselected
 uplink
+url
 vrx
 webpage
+wirelessly
 www
 xpress
 youtube

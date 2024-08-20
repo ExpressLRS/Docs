@@ -5,9 +5,28 @@ description: How to setup, flash, and update your ExpressLRS Transmitter Backpac
 
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
 
-## Preparing the TX Module for Backpack Firmware Flashing
+## Transmitter Backpack Firmware Guide
 
-For the Happymodel TX Modules, you will need to move the jumpers or DIP switches into the correct position before flashing the firmware. Please see the USB/UART Flashing section of your particular TX Module for the jumper or DIP switch position.
+<figure markdown>
+![Backpack Configurator](../../assets/images/backpackconf.png)
+<figcaption>Backpack Configurator</figcaption>
+</figure>
+
+Most of the ESP-based ExpressLRS modules come with the TX Backpack. A "TX Backpack" refers to an additional WiFi-capable microcontroller inside the TX module, which can communicate wirelessly with "Backpack receivers". This allows the TX to communicate with other devices such as your Goggles (to change VRX channel), race timers, antenna trackers, ground control stations, etc.
+
+### Setup
+
+- Open the ExpressLRS Configurator and select `Backpack` in the left hand menu bar.
+- Select the latest Backpack Release version from the `Releases` dropdown.
+- Select your device target. If there is a target that matches your hardware, use it. If you can't find a target that matches your TX module, use the `Generic backpack for any TX module` targets.
+- Enter your Binding Phrase and your Home WiFi SSID and Password (Optional).
+- Choose your `Flashing Method` based on your hardware (choose from the options below):
+
+### Flashing via USB/UART (for older TX modules with DIP switches / jumper pins)
+
+Applies to: Older TX modules that have DIP switches or jumper pins, e.g. `Happymodel TX modules`. Recent transmitter modules do not required any preparation prior to flashing the TX-Backpack firmware. If your TX module does not have any DIP switches or jumper pins, you can skip this step, and proceed to flash via Passthrough or WiFi.
+
+For older TX modules like the Happymodel TX Modules, you will need to move the jumpers or DIP switches into the correct position before flashing the firmware. Please see the USB/UART Flashing section of your particular TX Module for the jumper or DIP switch position.
 
 - [ES24TX Jumpers](../../quick-start/transmitters/es24tx.md/#via-uart)
 - [ES900TX Jumpers](../../quick-start/transmitters/es900tx.md/#via-uart)
@@ -16,31 +35,7 @@ You need to activate the `Backpack Flashing` jumper or DIP switch (middle pair).
 
 For the NamimnoRC Flash and Voyager TX Modules without an OLED screen (Gen 1 STM-based), make sure you're able to access the Backpack Web Update page (see [Flashing Guide](../../quick-start/transmitters/flash2400.md)) via WiFi.
 
-NamimnoRC OLED-equipped TX Modules and Axisflying Thor modules should come preflashed with Backpack firmware.
-
-## Backpack Firmware Flashing
-
-<figure markdown>
-![Backpack Configurator](../../assets/images/backpackconf.png)
-<figcaption>Backpack Configurator</figcaption>
-</figure>
-
-Flashing Backpack firmware is supported by the ExpressLRS Configurator since v1.2.0.
-
-- Targets:
-    - `HappyModel TX Backpack`
-    - `AXIS THOR TX Backpack`
-    - `FrSky TX Backpack`
-    - `Namimno Non-OLED TX Backpack`
-    - `Namimno Flash OLED TX Backpack`
-
-### Flashing via USB/UART
-
 For the Happymodel TX modules, connect to your computer via USB. As stated above, the module should be detected as a `USB to UART Bridge` and the jumper/DIP switches are set in the correct position (middle pins/switches should be On).
-
-In ExpressLRS Configurator, select the appropriate Target and enter your binding phrase which will be used to bind the Backpacks together. It can be different from your usual binding phrase, but there's no issue if you want to use the same. You can also set your Home WiFi Network SSID and Password (version 0.2.0 or newer) to enable updating over your home WiFi.
-
-Once set, click **Build and Flash** on the ExpressLRS Configurator.
 
 **Button Dance:** A few buttons are needed to be pressed on the module while the firmware is compiling. Press and Hold the `GPI0` button then the `RST` button (GPIO is still pressed) then release the `RST` button and then the `GPIO` button.
 
@@ -49,43 +44,50 @@ Once set, click **Build and Flash** on the ExpressLRS Configurator.
 <figcaption>Module Buttons</figcaption>
 </figure>
 
-If you did things right, a `Success` message should appear.
-
-Unplug the USB and change the position of the jumpers/DIP switches for the `Normal Operation` (refer back to the module's Flashing Guide page for the correct position).
-
-Put back the cover of the module and attach it to your module bay.
+- In the Configurator, select the `UART` option under `Flashing Method`.
+- Ensure you have completed the steps in the Setup section above, then click `Flash` on the ExpressLRS Configurator.
+- Wait for the process to complete and you should see the green `Success` notification.
+- Unplug the USB and change the position of the jumpers/DIP switches for the `Normal Operation` (refer back to the module's Flashing Guide page for the correct position).
+- Put back the cover of the module and attach it to your module bay.
 
 ### Flashing via Passthrough
 
-Applies to: `Radiomaster Ranger Series`
+Applies to: Newer TX modules that do NOT have DIP switches / jumper pins, e.g. `Radiomaster Ranger Series`
 
-These devices use the base `HappyModel TX Backpack` as a target.
+- Plug a USB Data Cable into the TX module.
+- In the Configurator, select the `Passthrough` option under `Flashing Method`.
+- Ensure you have completed the steps in the Setup section above, then click `Flash` on the ExpressLRS Configurator.
+- Wait for the process to complete and you should see the green `Success` notification.
 
-- Plug in a USB Data Cable into the module.
-- Select the latest Backpack Release version.
-- Select the device target, `HappyModel TX Backpack`.
-- Select the `via Passthrough` flashing method.
-- Set your runtime options.
-- Click `Build and Flash`
-- Wait for the process to complete.
+### Flashing via WiFi
 
-### Flashing via WiFi (ESP-based TX Modules)
+Applies to: All TX modules that have a Backpack (this method assumes that the Backpack firmware has been flashed in the past and is functional).
 
-!!! info "Note"
-    The following section applies to more recently released TX modules like the NamimnoRC OLED-equipped Modules. If you have the older Happymodel modules and have updated their backpack firmware to at least 0.1.0, then this can be used for future updates.
+- Using the ExpressLRS Lua script, navigate to `WiFi Connectivity` and select `Enable Backpack WiFi`.
+- The LUA script will briefly show `Sending`, then return to the WiFi menu.
+- The Backpack WiFi Access Point (or Home WiFi, if you enabled it) will activate.
 
-Using the ExpressLRS v2.0 Lua script, navigate to `WiFi Connectivity` and select `Enable Backpack WiFi`. The Backpack WiFi Access Point will immediately activate. Connect to the `ExpressLRS TX Backpack` AP (password is `expresslrs`). Navigate your browser to http://10.0.0.1/.
+!!! info "Home WiFi"
+    With your Home Network SSID and Password set, when you activate the WiFi mode via the Lua script (`WiFi Connectivity` -> `Enabled Backpack WiFi`), the Backpack will try to connect to your Home WiFi Network. Once connected, you can access the Web Update page via http://elrs_txbp.local/ and upload your firmware there.
 
-**Build** the TX firmware using the ExpressLRS Configurator. Grab the built `firmware.bin` and drag-and-drop it into the File Upload section of the webpage and click **Update**. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
+- If you are NOT using Home WiFi, connect to the `ExpressLRS TX Backpack` WiFi access point (password is `expresslrs`) and navigate your browser to http://10.0.0.1/.
+- If you ARE using Home WiFi, navigate your browser to http://elrs_txbp.local/.
+- In the Configurator, select the `WIFI` option under `Flashing Method`.
+- Ensure you have completed the steps in the Setup section above, then click `Flash` on the ExpressLRS Configurator.
+- Wait for the process to complete and you should see the green `Success` notification.
+
+- Alternatively, you can build the firmware file, then drag it to the WebUI. To do this, ensure you have completed the steps in the Setup section above, then click `Build` on the ExpressLRS Configurator.
+- Grab the built `firmware.bin.gz` (do NOT extract it) and drag-and-drop it into the File Upload section of the webpage. If you are using an ESP32 based Backpack, the filename may be `firmware.bin`. Drag-and-drop it into the File Upload section of the webpage.
+- Click `Update`. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
 
 <figure markdown>
 ![WiFi ESP](../../assets/images/backpackwifiESP.png)
 <figcaption>WiFi ESP</figcaption>
 </figure>
 
-### Flashing via WiFi (NamimnoRC Gen1 TX Modules)
+### Flashing via WiFi (older NamimnoRC Gen1 TX Modules)
 
-For the First Generation NamimnoRC TX modules (No OLED), you will have to first **Build** the Backpack firmware. Once built, grab the `backpack.bin` file from the folder that the ExpressLRS Configurator opened. Open the URL http://elrs_tx.local on your browser and scroll down to where the **WiFi Backpack Firmware Update** section is (shown in the image below). If the page isn't loading, make sure you have followed the Wifi Flashing guide for these modules (see [Flashing Guide](../../quick-start/transmitters/flash2400.md/#via-wifi)).
+For the First Generation NamimnoRC TX modules (No OLED), you will have to first `Build` the Backpack firmware. Once built, grab the `backpack.bin` file from the folder that the ExpressLRS Configurator opened. Open the URL http://elrs_tx.local on your browser and scroll down to where the **WiFi Backpack Firmware Update** section is (shown in the image below). If the page isn't loading, make sure you have followed the Wifi Flashing guide for these modules (see [Flashing Guide](../../quick-start/transmitters/flash2400.md/#via-wifi)).
 
 <figure markdown>
 ![Wifi Backpack](../../assets/images/backpackwifi.png)
@@ -96,16 +98,13 @@ Wait for a bit (~10s) after the message "Update Success! Rebooting..." appears b
 
 ### Flashing via ETX Passthrough
 
-- Targets:
-    - `RadioMaster Zorro TX Backpack`
-    - `RadioMaster TX16S Backpack`
-    - `RadioMaster TX12 Backpack`
-    - `RadioMaster Boxer Backpack`
+Applies to: Internal ExpressLRS TX modules, e.g. `RadioMaster Zorro TX Backpack`, `RadioMaster TX16S Backpack`, etc.
 
 !!! info "FYI"
     This method is the result of the collaborative effort between EdgeTX, RadioMaster, and ExpressLRS.
 
-With your handset turned on, connect a USB data cable to the USB data port of the Radio. Select `USB Serial(Debug)` or `USB Serial(VCP)` in the options window that pops up.
+- With your handset turned on, connect a USB data cable to the USB data port of the Radio.
+- Select `USB Serial(Debug)` or `USB Serial(VCP)` in the options window that pops up.
 
 <figure markdown>
 ![usb picture](../../assets/images/tx-internalUSBPlugged.jpg)
@@ -115,23 +114,10 @@ With your handset turned on, connect a USB data cable to the USB data port of th
 ![Debug option](../../assets/images/tx-internalSerialDebug.jpg)
 </figure>
 
-Using the ExpressLRS Configurator, select the appropriate version and the correct Device Target and set the Flashing method to `EdgeTXPassthrough`.
-
-Set your Binding Phrase and your Home WiFi SSID and Password (Optional).
-
-Click **Build and Flash** on the ExpressLRS Configurator.
-
-Wait for the process to complete and you should see the green `Success` notification.
-
-Unplug the USB from the handset and you're set!
-
-## Starting in 0.2.0, you can Update via your Home WiFi Network
-
-With your Home Network SSID and Password set, when you activate the WiFi mode via the Lua script (`WiFi Connectivity` -> `Enabled Backpack WiFi`), the Backpack will try to connect to your Home WiFi Network. Once connected, you can access the Web Update page via http://elrs_txbp.local/ and upload your firmware there.
-
-The ExpressLRS Configurator will also detect the device after it has been connected. It will be listed in the "Device List" section, and you can press `SELECT`, so that the correct target is automatically selected for **Build**.
-
-Alternatively, you can also **Build and Flash** via the Configurator through WiFi without having to access the Web Update page (just like any ESP-based ExpressLRS receiver).
+- In the Configurator, select the `EdgeTXPassthrough` option under `Flashing Method`.
+- Ensure you have completed the steps in the Setup section above, then click `Flash` on the ExpressLRS Configurator.
+- Wait for the process to complete and you should see the green `Success` notification.
+- Unplug the USB from the handset and you're set!
 
 ## How to check you have updated the TX Backpack Firmware?
 
@@ -140,7 +126,7 @@ Make sure you set the jumpers or DIP switches on your modules (if required, e.g.
 !!! info "Attention"
     Change the position of the DIP switches or jumper pins to `Normal Operation` if required for your module (e.g. Happymodel TX modules).
 
-Navigate to the `WiFi Connectivity` folder of the ExpressLRS v2 Lua script and select `Enable Backpack WiFi`. Scan for Access Points, and **ExpressLRS TX Backpack** should appear. Connect to it and point your browser to http://10.0.0.1/.
+Navigate to the `WiFi Connectivity` folder of the ExpressLRS Lua script and select `Enable Backpack WiFi`. Scan for Access Points, and **ExpressLRS TX Backpack** should appear. Connect to it and point your browser to http://10.0.0.1/.
 
 If you have set your Home Network SSID and Password, point your browser to http://elrs_txbp.local/.
 
