@@ -140,7 +140,7 @@ If you use the L-Port on the mini, you also get a +5V and GND source for the rec
 <figcaption>Example Crossbow RX Wiring</figcaption>
 </figure>
 
-## Step 4: Configure the Crossbow for MAVLink
+## Step 3: Configure the Crossbow for MAVLink
 Refer to the respective user manual for your model of Crossbow in order to change the UART to MAVLink protocol, at a baud rate of 115200.
 
 For example, on the Crossbow mini, assuming you are using the L-Port:
@@ -152,7 +152,7 @@ For example, on the Crossbow mini, assuming you are using the L-Port:
 - Short press the left button until `L:<protocol>` is highlighted, and short press the right button until it reads `L:MAVLink`
 - Short press the left button until `Exit` is highlighted, and short press the right button to exit. Do the same again to exit the main menu.
 
-## Step 5: Enable Backpack Telemetry in ELRS LUA Script
+## Step 4: Enable Backpack Telemetry in ELRS LUA Script
 1. **Access the LUA Script:**
       - Power on your transmitter and navigate to the System menu.
       - Execute the ELRS LUA script.
@@ -176,7 +176,7 @@ For example, on the Crossbow mini, assuming you are using the L-Port:
       - Set the "Telemetry" option to `Off`.
       - Exit the script.
 
-## Step 6: Set the Telemetry Ratio
+## Step 5: Set the Telemetry Ratio
 The Crossbow requires frequent GPS coordinate updates in order to track the craft, and to maintain the link.
 
 The recommendation is to use a telemetry ratio of:
