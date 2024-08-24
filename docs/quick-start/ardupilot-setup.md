@@ -14,7 +14,7 @@ In mission planner, you will need to go to the ```config tab -> parameter tree``
 SERIALx_PROTOCOL = 23 (RCIN)
 RSSI_TYPE = 3 (ReceiverProtocol)
 ```
-Our packet rate is different from the Ardupilot CRSF packet rate, and ArduPilot will keep on reporting the mismatch, but recently they have an option to suppress the report. Currently ArduPilot provide a way to suppress this notification with the parameter below. (this will not cause any effect to RC link or telemetry Link.)
+Our packet rate is different from the ArduPilot CRSF packet rate, and ArduPilot will keep on reporting the mismatch, but recently they have an option to suppress the report. Currently ArduPilot provide a way to suppress this notification with the parameter below. (this will not cause any effect to RC link or telemetry Link.)
 ```
 RC_OPTIONS turn on Bit 9th which is  "Suppress CRSF mode/rate message for ELRS systems".
 ```
