@@ -74,6 +74,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device: 
             - `HGLRC Hermes 2.4GHz RX`
+            - `HGLRC Gemini 2.4GHz RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -146,6 +147,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device: 
             - `HGLRC Hermes 2.4GHz RX`
+            - `HGLRC Gemini 2.4GHz RX`
 
     7. Set the Flashing Method to `UART`
 
@@ -199,6 +201,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `HGLRC Hermes 2.4GHz RX`
+                - `HGLRC Gemini 2.4GHz RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -344,6 +347,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `HGLRC Hermes 2.4GHz RX`
+                - `HGLRC Gemini 2.4GHz RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -547,6 +551,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `HGLRC Hermes 2.4GHz RX`
+                - `HGLRC Gemini 2.4GHz RX`
 
         4. Set the Flashing Method to `WiFi`.
 
