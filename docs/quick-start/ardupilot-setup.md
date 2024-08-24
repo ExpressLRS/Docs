@@ -14,10 +14,15 @@ In mission planner, you will need to go to the ```config tab -> parameter tree``
 SERIALx_PROTOCOL = 23 (RCIN)
 RSSI_TYPE = 3 (ReceiverProtocol)
 ```
-our packet rate is different than CRSF packet rate, and ArduPilot will keep on reporting the mismatch, but recently they have an option to suppress the report. Currently ArduPilot provide a way to suppress this notification with the parameter below. (this will not cause any effect to RC link or telemetry Link.)
+Our packet rate is different from the Ardupilot CRSF packet rate, and ArduPilot will keep on reporting the mismatch, but recently they have an option to suppress the report. Currently ArduPilot provide a way to suppress this notification with the parameter below. (this will not cause any effect to RC link or telemetry Link.)
 ```
 RC_OPTIONS turn on Bit 9th which is  "Suppress CRSF mode/rate message for ELRS systems".
 ```
+Another bit you should enable on RC_Options is the use of 420K baud rate. ExpressLRS receivers use 420K Baudrate to talk to flight controllers.
+
+<figure markdown>
+![RC_Options Bitmask](../assets/images/ArduRCOPTIONS.png)
+</figure>
 
 Once you have set the parameter above, power-cycle the flight controller by disconnecting and reconnecting your battery and USB. ArduPilot should automatically run with ELRS, but if it fails, set ``RC_PROTOCOL`` parameter 9th bit to 1 (CRSF option)
  and set the other parameter as below:
