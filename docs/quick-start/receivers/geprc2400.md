@@ -134,6 +134,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
     3. Plug in your UART Adapter into a USB Port on your Computer.
         - The LED on the Receiver should light up Solid. If it's Blinking, repeat the previous step.
+        - Once the LED on the Receiver is lit up Solid, release/de-press the button on the receiver if it has one.
 
         ??? Warning "Receiver LED already Solid (click/tap to expand)"
             If the Receiver LED has become Solid from a failed update, and you're reflashing through this method, you still need to do the previous step: Manually putting the receiver into Bootloader Mode. This ensures the Receiver is indeed in a Bootloader state rather than some random boot loop.
@@ -181,7 +182,9 @@ Some of the following procedures will not go through, particularly the via Passt
         
     10. Wait for the process to finish. A Green Success bar will show up in the ExpressLRS Configurator.
 
-    11. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
+    11. If your receiver has a boot pad instead of a boot button, make sure to disconnect it from ground or remove the solder bridge you made on step 2.
+
+    12. The LED on the Receiver should return to Slow Blinking LED pattern after a few seconds.
 
         <figure markdonw>
         ![LEDSEQ_DISCONNECTED](../../assets/images/LEDSEQ_DISCONNECTED_50_50.gif)
