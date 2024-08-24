@@ -145,7 +145,7 @@ To get to the baud rate setting on your radio:
 
 <hr />
 
-**So what should I set it to?**
+#### Recommended Baud Rates
 
 The minimal required Baudrate depends on the highest Packet Rate you intend to run. The Baudrate should be set to:
 
@@ -166,6 +166,7 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | RadioMaster Internal ELRS Modules | 5.25M | |
 | HM ES24TX, HM ES900TX, BetaFPV Nano/Micro and <br />other ExpressLRS External Modules | 5.25M | ESP32-based Modules |
 | Jumper TLite V2 & Jumper T-Pro Internal ELRS Modules | 1.87M | |
+| Jumper T14, T15, T20 | 5.25M | |
 | iFlight Commando 8 | 3.75M | |
 | Vantac Lite Nano TX, Jumper Aion Nano TX | 1.87M | |
 | R9M 2018 | 115200 | [Resistor Mod](../../hardware/inverter-mod.md) for 400K |
