@@ -189,7 +189,7 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | RadioMaster Ranger (Micro & Nano included) | 5.25M | |
 | RadioMaster Bandit (Micro & Nano included) | 5.25M | |
 | Axisflying Thor | 5.25M | |
-| Emax Aeris OLED & Nano | 5.25M | |
+| EMAX Aeris OLED & Nano | 5.25M | |
 | NamimnoRC Flash/Voyager (no OLED) | 3.75M | STM-based |
 | NamimnoRC Flash/Voyager OLED | 5.25M | |
 | Vantac Lite | 1.87M | |
@@ -197,10 +197,10 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | iFlight Command 8 | 3.75M | wired as external module |
 | HGLRC Hermes | 5.25M | |
 | HGLRC T ONE OLED | 5.25M | |
-| Frsky R9M/R9M Lite/R9M Lite Pro | 1.87M | |
-| Frsky R9M 2018 (non-ACCESS) | 115K | [Resistor Mod](../../hardware/inverter-mod.md) for 400K |
+| FrSky R9M/R9M Lite/R9M Lite Pro | 1.87M | |
+| FrSky R9M 2018 (non-ACCESS) | 115K | [Resistor Mod](../../hardware/inverter-mod.md) for 400K |
 | QuadKopters JR & Slim | 5.25M | |
-| Siyi FM30 | 1.87M | STM-based |
+| SIYI FM30 | 1.87M | STM-based |
 | ImmersionRC GHOST | 1.87M | STM-based |
 
 !!! note "Note"

@@ -1,5 +1,6 @@
 AAT
 ACCST
+Aeris
 AFHDS
 AIO
 AIOs
@@ -254,6 +255,8 @@ SteveCEvans
 StonedDawg
 SunjunKim
 SuperD
+SuperP
+SuperG
 TCXO
 TeamRace
 TeamRacing
