@@ -112,6 +112,7 @@ Happymodel
 Headtracking
 Heatsink
 Heli
+HelloRadio
 HiYOUNGER
 HiYounger
 HoTT
@@ -294,6 +295,7 @@ VTX
 Vantac
 Vergara
 Voigt
+V16
 Walksnail
 WebSocket
 WebUI
