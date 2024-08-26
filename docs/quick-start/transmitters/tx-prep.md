@@ -176,7 +176,9 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | Jumper T20 | 1.87M | Limited by Handset |
 | Jumper T14 | 5.25M | |
 | Jumper T15 | 5.25M | |
-| BetaFPV Lite Radio 3 Pro | 5.25M | |
+| Jumper T12 Max | 5.25M | |
+| BetaFPV Lite Radio 3 Pro | 1.87M | Limited by Handset |
+| HelloRadio V16 | 5.25M | |
 
 | External TX Module | Max Baud Rate | Notes |
 | ---- | ---- | ---- |
