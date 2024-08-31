@@ -1,5 +1,6 @@
 AAT
 ACCST
+Aeris
 AFHDS
 AIO
 AIOs
@@ -54,9 +55,11 @@ DVDA
 DX
 DaBit
 Denks
+Dev
 Disnator
 DisplayPort
 DivisionRc
+DLink
 EEA
 EL
 ELRS
@@ -65,6 +68,7 @@ EP
 ESC
 ESCs
 ESPnow
+ESPxxxx
 ETX
 EdgeTX
 Espressif
@@ -108,6 +112,7 @@ Happymodel
 Headtracking
 Heatsink
 Heli
+HelloRadio
 HiYOUNGER
 HiYounger
 HoTT
@@ -139,6 +144,7 @@ MAVLink
 MCU
 MCUs
 MDL
+MFD
 MHz
 MOSFET
 MSP
@@ -250,6 +256,8 @@ SteveCEvans
 StonedDawg
 SunjunKim
 SuperD
+SuperP
+SuperG
 TCXO
 TeamRace
 TeamRacing
@@ -267,6 +275,7 @@ TitanDynamics
 Tlm
 UART
 UARTs
+UDP
 UFL
 UI
 UID
@@ -287,10 +296,12 @@ VTX
 Vantac
 Vergara
 Voigt
+V16
 Walksnail
 WebSocket
 WebUI
 Wifi
+Wirelessly
 XO
 XT
 Yagin
@@ -327,6 +338,7 @@ degC
 desolder
 desync
 devs
+dev
 distro's
 dodecatillion
 downlink
@@ -357,6 +369,7 @@ iNav
 integrations
 io
 ish
+json
 jitter
 jurgelenas
 kB
@@ -405,6 +418,7 @@ repurposes
 rssi
 runtime
 rx
+sats
 selectable
 sourceforge
 spammy
@@ -424,8 +438,10 @@ unrooted
 unstaged
 unselected
 uplink
+url
 vrx
 webpage
+wirelessly
 www
 xpress
 youtube

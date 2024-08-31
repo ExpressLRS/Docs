@@ -35,12 +35,10 @@ Ensure both your transmitter and receiver are running the latest firmware. Follo
       - Select the "Telemetry" option.
 
 3. **Enable Backpack Telemetry:**
-      - Set the "Telemetry" option to `On`.
+      - Set the "Telemetry" option to `ESPNOW`.
       - Exit the script.
 
-4. **Disabling Backpack Telemetry:**
-
-      Backpack telemetry is transmitted on the 2.4G WiFi band, via ESPNOW (this should have a very limited impact on any LoRa signals, as it is modulated via OFDM like a normal WiFi hotspot). Every telemetry message that your transmitter receives from the craft will be re-transmitted via ESPNOW. You may want to disable Backpack Telemetry to reduce your footprint on the RF noise floor when you aren't using it, especially if you are at something like a race day, where there is often contention on the RF spectrum. To disable Backpack Telemetry:
+      **NOTE:** Backpack telemetry is transmitted on the 2.4G WiFi band, via ESPNOW (this should have a very limited impact on any LoRa signals, as it is modulated via OFDM like a normal WiFi hotspot). Every telemetry message that your transmitter receives from the craft will be re-transmitted via ESPNOW. You may want to disable Backpack Telemetry to reduce your footprint on the RF noise floor when you aren't using it, especially if you are at something like a race day, where there is often contention on the RF spectrum. To disable Backpack Telemetry:
 
       - Execute the ELRS LUA script.
       - Scroll to find the "Backpack" section within the LUA script.
@@ -68,7 +66,7 @@ An Espressif ESP-based microcontroller, like the ESP32 or ESP8266 (and many vari
 ## Troubleshooting
 If you encounter issues:
 
-- **No Telemetry Data:** Ensure the "Telemetry" option is enabled in the Backpack section of the LUA script and that the firmware is up to date. Also check that your Telemetry Ratio is set to a value that is able to provide frequent telemetry packets. As a rule of thumb, a ratio somewhere between 1:2 to about 1:16 (depending on your packet rate) will suffice. See [Packet Rate and Telemetry Ratio](https://www.expresslrs.org/quick-start/transmitters/lua-howto/#packet-rate-and-telemetry-ratio) and [Telemetry](https://www.expresslrs.org/quick-start/pre-1stflight/#telemetry)
+- **No Telemetry Data:** Ensure the "Telemetry" option is set to `ESPNOW` in the Backpack section of the LUA script and that the firmware is up to date. Also check that your Telemetry Ratio is set to a value that is able to provide frequent telemetry packets. As a rule of thumb, a ratio somewhere between 1:2 to about 1:16 (depending on your packet rate) will suffice. See [Packet Rate and Telemetry Ratio](https://www.expresslrs.org/quick-start/transmitters/lua-howto/#packet-rate-and-telemetry-ratio) and [Telemetry](https://www.expresslrs.org/quick-start/pre-1stflight/#telemetry)
 
 - **Binding Issues:** Verify that the bind phrase is correctly set and matches between the Backpack on your transmitter and the Sentinel receiver.
 
