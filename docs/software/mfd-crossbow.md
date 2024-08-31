@@ -129,7 +129,7 @@ We need to wire the `tx` pad on the receiver to one of the `rx` pins on the Cros
 The Crossbow mini can communicate via MAVLink on `RX3` or `RX1`, depending on which port you want to use:
 
 <figure markdown>
-![CrossbowPorts](../../assets/images/crossbow-mini-plug.png)
+![CrossbowPorts](../assets/images/crossbow-mini-plug.png)
 <figcaption>Crossbow Ports</figcaption>
 </figure>
 
