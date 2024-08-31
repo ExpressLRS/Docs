@@ -91,7 +91,7 @@ Use this method if you have an FTDI (USB to serial converter), or if you are usi
 - Connect the receiver to the FTDI:
 
 <figure markdown>
-![FTDIConnection](../../assets/images/FTDIConn.png)
+![FTDIConnection](../assets/images/FTDIConn.png)
 <figcaption>FTDI to receiver wiring</figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ If you are flashing an ExpressLRS receiver, you may chose to use WiFi to flash t
 - Click `Update`. Wait a bit (~10s) for the "Update Success! Rebooting...". The AP should automatically disappear and disconnect.
 
 <figure markdown>
-![WiFi ESP](../../assets/images/backpackwifiESP.png)
+![WiFi ESP](../assets/images/backpackwifiESP.png)
 <figcaption>WiFi ESP</figcaption>
 </figure>
 
@@ -122,7 +122,7 @@ The receiver communicates via UART with the Crossbow, using the MAVLink protocol
 We need to wire the `tx` pad on the receiver to one of the `rx` pins on the Crossbow:
 
 <figure markdown>
-![CrossbowWiringDiagram](../../assets/images/rx-to-crossbow-wiring-diagram.jpg)
+![CrossbowWiringDiagram](../assets/images/rx-to-crossbow-wiring-diagram.png)
 <figcaption>Crossbow Wiring Diagram</figcaption>
 </figure>
 
@@ -136,7 +136,7 @@ The Crossbow mini can communicate via MAVLink on `RX3` or `RX1`, depending on wh
 If you use the L-Port on the mini, you also get a +5V and GND source for the receiver:
 
 <figure markdown>
-![CrossbowRXWiring](../../assets/images/rx-to-crossbow-wiring.png)
+![CrossbowRXWiring](../assets/images/rx-to-crossbow-wiring.png)
 <figcaption>Example Crossbow RX Wiring</figcaption>
 </figure>
 
