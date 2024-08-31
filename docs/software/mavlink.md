@@ -11,7 +11,6 @@ description: ExpressLRS Bi-directional MAVLink support
 !!! note "NOTE"
     Enabling MAVLink forces the use of Hybrid or 16ch/2 switch mode. Wide switch mode is not supported.
     Enabling MAVLink forces a telemetry ratio of 1:2
-    If you are using an internal TX module (e.g. a TX16S with internal ELRS), you will be required to use the TX Backpack to connect to you GCS via WiFi (USB cable between the TX and the PC is not an option for internal modules).
 
 ## Description
 
