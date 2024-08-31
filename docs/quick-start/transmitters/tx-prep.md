@@ -145,7 +145,7 @@ To get to the baud rate setting on your radio:
 
 <hr />
 
-**So what should I set it to?**
+#### Recommended Baud Rates
 
 The minimal required Baudrate depends on the highest Packet Rate you intend to run. The Baudrate should be set to:
 
@@ -161,19 +161,59 @@ However, there are some exceptions:
 
 On other Radios, you can set the Baudrate higher than 400K but will highly depend on what TX Module you will use with it.
 
-| TX Module | Max Baud Rate | Notes |
-| ---- | ---- | ---- |
-| RadioMaster Internal ELRS Modules | 5.25M | |
-| HM ES24TX, HM ES900TX, BetaFPV Nano/Micro and <br />other ExpressLRS External Modules | 5.25M | ESP32-based Modules |
-| Jumper TLite V2 & Jumper T-Pro Internal ELRS Modules | 1.87M | |
-| iFlight Commando 8 | 3.75M | |
-| Vantac Lite Nano TX, Jumper Aion Nano TX | 1.87M | |
-| R9M 2018 | 115200 | [Resistor Mod](../../hardware/inverter-mod.md) for 400K |
-| R9M ACCESS, HM ES915TX | 1.87M | STM32-based Modules |
-| GHOST, Gen1 NamimnoRC no OLED  | 1.87M | STM32-based Modules |
+#### Max Usable Baud Rates
 
-!!! warning
-    Just because you can set the Baudrate higher, doesn't mean you should. If you're experiencing constant Telemetry Lost/Recovered even with the receiver nearby and/or if the Lua Script fails to load properly, then it's a sign your radio and/or module cannot work on the selected Baud Rate. Lower it down a notch or settle with a 400K baud rate.
+| Internal TX Module | Max Baud Rate | Notes |
+| ---- | ---- | ---- |
+| RadioMaster TX16S | 5.25M | |
+| RadioMaster Zorro | 5.25M | |
+| RadioMaster Boxer | 5.25M | |
+| RadioMaster Pocket | 5.25M | |
+| RadioMaster MT12 | 5.25M | |
+| RadioMaster TX12 | 5.25M | |
+| Jumper T-Lite V2 | 1.87M | Limited by Handset |
+| Jumper T-Pro | 1.87M | Limited by Handset |
+| Jumper T20 | 1.87M | Limited by Handset |
+| Jumper T14 | 5.25M | |
+| Jumper T15 | 5.25M | |
+| Jumper T12 Max | 5.25M | |
+| BetaFPV Lite Radio 3 Pro | 1.87M | Limited by Handset |
+| HelloRadio V16 | 5.25M | |
+
+| External TX Module | Max Baud Rate | Notes |
+| ---- | ---- | ---- |
+| Happymodel ES24TX (inc. slim, nano, etc) | 5.25M | |
+| Happymodel ES24TX Pro/Slim Pro | 5.25M | |
+| Happymodel ES900TX | 5.25M | |
+| Happymodel ES915/868TX | 1.87M | STM-based |
+| BetaFPV Micro & Nano (V1 & V2) | 5.25M | |
+| BetaFPV SuperG | 5.25M | |
+| RadioMaster Ranger (Micro & Nano included) | 5.25M | |
+| RadioMaster Bandit (Micro & Nano included) | 5.25M | |
+| Axisflying Thor | 5.25M | |
+| EMAX Aeris OLED & Nano | 5.25M | |
+| NamimnoRC Flash/Voyager (no OLED) | 3.75M | STM-based |
+| NamimnoRC Flash/Voyager OLED | 5.25M | |
+| Vantac Lite | 1.87M | |
+| Jumper Aion Nano | 1.87M | |
+| iFlight Command 8 | 3.75M | wired as external module |
+| HGLRC Hermes | 5.25M | |
+| HGLRC T ONE OLED | 5.25M | |
+| FrSky R9M/R9M Lite/R9M Lite Pro | 1.87M | |
+| FrSky R9M 2018 (non-ACCESS) | 115K | [Resistor Mod](../../hardware/inverter-mod.md) for 400K |
+| QuadKopters JR & Slim | 5.25M | |
+| SIYI FM30 | 1.87M | STM-based |
+| ImmersionRC GHOST | 1.87M | STM-based |
+
+!!! note "Note"
+    The Max Baud Rate for external modules will still depend on the capabilities of the Radio Handset. 
+
+    As stated above, older radios like the QX7 and X9D(+) will require hardware mods and software tweaks, like the One Bit sampling mode, to work reliably at higher baud rates. We recommend not going higher than 400K on these radios. Set them higher at your own risk.
+
+    Newer EdgeTX radios can easily use higher baud rates without modification and we recommend using the maximum baud rate whenever you can. 
+
+??? question "My TX Module is not in this list! (click/tap to expand)"
+    Don't be salty. That just means the maintainers are late with the updates. Newer TX modules being released are all ESP-based now. If your TX module has WiFi or Bluetooth Connectivity, then they are ESP-based, and thus, should be capable of 5.25M Baud Rate (depending on the handset).
 
 ### ADC Filter
 
@@ -188,7 +228,7 @@ To check and change this setting, follow these steps:
 3. Scroll down until you reach the `ADC Filter` setting.
 4. Press ++enter++ Key to toggle it On or Off.
 
-??? info "EdgeTX 2.7.0 Per-model Settings (click/tap to expand)"
+??? info "EdgeTX 2.7.0 (and newer) Per-model Settings (click/tap to expand)"
 
     With EdgeTX 2.7 or newer, you can set this per model (Global, On, Off) as this is helpful on Fixed Wing models equipped with PWM receivers connected to slower servos.
 

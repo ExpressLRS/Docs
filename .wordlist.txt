@@ -1,5 +1,6 @@
 AAT
 ACCST
+Aeris
 AFHDS
 AIO
 AIOs
@@ -111,6 +112,7 @@ Happymodel
 Headtracking
 Heatsink
 Heli
+HelloRadio
 HiYOUNGER
 HiYounger
 HoTT
@@ -254,6 +256,8 @@ SteveCEvans
 StonedDawg
 SunjunKim
 SuperD
+SuperP
+SuperG
 TCXO
 TeamRace
 TeamRacing
@@ -292,6 +296,7 @@ VTX
 Vantac
 Vergara
 Voigt
+V16
 Walksnail
 WebSocket
 WebUI

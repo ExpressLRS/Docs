@@ -29,6 +29,16 @@ The image above shows the receiver pinouts and their connections. As we're deali
 
 See the [Receiver Wiring] page for a more in-depth guide and troubleshooting procedures. Some of the updating procedures below will not go through if your receiver is not wired correctly and behaving properly.
 
+## Identify your receiver and flash the correct target
+
+!!! Warning "Important Step!"
+	You MUST flash the correct firmware target to your receiver in order for it to work properly. Look closely at your receiver and make sure you are select the correct firmware target. Flashing the wrong target will result in extremely poor range or failure to connect.
+
+    <figure markdown>
+    ![iFlight 900MHz Receiver Identification](../../assets/images/iflight-900ident.png)
+	<figcaption>How to identify the correct iFlight 900MHz receiver target</figcaption>
+    </figure>
+
 ## Configuring your Flight Controller
 
 To configure your flight controller properly, please go through [Configure FC page](configuring-fc.md). These settings apply to INAV, Betaflight, and other flight controller software.
@@ -74,6 +84,9 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device: 
             - `iFlight 900MHz RX`
+            - `iFlight 900MHz Nano RX` (smaller)
+            - `iFlight 900MHz 500mW RX`
+            - `iFlight 900MHz 500mW Diversity RX` (two antennas)
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -113,9 +126,9 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - YES, you will need to disconnect your Receiver from your Flight Controller and connect it to a UART/FTDI Adapter.
 
-    2. If your Receiver has Boot Pads instead of a Boot Button, solder the Boot Pads together or connect it to Ground. If your Receiver has a Boot Button, locate it then press & hold it. 
+    2. Locate the Boot button on your receiver, press and hold it.
 
-    3. Plug in your UART Adapter into a USB Port on your Computer.
+    3. Plug in your UART Adapter into a USB Port on your Computer. Release/de-press the Boot button.
         - The LED on the Receiver should light up Solid. If it's Blinking, repeat the previous step.
 
         ??? Warning "Receiver LED already Solid (click/tap to expand)"
@@ -145,6 +158,9 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device: 
             - `iFlight 900MHz RX`
+            - `iFlight 900MHz Nano RX` (smaller)
+            - `iFlight 900MHz 500mW RX`
+            - `iFlight 900MHz 500mW Diversity RX` (two antennas)
 
     7. Set the Flashing Method to `UART`
 
@@ -196,6 +212,9 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `iFlight 900MHz RX`
+                - `iFlight 900MHz Nano RX` (smaller)
+                - `iFlight 900MHz 500mW RX`
+                - `iFlight 900MHz 500mW Diversity RX` (two antennas)
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -341,6 +360,9 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `iFlight 900MHz RX`
+                - `iFlight 900MHz Nano RX` (smaller)
+                - `iFlight 900MHz 500mW RX`
+                - `iFlight 900MHz 500mW Diversity RX` (two antennas)
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -544,6 +566,9 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `iFlight 900MHz RX`
+                - `iFlight 900MHz Nano RX` (smaller)
+                - `iFlight 900MHz 500mW RX`
+                - `iFlight 900MHz 500mW Diversity RX` (two antennas)
 
         4. Set the Flashing Method to `WiFi`.
 

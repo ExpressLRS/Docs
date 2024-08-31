@@ -25,6 +25,11 @@ template: main.html
 <figcaption>GEPRC Nano 900MHz</figcaption>
 </figure>
 
+<figure markdown>
+![GEPRC New 900MHz](../../assets/images/geprc-new900.png)
+<figcaption>GEPRC Nano PA500 900MHz and True Diversity 900MHz</figcaption>
+</figure>
+
 The image above shows the receiver pinouts and their connections. As we're dealing with a UART connection, RX on the receiver goes to a TX pad on the FC, and TX on the receiver goes to an uninverted RX pad on the FC.
 
 See the [Receiver Wiring] page for a more in-depth guide and troubleshooting procedures. Some of the updating procedures below will not go through if your receiver is not wired correctly and behaving properly.
@@ -73,7 +78,9 @@ Some of the following procedures will not go through, particularly the via Passt
             - `GEPRC 900 MHz`
 
         - Device: 
-            - `GEPRC Nano 900MHz RX` 
+            - `GEPRC Nano 900MHz RX`
+            - `GEPRC Nano 900MHz PA500 RX`
+            - `GEPRC True Diversity 900MHz RX` 
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -113,9 +120,9 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - YES, you will need to disconnect your Receiver from your Flight Controller and connect it to a UART/FTDI Adapter.
 
-    2. If your Receiver has Boot Pads instead of a Boot Button, solder the Boot Pads together or connect it to Ground. If your Receiver has a Boot Button, locate it then press & hold it. 
+    2. Locate the Boot button on your receiver, press and hold it.
 
-    3. Plug in your UART Adapter into a USB Port on your Computer.
+    3. Plug in your UART Adapter into a USB Port on your Computer. Release/de-press the Boot button.
         - The LED on the Receiver should light up Solid. If it's Blinking, repeat the previous step.
 
         ??? Warning "Receiver LED already Solid (click/tap to expand)"
@@ -144,7 +151,9 @@ Some of the following procedures will not go through, particularly the via Passt
             - `GEPRC 900 MHz`
 
         - Device: 
-            - `GEPRC Nano 900MHz RX` 
+            - `GEPRC Nano 900MHz RX`
+            - `GEPRC Nano 900MHz PA500 RX`
+            - `GEPRC True Diversity 900MHz RX`  
 
     7. Set the Flashing Method to `UART`
 
@@ -195,7 +204,9 @@ Some of the following procedures will not go through, particularly the via Passt
                 - `GEPRC 900 MHz`
 
             - Device: 
-                - `GEPRC Nano 900MHz RX` 
+                - `GEPRC Nano 900MHz RX`
+                - `GEPRC Nano 900MHz PA500 RX`
+                - `GEPRC True Diversity 900MHz RX`  
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -340,7 +351,9 @@ Some of the following procedures will not go through, particularly the via Passt
                 - `GEPRC 900 MHz`
 
             - Device: 
-                - `GEPRC Nano 900MHz RX` 
+                - `GEPRC Nano 900MHz RX`
+                - `GEPRC Nano 900MHz PA500 RX`
+                - `GEPRC True Diversity 900MHz RX`  
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -543,7 +556,9 @@ Some of the following procedures will not go through, particularly the via Passt
                 - `GEPRC 900 MHz`
 
             - Device: 
-                - `GEPRC Nano 900MHz RX` 
+                - `GEPRC Nano 900MHz RX`
+                - `GEPRC Nano 900MHz PA500 RX`
+                - `GEPRC True Diversity 900MHz RX`  
 
         4. Set the Flashing Method to `WiFi`.
 

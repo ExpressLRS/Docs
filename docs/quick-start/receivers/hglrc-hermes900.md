@@ -74,6 +74,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device: 
             - `HGLRC Hermes 900MHz RX`
+            - `HGLRC Gemini 900M RX`
 
     4. Set the Flashing Method to `BetaflightPassthrough`
 
@@ -113,9 +114,9 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - YES, you will need to disconnect your Receiver from your Flight Controller and connect it to a UART/FTDI Adapter.
 
-    2. If your Receiver has Boot Pads instead of a Boot Button, solder the Boot Pads together or connect it to Ground. If your Receiver has a Boot Button, locate it then press & hold it. 
+    2. Locate the Boot button on your receiver, press and hold it.
 
-    3. Plug in your UART Adapter into a USB Port on your Computer.
+    3. Plug in your UART Adapter into a USB Port on your Computer. Release/de-press the Boot button.
         - The LED on the Receiver should light up Solid. If it's Blinking, repeat the previous step.
 
         ??? Warning "Receiver LED already Solid (click/tap to expand)"
@@ -145,6 +146,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
         - Device: 
             - `HGLRC Hermes 900MHz RX`
+            - `HGLRC Gemini 900M RX`
 
     7. Set the Flashing Method to `UART`
 
@@ -196,6 +198,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `HGLRC Hermes 900MHz RX`
+                - `HGLRC Gemini 900M RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -341,6 +344,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `HGLRC Hermes 900MHz RX`
+                - `HGLRC Gemini 900M RX`
 
         3. Set the Flashing Method to `WiFi`.
 
@@ -544,6 +548,7 @@ Some of the following procedures will not go through, particularly the via Passt
 
             - Device: 
                 - `HGLRC Hermes 900MHz RX`
+                - `HGLRC Gemini 900M RX`
 
         4. Set the Flashing Method to `WiFi`.
 
