@@ -136,7 +136,7 @@ The Crossbow mini can communicate via MAVLink on `RX3` or `RX1`, depending on wh
 If you use the L-Port on the mini, you also get a +5V and GND source for the receiver:
 
 <figure markdown>
-![CrossbowRXWiring](../assets/images/rx-to-crossbow-wiring.png)
+![CrossbowRXWiring](../assets/images/rx-to-crossbow-wiring.jpg)
 <figcaption>Example Crossbow RX Wiring</figcaption>
 </figure>
 
