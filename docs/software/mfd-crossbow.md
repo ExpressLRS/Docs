@@ -69,7 +69,7 @@ Once you have chosen a receiver to use, you need to determine the MCU type that 
 If you are using an ELRS receiver, you can look this up (for supported hardware) in the [targets.json](https://github.com/ExpressLRS/targets/blob/master/targets.json) file. Click the [targets.json](https://github.com/ExpressLRS/targets/blob/master/targets.json) link, and then search for your receiver (e.g. `RadioMaster RP1`) and note the `platform` that it uses:
 
 <figure markdown>
-![RP1Platform](../assets/images/esp32-dev-board.png)
+![RP1Platform](../assets/images/find-platform.png)
 <figcaption>Platform for the RadioMaster RP1</figcaption>
 </figure>
 
@@ -122,7 +122,7 @@ The receiver communicates via UART with the Crossbow, using the MAVLink protocol
 We need to wire the `tx` pad on the receiver to one of the `rx` pins on the Crossbow:
 
 <figure markdown>
-![CrossbowWiringDiagram](../../assets/images/rx-to-crossbow-wiring-diagram.png)
+![CrossbowWiringDiagram](../../assets/images/rx-to-crossbow-wiring-diagram.jpg)
 <figcaption>Crossbow Wiring Diagram</figcaption>
 </figure>
 
@@ -144,6 +144,7 @@ If you use the L-Port on the mini, you also get a +5V and GND source for the rec
 Refer to the respective user manual for your model of Crossbow in order to change the UART to MAVLink protocol, at a baud rate of 115200.
 
 For example, on the Crossbow mini, assuming you are using the L-Port:
+
 - Long press the left button to enter the menu
 - Short press the left button until you get to `L-Baudrate` and short press the right button to enter
 - Short press the left button until `115200` is highlighted, and short press the right button to confirm
@@ -166,7 +167,7 @@ For example, on the Crossbow mini, assuming you are using the L-Port:
       - Exit the script.
       - Your TX module is now configured to broadcast telemetry to the Backpack receiver.
 
-      **NOTE** Backpack telemetry is transmitted on the 2.4G WiFi band, via ESPNOW (this should have a very limited impact on any LoRa signals, as it is modulated via OFDM like a normal WiFi hotspot). Every telemetry message that your transmitter receives from the craft will be re-transmitted via ESPNOW. You may want to disable Backpack Telemetry to reduce your footprint on the RF noise floor when you aren't using it, especially if you are at something like a race day, where there is often contention on the RF spectrum. Disabling Backpack Telemetry will cause the Crossbow integration to stop working.
+      **NOTE:** Backpack telemetry is transmitted on the 2.4G WiFi band, via ESPNOW (this should have a very limited impact on any LoRa signals, as it is modulated via OFDM like a normal WiFi hotspot). Every telemetry message that your transmitter receives from the craft will be re-transmitted via ESPNOW. You may want to disable Backpack Telemetry to reduce your footprint on the RF noise floor when you aren't using it, especially if you are at something like a race day, where there is often contention on the RF spectrum. Disabling Backpack Telemetry will cause the Crossbow integration to stop working.
       
       To disable Backpack Telemetry (only do this if you are NOT using the Crossbow integration):
 
@@ -199,7 +200,7 @@ The Crossbow status screen should now be showing `DLink:100%` and `GPS:` should 
 ## Troubleshooting
 If you encounter issues:
 
-- **No Telemetry Data / DLink:0%:** Ensure the "Telemetry" option is enabled in the Backpack section of the LUA script and that the firmware is up to date. Also check that your Telemetry Ratio is set to a value that is able to provide frequent telemetry packets. As a rule of thumb, a ratio somewhere between 1:2 to about 1:16 (depending on your packet rate) will suffice. As a troubleshooting step, try 1:2 to guarantee that the tracker is getting regular updates. For more info, see [Packet Rate and Telemetry Ratio](https://www.expresslrs.org/quick-start/transmitters/lua-howto/#packet-rate-and-telemetry-ratio) and [Telemetry](https://www.expresslrs.org/quick-start/pre-1stflight/#telemetry)
+- **No Telemetry Data / DLink:0%:** Ensure the "Telemetry" option is set to `ESPNOW` in the Backpack section of the LUA script and that the firmware is up to date. Also check that your Telemetry Ratio is set to a value that is able to provide frequent telemetry packets. As a rule of thumb, a ratio somewhere between 1:2 to about 1:16 (depending on your packet rate) will suffice. As a troubleshooting step, try 1:2 to guarantee that the tracker is getting regular updates. For more info, see [Packet Rate and Telemetry Ratio](https://www.expresslrs.org/quick-start/transmitters/lua-howto/#packet-rate-and-telemetry-ratio) and [Telemetry](https://www.expresslrs.org/quick-start/pre-1stflight/#telemetry)
 
 - **Binding Issues:** Verify that the bind phrase is correctly set and matches between the Backpack on your transmitter and the Backpack receiver. This should also match the bind phrase that you use for regular ELRS receivers.
 
