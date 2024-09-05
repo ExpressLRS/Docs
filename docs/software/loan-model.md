@@ -11,6 +11,8 @@ description: Lend your ExpressLRS models to your friends without having to refla
 
     No longer is he destined to be running to the bando and back again fetching downed quads. You can use the "Loan Model" feature and lend him one of your models!
 
+    **This is deprecated and removed in ExpressLRS 3.4.0 in favor of the new Binding Procedures. See the [binding](../quick-start/binding.md) page for details.**
+
 ## How to "Loan Model"
 
 ### On the lenders handset
