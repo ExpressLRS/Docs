@@ -188,6 +188,14 @@ Available Options:
 
     * Alternate between the two Antennas.
 
+### Link Mode
+
+Introduced in 3.5.0, `Link Mode` changes the main protocol and function of the TX module.
+
+* `Normal` - This is the default configuration. The TX module simply sends the commands from the radio handset, and receive telemetry from the receiver and send it to the handset. 
+
+* `MAVLink` - This option enables native MAVLink Telemetry downlink and Radio Control uplink making the TX module and radio handset to be an intermediary between a GCS and a MAVLink-capable craft. See the [MAVLink](../../software/mavlink.md) page for more details.
+
 ### Model Match
 
 ExpressLRS supports multiple configuration profiles, and the configuration profile is selected by setting the "Receiver ID" property in the Radio Handset's Model Setup -> Internal/External RF -> Receiver (number).
@@ -352,8 +360,26 @@ The `Protocol` setting controls the output of the connected receiver. The follow
 * `SUMD` - Lets the receiver output Graupner HoTT SUMD signal for use with devices that don't support CRSF protocol, like Stabilizers, Heli Controllers etc.
 * `DJI RS2 Pro` - Mainly used for the RS2 Pro Gimbals
 * `HoTT Telemetry` - Allows to use Graupner HoTT enabled telemetry sensors (Graupner and 3rd party)
+* `MAVLINK` - Introduced on ExpressLRS 3.5.0, it allows the receiver to output native MAVLink into a flight controller. See the [MAVLink](../../software/mavlink.md) page for more details.
 
 For more information, see [Receiver Serial Protocols](../../software/serial-protocols.md)
+
+### Protocol 2
+
+The `Protocol 2` option is only available for ESP32-based receivers. This include the True Diversity ones like the RP4TD, Super D, Super P and EP Dual. This option is available on ExpressLRS 3.5.0 and onwards. This option is used to set the protocol for the second UART connection for the receiver.
+
+It has the same options as the previous parameter above with these additional ones:
+
+* `Tramp` - If you want to control a VTX using Tramp protocol directly through the ExpressLRS Lua Script's VTX Admin.
+* `SmartAudio` - If you want to control a VTX using SmartAudio protocol directly through the ExpressLRS Lua Script's VTX Admin.
+* `Off` - Set when the auxiliary UART is not in use.
+
+### SBUS failsafe
+
+`SBUS Failsafe` is used to set the behavior of a receiver using SBUS protocol for output. The following options are available:
+
+* `No Pulses` - When a failsafe occurs, the receiver will stop sending any messages.
+* `Last Pos` - When a failsafe occurs, the receiver will keep sending the last channel positions it received.
 
 ### Antenna Mode
 
@@ -390,7 +416,7 @@ Team Racing allows selection between multiple connected models, failsafing all u
 
 These commands allow the user to Loan/Return the model. For more information, see the [Loan Model](../../software/loan-model.md) guide.
 
-This is deprecated and removed in ExpressLRS 3.4.0 in favor of the new Binding Procedures. See the [binding](../binding.md) page for details.
+This is deprecated and removed in ExpressLRS 3.4.0 in favor of the new Binding Procedures. See the [binding](../binding.md) page for details or the **Bind Storage** section below.
 
 ### Output Mapping
 
@@ -414,6 +440,8 @@ For more information, see [PWM Receivers](../../hardware/pwm-receivers.md) page.
 
 This option is available on ExpressLRS 3.4.0 and newer. See the details [here](https://github.com/ExpressLRS/ExpressLRS/pull/2542).
 
+* `Returnable` - Introduced in ExpressLRS 3.5.0. It is used to allow models to be safely loaned from a fleet if unbound OTA. A Binding Phrase must be set for this to work properly. see [PR 2744](https://github.com/ExpressLRS/ExpressLRS/pull/2744) for details.
+
 ### Enter Bind Mode command
 
 This will put the receiver into Bind Mode. It works even if the receiver is already flashed with a binding phrase or already bound traditionally.
@@ -431,6 +459,8 @@ This line shows the currently set Model ID for the receiver when Model Matching 
 * For freestyle and general everyday flying, you may use the `250Hz` modes or faster, with the `Std` Telemetry mode. Switch Mode doesn't matter as much here. Select what's appropriate for your Flight Mode settings.
 
 * For fixed wings, we recommend using `100Hz Full Res`, together with either `Std` or your choice of Telemetry Ratio. Switch Mode will depend greatly on how many full resolution channels you intend to use.
+
+* For Long Range applications, see the [Long Range Records](../../info/long-range.md) page and try the settings the pilots used to achieve the range. It is not guaranteed you'll achieve the same range as they are due to several factors like RF Noise in your area, your location and position and the antenna orientation on your aircraft and transmitter modules. Observe local laws and regulations.
 
 ## Troubleshooting the Lua Script
 
