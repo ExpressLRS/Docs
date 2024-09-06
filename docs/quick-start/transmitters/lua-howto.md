@@ -366,13 +366,15 @@ For more information, see [Receiver Serial Protocols](../../software/serial-prot
 
 ### Protocol 2
 
-The `Protocol 2` option is only available for ESP32-based receivers. This include the True Diversity ones like the RP4TD, Super D, Super P and EP Dual. This option is available on ExpressLRS 3.5.0 and onwards. This option is used to set the protocol for the second UART connection for the receiver.
+The `Protocol 2` setting is only available for ESP32-based receivers. This include the True Diversity ones like the RP4TD, Super D, Super P and EP Dual. These receivers have a second UART that can be used for the same purpose as the main UART. Note that not all of the ESP32-based receivers have the extra uart pads or pins exposed for easy use.
 
-It has the same options as the previous parameter above with these additional ones:
+It has the same options as the setting above with these additional ones:
 
 * `Tramp` - If you want to control a VTX using Tramp protocol directly through the ExpressLRS Lua Script's VTX Admin.
 * `SmartAudio` - If you want to control a VTX using SmartAudio protocol directly through the ExpressLRS Lua Script's VTX Admin.
 * `Off` - Set when the auxiliary UART is not in use.
+
+This setting is available on ExpressLRS 3.5.0 and onwards. See [PR 2605](https://github.com/ExpressLRS/ExpressLRS/pull/2605) for more details.
 
 ### SBUS failsafe
 
