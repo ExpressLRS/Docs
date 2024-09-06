@@ -366,7 +366,7 @@ For more information, see [Receiver Serial Protocols](../../software/serial-prot
 
 ### Protocol 2
 
-The `Protocol 2` setting is only available for ESP32-based receivers. This include the True Diversity ones like the RP4TD, Super D, Super P and EP Dual. These receivers have a second UART that can be used for the same purpose as the main UART. Note that not all of the ESP32-based receivers have the extra uart pads or pins exposed for easy use.
+The `Protocol 2` setting is only available for ESP32-based receivers. This include the True Diversity ones like the RP4TD, Super D, Super P and EP Dual. These receivers have a second UART that can be used for the same purpose as the main UART. Note that not all of the ESP32-based receivers have the extra UART pads or pins exposed for easy use.
 
 It has the same options as the setting above with these additional ones:
 
