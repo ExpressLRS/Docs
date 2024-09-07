@@ -122,7 +122,7 @@ The receiver communicates via UART with the Crossbow, using the MAVLink protocol
 We need to wire the `tx` pad on the receiver to one of the `rx` pins on the Crossbow:
 
 <figure markdown>
-![CrossbowWiringDiagram](../assets/images/rx-to-crossbow-wiring-diagram.png)
+![CrossbowWiringDiagram](../assets/images/rx-to-crossbow-wiring-diagram-v2.png)
 <figcaption>Crossbow Wiring Diagram</figcaption>
 </figure>
 
