@@ -249,6 +249,7 @@ SkyZone
 Skystars
 Slickshot
 SmartPort
+SmartAudio
 Spektrum
 SteadyView
 Stefanski
