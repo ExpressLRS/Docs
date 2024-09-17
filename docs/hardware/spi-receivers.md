@@ -100,6 +100,12 @@ UID Bytes
 ```
 ```
 
+### Model ID
+
+In order to set or retrieve current Model ID through Betaflight you need to use CLI:
+- Set new Model ID: `set expresslrs_model_id = N`
+- Get current Model ID: `get expresslrs_model_id`
+
 #### Setting Binding Phrase
 Go to Betaflight CLI and enter the following commands.
 ```
