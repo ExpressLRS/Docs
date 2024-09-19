@@ -63,14 +63,14 @@ When connected to the receiver with the transmitter, enter the ExpressLRS Lua sc
 
 ## Second Serial Interface on ESP32 PWM receivers
 
-Starting with firmware version 3.5 an additional serial interface (Serial2) can be assigned on any featured PWM Output to run any of the available serial protocols. Both serial interfaces can be be utilized at the same. This enables setups like running a CRSF wing stabilization unit and HoTT telemetry, Tramp or SmartAudio at the same time. Serial2 can also be utilized to simplify the wiring of e.g. an SBUS connection on receivers which have the first serial interface on separate connectors (e.g. RM receivers with JST connectors).
+Starting with firmware version 3.5 an additional serial interface (Serial2) can be assigned on any featured PWM Output to run any of the available serial protocols. Both serial interfaces can be be used simultaneously. This enables setups like running a CRSF wing stabilization unit and HoTT telemetry, Tramp or SmartAudio at the same time. Serial2 can also be used to simplify the wiring of e.g. an SBUS connection on receivers which have the first serial interface on separate connectors (e.g. RM receivers with JST connectors).
 
 ### Assigning Serial2 TX vs Serial2 RX and Serial2 TX
 
 Most of the supported serial protocols are uni-directional (only sending data) or are bi-directional (sending and receiving data) on one single wire (half duplex). For those protocols it is only necessary to assign a TX pin. True (full duplex) serial protocols require the assignment of RX and TX. The following list shows the configuration requirements for the supported protocols:
 
-CRSF and MAVLINK: require Serial2 TX and additionally Serial2 RX if the device returns data (e.g. telemetry) 
-all others: require Serial2 TX only
+- CRSF and MAVLINK: require Serial2 TX and additionally Serial2 RX if the device returns data (e.g. telemetry) 
+- all others: require Serial2 TX only
 
 ### Configuring Serial2
 
@@ -209,7 +209,7 @@ If an adapter cable is required depends on the platform the receiver is based on
 
 ESP32 based receivers with Serial on dedicated PWM servo connectors like the BetaFPV SuperP 14ch:
 
-- No adapter cable is required. HoTT sensors can be directly connected to the PWM servo connector dedicated for Serial TX any of the PWM pins configured for Serial2 (see above section).
+- No adapter cable is required. HoTT sensors can be directly connected to the PWM servo connector of any of the PWM pins configured for Serial2 TX (see above section).
 
 ESP32 based receivers with Serial on the JST connector.
 
