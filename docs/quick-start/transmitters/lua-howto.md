@@ -134,14 +134,17 @@ These are shown as `Packet Rate` and `Telem Ratio` in the Lua script, which allo
 	- `F500 & F1000`: Pure FLRC for lowest latency, reduced range compared to LoRa, 500Hz and 1000Hz. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1277)
 	- `D250 & D500`: Redundant transmit FLRC modes.  `D` stands for `Déjà Vu`, 250Hz and 500Hz. Higher latency, reduced packet jitter and higher LQ. Same range as other FLRC modes. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1527)
 	- `100Hz Full & 333Hz Full`: Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
+  - `K1000` :new: : K modes for 2.4GHz are FSK+FEC (Forward Error Correction a.k.a self healing packets) and only available on LR1121 hardware. K modes are very similar to FLRC in their over the air properties and designed for high noise environments such as racing events. [FSK Details](https://github.com/ExpressLRS/ExpressLRS/pull/2789) [FEC Details](https://github.com/ExpressLRS/ExpressLRS/pull/2832)
+  - `DK250 & DK500` :new: : These modes offer the same redundancy as D modes but with K modes (FSK+FEC).
 	
 	The following options are available for `900MHz`:
 
 	- `25Hz, 50Hz, 100Hz & 200Hz`: LoRa-based options. Higher means lower latency at the expense of sensitivity. Since v1.0.
 	- `100Hz Full`: Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
-    - `D50Hz` :new: : Lora-based Redundant transmit mode via DVDA. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2089)
-    - `250Hz` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
-    - `200Hz Full` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+  - `D50Hz`: Lora-based Redundant transmit mode via DVDA. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/2089)
+  - `250Hz`: Only Available for GemX Devices. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+  - `200Hz Full` :new: : Only Available for GemX Devices. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+  - `K1000 Full` :new: : K modes for SubGHz are FSK and only available on LR1121 hardware. This mode is design for the highest data throughput when using protocols such as MAVLink. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/2789)
 
     The following options are available for `GemX`:
 
