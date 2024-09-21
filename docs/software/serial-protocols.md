@@ -61,9 +61,9 @@ When connected to the receiver with the transmitter, enter the ExpressLRS Lua sc
 ![output mapping serial](../assets/screenshots/receiver-serial.png)
 </figure>
 
-## Second Serial Interface on ESP32 PWM receivers
+## Second Serial Interface on ESP32 non-PWM and PWM receivers
 
-Starting with firmware version 3.5 an additional serial interface (Serial2) can be assigned on any featured PWM Output to run any of the available serial protocols. Both serial interfaces can be be used simultaneously. This enables setups like running a CRSF wing stabilization unit and HoTT telemetry, Tramp or SmartAudio at the same time. Serial2 can also be used to simplify the wiring of e.g. an SBUS connection on receivers which have the first serial interface on separate connectors (e.g. RM receivers with JST connectors).
+Starting with firmware version 3.5 an additional serial interface (Serial2) can be assigned on any featured PWM Output or exposed pins of some non-PWM receivers to run any of the available serial protocols. Both serial interfaces can be be used simultaneously. This enables setups like running a CRSF wing stabilization unit and HoTT telemetry, Tramp or SmartAudio at the same time. Serial2 can also be used to simplify the wiring of e.g. an SBUS connection on receivers which have the first serial interface on separate connectors (e.g. RM receivers with JST connectors).
 
 ### Assigning Serial2 TX vs Serial2 RX and Serial2 TX
 
@@ -72,7 +72,7 @@ Most of the supported serial protocols are uni-directional (only sending data) o
 - CRSF and MAVLINK: require Serial2 TX and additionally Serial2 RX if the device returns data (e.g. telemetry) 
 - all others: require Serial2 TX only
 
-### Configuring Serial2
+### Configuring Serial2 on ESP32 PWM receivers
 
 Serial2 is best configured using the WebUI but can also be configured using the LUA script.
 
@@ -89,6 +89,26 @@ Assign Serial2 TX. If necessary for the serial protocol you intend to run assign
 </figure>
 
 Scroll down a little further. A new line named Serial2 protocol is now available to choose the desired protocol.
+
+<figure markdown>
+![Serial2 Protocol](../assets/images/Serial2-3.png)
+</figure>
+
+Save the configuration using the SAVE button at the bottom of the page.
+
+Restart the receiver and connect your serial device to the configured PWM Output.
+
+### Configuring Serial2 on ESP32 non-PWM receivers
+
+Some non-PWM receivers like the RadioMaster RP4TD have spare pins exposed. The pins are configured for Serial2 by default. 
+
+<figure markdown>
+![non-PWM receiver](../assets/images/Serial2-4.png)
+</figure>
+
+Serial2 protocol selection is best configured using the WebUI but can also be configured using the LUA script. 
+
+Open the WebUI as described in section "How to get to the Web UI". Scroll down to line Serial2 protocol and choose the desired.
 
 <figure markdown>
 ![Serial2 Protocol](../assets/images/Serial2-3.png)
