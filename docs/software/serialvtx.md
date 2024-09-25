@@ -1,6 +1,7 @@
 ---
 template: main.html
 description: Serial VTX Control
+title: Serial VTX
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
@@ -8,16 +9,16 @@ description: Serial VTX Control
 !!! note "NOTE"
     SmartAudio/Tramp are loosely-defined protocols with edge cases, misinterpretations, and shoddy cloned implementations. ExpressLRS *does not* intend to support the vast majority of VTXes. SmartAudio was tested on a TBS Unify Pro32 HV, and Tramp was tested on an ImmersionRC Tramp HV, and both were tested with OpenVTX. It may work on other hardware, but it's not guaranteed and changes won't be made to accommodate broken implementations.
 
+!!! note "NOTE"
+    ESP32 is the only supported platform for SmartAudio/Tramp at this time; ESP8266 RXes lack the necessary UART functionality to do this the right way, and are not supported.
+
 ## Description
 
 ExpressLRS now has support for controlling an external video transmitter through SmartAudio/Tramp protocols. This is a powerful feature for PWM+FPV users who don't have a flight controller to manage their VTX settings.
 
 ## Hardware Requirements
 
-Using serial VTX control requires at least one UART TX pin assigned on your receiver. For most PWM RXes, you will need to assign a pin as Serial TX using the Lua script "Other devices" section, or using the [RX Web UI](/quick-start/webui/).
-
-!!! note "NOTE"
-    For _ESP8266/ESP8285_ (5ch/6ch/7ch PWM receivers) the Serial TX output **must be assigned to the physical PWM channel 2 pin**. For the ESP32 (BetaFPV SuperP), the Serial TX pin can be assigned to almost any available pin.
+Using serial VTX control requires at least a secondary UART TX pin assigned on your ESP32-based receiver, such as the Radiomaster RP4TD or the BetaFPV SuperP. You may need to assign a pin as Serial TX using the Lua script "Other devices" section, or using the [RX Web UI](/quick-start/webui/) if one is not already set up.
 
 ## Software Requirements
 
@@ -30,11 +31,11 @@ The minimum version to use this feature is:
 
 1. Open the ExpressLRS LUA script, scroll to the bottom and select `Other Devices`, then select your receiver.
 
-1. Select `Output Map`, and assign an available `Output Ch` as either `Serial TX` or `Serial2 TX`.
+1. Select `Output Map`, and assign an available `Output Ch` as `Serial2 TX`.
 
 1. Select "BACK" to return to the main RX menu
 
-1. Select `Protocol` or `Protocol2` (depending on whether you chose `Serial TX` or `Serial2 TX` above) and set it to `SmartAudio` or `Tramp`. This configures the RX to output SmartAudio or Tramp on the previously-selected pin.
+1. Select `Protocol2` and set it to `SmartAudio` or `Tramp`. This configures the RX to output SmartAudio or Tramp on the previously-selected pin.
 
 1. Wire the selected `Output Ch` to your video transmitter's SmartAudio or Tramp pin
 
