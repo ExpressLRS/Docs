@@ -18,7 +18,7 @@ ExpressLRS now has support for controlling an external video transmitter through
 
 ## Hardware Requirements
 
-Using serial VTX control requires at least a secondary UART TX pin assigned on your ESP32-based receiver, such as the Radiomaster RP4TD or the BetaFPV SuperP. You may need to assign a pin as Serial TX using the Lua script "Other devices" section, or using the [RX Web UI](/quick-start/webui/) if one is not already set up.
+Using serial VTX control requires at least a secondary UART TX pin assigned on your ESP32-based receiver, such as the RadioMaster RP4TD or the BetaFPV SuperP. You may need to assign a pin as Serial TX using the Lua script "Other devices" section, or using the [RX Web UI](/quick-start/webui/) if one is not already set up.
 
 ## Software Requirements
 
