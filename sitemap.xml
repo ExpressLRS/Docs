@@ -655,6 +655,12 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/serial-protocols/"/>
     </url>
     <url>
+        <loc>https://www.expresslrs.org/software/serialvtx/</loc>
+        <lastmod>2024-09-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/serialvtx/"/>
+    </url>
+    <url>
         <loc>https://www.expresslrs.org/software/stlink-fix/</loc>
         <lastmod>2024-09-26</lastmod>
         <changefreq>daily</changefreq>
