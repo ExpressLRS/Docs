@@ -480,3 +480,11 @@ MatchTX
 feedforward
 setpoint
 unticked
+Lvl
+Pwr
+pitmode
+HV
+DAC
+Bidirectionality
+VTXes
+OpenVTX
