@@ -63,6 +63,7 @@ The best receiver for WiFi range is an ESP32 dev board:
 These can be found on Amazon for cheap, and have much better WiFi range than a standard ELRS receiver.
 
 Once you have chosen a receiver to use, you need to determine the MCU type that it uses:
+
 - ESP8285 / ESP8266
 - ESP32
 - ESP32C3
@@ -183,6 +184,7 @@ For example, on the Crossbow mini, assuming you are using the L-Port:
 The Crossbow requires frequent GPS coordinate updates in order to track the craft, and to maintain the link.
 
 The recommendation is to use a telemetry ratio of:
+
 - `1:2` or `1:4` if you are using a low packet rate such as 50Hz or 100Hz
 - `1:2` to `1:8` if you are using a higher packet rate such as 250Hz or above
 
