@@ -43,6 +43,7 @@ Ensure both your transmitter module, and the embedded Backpack are up to date wi
 - For the TX-Backpack, follow the [Transmitter Backpack Firmware Guide](https://www.expresslrs.org/hardware/backpack/backpack-tx-setup/) for detailed instructions.
 
 The minimum versions to use this feature are:
+
 - Main TX firmware: `3.5.0`
 - TX Backpack firmware: `1.5.0`
 
