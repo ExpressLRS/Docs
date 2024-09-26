@@ -27,6 +27,7 @@ When the main ELRS firmware receives the telemetry from the craft, it sends it t
 ### What will I need to do to set this up?
 
 To work through this guide, you will need to:
+
 - Update the firmware on your TX and TX-Backpack (depending on your current version)
 - Flash an ELRS receiver, or an ESP-based dev board as a Backpack receiver
 - Wire the receiver to the Crossbow
