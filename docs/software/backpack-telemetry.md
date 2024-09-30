@@ -63,7 +63,7 @@ This new telemetry feature can be expanded for various applications, e.g.:
 - Real-time flight data monitoring.
 - Integration with other ESP Backpack-compatible devices.
 
-An Espressif ESP-based microcontroller, like the ESP32 or ESP8266 (and many variants) is capable of receiving ESPNOW frames. Custom firmware could be written to decode the CRSF telemetry and consume it in your own custom solution. See [this ESPNOW guide](https://randomnerdtutorials.com/esp-now-esp32-arduino-ide/) for an example of developing using ESPNOW.
+Any Espressif ESP-based microcontroller, like the ESP32 or ESP8266 (and many variants) is capable of receiving ESPNOW frames. Custom firmware could be written to decode the CRSF telemetry and consume it in your own custom solution. See [this ESPNOW guide](https://randomnerdtutorials.com/esp-now-esp32-arduino-ide/) for an example of developing using ESPNOW.
 
 ## Troubleshooting
 If you encounter issues:
