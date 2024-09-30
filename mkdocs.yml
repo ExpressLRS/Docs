@@ -289,8 +289,8 @@ nav:
           - Loan Model: software/loan-model.md
           - Team Racing: software/teamracing.md
           - Serial VTX: software/serialvtx.md
-          - Backpack Telemetry (aka Sentinel Tracker Integration): software/backpack-telemetry.md
           - MAVLink: software/mavlink.md
+          - Sentinel Tracker Integration: software/backpack-telemetry.md
           - MFD Crossbow Tracker Integration: software/mfd-crossbow.md
       - Testing:
           - CRC Testing: software/testing/crc-testing.md
