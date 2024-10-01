@@ -191,6 +191,10 @@ Available Options:
 
     * Alternate between the two Antennas.
 
+!!! warning "WARNING"
+	When using a Gemini TX with a non-Gemini receiver, you should set the TX in either Switch or Single Antenna (Ant1/Ant2) Mode.
+
+
 ### Link Mode
 
 Introduced in 3.5.0, `Link Mode` changes the main protocol and function of the TX module.
