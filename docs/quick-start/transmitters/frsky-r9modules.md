@@ -18,7 +18,7 @@ template: main.html
     !!! info
         This method requires OpenTX 2.3.12 or newer; or EdgeTX 2.4.0 or newer.
 
-    1. Download and save [`r9m_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/bootloader/r9m_elrs_bl.frk?raw=true)(14kb) onto the SD card of your radio, in the `/FIRMWARE` folder.
+    1. Download and save [`r9m_elrs_bl.frk`](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/bootloader/r9m_elrs_bl.frk?raw=true)(14kb) onto the SD card of your radio, in the `/FIRMWARE` folder.
 
     2. Flash `r9m_elrs_bl.frk` to your TX module:
 
