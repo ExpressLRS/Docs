@@ -68,8 +68,8 @@ The minimum versions to use this feature are:
 
 === "INAV"
     **UNSUPPORTED, CURRENTLY IN DEVELOPMENT** -
-    Released versions (up to version 7) of iNav cannot use Mavlink due the limitations highlighted in the Betaflight tab.
-    As of version 8.0, which is currently not released yet, these limitations have been partially resolved and there is limited MAVLINK support.
+    Released versions (up to version 7) of iNav cannot use MAVLink due the limitations highlighted in the Betaflight tab.
+    As of version 8.0, which is currently not released yet, these limitations have been partially resolved and there is limited MAVLink support.
 
     For testing of development version:
     For the below steps, when a UART connection is mentioned, it will be written as `UARTx`. Replace `x` with the UART number you are using.
