@@ -193,7 +193,7 @@ Available Options:
 
 !!! warning "WARNING"
 	When using a Gemini TX with a non-Gemini receiver, you should set the TX in either Switch or Single Antenna (Ant1/Ant2) Mode.
-
+  The reason is that as the receiver only get the signal from the TX it has synchronized with, the other TX will act as a noise generator and increase both the noise floor and power consumption.
 
 ### Link Mode
 
