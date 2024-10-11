@@ -392,6 +392,9 @@ template: main.html
 
 ## Flashing/Updating the Flash Non-OLED Firmware
 
+!!! warning "Attention"
+    ExpressLRS 3.5.x will be the last version to support STM32-based hardware. This includes the Happymodel PP, ES915 Tx and Rx, early NamimnoRC Flash and Voyager, FrSky R9, SIYI and ImmersionRC hardware.
+
 === "via Stock_BL"
 
     <figure markdown>

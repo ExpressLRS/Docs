@@ -590,6 +590,9 @@ Some of the following procedures will not go through, particularly the via Passt
 
 ## Updating your Receiver Firmware (ES915RX/ES868RX)
 
+!!! warning "Attention"
+    ExpressLRS 3.5.x will be the last version to support STM32-based hardware. This includes the Happymodel PP, ES915 Tx and Rx, early NamimnoRC Flash and Voyager, FrSky R9, SIYI and ImmersionRC hardware.
+
 === "via Passthrough"
 
     <figure markdown>
