@@ -98,6 +98,10 @@ To setup WiFi forwarding for MAVLink:
 
 1. On your PC or other GCS device, open your GCS software (e.g. Mission Planner) and set the connection type to `UDP`. Click connect, and use the default UDP port of `14550`. The GCS should successfully connect to the craft and start downloading params.
 
+!!! danger "Attention!"
+    DO NOT manually put the TX Backpack into wifi mode via `WiFi Connectivity -> Enable Backpack WiFi`. It's not in the steps above for a reason. 
+    When you set `Telemetry` into `WiFi` mode, the backpack automatically starts its WiFi mode, and so, there's no need to manually kick it into WiFi mode.
+
 ## Implementation Details
 
 ### RC Interleaving
