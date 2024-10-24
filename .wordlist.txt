@@ -77,6 +77,7 @@ ExpressLRS's
 FAILSAFE
 FC
 FCs
+FEC
 FENIX
 FET
 FHSS
@@ -249,11 +250,13 @@ SkyZone
 Skystars
 Slickshot
 SmartPort
+SmartAudio
 Spektrum
 SteadyView
 Stefanski
 SteveCEvans
 StonedDawg
+SubGHz
 SunjunKim
 SuperD
 SuperP
@@ -479,3 +482,11 @@ setpoint
 unticked
 sysID
 sysIDs
+Lvl
+Pwr
+pitmode
+HV
+DAC
+Bidirectionality
+VTXes
+OpenVTX

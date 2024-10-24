@@ -4,6 +4,11 @@ template: main.html
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
+!!! warning "Attention"
+    ExpressLRS 3.5.x will be the last version to support STM32-based hardware. This includes the Happymodel PP, ES915 Tx and Rx, early NamimnoRC Flash and Voyager, FrSky R9, SIYI and ImmersionRC hardware.
+
+    The STM32 platform's limited compute resources and feature gaps (WiFi, Bluetooth, Backpacks) made for an inferior version of ExpressLRS that necessitated disproportionate maintenance burden for the Dev Team.
+
 !!! note "Note"
     This is only guaranteed to work on the v3.0 of the receiver.
 

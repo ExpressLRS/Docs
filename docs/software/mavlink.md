@@ -77,9 +77,11 @@ The minimum versions to use this feature are:
     1. Configure MAVLink sending rate with MAV_0_RATE to `9600 B/s`
 
 === "INAV"
-    **CURRENTLY IN DEVELOPMENT** -
-    As of update 8.0, which is currently not released yet, INAV has support for proper MAVLink integrations. Until then, refer to the Betaflight tab.
+    **UNSUPPORTED, CURRENTLY IN DEVELOPMENT** -
+    Released versions (up to version 7) of iNav cannot use MAVLink due the limitations highlighted in the Betaflight tab.
+    As of version 8.0, which is currently not released yet, these limitations have been partially resolved and there is limited MAVLink support.
 
+    For testing of development version:
     For the below steps, when a UART connection is mentioned, it will be written as `UARTx`. Replace `x` with the UART number you are using.
 
     1. In the Ports tab, set the UARTx `Telemetry Protocol` to `MAVLink`, and the baud rate to `460800`. Make sure `RX Serial` is disabled.
@@ -105,6 +107,10 @@ To setup WiFi forwarding for MAVLink:
 1. Power on the craft, so that the TX and RX have an active link.
 
 1. On your PC or other GCS device, open your GCS software (e.g. Mission Planner) and set the connection type to `UDP`. Click connect, and use the default UDP port of `14550`. The GCS should successfully connect to the craft and start downloading params.
+
+!!! danger "Attention!"
+    DO NOT manually put the TX Backpack into WiFi mode via `WiFi Connectivity -> Enable Backpack WiFi`. It's not in the steps above for a reason. 
+    When you set `Telemetry` into `WiFi` mode, the backpack automatically starts its WiFi mode, and so, there's no need to manually kick it into WiFi mode.
 
 ## Implementation Details
 

@@ -134,14 +134,17 @@ These are shown as `Packet Rate` and `Telem Ratio` in the Lua script, which allo
 	- `F500 & F1000`: Pure FLRC for lowest latency, reduced range compared to LoRa, 500Hz and 1000Hz. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1277)
 	- `D250 & D500`: Redundant transmit FLRC modes.  `D` stands for `Déjà Vu`, 250Hz and 500Hz. Higher latency, reduced packet jitter and higher LQ. Same range as other FLRC modes. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1527)
 	- `100Hz Full & 333Hz Full`: Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
+  - `K1000` :new: : K modes for 2.4GHz are FSK+FEC (Forward Error Correction a.k.a self healing packets) and only available on LR1121 hardware. K modes are very similar to FLRC in their over the air properties and designed for high noise environments such as racing events. [FSK Details](https://github.com/ExpressLRS/ExpressLRS/pull/2789) [FEC Details](https://github.com/ExpressLRS/ExpressLRS/pull/2832)
+  - `DK250 & DK500` :new: : These modes offer the same redundancy as D modes but with K modes (FSK+FEC).
 	
 	The following options are available for `900MHz`:
 
 	- `25Hz, 50Hz, 100Hz & 200Hz`: LoRa-based options. Higher means lower latency at the expense of sensitivity. Since v1.0.
 	- `100Hz Full`: Lora-based 10-bit Full Resolution with 8ch/12ch/16 Switch Mode options. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/1572)
-    - `D50Hz` :new: : Lora-based Redundant transmit mode via DVDA. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2089)
-    - `250Hz` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
-    - `200Hz Full` :new: : Only Available for GemX Devices. [Details here.](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+  - `D50Hz`: Lora-based Redundant transmit mode via DVDA. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/2089)
+  - `250Hz`: Only Available for GemX Devices. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+  - `200Hz Full` :new: : Only Available for GemX Devices. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/2540)
+  - `K1000 Full` :new: : K modes for SubGHz are FSK and only available on LR1121 hardware. This mode is design for the highest data throughput when using protocols such as MAVLink. [Details](https://github.com/ExpressLRS/ExpressLRS/pull/2789)
 
     The following options are available for `GemX`:
 
@@ -187,6 +190,18 @@ Available Options:
 - `Switch`
 
     * Alternate between the two Antennas.
+
+!!! warning "WARNING"
+	When using a Gemini TX with a non-Gemini receiver, you should set the TX in either Switch or Single Antenna (Ant1/Ant2) Mode.
+  The reason is that as the receiver only get the signal from the TX it has synchronized with, the other TX will act as a noise generator and increase both the noise floor and power consumption.
+
+### Link Mode
+
+Introduced in 3.5.0, `Link Mode` changes the main protocol and function of the TX module.
+
+* `Normal` - This is the default configuration. The TX module simply sends the commands from the radio handset, and receive telemetry from the receiver and send it to the handset. 
+
+* `MAVLink` - This option enables native MAVLink Telemetry downlink and Radio Control uplink making the TX module and radio handset to be an intermediary between a GCS and a MAVLink-capable craft. See the [MAVLink](../../software/mavlink.md) page for more details.
 
 ### Model Match
 
@@ -352,8 +367,28 @@ The `Protocol` setting controls the output of the connected receiver. The follow
 * `SUMD` - Lets the receiver output Graupner HoTT SUMD signal for use with devices that don't support CRSF protocol, like Stabilizers, Heli Controllers etc.
 * `DJI RS2 Pro` - Mainly used for the RS2 Pro Gimbals
 * `HoTT Telemetry` - Allows to use Graupner HoTT enabled telemetry sensors (Graupner and 3rd party)
+* `MAVLINK` - Introduced on ExpressLRS 3.5.0, it allows the receiver to output native MAVLink into a flight controller. See the [MAVLink](../../software/mavlink.md) page for more details.
 
 For more information, see [Receiver Serial Protocols](../../software/serial-protocols.md)
+
+### Protocol 2
+
+The `Protocol 2` setting is only available for ESP32-based receivers. This include the True Diversity ones like the RP4TD, Super D, Super P and EP Dual. These receivers have a second UART that can be used for the same purpose as the main UART. Note that not all of the ESP32-based receivers have the extra UART pads or pins exposed for easy use.
+
+It has the same options as the setting above with these additional ones:
+
+* `Tramp` - If you want to control a VTX using Tramp protocol directly through the ExpressLRS Lua Script's VTX Admin.
+* `SmartAudio` - If you want to control a VTX using SmartAudio protocol directly through the ExpressLRS Lua Script's VTX Admin.
+* `Off` - Set when the auxiliary UART is not in use.
+
+This setting is available on ExpressLRS 3.5.0 and onwards. See [PR 2605](https://github.com/ExpressLRS/ExpressLRS/pull/2605) for more details.
+
+### SBUS failsafe
+
+`SBUS Failsafe` is used to set the behavior of a receiver using SBUS protocol for output. The following options are available:
+
+* `No Pulses` - When a failsafe occurs, the receiver will stop sending any messages.
+* `Last Pos` - When a failsafe occurs, the receiver will keep sending the last channel positions it received.
 
 ### Antenna Mode
 
@@ -390,7 +425,7 @@ Team Racing allows selection between multiple connected models, failsafing all u
 
 These commands allow the user to Loan/Return the model. For more information, see the [Loan Model](../../software/loan-model.md) guide.
 
-This is deprecated and removed in ExpressLRS 3.4.0 in favor of the new Binding Procedures. See the [binding](../binding.md) page for details.
+This is deprecated and removed in ExpressLRS 3.4.0 in favor of the new Binding Procedures. See the [binding](../binding.md) page for details or the **Bind Storage** section below.
 
 ### Output Mapping
 
@@ -414,6 +449,8 @@ For more information, see [PWM Receivers](../../hardware/pwm-receivers.md) page.
 
 This option is available on ExpressLRS 3.4.0 and newer. See the details [here](https://github.com/ExpressLRS/ExpressLRS/pull/2542).
 
+* `Returnable` - Introduced in ExpressLRS 3.5.0. It is used to allow models to be safely loaned from a fleet if unbound OTA. A Binding Phrase must be set for this to work properly. see [PR 2744](https://github.com/ExpressLRS/ExpressLRS/pull/2744) for details.
+
 ### Enter Bind Mode command
 
 This will put the receiver into Bind Mode. It works even if the receiver is already flashed with a binding phrase or already bound traditionally.
@@ -431,6 +468,8 @@ This line shows the currently set Model ID for the receiver when Model Matching 
 * For freestyle and general everyday flying, you may use the `250Hz` modes or faster, with the `Std` Telemetry mode. Switch Mode doesn't matter as much here. Select what's appropriate for your Flight Mode settings.
 
 * For fixed wings, we recommend using `100Hz Full Res`, together with either `Std` or your choice of Telemetry Ratio. Switch Mode will depend greatly on how many full resolution channels you intend to use.
+
+* For Long Range applications, see the [Long Range Records](../../info/long-range.md) page and try the settings the pilots used to achieve the range. It is not guaranteed you'll achieve the same range as they are due to several factors like RF Noise in your area, your location and position and the antenna orientation on your aircraft and transmitter modules. Observe local laws and regulations.
 
 ## Troubleshooting the Lua Script
 

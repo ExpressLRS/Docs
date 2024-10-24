@@ -103,7 +103,7 @@ The procedure is as follows:
 2. Power-cycle the receiver 3 times. 
     - Supply power to the receiver.
     - The receiver LED lights up.
-    - Turn it Off.
+    - Turn it off within 2 seconds.
     - Repeat 2 more times.
 
     !!! warning "Caution"

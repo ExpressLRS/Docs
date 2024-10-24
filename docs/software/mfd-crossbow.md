@@ -27,6 +27,7 @@ When the main ELRS firmware receives the telemetry from the craft, it sends it t
 ### What will I need to do to set this up?
 
 To work through this guide, you will need to:
+
 - Update the firmware on your TX and TX-Backpack (depending on your current version)
 - Flash an ELRS receiver, or an ESP-based dev board as a Backpack receiver
 - Wire the receiver to the Crossbow
@@ -42,6 +43,7 @@ Ensure both your transmitter module, and the embedded Backpack are up to date wi
 - For the TX-Backpack, follow the [Transmitter Backpack Firmware Guide](https://www.expresslrs.org/hardware/backpack/backpack-tx-setup/) for detailed instructions.
 
 The minimum versions to use this feature are:
+
 - Main TX firmware: `3.5.0`
 - TX Backpack firmware: `1.5.0`
 
@@ -61,6 +63,7 @@ The best receiver for WiFi range is an ESP32 dev board:
 These can be found on Amazon for cheap, and have much better WiFi range than a standard ELRS receiver.
 
 Once you have chosen a receiver to use, you need to determine the MCU type that it uses:
+
 - ESP8285 / ESP8266
 - ESP32
 - ESP32C3
@@ -122,7 +125,7 @@ The receiver communicates via UART with the Crossbow, using the MAVLink protocol
 We need to wire the `tx` pad on the receiver to one of the `rx` pins on the Crossbow:
 
 <figure markdown>
-![CrossbowWiringDiagram](../assets/images/rx-to-crossbow-wiring-diagram.png)
+![CrossbowWiringDiagram](../assets/images/rx-to-crossbow-wiring-diagram-v2.png)
 <figcaption>Crossbow Wiring Diagram</figcaption>
 </figure>
 
@@ -181,6 +184,7 @@ For example, on the Crossbow mini, assuming you are using the L-Port:
 The Crossbow requires frequent GPS coordinate updates in order to track the craft, and to maintain the link.
 
 The recommendation is to use a telemetry ratio of:
+
 - `1:2` or `1:4` if you are using a low packet rate such as 50Hz or 100Hz
 - `1:2` to `1:8` if you are using a higher packet rate such as 250Hz or above
 

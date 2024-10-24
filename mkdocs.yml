@@ -288,8 +288,9 @@ nav:
           - Dynamic Transmit Power: software/dynamic-transmit-power.md
           - Loan Model: software/loan-model.md
           - Team Racing: software/teamracing.md
-          - Backpack Telemetry (aka Sentinel Tracker Integration): software/backpack-telemetry.md
+          - Serial VTX: software/serialvtx.md
           - MAVLink: software/mavlink.md
+          - Sentinel Tracker Integration: software/backpack-telemetry.md
           - MFD Crossbow Tracker Integration: software/mfd-crossbow.md
       - Testing:
           - CRC Testing: software/testing/crc-testing.md
@@ -324,7 +325,6 @@ nav:
       - Licenses: info/licenses.md
       - Terms & Conditions: info/terms-and-conditions.md
   - FAQ: faq.md
-  - GSoD: gsod.md
 
 extra_javascript:
   - assets/javascripts/binding-phrase.js

@@ -24,11 +24,17 @@ PWM output is still subject to the resolution of the ELRS protocol, which means 
 	ELRS v3 now supports [full-res switch modes](https://www.expresslrs.org/software/switch-config/#full-resolution-switch-configuration-modes), which provide 8, 12, or 16 full-resolution (10-bit) channels at 100Hz (900MHz and 2.4GHz) or 333Hz (2.4GHz only). For PWM receivers with more than 4 channels, it is recommended that you use one of the full-res modes for best performance. 
 
 ## Supported Output Modes
-ELRS receivers support the following PWM output modes: 
+ELRS receivers support the following PWM output modes:
+
 * PWM output frequencies: 50Hz, 60Hz, 100Hz, 160Hz, 333Hz, 400Hz
+* Normal pulse width (988-2012us - center 1500us), extended pulse width (885-2115us - center 1500us), and also half pulse width servos (494-1006us - center 750us)
 * 10kHz Duty Cycle 0-100% PWM (e.g. for driving a brushed motor FET)
+
+On top of this, outputs can also be set to:
+
 * Binary On/Off (High/Low signal output)
 * DSHOT300 (for driving brushless motor ESCs; ESP32-based receivers only)
+
 
 ## Serial Output
 PWM receivers can also output any supported [serial protocol](https://www.expresslrs.org/software/serial-protocols/), such as CRSF or SBUS. [Select the desired output protocol](https://www.expresslrs.org/software/serial-protocols/#receiver-protocol-selection) using the ELRS lua, or on the Model tab in the receiver's WebUI. 

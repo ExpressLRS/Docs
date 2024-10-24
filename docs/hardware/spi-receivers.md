@@ -8,7 +8,9 @@ description: All-in-one Flight Controllers were released with ExpressLRS receive
 !!! note "Supported RF Modes"
     SPI receivers **DO NOT** support D(D250, D500), F(F500, F1000) and Full Res(100Hz Full Res, 333Hz Full Res) Modes (Packet Rates) and thus will not bind or sync with a TX module in any of these modes.
 
-    These are the packet rates that will work: 50Hz, 150Hz, 250Hz, 500Hz.
+    You must use one of these packet rates with an SPI receiver: 50Hz, 150Hz, 250Hz, 500Hz.
+	
+	**Update** Betaflight 4.5.1 and newer now support FLRC modes (F500,F1000) for SPI receivers. F1000 is *not* recommended for FCs with F411 MCUs. 
 
 A few Flight Controllers and AIOs have been released with ExpressLRS receivers on-board using SPI instead of a regular UART. This means you can build a more compact and lightweight whoop or nano long range rig without the need for an external receiver. More of these flight controllers are coming into stores.
 
@@ -17,16 +19,15 @@ Because the ExpressLRS code is "baked-in" to the flight controller firmware inst
 !!! info "NOTE"
     You cannot use the ExpressLRS Configurator to update these FCs. You must update the flight controller software, e.g. Betaflight.
 
-SPI receiver compatibility with ExpressLRS v3.x *requires* your flight controller be flashed with [Betaflight 4.4](https://github.com/betaflight/betaflight/releases/tag/4.4.0). If you are running [Betaflight 4.3.0](https://github.com/betaflight/betaflight/releases/tag/4.3.0) or [Betaflight 4.3.1](https://github.com/betaflight/betaflight/releases/tag/4.3.1), your receiver will only work with ExpressLRS v2.x. Please update to Betaflight 4.4 for ExpressLRS v3.x compatibility. 
+SPI receiver compatibility with ExpressLRS v3.x *requires* your flight controller be flashed with [Betaflight 4.4.0](https://github.com/betaflight/betaflight/releases/tag/4.4.0) or newer. If you are running [Betaflight 4.3.0](https://github.com/betaflight/betaflight/releases/tag/4.3.0) or [Betaflight 4.3.1](https://github.com/betaflight/betaflight/releases/tag/4.3.1), your receiver will only work with ExpressLRS v2.x. Please update to Betaflight 4.4 or newer for ExpressLRS v3.x compatibility. 
 
 
 In preparation for updating, you should save a copy of your `diff all` dump. Simply go into the CLI Tab of the Betaflight Configurator and execute the command `diff all` then press enter. A bunch of text will show up on the screen. At the bottom of the page, click the **Save to File** button and navigate to the folder you want the file to be saved. Finally click `Save` after taking note of the folder and filename of the text file. You will need to navigate to this file later on, moreover if you already have customized your settings on the flight controller, like rates, PID tune, OSD.
 
-Using the latest [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator/releases), navigate into `Firmware Flasher` and select the latest [Betaflight release](https://github.com/betaflight/betaflight/releases/tag/4.4.0-RC2). Depending on your AIO board, the target will differ:
+Using the latest [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator/releases), navigate into `Firmware Flasher` and select the latest [Betaflight release](https://github.com/betaflight/betaflight/releases/). Depending on your AIO board, the target will differ. Betaflight targets for FCs with SPI receivers will usually end in `SX1280`. Examples:
 
 * Happymodel AIO: `CRAZYBEEF4SX1280`
 * BetaFPV AIO: `BETAFPVF4SX1280`
-* SPRacing SPH7RF: Coming soon!
 
 If your Flight Controller model is not in the list above, consult your Flight Controller manufacturer for details.
 
@@ -99,6 +100,12 @@ Binding Phrase:
 UID Bytes
 ```
 ```
+
+### Model ID
+
+In order to set or retrieve current Model ID through Betaflight you need to use CLI:
+- Set new Model ID: `set expresslrs_model_id = N`
+- Get current Model ID: `get expresslrs_model_id`
 
 #### Setting Binding Phrase
 Go to Betaflight CLI and enter the following commands.
