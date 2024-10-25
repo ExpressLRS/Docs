@@ -15,9 +15,11 @@ description: ExpressLRS Bi-directional MAVLink support
 ## Description
 
 ExpressLRS now has full bi-directional [MAVLink](https://mavlink.io/en/) support, enabling native MAVLink telemetry downlink and RC control uplink. Users can now enjoy seamless integration of telemetry and RC control.
+
 <figure markdown>
 ![Mavlink-RC Summary](../assets/images/mavlink_rc_summary.png)
 </figure>
+
 ## Hardware Requirements
 
 Unlike airport, you do **NOT** need a second RX/TX pair for RC control, since ELRS' implementation allows you to do BOTH telemetry and RC control over **one** link. 
