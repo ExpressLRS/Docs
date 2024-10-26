@@ -56,5 +56,4 @@ Anyone can add an entry to the table, and entries should include the:
     | 10.0           | 100              | 100           | Wing | No                     | Flight Cub    | [Link](https://youtu.be/fg4MxRdKryU) |
     | 6.0            | 100              | 50            | Wing | No                     | Snipes        | [Link](https://youtu.be/kN89mINbmQc) |
     | 5.0            | 200              | 50            | Quad | No                     | S0L4R         | [Link](https://youtu.be/g68G75L6wvY) |
-    | 4.7            | 200              | 250           | Quad | No                     | DaBit         | [Link](https://youtu.be/k0lY0XwB6Ko) |
     | 2.2            | 50               | 10            | Quad | No                     | Mike Malagoli | [Link](https://youtu.be/qi4OygUAZxA) |
