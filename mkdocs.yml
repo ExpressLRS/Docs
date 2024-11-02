@@ -271,31 +271,31 @@ nav:
       - Troubleshooting: quick-start/troubleshooting.md
       - Unbricking: quick-start/unbricking.md
   - Software:
-      - Switch Configs: software/switch-config.md
-      - User Defines: software/user-defines.md
       - Obsolete Defines: software/obsolete-defines.md
       - OpenOCD for STLink: software/open-ocd.md
-      - Toolchain Setup: software/toolchain-install.md
       - PIO STLink Fix: software/stlink-fix.md
+      - Switch Configs: software/switch-config.md
+      - Toolchain Setup: software/toolchain-install.md
+      - User Defines: software/user-defines.md
       - Updating:
           - Betaflight Passthrough: software/updating/betaflight-passthrough.md
           - Wifi Updating: software/updating/wifi-updating.md
       - Features:
-          - Gemini: software/gemini.md
-          - Receiver Serial Protocols: software/serial-protocols.md
           - AirPort: software/airport.md
-          - Model Matching: software/model-config-match.md
           - Dynamic Transmit Power: software/dynamic-transmit-power.md
+          - Gemini: software/gemini.md
           - Loan Model: software/loan-model.md
-          - Team Racing: software/teamracing.md
-          - Serial VTX: software/serialvtx.md
           - MAVLink: software/mavlink.md
-          - Sentinel Tracker Integration: software/backpack-telemetry.md
           - MFD Crossbow Tracker Integration: software/mfd-crossbow.md
+          - Model Matching: software/model-config-match.md
+          - Receiver Serial Protocols: software/serial-protocols.md
+          - Sentinel Tracker Integration: software/backpack-telemetry.md
+          - Serial VTX: software/serialvtx.md
+          - Team Racing: software/teamracing.md
       - Testing:
           - CRC Testing: software/testing/crc-testing.md
-          - Unit Testing: software/testing/unit-testing.md
           - RX Testing: software/testing/rx-scoreboard.md
+          - Unit Testing: software/testing/unit-testing.md
   - Hardware:
       - Hardware Selection: hardware/hardware-selection.md
       - R9M Inverter Mod: hardware/inverter-mod.md
