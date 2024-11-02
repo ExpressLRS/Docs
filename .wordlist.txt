@@ -1,5 +1,6 @@
 AAT
 ACCST
+ACK
 Aeris
 AFHDS
 AIO
@@ -199,6 +200,7 @@ QGC
 QX
 QuadKopters
 RDP
+retransmission
 RFMD
 RGB
 RQLY

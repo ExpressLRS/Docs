@@ -5,10 +5,13 @@ description: ExpressLRS can be configured as a bi-directional transparent serial
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
+!!! note "NOTE"
+    With the addition of [MAVLink](../mavlink/) support in ELRS 3.5, it is no longer recommended to use Airport for MAVLink telemetry. Please see the [MAVLink](../mavlink/) page for more info.
+	
 ## Description
 
 AirPort provides a firmware option that allows you to turn a regular ExpressLRS transmitter and receiver pair into a bi-directional transparent serial data link, over the air.
-The TX module is intended to connect via USB to a laptop, and the RX connects to a free UART on your FC, as per usual. This then allows serial data comms between the peers, in any protocol you wish to use, for example, MAVLink (ArduPilot), MSP (Betaflight and INAV), or any other telemetry protocol you might wish to use. This may also be useful for wireless ground comms, for example: transmitting CRSF from your handset to an antenna tracker.
+A TX module can connect via USB to a laptop, and RX modules (or those flashed using RX-as-TX) can connect to a free UART on your device, as per usual. This allows for a wireless serial data link between TX and RX, as if they were connected directly via serial. Note that due to the packet size and sensitive LoRa modulation parameters used by ELRS, the [data rate](#data-rate-vs-baud-rate) is relatively slow. Also, as the protocol has no knowledge of the data being transported, there is no ACK or retransmission which may result in dropped packets.
 
 !!! warning "Warning"
     The AirPort option completely replaces the RC link, and repurposes it as a data link. If you intend to retain RC control via ELRS, you will need to run 2x TXs and 2x RXs on the ground and air, respectively. One TX+RX pair sends your normal RC link data, just as it does now, and the other TX+RX pair sends the serial data.
