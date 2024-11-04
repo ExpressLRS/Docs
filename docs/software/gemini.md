@@ -1,13 +1,13 @@
 ---
 template: main.html
-description: ExpressLRS Gemini is a Dual Channel 2.4GHz or 900MHz System. Gemini is not Dual Band.
+description: ExpressLRS Gemini is a Dual Channel 2.4GHz and/or 900MHz System.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 ## What is Gemini?
 
-Gemini is a dual channel 2.4GHz OR 900MHz system. However, it is currently NOT Dual Band e.g. 2.4GHz and 900MHz simultaneous transmissions.
+Gemini is a dual channel 2.4GHz and/or 900MHz (and potentially other low-band frequencies) transmission mode that leverages true diversity hardware to maximize LQ. This page covers single-band Gemini mode, which uses diversity hardware to transmit in multiple channels within the same band (e.g. 2.4GHz or 900MHz). There is also a dual-band mode, Gemini Xrossband or GemX, which is capable of transmitting on both 2.4GHz and 900MHz bands simultaneously. Please see the [PR here](https://github.com/ExpressLRS/ExpressLRS/pull/2540) for more info while the documentation is updated. 
 
 In Gemini Mode, a TX module simultaneously transmits a packet in two frequencies 40MHz apart for 2.4GHz and ~10MHz apart for 900MHz users.  The packet separation used is half of the frequency domain selected and will vary a little. A true diversity Receiver is used to receive both packets simultaneously. Transmitting on 2 separate frequencies provides better interference avoidance and/or mitigation, in a similar way DVDA does by sending repeat packets sequentially on different frequencies. This means, the Receiver has an increased chance of receiving the packet. This results in a much higher and stable LQ.
 
