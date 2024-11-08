@@ -492,3 +492,4 @@ DAC
 Bidirectionality
 VTXes
 OpenVTX
+Xrossband
