@@ -41,11 +41,14 @@ The OTA data rate is determined by the selected packet rate. A faster packet rat
 | 50Hz | 125 | 1200 |
 | 100Hz | 250 | 2400 |
 | 100Hz Full Res | 500 | 4800 |
+| 150Hz | 375 | 2400 |
 | 200Hz | 500 | 4800 |
+| 200Hz Full Res | 1000 | 9600 |
 | 250Hz | 625 | 4800 |
 | 333Hz Full Res | 1665 | 14400 or 9600 |
 | 500Hz | 1250 | 9600 |
 | 1000Hz | 2500 | 19200 |
+| 1000Hz Full Res | 5000 | 38400 |
 
 A good baseline is:
 
