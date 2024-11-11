@@ -131,4 +131,4 @@ Don't change ``user_defines.txt`` for setting up your local configuration. Inste
 
     !-DAUTO_WIFI_ON_INTERVAL="40"
 
-Note: use the `!` operator to superseed defines already defined in `user_defines.txt` to avoid compiler warnings.
+Note: use the `!` operator to supersede defines already defined in `user_defines.txt` to avoid compiler warnings.
