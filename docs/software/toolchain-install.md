@@ -112,3 +112,23 @@ The advantage this method has over the first method is that all your changes to 
 3. In the terminal, type: `git pull -f`
 
     This will pull a new revision of the remote repository to your local repository and automatically merge it with your changes.
+
+## Avoid user_defines.txt ending up in a commit or getting overwritten
+
+Don't change ``user_defines.txt`` for setting up your local configuration. Instead create a new text file ``super_defines.txt` in the same location as `user_defines.txt` to define your local build configuration. `super_defines.txt` will be git-ignored and will not be part of any commits and won't be overwritten by pulls. Example `super_defines.txt`:
+
+    #-DRegulatory_Domain_EU_CE_2400
+    -DRegulatory_Domain_ISM_2400
+    #-DRegulatory_Domain_FCC_915
+    #-DRegulatory_Domain_EU_868
+
+    -DMY_BINDING_PHRASE="bindphrase"
+    -DHOME_WIFI_SSID="ssid"
+    -DHOME_WIFI_PASSWORD="password"
+    -DLOCK_ON_FIRST_CONNECTION
+
+    -DUART_INVERTED
+
+    !-DAUTO_WIFI_ON_INTERVAL="40"
+
+Note: use the `!` operator to superseed defines already defined in `user_defines.txt` to avoid compiler warnings.
