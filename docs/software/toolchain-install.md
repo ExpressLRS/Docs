@@ -129,6 +129,7 @@ Don't change ``user_defines.txt`` for setting up your local configuration. Inste
 
     -DUART_INVERTED
 
-    !-DAUTO_WIFI_ON_INTERVAL="40"
+    !-DAUTO_WIFI_ON_INTERVAL=60
+    -DAUTO_WIFI_ON_INTERVAL=40
 
-Note: use the `!` operator to supersede defines already defined in `user_defines.txt` to avoid compiler warnings.
+Note: the `!` flag is called the removal flag. It removes other flags that completely match the text after the `!`.
