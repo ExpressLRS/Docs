@@ -7,7 +7,7 @@ description: How to connect, setup, flash, and update your ExpressLRS Goggle VRX
 
 ## Flashing Methods for Backpack Device:
 
-Before wiring up your VRX Backpack, you MUST first flash the VRX Backpack firmware, either via WiFi or UART/FTDI.
+Before wiring up your VRX Backpack into your VRX Module, you MUST first flash the VRX Backpack firmware, either via WiFi or UART/FTDI.
 
 Good VRX Backpack candidates are the EP1 or EP2 receivers from Happymodel as these have Boot pads instead of Boot buttons. The Boot pad will be repurposed for the SPI Clock signal from the VRX module.
 
