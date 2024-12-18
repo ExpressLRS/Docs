@@ -100,23 +100,11 @@ Restart the receiver and connect your serial device to the configured PWM Output
 
 ### Configuring Serial2 on ESP32 non-PWM receivers
 
-Some non-PWM receivers like the RadioMaster RP4TD have spare pins exposed. The pins are configured for Serial2 by default. 
+Some non-PWM receivers like the RadioMaster RP4TD have spare pins exposed. The pins are configured for Serial2 by default. For Serial2 protocol selection use the ELRS LUA script and follow the Protocol 2 section of [Other Devices](https://www.expresslrs.org/quick-start/transmitters/lua-howto/?h=2+protocol#other-devices).
 
 <figure markdown>
 ![non-PWM receiver](../assets/images/Serial2-4.png)
 </figure>
-
-Serial2 protocol selection is best configured using the WebUI but can also be configured using the LUA script. 
-
-Open the WebUI as described in section "How to get to the Web UI". Scroll down to line Serial2 protocol and choose the desired.
-
-<figure markdown>
-![Serial2 Protocol](../assets/images/Serial2-3.png)
-</figure>
-
-Save the configuration using the SAVE button at the bottom of the page.
-
-Restart the receiver and connect your serial device to the configured PWM Output.
 
 ## SUMD Notes
 
