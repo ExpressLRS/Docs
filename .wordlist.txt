@@ -493,3 +493,14 @@ Bidirectionality
 VTXes
 OpenVTX
 Xrossband
+Arduino
+repurposed
+env
+venv
+pio
+platformio
+src
+Mhz
+Ctrl
+esptool
+
