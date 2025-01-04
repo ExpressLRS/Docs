@@ -19,7 +19,7 @@ ExpressLRS is #blessed with the benefit of there being many options of transmitt
   * [GEPRC](https://geprc.com)
   * [Happymodel](https://www.happymodel.cn)
   * [HGLRC](https://www.hglrc.com)
-  * [iFlight](https://www.iflight-rc.com)
+  * [iFlight](https://www.iflight.com)
   * [Jumper](https://www.jumper-rc.com)
   * [MatekSys](http://www.mateksys.com)
   * [NamimnoRC](https://m.facebook.com/profile.php?id=100070062095159&_rdr)
