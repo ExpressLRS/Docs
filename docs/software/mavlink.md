@@ -81,15 +81,13 @@ The minimum versions to use this feature are:
     1. Configure MAVLink sending rate with MAV_0_RATE to `9600 B/s`
 
 === "INAV"
-    **UNSUPPORTED, CURRENTLY IN DEVELOPMENT** -
-    Released versions (up to version 7) of iNav cannot use MAVLink due the limitations highlighted in the Betaflight tab.
-    As of version 8.0, which is currently not released yet, these limitations have been partially resolved and there is limited MAVLink support.
+    Released versions (from version 8) of INAV can use MAVLink for monitoring flights but given INAV is a MSP first flight controller, don't expect full functionality or configuration via MAVLink.
 
-    For testing of development version:
     For the below steps, when a UART connection is mentioned, it will be written as `UARTx`. Replace `x` with the UART number you are using.
 
     1. In the Ports tab, set the UARTx `Telemetry Protocol` to `MAVLink`, and the baud rate to `460800`. Make sure `RX Serial` is disabled.
     1. In the Receiver tab, set the Receiver type to `SERIAL` and the `Serial Receiver Provider` to `MAVLink`. Leave inverted & half-duplex `disabled`.
+    1. In the CLI enter ```set mavlink_radio_type=ELRS``` to get the correct RSSI and LQ values on INAV's OSD.
 
 === "Betaflight"
 
