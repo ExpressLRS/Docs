@@ -81,7 +81,7 @@ The minimum versions to use this feature are:
     1. Configure MAVLink sending rate with MAV_0_RATE to `9600 B/s`
 
 === "INAV"
-    Released versions (from version 8) of INAV can use MAVLink for monitoring flights but given INAV is a MSP first flight controller, don't expect full functionality or configuration via MAVLink.
+    Released versions of INAV (from version 8 onwards) can use MAVLink for flight monitoring. However, given that INAV is primarily an MSP flight controller, full functionality and configuration via MAVLink should not be expected.
 
     For the below steps, when a UART connection is mentioned, it will be written as `UARTx`. Replace `x` with the UART number you are using.
 
