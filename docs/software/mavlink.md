@@ -87,7 +87,7 @@ The minimum versions to use this feature are:
 
     1. In the Ports tab, set the UARTx `Telemetry Protocol` to `MAVLink`, and the baud rate to `460800`. Make sure `RX Serial` is disabled.
     1. In the Receiver tab, set the Receiver type to `SERIAL` and the `Serial Receiver Provider` to `MAVLink`. Leave inverted & half-duplex `disabled`.
-    1. In the CLI enter ```set mavlink_radio_type=ELRS``` to get the correct RSSI and LQ values on INAV's OSD.
+    1. In the CLI, enter ```set mavlink_radio_type=ELRS``` to get the correct RSSI and LQ values on INAV's OSD.
 
 === "Betaflight"
 
