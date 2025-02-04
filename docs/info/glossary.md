@@ -22,5 +22,6 @@ Below you can find a list of terms you might not be sure about, as well as some 
 - `RSSI`: Received Signal Strength Indicator, "arbitrary" scaled version of `RSSI dBm` or LQ. [Signal Health: LQI and RSSI Explained](../info/signal-health.md)
 - `RSSI dBm`: Measure of power level measured in dBm. Basically, how strong the signal being received is
 - `S.Port`: SmartPort, sometimes referred to as `sport`. FrSky "telemetry" protocol. The `S.Port` also gets used for updating FrSky receivers.
+- `DVDA`: Deja Vu Diversity Aid, also referred to as D-mode. This mode sends the same packet multiple times consecutively (2 times for D-250 and 4 for D-500). It increases LQ at the cost of range and latency. 
 
 To be continued.
