@@ -23,5 +23,6 @@ Below you can find a list of terms you might not be sure about, as well as some 
 - `RSSI dBm`: Measure of power level measured in dBm. Basically, how strong the signal being received is
 - `S.Port`: SmartPort, sometimes referred to as `sport`. FrSky "telemetry" protocol. The `S.Port` also gets used for updating FrSky receivers.
 - `DVDA`: Deja Vu Diversity Aid, also referred to as D-mode. This mode sends the same packet multiple times consecutively (2 times for D-250 and 4 for D-500). It increases LQ at the cost of range and latency. 
+- `FLRC`: Fast Long Range Communication, also known as F-mode. It is a term that combines a few signal processing techniques (demodulation, forwarding error correction and interleaving) to enable high data rates. This results in lower latency and comparable (or shorter) range.
 
 To be continued.
