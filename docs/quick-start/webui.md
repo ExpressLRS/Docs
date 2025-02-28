@@ -174,6 +174,22 @@ This section is currently only available for the RadioMaster Ranger module.
                 !!! info "Note"
                     It is normal for the receiver will disconnect from the TX Module once it is in WiFi Mode. You will hear your radio announce "Telemetry Lost" if you have the sound pack on your Radio SD Card.
 
+
+        === "via Button"
+            1. If your receiver is equipped with a boot button, you can use this to put the receiver into WiFi mode. 
+            	- Locate the boot button on your receiver
+
+            	<figure markdown>
+            	![betafpv SuperD](../assets/images/BetaFPVSuperD.png)
+            	<figcaption>Example Receiver with Boot Button</figcaption>
+            	</figure>
+			
+            2. Press and hold the boot button on the receiver for 5 seconds. The LED should begin blinking rapidly indicating the receiver is in WiFi mode.
+
+                <figure markdown>
+                ![RX WiFi](../assets/images/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                </figure>
+				
     4. Scan for the `ExpressLRS RX` Access Point. 
         ![WiFi Hotspot](../assets/images/WifiHotspot.png){ align=right }
 
