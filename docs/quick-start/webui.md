@@ -177,7 +177,7 @@ This section is currently only available for the RadioMaster Ranger module.
 
         === "via Button"
             1. If your receiver is equipped with a boot button, you can use this to put the receiver into WiFi mode. 
-            	- Locate the boot button on your receiver
+                - Locate the boot button on your receiver:
 
             	<figure markdown>
             	![betafpv SuperD](../assets/images/BetaFPVSuperD.png)
