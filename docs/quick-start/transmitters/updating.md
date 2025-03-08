@@ -429,7 +429,7 @@ description: General Guidelines for ExpressLRS TX Module firmware updating.
 
         :material-alert-outline: Yellow Caution Triangles in the Device Manager, or any mention of `<Radio Name> Serial Port` means drivers aren't installed.
 
-        [Download](https://www.st.com/en/development-tools/stsw-stm32102.html) the Driver package first. Unzip/extract the contents of the package and run/execute (double-click) the installer file (`VCP_V1.5.0_Setup_W7_x64_64bits.exe` for Windows 10 Users). 
+        [Download](https://www.st.com/en/development-tools/stsw-stm32102.html) the Driver package first. Unzip/extract the contents of the package and run/execute (double-click) the installer file (`VCP_V1.5.0_Setup_W7_x64_64bits.exe` for Windows 10/11 Users). 
         
         Once Drivers are installed, check again if the Radio is now being recognized correctly. You may have to first unplug-replug the USB Cable or even reboot your computer.
 
