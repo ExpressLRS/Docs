@@ -57,6 +57,7 @@ DX
 DaBit
 Denks
 Dev
+Deadbot
 Disnator
 DisplayPort
 DivisionRc
