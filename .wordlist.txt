@@ -58,6 +58,8 @@ DaBit
 Denks
 Dev
 Deadbot
+deadbot
+DeadBot
 Disnator
 DisplayPort
 DivisionRc
