@@ -351,7 +351,25 @@ We do not knowingly collect personally identifiable information from Children un
 has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from
 Children without verification of parental consent, we take steps to remove that information from our servers.
 
-## 19. Changes to This Privacy Policy
+## 19. AI Support Bot Data Collection
+ExpressLRS operates a discord chat bot (deadbot#9284) for help and support purposes. All support interactions with ExpressLRS are processed through this support bot. When you communicate with our support system, the following applies:
+
+0.1. All messages you send to our support system are collected and stored;
+
+0.2. These messages may include questions, descriptions of technical issues, configuration details, or any other information you choose to share;
+
+0.3. Your messages may be used to train our AI model to improve its responses and better assist users in the future;
+
+0.4. Message data may be analyzed to identify common issues, improve our products, and enhance documentation;
+
+0.5. Support interaction data may be retained for an extended period to facilitate ongoing training and improvement of our AI systems;
+
+0.6. Since all support interactions are handled through our AI bot, alternative support channels that do not involve message collection are not available.
+
+By using our support system, you consent to the collection, storage, and use of your messages for the purposes described above, including for AI model training.
+
+
+## 20. Changes to This Privacy Policy
 
 We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy
 on this page.
@@ -362,6 +380,6 @@ update “effective date” at the top of this Privacy Policy.
 You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective
 when they are posted on this page.
 
-## 20. Contact Us
+## 21. Contact Us
 
 If you have any questions about this Privacy Policy, please contact us by email: info@expresslrs.org.
