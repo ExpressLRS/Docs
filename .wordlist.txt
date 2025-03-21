@@ -506,4 +506,5 @@ src
 Mhz
 Ctrl
 esptool
-
+Deja
+Vu
