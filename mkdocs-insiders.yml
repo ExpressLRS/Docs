@@ -25,3 +25,4 @@ plugins:
     enabled: !ENV [CI, false]
   privacy:
     enabled: !ENV [CI, false]
+    cache: false
