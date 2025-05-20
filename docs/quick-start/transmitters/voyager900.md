@@ -79,17 +79,17 @@ template: main.html
     1. Disassemble your TX Module to get access to the mainboard.
 
         <figure markdown>
-            ![NamimnoRC Voyager Backside](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/namimnoback.jpg?raw=true){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
+            ![NamimnoRC Voyager Backside](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/namimnoback.jpg){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
         </figure>
 
         <figure markdown>
-            ![NamimnoRC Voyager cable](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/cable.jpg?raw=true){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
+            ![NamimnoRC Voyager cable](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/cable.jpg){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
         </figure>
 
     2. Connect your STLink V2 dongle to the pads shown in the image below.
 
         <figure markdown>
-        ![NamimnoRC Pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/namimnopinout.png?raw=true){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
+        ![NamimnoRC Pinout](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/namimnopinout.png){ style="width:40%;display: inline-block; margin:0 auto;" class="center-img" }
         </figure>
 
     3. Connect your STLink V2 dongle to your Computer's USB Port. Make sure it is being detected correctly.

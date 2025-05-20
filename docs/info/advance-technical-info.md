@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
+![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)
 
 This page explain the more technical side for debugging things yourself.
 

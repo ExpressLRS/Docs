@@ -5,7 +5,7 @@ search:
   exclude: true
 ---
 
-![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
+![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)
 
 Effective date: 2022-12-01
 

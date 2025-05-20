@@ -51,7 +51,7 @@ If you ordered a Nuclear TX that wasn't fully assembled, these steps should help
 The latest version of the Nuclear TX STL files can be found [here](https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/TX_SX1280_Super_Slim/stl). Print the pieces in the orientation in the image and use support. Tree support in Cura works great. Keep in mind that PLA may melt if left in a hot car or in direct sunlight.  
 
 <figure markdown>
-![nucleartx case](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/printlayout.png?raw=true){ width=50% }
+![nucleartx case](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/printlayout.png){ width=50% }
 </figure>
 
 #### Assemble
@@ -59,7 +59,7 @@ The latest version of the Nuclear TX STL files can be found [here](https://githu
 Slap it together as seen below. Solder the wires to the pin header in the order in the picture, then slide it in from the outside. The header should press in with a little force. Add some glue on the inside to keep it from sliding out when removing it from your handset. Put the SMA pigtail in the hole in the top and screw it down. Use a wrench to make sure it doesn't come loose when you screw on your antenna. Plug the U.FL into the module and route it under, and loop up around the side.  
 
 <figure markdown>
-![nucleartx assembly](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/exploded.jpg?raw=true){ width=50% }
+![nucleartx assembly](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/exploded.jpg){ width=50% }
 </figure>
 
 #### Upload firmware
@@ -67,7 +67,7 @@ Slap it together as seen below. Solder the wires to the pin header in the order 
 When you get your Nuclear RX, it will likely be on the latest release firmware. You'll probably have to update it to work with the RX you have. To update, follow the steps in the [WiFi updating](../../software/updating/wifi-updating.md) page. If your transmitter module ever becomes bricked from a bad upload, connect it with a serial adapter as shown here. **MAKE SURE THE ADAPTER IS SET TO 3.3V; 5V WILL KILL THE MODULE!** Use tweezers or solder to bridge the boot jumper while you power on the module to put it in boot mode. Use the target `DIY_2400_TX_ESP32_SX1280_E28_via_UART`.  
 
 <figure markdown>
-![nuclearTX firmware upload](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/ftdi.png?raw=true){ width=50% }
+![nuclearTX firmware upload](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/PCB/2400MHz/TX_SX1280_Super_Slim/img/ftdi.png){ width=50% }
 </figure>
 
 !!! note "Note"

@@ -14,14 +14,14 @@ Possibly one of the biggest benefits of using `ExpressLRS` is custom hardware!
 ### Custom ESP 2.4 GHz RX
 
 <figure markdown>
-![20x20 RX](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/RX_20x20/v2.0/img/top.PNG?raw=true){ width=40% }
+![20x20 RX](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/PCB/2400MHz/RX_20x20/v2.0/img/top.PNG){ width=40% }
 <figcaption markdown>[20x20 RX](https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/RX_20x20)</figcaption>
 </figure>
 
 - 20x20 footprint and uses 0805 size SMD components. SMD components have been positioned on the PCB in a soldering iron friendly way. 🚸 
 
 <figure markdown>
-![RX Nano](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/2400MHz/RX_Nano/img/front.jpg?raw=true){ width=40% }
+![RX Nano](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/PCB/2400MHz/RX_Nano/img/front.jpg){ width=40% }
 <figcaption markdown>[ELRS Nano](https://github.com/ExpressLRS/ExpressLRS-Hardware/tree/master/PCB/2400MHz/RX_Nano)</figcaption>
 </figure>
 
@@ -30,8 +30,8 @@ Possibly one of the biggest benefits of using `ExpressLRS` is custom hardware!
 ### Custom ESP 900 MHz RX
 
 <figure markdown>
-![900 Mini](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/900MHz/RX_Mini_v0.1/img/front.jpg?raw=true){ width=25% }
-![20x20 900 RX](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/PCB/900MHz/RX_20x20_0805_SMD/img/populated_side_1.jpg?raw=true){ width=25% }
+![900 Mini](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/PCB/900MHz/RX_Mini_v0.1/img/front.jpg){ width=25% }
+![20x20 900 RX](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/PCB/900MHz/RX_20x20_0805_SMD/img/populated_side_1.jpg){ width=25% }
 ![esp01F 900 RX](https://images-na.ssl-images-amazon.com/images/I/51BwxcbSjoL._AC_SL1440_.jpg?raw=true){ width=25% }
 </figure>
 

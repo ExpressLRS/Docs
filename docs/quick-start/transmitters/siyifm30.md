@@ -19,7 +19,7 @@ template: main.html
     The only way to flash the FM30 series is using STLINK. Luckily, their pads are pretty generous on the TX and easy to connect. This is a one-way process, there is no returning to the stock firmware after flashing. 
 
 <figure markdown>
-![TX Unwired](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-4.JPG?raw=true)
+![TX Unwired](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/siyi/jupa/Siyi-4.JPG)
 </figure>
 
 * The TX module is opened by removing the four screws on the corners of the case using a small phillips screwdriver, then two further screws to remove the circuit board once inside.

@@ -3,7 +3,7 @@ template: main.html
 description: ExpressLRS Init Rate or the Packet Rate that the receiver will start checking for the Sync Packet.
 ---
 
-![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
+![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)
 
 ### What happened to the Lua Init Rate option?
 

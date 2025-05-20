@@ -31,11 +31,11 @@ template: main.html
             VDD is 3.3v ONLY! Do not connect 5v here! :fire:
 
         <figure markdown>
-        ![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-12.JPG?raw=true)
+        ![pinout](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/siyi/jupa/Siyi-12.JPG)
         </figure>
 
         <figure markdown>
-        ![stlink](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-13.JPG?raw=true)
+        ![stlink](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/siyi/jupa/Siyi-13.JPG)
         <figcaption>Siyi FR Mini</figcaption>
         </figure>
 
@@ -88,11 +88,11 @@ template: main.html
         | TX | RX2 |
 
         <figure markdown>
-        ![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-16.JPG?raw=true)
+        ![pinout](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/siyi/jupa/Siyi-16.JPG)
         </figure>
 
         <figure markdown>
-        ![pinout](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/siyi/jupa/Siyi-17.JPG?raw=true)
+        ![pinout](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/siyi/jupa/Siyi-17.JPG)
         </figure>
 
     Thank you [@JupaCreations](http://www.jupacreations.com/) for contributing.

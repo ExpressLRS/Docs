@@ -3,7 +3,7 @@ template: main.html
 description: Know what your LQ and RSSI dBm values mean. Prevent a failsafe by knowing when to turn back!
 ---
 
-![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
+![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)
 
 RSSI has become somewhat a generic term for how good a signal is, and every manufacturer can have their own scale, with most agreeing that "100" is the best, less than that is bad, and expect have RXLOSS at ???. This is an explanation of the signal metrics provided by ExpressLRS and how to understand their values.
 
