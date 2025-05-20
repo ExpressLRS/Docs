@@ -5,7 +5,7 @@ search:
   exclude: true
 ---
 
-![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
+![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)
 
 The ExpressLRS project and ExpressLRS Configurator, including this website, are licensed under [GNU General Public
 License v3.0 license](https://github.com/ExpressLRS/ExpressLRS/blob/master/LICENSE).
