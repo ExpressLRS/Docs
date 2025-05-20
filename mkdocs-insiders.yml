@@ -23,6 +23,6 @@ plugins:
       font_family: Open Sans
   optimize:
     enabled: !ENV [CI, false]
+    cache: false
   privacy:
     enabled: !ENV [CI, false]
-    cache: false
