@@ -48,7 +48,7 @@ We recommend using VSCode's built-in Git client, as it requires the least 3rd pa
 * Choose a folder for ExpressLRS. 📂
 
 ### Selecting the Latest Release
-Before we can do any building, you need to select a release build of ELRS. For example, release [0.1.0-RC1](https://github.com/AlessandroAU/ExpressLRS/releases/tag/0.1.0-RC1). In Visual Studio Code select that tag. The location of the selector is shown below. 🖱️
+Before we can do any building, you need to select a release build of ELRS. For example, release [0.1.0-RC1](https://github.com/ExpressLRS/ExpressLRS/releases/tag/0.1.0-RC1). In Visual Studio Code select that tag. The location of the selector is shown below. 🖱️
 
 <figure markdown>
 ![latest release](../assets/images/src.png)
@@ -62,15 +62,15 @@ Click the selector, and then type in the name of the tag, in this case `0.1.0-RC
 
 ### PlatformIO Building
 
-Once you had the time of your life setting up your toolchain 🧰 you are **ready** to Flash ⚡ ExpressLRS to supported [hardware](https://github.com/AlessandroAU/ExpressLRS/wiki/Supported-Off-The-Shelf-Hardware).
+Once you had the time of your life setting up your toolchain 🧰 you are **ready** to Flash ⚡ ExpressLRS to supported [hardware](https://github.com/ExpressLRS/ExpressLRS/wiki/Supported-Off-The-Shelf-Hardware).
 
 ### Building Targets using PlatformIO
 
 1. 📂 When you first launch `Visual Studio Code`, you should see the `PlatformIO Home Page` in a tab.
 Click the `Open Project` button. Navigate to the `ExpressLRS` repo directory. Navigate into the `src` folder (i.e. `./ExpressLRS/src/`). Finally, press the `Open` button.
-2. ✏️ Edit the file [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/user_defines.txt) to define user specific variables. 😈 Please make sure you edit the file according to __your__ needs!
+2. ✏️ Edit the file [`./src/user_defines.txt`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/user_defines.txt) to define user specific variables. 😈 Please make sure you edit the file according to __your__ needs!
 3. 📊 In the toolbar on the left, click the PlatformIO icon, which will show the list of tasks. Now, select Project Tasks, expand your desired target and select Build/Upload (depending on the method). You should see the result in the terminal.
-4. 🙃 If something went wrong - please check the `Terminal`, too. It will contain at least a hint of what the issue is. Please ask the [community](https://github.com/AlessandroAU/ExpressLRS/wiki#community) for further help🧑‍🔧!
+4. 🙃 If something went wrong - please check the `Terminal`, too. It will contain at least a hint of what the issue is. Please ask the [community](https://github.com/ExpressLRS/ExpressLRS/wiki#community) for further help🧑‍🔧!
 
 ## Updating your Local Repo
 

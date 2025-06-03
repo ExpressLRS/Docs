@@ -5,7 +5,7 @@ description: User Defines are firmware flags akin to the Firmware Options. You c
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
-With more features being added consistently, [`./src/user_defines.txt`](https://github.com/AlessandroAU/ExpressLRS/blob/master/src/user_defines.txt) has gotten complicated 🤷‍♂️. So we will break it down! 🔨 
+With more features being added consistently, [`./src/user_defines.txt`](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/user_defines.txt) has gotten complicated 🤷‍♂️. So we will break it down! 🔨
 
 !!! info
 
@@ -22,7 +22,7 @@ With more features being added consistently, [`./src/user_defines.txt`](https://
 MY_BINDING_PHRASE="default ExpressLRS binding phrase"
 ```
 !!! Important
-    This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet<sup>*</sup>. 
+    This step is simple but **important**. Both the TX and RX NEED to have the same binding phrase or **ExpressLRS WILL NOT WORK**. Anyone using the same binding phrase as you will be able to control your model, so be unique. Set something memorable, and limit to alphanumeric phrases conforming to the Latin alphabet<sup>*</sup>.
 
 Receivers flashed with firmware builds that do not have binding phrases enabled will support and require the traditional binding method. 📜 For ESP/ESP32 hardware, this value can also be changed through the WebUI.
 
@@ -40,7 +40,7 @@ Regulatory_Domain_EU_433
 Regulatory_Domain_FCC_915
 Regulatory_Domain_ISM_2400
 ```
-This is a relatively simple one - enable whatever regulatory domain you are in. `EU 868` 🇪🇺  is compliant to the frequency but **is not** LBT compliant 👂 . Every other band is near compliant 👿  but may not be fully compliant for your regulatory domain. 
+This is a relatively simple one - enable whatever regulatory domain you are in. `EU 868` 🇪🇺  is compliant to the frequency but **is not** LBT compliant 👂 . Every other band is near compliant 👿  but may not be fully compliant for your regulatory domain.
 
 ```
 TLM_REPORT_INTERVAL_MS=240LU
@@ -50,7 +50,7 @@ The TX module sends the LinkStats telemetry to the OpenTX frequently to let the 
 ## Output Power Limit
 
 ````
-UNLOCK_HIGHER_POWER 
+UNLOCK_HIGHER_POWER
 ````
 By default the max power of the hardware is limited to what it can safely output without extra cooling. Some hardware supports increasing the power by enabling the following option. Check the [supported hardware](../hardware/hardware-selection.md) page to see if this is available and what cooling modifications can be made. By enabling this, you are risking permanent damage to your hardware, sometimes even when you add extra cooling. For example, R9M modules will burn out without cooling.
 
@@ -66,7 +66,7 @@ When cycling through the rates, the RX starts with the fastest packet rate and w
 ```
 FAN_MIN_RUNTIME=30
 ```
-For TX devices with fans, FAN_MIN_RUNTIME keeps the fan running even after the power level has dropped below the configured Fan Threshold. This prevents the fan from turning on and off every few seconds if the power level is constantly changing. The default is 30 seconds if not defined, the value can be 0-254. There is always a short delay before the fan is activated, which can not be disabled. 
+For TX devices with fans, FAN_MIN_RUNTIME keeps the fan running even after the power level has dropped below the configured Fan Threshold. This prevents the fan from turning on and off every few seconds if the power level is constantly changing. The default is 30 seconds if not defined, the value can be 0-254. There is always a short delay before the fan is activated, which can not be disabled.
 
 ## Compatibility Options
 
@@ -114,7 +114,7 @@ MY_STARTUP_MELODY="<music string>|<bpm>|<semitone offset>" -or-
 MY_STARTUP_MELODY="<rtttl string>"
 ```
 For TXes like the R9M, this sets if the TX only beeps one-time **versus** playing a startup song. Currently, it is set to play the startup song 🎼 , but if you don't prefer it, uncomment this to turn it off. ✖️
- 
+
 For all your customization needs, use `DMY_STARTUP_MELODY` to define your own startup melody using the BLHeli32 or RTTTL syntax. For BLHeli32, the parameters `music string` and `bpm` are required, whereas `semitone offset` is optional to transpose the entire melody up or down by the defined amount of semitones.
 
 For example, BLHeli32 melodies are available on [Rox Wolf's youtube channel](https://www.youtube.com/playlist?list=PL_O0XT_1mZinetucKyuBUvkju8P7DEg-v), some experimentation may be required though. :musical_note: To write your own melody, **[this (Sheet Music 101)](https://github.com/nseidle/AxelF_DoorBell/wiki/How-to-convert-sheet-music-into-an-Arduino-Sketch)** and **[this (BLHeli Piano)](https://dra6n.github.io/blhelikeyboard.github.io/)** are useful resources.

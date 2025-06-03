@@ -78,7 +78,7 @@ Enable advanced telemetry support. This option must be enabled on both **TX** an
 * FLIGHT_MODE
 * MSP_RESP
 
-!!! note 
+!!! note
     Increase the telemetry rate with the ExpressLRS Lua script. Increase the rate until the sensor lost warnings go away. It is normal to set it up to 1:16 with 200 Hz refresh rate.
 
 !!! note
@@ -89,7 +89,7 @@ Enable advanced telemetry support. This option must be enabled on both **TX** an
 ```
 -DUSE_500HZ
 ```
-This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have to give up 25Hz mode to add 500Hz mode. It requires [OpenTX 2.3.12 or Newer](https://www.open-tx.org/2021/06/14/opentx-2.3.12), [EdgeTX](https://github.com/EdgeTX/edgetx) or a Radio firmware that has CRSFShot or Mixer Sync. 
+This enables 500Hz mode for 2.4 GHz RXes and TXes. The drawback is that you have to give up 25Hz mode to add 500Hz mode. It requires [OpenTX 2.3.12 or Newer](https://www.open-tx.org/2021/06/14/opentx-2.3.12), [EdgeTX](https://github.com/EdgeTX/edgetx) or a Radio firmware that has CRSFShot or Mixer Sync.
 
 {++**REMOVED** 1.0.0-RC9, this option is now always enabled and in turn, 25Hz has been dropped/removed.++}
 
@@ -108,7 +108,7 @@ An option that adds faster initial syncing, by changing how long the receiver wa
 {++**REMOVED** 1.0.0-RC2 initial sync replaced with a full FHSS period wait++}
 
 ````
-#-DR9M_UNLOCK_HIGHER_POWER 
+#-DR9M_UNLOCK_HIGHER_POWER
 ````
 {++**REMOVED** 1.0.0-RC1 replaced with generic `-DUNLOCK_HIGHER_POWER`++}
 
@@ -124,7 +124,7 @@ NB This feature assumes that a low value of the arm switch is disarmed, and a hi
 ```
 #-DLOCK_ON_50HZ
 ```
-`LOCK_ON_50HZ` locks the RX at `50Hz` mode from the power-up. (Only recommended for long range, and partly redundant with the previous feature.) Merged in [Pull 143](https://github.com/AlessandroAU/ExpressLRS/pull/143)
+`LOCK_ON_50HZ` locks the RX at `50Hz` mode from the power-up. (Only recommended for long range, and partly redundant with the previous feature.) Merged in [Pull 143](https://github.com/ExpressLRS/ExpressLRS/pull/143)
 
 {++**REMOVED** 1.0.0-RC1 not sure why this was removed++}
 
