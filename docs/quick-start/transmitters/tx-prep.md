@@ -378,8 +378,10 @@ The new arming method called **Arming Mode Switch** utilizes a switch on an Edge
     <figure markdown>
     ![mixesAux Color](../../assets/images/armingSwitch02.png)
     </figure>
+
 5. Press the ++enter++ Key to apply your selection.
-7. Use the scroll-wheel and set your new arming switch. It can be any switch on the radio, a Logical Switch or any source.
+6. Use the scroll-wheel and set your new arming switch. It can be any switch on the radio, a Logical Switch or any source.
+
     <figure markdown>
     ![mixesAux Color](../../assets/images/armingSwitch03.png)
     </figure>
@@ -387,5 +389,6 @@ The new arming method called **Arming Mode Switch** utilizes a switch on an Edge
     <figure markdown>
     ![mixesAux Color](../../assets/images/armingSwitch04.png)
     </figure>
-8. Press the ++enter++ Key once more to set the switch.
-9. Press ++"RTN"++ Key once your done with your changes.
+
+7. Press the ++enter++ Key once more to set the switch.
+8. Press ++"RTN"++ Key once your done with your changes.
