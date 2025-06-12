@@ -357,7 +357,7 @@ The default arming method, via Channel 5 (Aux1), is the default, and still encou
 The new arming method called **Arming Mode Switch** utilizes a switch on an EdgeTX radio. This switch can either be tied into a channel or not. What this means is that your Channel 5 will be free for other functions, like controlling gains on your stabilizer, or changing flight modes, or as another full proportional channel when using any of the Full Resolution Modes.
 
 !!! Note "Arming Mode Switch Requirement"
-    Arming Mode Switch **requires** EdgeTX version 2.11 or newer. If you cannot find the "Arm using" option, that means you NEED to update your EdgeTX firmware.
+    Arming Mode Switch **requires** EdgeTX version 2.11 or newer and ExpressLRS version 4.0 or newer. If you cannot find the "Arm using" option, that means you NEED to update your EdgeTX firmware.
 
 #### How to set up Arming Mode Switch:
 
@@ -371,7 +371,21 @@ The new arming method called **Arming Mode Switch** utilizes a switch on an Edge
     - Colored screens provide separate pages for these.
     - On Monochrome screens, the options are all in one page. 
 4. Short-press the scroll-wheel button or press the ++enter++ Key and change the setting to "Switch"
+    <figure markdown>
+    ![mixesAux Color](../../assets/images/armingSwitch01.png)
+    </figure>
+
+    <figure markdown>
+    ![mixesAux Color](../../assets/images/armingSwitch02.png)
+    </figure>
 5. Press the ++enter++ Key to apply your selection.
 7. Use the scroll-wheel and set your new arming switch. It can be any switch on the radio, a Logical Switch or any source.
+    <figure markdown>
+    ![mixesAux Color](../../assets/images/armingSwitch03.png)
+    </figure>
+
+    <figure markdown>
+    ![mixesAux Color](../../assets/images/armingSwitch04.png)
+    </figure>
 8. Press the ++enter++ Key once more to set the switch.
 9. Press ++"RTN"++ Key once your done with your changes.
