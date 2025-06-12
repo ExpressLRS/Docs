@@ -347,3 +347,31 @@ By default, a fresh model does not have any Aux Channels configured (Aux channel
     <figure markdown>
     ![mixesAux Color](../../assets/images/txprep-clr-mixAux.jpg)
     </figure>
+
+### V4.0 Arming Options
+
+Starting with ExpressLRS v4.0, an additional Arming method is introduced. 
+
+The default arming method, via Channel 5 (Aux1), is the default, and still encouraged to be used by majority of FPV pilots using Betaflight, INAV or Ardupilot (and their respective derivatives like Emuflight, etc.). This will now be called **Arming Mode CH5**.
+
+The new arming method called **Arming Mode Switch** utilizes a switch on an EdgeTX radio. This switch can either be tied into a channel or not. What this means is that your Channel 5 will be free for other functions, like controlling gains on your stabilizer, or changing flight modes, or as another full proportional channel when using any of the Full Resolution Modes.
+
+!!! Note "Arming Mode Switch Requirement"
+    Arming Mode Switch **requires** EdgeTX version 2.11 or newer. If you cannot find the "Arm using" option, that means you NEED to update your EdgeTX firmware.
+
+#### How to set up Arming Mode Switch:
+
+1. Press the ++"MDL"++ Key.
+    - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
+    - Consult your Radio User's Manual on how to get to the Model Menu.
+2. Press the ++"PAGE"++ Key until you reach the Model Setup Page.
+    - On radios with Colored screens, this should be the first page when you activate the Model Menu.
+    - On radios with Monochrome screens, this should be the second page upon activating the Model Menu.
+3. Scroll down until you reach the Internal or External RF settings, depending on which module you want to use for this model.
+    - Colored screens provide separate pages for these.
+    - On Monochrome screens, the options are all in one page. 
+4. Short-press the scroll-wheel button or press the ++enter++ Key and change the setting to "Switch"
+5. Press the ++enter++ Key to apply your selection.
+7. Use the scroll-wheel and set your new arming switch. It can be any switch on the radio, a Logical Switch or any source.
+8. Press the ++enter++ Key once more to set the switch.
+9. Press ++"RTN"++ Key once your done with your changes.
