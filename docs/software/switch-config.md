@@ -6,7 +6,7 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 !!! warning "WARNING" 
-    **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
+    IF you're using Arming Mode CH5, **put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
 ## Summary of Switch Configuration Modes
 
@@ -47,7 +47,7 @@ This table summarizes the switch configuration modes, available channel switch p
 
 
 !!! warning "WARNING" 
-    **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
+    IF you're using Arming Mode CH5, **put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
 !!! note
     If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the WiFi interface of the receiver and map any of the other channels to PWM Output 5. Please always still use AUX1 for the 2-pos Arm switch.
