@@ -13,9 +13,9 @@ The `Init Rate` receiver Lua option was removed in ExpressLRS 3.4 in favor of au
 
 On boot, the receiver will listen for the Sync Packet starting with the fastest RF Mode or Packet Rate, down to the slowest, then cycles, until it finally Syncs and Binds.  The `Initialization Rate` controls the packet rate that the receiver will start checking for the Sync Packet which can allow for near-instant connection when the receiver is powered up.
 
-However, when the receiver is connected, it can not save its configuration without failsafing, which leads to a problem of how to store the connected rate as the Init Rate for use next power up. Unfortunately, this means you must failsafe the receiver once to configure its Init Rate.
+The Init Rate is stored when a connection is established starting in ExpressLRS 3.6 and no further steps are required. However, in ExpressLRS 3.4.x and 3.5.x, the Init Rate is instead stored when a connection ends and requires one of the extra steps below to lock in the Init Rate.
 
-### Setting Init Rate
+### Setting Init Rate (before ExpressLRS 3.6 only)
 
 #### Method 1: Switch To Rate
 
