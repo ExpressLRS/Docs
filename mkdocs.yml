@@ -325,6 +325,7 @@ nav:
       - Licenses: info/licenses.md
       - Terms & Conditions: info/terms-and-conditions.md
   - FAQ: faq.md
+  - Partners Program: partners-program.md
 
 extra_javascript:
   - assets/javascripts/binding-phrase.js
