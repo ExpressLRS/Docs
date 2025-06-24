@@ -1,4 +1,5 @@
-![Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/banner.png?raw=true)
+![Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/banner.png)
+
 
 <center>
 
@@ -42,4 +43,4 @@ docker compose up
 
 After server is running visit [http://localhost:8000/](http://localhost:8000/).
 
-![](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/community.png?raw=true)
+![](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/community.png)

@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-![Info Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/blob/master/img/information.png?raw=true)
+![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)
 
 
 Telemetry Burst describes the allocation of telemetry packets in ExpressLRS added in [#472](https://github.com/ExpressLRS/ExpressLRS/pull/472). There are two types of packets, LINK and DATA. LINK is the standard link statistics and is always available, and DATA is "Advanced Telemetry" which is telemetry coming from the flight controller and shares bandwidth with MSP transfers. Burst mode attempts to maintain a minimum rate of LINK packets and use the rest of the available telemetry slots for DATA.
