@@ -46,6 +46,7 @@ Anyone can add an entry to the table, and entries should include the:
     | 5.0            | 250              | 500           | Quad | No                     | ZoFPV         | [Link](https://youtu.be/JyNvywwi90s)                |
     | 4.6            | 50               | 25            | Quad | No                     | febbyeka      | [Link](https://youtu.be/jtiu6GdsKhA)                |
     | 3.5            | 150              | 25            | Quad | No                     | Iryl          | [Link](https://youtu.be/PfvmLjllbss)                |
+    | 2.5            | 50               | 50            | Quad | No                     | Chaser        | [Link](https://youtu.be/avQIyyBoAO4)                | 
 
 === "900 MHz Rankings"
     | Max Dist. (km) | Packet Rate (Hz) | TX Power (mW) | Type | Failsafe at Max Range? | Pilot Handle  | Link to DVR                          |
