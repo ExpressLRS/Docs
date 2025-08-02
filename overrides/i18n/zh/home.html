@@ -1,0 +1,92 @@
+{% extends "i18n/zh/main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %} {{ super() }}
+
+<!-- Additional styles for landing page -->
+<style>
+  /* Application header should be static for the landing page */
+  .md-header {
+    position: initial;
+  }
+
+  /* Remove spacing, as we cannot hide it completely */
+  .md-main__inner {
+    margin: 0;
+  }
+
+  /* Hide main content for now */
+  .md-content {
+    display: none;
+  }
+
+  /* Hide table of contents */
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+      display: none;
+    }
+  }
+
+  /* Hide navigation */
+  @media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+      display: none;
+    }
+  }
+</style>
+
+<!-- Hero for landing page -->
+<section class="mdx-container">
+  <div class="md-grid md-typeset">
+    <div class="mdx-hero">
+      <!-- Hero image -->
+      <div class="mdx-hero__image">
+        <img
+          src="../assets/images/drone_race.svg"
+          alt=""
+          width="1659"
+          height="1200"
+          draggable="false"
+        />
+      </div>
+
+      <!-- Hero content -->
+      <div class="mdx-hero__content">
+        <h1>开源的高性能遥控链路</h1>
+        <p>{{ config.site_description }}</p>
+        <a
+          href="quick-start/getting-started/"
+          title="{{ page.next_page.title | e }}"
+          class="md-button md-button--primary"
+          target="_self"
+        >
+          快速开始
+        </a>
+        <!-- db change: opens in same tab/window -->
+        <a
+          href="https://github.com/ExpressLRS/ExpressLRS-Configurator/releases/latest"
+          title="下载 ExpressLRS 地面站"
+          class="md-button"
+          target="_blank"
+        >
+          下载地面站
+        </a>
+        <a
+          href="https://expresslrs.github.io/web-flasher"
+          title="ExpressLRS 在线刷写"
+          class="md-button"
+          target="_blank"
+        >
+          在线刷写固件
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}{% endblock %}
