@@ -95,7 +95,7 @@ description: 在这里开始你的 ELRS 历程! 这是让你用 ELRS 飞起来�
 如果你有其他问题或疑虑，或者需要本指南未涵盖的进一步帮助，请加入我们的 Discord 频道！
 
 !!! warning "注意"
-    国内无法访问Discord
+    国内无法访问 Discord
 
 [ExpressLRS Discord :fontawesome-brands-discord:](https://discord.gg/dS6ReFY){ .md-button .md-button--primary .center-block }
 
