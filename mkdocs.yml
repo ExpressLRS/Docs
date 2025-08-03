@@ -163,7 +163,7 @@ plugins:
                   - 首飞之前: quick-start/pre-1stflight.md
                   - Ardupilot 设置: quick-start/ardupilot-setup.md
               - Troubleshooting: quick-start/troubleshooting.md
-              - Unbricking: quick-start/unbricking.md
+              - 救砖: quick-start/unbricking.md
           - 软件:
               - Obsolete Defines: software/obsolete-defines.md
               - OpenOCD for STLink: software/open-ocd.md
