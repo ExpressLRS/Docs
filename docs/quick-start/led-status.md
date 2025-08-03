@@ -1,71 +1,71 @@
 ---
-template: main.html
-description: The LEDs on both the ExpressLRS Receivers and Transmitter Modules are very helpful diagnostic tool in determining the current status of the device.
+template: i18n/zh/main.html
+description: ExpressLRS 接收机和发射端模块上的 LED 是非常有用的诊断工具，可以帮助你判断设备当前状态。
 ---
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-## Receiver/Transmitter LED Status
+## 接收机/发射端 LED 状态
 
-ExpressLRS uses the LED to communicate the status of the transmitter/receiver.
+ExpressLRS 使用 LED 指示发射端和接收机的工作状态。
 
-The conditions and status LED are as follows:
+不同状态下的 LED 指示如下：
 
-=== "Receiver Single Color LED"
-    |                                                                                         | LED Indication                  | Status                                                            |
-    |-----------------------------------------------------------------------------------------|---------------------------------|-------------------------------------------------------------------|
-    | ![CONNECTED](../assets/images/LED_ON.gif)                                               | Solid on                        | Connected to a transmitter, or bootloader mode enabled            |
-    | ![LEDSEQ_BINDING](../assets/images/LEDSEQ_BINDING_10_10_10_100.gif)                     | Double blink then pause         | Binding mode enabled                                              |
-    | ![LEDSEQ_DISCONNECTED](../assets/images/LEDSEQ_DISCONNECTED_50_50.gif)                  | Slow blink 500ms on/off         | Waiting for connection from transmitter                           |
-    | ![LEDSEQ_MODEL_MISMATCH](../assets/images/LEDSEQ_MODEL_MISMATCH_10_10_10_10_10_100.gif) | Triple blink then pause         | Connected to transmitter but mismatched model-match configuration |
-    | ![LEDSEQ_RADIO_FAILED](../assets/images/LEDSEQ_RADIO_FAILED_20_100.gif)                 | Medium speed blink 100ms on/off | Radio chip not detected                                           |
-    | ![LEDSEQ_WIFI_UPDATE](../assets/images/LEDSEQ_WIFI_UPDATE_2_3.gif)                      | Fast blinking 25ms on/off       | WiFi mode enabled                                                 |
+=== "接收机单色 LED"
+    |                                                                                         | LED 指示                      | 状态说明                                                         |
+    |-----------------------------------------------------------------------------------------|-------------------------------|-------------------------------------------------------------------|
+    | ![CONNECTED](../assets/images/LED_ON.gif)                                               | 常亮                          | 已连接到发射端，或处于 Bootloader 模式                            |
+    | ![LEDSEQ_BINDING](../assets/images/LEDSEQ_BINDING_10_10_10_100.gif)                     | 快速双闪后暂停                | 进入对频模式                                                      |
+    | ![LEDSEQ_DISCONNECTED](../assets/images/LEDSEQ_DISCONNECTED_50_50.gif)                  | 慢闪 500ms 开/关              | 等待与发射端连接                                                  |
+    | ![LEDSEQ_MODEL_MISMATCH](../assets/images/LEDSEQ_MODEL_MISMATCH_10_10_10_10_10_100.gif) | 三快闪后暂停                  | 已连接发射端但模型匹配参数不一致                                  |
+    | ![LEDSEQ_RADIO_FAILED](../assets/images/LEDSEQ_RADIO_FAILED_20_100.gif)                 | 中速闪烁 100ms 开/关          | 无法检测到射频芯片                                                |
+    | ![LEDSEQ_WIFI_UPDATE](../assets/images/LEDSEQ_WIFI_UPDATE_2_3.gif)                      | 快速闪烁 25ms 开/关           | 进入 WiFi 模式                                                    |
 
-=== "Receiver RGB LED"
-    |                                                                                     | LED Indication                 | Status                                                            |
-    |-------------------------------------------------------------------------------------|--------------------------------|-------------------------------------------------------------------|
-    | ![LEDRGB_STARTUP](../assets/images/LEDSEQRGB_STARTUP.gif)                           | Rainbow fade effect            | Starting Up                                                       |
-    | ![LEDRGB_WIFI_UPDATE](../assets/images/LEDSEQRGB_WIFI_UPDATE.gif)                   | Green heartbeat                | Web update mode enabled                                           |
-    | ![LEDRGB_WAITING_FOR_CONNECTION](../assets/images/LEDSEQRGB_WAITING_TO_CONNECT.gif) | Slow blink 500ms on/off        | Waiting for connection from transmitter                           |
-    | ![LEDRGB_RADIO_FAILED](../assets/images/LEDSEQRGB_RADIO_FAILED.gif)                 | Red flashing 100ms on/off      | Radio chip not detected                                           |
-    | ![LEDRGB_BINDING_ENABLED](../assets/images/LEDSEQRGB_BINDING.gif)                   | Orange Double blink then pause | Binding mode enabled                                              |
-    | ![LEDRGB_MODEL_MISMATCH](../assets/images/LEDSEQRGB_MODEL_MISMATCH.gif)             | Orange Triple blink then pause | Connected to transmitter but mismatched model-match configuration |
-    | ![LEDRGB_CONNECTED](../assets/images/LED_RGB_ON.png)                                | Solid single color             | Connected to a transmitter, color indicates packet rate           |
-    | ![BOOTLOADER_OR_OFF](../assets/images/LED_RGB_OFF.png)                              | No Light                       | Off or in Bootloader Mode                                         |
+=== "接收机 RGB LED"
+    |                                                                                     | LED 指示                      | 状态说明                                                         |
+    |-------------------------------------------------------------------------------------|-------------------------------|-------------------------------------------------------------------|
+    | ![LEDRGB_STARTUP](../assets/images/LEDSEQRGB_STARTUP.gif)                           | 彩虹渐变效果                  | 启动中                                                            |
+    | ![LEDRGB_WIFI_UPDATE](../assets/images/LEDSEQRGB_WIFI_UPDATE.gif)                   | 绿色心跳                      | 进入 Web 更新模式                                                 |
+    | ![LEDRGB_WAITING_FOR_CONNECTION](../assets/images/LEDSEQRGB_WAITING_TO_CONNECT.gif) | 慢闪 500ms 开/关              | 等待与发射端连接                                                  |
+    | ![LEDRGB_RADIO_FAILED](../assets/images/LEDSEQRGB_RADIO_FAILED.gif)                 | 红色快速闪烁 100ms 开/关      | 无法检测到射频芯片                                                |
+    | ![LEDRGB_BINDING_ENABLED](../assets/images/LEDSEQRGB_BINDING.gif)                   | 橙色双闪后暂停                | 进入对频模式                                                      |
+    | ![LEDRGB_MODEL_MISMATCH](../assets/images/LEDSEQRGB_MODEL_MISMATCH.gif)             | 橙色三闪后暂停                | 已连接发射端但模型匹配参数不一致                                  |
+    | ![LEDRGB_CONNECTED](../assets/images/LED_RGB_ON.png)                                | 单色常亮                      | 已连接到发射端，颜色表示包速率                                    |
+    | ![BOOTLOADER_OR_OFF](../assets/images/LED_RGB_OFF.png)                              | 熄灭                          | 关闭或处于 Bootloader 模式                                        |
 
-    | LED Color    | 2.4GHz Packet rate (Hz) | 915/868MHz Packet rate (Hz) |
-    |--------------|-------------------------|-----------------------------|
-    | Red          | F1000                   | 200                         |
-    | Yellow       | F500                    |                             |
-    | Yellow-Green | D500                    | 100 Full                    |
-    | Green        | D250                    | 100                         |
-    | Cyan         | 333 Full                |                             |
-    | Light Blue   | 500                     | 50                          |
-    | Blue         | 250                     | 25                          |
-    | Blue-Purple  | 150                     |                             |
-    | Purple       | 100 Full                | D50                         |
-    | Magenta      | 50                      |                             |
+    | LED 颜色      | 2.4GHz 包速率 (Hz) | 915/868MHz 包速率 (Hz) |
+    |---------------|--------------------|------------------------|
+    | 红色          | F1000              | 200                    |
+    | 黄色          | F500               |                        |
+    | 黄绿色        | D500               | 100 Full               |
+    | 绿色          | D250               | 100                    |
+    | 青色          | 333 Full           |                        |
+    | 浅蓝色        | 500                | 50                     |
+    | 蓝色          | 250                | 25                     |
+    | 蓝紫色        | 150                |                        |
+    | 紫色          | 100 Full           | D50                    |
+    | 品红色        | 50                 |                        |
     
-=== "Transmitter RGB LED"
-    | LED Indication                | Status                                                 |
-    |-------------------------------|--------------------------------------------------------|
-    | Rainbow fade effect           | Starting Up                                            |
-    | Green heartbeat               | Web update mode enabled                                |
-    | Blue heartbeat                | Bluetooth joystick enabled                             |
-    | Red flashing 100ms on/off     | Radio chip not detected                                |
-    | One Orange flash every second | No handset connection                                  |
-    | Solid single color            | Connected to receiver, color indicates packet rate     |
-    | Fading single color           | No connection to receiver, color indicates packet rate |
+=== "发射端 RGB LED"
+    | LED 指示                      | 状态说明                                                     |
+    |-------------------------------|--------------------------------------------------------------|
+    | 彩虹渐变效果                  | 启动中                                                        |
+    | 绿色心跳                      | 进入 Web 更新模式                                             |
+    | 蓝色心跳                      | 启用蓝牙摇杆                                                  |
+    | 红色快速闪烁 100ms 开/关      | 无法检测到射频芯片                                            |
+    | 每秒橙色闪烁一次              | 未连接遥控器                                                  |
+    | 单色常亮                      | 已连接接收机，颜色表示包速率                                  |
+    | 单色渐变                      | 未连接接收机，颜色表示包速率                                  |
 
-    | LED Color    | 2.4GHz Packet rate (Hz) | 915/868MHz Packet rate (Hz) |
-    |--------------|-------------------------|-----------------------------|
-    | Red          | F1000                   | 200                         |
-    | Yellow       | F500                    |                             |
-    | Yellow-Green | D500                    | 100 Full                    |
-    | Green        | D250                    | 100                         |
-    | Cyan         | 333 Full                |                             |
-    | Light Blue   | 500                     | 50                          |
-    | Blue         | 250                     | 25                          |
-    | Blue-Purple  | 150                     |                             |
-    | Purple       | 100 Full                | D50                         |
-    | Magenta      | 50                      |                             |
+    | LED 颜色      | 2.4GHz 包速率 (Hz) | 915/868MHz 包速率 (Hz) |
+    |---------------|--------------------|------------------------|
+    | 红色          | F1000              | 200                    |
+    | 黄色          | F500               |                        |
+    | 黄绿色        | D500               | 100 Full               |
+    | 绿色          | D250               | 100                    |
+    | 青色          | 333 Full           |                        |
+    | 浅蓝色        | 500                | 50                     |
+    | 蓝色          | 250                | 25                     |
+    | 蓝紫色        | 150                |                        |
+    | 紫色          | 100 Full           | D50                    |
+    | 品

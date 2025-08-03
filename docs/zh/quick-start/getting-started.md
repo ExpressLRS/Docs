@@ -1,21 +1,21 @@
 ---
-template: main.html
-description: 在这里开始你的ELRS历程! 这是让你用ELRS飞起来的最全面的指南
+template: i18n/zh/main.html
+description: 在这里开始你的 ELRS 历程! 这是让你用 ELRS 飞起来的最全面的指南
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
-!!! warning "Working In Progress"
+!!! attention "Working In Progress"
     中文翻译工作正在进行，部分内容尚未完成
 
 !!! warning "注意!"
-    ELRS团队与制造商紧密合作，负责审核和测试硬件。只有在测试通过后，才会为特定硬件添加ELRS地面站目标。
+    ELRS 团队与制造商紧密合作，负责审核和测试硬件。只有在测试通过后，才会为特定硬件添加 ELRS 地面站目标。
 
-    如果在ELRS地面站中找不到某个硬件，说明该硬件未通过要求，或者制造商选择不合作。在这种情况下，请联系制造商获取技术支持。
+    如果在 ELRS 地面站中找不到某个硬件，说明该硬件未通过要求，或者制造商选择不合作。在这种情况下，请联系制造商获取技术支持。
 
-    通用目标仅适用于预生产或DIY硬件。现成的硬件应使用专用的硬件目标。
+    通用目标仅适用于预生产或 DIY 硬件。现成的硬件应使用专用的硬件目标。
 
-    省流: 想支持开源就买在ELRS地面站里有的硬件
+    省流: 想支持开源就买在 ELRS 地面站里有的硬件
 
 ## 快速入门指南
 
@@ -23,11 +23,11 @@ description: 在这里开始你的ELRS历程! 这是让你用ELRS飞起来的最
 
 你需要熟悉你的遥控器系统(OpenTX/EdgeTX)以及模型设置，因为此指南主要涵盖如何设置你的遥控器以使用ELRS
     
-此外,你还需要熟悉飞控固件(Betaflight、INAV等)调参, 此指南只说明如何将ELRS接收机正确连接到飞控
+此外,你还需要熟悉飞控固件(Betaflight、INAV等)调参, 此指南只说明如何将 ELRS 接收机正确连接到飞控
 
 ### 我应该先做什么？
 
-你已经有了相关的ELRS硬件，无论是内置ELRS的新遥控器，还是一个外置的ELRS高频头又或者是到手飞套装，你该从哪里开始？
+你已经有了相关的 ELRS 硬件，无论是内置 ELRS 的新遥控器，还是一个外置的ELRS高频头又或者是到手飞套装，你该从哪里开始？
 
 我们的建议如下：
 
@@ -90,9 +90,9 @@ description: 在这里开始你的ELRS历程! 这是让你用ELRS飞起来的最
 
 <br clear="right">
 
-我们希望这些页面能帮助你快速上手ELRS，体验业界最优秀、最具创新性的遥控链路之一。
+我们希望这些页面能帮助你快速上手 ELRS ，体验业界最优秀、最具创新性的遥控链路之一。
 
-如果你有其他问题或疑虑，或者需要本指南未涵盖的进一步帮助，请加入我们的Discord频道！
+如果你有其他问题或疑虑，或者需要本指南未涵盖的进一步帮助，请加入我们的 Discord 频道！
 
 !!! warning "注意"
     国内无法访问Discord

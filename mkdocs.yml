@@ -90,8 +90,8 @@ plugins:
           - 快速开始:
               - 入门: quick-start/getting-started.md
               - 安装地面站: quick-start/installing-configurator.md
-              - Firmware Options: quick-start/firmware-options.md
-              - The Web UI: quick-start/webui.md
+              - 固件选项: quick-start/firmware-options.md
+              - WebUI: quick-start/webui.md
               - Transmitters:
                   - Radio Preparation: quick-start/transmitters/tx-prep.md
                   - Checking FW Version: quick-start/transmitters/firmware-version.md
@@ -159,9 +159,9 @@ plugins:
                       - DIY 2400RX: quick-start/receivers/diy2400.md
               - 烧录后:
                   - LED Status: quick-start/led-status.md
-                  - Binding ExpressLRS: quick-start/binding.md
+                  - 对频: quick-start/binding.md
                   - Before First Flight: quick-start/pre-1stflight.md
-                  - Ardupilot Setup: quick-start/ardupilot-setup.md
+                  - Ardupilot 设置: quick-start/ardupilot-setup.md
               - Troubleshooting: quick-start/troubleshooting.md
               - Unbricking: quick-start/unbricking.md
           - 软件:
