@@ -158,9 +158,9 @@ plugins:
                       - DIY 900RX: quick-start/receivers/diy900.md
                       - DIY 2400RX: quick-start/receivers/diy2400.md
               - 烧录后:
-                  - LED Status: quick-start/led-status.md
+                  - LED 状态: quick-start/led-status.md
                   - 对频: quick-start/binding.md
-                  - Before First Flight: quick-start/pre-1stflight.md
+                  - 首飞之前: quick-start/pre-1stflight.md
                   - Ardupilot 设置: quick-start/ardupilot-setup.md
               - Troubleshooting: quick-start/troubleshooting.md
               - Unbricking: quick-start/unbricking.md
