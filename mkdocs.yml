@@ -125,7 +125,7 @@ plugins:
                       - DIY 2400TX: quick-start/transmitters/diy2400.md
                   - The ExpressLRS Lua Script: quick-start/transmitters/lua-howto.md
               - 接收机:
-                  - Receiver Wiring: quick-start/receivers/wiring-up.md
+                  - 接收机接线: quick-start/receivers/wiring-up.md
                   - Configuring FC: quick-start/receivers/configuring-fc.md
                   - Checking FW Version: quick-start/receivers/firmware-version.md
                   - Typical Updating Steps: quick-start/receivers/updating.md
