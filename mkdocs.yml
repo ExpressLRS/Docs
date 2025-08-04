@@ -127,7 +127,7 @@ plugins:
               - 接收机:
                   - 接收机接线: quick-start/receivers/wiring-up.md
                   - 飞控配置: quick-start/receivers/configuring-fc.md
-                  - Checking FW Version: quick-start/receivers/firmware-version.md
+                  - 检查固件版本: quick-start/receivers/firmware-version.md
                   - Typical Updating Steps: quick-start/receivers/updating.md
                   - Updating Receivers:
                       - Axisflying Thor: quick-start/receivers/axisflying-thor.md
