@@ -16,10 +16,10 @@ ExpressLRS 使用 LED 指示发射端和接收机的工作状态。
     |-----------------------------------------------------------------------------------------|-------------------------------|-------------------------------------------------------------------|
     | ![CONNECTED](../assets/images/LED_ON.gif)                                               | 常亮                          | 已连接到发射端，或处于 Bootloader 模式                            |
     | ![LEDSEQ_BINDING](../assets/images/LEDSEQ_BINDING_10_10_10_100.gif)                     | 快速双闪后暂停                | 进入对频模式                                                      |
-    | ![LEDSEQ_DISCONNECTED](../assets/images/LEDSEQ_DISCONNECTED_50_50.gif)                  | 每500ms闪烁一次              | 等待与发射端连接                                                  |
+    | ![LEDSEQ_DISCONNECTED](../assets/images/LEDSEQ_DISCONNECTED_50_50.gif)                  |  慢闪(500ms)              | 等待与发射端连接                                                  |
     | ![LEDSEQ_MODEL_MISMATCH](../assets/images/LEDSEQ_MODEL_MISMATCH_10_10_10_10_10_100.gif) | 三次快闪后暂停                  | 已连接发射端但模型匹配参数不一致                                  |
-    | ![LEDSEQ_RADIO_FAILED](../assets/images/LEDSEQ_RADIO_FAILED_20_100.gif)                 | 每100ms闪烁一次                  | 无法检测到射频芯片                                                |
-    | ![LEDSEQ_WIFI_UPDATE](../assets/images/LEDSEQ_WIFI_UPDATE_2_3.gif)                      | 每25ms闪烁一次              | 进入 WiFi 模式                                                    |
+    | ![LEDSEQ_RADIO_FAILED](../assets/images/LEDSEQ_RADIO_FAILED_20_100.gif)                 | 闪烁(100ms)                  | 无法检测到射频芯片                                                |
+    | ![LEDSEQ_WIFI_UPDATE](../assets/images/LEDSEQ_WIFI_UPDATE_2_3.gif)                      | 快闪(25ms)              | 进入 WiFi 模式                                                    |
 
 === "接收机 RGB LED"
     |                                                                                     | LED 指示                      | 状态说明                                                         |
@@ -52,8 +52,8 @@ ExpressLRS 使用 LED 指示发射端和接收机的工作状态。
     | 彩虹渐变效果                  | 启动中                                                        |
     | 绿色闪烁                      | 进入 Web 更新模式                                             |
     | 蓝色闪烁                      | 启用蓝牙摇杆                                                  |
-    | 红色 每100ms闪烁一次          | 无法检测到射频芯片                                            |
-    | 橙色 每秒闪烁一次              | 未连接遥控器                                                  |
+    | 红色闪烁(100ms)          | 无法检测到射频芯片                                            |
+    | 橙色(1000ms)              | 未连接遥控器                                                  |
     | 单色常亮                      | 已连接接收机，颜色表示包速率                                  |
     | 单色渐变                      | 未连接接收机，颜色表示包速率                                  |
 
