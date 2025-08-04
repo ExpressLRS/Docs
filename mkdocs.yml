@@ -92,8 +92,8 @@ plugins:
               - 安装地面站: quick-start/installing-configurator.md
               - 固件选项: quick-start/firmware-options.md
               - WebUI: quick-start/webui.md
-              - Transmitters:
-                  - Radio Preparation: quick-start/transmitters/tx-prep.md
+              - 高频头:
+                  - 设置遥控器: quick-start/transmitters/tx-prep.md
                   - Checking FW Version: quick-start/transmitters/firmware-version.md
                   - Typical Updating Steps: quick-start/transmitters/updating.md
                   - Updating Transmitters:
