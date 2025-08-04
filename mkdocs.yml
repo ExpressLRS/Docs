@@ -94,7 +94,7 @@ plugins:
               - WebUI: quick-start/webui.md
               - 高频头:
                   - 设置遥控器: quick-start/transmitters/tx-prep.md
-                  - Checking FW Version: quick-start/transmitters/firmware-version.md
+                  - 检查固件版本: quick-start/transmitters/firmware-version.md
                   - Typical Updating Steps: quick-start/transmitters/updating.md
                   - Updating Transmitters:
                       - Axisflying Thor: quick-start/transmitters/axisflying-thor.md
