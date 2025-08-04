@@ -6,7 +6,7 @@ description: 连接你的 ExpressLRS 接收机到飞控吧！
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)
 
 !!! tip "实用提示"
-    有些厂家推荐的接收机 UART，或者专门分配给接收机的 UART，通常带有下拉电阻以适配 SBUS（RX 焊盘反转），这会导致 ESP 系列 ExpressLRS 接收机 LED 常亮。除非你了解 UART 原理，否则建议避免使用这些 UART。
+    有些飞控厂家推荐的接收机 UART，或者专门分配给接收机的 UART，通常带有下拉电阻以适配 SBUS（RX 焊盘反转），这会导致 ESP 系列 ExpressLRS 接收机 LED 常亮。除非你了解 UART 原理，否则建议避免使用这些 UART。
 
 !!! tip "小提示"
     KISS 飞控的 UART 命名可能不同。你可能需要将 RX 引脚接到 RX 焊盘，TX 引脚接到 TX 焊盘。务必查阅你的飞控接线图或说明书。

@@ -58,11 +58,11 @@ description: 什么是性能测试？如何设置 Aux1 解锁？OSD 上的 RSSI 
 上图是性能测试，用于判断你的遥控信号是否正常。这可以帮助你检查天线（尤其是 R9 的 Super 8）或硬件是否有问题。
 
 - 用 Lua 脚本将 ExpressLRS 模块设为最低功率，包速率无所谓。
-- 遥控器距离接收机 1 米（3 英尺），通电。确保接收机和 TX 模块天线方向一致。（建议暂时断开 VTX/图传，或让 VTX 进入 pit 模式，或用风扇吹散热）。
+- 遥控器距离接收机 1 米（3 英尺），通电。确保接收机和 TX 模块天线方向一致。（建议暂时断开图传，或让图传进入 PIT(低功耗) 模式，也可以用风扇吹着）。
 - 用 OSD 或遥控器的 Telemetry 页面，记录 RSSI dBm 或 1RSS 遥测数据。
 
 如果是 900MHz 硬件，-20dBm 左右说明硬件正常  
-如果是 2.4GHz 硬件，-40dBm 到 -25dBm 都可以。  
+如果是 2.4GHz 硬件，-40dBm ~ -25dBm 正常。  
 如果数值比这些低（越接近 0 越好），请检查：
 
 - ExpressLRS 模块天线是否松动。有些 3D 打印模块壳体太厚，RP-SMA/SMA 接头拧不紧，建议拧紧螺母。
@@ -79,7 +79,7 @@ description: 什么是性能测试？如何设置 Aux1 解锁？OSD 上的 RSSI 
 <figcaption>Super8 天线常见故障点</figcaption>
 </figure>
 
-- 检查接收机是否有缺失元件，比如 RF 滤波器（在天线或 UFL 附近），也要检查 SMD 天线是否损坏或焊接良好。
+- 检查接收机是否有缺失元件，比如 RF 滤波器（在天线或 UFL 接口附近），也要检查 SMD 天线是否损坏或焊接良好。
 
 <figure markdown>
 ![missing filter](../assets/images/missingfilter.png)
@@ -88,13 +88,13 @@ description: 什么是性能测试？如何设置 Aux1 解锁？OSD 上的 RSSI 
 - 大多数 DIY 模块需要把 E28 上的 0 欧姆电阻从 PCB 天线侧移到 UFL 侧。也可以用焊桥，但要确保焊在正确的焊盘上。
 - 换接收机或 TX 模块的天线；大多数 ExpressLRS 接收机用 IPEX 1/UFL 接头，只要天线频率合适就能用。2.4GHz 模块可以用旧 WiFi 路由器天线，但不要用双频天线。注意天线接头类型（R9 模块用 RP-SMA，大多数 ExpressLRS 模块用 SMA）。
 
-## Blackbox
+## 黑匣子
 
-Blackbox 可以用来评估飞行时射频链路性能。将 BB 设置为 debug 模式 `RC_SMOOTHING_RATE`，可记录 Betaflight 从接收机收到 RC 包的速率。
+黑匣子可以用来评估飞行时射频链路性能。将黑匣子设置为 debug 模式 `RC_SMOOTHING_RATE`，可记录 Betaflight 从接收机收到 RC 包的速率。
 
 ## 遥测
 
-接收机会转发飞控发来的部分遥测数据。禁用某些消息只在飞控固件支持时有效。Betaflight 可用如下 CLI 设置禁用遥测项：
+接收机会转发飞控发来的部分遥测数据。禁用某些遥测数据只在飞控固件支持时有效。Betaflight 可用如下 CLI 设置禁用遥测项：
 
 ```
 # 禁用姿态遥测
@@ -126,7 +126,7 @@ set telemetry_disabled_mode = ON
 !!! hint "[ ] 方括号指示"
     如果某行不变且名称为方括号，说明该传感器长时间未更新。
 
-RSSI 和链路质量等首行数值应始终更新（星号闪烁）。如果每秒没有多次更新，遥控器会发出 "telemetry warning"。为避免警告，可用 TLM_REPORT_INTERVAL_MS 设置。
+RSSI 和链路质量等首行数值应始终更新（星号闪烁）。如果每秒没有多次更新，遥控器会发出 "telemetry warning"(中文语音为"传感器丢失")。为避免警告，可用 TLM_REPORT_INTERVAL_MS 设置。
 
 效果如下（如果不是这样，说明设置有问题）：
 
@@ -140,7 +140,7 @@ RSSI 和链路质量等首行数值应始终更新（星号闪烁）。如果每
 ![Slow update rate](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/slow.gif)
 </figure>
 
-如果用 200Hz 和 1:2 遥测比率，星号几乎不闪，因为更新太快：
+如果用 200Hz 和 1:2 遥测比率，因为更新得太快，星号几乎不闪：
 
 <figure markdown>
 ![Fast update rate](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/fast.gif)

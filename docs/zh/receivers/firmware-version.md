@@ -164,7 +164,7 @@ description: 了解你的 ExpressLRS 接收机固件版本。
     版本号的第一个数字必须在高频头和接收机之间一致。
     例如：
 
-    - 接收机版本为 3.1.2，可以与发高频头固件版本 3.0.1 对频
+    - 接收机版本为 3.1.2，可以与高频头固件版本 3.0.1 对频
     - 接收机版本为 3.2.0，**不能**与高频头固件版本 2.4.0 对频
 
 最新 ExpressLRS 固件版本请查阅 [GitHub Releases 页面](https://github.com/ExpressLRS/ExpressLRS/releases)
