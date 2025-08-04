@@ -155,7 +155,7 @@ ExpressLRS Web UI 是 ExpressLRS 生态系统的重要组成部分。在项目�
                 ![Lua Running]
                 </figure> 
 
-                - 如果卡在 "Loading..."，请返回[遥控器准备](./transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
+                - 如果卡在 "Loading..."，请返回[设置遥控器](./transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
                 - 右上角应有 C，表示发射端和接收机已连接。
             5. 下拉选择 `Wifi Connectivity` 并按 ++enter++。
             6. 选择 `Enable RX WiFi` 并按 ++enter++。
@@ -247,7 +247,7 @@ ExpressLRS Web UI 是 ExpressLRS 生态系统的重要组成部分。在项目�
                 ![Lua Running]
                 </figure> 
 
-                - 如果卡在 "Loading..."，请返回[遥控器准备](./transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
+                - 如果卡在 "Loading..."，请返回[设置遥控器](./transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
             4. 下拉选择 `Wifi Connectivity` 并按 ++enter++。
             5. 选择 `Enable WiFi` 并按 ++enter++。
 

@@ -52,7 +52,7 @@ description: 了解你的 ExpressLRS 接收机固件版本。
                 ![Lua Running]
                 </figure>
 
-                - 如果脚本卡在 "Loading..."，请返回[遥控器准备](../transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
+                - 如果脚本卡在 "Loading..."，请返回[设置遥控器](../transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
             4. 下拉选择 `Wifi Connectivity` 并按 ++enter++。
             5. 选择 `Enable RX WiFi` 并按 ++enter++。
 
@@ -132,7 +132,7 @@ description: 了解你的 ExpressLRS 接收机固件版本。
         ![Lua Running]
         </figure>
 
-        - 如果脚本卡在 "Loading..."，请返回[遥控器准备](../transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
+        - 如果脚本卡在 "Loading..."，请返回[设置遥控器](../transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
 
     4. 下拉到页面底部，选择 `Other Devices`。
 

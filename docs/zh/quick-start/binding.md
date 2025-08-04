@@ -171,7 +171,7 @@ Lua 脚本或 WebUI 可设置对频信息为易失性（volatile），即只在�
     ![Lua Running]
     </figure> 
 
-    - 如果脚本卡在 "Loading..."，请返回[遥控器准备](transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
+    - 如果脚本卡在 "Loading..."，请返回[设置遥控器](transmitters/tx-prep.md)页面，确保已正确配置 ExpressLRS。
 
 
 4. 屏幕右上角出现 `C`，表示发射端和接收机已连接。
