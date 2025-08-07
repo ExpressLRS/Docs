@@ -486,14 +486,24 @@ template: main.html
         !!! warning "Handle with Care"
             There are wires connecting the module to the main board of the radio, along with battery leads. Do not yank out the back cover of the radio from its front half. You don't need to disconnect the wires from the mainboard.
 
-    2. Disconnect the internal module from the mainboard of the radio. The pin-out is as follows: 
-        - White wire is the RX.
-        - Yellow wire is the TX.
-        - Red wire is the 5v pin.
-        - The Black wire is the Gnd pin.
+    2. Disconnect the internal module from the mainboard of the radio. Identify which version of board do you have. The pin-out is different:
+        - T-PRO-ELRS-1W (for older versions of t-pro)
+            - White wire is the RX.
+            - Yellow wire is the TX.
+            - Red wire is the 5v pin.
+            - The Black wire is the Gnd pin.
 
         <figure markdown>
         ![tPro duplex](../../assets/images/tproUART.jpg)
+        </figure>
+
+        - T-PRO-ELRS-1W-V2.0 (for newer versions)
+            - First pin is the TX.
+            - Second pin is the RX.
+            - Third pin is the 5v pin.
+            - Fourth pin is the Gnd pin.
+        <figure markdown>
+        ![tPro duplex v2.0](../../assets/images/tproUART-v2.0.jpg)
         </figure>
 
     3. Connect these four wires into your FTDI dongle or a USB to Serial Adapter: RX pin into the TX pin; TX pin into the RX pin; 5v to 5v, and Gnd to Gnd.
