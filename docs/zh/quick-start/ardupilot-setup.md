@@ -18,7 +18,7 @@ ELRS的包速率与 ArduPilot 的 CRSF 包速率不同，ArduPilot 会持续报�
 ```
 在 RC_OPTIONS 中勾选"Suppress CRSF mode/rate message for ELRS systems".
 ```
-建议开启 RC_OPTIONS 中的"Use 420kbaud for ELRS protocol"，这样会让接收机与飞控使用 420K 的波特率通信
+建议开启 RC_OPTIONS 中的"Use 420kbaud for ELRS protocol"，这样会让飞控与接收机使用 420K 的波特率通信
 
 
 <figure markdown>
@@ -51,6 +51,6 @@ RSSI_TYPE = 3 (ReceiverProtocol)
 然后进入 OSD 选项卡，将 RSSI 和 LQ 元素放置在你想要的位置。
 
 如果你感觉控制有延迟或卡顿，请检查接收机与飞控的连接。
-部分飞控需要使用支持全 DMA 的输入引脚。
+部分飞控还需要使用支持 DMA 的 UART
 
 祝你飞行愉快！ :airplane:

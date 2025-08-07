@@ -5,7 +5,7 @@ description: ELRS地面站极大提升了ELRS的易用性，是让你的ELRS设�
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
 
-刷写ELRS有两种方式：
+刷写 ELRS 有两种方式：
 
 1. [ELRS 地面站](https://github.com/ExpressLRS/ExpressLRS-Configurator/releases) (**推荐**)
 2. [开发工具链](../software/toolchain-install.md) (仅限于高级用户) 

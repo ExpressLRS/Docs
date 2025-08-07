@@ -7,21 +7,21 @@ description: 按照本指南为你的飞控配置 ExpressLRS。
 
 ## 串口接收机设置
 
-当你已经完成[接收机接线](wiring-up.md)后，需要在飞控配置工具的 Ports（端口）标签页为接收机所在 UART 启用 Serial RX（串口接收机）。
+当你已经完成[接收机接线](wiring-up.md)后，需要在飞控配置工具的 Ports（端口）标签页为接收机所在 UART 启用 Serial RX（串行数字接收机）。
 
-如下例，接收机接在 UART1（TX1 和 RX1 焊盘），则应在 Ports 标签页的 UART1 行勾选 Serial RX。
+如下例，接收机接在 UART1（TX1 和 RX1 焊盘），则应在 Ports 标签页的 UART1 行勾选 Serial RX（串行数字接收机）。
 
 !!! note "注意"
     这只是示例。请根据你接收机的实际接线情况设置端口。
 
 <figure markdown>
 ![Ports Tab](../../assets/images/PortsTab.png)
-<figcaption>Betaflight 串口接收机端口设置示例</figcaption>
+<figcaption>Betaflight 串口设置示例</figcaption>
 </figure>
 
 <figure markdown>
 ![INAV Ports](../../assets/images/FC-portsconfig-INAV.png)
-<figcaption>INAV 串口接收机端口设置示例</figcaption>
+<figcaption>INAV 串口设置示例</figcaption>
 </figure>
 
 ## 串口接收机协议

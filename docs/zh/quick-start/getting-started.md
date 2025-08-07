@@ -42,7 +42,7 @@ description: 在这里开始你的 ELRS 历程! 这是让你用 ELRS 飞起来�
     3. [检查接收机版本](receivers/firmware-version.md)
     4. [更新接收机固件](receivers/updating.md)
 
-弄完了之后，你可以继续以下步骤:
+完成以上操作了之后，你可以继续以下步骤:
 
 - [对频](binding.md)
 - [性能测试](pre-1stflight.md#性能测试)
