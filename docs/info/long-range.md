@@ -38,6 +38,7 @@ Anyone can add an entry to the table, and entries should include the:
     | 20.0           | 150              | 100           | Wing | Yes                    | Pairan        | [Link](https://youtu.be/B9-AItJ9WS0)                |
     | 18.9           | 150              | 50            | Wing | yes                    | TitanDynamics | [Link](https://youtu.be/LPDKBW9XNKM)                |
     | 17.1           | 50               | 10            | Wing | No                     | Denks         | [Link](https://youtu.be/VEkl7GaNszs)                |
+    | 13.2           | 150              | 500           | Quad | No                     | FelipeCris    | [Link](https://youtu.be/kLlY8maZRrQ)                |
     | 12.2           | 500              | 250           | Wing | No                     | Börner        | [Link](https://youtu.be/GUUngM6NcAg)                |
     | 10.2           | 500              | 10            | Quad | Yes                    | mrscythe      | [Link](https://youtu.be/IpiPEZrCGtg)                |
     | 10.0           | 50               | 250           | Quad | No                     | Disnator      | [Link](https://youtu.be/p6USo0VsLag)                |
