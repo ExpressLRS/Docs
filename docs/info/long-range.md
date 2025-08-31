@@ -53,6 +53,7 @@ Anyone can add an entry to the table, and entries should include the:
     |----------------|------------------|---------------|------|------------------------|---------------|--------------------------------------|
     | 50.1           | 25               | 500           | Wing | No                     | Yarillo       | [Link](https://youtu.be/EJeTSvX5jrA) |
     | 40.7           | 50               | 10            | Wing | No                     | Leslie Yagin  | [Link](https://youtu.be/HRqTklpWDIM) |
+    | 16.1           | 50               | 250           | Quad | No                     | heggyfpv      | [Link](https://youtu.be/Bnn1VuwmEgQ) |
     | 13.1           | 50               | 100           | Quad | No                     | Taufik        | [Link](https://youtu.be/Thrz9QuZGWE) |
     | 10.0           | 100              | 100           | Wing | No                     | Flight Cub    | [Link](https://youtu.be/fg4MxRdKryU) |
     | 6.0            | 100              | 50            | Wing | No                     | Snipes        | [Link](https://youtu.be/kN89mINbmQc) |
