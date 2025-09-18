@@ -326,6 +326,7 @@ nav:
       - Terms & Conditions: info/terms-and-conditions.md
   - FAQ: faq.md
   - Partners Program: partners-program.md
+  - Contact Us: contact-us.md
 
 extra_javascript:
   - assets/javascripts/binding-phrase.js
