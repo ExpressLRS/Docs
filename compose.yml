@@ -2,6 +2,7 @@ services:
   docs:
     build:
       context: .
+      dockerfile: Dockerfile
     dns_search: ''
     networks:
       - net

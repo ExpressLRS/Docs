@@ -1,4 +1,4 @@
-FROM squidfunk/mkdocs-material:9.6.14
+FROM squidfunk/mkdocs-material:9.6.19
 RUN apk add \
     build-base \
     libxml2-dev \
