@@ -33,7 +33,7 @@ our [Partners Program](/partners-program) and join our growing ecosystem.
 
 For questions, troubleshooting, or just to connect with fellow enthusiasts, join our vibrant community:
 
-- **Discord:** [https://discord.gg/dS6ReFY](https://discord.gg/dS6ReFY)
-- **Facebook Group:** [https://www.facebook.com/groups/636441730280366](https://www.facebook.com/groups/636441730280366)
-- **Twitter:** [https://twitter.com/expresslrs](https://twitter.com/expresslrs)
-- **Instagram:** [https://instagram.com/expresslrs](https://instagram.com/expresslrs)
+- [Discord](https://discord.gg/dS6ReFY)
+- [Facebook Group](https://www.facebook.com/groups/636441730280366)
+- [Twitter](https://twitter.com/expresslrs)
+- [Instagram](https://instagram.com/expresslrs)
