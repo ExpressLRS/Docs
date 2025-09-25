@@ -16,3 +16,8 @@ the next steps. We’ll work with you throughout the process to ensure a smooth 
 support.
 
 Let’s build something great together.
+
+## Press Kit
+
+For media or promotional purposes, our **open-source press kit** with logos and branding assets is available here:  
+**[ExpressLRS Press Kit](press-kit.md)**

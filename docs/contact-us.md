@@ -25,7 +25,7 @@ We’d love to hear from you! For general inquiries, reach out to us at:
 ## Partnerships
 
 Are you a manufacturer interested in developing **ExpressLRS-compatible hardware**? Learn more about
-our [Partners Program](/partners-program) and join our growing ecosystem.
+our [Partners Program](partners-program.md) and join our growing ecosystem.
 
 ---
 
@@ -37,3 +37,10 @@ For questions, troubleshooting, or just to connect with fellow enthusiasts, join
 - [Facebook Group](https://www.facebook.com/groups/636441730280366)
 - [Twitter](https://twitter.com/expresslrs)
 - [Instagram](https://instagram.com/expresslrs)
+
+---
+
+## Press Kit
+
+For media or promotional purposes, our **open-source press kit** with logos and branding assets is available here:  
+**[ExpressLRS Press Kit](press-kit.md)**
