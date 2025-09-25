@@ -78,6 +78,148 @@ plugins:
         name: English
         build: true
         default: true
+      - locale: zh # zh: 简体中文 zh-Hant: 繁体中文  注意: 在 mkdocs 中没有 zh-CN 这个说法！
+        name: 中文（简体）
+        build: true
+        site_description:  >-
+          ExpressLRS 致力于提供完全开源的高刷新率的遥控链路，
+          同时在该刷新率下保持最大的通信距离以及较低的延迟，
+          ELRS 在 900 MHz 与 2.4 GHz 频段均提供广泛的硬件支持。
+        nav:
+          - 主页: index.md
+          - 快速开始:
+              - 入门: quick-start/getting-started.md
+              - 安装地面站: quick-start/installing-configurator.md
+              - 固件选项: quick-start/firmware-options.md
+              - WebUI: quick-start/webui.md
+              - 高频头:
+                  - 设置遥控器: quick-start/transmitters/tx-prep.md
+                  - 检查固件版本: quick-start/transmitters/firmware-version.md
+                  - Typical Updating Steps: quick-start/transmitters/updating.md
+                  - Updating Transmitters:
+                      - Axisflying Thor: quick-start/transmitters/axisflying-thor.md
+                      - BetaFPV 2.4GHz: quick-start/transmitters/betafpv2400.md
+                      - BetaFPV 900MHz: quick-start/transmitters/betafpv900.md
+                      - BetaFPV LR3 Pro: quick-start/transmitters/betafpvlr3pro.md
+                      - EMAX 2.4GHz: quick-start/transmitters/emax2400.md
+                      - EMAX 900MHz: quick-start/transmitters/emax900.md
+                      - Frsky R9 Modules: quick-start/transmitters/frsky-r9modules.md
+                      - Happymodel ES24TX: quick-start/transmitters/es24tx.md
+                      - Happymodel ES900TX: quick-start/transmitters/es900tx.md
+                      - HGLRC Hermes: quick-start/transmitters/hglrc-hermes.md
+                      - iFlight Commando: quick-start/transmitters/iflight-commando.md
+                      - IMRC Ghost: quick-start/transmitters/ghost2400.md
+                      - Internal RadioMaster: quick-start/transmitters/rm-internal.md
+                      - Internal Jumper T-Pro: quick-start/transmitters/aion-internal.md
+                      - Internal Jumper TLite V2: quick-start/transmitters/jumper-internal.md
+                      - Internal Jumper T14/T15: quick-start/transmitters/jumper-t14-t15-internal.md
+                      - Internal Jumper T20: quick-start/transmitters/jumper-t20-internal.md
+                      - Jumper Aion Nano: quick-start/transmitters/jumper-aion.md
+                      - NamimnoRC Flash: quick-start/transmitters/flash2400.md
+                      - NamimnoRC Voyager: quick-start/transmitters/voyager900.md
+                      - Radiomaster Bandit: quick-start/transmitters/rm-bandit.md
+                      - Radiomaster Ranger: quick-start/transmitters/rm-ranger.md
+                      - Siyi FM30: quick-start/transmitters/siyifm30.md
+                      - Vantac Lite: quick-start/transmitters/vantac-lite.md
+                      - DIY 900TX: quick-start/transmitters/diy900.md
+                      - DIY 2400TX: quick-start/transmitters/diy2400.md
+                  - The ExpressLRS Lua Script: quick-start/transmitters/lua-howto.md
+              - 接收机:
+                  - 接收机接线: quick-start/receivers/wiring-up.md
+                  - 飞控配置: quick-start/receivers/configuring-fc.md
+                  - 检查固件版本: quick-start/receivers/firmware-version.md
+                  - Typical Updating Steps: quick-start/receivers/updating.md
+                  - Updating Receivers:
+                      - Axisflying Thor: quick-start/receivers/axisflying-thor.md
+                      - BetaFPV Lite/Nano/AIO 2.4GHz: quick-start/receivers/betafpv2400.md
+                      - BetaFPV Nano 900MHz: quick-start/receivers/betafpv900.md
+                      - BetaFPV SuperD 2.4GHz: quick-start/receivers/betafpv-superd.md
+                      - BetaFPV SuperD 900MHz: quick-start/receivers/betafpv-superd900.md
+                      - Foxeer LNA & Lite 2.4GHz: quick-start/receivers/foxeer2400.md
+                      - Frsky R9: quick-start/receivers/r9.md
+                      - GEPRC Nano & Dual 2.4GHz: quick-start/receivers/geprc2400.md
+                      - GEPRC Nano & Dual 900MHz: quick-start/receivers/geprc900.md
+                      - Happymodel EP: quick-start/receivers/hmep2400.md
+                      - Happymodel PP: quick-start/receivers/hmpp2400.md
+                      - Happymodel ES900RX: quick-start/receivers/hmes900.md
+                      - HGLRC Hermes 2.4GHz: quick-start/receivers/hglrc-hermes2400.md
+                      - HGLRC Hermes 900MHz: quick-start/receivers/hglrc-hermes900.md
+                      - iFlight 2.4GHz: quick-start/receivers/iflight2400.md
+                      - iFlight 900MHz: quick-start/receivers/iflight900.md
+                      - IMRC Ghost: quick-start/receivers/ghost2400.md
+                      - Jumper Aion Nano: quick-start/receivers/jumper-aion.md
+                      - Jumper R9 Mini: quick-start/receivers/jumper900.md
+                      - Matek R24: quick-start/receivers/matek2400.md
+                      - NamimnoRC Flash: quick-start/receivers/flash2400.md
+                      - NamimnoRC Voyager: quick-start/receivers/voyager900.md
+                      - RadioMaster RP: quick-start/receivers/radiomaster-rp-2400.md
+                      - Siyi FR Mini: quick-start/receivers/siyiFRmini.md
+                      - Vantac: quick-start/receivers/vantac2400.md
+                      - DIY 900RX: quick-start/receivers/diy900.md
+                      - DIY 2400RX: quick-start/receivers/diy2400.md
+              - 烧录后:
+                  - LED 状态: quick-start/led-status.md
+                  - 对频: quick-start/binding.md
+                  - 首飞之前: quick-start/pre-1stflight.md
+                  - Ardupilot 设置: quick-start/ardupilot-setup.md
+              - Troubleshooting: quick-start/troubleshooting.md
+              - 救砖: quick-start/unbricking.md
+          - 软件:
+              - Obsolete Defines: software/obsolete-defines.md
+              - OpenOCD for STLink: software/open-ocd.md
+              - PIO STLink Fix: software/stlink-fix.md
+              - Switch Configs: software/switch-config.md
+              - Toolchain Setup: software/toolchain-install.md
+              - User Defines: software/user-defines.md
+              - Updating:
+                  - Betaflight Passthrough: software/updating/betaflight-passthrough.md
+                  - Wifi Updating: software/updating/wifi-updating.md
+              - Features:
+                  - AirPort: software/airport.md
+                  - Dynamic Transmit Power: software/dynamic-transmit-power.md
+                  - Gemini: software/gemini.md
+                  - Loan Model: software/loan-model.md
+                  - MAVLink: software/mavlink.md
+                  - MFD Crossbow Tracker Integration: software/mfd-crossbow.md
+                  - Model Matching: software/model-config-match.md
+                  - Receiver Serial Protocols: software/serial-protocols.md
+                  - Sentinel Tracker Integration: software/backpack-telemetry.md
+                  - Serial VTX: software/serialvtx.md
+                  - Team Racing: software/teamracing.md
+              - Testing:
+                  - CRC Testing: software/testing/crc-testing.md
+                  - RX Testing: software/testing/rx-scoreboard.md
+                  - Unit Testing: software/testing/unit-testing.md
+          - 硬件:
+              - Hardware Selection: hardware/hardware-selection.md
+              - R9M Inverter Mod: hardware/inverter-mod.md
+              - R9M Fan Mod: hardware/fan-mod.md
+              - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
+              - Crystal Oscillator (XO) Frequency Error: hardware/crystal-frequency-error.md
+              - SMD Antenna: hardware/smd-antenna.md
+              - PWM Receivers: hardware/pwm-receivers.md
+              - SPI Receivers: hardware/spi-receivers.md
+              - ESP Backpacks:
+                  - Backpack Info: hardware/backpack/esp-backpack.md
+                  - Tx Backpack Setup: hardware/backpack/backpack-tx-setup.md
+                  - VRx Backpack Setup: hardware/backpack/backpack-vrx-setup.md
+                  - HDZero Goggle VRx Backpack: hardware/backpack/hdzero-goggles.md
+              - Special Targets:
+                  - DIY Receiver: hardware/special-targets/diy-rx.md
+                  - DIY Transmitter: hardware/special-targets/diy-tx.md
+                  - Nuclear Targets: hardware/special-targets/nuclear-hardware.md
+          - 信息:
+              - Glossary: info/glossary.md
+              - Signal Health: info/signal-health.md
+              - Telemetry Bandwidth: info/telem-bandwidth.md
+              - Init Rate: info/init-rate.md
+              - Long Range Competition: info/long-range.md
+              - Advance Technical Info: info/advance-technical-info.md
+              - Privacy Policy: info/privacy-policy.md
+              - Licenses: info/licenses.md
+              - Terms & Conditions: info/terms-and-conditions.md
+          - 常见问题: faq.md
+          - 合作伙伴: partners-program.md
   git-revision-date-localized:
     enabled: !ENV [CI, false]
     type: timeago
