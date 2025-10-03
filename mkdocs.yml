@@ -64,9 +64,6 @@ theme:
 
 # Plugins
 plugins:
-  - privacy:
-      links_attr_map:
-        target: _blank
   - blog:
       enabled: true
       blog_toc: true

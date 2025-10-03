@@ -15,13 +15,37 @@ theme:
     - content.action.view
 
 plugins:
-  - social:
-    cards_layout: default/accent
-    cards_layout_options:
-      background_color: "#00000000"
-      background_image: layouts/social.png
-      font_family: Open Sans
-  - optimize:
-    enabled: !ENV [ CI, false ]
-  - privacy:
-    enabled: !ENV [ CI, false ]
+#  - privacy:
+  #    enabled: !ENV [ CI, false ]
+  #    links_attr_map:
+  #      target: _blank
+  - blog:
+      enabled: true
+      blog_toc: true
+      post_date_format: long
+      post_url_date_format: yyyy/MM/dd
+  - search:
+      lang: en
+  - tags: { }
+  - minify:
+      minify_html: true
+  #  - i18n:
+  #      docs_structure: folder
+  #      fallback_to_default: true
+  #      reconfigure_material: true
+  #      reconfigure_search: true
+  #      languages:
+  #        - locale: en
+  #          name: English
+  #          build: true
+  #          default: true
+  #      exclude:
+  #        - blog/**
+  - git-revision-date-localized:
+      enabled: !ENV [ CI, false ]
+      type: timeago
+      enable_creation_date: true
+  - git-committers:
+      enabled: !ENV [ CI, false ]
+      repository: ExpressLRS/Docs
+      branch: master
