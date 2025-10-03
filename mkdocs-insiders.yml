@@ -15,13 +15,13 @@ theme:
     - content.action.view
 
 plugins:
-  social:
+  - social:
     cards_layout: default/accent
     cards_layout_options:
       background_color: "#00000000"
       background_image: layouts/social.png
       font_family: Open Sans
-  optimize:
-    enabled: !ENV [CI, false]
-  privacy:
-    enabled: !ENV [CI, false]
+  - optimize:
+    enabled: !ENV [ CI, false ]
+  - privacy:
+    enabled: !ENV [ CI, false ]
