@@ -1,741 +1,507 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.expresslrs.org/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/"/>
+         <loc>https://www.expresslrs.org/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/contact-us/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/contact-us/"/>
+         <loc>https://www.expresslrs.org/contact-us/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/faq/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/faq/"/>
+         <loc>https://www.expresslrs.org/faq/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/gsod/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/gsod/"/>
+         <loc>https://www.expresslrs.org/gsod/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/partners-program/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/partners-program/"/>
+         <loc>https://www.expresslrs.org/partners-program/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/press-kit/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/press-kit/"/>
+         <loc>https://www.expresslrs.org/press-kit/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/crystal-frequency-error/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/crystal-frequency-error/"/>
+         <loc>https://www.expresslrs.org/blog/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/fan-mod/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/fan-mod/"/>
+         <loc>https://www.expresslrs.org/blog/tags/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/hardware-selection/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/hardware-selection/"/>
+         <loc>https://www.expresslrs.org/blog/posts/001-protect-your-open-source-project-before-its-too-late-a-legal-horror-story/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/inverter-mod/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/inverter-mod/"/>
+         <loc>https://www.expresslrs.org/hardware/crystal-frequency-error/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/pwm-receivers/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/pwm-receivers/"/>
+         <loc>https://www.expresslrs.org/hardware/fan-mod/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/smd-antenna/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/smd-antenna/"/>
+         <loc>https://www.expresslrs.org/hardware/hardware-selection/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/spi-receivers/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/spi-receivers/"/>
+         <loc>https://www.expresslrs.org/hardware/inverter-mod/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/x9d-troubleshooting/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/x9d-troubleshooting/"/>
+         <loc>https://www.expresslrs.org/hardware/pwm-receivers/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/backpack/backpack-tx-setup/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/backpack/backpack-tx-setup/"/>
+         <loc>https://www.expresslrs.org/hardware/smd-antenna/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/backpack/backpack-vrx-setup/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/backpack/backpack-vrx-setup/"/>
+         <loc>https://www.expresslrs.org/hardware/spi-receivers/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/backpack/esp-backpack/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/backpack/esp-backpack/"/>
+         <loc>https://www.expresslrs.org/hardware/x9d-troubleshooting/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/backpack/hdzero-goggles/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/backpack/hdzero-goggles/"/>
+         <loc>https://www.expresslrs.org/hardware/backpack/backpack-tx-setup/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/special-targets/diy-rx/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/special-targets/diy-rx/"/>
+         <loc>https://www.expresslrs.org/hardware/backpack/backpack-vrx-setup/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/special-targets/diy-tx/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/special-targets/diy-tx/"/>
+         <loc>https://www.expresslrs.org/hardware/backpack/esp-backpack/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/hardware/special-targets/nuclear-hardware/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/hardware/special-targets/nuclear-hardware/"/>
+         <loc>https://www.expresslrs.org/hardware/backpack/hdzero-goggles/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/info/advance-technical-info/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/info/advance-technical-info/"/>
+         <loc>https://www.expresslrs.org/hardware/special-targets/diy-rx/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/info/glossary/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/info/glossary/"/>
+         <loc>https://www.expresslrs.org/hardware/special-targets/diy-tx/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/info/init-rate/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/info/init-rate/"/>
+         <loc>https://www.expresslrs.org/hardware/special-targets/nuclear-hardware/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/info/licenses/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/info/licenses/"/>
+         <loc>https://www.expresslrs.org/info/advance-technical-info/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/info/long-range/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/info/long-range/"/>
+         <loc>https://www.expresslrs.org/info/glossary/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/info/privacy-policy/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/info/privacy-policy/"/>
+         <loc>https://www.expresslrs.org/info/init-rate/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/info/signal-health/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/info/signal-health/"/>
+         <loc>https://www.expresslrs.org/info/licenses/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/info/telem-bandwidth/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/info/telem-bandwidth/"/>
+         <loc>https://www.expresslrs.org/info/long-range/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/info/terms-and-conditions/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/info/terms-and-conditions/"/>
+         <loc>https://www.expresslrs.org/info/privacy-policy/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/ardupilot-setup/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/ardupilot-setup/"/>
+         <loc>https://www.expresslrs.org/info/signal-health/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/binding/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/binding/"/>
+         <loc>https://www.expresslrs.org/info/telem-bandwidth/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/firmware-options/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/firmware-options/"/>
+         <loc>https://www.expresslrs.org/info/terms-and-conditions/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/getting-started/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/getting-started/"/>
+         <loc>https://www.expresslrs.org/quick-start/ardupilot-setup/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/installing-configurator/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/installing-configurator/"/>
+         <loc>https://www.expresslrs.org/quick-start/binding/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/led-status/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/led-status/"/>
+         <loc>https://www.expresslrs.org/quick-start/firmware-options/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/pre-1stflight/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/pre-1stflight/"/>
+         <loc>https://www.expresslrs.org/quick-start/getting-started/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/troubleshooting/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/troubleshooting/"/>
+         <loc>https://www.expresslrs.org/quick-start/installing-configurator/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/unbricking/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/unbricking/"/>
+         <loc>https://www.expresslrs.org/quick-start/led-status/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/webui/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/webui/"/>
+         <loc>https://www.expresslrs.org/quick-start/pre-1stflight/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/axisflying-thor/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/axisflying-thor/"/>
+         <loc>https://www.expresslrs.org/quick-start/troubleshooting/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/betafpv-superd/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/betafpv-superd/"/>
+         <loc>https://www.expresslrs.org/quick-start/unbricking/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/betafpv-superd900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/betafpv-superd900/"/>
+         <loc>https://www.expresslrs.org/quick-start/webui/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/betafpv2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/betafpv2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/axisflying-thor/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/betafpv900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/betafpv900/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/betafpv-superd/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/configuring-fc/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/configuring-fc/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/betafpv-superd900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/diy2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/diy2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/betafpv2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/diy900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/diy900/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/betafpv900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/firmware-version/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/firmware-version/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/configuring-fc/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/flash2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/flash2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/diy2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/foxeer2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/foxeer2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/diy900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/geprc2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/geprc2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/firmware-version/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/geprc900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/geprc900/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/flash2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/ghost2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/ghost2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/foxeer2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/hglrc-hermes2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/hglrc-hermes2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/geprc2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/hglrc-hermes900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/hglrc-hermes900/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/geprc900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/hmep2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/hmep2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/ghost2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/hmes900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/hmes900/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/hglrc-hermes2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/hmpp2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/hmpp2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/hglrc-hermes900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/iflight2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/iflight2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/hmep2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/iflight900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/iflight900/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/hmes900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/jumper-aion/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/jumper-aion/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/hmpp2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/jumper900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/jumper900/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/iflight2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/matek2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/matek2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/iflight900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/r9/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/r9/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/jumper-aion/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/radiomaster-rp-2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/radiomaster-rp-2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/jumper900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/siyiFRmini/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/siyiFRmini/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/matek2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/updating/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/updating/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/r9/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/vantac2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/vantac2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/radiomaster-rp-2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/voyager900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/voyager900/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/siyiFRmini/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/receivers/wiring-up/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/receivers/wiring-up/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/updating/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/aion-internal/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/aion-internal/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/vantac2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/axisflying-thor/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/axisflying-thor/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/voyager900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/betafpv2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/betafpv2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/receivers/wiring-up/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/betafpv900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/betafpv900/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/aion-internal/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/betafpvlr3pro/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/betafpvlr3pro/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/axisflying-thor/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/diy2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/diy2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/betafpv2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/diy900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/diy900/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/betafpv900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/emax2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/emax2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/betafpvlr3pro/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/emax900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/emax900/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/diy2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/es24tx/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/es24tx/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/diy900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/es900tx/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/es900tx/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/emax2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/firmware-version/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/firmware-version/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/emax900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/flash2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/flash2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/es24tx/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/frsky-r9modules/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/frsky-r9modules/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/es900tx/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/ghost2400/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/ghost2400/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/firmware-version/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/hglrc-hermes/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/hglrc-hermes/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/flash2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/iflight-commando/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/iflight-commando/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/frsky-r9modules/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/jumper-aion/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/jumper-aion/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/ghost2400/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/jumper-internal/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/jumper-internal/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/hglrc-hermes/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/jumper-t14-t15-internal/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/jumper-t14-t15-internal/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/iflight-commando/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/jumper-t20-internal/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/jumper-t20-internal/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/jumper-aion/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/lua-howto/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/lua-howto/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/jumper-internal/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/rm-bandit/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/rm-bandit/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/jumper-t14-t15-internal/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/rm-internal/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/rm-internal/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/jumper-t20-internal/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/rm-ranger/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/rm-ranger/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/lua-howto/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/siyifm30/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/siyifm30/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/rm-bandit/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/tx-prep/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/tx-prep/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/rm-internal/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/updating/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/updating/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/rm-ranger/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/vantac-lite/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/vantac-lite/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/siyifm30/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/quick-start/transmitters/voyager900/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/quick-start/transmitters/voyager900/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/tx-prep/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/airport/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/airport/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/updating/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/backpack-telemetry/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/backpack-telemetry/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/vantac-lite/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/dynamic-transmit-power/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/dynamic-transmit-power/"/>
+         <loc>https://www.expresslrs.org/quick-start/transmitters/voyager900/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/gemini/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/gemini/"/>
+         <loc>https://www.expresslrs.org/software/airport/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/loan-model/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/loan-model/"/>
+         <loc>https://www.expresslrs.org/software/backpack-telemetry/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/mavlink/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/mavlink/"/>
+         <loc>https://www.expresslrs.org/software/dynamic-transmit-power/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/mfd-crossbow/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/mfd-crossbow/"/>
+         <loc>https://www.expresslrs.org/software/gemini/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/model-config-match/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/model-config-match/"/>
+         <loc>https://www.expresslrs.org/software/loan-model/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/obsolete-defines/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/obsolete-defines/"/>
+         <loc>https://www.expresslrs.org/software/mavlink/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/open-ocd/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/open-ocd/"/>
+         <loc>https://www.expresslrs.org/software/mfd-crossbow/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/serial-protocols/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/serial-protocols/"/>
+         <loc>https://www.expresslrs.org/software/model-config-match/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/serialvtx/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/serialvtx/"/>
+         <loc>https://www.expresslrs.org/software/obsolete-defines/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/stlink-fix/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/stlink-fix/"/>
+         <loc>https://www.expresslrs.org/software/open-ocd/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/switch-config/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/switch-config/"/>
+         <loc>https://www.expresslrs.org/software/serial-protocols/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/teamracing/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/teamracing/"/>
+         <loc>https://www.expresslrs.org/software/serialvtx/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/toolchain-install/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/toolchain-install/"/>
+         <loc>https://www.expresslrs.org/software/stlink-fix/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/user-defines/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/user-defines/"/>
+         <loc>https://www.expresslrs.org/software/switch-config/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/testing/crc-testing/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/testing/crc-testing/"/>
+         <loc>https://www.expresslrs.org/software/teamracing/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/testing/rx-scoreboard/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/testing/rx-scoreboard/"/>
+         <loc>https://www.expresslrs.org/software/toolchain-install/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/testing/unit-testing/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/testing/unit-testing/"/>
+         <loc>https://www.expresslrs.org/software/user-defines/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/updating/betaflight-passthrough/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/updating/betaflight-passthrough/"/>
+         <loc>https://www.expresslrs.org/software/testing/crc-testing/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
     <url>
-        <loc>https://www.expresslrs.org/software/updating/wifi-updating/</loc>
-        <lastmod>2025-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.expresslrs.org/software/updating/wifi-updating/"/>
+         <loc>https://www.expresslrs.org/software/testing/rx-scoreboard/</loc>
+         <lastmod>2025-10-03</lastmod>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/software/testing/unit-testing/</loc>
+         <lastmod>2025-10-03</lastmod>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/software/updating/betaflight-passthrough/</loc>
+         <lastmod>2025-10-03</lastmod>
+    </url>
+    <url>
+         <loc>https://www.expresslrs.org/software/updating/wifi-updating/</loc>
+         <lastmod>2025-10-03</lastmod>
     </url>
 </urlset>
