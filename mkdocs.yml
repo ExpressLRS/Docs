@@ -33,6 +33,7 @@ theme:
     - navigation.tabs
     - navigation.footer
     - navigation.tracking
+    - navigation.indexes
     - search.highlight
     - search.suggest
     - toc.follow
@@ -63,30 +64,39 @@ theme:
 
 # Plugins
 plugins:
-  search:
-    lang: en
-  tags: {}
-  minify:
-    minify_html: true
-  i18n:
-    docs_structure: folder
-    fallback_to_default: true
-    reconfigure_material: true
-    reconfigure_search: true
-    languages:
-      - locale: en
-        name: English
-        build: true
-        default: true
-  git-revision-date-localized:
-    enabled: !ENV [CI, false]
-    type: timeago
-    enable_creation_date: true
-
-  git-committers:
-    enabled: !ENV [CI, false]
-    repository: ExpressLRS/Docs
-    branch: master
+  - privacy:
+      links_attr_map:
+        target: _blank
+  - blog:
+      enabled: true
+      blog_toc: true
+      post_date_format: long
+      post_url_date_format: yyyy/MM/dd
+  - search:
+      lang: en
+  - tags: { }
+  - minify:
+      minify_html: true
+  #  - i18n:
+  #      docs_structure: folder
+  #      fallback_to_default: true
+  #      reconfigure_material: true
+  #      reconfigure_search: true
+  #      languages:
+  #        - locale: en
+  #          name: English
+  #          build: true
+  #          default: true
+  #      exclude:
+  #        - blog/**
+  - git-revision-date-localized:
+      enabled: !ENV [ CI, false ]
+      type: timeago
+      enable_creation_date: true
+  - git-committers:
+      enabled: !ENV [ CI, false ]
+      repository: ExpressLRS/Docs
+      branch: master
 
 extra_css:
   - assets/stylesheets/main.css
@@ -325,6 +335,8 @@ nav:
       - Licenses: info/licenses.md
       - Terms & Conditions: info/terms-and-conditions.md
   - FAQ: faq.md
+  - Blog:
+      - blog/index.md
   - Partners Program: partners-program.md
   - Contact Us: contact-us.md
 
