@@ -89,7 +89,7 @@ If establishing your own legal entity isn't feasible, consider partnering with a
 can register and manage trademarks on behalf of your project, providing legal protection without the need for direct
 incorporation. This service includes one hour of legal guidance and assistance with trademark registration and
 enforcement. For more details,
-visit [OSC's Trademark & IP Guide](https://docs.oscollective.org/for-hosted-member-projects/trademarks-and-ip?utm_source=chatgpt.com)
+visit [OSC's Trademark & IP Guide](https://docs.oscollective.org/for-hosted-member-projects/trademarks-and-ip)
 
 ## **How You Can Help**
 
