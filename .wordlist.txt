@@ -519,3 +519,4 @@ nd
 OSC
 OSC's
 OpenCollective
+GPLv
