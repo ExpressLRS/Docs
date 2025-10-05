@@ -104,6 +104,7 @@ GDPR
 GemX
 GEPRC
 GH
+GoonersFPV
 GND
 GPIO
 GSoD
