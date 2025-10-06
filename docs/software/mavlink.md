@@ -5,9 +5,6 @@ description: ExpressLRS Bi-directional MAVLink support
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
-!!! warning "Warning"
-    Although MAVLink has been in development for some time, and has been tested by a community of early adopters using ArduPilot crafts, MAVLink support is still a recent addition. There may be unexpected bugs; Exercise due caution.
-
 !!! note "NOTE"
     Enabling MAVLink forces the use of Hybrid or 16ch/2 switch mode. Wide switch mode is not supported.
     Enabling MAVLink forces a telemetry ratio of 1:2
