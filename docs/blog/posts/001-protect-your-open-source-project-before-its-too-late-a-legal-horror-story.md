@@ -38,13 +38,12 @@ To be clear:
 * If the applications are preliminarily accepted, they will then be published for a formal **opposition period**, during
   which ExpressLRS LLC and others may contest them.
 
-While Christopher Henry Sauer was at one point an active member of our public Discord chat community, **this individual
-was never considered part of the project team and is not associated with ExpressLRS in any official or unofficial
-capacity**. Christopher Henry Sauer was recently banned from our community spaces in order to preserve a respectful and
-collaborative environment.
+While this person once participated in community discussions, they were never part of the project team and are not
+associated with ExpressLRS in any official or unofficial capacity. These filings were made without any involvement or
+authorization from ExpressLRS LLC or the ExpressLRS development team.
 
 These filings were made without any involvement or authorization from ExpressLRS LLC or the ExpressLRS development team.
-If granted, they could limit how developers, contributors, and manufacturers use the ExpressLRS name \- threatening the
+If granted, they could limit how developers, contributors, and manufacturers use the ExpressLRS name - threatening the
 project’s open-source nature and causing confusion across the community. ExpressLRS LLC will formally oppose these
 applications to ensure the project’s identity remains protected.
 
@@ -56,10 +55,10 @@ trademarks.
 We are in the process of registering the **ExpressLRS** trademark in key regions around the world to protect the project
 and its community.
 
-Every attempted registration by Christopher Henry Sauer will be formally opposed by ExpressLRS LLC. We are committed to
+Every attempted registration made without authorization will be formally opposed by ExpressLRS LLC. We are committed to
 ensuring that the project’s name and identity remain in the hands of the community that built it.
 
-On October 2nd, 2025, our legal counsel issued a cease-and-desist letter to Christopher Henry Sauer. The ExpressLRS
+On October 2nd, 2025, our legal counsel issued a cease-and-desist letter to the individual involved. The ExpressLRS
 developers are fully committed to protecting this project and the community that has supported it. We will not allow the
 trust, collaboration, and progress that make ExpressLRS possible to be undermined.
 
