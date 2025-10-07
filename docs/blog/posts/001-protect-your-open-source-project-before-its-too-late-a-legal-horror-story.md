@@ -39,8 +39,7 @@ To be clear:
   which ExpressLRS LLC and others may contest them.
 
 While this person once participated in community discussions, they were never part of the project team and are not
-associated with ExpressLRS in any official or unofficial capacity. These filings were made without any involvement or
-authorization from ExpressLRS LLC or the ExpressLRS development team.
+associated with ExpressLRS in any official or unofficial capacity.
 
 These filings were made without any involvement or authorization from ExpressLRS LLC or the ExpressLRS development team.
 If granted, they could limit how developers, contributors, and manufacturers use the ExpressLRS name - threatening the
