@@ -21,8 +21,7 @@ protect its name and identity.**
 
 Imagine spending years building an open-source project, only to find someone else trying to claim its name. On **August
 25th, 2025**, we were notified that an individual, Christopher Henry Sauer (also known as “Christina Sauer”, “Chris
-Sauer” and by the handles radiomistress, radio-mistress, radio.mistress) had applied to
-register *ExpressLRS* as a trademark in **China** (Application No. 84786671).
+Sauer”, radiomistress) had applied to register *ExpressLRS* as a trademark in **China** (Application No. 84786671).
 
 On **August 27th, 2025**, this individual also registered the domain name expresslrs[.]dev.
 
@@ -90,7 +89,7 @@ If establishing your own legal entity isn't feasible, consider partnering with a
 can register and manage trademarks on behalf of your project, providing legal protection without the need for direct
 incorporation. This service includes one hour of legal guidance and assistance with trademark registration and
 enforcement. For more details,
-visit [OSC's Trademark & IP Guide](https://docs.oscollective.org/for-hosted-member-projects/trademarks-and-ip)
+visit [OSC's Trademark & IP Guide](https://docs.oscollective.org/for-hosted-member-projects/trademarks-and-ip).
 
 ## **How You Can Help**
 
