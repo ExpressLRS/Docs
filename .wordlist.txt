@@ -520,3 +520,9 @@ OSC
 OSC's
 OpenCollective
 GPLv
+QGroundControl
+Yaapu
+DTR
+macOS
+XXXXXX
+SiK
