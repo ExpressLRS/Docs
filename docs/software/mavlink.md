@@ -17,7 +17,7 @@ ExpressLRS provides full bi-directional [MAVLink](https://mavlink.io/en/) suppor
 ![Mavlink-RC Summary](../assets/images/mavlink_rc_summary.png)
 </figure>
 
-**Key Benefits:**
+### Key Benefits
 
 - **Single radio link and UART** for both RC control and telemetry (no separate telemetry radio needed), and only one UART is needed on the flight controller for both RC and telemetry
 - **Better range** than traditional telemetry radios thanks to LoRa modes
