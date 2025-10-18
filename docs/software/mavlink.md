@@ -218,16 +218,16 @@ The Backpack supports two WiFi modes:
 
 1. In the ELRS LUA script, select `Backpack`, scroll to the `Telemetry` option, and change the value to `WiFi`
 
-!!! danger "Attention!"
-    DO NOT manually put the TX Backpack into WiFi mode via `WiFi Connectivity -> Enable Backpack WiFi`. It's not in the steps above for a reason. 
-    
-    When you set `Telemetry` to `WiFi` mode in the ELRS Lua script, the Backpack automatically:
-    
-    - Starts WiFi mode
-    - Configures the WiFi service for MAVLink forwarding
-    - Sets up the UDP ports correctly
-    
-    Manual WiFi enable puts the Backpack in firmware update mode, not MAVLink mode!
+    !!! danger "Attention!"
+        DO NOT manually put the TX Backpack into WiFi mode via `WiFi Connectivity -> Enable Backpack WiFi`. It's not in the steps above for a reason. 
+        
+        When you set `Telemetry` to `WiFi` mode in the ELRS Lua script, the Backpack automatically:
+        
+        - Starts WiFi mode
+        - Configures the WiFi service for MAVLink forwarding
+        - Sets up the UDP ports correctly
+        
+        Manual WiFi enable puts the Backpack in firmware update mode, not MAVLink mode!
 
 1. If you are NOT using Home WiFi on the Backpack, a new WiFi access point will be available to connect to:
     - SSID format: `ExpressLRS TX Backpack XXXXXX` (where `XXXXXX` is part of your module's UID)
@@ -312,12 +312,12 @@ MAVLink uses System IDs (SysID) to identify different devices on the network. Ex
 - **Source SysID**: The System ID that the ExpressLRS receiver uses when acting as a GCS (Ground Control Station). Default is `255`, which is the standard GCS ID.
 - **Target SysID**: The System ID of your flight controller/vehicle. Default is `1`, which is the standard vehicle ID.
 
-!!! info "When to Change System IDs"
-    In most cases, the default values (Source: 255, Target: 1) work perfectly. You may need to change these if:
-    
-    - You have multiple vehicles on the same MAVLink network
-    - Your flight controller uses a non-standard System ID
-    - You're integrating with other MAVLink devices (companion computers, gimbals, etc.)
+    !!! info "When to Change System IDs"
+        In most cases, the default values (Source: 255, Target: 1) work perfectly. You may need to change these if:
+        
+        - You have multiple vehicles on the same MAVLink network
+        - Your flight controller uses a non-standard System ID
+        - You're integrating with other MAVLink devices (companion computers, gimbals, etc.)
 
 **To configure System IDs:**
 
@@ -342,8 +342,8 @@ ExpressLRS TX modules can be used as standalone telemetry radios, similar to tra
 
 1. Before using the TX module standalone, you will need to setup the packet rate, RF power, etc. using a handset and the ELRS LUA script. You can also set the `Link Mode` option to `MAVLink` if you want, although this is not strictly necessary as the TX will detect MAVLink and change this setting automatically.
 
-!!! danger "IMPORTANT!"
-    Make sure you are using Model ID 0 in EdgeTX when you do this setup. ELRS uses the settings that are associated with Model ID 0 when no handset is connected.
+    !!! danger "IMPORTANT!"
+        Make sure you are using Model ID 0 in EdgeTX when you do this setup. ELRS uses the settings that are associated with Model ID 0 when no handset is connected.
 
 1. Connect the TX module to your computer via USB (no handset needed)
 
