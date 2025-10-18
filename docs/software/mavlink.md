@@ -301,7 +301,7 @@ Suggested settings:
 
 - **2.4GHz**: Best speeds will be achieved with F1000 packet rate. We recommended that you use F1000 or 333Hz Full for the initial parameter download and any mission uploads. When you are ready to fly, switch to 333Hz Full (or 250Hz etc.) for longer range at slower data rates.
 - **Dual Band**: Best speeds will be achieved with K1000 packet rate. We recommended that you use K1000 for the initial parameter download and any mission uploads. When you are ready to fly, switch to 200Hz Full (if you want a 900MHz band) for longer range at slower data rates. Alternatively, switch to 333Hz Full (if you want a 2.4GHz band).
-- **Single band 900MHz**: Legacy 900MHz packet rates are NOT recomended. If you insist on using these rates / hardware, we suggest you use the maximum 200Hz packet rate.
+- **Single band 900MHz**: Legacy 900MHz packet rates are NOT recommended. If you insist on using these rates / hardware, we suggest you use the maximum 200Hz packet rate.
 
 ## Advanced Features
 
@@ -360,7 +360,7 @@ ExpressLRS TX modules can be used as standalone telemetry radios, similar to tra
 
 ### TX Backpack MAVLink Statistics
 
-When using WiFi forwarding through the TX Backpack, the Backpack tracks additional statistics and displays them on the Backpack webui, on the MAVLink tab (go to `http://10.0.0.1`, or `http://elrs_txbp.local/` if using home WiFi).
+When using WiFi forwarding through the TX Backpack, the Backpack tracks additional statistics and displays them on the Backpack WebUI, on the MAVLink tab (go to `http://10.0.0.1`, or `http://elrs_txbp.local/` if using home WiFi).
 
 - **Downlink packets**: Count of MAVLink messages from aircraft to GCS
 - **Uplink packets**: Count of MAVLink messages from GCS to aircraft  
