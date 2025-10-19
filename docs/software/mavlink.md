@@ -268,28 +268,12 @@ The Backpack supports two WiFi modes:
     - Password: `expresslrs`
     - Or connect to your home network if using STA mode
 
-1. **Disable Auto-Connect**:
+1. **Enable Auto-Connect**:
     - Open QGroundControl
     - Click the **Q icon** (Application Settings)
     - Select **Comm Links**
-    - Turn off all auto-connect toggles
-
-1. **Create New UDP Connection**:
-    - Click **Add** to create a new comm link
-    - Give it a name like "ExpressLRS WiFi"
-
-1. **Configure UDP Link**:
-    - Set **Type** to `UDP`
-    - Leave **Listening Port** at `14550` (default MAVLink port)
-    - Under **Target Hosts**, click **Add**
-    - If in AP mode, add `10.0.0.1` (the Backpack's IP)
-    - If in STA mode, add the Backpack's IP on your network (check your router)
-
-1. **Save and Connect**:
-    - Click **OK** to save
-    - Select the new connection from the dropdown
-    - Click **Connect**
-    - QGroundControl should receive telemetry within a few seconds
+    - Turn on the auto-connect toggle for UDP (it should be on by default unless you have disabled it)
+    - QGroundControl should automatically connect and receive telemetry as soon as your Backpack starts sending it
 
 ## Best Practices and Tips
 
