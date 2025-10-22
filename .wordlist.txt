@@ -526,3 +526,11 @@ DTR
 macOS
 XXXXXX
 SiK
+wez
+USD
+timeframes
+README
+USPTO
+Squadding
+UAV
+UAVfutures
