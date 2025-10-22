@@ -59,7 +59,7 @@ We're considering a few additional regions for filings where there's strong comm
 
 ## **The Costs and Your Support**
 
-Trademark registration is expensive, and contesting trademark registrations even more. Our current filings have cost in excess of **$7,500 USD** for the filings listed above, and an additional \~$2,000 USD in legal fees with additional costs yet to come for the remaining markets of interest, or any follow up legal assistance with the ongoing filings. Each country has different fee structures and timeframes, and further expenses may arise for certification once applications are approved, or for legal support in the event that any filings require appeal. We still have a long journey ahead of us.
+Trademark registration is expensive, and contesting trademark registrations even more. Our current filings have cost in excess of **$7,500 USD** for the filings listed above, and an additional **~$2,000 USD** in legal fees with additional costs yet to come for the remaining markets of interest, or any follow up legal assistance with the ongoing filings. Each country has different fee structures and timeframes, and further expenses may arise for certification once applications are approved, or for legal support in the event that any filings require appeal. We still have a long journey ahead of us.
 
 Your donations through our [OpenCollective page](https://opencollective.com/expresslrs) have made this protection possible. Every contribution directly supports our legal defense and helps ensure ExpressLRS remains in the hands of the community that built it.
 
