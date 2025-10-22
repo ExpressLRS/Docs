@@ -3,3 +3,8 @@ authors:
     name: Julius Jurgelėnas
     description: ExpressLRS contributor & maintainer
     avatar: assets/images/authors/jurg.jpeg
+
+  wez:
+    name: Wezley Varty
+    description: ExpressLRS contributor & maintainer
+    avatar: assets/images/authors/wez.png
