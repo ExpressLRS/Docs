@@ -25,9 +25,9 @@ plugins:
       post_date_format: long
       post_url_date_format: yyyy/MM/dd
   - social:
-    cards_color:
-      fill: "#5f8bf3"
-      text: "#FFFFFF"
+      cards_color:
+        fill: "#5f8bf3"
+        text: "#FFFFFF"
   - search:
       lang: en
   - tags: { }
