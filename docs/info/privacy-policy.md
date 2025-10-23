@@ -7,11 +7,11 @@ search:
 
 ![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)
 
-Effective date: 2022-12-01
+Effective date: 2025-10-23
 
 ## 1. Introduction
 
-ExpressLRS (“us”, “we”, or “our”) operates https://www.expresslrs.org (hereinafter referred to as “Service”).
+ExpressLRS LLC (“us”, “we”, or “our”) operates https://www.expresslrs.org (hereinafter referred to as “Service”).
 
 Our Privacy Policy governs your visit to https://www.expresslrs.org, and explains how we collect, safeguard and disclose
 information that results from your use of our Service.

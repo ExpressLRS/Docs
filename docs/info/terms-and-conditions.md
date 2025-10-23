@@ -9,11 +9,11 @@ search:
 
 ![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)
 
-Effective date: 2024-20-02
+Effective date: 2025-10-23
 
 ## 1. Introduction
 
-Welcome to ExpressLRS (“Company”, “we”, “our”, “us”)!
+Welcome to ExpressLRS LLC (“Company”, “we”, “our”, “us”)!
 
 These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located
 at https://www.expresslrs.org (together or individually “Service”) operated by ExpressLRS.
