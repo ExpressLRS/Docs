@@ -534,3 +534,5 @@ USPTO
 Squadding
 UAV
 UAVfutures
+ASpd
+EGT
