@@ -57,21 +57,14 @@ OSDs report the packet rate using an index instead of the actual rate, either as
 | 1 | 900 | 50Hz | 50Hz LoRa | -120dBm |
 | 2 | 900 | 100Hz | 100Hz LoRa | -117dBm |
 | 3 | 900 | 100Hz Full | 100Hz 8ch/12ch/16ch LoRa | -112dBm |
-| 4 | 900 | 150Hz | 150Hz LoRa | N/A |
 | 5 | 900 | 200Hz | 200Hz LoRa | -112dBm |
 | 6 | 900 | 200Hz Full | 200Hz 8ch/12ch/16ch LoRa | -111dBm |
 | 7 | 900 | 250Hz | 250Hz LoRa | -111dBm |
-| 8 | 900 | 333Hz Full | 333Hz 8ch/12ch/16ch LoRa | N/A |
-| 9 | 900 | 500Hz | 500Hz LoRa | N/A |
 | 10 | 900 | D50 | 50Hz DVDA LoRa  | -112dBm |
 | 11 | 900 | K1000 Full | 1000Hz 8ch/12ch/16ch FSK | -101dBm |
-| 20 | 2.4 | 25Hz | 25Hz LoRa | N/A |
 | 21 | 2.4 | 50Hz | 50Hz LoRa | -115dBm |
-| 22 | 2.4 | 100Hz | 100Hz LoRa | N/A |
 | 23 | 2.4 | 100Hz Full | 100Hz 8ch/12ch/16ch LoRa | -112dBm |
 | 24 | 2.4 | 150Hz | 150Hz LoRa | -112dBm |
-| 25 | 2.4 | 200Hz | 200Hz LoRa | N/A |
-| 26 | 2.4 | 200Hz Full | 200Hz 8ch/12ch/16ch LoRa | N/A |
 | 27 | 2.4 | 250Hz | 250Hz LoRa | -108dBm |
 | 28 | 2.4 | 333Hz Full | 333Hz 8ch/12ch/16ch LoRa | -105dBm |
 | 29 | 2.4 | 500Hz | 500Hz LoRa | -105dBm |
