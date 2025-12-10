@@ -350,14 +350,15 @@ By default, a fresh model does not have any Aux Channels configured (Aux channel
 
 ### V4.0 Arming Options
 
-Starting with ExpressLRS v4.0, an additional Arming method is introduced. 
+Starting with ExpressLRS v4.0.0 an additional Arming method is introduced. 
 
-The default arming method, via Channel 5 (Aux1), is the default, and still encouraged to be used by majority of FPV pilots using Betaflight, INAV or Ardupilot (and their respective derivatives like Emuflight, etc.). This will now be called **Arming Mode CH5**.
+The traditional Arming method, via Channel 5 (Aux1) driven by EdgeTX Channel Mixer 5 is the default and is still encouraged to be used by majority of FPV pilots using Betaflight, INAV or Ardupilot (and their respective derivatives like Emuflight, etc.). This will now be called **Arm using CH5**.
 
-The new arming method called **Arming Mode Switch** utilizes a switch on an EdgeTX radio. This switch can either be tied into a channel or not. What this means is that your Channel 5 will be free for other functions, like controlling gains on your stabilizer, or changing flight modes, or as another full proportional channel when using any of the Full Resolution Modes.
+The alternative Arming method **Arm using Switch** doesn’t use CH5 /to communicate the user's Arming request to the TX module. This means your Channel 5 will be free for other functions, like controlling gains on your stabilizer, or changing flight modes, or as a regular full proportional channel when using any of the Full Resolution packet rates and Modes. **Arm using Switch** is performed by user selected sources, e.g. physical or logical switches, anything EdgeTX offers as a source really. **Arm using Switch** works for all packet rates and switch modes but is especially useful for full res packet rates in combination with PWM receivers. No more “remapping CH5” required to use CH5 as a regular proportional control channel. **Arm using Switch** can be enabled in the EdgeTX Internal/External RF Model Setup menu by changing “Arm using” to “Switch”.
 
-!!! Note "Arming Mode Switch Requirement"
-    Arming Mode Switch **requires** EdgeTX version 2.11 or newer and ExpressLRS version 4.0 or newer. If you cannot find the "Arm using" option, that means you NEED to update your EdgeTX firmware.
+
+!!! Note **Arm using Switch** Requirments
+    Arming Mode Switch **requires** EdgeTX version 2.11 or newer and ExpressLRS version 4.0 or newer. If you cannot find the "Arm using" option you need to update your EdgeTX firmware.
 
 #### How to set up Arming Mode Switch:
 
@@ -368,26 +369,26 @@ The new arming method called **Arming Mode Switch** utilizes a switch on an Edge
     - On radios with Colored screens, this should be the first page when you activate the Model Menu.
     - On radios with Monochrome screens, this should be the second page upon activating the Model Menu.
 3. Scroll down until you reach the Internal or External RF settings, depending on which module you want to use for this model.
-    - Colored screens provide separate pages for these.
+    - Color screen radios provide separate pages for these.
     - On Monochrome screens, the options are all in one page. 
 4. Short-press the scroll-wheel button or press the ++enter++ Key and change the setting to "Switch"
     <figure markdown>
-    ![mixesAux Color](../../assets/images/armingSwitch01.png)
+    ![Arming Color](../../assets/images/armingSwitch01.png)
     </figure>
 
     <figure markdown>
-    ![mixesAux Color](../../assets/images/armingSwitch02.png)
+    ![Arming Color](../../assets/images/armingSwitch02.png)
     </figure>
 
 5. Press the ++enter++ Key to apply your selection.
 6. Use the scroll-wheel and set your new arming switch. It can be any switch on the radio, a Logical Switch or any source.
 
     <figure markdown>
-    ![mixesAux Color](../../assets/images/armingSwitch03.png)
+    ![Arming Color](../../assets/images/armingSwitch03.png)
     </figure>
 
     <figure markdown>
-    ![mixesAux Color](../../assets/images/armingSwitch04.png)
+    ![Arming Color](../../assets/images/armingSwitch04.png)
     </figure>
 
 7. Press the ++enter++ Key once more to set the switch.
