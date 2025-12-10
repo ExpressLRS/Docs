@@ -357,7 +357,7 @@ The traditional Arming method, via Channel 5 (Aux1) driven by EdgeTX Channel Mix
 The alternative Arming method **Arm using Switch** doesn’t use CH5 /to communicate the user's Arming request to the TX module. This means your Channel 5 will be free for other functions, like controlling gains on your stabilizer, or changing flight modes, or as a regular full proportional channel when using any of the Full Resolution packet rates and Modes. **Arm using Switch** is performed by user selected sources, e.g. physical or logical switches, anything EdgeTX offers as a source really. **Arm using Switch** works for all packet rates and switch modes but is especially useful for full res packet rates in combination with PWM receivers. No more “remapping CH5” required to use CH5 as a regular proportional control channel. **Arm using Switch** can be enabled in the EdgeTX Internal/External RF Model Setup menu by changing “Arm using” to “Switch”.
 
 
-!!! Note **Arm using Switch** Requirments
+!!! Note **Arm using Switch** Requirements
     Arming Mode Switch **requires** EdgeTX version 2.11 or newer and ExpressLRS version 4.0 or newer. If you cannot find the "Arm using" option you need to update your EdgeTX firmware.
 
 #### How to set up Arming Mode Switch:
