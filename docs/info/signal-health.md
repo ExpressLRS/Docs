@@ -51,6 +51,7 @@ OSDs report the packet rate using an index instead of the actual rate, either as
 
 ![OSD RFMD](../assets/images/OSD_RFMD.png)
 
+=== "ExpressLRS 4.x"
 | RFMD | Band | Lua | Packet Rate | Sensitivity <br/>Limit |
 |--|--|--|--|--|
 | 0 | 900 | 25Hz | 25Hz LoRa | -123dBm |
@@ -77,6 +78,24 @@ OSDs report the packet rate using an index instead of the actual rate, either as
 | 36 | 2.4 | K1000 | 1000Hz FSK | -103dBm |
 | 100 | X-Band | 100Hz Full | 100Hz 8ch/12ch/16ch LoRa Dual Band | -112dBm |
 | 101 | X-Band | 150Hz | 150Hz LoRa Dual Band | -112dBm |
+
+=== "ExpressLRS 3.x"
+| RFMD | Lua | Packet Rate | Sensitivity <br/>Limit | TX Duration <br/>(us) | TX Interval <br/>(us) |
+|:---:|:---:|:---:|---:|---:|---:|
+| 14 | D50 | 50Hz | -112dBm | 4640.0 | 5000 |
+| 13 | F1000 | 1000Hz | -104dBm | 388.8 | 1000 |
+| 12 | F500 | 500Hz | -104dBm | 388.8 | 2000 |
+| 11 | D500 | 500Hz | -104dBm | 388.8 | 1000 |
+| 10 | D250 | 250Hz | -104dBm | 388.8 | 1000 |
+| 9 | 500Hz | 500Hz | -105dBm | 1507.4 | 2000 |
+| 8 | 333Hz Full | 333Hz | -105dBm | 2374.4 | 3003 |
+| 7 | 250Hz | 250Hz | -108dBm | 3330.0 | 4000 |
+| 6 | 200Hz | 200Hz | -112dBm | 4640.0 | 5000 |
+| 5 | 150Hz | 150Hz | -112dBm | 5891.9 | 6666 |
+| 4 | 100Hz Full | 100Hz | -112dBm | 6690.0 (900) /<br />7605.9 (2.4) | 10000 |
+| 3 | 100Hz | 100Hz | -117dBm | 9280.0 | 10000 |
+| 2 | 50Hz | 50Hz | -120dBm (900) /<br /> -115dBm (2.4) | 19580 (900) /<br /> 10798 (2.4) | 20000 |
+| 1 | 25Hz | 25Hz | -123dBm | 30980 | 40000 |
 
 ## What about SNR?
 SNR stands for Signal to Noise ratio and compares RSSI dBm to the RF background noise level and is in dB units (not dBm), higher is better. Notice it compares the background noise level and not the Sensitivity Limit. The reported value changes quite a bit from packet to packet and what values are good depend on what packet rate is being used. The RF chip can only approximate the noise level and only registers a value so high above the noise floor leading to this value getting clipped. Add to that, LoRa modulation can actually receive data below the noise floor to some degree.
