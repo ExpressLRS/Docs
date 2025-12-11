@@ -82,6 +82,8 @@ OSDs report the packet rate using an index instead of the actual rate, either as
 === "ExpressLRS 3.x"
 | RFMD | Lua | Packet Rate | Sensitivity <br/>Limit | TX Duration <br/>(us) | TX Interval <br/>(us) |
 |:---:|:---:|:---:|---:|---:|---:|
+| 19 | K1000 Full | 1000Hz | -101dBm | 658 | 1000 |
+| 16 | DK500 | 500Hz | -101dBm | 690 | 1000 |
 | 14 | D50 | 50Hz | -112dBm | 4640.0 | 5000 |
 | 13 | F1000 | 1000Hz | -104dBm | 388.8 | 1000 |
 | 12 | F500 | 500Hz | -104dBm | 388.8 | 2000 |
