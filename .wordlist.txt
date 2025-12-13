@@ -15,6 +15,7 @@ Axisflying
 BETAFPV
 BLE
 BLHeli
+Bayck
 Bardwell
 Baudrate
 BetaFPV
@@ -46,6 +47,7 @@ CrazyF
 Crossband
 CubeProgrammer
 Cura
+DBR
 DFU
 DIY
 DJI
@@ -93,6 +95,7 @@ FW
 Failsafe
 Flite
 FlySky
+FlySky's
 Flybarless
 Flywoo
 Foxeer
@@ -108,6 +111,7 @@ GND
 GPIO
 GSoD
 Graupner
+GX
 HD
 HDZero
 HGLRC
@@ -143,6 +147,7 @@ LQI
 LiPo
 LinkStatistics
 LinkStats
+LinkFlow
 LoRa
 Lua
 MAVLink
@@ -225,12 +230,14 @@ Remarketing
 Repartitioner
 Repo
 Rox
+Runcam
 SBUS
 SD
 SDG
 SDR
 SG
 SIYI
+Sirius
 SMA
 SMD
 SNR
@@ -247,6 +254,8 @@ SWCLK
 SWDIO
 SX
 SYS
+sync
+sync'd
 Saad
 Schottky
 Seba
@@ -308,11 +317,13 @@ V16
 V14
 Walksnail
 WebSocket
+Webflasher
 WebUI
 Wifi
 Wirelessly
 XO
 XT
+XR
 Yagin
 Yarillo
 YeOldePirate
