@@ -83,7 +83,7 @@ ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases)
     9. Once Writing is complete, reboot the radio.
     10. Check the Radio's Version Page to verify you have the version you need.
 
-Check [this page](https://manual.edgetx.org/installing-and-updating-edgetx) for the EdgeTX installation instructions if you're coming in from OpenTX or updating from an earlierr EdgeTX version.
+Check [this page](https://manual.edgetx.org/installing-and-updating-edgetx) for the EdgeTX installation instructions if you're coming in from OpenTX or updating from an earlier EdgeTX version.
 
 ## Radio Settings
 
