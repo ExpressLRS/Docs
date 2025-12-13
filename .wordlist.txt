@@ -308,6 +308,7 @@ Velocidrone
 Vergara
 Voigt
 V16
+V14
 Walksnail
 WebSocket
 WebUI
@@ -553,3 +554,4 @@ unambiguously
 injunctive
 counsel
 Rotorflight
+X-Band
