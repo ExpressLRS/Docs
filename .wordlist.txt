@@ -305,6 +305,7 @@ Vantac
 Vergara
 Voigt
 V16
+V14
 Walksnail
 WebSocket
 WebUI
@@ -534,3 +535,4 @@ USPTO
 Squadding
 UAV
 UAVfutures
+X-Band
