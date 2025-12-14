@@ -10,9 +10,9 @@ ExpressLRS is #blessed with the benefit of there being many options of transmitt
 !!! note Supported Hardware
     The ExpressLRS (ELRS) team works closely with hardware manufacturers to review and test devices. A specific target is added to the ELRS Configurator only after this validation process is complete.
 	
-	If hardware is not listed in the Configurator, it either did not meet project requirements or the manufacturer chose not to collaborate with the ELRS project. In these cases, support should be sought directly from the manufacturer.
+    If hardware is not listed in the Configurator, it either did not meet project requirements or the manufacturer chose not to collaborate with the ELRS project. In these cases, support should be sought directly from the manufacturer.
 	
-	Takeaway: Always check the ELRS Configurator for supported hardware, and consider supporting manufacturers who actively contribute to open-source development and the ExpressLRS project 💪
+    Takeaway: Always check the ELRS Configurator for supported hardware, and consider supporting manufacturers who actively contribute to open-source development and the ExpressLRS project 💪
 
 ## Receiver Selection
 This section exists to list some common features of receivers and will give some examples of receivers with these features.
