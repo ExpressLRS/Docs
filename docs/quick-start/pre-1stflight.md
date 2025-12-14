@@ -155,6 +155,6 @@ If you get a "retrying" message while saving changes it means that the Lua scrip
 
 ## MAVLINK
 
-See the [Mavlink](../software/mavlink.md) setup guide for more info.
+See the [MAVLink](../software/mavlink.md) setup guide for more info.
 
 **Done. Go Fly!**
