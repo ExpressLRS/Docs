@@ -8,3 +8,8 @@ authors:
     name: Wezley Varty
     description: ExpressLRS contributor & maintainer
     avatar: assets/images/authors/wez.png
+
+  mustardtiger:
+    name: MUSTARDTIGER
+    description: ExpressLRS contributor & maintainer
+    avatar: https://github.com/mustardtiger.png
