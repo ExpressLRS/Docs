@@ -146,7 +146,7 @@ If you use 200Hz and 1:2 Tlm ratio the stars will not even blink because the upd
 
 ## MSP
 
-To configure Betaflight from your transmitter it's possible to use the Betaflight lua scripts. If you are having trouble, make sure you are running the latest Betaflight nightly lua. 
+To configure Betaflight from your transmitter it's possible to use the Betaflight lua scripts. If you are having trouble, make sure you are running the latest [Betaflight nightly lua](https://github.com/betaflight/betaflight-tx-lua-scripts-nightlies/releases). 
 This requires the telemetry feature enabled for the RX+TX. If the telemetry page of your radio does not show regular updates for all sensors the LUA script will not work.
 
 To get a responsive UI, configure ExpressLRS for fast data transfer. Use something like `200Hz/500Hz` with `1:2` Tlm ratio and a serial baud rate of at least `400000`. The initial VTX tables download does take some time - but is cached after that. 
