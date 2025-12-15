@@ -86,6 +86,30 @@ On the 900MHz hardware, a value of -20dBm or thereabouts is a good indication yo
 - Most DIY modules require moving the 0-ohm resistor on the E28 from the PCB antenna side towards the UFL side. A solder bridge will work just fine as well, but make sure it is on the correct pads.
 - Swap out antennas on the receiver and/or the TX module; Most ExpressLRS receiver antennas use IPEX 1/UFL connectors and as long as the frequency tuning of the antenna is appropriate for the frequency you're in, it should work. You can also use old 2.4GHz WiFi Router antennas for your 2.4GHz modules, but avoid those that are dual-band. Also, make sure that the connector on the antenna is the appropriate one (RP-SMA on R9 modules; SMA on most off-the-shelf ExpressLRS modules)
 
+## RC Link Preset (BETAFLIGHT ONLY)
+For flight controllers based on Betaflight, there are 'RC Link Presets' available that configure feedforward smoothing and associated link settings based on your packet rate and usage case.
+
+!!! Warning
+    Using no link preset, or using the incorrect one for your packet rate, can result in unwanted noise and jitter in feedforward, which can affect setpoint tracking and thus flight characteristics.
+
+To install the correct 'RC Link Preset', follow these steps in **Betaflight Configurator**:
+
+1. Select the **Preset** tab
+1. In the preset tab, select **Save Backup** and save a backup to a safe location before applying any preset.
+1. Search for 'ExpressLRS' and select the Link Preset that matches your [Packet Rate](../transmitters/lua-howto.md#packet-rate-and-telemetry-ratio). If no direct match is available, choose the closest preset below your packet rate.
+
+    ![Presets Home](../../assets/images/preset_home.png)
+
+1. Read through the options by selecting the dropdown list. NOTE: These are all optional, if none of them apply to your circumstances, it is OK to leave everything unticked.
+
+1. Select 'Pick' to stage the preset:
+
+    ![Presets Pick](../../assets/images/preset_pick.png)
+    
+1. Select **Save and Reboot** to apply the preset:
+
+    ![Presets Save](../../assets/images/preset_save.png)
+
 ## Blackbox
 
 Blackbox is handy for evaluating the performance of the RF link for a flight. Set your BB to debug mode `RC_SMOOTHING_RATE`, which will capture the rate that Betaflight is receiving RC Packets from the RX.
