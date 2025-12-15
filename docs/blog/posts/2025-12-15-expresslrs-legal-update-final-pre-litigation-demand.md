@@ -31,7 +31,7 @@ We extended goodwill, provided an additional 48-hour grace period, and worked wi
 What followed was six weeks of excuses, delays, and incomplete actions:
 
 - November 4th: An unsigned assignment agreement document was shared  
-- November 17th: A signed agreement was sent, but with a signature our council stated was legally inadequate  
+- November 17th: A signed agreement was sent, but with a signature our counsel stated was legally inadequate  
 - November 18th: We explained the signature issue, and assurance was given it would be corrected  
 - November 20th: We were told a physical notarized signature would be provided instead  
 
@@ -45,7 +45,7 @@ Each passing day that these issues remain unresolved creates ongoing confusion i
 The pattern of behavior demonstrates what our legal counsel describes as "intentional obstruction and further evidence of bad-faith conduct."
 
 ## The Final Demand
-On [December 15th, 2025], Rock IP (our legal counsel) sent a comprehensive demand letter. This letter makes clear that any presumption of mistake or misunderstanding has been exhausted.
+On December 15th, 2025, Rock IP (our legal counsel) sent a comprehensive demand letter. This letter makes clear that any presumption of mistake or misunderstanding has been exhausted.
 
 The letter provides five (5) business days to complete the demands we previously made.
 
@@ -65,7 +65,7 @@ We don't take this lightly. Litigation is expensive and time-consuming, and dive
 ExpressLRS exists because of its community. When we shared our first update about this situation, we received an outpouring of support, both moral and financial. Since our October blog post, over $20,000 USD in donations have been received to support these legal efforts. We cannot express how much we appreciate everyone's contributions. You deserve to know how we're protecting the project, how we're making use of these funds, and why we're taking the actions we are.
 
 ## A Quick Thanks
- In October, we connected with RockIP after one of their associates, an FPV pilot who flies ExpressLRS and heard about the dispute, recognized what was going on and reached out, which meant we didn't have to explain the ecosystem or the stakes from scratch. RockIP has been nothing but incredible in their partnership, and we couldn't ask for better. We want to extend a special thank you to them for their tremendous representation in this matter.
+In October, we connected with RockIP after one of their associates, an FPV pilot who flies ExpressLRS and heard about the dispute, recognized what was going on and reached out, which meant we didn't have to explain the ecosystem or the stakes from scratch. RockIP has been nothing but incredible in their partnership, and we couldn't ask for better. We want to extend a special thank you to them for their tremendous representation in this matter.
 
 ## Looking Forward
 We hope this final demand results in immediate and complete compliance so that this chapter can close and we can refocus entirely on what we do best, building the best open-source RC control link.
