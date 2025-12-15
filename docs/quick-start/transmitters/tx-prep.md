@@ -215,11 +215,11 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | iFlight Command 8 | 3.75M | wired as external module |
 | HGLRC Hermes | 5.25M | |
 | HGLRC T ONE OLED | 5.25M | |
-| FrSky R9M/R9M Lite/R9M Lite Pro | 1.87M | STM-based; No Longer Supported on ELRS 4.0 |
-| FrSky R9M 2018 (non-ACCESS) | 115K | [Resistor Mod](../../hardware/inverter-mod.md) for 400K; <br />STM-based; No Longer Supported on ELRS 4.0 |
-| QuadKopters JR & Slim | 5.25M | STM-based; No Longer Supported on ELRS 4.0 |
-| SIYI FM30 | 1.87M | STM-based; No Longer Supported on ELRS 4.0  |
-| ImmersionRC GHOST | 1.87M | STM-based; No Longer Supported on ELRS 4.0 |
+| FrSky R9M/R9M Lite/R9M Lite Pro | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| FrSky R9M 2018 (non-ACCESS) | 115K | [Resistor Mod](../../hardware/inverter-mod.md) for 400K; <br />STM-based; No Longer Supported from ELRS 4.0 onwards |
+| QuadKopters JR & Slim | 5.25M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| SIYI FM30 | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| ImmersionRC GHOST | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
 
 !!! note "Note"
     The Max Baud Rate for external modules will still depend on the capabilities of the Radio Handset. 
