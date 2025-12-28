@@ -12,7 +12,7 @@ template: main.html
 
 **Build** your firmware file, either via the ExpressLRS Configurator or PlatformIO. The ExpressLRS Configurator will open a folder for you where the correct firmware file was created and should be named like `<target name>-<version>.bin` (e.g. for the Happymodel ES24TX, the file will be `HappyModel_ES24TX_2400_TX-2.0.0.bin`). Meanwhile, PlatformIO should create the file within the `\src\.pio\build\<target name>\` folder.
 
-Put your device in WiFi Updating mode. For TX modules, this is accomplished using the ExpressLRS Lua Script. Simply select `WiFi Update` from the script and it should start the Update Hotspot. For receivers, power the receiver and wait until `AUTO_WIFI_ON_INTERVAL` time has elapsed and the LED on the receiver is blinking fast.
+Put your device in WiFi Updating mode. For TX modules, this is accomplished using the ExpressLRS Lua Script. Simply select `WiFi Update` from the script and it should start the Update Hotspot. For receivers, power the receiver and either wait until `AUTO_WIFI_ON_INTERVAL` time has elapsed or, if available, press the boot button for 5 seconds. Once the receiver has started the WiFi hotspot, the LED on the receiver should be blinking fast.
 
 Connect to the hotspot that the device has created. For TX modules, this hotspot should show up as **ExpressLRS TX** while for receivers, the hotspot will have a name such as **ExpressLRS RX**. They have the same password: `expresslrs`. 
 
