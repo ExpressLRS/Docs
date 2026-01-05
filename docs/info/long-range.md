@@ -42,6 +42,7 @@ Anyone can add an entry to the table, and entries should include the:
     | 12.2           | 500              | 250           | Wing | No                     | Börner        | [Link](https://youtu.be/GUUngM6NcAg)                |
     | 10.2           | 500              | 10            | Quad | Yes                    | mrscythe      | [Link](https://youtu.be/IpiPEZrCGtg)                |
     | 10.0           | 50               | 250           | Quad | No                     | Disnator      | [Link](https://youtu.be/p6USo0VsLag)                |
+    | 8.0            | 500              | 500           | Quad | No                     | NUFAN         | [Link](https://www.youtube.com/watch?v=HjTyP4xnT50) |
     | 7.1            | 500              | 100           | Wing | No                     | Bri'ish       | [Link](https://youtu.be/FsQiL0LYnaY)                |
     | 7.0            | 150              | 50            | Quad | No                     | Taufik        | [Link](https://youtu.be/bUlUGCup48I)                |
     | 5.0            | 250              | 500           | Quad | No                     | ZoFPV         | [Link](https://youtu.be/JyNvywwi90s)                |
