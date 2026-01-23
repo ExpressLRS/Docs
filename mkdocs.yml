@@ -299,6 +299,7 @@ nav:
           - Sentinel Tracker Integration: software/backpack-telemetry.md
           - Serial VTX: software/serialvtx.md
           - Team Racing: software/teamracing.md
+          - Trainer (Head Tracking) Input: software/trainer-input.md
       - Testing:
           - CRC Testing: software/testing/crc-testing.md
           - RX Testing: software/testing/rx-scoreboard.md
