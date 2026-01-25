@@ -186,7 +186,7 @@ If you are on Windows, QGroundControl requires a recent daily build to support t
         - **macOS**: ⬜ Leave the `Force DTR Low` checkbox **unchecked**
 
     !!! danger "Windows Users: DTR MUST Be Low"
-        On Windows, you **must** enable "Force DTR Low" or the connection will fail and your TX module will reboot / lockup. This is due to how Windows handles serial port control signals with ESP32 hardware. This setting is a recent addition to QGC which is why the daily builds are suggested.
+        On Windows, if you use QGC, you **must** enable "Force DTR Low" or the connection will fail and your TX module will reboot / lockup. This is due to how Windows handles serial port control signals with ESP32 hardware. This setting is a recent addition to QGC which is why the daily builds are suggested. If you're using a custom approach, also make sure you disable the RTS in the serial port communication, unless it will reboot / lockup the TX module.
 
 1. **Save and Connect**:
     - Click **OK** to save the comm link
