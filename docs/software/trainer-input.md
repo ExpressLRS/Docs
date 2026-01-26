@@ -46,7 +46,7 @@ sent to the receiver.
 !!! note "NOTE"
     It is important to remember that if you must also select a packet rate and switch mode that will actually send all the
     channels you need to the receiver. e.g if you are selecting "Aux6" then you will need to be using either 12ch or 16/2
-    channel modes
+    channel modes.
 
 ### EdgeTX Trainer Input
 
@@ -61,7 +61,7 @@ the Mode as "Master/CRSF".
 ![Trainer](../assets/screenshots/trainer.png)
 ![Master CRSF](../assets/screenshots/master-crsf.png)
 
-Once this is done you can go to the Mixes tab and set source as a trainer input such as TR1, TR2 etc
+Once this is done you can go to the Mixes tab and set source as a trainer input such as TR1, TR2 etc.
 
 ![Mixes](../assets/screenshots/mixes.png)
 
@@ -70,7 +70,7 @@ With all this configured, channel 1 coming across the backpack should be mapped 
 !!! note "NOTE"
     Again, it is important to remember that if you must also select a packet rate and switch mode that will actually send
     all the channels you need to the receiver. e.g if you are mapping TR1 to channel, TR2 to channel 11 etc., then you
-    will need to be using either 12ch or 16/2 channel modes
+    will need to be using either 12ch or 16/2 channel modes.
 
 ## Example Usage
 
@@ -79,10 +79,13 @@ With all this configured, channel 1 coming across the backpack should be mapped 
 This applies to the HDZero Goggle, HDZero Goggle 2 and HDZero BoxPro+ (not the BoxPro as it does not have the backpack)
 
 - Make sure that the goggles backpack is updated with the latest version of the HDZero VRX backpack firmware
+  ![Backpack On](../assets/screenshots/hdzero-backpack-version.png)
 - In the goggles menu system, go to the "ELRS" section and ensure that the Backpack is "On"
+  ![Mixes](../assets/screenshots/hdzero-backpack-on.png)
 - In the "Head Tracker" menu ensure that "Tracking" is set to "On"
+  ![Mixes](../assets/screenshots/hdzero-headtracker-on.png)
 
-That should be all that is required to get head-tracking with the HDZero goggles
+That should be all that is required to get head-tracking with the HDZero goggles.
 
 ### Boost Pedal
 
@@ -90,4 +93,4 @@ An easy to construct wireless pedal that can send a single channel high/low thro
 This is used for Street League and Underground Drone League RPM BOOST race features, or a Velocidrone
 Combat weapons trigger.
 
-For more details, see backpack PR https://github.com/ExpressLRS/Backpack/pull/201
+For more details, see backpack PR https://github.com/ExpressLRS/Backpack/pull/201.
