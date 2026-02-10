@@ -539,6 +539,8 @@ UAV
 UAVfutures
 Ardupilot
 Emuflight
+ASpd
+EGT
 MUSTARDTIGER
 RockIP
 UDRP

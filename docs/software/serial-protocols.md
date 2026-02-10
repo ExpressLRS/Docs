@@ -185,12 +185,12 @@ Tested HoTT Telemetry devices (OEM and 3rd party):
 - YGE 35LVT. ESC (all other YGE Telemetry ESCs will work too)
 - VSpeak Vario Pro
 - X-Vario 2
+- VSpeak turbine telemetry (minimum requirement ExpressLRS firmware V4, EdgeTX firmware 2.11.0)
 
 HoTT Telemetry protocol is running on a multi-device capable single wire half duplex bus and requires a bus master to orchestrate the communication between the bus master and the connected devices. The ELRS receiver acts as the bus master communicating with the devices. The bus master receives selected HoTT Telemetry data to be forward to the ELRS CRSF protocol based over-the-air telemetry down link. The list of additional telemetry sensors provided shows the telemetry sensors available for EdgeTX depending on the HoTT Telemetry devices connected to the HoTT Telemetry bus:
 
 - Baro altitude (AGL)
 - Baro vertical speed (Vario)
-
 - GPS latitude
 - GPS longitude
 - GPS groundspeed
@@ -199,11 +199,23 @@ HoTT Telemetry protocol is running on a multi-device capable single wire half du
 - GPS number of satellites
 - GPS distance - possible if added as EdgeTX calculated sensor
 - GPS traveled distance - possible with LUA script
-
 - Batt voltage
 - Batt current
 - Batt capacity
 - Batt remaining
+- additional Temp, Volt and RPM sensors depending on connected HoTT Telemetry devices
+
+Supported VSpeak ESC turbine telemetry sensors:
+
+- ESC ASpd Airspeed 1 = 1km/h (only if ECU provides)
+- ESC VOLT0 ECU 1 = 0.1V
+- ESC VOLT1 Pump voltage/PWM 1 = 0.1V or 100PWM depending on ECU
+- ESC RPM0 RPM	1 = 10 RPM
+- ESC RPM2 Fuel in ml 1 = 1ml
+- ESC RPM3 Fuel flow in ml/min 1 = 1ml/min
+- ESC TEMP2 EGT 1 = 10C
+- ESC TEMP5 Throttle 1 = 1%
+- ESC TEMP6 Status ECU specific status table index
 
 Requirements for using HoTT Telemetry:
 
