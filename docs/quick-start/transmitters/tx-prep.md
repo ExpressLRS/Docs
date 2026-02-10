@@ -310,6 +310,58 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 
     Set the Internal RF module to Off, and set the External RF module to CRSF protocol, as any External RF module requires.
 
+### Version 4.0 Arming Options
+
+!!! Note "**Arm using Switch** Requirements"
+    Arming Mode Switch **requires** EdgeTX version 2.11 or newer and ExpressLRS version 4.0 or newer. If you cannot find the "Arm using" option you need to update your EdgeTX firmware.
+
+Starting with ExpressLRS v4.0.0 an additional Arming method is introduced. 
+
+The traditional Arming method, using Channel 5 (Aux1) driven by EdgeTX Mixer's Channel 5 is the default and is still encouraged to be used by majority of FPV pilots using Betaflight, INAV or Ardupilot (and their respective derivatives like Emuflight, Rotorflight, etc.) more so when using non-Full Res modes. This will now be called **Arm using CH5**.
+
+The alternative Arming method **Arm using Switch** doesn’t use CH5 to communicate the user's Arming request to the TX module. This means your Channel 5 will be free for other functions, like controlling gains on your stabilizer, or changing flight modes, or as a regular full proportional channel ^^when using any of the Full Resolution packet rates and Modes^^. No need to remap Output 5 to use it as a regular proportional control channel. **Arm using Switch** works for all packet rates and switch modes but is especially useful for full res packet rates in combination with PWM receivers. **Arm using Switch** is performed by user selected sources, e.g. physical or logical switches, anything EdgeTX offers as a source. **Arm using Switch** can be enabled in the EdgeTX Internal/External RF Model Setup menu by changing “Arm using” to “Switch”.
+
+!!! Note "Hybrid and Wide Switch Modes"
+    With **Arm using Switch** selected, the min and max values for CH5 will still come from the switch you have selected for arming, and will still function as 2-position switch. It will override the model's Channel 5 Mixes Configuration.
+
+Related Reading: [The Importance of Arming](../../software/switch-config.md#why-do-you-keep-saying-put-arm-on-aux1)
+
+#### How to set up Arming Mode Switch:
+
+1. Press the ++"MDL"++ Key.
+    - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
+    - Consult your Radio User's Manual on how to get to the Model Menu.
+2. Press the ++"PAGE"++ Key until you reach the Model Setup Page.
+    - On radios with Colored screens, this should be the first page when you activate the Model Menu.
+    - On radios with Monochrome screens, this should be the second page upon activating the Model Menu.
+3. Scroll down until you reach the Internal or External RF settings, depending on which module you want to use for this model.
+    - Color screen radios provide separate pages for these.
+    - On Monochrome screens, the options are all in one page. 
+4. Short-press the scroll-wheel button or press the ++enter++ Key and change the setting to "Switch"
+    <figure markdown>
+    ![Arming Color](../../assets/images/armingSwitch01.png)
+    </figure>
+
+    <figure markdown>
+    ![Arming Color](../../assets/images/armingSwitch02.png)
+    </figure>
+
+5. Press the ++enter++ Key to apply your selection.
+
+    <figure markdown>
+    ![Arming Color](../../assets/images/armingSwitch03.png)
+    </figure>
+
+6. Select the next option to set your arming switch.
+6. Press the ++enter++ Key and use the scroll-wheel to set your new arming switch. It can be any switch on the radio, a Logical Switch or any source. You can also flick the physical switch on the radio to set it.
+
+    <figure markdown>
+    ![Arming Color](../../assets/images/armingSwitch04.png)
+    </figure>
+
+7. Press the ++enter++ Key once more to set the switch.
+8. Press ++"RTN"++ Key once you're done with the rest of your changes.
+
 ### Switches and Aux Channels
 
 By default, a fresh model does not have any Aux Channels configured (Aux channels start from Ch5, with the first 4 Channels assigned to your joysticks). If moving any of the switches in your radio doesn't affect your Modes in Betaflight or INAV, this is one of the main reasons. So let's get this sorted out!
@@ -347,49 +399,3 @@ By default, a fresh model does not have any Aux Channels configured (Aux channel
     <figure markdown>
     ![mixesAux Color](../../assets/images/txprep-clr-mixAux.jpg)
     </figure>
-
-### V4.0 Arming Options
-
-Starting with ExpressLRS v4.0.0 an additional Arming method is introduced. 
-
-The traditional Arming method, via Channel 5 (Aux1) driven by EdgeTX Channel Mixer 5 is the default and is still encouraged to be used by majority of FPV pilots using Betaflight, INAV or Ardupilot (and their respective derivatives like Emuflight, etc.). This will now be called **Arm using CH5**.
-
-The alternative Arming method **Arm using Switch** doesn’t use CH5 /to communicate the user's Arming request to the TX module. This means your Channel 5 will be free for other functions, like controlling gains on your stabilizer, or changing flight modes, or as a regular full proportional channel when using any of the Full Resolution packet rates and Modes. **Arm using Switch** is performed by user selected sources, e.g. physical or logical switches, anything EdgeTX offers as a source really. **Arm using Switch** works for all packet rates and switch modes but is especially useful for full res packet rates in combination with PWM receivers. No more “remapping CH5” required to use CH5 as a regular proportional control channel. **Arm using Switch** can be enabled in the EdgeTX Internal/External RF Model Setup menu by changing “Arm using” to “Switch”.
-
-
-!!! Note **Arm using Switch** Requirements
-    Arming Mode Switch **requires** EdgeTX version 2.11 or newer and ExpressLRS version 4.0 or newer. If you cannot find the "Arm using" option you need to update your EdgeTX firmware.
-
-#### How to set up Arming Mode Switch:
-
-1. Press the ++"MDL"++ Key.
-    - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.
-    - Consult your Radio User's Manual on how to get to the Model Menu.
-2. Press the ++"PAGE"++ Key until you reach the Model Setup Page.
-    - On radios with Colored screens, this should be the first page when you activate the Model Menu.
-    - On radios with Monochrome screens, this should be the second page upon activating the Model Menu.
-3. Scroll down until you reach the Internal or External RF settings, depending on which module you want to use for this model.
-    - Color screen radios provide separate pages for these.
-    - On Monochrome screens, the options are all in one page. 
-4. Short-press the scroll-wheel button or press the ++enter++ Key and change the setting to "Switch"
-    <figure markdown>
-    ![Arming Color](../../assets/images/armingSwitch01.png)
-    </figure>
-
-    <figure markdown>
-    ![Arming Color](../../assets/images/armingSwitch02.png)
-    </figure>
-
-5. Press the ++enter++ Key to apply your selection.
-6. Use the scroll-wheel and set your new arming switch. It can be any switch on the radio, a Logical Switch or any source.
-
-    <figure markdown>
-    ![Arming Color](../../assets/images/armingSwitch03.png)
-    </figure>
-
-    <figure markdown>
-    ![Arming Color](../../assets/images/armingSwitch04.png)
-    </figure>
-
-7. Press the ++enter++ Key once more to set the switch.
-8. Press ++"RTN"++ Key once your done with your changes.
