@@ -7,25 +7,13 @@ description: Which ExpressLRS (ELRS) Hardware to buy? What's the difference betw
 
 ExpressLRS is #blessed with the benefit of there being many options of transmitters and receivers available from a variety of manufacturers. This begs the question "what is the best?" There is no best option for hardware, only one that has the features you want for the price you want to pay in the size you want it. ExpressLRS does not recommend a specific brand or model, but provide the information to help you select the right ELRS hardware for your needs. The following page will list manufacturers and features to look out for on their hardware.
 
-!!! note Note
-    This list will list primarily 2.4GHz hardware with 900MHz only listed in the frequency category, as 2.4GHz has become a significantly larger portion of the ELRS market.
+!!! note Supported Hardware
+    The ExpressLRS (ELRS) team works closely with hardware manufacturers to review and test devices. A specific target is added to the ELRS Configurator only after this validation process is complete.
+	
+    If hardware is not listed in the Configurator, it either did not meet project requirements or the manufacturer chose not to collaborate with the ELRS project. In these cases, support should be sought directly from the manufacturer.
+	
+    Takeaway: Always check the ELRS Configurator for supported hardware, and consider supporting manufacturers who actively contribute to open-source development and the ExpressLRS project 💪
 
-## Manufacturers
-  * [Axisflying](https://www.axisflying.com)
-  * [BetaFPV](https://betafpv.com)
-  * [EMAX](https://emaxmodel.com)
-  * [Foxeer](https://www.foxeer.com)
-  * [FrSky](https://www.frsky-rc.com)
-  * [GEPRC](https://geprc.com)
-  * [Happymodel](https://www.happymodel.cn)
-  * [HGLRC](https://www.hglrc.com)
-  * [iFlight](https://www.iflight.com)
-  * [Jumper](https://www.jumper-rc.com)
-  * [MatekSys](http://www.mateksys.com)
-  * [NamimnoRC](https://m.facebook.com/profile.php?id=100070062095159&_rdr)
-  * [RadioMaster](https://www.radiomasterrc.com)
-  * [Skystars](https://skystars-rc.com)
-  * [Vantac](https://www.frsky-rc.com)
 ## Receiver Selection
 This section exists to list some common features of receivers and will give some examples of receivers with these features.
 

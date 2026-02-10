@@ -24,6 +24,7 @@ Blackbox
 BluetoothLE
 Bolded
 Bootloaders
+BoxPro
 Bri'ish
 Börner
 CCPA
@@ -63,6 +64,7 @@ DeadBot
 Disnator
 DisplayPort
 DivisionRc
+DK
 DLink
 EEA
 EL
@@ -302,6 +304,7 @@ VSCode
 VSCode's
 VTX
 Vantac
+Velocidrone
 Vergara
 Voigt
 V16
@@ -536,3 +539,14 @@ UAV
 UAVfutures
 Ardupilot
 Emuflight
+MUSTARDTIGER
+RockIP
+UDRP
+Lanham
+cybersquatting
+mustardtiger
+intermediary
+spuriously
+unambiguously
+injunctive
+counsel
