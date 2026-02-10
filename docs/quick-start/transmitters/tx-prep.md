@@ -313,7 +313,7 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 ### Version 4.0 Arming Options
 
 !!! Note "**Arm using Switch** Requirements"
-    Arm using Switch **requires** EdgeTX version 2.11 or newer and ExpressLRS version 4.0 or newer. If you cannot find the "Arm using" option you need to update your EdgeTX firmware.
+    Arm using Switch **requires** EdgeTX version 2.11 or newer and ExpressLRS version 4.0 or newer. If you cannot find the "Arm using" option you need to update your EdgeTX and/or ExpressLRS firmware.
 
 Starting with ExpressLRS v4.0.0 an additional Arming method is introduced. 
 
