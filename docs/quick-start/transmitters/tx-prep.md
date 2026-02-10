@@ -324,7 +324,7 @@ The alternative Arming method **Arm using Switch** doesn’t use CH5 to communic
 !!! Note "Hybrid and Wide Switch Modes"
     With **Arm using Switch** selected, the min and max values for CH5 will still come from the switch you have selected for arming, and will still function as 2-position switch. It will override the model's Channel 5 Mixes Configuration.
 
-Related Reading: [The Importance of Arming](../../software/switch-config.md#why-do-you-keep-saying-put-arm-on-aux1)
+Related Reading: [The Importance of Arming](../../software/switch-config.md#whats-important-with-arming)
 
 #### How to set up Arming Mode Switch:
 
