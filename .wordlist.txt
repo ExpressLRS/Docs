@@ -537,6 +537,8 @@ USPTO
 Squadding
 UAV
 UAVfutures
+ASpd
+EGT
 MUSTARDTIGER
 RockIP
 UDRP
