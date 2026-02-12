@@ -312,19 +312,40 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
 
 ### Version 4.0 Arming Options
 
-!!! Note "**Arm using Switch** Requirements"
+Starting with ExpressLRS v4.0.0 an additional Arming method is introduced.
+
+!!! info "What's so important with Arming?"
+    ExpressLRS checks for a switch position to determine what safeguards or performance boosts will be active to prevent disconnections, especially when the receiver is on a flying/moving RC aircraft or vehicle. See [The Importance of Arming](../../software/switch-config.md#whats-so-important-with-arming) for an in-depth explanation.
+
+The traditional Arming method, using Channel 5 (Aux1) driven by EdgeTX Mixer's Channel 5 is the default and is still encouraged to be used by majority of FPV pilots using Betaflight, INAV or Ardupilot (and their respective derivatives like Emuflight, Rotorflight, etc.) more so when using non-Full Res modes. This is because you are still required to have a mode for arming using an Aux channel. This will now be called **Arm using CH5** and is set by EdgeTX (2.11 or newer) as default.
+
+<figure markdown>
+![Arming Color](../../assets/images/armingSwitch01.png)
+</figure>
+
+See the [next section](#switches-and-aux-channels) on how to configure your Channel Mixes.
+
+!!! Tip "**Arm using Switch** Requirements"
     Arm using Switch **requires** EdgeTX version 2.11 or newer and ExpressLRS version 4.0 or newer. If you cannot find the "Arm using" option you need to update your EdgeTX and/or ExpressLRS firmware.
 
-Starting with ExpressLRS v4.0.0 an additional Arming method is introduced. 
+The alternative Arming method, **Arm using switch** is more suited to users who aren't familiar with drone-side arming concept, or primarily those using PWM receivers. **Arm using Switch** is performed by user selected sources, e.g. physical or logical switches, anything EdgeTX offers as a source. It works in all packet rates and switch modes, with varying channel reactions, explained below. 
 
-The traditional Arming method, using Channel 5 (Aux1) driven by EdgeTX Mixer's Channel 5 is the default and is still encouraged to be used by majority of FPV pilots using Betaflight, INAV or Ardupilot (and their respective derivatives like Emuflight, Rotorflight, etc.) more so when using non-Full Res modes. This will now be called **Arm using CH5**.
+When in Full Res modes, Channel 5 will behave as any of the other full proportional channels. This means:
 
-The alternative Arming method **Arm using Switch** doesn’t use CH5 to communicate the user's Arming request to the TX module. This means your Channel 5 will be free for other functions, like controlling gains on your stabilizer, or changing flight modes, or as a regular full proportional channel ^^when using any of the Full Resolution packet rates and Modes^^. No need to remap Output 5 to use it as a regular proportional control channel. **Arm using Switch** works for all packet rates and switch modes but is especially useful for full res packet rates in combination with PWM receivers. **Arm using Switch** is performed by user selected sources, e.g. physical or logical switches, anything EdgeTX offers as a source. **Arm using Switch** can be enabled in the EdgeTX Internal/External RF Model Setup menu by changing “Arm using” to “Switch”.
+- No need to remap Output 5 with other channel input sources.
+- No need to skip Output 5 on your PWM receivers if you don't know how to remap outputs.
+- SBUS-dependent Stabilizer gain control requiring Channel 5 will work now.
+- Flight Modes requiring Channel 5 will also work.
+
+When not in Full Res mode, Channel 5 will behave as a 2-position switch, but it will not use the configured Mix for Channel 5.
 
 !!! Note "Hybrid and Wide Switch Modes"
-    With **Arm using Switch** selected, the min and max values for CH5 will still come from the switch you have selected for arming, and will still function as 2-position switch. It will override the model's Channel 5 Mixes Configuration.
+    With **Arm using Switch** selected, the min and max values for Channel 5 will still come from the switch you have selected for arming, and will still function as 2-position switch. It will override the model's Channel 5 Mixes Configuration.
 
-Related Reading: [The Importance of Arming](../../software/switch-config.md#whats-important-with-arming)
+!!! info "Channel 14 Behavior"
+    To help receivers determine the Armed state, Channel 14 gets the channel values for the switch configured for arming in Hybrid, Wide and 8ch/12ch Full Res switch modes.
+
+**Arm using Switch** can be enabled in the EdgeTX Internal/External RF Model Setup menu by changing “Arm using” to “Switch”.
 
 #### How to set up Arming Mode Switch:
 
@@ -337,7 +358,7 @@ Related Reading: [The Importance of Arming](../../software/switch-config.md#what
 3. Scroll down until you reach the Internal or External RF settings, depending on which module you want to use for this model.
     - Color screen radios provide separate pages for these.
     - On Monochrome screens, the options are all in one page. 
-4. Short-press the scroll-wheel button or press the ++enter++ Key and change the setting to "Switch"
+4. Short-press the scroll-wheel button or press the ++enter++ Key and change the setting to "Switch". This option will not show up for External RF unless an External ExprressLRS Module is being detected by the handset.
     <figure markdown>
     ![Arming Color](../../assets/images/armingSwitch01.png)
     </figure>
@@ -364,7 +385,7 @@ Related Reading: [The Importance of Arming](../../software/switch-config.md#what
 
 ### Switches and Aux Channels
 
-By default, a fresh model does not have any Aux Channels configured (Aux channels start from Ch5, with the first 4 Channels assigned to your joysticks). If moving any of the switches in your radio doesn't affect your Modes in Betaflight or INAV, this is one of the main reasons. So let's get this sorted out!
+By default, a fresh model does not have any Aux Channels configured (Aux channels start from Ch5, with the first 4 Channels assigned to your joysticks/gimbals). If moving any of the switches in your radio doesn't affect your Modes in Betaflight or INAV, this is one of the main reasons. So let's get this sorted out!
 
 1. Press the ++"MDL"++ Key.
     - Older Radios or those with only one Menu Key will need to short-press the ++context-menu++ Key to access the Model Menu.

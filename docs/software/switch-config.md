@@ -6,7 +6,7 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 !!! warning "WARNING" 
-    IF you're using Arming Mode CH5, **put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
+    IF you're using `Arm using CH5`, **put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
 ## Summary of Switch Configuration Modes
 
@@ -22,15 +22,15 @@ This table summarizes the switch configuration modes, available channel switch p
 | 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
-| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | - |
+| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 10  | Aux 6 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 11  | Aux 7 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
-| 13  | Aux 9 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 13  | Aux 9 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
 | 14  | Aux 10 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
 | 15  | Aux 11 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
 | 16  | Aux 12 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
-|  | Packet<br>Rates | 50 thru<br>F1000 | 50 thru<br>F1000 | 100&333<br>Only | 100&333<br>Only | 100&333<br>Only |
+|  | Packet <br>Rates | 50 thru <br>F1000 | 50 thru <br>F1000 | Full Res <br>Only | Full Res <br>Only | Full Res <br>Only |
 
 <small>* v4.0 changes, with the introduction of the new arming methods</small>
  
@@ -47,10 +47,12 @@ This table summarizes the switch configuration modes, available channel switch p
 
 
 !!! warning "WARNING" 
-    IF you're using Arming Mode CH5, **put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
+    IF you're using `Arm using CH5`, **put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
-!!! note
-    If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the WiFi interface of the receiver and map any of the other channels to PWM Output 5. Please always still use AUX1 for the 2-pos Arm switch.
+!!! note "ExpressLRS 3.x PWM output 5"
+    If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the WiFi interface of the receiver and map any of the other channels to PWM Output 5. Mixer Channel 5 is still going to be used for arming the TX module, and will be a 2-position channel.
+
+    No longer needed starting with ExpressLRS 4.x. Select one of the Full Res modes and Channel 5 will be a full proportional channel, like the others.
 
 ### Channel Update Rate versus Packet Rate
 
@@ -110,11 +112,19 @@ If using ArduPilot in **Wide** mode you will see that the channel outputs don't 
 
 These switch modes come in three flavors based on the number of output channels you would like and are only available on packet rates of 100Hz Full and 333Hz Full.
 
-1. **8ch** - Channels 1 to 4 and Channels 6 to 9 are sent 10-bit, at the selected Packet Rate, along with Channel 5 (AUX1) in 1-bit (2-position) for Arming.
+=== "Version 4.0 Changes"
+    1. **8ch** - Channels 1 to 8 are sent 10-bit, at the selected Packet Rate.
 
-2. **16ch Rate/2** - All the Channels are sent 10-bit but at half rate.
+    2. **16ch Rate/2** - All the Channels are sent 10-bit but at half rate.
 
-3. **12ch Mixed** - Channels 1 to 4 are sent 10-bit with Channel 5 (AUX1) in 1-bit (2-position) for Arming at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
+    3. **12ch Mixed** - Channels 1 to 4 are sent 10-bit at the selected Packet Rate. Channels 5 to 12 are then sent at 10-bit but at half rate.
+
+=== "Version 3.x"
+    1. **8ch** - Channels 1 to 4 and Channels 6 to 9 are sent 10-bit, at the selected Packet Rate, along with Channel 5 (AUX1) in 1-bit (2-position) for Arming.
+
+    2. **16ch Rate/2** - All the Channels are sent 10-bit but at half rate.
+
+    3. **12ch Mixed** - Channels 1 to 4 are sent 10-bit with Channel 5 (AUX1) in 1-bit (2-position) for Arming at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
 
 All of these 10-bit or 1024 positions are mapped to PWM 885us to 2115us (1 bit = 1.23046875us) in what is called **"CRSF Extended Limits"**
 
@@ -124,13 +134,16 @@ All of these 10-bit or 1024 positions are mapped to PWM 885us to 2115us (1 bit =
 
 ## FAQ
 
-### <span class="custom-heading" data-id="1">What's important with Arming?</span>
+### <span class="custom-heading" data-id="1">What's so important with Arming?</span>
 
-??? Note "What's important with Arming?"
+??? Note "What's so important with Arming?"
 
     **SAFETY**
 
     Your transmitter and receiver act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver are free to adjust their communication in order to make the LUA and other configuration operations more responsive. When "disarmed", everything will appear to be working appropriately but none of the safeguards will be in place and performance will not be what you expect. 
+
+    !!! warning inline end "No Safeguards"
+        Without these safeguards, these actions can interrupt OTA transmission causing disconnections and ultimately failsafe.
 
     When `Armed`, these safeguards are applied:
 
