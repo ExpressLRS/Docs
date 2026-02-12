@@ -358,7 +358,7 @@ When not in Full Res mode, Channel 5 will behave as a 2-position switch, but it 
 3. Scroll down until you reach the Internal or External RF settings, depending on which module you want to use for this model.
     - Color screen radios provide separate pages for these.
     - On Monochrome screens, the options are all in one page. 
-4. Short-press the scroll-wheel button or press the ++enter++ Key and change the setting to "Switch". This option will not show up for External RF unless an External ExprressLRS Module is being detected by the handset.
+4. Short-press the scroll-wheel button or press the ++enter++ Key and change the setting to "Switch". This option will not show up for External RF unless an External ExpressLRS Module is being detected by the handset.
     <figure markdown>
     ![Arming Color](../../assets/images/armingSwitch01.png)
     </figure>
