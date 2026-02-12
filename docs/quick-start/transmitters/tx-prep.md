@@ -337,7 +337,7 @@ When in Full Res modes, Channel 5 will behave as any of the other full proportio
 - SBUS-dependent Stabilizer gain control requiring Channel 5 will work now.
 - Flight Modes requiring Channel 5 will also work.
 
-When not in Full Res mode, Channel 5 will behave as a 2-position switch, but it will not use the configured Mix for Channel 5.
+When not in Full Res mode, Channel 5 will behave as a 2-position switch, but it will not use the configured Mix for Channel 5 and instead use the configured arming switch as the Channel source.
 
 !!! Note "Hybrid and Wide Switch Modes"
     With **Arm using Switch** selected, the min and max values for Channel 5 will still come from the switch you have selected for arming, and will still function as 2-position switch. It will override the model's Channel 5 Mixes Configuration.
