@@ -347,6 +347,10 @@ When not in Full Res mode, Channel 5 will behave as a 2-position switch, but it 
 
 **Arm using Switch** can be enabled in the EdgeTX Internal/External RF Model Setup menu by changing “Arm using” to “Switch”.
 
+<figure markdown>
+![Arming](../../assets/images/v4Arming.png)
+</figure>
+
 #### How to set up Arming Mode Switch:
 
 1. Press the ++"MDL"++ Key.
