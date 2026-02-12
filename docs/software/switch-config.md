@@ -18,7 +18,7 @@ This table summarizes the switch configuration modes, available channel switch p
 | 2   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | 3   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | 4   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
-| 5 | Aux 1 | **2-pos<br>Arm** | **2-pos<br>Arm** | CRSF Ext<br>Limits<sup>H</sup><br/>Arm* | CRSF Ext<br>Limits<sup>H</sup><br/>Arm | CRSF Ext<br>Limits<sup>H</sup><br/>Arm* |
+| 5 | Aux 1 | **2-pos<br>Arm** | **2-pos<br>Arm** | **CRSF Ext<br>Limits<sup>H</sup><br/>Arm*** | CRSF Ext<br>Limits<sup>H</sup><br/>**Arm*** | CRSF Ext<br>Limits<sup>H</sup><br/>**Arm*** |
 | 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
@@ -27,7 +27,7 @@ This table summarizes the switch configuration modes, available channel switch p
 | 11  | Aux 7 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 13  | Aux 9 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
-| 14  | Aux 10 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
+| 14  | Aux 10 | **2-pos<br>Arm*** | **2-pos<br>Arm*** | **2-pos<br>Arm*** | CRSF Ext<br>Limits<sup>H</sup> | **2-pos<br>Arm*** |
 | 15  | Aux 11 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
 | 16  | Aux 12 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
 |  | Packet <br>Rates | 50 thru <br>F1000 | 50 thru <br>F1000 | Full Res <br>Only | Full Res <br>Only | Full Res <br>Only |
