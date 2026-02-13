@@ -180,7 +180,7 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | RadioMaster TX12 | 5.25M | |
 | RadioMaster GX12 | 5.25M | External at 1.87M |
 | RadioMaster TX15 | 5.25M | |
-| RadioMaster TX16mk3 | 5.25M | |
+| RadioMaster TX16MK3 | 5.25M | |
 | Jumper T-Lite V2 | 1.87M | Limited by Handset |
 | Jumper T-Pro | 1.87M | Limited by Handset |
 | Jumper T20 | 1.87M | Limited by Handset |
@@ -327,7 +327,7 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
     </figure>
 
 !!! Note
-    The iFlight Commando 8 is NOT using an internal RF module for its ExpressLRS units, unlike the RadioMaster Zorro, RadioMaster TX16S MK2, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro or the BetaFPV Lite Radio 3 Pro.
+    The iFlight Commando 8 is NOT using an internal RF module for its ExpressLRS units, unlike the RadioMaster Zorro, RadioMaster TX16S MK2/MK3, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro or the BetaFPV Lite Radio 3 Pro.
 
     Set the Internal RF module to Off, and set the External RF module to CRSF protocol, as any External RF module requires.
 
