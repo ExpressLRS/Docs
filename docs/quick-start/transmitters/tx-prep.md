@@ -180,6 +180,7 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | RadioMaster TX12 | 5.25M | |
 | RadioMaster GX12 | 5.25M | External at 1.87M |
 | RadioMaster TX15 | 5.25M | |
+| RadioMaster TX16mk3 | 5.25M | |
 | Jumper T-Lite V2 | 1.87M | Limited by Handset |
 | Jumper T-Pro | 1.87M | Limited by Handset |
 | Jumper T20 | 1.87M | Limited by Handset |
@@ -189,35 +190,36 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | BetaFPV Lite Radio 3 Pro | 1.87M | Limited by Handset |
 | HelloRadio V16/R | 5.25M | |
 | HelloRadio V14 | 5.25M | |
+| HelloRadio V12 | 5.25M | |
 | FlySky PA01 | 5.25M | |
 
 | External TX Module | Max Baud Rate | Notes |
 | ---- | ---- | ---- |
-| Happymodel ES24TX (inc. slim, nano, etc) | 5.25M | |
-| Happymodel ES24TX Pro/Slim Pro | 5.25M | |
-| Happymodel ES900TX | 5.25M | |
-| Happymodel ES915/868TX | 1.87M | STM-based |
-| BetaFPV Micro & Nano (V1 & V2) | 5.25M | |
-| BetaFPV SuperG | 5.25M | |
-| RadioMaster Ranger (Micro & Nano included) | 5.25M | |
-| RadioMaster Bandit (Micro & Nano included) | 5.25M | |
-| RadioMaster Nomad | 5.25M | |
-| Axisflying Thor | 5.25M | |
-| EMAX Aeris OLED & Nano | 5.25M | |
-| GEPRC LinkFlow | 5.25M | |
-| BAYCK Dual-Band Gemini Micro & Nano | 5.25M | |
-| BAYCK Dual-Band Nano | 5.25M | |
-| Runcam Sirius | 5.25M | |
-| NamimnoRC Flash/Voyager (no OLED) | 3.75M | STM-based |
-| NamimnoRC Flash/Voyager OLED | 5.25M | |
+| Happymodel ES24TX (inc. slim, nano, etc) | 3.75M | |
+| Happymodel ES24TX Pro/Slim Pro | 3.75M | |
+| Happymodel ES900TX | 3.75M | |
+| BetaFPV Micro & Nano (V1 & V2) | 3.75M| |
+| BetaFPV SuperG | 3.75M | |
+| RadioMaster Ranger (Micro & Nano included) | 3.75M | |
+| RadioMaster Bandit (Micro & Nano included) | 3.75M | |
+| RadioMaster Nomad | 3.75M | |
+| Axisflying Thor | 3.75M | |
+| EMAX Aeris OLED & Nano | 3.75M | |
+| GEPRC LinkFlow | 3.75M | |
+| BAYCK Dual-Band Gemini Micro & Nano | 3.75M | |
+| BAYCK Dual-Band Nano | 3.75M | |
+| Runcam Sirius | 3.75M | |
+| NamimnoRC Flash/Voyager OLED | 3.75M | |
 | Vantac Lite | 1.87M | |
 | Jumper Aion Nano | 1.87M | |
 | iFlight Command 8 | 3.75M | wired as external module |
-| HGLRC Hermes | 5.25M | |
-| HGLRC T ONE OLED | 5.25M | |
+| HGLRC Hermes | 3.75M | |
+| HGLRC T ONE OLED | 3.75M | |
+| Happymodel ES915/868TX | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| NamimnoRC Flash/Voyager (no OLED) | 3.75M | STM-based; No Longer Supported from ELRS 4.0 onwards |
 | FrSky R9M/R9M Lite/R9M Lite Pro | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
 | FrSky R9M 2018 (non-ACCESS) | 115K | [Resistor Mod](../../hardware/inverter-mod.md) for 400K; <br />STM-based; No Longer Supported from ELRS 4.0 onwards |
-| QuadKopters JR & Slim | 5.25M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| QuadKopters JR & Slim | 3.75M | STM-based; No Longer Supported from ELRS 4.0 onwards |
 | SIYI FM30 | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
 | ImmersionRC GHOST | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
 
@@ -226,10 +228,10 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 
     As stated above, older radios like the QX7 and X9D(+) will require hardware mods and software tweaks, like the One Bit sampling mode, to work reliably at higher baud rates. We recommend not going higher than 400K on these radios. Set them higher at your own risk.
 
-    Newer EdgeTX radios can easily use higher baud rates without modification and we recommend using the maximum baud rate whenever you can. 
+    F4-based EdgeTX radios will be limited to 3.75M Baud Rates for external modules. Newer H7-based EdgeTX radios can be set to 5.25M for external modules but we recommend using 3.75M if you don't know what MCU your radio is using.
 
 ??? question "My TX Module is not in this list! (click/tap to expand)"
-    Don't be salty. That just means the maintainers are late with the updates. Newer TX modules being released are all ESP-based now. If your TX module has WiFi or Bluetooth Connectivity, then they are ESP-based, and thus, should be capable of 5.25M Baud Rate (depending on the handset).
+    Don't be salty. That just means the maintainers are late with the updates. Newer TX modules being released are all ESP-based now. If your TX module has WiFi or Bluetooth Connectivity, then they are ESP-based, and thus, should be capable of 3.75M Baud Rate (depending on the handset).
 
 ### ADC Filter
 
@@ -446,6 +448,6 @@ By default, a fresh model does not have any Aux Channels configured (Aux channel
 
 ### Channel Mixing
 
-This is important for those using PWM Receivers, and isn't using flight controllers. You would want to configure at least a basic channel mix for your application. Consult the EdgeTX documentation for a few simple mixes or utilize their Model Wizard for basic setup.
+This is important for those using PWM Receivers, and isn't using flight controllers. You would want to configure at least a basic channel mix for your application. Consult the [EdgeTX documentation](https://manual.edgetx.org/) for a few simple mixes or utilize their Model Wizard for basic setup.
 
 Once you have your PWM Receiver sync'd with your TX module or Radio, revisit your mix to confirm your control surfaces work as they should and adjust your mix as necessary, **BEFORE** attempting your first flight.
