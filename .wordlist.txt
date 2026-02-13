@@ -537,6 +537,8 @@ USPTO
 Squadding
 UAV
 UAVfutures
+Ardupilot
+Emuflight
 ASpd
 EGT
 MUSTARDTIGER
@@ -550,3 +552,4 @@ spuriously
 unambiguously
 injunctive
 counsel
+Rotorflight

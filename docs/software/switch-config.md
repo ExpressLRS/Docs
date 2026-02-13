@@ -6,7 +6,7 @@ description: To optimize the performance of ExpressLRS, it has different Switch 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 !!! warning "WARNING" 
-    **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
+    IF you're using `Arm using CH5`, **put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
 ## Summary of Switch Configuration Modes
 
@@ -18,19 +18,21 @@ This table summarizes the switch configuration modes, available channel switch p
 | 2   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | 3   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
 | 4   | Sticks | **Normal<br>Range** | **Normal<br>Range** | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | **CRSF Ext<br>Limits** |
-| 5 | Aux 1 | **2-pos<br>Arm** | **2-pos<br>Arm** | **2-pos<br>Arm** | CRSF Ext<br>Limits<sup>H</sup><br/>Arm | **2-pos<br>Arm** |
+| 5 | Aux 1 | **2-pos<br>Arm** | **2-pos<br>Arm** | **CRSF Ext<br>Limits<sup>H</sup><br/>Arm*** | CRSF Ext<br>Limits<sup>H</sup><br/>**Arm*** | CRSF Ext<br>Limits<sup>H</sup><br/>**Arm*** |
 | 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
-| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | **CRSF Ext<br>Limits** | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
+| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 10  | Aux 6 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 11  | Aux 7 | *6-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
 | 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64/128<br>-pos*<sup>RR</sup> | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
-| 13  | Aux 9 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | CRSF Ext<br>Limits<sup>H</sup> |
-| 14  | Aux 10 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
+| 13  | Aux 9 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
+| 14  | Aux 10 | **2-pos<br>Arm*** | **2-pos<br>Arm*** | **2-pos<br>Arm*** | CRSF Ext<br>Limits<sup>H</sup> | **2-pos<br>Arm*** |
 | 15  | Aux 11 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
 | 16  | Aux 12 | - | - | - | CRSF Ext<br>Limits<sup>H</sup> | - |
-|  | Packet<br>Rates | 50 thru<br>F1000 | 50 thru<br>F1000 | 100&333<br>Only | 100&333<br>Only | 100&333<br>Only |
+|  | Packet <br>Rates | 50 thru <br>F1000 | 50 thru <br>F1000 | Full Res <br>Only | Full Res <br>Only | Full Res <br>Only |
+
+<small>* v4.0 changes, with the introduction of the new arming methods</small>
  
 ### Switch Position / Channel Resolution
 
@@ -45,10 +47,12 @@ This table summarizes the switch configuration modes, available channel switch p
 
 
 !!! warning "WARNING" 
-    **Put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
+    IF you're using `Arm using CH5`, **put your arm switch on AUX1**, and set it as **~1000 is disarmed, ~2000 is armed**.
 
-!!! note
-    If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the WiFi interface of the receiver and map any of the other channels to PWM Output 5. Please always still use AUX1 for the 2-pos Arm switch.
+!!! note "ExpressLRS 3.x PWM output 5"
+    If using a receiver with PWM outputs and you would like to use the PWM output 5 on the receiver for a servo, gear, etc. Go into the WiFi interface of the receiver and map any of the other channels to PWM Output 5. Mixer Channel 5 is still going to be used for arming the TX module, and will be a 2-position channel.
+
+    No longer needed starting with ExpressLRS 4.x. Select one of the Full Res modes and Channel 5 will be a full proportional channel, like the others.
 
 ### Channel Update Rate versus Packet Rate
 
@@ -108,11 +112,19 @@ If using ArduPilot in **Wide** mode you will see that the channel outputs don't 
 
 These switch modes come in three flavors based on the number of output channels you would like and are only available on packet rates of 100Hz Full and 333Hz Full.
 
-1. **8ch** - Channels 1 to 4 and Channels 6 to 9 are sent 10-bit, at the selected Packet Rate, along with Channel 5 (AUX1) in 1-bit (2-position) for Arming.
+=== "Version 4.0 Changes"
+    1. **8ch** - Channels 1 to 8 are sent 10-bit, at the selected Packet Rate.
 
-2. **16ch Rate/2** - All the Channels are sent 10-bit but at half rate.
+    2. **16ch Rate/2** - All the Channels are sent 10-bit but at half rate.
 
-3. **12ch Mixed** - Channels 1 to 4 are sent 10-bit with Channel 5 (AUX1) in 1-bit (2-position) for Arming at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
+    3. **12ch Mixed** - Channels 1 to 4 are sent 10-bit at the selected Packet Rate. Channels 5 to 12 are then sent at 10-bit but at half rate.
+
+=== "Version 3.x"
+    1. **8ch** - Channels 1 to 4 and Channels 6 to 9 are sent 10-bit, at the selected Packet Rate, along with Channel 5 (AUX1) in 1-bit (2-position) for Arming.
+
+    2. **16ch Rate/2** - All the Channels are sent 10-bit but at half rate.
+
+    3. **12ch Mixed** - Channels 1 to 4 are sent 10-bit with Channel 5 (AUX1) in 1-bit (2-position) for Arming at the selected Packet Rate. Channels 6 to 13 are then sent at 10-bit but at half rate.
 
 All of these 10-bit or 1024 positions are mapped to PWM 885us to 2115us (1 bit = 1.23046875us) in what is called **"CRSF Extended Limits"**
 
@@ -122,48 +134,59 @@ All of these 10-bit or 1024 positions are mapped to PWM 885us to 2115us (1 bit =
 
 ## FAQ
 
-### <span class="custom-heading" data-id="1">Why do you keep saying "*put arm on AUX1*"?</span>
+### <span class="custom-heading" data-id="1">What's so important with Arming?</span>
 
-??? Note "Why do you keep saying "*put arm on AUX1*"?"
-    For safety and performance reasons.
+??? Note "What's so important with Arming?"
 
     **SAFETY**
 
-    AUX1 is sent with every packet going out, this is the most reliable way to be able to tell your model to disarm. If your arm switch is on another aux channel, it may be several packets before that switch is transmitted, and there's no guarantee that the RX will actually receive that packet. There's a non-trivial chance your model **may not ever disarm** if the link quality is low and it just so happens that the packet containing the arm switch is getting missed every time. Forcing the arm switch into every packet on AUX1 means that if **any** packet is received by ExpressLRS, it will disarm your model, not just a less than 1-in-7 chance.
+    Your transmitter and receiver act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver are free to adjust their communication in order to make the LUA and other configuration operations more responsive. When "disarmed", everything will appear to be working appropriately but none of the safeguards will be in place and performance will not be what you expect. 
 
-    It also protects against unintentional disarms caused by a corrupt packet changing the value of the arm switch to disarmed. Betaflight requires that 4x "disarm" commands are received before disarming to guard against this possibility. With arm on AUX1, a single corrupt packet can not disarm your model. With arm on AUX2-8, the one corrupt switch value will be sent 6 times before the value is refreshed, but the flight controller would have already disarmed by that point.
+    !!! warning inline end "No Safeguards"
+        Without these safeguards, these actions can interrupt OTA transmission causing disconnections and ultimately failsafe.
 
-    Your transmitter and receiver also act differently when “armed” and when “disarmed”. When disarmed, the transmitter and receiver are free to adjust their communication in order to make the LUA and other configuration operations more responsive. When "disarmed", everything will appear to be working appropriately but none of the safeguards will be in place and performance will not be what you expect. 
+    When `Armed`, these safeguards are applied:
 
-    When `IsArmed` is enabled, these safeguards are applied:
-
-    - All "Button" inputs are disabled
-    - All "Joystick" (5-way buttons) are disabled
+    - All "Button" inputs on external TX modules are disabled
+    - All "Joystick" (5-way buttons) on external TX modules are disabled
     - Bump to Share is disabled
     - VTX Admin is disabled
     - Integrated VTX channel change is disabled
 
     **PERFORMANCE**
 
-    When `IsArmed` is enabled, these performance features are activated:
+    When `Armed`, these performance features are activated:
 
     - Dynamic Power is fully enabled
+        - Missing a Telemetry Packet will push the Transmission Power to Max
+        - Sudden disconnection or Failsafe will push the Transmission Power to Max
     - Race telemetry mode turns telemetry off
+        - All packets are then dedicated to control packets.
     - Some thermal-based fan controls are enabled
+        - Available on select TX modules
 
-    Arming is an extremely important part of the performance of the control link. Please use Aux 1 / Chan 5 as indicated. Also keep in mind that for ExpressLRS, ~1000us is the **disarmed** state and ~2000us is the **armed** state.
+### <span class="custom-heading" data-id="2">Why do you keep saying "*put arm on AUX1*"?</span>
 
-### <span class="custom-heading" data-id="2">I use a 3-pos switch for arm, this software is unusable?</span>
+??? Note "Why do you keep saying "*put arm on AUX1*"?"
+    For safety and performance reasons.
+
+    AUX1 is sent with every packet going out, this is the most reliable way to be able to tell your model to disarm. If your arm switch is on another aux channel, it may be several packets before that switch is transmitted, and there's no guarantee that the RX will actually receive that packet. There's a non-trivial chance your model **may not ever disarm** if the link quality is low and it just so happens that the packet containing the arm switch is getting missed every time. Forcing the arm switch into every packet on AUX1 means that if **any** packet is received by ExpressLRS, it will disarm your model, not just a less than 1-in-7 chance.
+
+    It also protects against unintentional disarms caused by a corrupt packet changing the value of the arm switch to disarmed. Betaflight requires that 4x "disarm" commands are received before disarming to guard against this possibility. With arm on AUX1, a single corrupt packet can not disarm your model. With arm on AUX2-8, the one corrupt switch value will be sent 6 times before the value is refreshed, but the flight controller would have already disarmed by that point.
+
+    Please use Aux 1 / Chan 5 with ~1000us as the **disarmed** state and ~2000us as the **armed** state.
+
+### <span class="custom-heading" data-id="3">I use a 3-pos switch for arm, this software is unusable?</span>
 
 ??? Note "I use a 3-pos switch for arm, this software is unusable?"
     Good news, you can still use a 3-position switch to arm! However, you will need to adjust the model input / mixer settings for AUX1 in EdgeTX / OpenTX to remap the switch to be 2-position / on-off switch. If your 3-position arm switch had a second function as well, such as enabling Blackbox, just use one of the other channels to send the same switch on a second channel using the model input / mixer settings EdgeTX / OpenTX.
 
-### <span class="custom-heading" data-id="3">What about "Normal" one bit switch mode?</span>
+### <span class="custom-heading" data-id="4">What about "Normal" one bit switch mode?</span>
 
 ??? Note "What about "Normal" one bit switch mode?"
     In version 1.0 of ExpressLRS, there was also a switch mode called "Normal" where there were eight 1-position switches sent in every packet. This mode was removed in version 2.0 due to its unpopularity and the flash space was used for other features. Please use Hybrid or Wide modes and all of the high performance packet rates.
 
-### <span class="custom-heading" data-id="4">Every time I change switch mode in Lua, it changes back! Is my transmitter broken?</span>
+### <span class="custom-heading" data-id="5">Every time I change switch mode in Lua, it changes back! Is my transmitter broken?</span>
 
 ??? Note "Every time I change switch mode in Lua, it changes back! Is my transmitter broken?"
     If the Lua loads then you know its communicating with your transmitter. However, the switch mode can only be changed when a receiver is not connected and makes it appear as if the changes are not saving. This is done to ensure consistency between the RX and TX interpretation of the switch data being actively transmitted. This is a safeguard. Power down your receiver, wait for the "Telemetry Lost" callout, and the switch mode change will stick / save. The receiver will talk to the transmitted when it is powered up to handshake on the new settings.
