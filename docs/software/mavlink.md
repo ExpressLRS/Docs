@@ -59,7 +59,7 @@ The minimum versions to use this feature are:
 
 ## Configuring ELRS TX & RX for MAVLink
 
-1. Turn on both the RX and TX, and ensure they connect properly
+1. Turn on both the RX and TX, and ensure they connect properly.
 
 1. In ELRS LUA script, select `Other Devices`, select your receiver, and set the `serial protocol` to `MAVLink`. This configures the RX to output MAVLink protocol on the UART. (this change might not be reflected, proceed)
 
