@@ -61,7 +61,7 @@ The minimum versions to use this feature are:
 
 1. Turn on both the RX and TX, and ensure they connect properly
 
-1. In ELRS LUA script, select `Other Devices`, select your receiver, and set the `serial protocol` to `MAVLink`. This configures the RX to output MAVLink protocol on the UART. (this chainge might not be reflected, proceed)
+1. In ELRS LUA script, select `Other Devices`, select your receiver, and set the `serial protocol` to `MAVLink`. This configures the RX to output MAVLink protocol on the UART. (this change might not be reflected, proceed)
 
 1. Back out to the LUA scripts main menu and turn off your receiver. 
 
