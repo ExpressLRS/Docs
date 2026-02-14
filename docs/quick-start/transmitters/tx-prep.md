@@ -24,9 +24,11 @@ Insert or attach your External ExpressLRS Transmitter Module into your Radio mod
 Make sure you do have an Internal ExpressLRS Module on your shiny new radio. The following handsets come in both ELRS (ExpressLRS) or 4-in-1 variants; with some coming in with a third (CC2500). Only the ELRS variant works with ExpressLRS. The others will not work as they have a different Hardware incompatible with ExpressLRS.
 
 - RadioMaster TX16S Mark II (ELRS, 4-in-1 CC2500) - ExpressLRS variant will have an ELRS sticker on the box.
-- RadioMaster TX12 Mark II (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and an ELRS sticker in the JR module bay.
+- RadioMaster TX12 Mark II (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and a blue ELRS sticker in the JR module bay.
 - RadioMaster Zorro (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box.
-- RadioMaster Boxer (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and an ELRS sticker in the JR module bay.
+- RadioMaster Boxer (ELRS, 4-in-1, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and a blue ELRS sticker inside the battery bay.
+- RadioMaster Pocket (ELRS, CC2500) - ExpressLRS variant will have an ELRS sticker on the box and a blue ELRS sticker inside the radio.
+- RadioMaster MT12 (ELRS, 4-in-1) - ExpressLRS variant will have an ELRS sticker on the box and a blue ELRS sticker within the battery bay.
 - Jumper T-Lite V2 (ELRS, 4-in-1, CC2500) 
 - Jumper T-Pro V1/V2 (ELRS, 4-in-1)
 - BetaFPV Lite Radio 3 Pro (ELRS, CC2500) - A sticker with the barcode at the bottom of the box should tell you it's an ELRS variant or the CC2500 variant.
@@ -36,9 +38,14 @@ Make sure you do have an Internal ExpressLRS Module on your shiny new radio. The
 <figcaption>Example Sticker On RadioMaster Handset/Radios</figcaption>
 </figure>
 
+FlySky is also now offering handsets with an ExpressLRS-compatible internal module like the PA01. Early batches of the radio comes with AFHDS3 firmware and can be converted to ExpressLRS via FlySky's [online tool](https://firmwareswitcher.flyskytech.com/en) under the RF Firmware Tab or by just flashing via the ExpressLRS Configurator or Webflasher.
+
 ## Radio Operating System
 
 ExpressLRS **requires** CRSFShot or Mixer Sync to ensure full support for high packet rates. You should have [OpenTX 2.3.12](https://www.open-tx.org/2021/06/14/opentx-2.3.12) or newer, or [EdgeTX 2.4.0](https://github.com/EdgeTX/edgetx/releases/tag/v2.4.0) or newer; These versions have full CRSFShot/Mixer Sync support.
+
+!!! note "EdgeTX 3.0 Update"
+    EdgeTX 3.0 will bring changes into how colored-screen radios are navigated. Please refer to EdgeTX user manual for these changes.
 
 To determine your Radio Operating System Version, load the Version page from the System Menu of your Radio:
 
@@ -76,7 +83,7 @@ ExpressLRS highly recommends [EdgeTX](https://github.com/EdgeTX/edgetx/releases)
     9. Once Writing is complete, reboot the radio.
     10. Check the Radio's Version Page to verify you have the version you need.
 
-Check [this page](https://github.com/EdgeTX/edgetx.github.io/wiki/EdgeTX-Installation-Guide) for the EdgeTX installation instructions if you're coming in from OpenTX.
+Check [this page](https://manual.edgetx.org/installing-and-updating-edgetx) for the EdgeTX installation instructions if you're coming in from OpenTX or updating from an earlier EdgeTX version.
 
 ## Radio Settings
 
@@ -171,53 +178,64 @@ On other Radios, you can set the Baudrate higher than 400K but will highly depen
 | RadioMaster Pocket | 5.25M | |
 | RadioMaster MT12 | 5.25M | |
 | RadioMaster TX12 | 5.25M | |
+| RadioMaster GX12 | 5.25M | External at 1.87M |
+| RadioMaster TX15 | 5.25M | |
+| RadioMaster TX16MK3 | 5.25M | |
 | Jumper T-Lite V2 | 1.87M | Limited by Handset |
 | Jumper T-Pro | 1.87M | Limited by Handset |
 | Jumper T20 | 1.87M | Limited by Handset |
 | Jumper T14 | 5.25M | |
-| Jumper T15 | 5.25M | |
+| Jumper T15/Pro | 5.25M | |
 | Jumper T12 Max | 5.25M | |
 | BetaFPV Lite Radio 3 Pro | 1.87M | Limited by Handset |
-| HelloRadio V16 | 5.25M | |
+| HelloRadio V16/R | 5.25M | |
+| HelloRadio V14 | 5.25M | |
+| HelloRadio V12 | 5.25M | |
+| FlySky PA01 | 5.25M | |
 
 | External TX Module | Max Baud Rate | Notes |
 | ---- | ---- | ---- |
-| Happymodel ES24TX (inc. slim, nano, etc) | 5.25M | |
-| Happymodel ES24TX Pro/Slim Pro | 5.25M | |
-| Happymodel ES900TX | 5.25M | |
-| Happymodel ES915/868TX | 1.87M | STM-based |
-| BetaFPV Micro & Nano (V1 & V2) | 5.25M | |
-| BetaFPV SuperG | 5.25M | |
-| RadioMaster Ranger (Micro & Nano included) | 5.25M | |
-| RadioMaster Bandit (Micro & Nano included) | 5.25M | |
-| Axisflying Thor | 5.25M | |
-| EMAX Aeris OLED & Nano | 5.25M | |
-| NamimnoRC Flash/Voyager (no OLED) | 3.75M | STM-based |
-| NamimnoRC Flash/Voyager OLED | 5.25M | |
+| Happymodel ES24TX (inc. slim, nano, etc) | 3.75M | |
+| Happymodel ES24TX Pro/Slim Pro | 3.75M | |
+| Happymodel ES900TX | 3.75M | |
+| BetaFPV Micro & Nano (V1 & V2) | 3.75M| |
+| BetaFPV SuperG | 3.75M | |
+| RadioMaster Ranger (Micro & Nano included) | 3.75M | |
+| RadioMaster Bandit (Micro & Nano included) | 3.75M | |
+| RadioMaster Nomad | 3.75M | |
+| Axisflying Thor | 3.75M | |
+| EMAX Aeris OLED & Nano | 3.75M | |
+| GEPRC LinkFlow | 3.75M | |
+| BAYCK Dual-Band Gemini Micro & Nano | 3.75M | |
+| BAYCK Dual-Band Nano | 3.75M | |
+| Runcam Sirius | 3.75M | |
+| NamimnoRC Flash/Voyager OLED | 3.75M | |
 | Vantac Lite | 1.87M | |
 | Jumper Aion Nano | 1.87M | |
 | iFlight Command 8 | 3.75M | wired as external module |
-| HGLRC Hermes | 5.25M | |
-| HGLRC T ONE OLED | 5.25M | |
-| FrSky R9M/R9M Lite/R9M Lite Pro | 1.87M | |
-| FrSky R9M 2018 (non-ACCESS) | 115K | [Resistor Mod](../../hardware/inverter-mod.md) for 400K |
-| QuadKopters JR & Slim | 5.25M | |
-| SIYI FM30 | 1.87M | STM-based |
-| ImmersionRC GHOST | 1.87M | STM-based |
+| HGLRC Hermes | 3.75M | |
+| HGLRC T ONE OLED | 3.75M | |
+| Happymodel ES915/868TX | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| NamimnoRC Flash/Voyager (no OLED) | 3.75M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| FrSky R9M/R9M Lite/R9M Lite Pro | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| FrSky R9M 2018 (non-ACCESS) | 115K | [Resistor Mod](../../hardware/inverter-mod.md) for 400K; <br />STM-based; No Longer Supported from ELRS 4.0 onwards |
+| QuadKopters JR & Slim | 3.75M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| SIYI FM30 | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
+| ImmersionRC GHOST | 1.87M | STM-based; No Longer Supported from ELRS 4.0 onwards |
 
 !!! note "Note"
     The Max Baud Rate for external modules will still depend on the capabilities of the Radio Handset. 
 
     As stated above, older radios like the QX7 and X9D(+) will require hardware mods and software tweaks, like the One Bit sampling mode, to work reliably at higher baud rates. We recommend not going higher than 400K on these radios. Set them higher at your own risk.
 
-    Newer EdgeTX radios can easily use higher baud rates without modification and we recommend using the maximum baud rate whenever you can. 
+    F4-based EdgeTX radios will be limited to 3.75M Baud Rates for external modules. Newer H7-based EdgeTX radios can be set to 5.25M for external modules but we recommend using 3.75M if you don't know what MCU your radio is using.
 
 ??? question "My TX Module is not in this list! (click/tap to expand)"
-    Don't be salty. That just means the maintainers are late with the updates. Newer TX modules being released are all ESP-based now. If your TX module has WiFi or Bluetooth Connectivity, then they are ESP-based, and thus, should be capable of 5.25M Baud Rate (depending on the handset).
+    Don't be salty. That just means the maintainers are late with the updates. Newer TX modules being released are all ESP-based now. If your TX module has WiFi or Bluetooth Connectivity, then they are ESP-based, and thus, should be capable of 3.75M Baud Rate (depending on the handset).
 
 ### ADC Filter
 
-The ADC filter is enabled by default in OpenTX and is known to cause issues with RC Command data. This can result in "jagged" RC command responses in black box logs, caused by sequential RC packets that have the same command value (which were "smoothed" by the ADC filter). We recommend turning the ADC filter OFF in [OpenTX/EdgeTX](https://www.youtube.com/watch?v=ESr2H_EZ89Q).
+The ADC filter is enabled by default in OpenTX and is known to cause issues with RC Command data. This can result in "jagged" RC command responses in black box logs, caused by sequential RC packets that have the same command value (which were "smoothed" by the ADC filter). We recommend turning the ADC filter OFF in [OpenTX/EdgeTX](https://www.youtube.com/watch?v=ESr2H_EZ89Q) for applications involving a flight controller that can smooth out or filter the channel data (like Betaflight, etc.).
 
 To check and change this setting, follow these steps:
 
@@ -240,6 +258,9 @@ To check and change this setting, follow these steps:
     4. Press ++enter++ Key once.
     5. Use the Scroll wheel to select between Global(uses the setting from the Hardware page in the System Menu), On or Off.
     6. Press ++enter++ Key once more to set it.
+
+!!! note "PWM Receivers"
+    You **MUST** enable `ADC Filter` on models you are using with ExpressLRS PWM receivers (or any PWM Receivers) to help with alleviating jitters from the channel outputs.
 
 ## Model Setup
 
@@ -306,7 +327,7 @@ ExpressLRS uses the CRSF serial protocol to communicate between the transmitter 
     </figure>
 
 !!! Note
-    The iFlight Commando 8 is NOT using an internal RF module for its ExpressLRS units, unlike the RadioMaster Zorro, RadioMaster TX16S MK2, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro or the BetaFPV Lite Radio 3 Pro.
+    The iFlight Commando 8 is NOT using an internal RF module for its ExpressLRS units, unlike the RadioMaster Zorro, RadioMaster TX16S MK2/MK3, RadioMaster TX12 MK2, Jumper T-lite V2, Jumper T-pro or the BetaFPV Lite Radio 3 Pro.
 
     Set the Internal RF module to Off, and set the External RF module to CRSF protocol, as any External RF module requires.
 
@@ -400,7 +421,7 @@ By default, a fresh model does not have any Aux Channels configured (Aux channel
 5. (Optional) You can name this channel however you want to remind you of its purpose.
 6. Select Source. Press the ++enter++ Key.
 7. Activate or flick the Switch you'd want to use for this channel. 
-    - An example would be for CH5, which will be your Arming switch, you'd want to choose a 2-position switch.
+    - An example would be for CH5, which can be your Arming switch, you'd want to choose a 2-position switch.
 8. Press the ++enter++ Key once more to set the switch.
 9. Press ++"RTN"++ Key once to exit the Channel Mix editor.
 10. Repeat steps 3-9 until you have configured all the switches you think you will need.
@@ -424,3 +445,9 @@ By default, a fresh model does not have any Aux Channels configured (Aux channel
     <figure markdown>
     ![mixesAux Color](../../assets/images/txprep-clr-mixAux.jpg)
     </figure>
+
+### Channel Mixing
+
+This is important for those using PWM Receivers, and isn't using flight controllers. You would want to configure at least a basic channel mix for your application. Consult the [EdgeTX documentation](https://manual.edgetx.org/) for a few simple mixes or utilize their Model Wizard for basic setup.
+
+Once you have your PWM Receiver sync'd with your TX module or Radio, revisit your mix to confirm your control surfaces work as they should and adjust your mix as necessary, **BEFORE** attempting your first flight.

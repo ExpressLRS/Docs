@@ -7,13 +7,21 @@ description: Here is a simple ExpressLRS Lua Script guide explaining the differe
 
 ## Installing the Lua Script
 
-Download the [ELRS v3 Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/3.x.x-maintenance/src/lua/elrsV3.lua?raw=true) (you can simply right-click, save-as) into your radio's SD Card under the `Scripts/Tools` folder.
+Download the [ExpressLRS Lua Script](https://github.com/ExpressLRS/ExpressLRS/blob/master/src/lua/elrs.lua?raw=true) (you can simply right-click, save-as) into your radio's SD Card under the `Scripts/Tools` folder.
+
+!!! note "ExpressLRS 4.0"
+    Starting with ExpressLRS 4.0, the ExpressLRS Lua Script will once again go back to just using `elrs.lua` and will no longer be tied to a specific firmware version.
 
 <figure markdown>
 ![Lua Folder](../../assets/images/LuaFolder.jpg)
 </figure>
 
+## Running the Lua Script
+
 Access the script by navigating to your radio's System Menu.
+
+!!! note "EdgeTX 3.0 Update"
+    EdgeTX 3.0 will bring changes into how colored-screen radios are navigated. Please refer to EdgeTX user manual for these changes.
 
 1. Press the ++"SYS"++ Key on your Radio.
     - Older Radios or those with only one Menu Key will need to long-press the ++context-menu++ Key to access the System Menu.
@@ -39,8 +47,9 @@ Access the script by navigating to your radio's System Menu.
     
     As of 3.3.0:
 
-    - 500Hz or faster packet rates require >400K Baudrate.
-    - 333Hz is the fastest packet rate you can use with 400K Baudrate.
+    - 333Hz or faster packet rates require >400K Baudrate for external ELRS modules.
+    - 250Hz is the fastest packet rate you can use with 400K Baudrate on external modules.
+    - Best to stick to the fastest baudrate your radio can handle. See the [Baud Rate](tx-prep.md#serial-baud-rate) table.
 
 ## Understanding and Using the Lua Script
 
@@ -113,6 +122,20 @@ From these examples:
 Items with `>` before the name is a folder that when selected shows another level of customization. `TX Power`, `VTX Administrator`, `Wifi Connectivity` are examples of these items.
 
 These items will now show what is currently set for the items within. An example would be on `TX Power`, which will show the current Power set, and if Dynamic Power is enabled, it will show the current set Max Power, followed by the indicator `Dyn`.
+
+### RF Band
+
+This option is only available for RF modules capable of Dual-Band operation.
+
+The following options will be available:
+
+- X-Band
+
+    * Gemini X-Band (Crossband) or GemX mode; Simultaneous operation in 900MHz and 2.4GHz Band. Available only to modules with Dual LR1121 RF chips like the Nomad, Internal GX12 GemX module, Bayck Dual-Band Gemini External modules, etc. Will only sync or connect with GemX-capable receivers like the XR4, DBR4, GEPRC Gemini Xrossband, Bayck Dual Band, etc.
+
+- 2.4GHz
+
+- 900MHz
 
 ### Packet Rate and Telemetry Ratio
 
@@ -194,6 +217,7 @@ Available Options:
 !!! warning "WARNING"
 	When using a Gemini TX with a non-Gemini receiver, you should set the TX in either Switch or Single Antenna (Ant1/Ant2) Mode.
   The reason is that as the receiver only get the signal from the TX it has synchronized with, the other TX will act as a noise generator and increase both the noise floor and power consumption.
+    X-Band or X modes will now lock this to Gemini or if it detects the Receiver isn't capable of Gemini Mode, it will be set to `Switch` starting with ExpressLRS 4.0.
 
 ### Link Mode
 
@@ -366,6 +390,7 @@ The `Protocol` setting controls the output of the connected receiver. The follow
 * `Inverted SBUS` - Like the above, but inverted.
 * `SUMD` - Lets the receiver output Graupner HoTT SUMD signal for use with devices that don't support CRSF protocol, like Stabilizers, Heli Controllers etc.
 * `DJI RS2 Pro` - Mainly used for the RS2 Pro Gimbals
+* `DisplayPort` - For controlling (primarily) DJI Air units to take them out of Low Power mode. New in ExpressLRS 4.0.
 * `HoTT Telemetry` - Allows to use Graupner HoTT enabled telemetry sensors (Graupner and 3rd party)
 * `MAVLINK` - Introduced on ExpressLRS 3.5.0, it allows the receiver to output native MAVLink into a flight controller. See the [MAVLink](../../software/mavlink.md) page for more details.
 
