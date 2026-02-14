@@ -59,7 +59,7 @@ The minimum versions to use this feature are:
 
 ## Configuring ELRS TX & RX for MAVLink
 
-1. Turn on both the RX and TX, and ensure they bound, connected, and communicating. In the ELRS LUA scrip look for a C in the top-right corner of the screen which indicates TX module and Receiver are Connected and Communicating.
+1. Turn on both the RX and TX, and ensure they are bound, connected, and communicating. In the ELRS LUA scrip look for a C in the top-right corner of the screen which indicates TX module and Receiver are Connected and Communicating.
 
 1. Configure protocol on the RX UART.
    - For ELRS v3, with the TX and RX still connected, in the ELRS LUA script, select `Other Devices`, select your receiver, and set the `serial protocol` to `MAVLink`.
