@@ -46,7 +46,7 @@ To start using MAVLink, you just need one ESP based ELRS transmitter, and one ES
 !!! note "NOTE: Internal TX modules"
     If you are using an internal TX module (e.g. a TX16S with internal ELRS), you will be required to use the TX Backpack to connect to you GCS via WiFi (USB cable between the TX and the PC is not an option for internal modules). See WiFi Connectivity below.
 
-## Flashing and Configuring ELRS for MAVLink
+## Flashing ELRS for MAVLink
 
 Ensure both your transmitter module, the embedded TX-Backpack (if using WiFi forwarding), and your receiver are up to date with the latest release versions:
 
@@ -57,15 +57,19 @@ The minimum versions to use this feature are:
 - Transmitter / receiver firmware: `3.5.0`
 - TX Backpack firmware: `1.5.0`
 
-1. Using the guides above, flash both the RX and TX
+## Configuring ELRS TX & RX for MAVLink
 
 1. Turn on both the RX and TX, and ensure they connect properly
 
-1. In ELRS LUA script, select `Other Devices`, select your receiver, and set the `serial protocol` to `MAVLink`. This configures the RX to output MAVLink protocol on the UART.
+1. In ELRS LUA script, select `Other Devices`, select your receiver, and set the `serial protocol` to `MAVLink`. This configures the RX to output MAVLink protocol on the UART. (this chainge might not be reflected, proceed)
 
-1. Back out to the LUA scripts main menu, and select the `Link Mode` option. Change it from `Normal` to `MAVLink`. This configures the TX module to send / receive MAVLink.
+1. Back out to the LUA scripts main menu and turn off your receiver. 
+
+1. In the main menu select the `Link Mode` option. Change it from `Normal` to `MAVLink`. This configures the TX module to send / receive MAVLink.
 
 1. Configure your usual power, packet rate, etc. The telemetry ratio will be preset to 1:2 (and cannot be changed while in MAVLink mode).
+
+1. Power on your receiver and verify its connected properly to the transmitter.
 
 1. Wire the RX to a free UART on your flight controller that is suitable for TLM + RC. A DMA-capable UART is recommended.
 
