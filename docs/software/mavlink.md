@@ -61,9 +61,9 @@ The minimum versions to use this feature are:
 
 1. Turn on both the RX and TX, and ensure they connect properly.
 
-1. For ELRS v3, In ELRS LUA script, select `Other Devices`, select your receiver, and set the `serial protocol` to `MAVLink`. This configures the RX to output MAVLink protocol on the UART.  For ELRS v4 RX protocol is now configured automatically when changing the TX mode to MAVLink.
+1. For ELRS v3, With the TX and RX still connected, In ELRS LUA script, select `Other Devices`, select your receiver, and set the `serial protocol` to `MAVLink`. This configures the RX to output MAVLink protocol on the UART.  For ELRS v4, This step can be skipped, RX protocol is now configured automatically when changing the TX mode to MAVLink.
    
-1. First turn off your receiver, link mode cannot be changed when connected. In the main menu select the `Link Mode` option. Change it from `Normal` to `MAVLink`. This configures the TX module to send / receive MAVLink.
+1. Turn off your receiver, link mode cannot be changed when connected. In the main menu select the `Link Mode` option. Change it from `Normal` to `MAVLink`. This configures the TX module to send / receive MAVLink.
 
 1. Configure your usual power, packet rate, etc. The telemetry ratio will be preset to 1:2 (and cannot be changed while in MAVLink mode).
 
