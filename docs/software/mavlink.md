@@ -69,7 +69,7 @@ The minimum versions to use this feature are:
 
 1. Configure your usual power, packet rate, etc. The telemetry ratio will be preset to 1:2 (and cannot be changed while in MAVLink mode).
 
-1. Power on your receiver and verify it connected and communicating with the transmitter. As above look for the C in the top-right.
+1. Power on your receiver and verify it is connected and communicating with the transmitter. As above look for the C in the top-right.
 
 1. Wire the RX to a free UART on your flight controller that is suitable for TLM + RC. A DMA-capable UART is recommended.
 
