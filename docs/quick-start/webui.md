@@ -244,6 +244,8 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
 
     Traditionally Bound receivers will get the last four UID numbers from the TX, and will show up in this tab as well.
 
+    By default, the hardware's MAC is used to determine the UID.
+
     <figure markdown>
     ![RX Binding Tab](../assets/images/webui/bindingRX.png)
     <figcaption>Receiver Web UI Binding Tab</figcaption>
@@ -270,7 +272,7 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
 
     ### Connections Tab
 
-    This tab allows users to change each PWM Output pin's parameters and/or reassign them to a different function. See [PWM Receivers](../hardware/pwm-receivers.md) and [Serial Protocols](../software/serial-protocols.md) for more information.
+    This tab allows users to change each PWM Output pin's parameters and/or reassign them to a different function. See [PWM Receivers](../hardware/pwm-receivers.md) and [Serial Protocols](../software/serial-protocols.md) for more information. This tab only shows up for receivers with PWM outputs available.
 
     <figure markdown>
     ![Connections Tab](../assets/images/webui/connections.png)
