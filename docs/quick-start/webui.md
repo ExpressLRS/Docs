@@ -5,109 +5,6 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)
 
-## The ExpressLRS Web UI
-
-The ExpressLRS Web UI is an essential part of the ExpressLRS ecosystem. In earlier versions of the project, its main use is for updating the ExpressLRS firmware and logging or debugging (on select hardware).
-
-ExpressLRS 3.0 has further expanded the capabilities of the ExpressLRS Web UI. It is now capable of changing Firmware Parameters, including the Binding Phrase, Regulatory Domain  (for the 900MHz devices), UART Inversion and more.
-
-### The Banner
-
-<figure markdown>
-![Web UI Banner](../assets/images/web-banner.png)
-<figcaption>The ExpressLRS Web UI Banner </figcaption>
-</figure>
-
-### The Options Tab
-
-This tab allows users to change firmware options without reflashing their devices. It also allows the import and export of the Configuration from one device to another, useful for setting up backup equipment.
-
-Options common to both Receivers and TX Modules:
-
-- Binding Phrase: Type in your Binding Phrase here if you want to update it from either the factory setting or from an earlier flashed setting.
-
-    !!! abstract "It's Blank!"
-        This field doesn't store the plain text Binding Phrase. If you see it blank like shown, do not worry. The next field, UID, has the information.
-
-- UID: As you type in your Binding Phrase in the field above, this read-only field will update with the UID translation. This is what actually gets saved in your device.
-
-- Regulatory Domain: This only applies to the 900MHz system. This field allows users to change the Regulatory Domain for their device.
-
-    !!! abstract "What about 2.4GHz?"
-        The EU_CE Regulatory Domain setting is a Compile-time option and the LBT code needs to be baked in for it to work properly.
-    
-- WiFi "Auto On" Interval (in seconds): This field allows you to change how soon WiFi automatically activates when the device is powered up and it's not getting a valid CRSF signal (for TX Modules) or sync packets (for Receivers).
-
-=== "Receiver Options"
-
-    <figure markdown>
-    ![Web UI Banner](../assets/images/web-options-rx.png)
-    <figcaption>ExpressLRS Receiver Options Tab</figcaption>
-    </figure>
-
-    - UART Baud: The baud rate to which the receiver will send and receive signals to or from a Flight Controller or other serially connected device. Under normal circumstances, this setting should be left at the default 420000 baud.
-        - Exception: If you are running KISS/Kiss Ultra firmware set the receiver's UART baud rate to 400000, as KISS uses this baud rate for CRSF.
-
-    - Invert TX Pin: This setting should also be left disabled or unchecked under normal circumstances. It inverts the CRSF signal coming out of the TX pin of the receiver.
-        - Receivers that will be connected to an SBUS pad on Flight Controllers without extra uninverted RX pads should enable this setting. Additionally the command `set serialrx_inverted = on` will be needed in the Flight Controller configuration.
-
-    - Lock on First Connection: This setting speeds up the reconnection of a Receiver and TX Module if you don't ever change your RF Mode/Packet Rate.
-
-=== "TX Module Options"
-
-    <figure markdown>
-    ![Web UI Banner](../assets/images/web-options-tx.png)
-    <figcaption>ExpressLRS TX Module Options Tab</figcaption>
-    </figure>
-
-    - TLM Report Interval: This setting controls how often Telemetry packets are sent back to the radio. 240LU is the default setting and is already fast for EdgeTX or OpenTX.
-
-    - UART Inverted: Keep this enabled or checked if you're using your TX module on an OpenTX or EdgeTX Radio. The S.Port pins in External Module bays are inverted bidirectional pins.
-
-    - Fan Runtime (in seconds): This setting controls how long the fan on the TX Module will keep spinning even after the current Transmit Power of the module is already Lower than the Fan Threshold Lua Script setting.
-
-### The WiFi Tab
-
-<figure markdown>
-![Web UI Banner](../assets/images/web-homenetwork.png)
-<figcaption>ExpressLRS WebUI WiFi Tab</figcaption>
-</figure>
-
-### The Model Tab
-
-<figure markdown>
-![Web UI Banner](../assets/images/web-rxmodel.png)
-<figcaption>ExpressLRS Receiver Model Tab</figcaption>
-</figure>
-
-<figure markdown>
-![Web UI Banner](../assets/images/web-pwmoutput.png)
-<figcaption>ExpressLRS PWM Receiver Output Settings</figcaption>
-</figure>
-
-### The Buttons Tab
-
-This section is currently only available for the RadioMaster Ranger module.
-
-<figure markdown>
-![Web UI Banner](../assets/images/web-buttonsTX.png)
-<figcaption>ExpressLRS TX Module Buttons Tab</figcaption>
-</figure>
-
-### The Update Tab
-
-=== "Receiver Update Tab"
-    <figure markdown>
-    ![Web UI Banner](../assets/images/web-update-rx.png)
-    <figcaption>ExpressLRS Receiver Update Tab</figcaption>
-    </figure>
-
-=== "TX Module Update Tab"
-    <figure markdown>
-    ![Web UI Banner](../assets/images/web-update-tx.png)
-    <figcaption>ExpressLRS TX Module Update Tab</figcaption>
-    </figure>
-
 ## How to get to the Web UI
 === "Receivers"
    
@@ -126,10 +23,16 @@ This section is currently only available for the RadioMaster Ranger module.
                 ??? warning "Receiver LED not Blinking! (click/tap to expand)"
                     If it has a Solid LED light, it may be in bootloader mode if you've only just wired it up. [Rewire](../quick-start/receivers/wiring-up.md) your receiver into a different uart. If you have attempted to update it before, then it could be soft-bricked. Follow the [Unbricking](../quick-start/unbricking.md) procedure to get it back into normal working condition.
 
-            3. Wait for about 60 seconds or until the Receiver LED blinks rapidly indicating it is now in WiFi Mode.
+            3. Wait for about 60 seconds or until the Receiver LED blinks rapidly or alternate between green or yellow indicating it is now in WiFi Mode.
 
                 <figure markdown>
                 ![RX WiFi](../assets/images/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                <figcaption>ESP8285-based Receiver with single-color LED</figcaption>
+                </figure>
+
+                <figure markdown>
+                ![LEDRGB_WIFI_UPDATE](../assets/images/LEDSEQRGB_WIFI_UPDATE.gif)
+                <figcaption>ESP32-based Receiver with RGB LED</figcaption>
                 </figure>
 
 
@@ -169,6 +72,12 @@ This section is currently only available for the RadioMaster Ranger module.
 
                 <figure markdown>
                 ![RX WiFi](../assets/images/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                <figcaption>ESP8285-based Receiver with single-color LED</figcaption>
+                </figure>
+
+                <figure markdown>
+                ![LEDRGB_WIFI_UPDATE](../assets/images/LEDSEQRGB_WIFI_UPDATE.gif)
+                <figcaption>ESP32-based Receiver with RGB LED</figcaption>
                 </figure>
 
                 !!! info "Note"
@@ -188,6 +97,12 @@ This section is currently only available for the RadioMaster Ranger module.
 
                 <figure markdown>
                 ![RX WiFi](../assets/images/LEDSEQ_WIFI_UPDATE_2_3.gif)
+                <figcaption>ESP8285-based Receiver with single-color LED</figcaption>
+                </figure>
+
+                <figure markdown>
+                ![LEDRGB_WIFI_UPDATE](../assets/images/LEDSEQRGB_WIFI_UPDATE.gif)
+                <figcaption>ESP32-based Receiver with RGB LED</figcaption>
                 </figure>
 				
     4. Scan for the `ExpressLRS RX` Access Point. 
@@ -302,6 +217,241 @@ This section is currently only available for the RadioMaster Ranger module.
                     2. Check the DHCP List and look for the "elrs" device.
                     3. Take note of the IP Address given by your router.
                     4. Use this IP address in your Browser as the URL.
+
+## The ExpressLRS Web UI Explained
+
+The ExpressLRS Web UI is an essential part of the ExpressLRS ecosystem. In earlier versions of the project, its main use is for updating the ExpressLRS firmware and logging or debugging (on select hardware).
+
+ExpressLRS 3.0 has further expanded the capabilities of the ExpressLRS Web UI. Users are able to change Firmware Parameters, including the Binding Phrase, Receiver Protocol, Regulatory Domain (on 900MHz devices) and more.
+
+ExpressLRS 4.0 improves upon this with a new layout allowing for more sections or pages to be shown to users, including the previously-hidden Hardware Layout page.
+
+=== "ExpressLRS 4.0+ Web UI"
+    ## ExpressLRS 4.0 Web UI
+
+    ExpressLRS 4.0 brought changes to how the ExpressLRS Web UI is presented, together with a few QOL updates. The layout has changed, favoring a vertical navigation menu in order to show a lot more, including access to previously "hidden" pages and options.
+
+    ### Information Tab
+    This Tab will show the basic information about the device, including Hardware name, Firmware version, GitHub commit hash, Radio Chip, Regulatory Domain, Binding UID and any options that's been changed from the default or flashed settings.
+
+    <figure markdown>
+    ![Information Tab](../assets/images/webui/information.png)
+    </figure>
+
+    ### Binding Tab
+
+    Use this tab to update the Binding Phrase or UID on your ExpressLRS device. Devices with the same Binding Phrase, and consequently, UID is Bound together and should connect and sync when powered up.
+
+    Traditionally Bound receivers will get the last four UID numbers from the TX, and will show up in this tab as well.
+
+    By default, the hardware's MAC is used to determine the UID.
+
+    <figure markdown>
+    ![RX Binding Tab](../assets/images/webui/bindingRX.png)
+    <figcaption>Receiver Web UI Binding Tab</figcaption>
+    </figure>
+
+    <figure markdown>
+    ![TX Binding Tab](../assets/images/webui/bindingTX.png)
+    <figcaption>TX Module Web UI Binding Tab</figcaption>
+    </figure>
+
+    ### Options Tab
+
+    This tab hosts any Runtime Options for the device. Runtime Options are settings you have set during firmware flashing. Any changes made in this tab will be overridden settings flash into the device.
+
+    <figure markdown>
+    ![RX Options Tab](../assets/images/webui/optionsRX.png)
+    <figcaption>Receiver Web UI Options Tab</figcaption>
+    </figure>
+
+    <figure markdown>
+    ![TX Options Tab](../assets/images/webui/optionsTX.png)
+    <figcaption>TX Module Web UI Options Tab</figcaption>
+    </figure>
+
+    ### Connections Tab
+
+    This tab allows users to change each PWM Output pin's parameters and/or reassign them to a different function. See [PWM Receivers](../hardware/pwm-receivers.md) and [Serial Protocols](../software/serial-protocols.md) for more information. This tab only shows up for receivers with PWM outputs available.
+
+    <figure markdown>
+    ![Connections Tab](../assets/images/webui/connections.png)
+    </figure>
+
+    ### Serial Tab
+
+    This tab allows users to change the serial protocol and baudrate of a UART-based receiver. See [Serial Protocols](../software/serial-protocols.md) for more information.
+
+    <figure markdown>
+    ![Connections Tab](../assets/images/webui/serial.png)
+    </figure>
+
+    ### Buttons Tab
+
+    This tab allows you to change how the Mode buttons on select External TX modules will work. You can also change the LED color for each of the buttons on modules with separate illumination for the buttons (like the RadioMaster Bandit or Ranger).
+
+    <figure markdown>
+    ![Buttons Tab](../assets/images/webui/buttons.png)
+    </figure>
+
+    ### Import/Export Tab
+
+    This tab allows you to Export or Import TX Module per-model Configuration. See [Model Config Matching](../software/model-config-match.md).
+
+    <figure markdown>
+    ![Import/Export Tab](../assets/images/webui/import-export.png)
+    </figure>
+
+    ### WiFi Tab
+
+    This tab lets you change the device' WiFi network connectivity and how it will behave when it is in WiFi mode.
+
+    <figure markdown>
+    ![WiFi Tab](../assets/images/webui/wifi.png)
+    </figure>
+
+    ### Update Tab
+
+    The Update Tab is where you can upload the firmware file the ExpressLRS Configurator or ExpressLRS Web Flasher has prepared for you.
+
+    <figure markdown>
+    ![Update Tab](../assets/images/webui/update.png)
+    </figure>
+
+    ### Hardware Layout
+
+    This tab is for Advanced Users only. It holds the hardware pin assignments, power management instructions and hardware capability definitions. Do not edit any of the settings here unless you know what you're doing or you've been instructed to.
+
+    !!! warning "Warning"
+        DO NOT edit the settings here if you don't know what they are for or what implications they bring to your hardware. Setting Max Power level to 2W will not make your non-PA receiver to work at 2W. It might look like it is in 2W but it will not work at 2W.
+
+    <figure markdown>
+    ![HW Layout Tab](../assets/images/webui/hardware.png)
+    </figure>
+
+    ### Continuous Wave
+
+    This tab is for Advanced Users only. This allows a user to put the RF chip into a mode where it transmits a continuous wave at the center frequency that the module is made for. It can help determine whether there's a frequency shift or deviation from the ideal frequency. See [Crystal Frequency Error](../hardware/crystal-frequency-error.md).
+
+    <figure markdown>
+    ![Cont. Wave](../assets/images/webui/continuouswave.png)
+    </figure>
+
+    ### LR1121 Firmware
+
+    This tab is for Advanced Users only. This allows a user to manually flash the Semtech LR1121 RF chip used on Dual-Band hardware. ExpressLRS can also do this automatically as needed.
+
+    !!! warning "Warning"
+        DO NOT flash the LR1121 RF chipset without prior research or knowledge. Flashing the wrong or incompatible firmware will render your device unusable and may require a reflash via a Serial connection or reuploading the correct RF chipset firmware.
+
+    <figure markdown>
+    ![LR1121 Fw](../assets/images/webui/lr1121fw.png)
+    </figure>
+
+=== "ExpressLRS 3.0+ Web UI"
+    ## ExpressLRS 3.0 Web UI
+
+    ### The Banner
+
+    <figure markdown>
+        ![Web UI Banner](../assets/images/web-banner.png)
+        <figcaption>The ExpressLRS Web UI Banner </figcaption>
+    </figure>
+
+    ### The Options Tab
+
+    This tab allows users to change firmware options without reflashing their devices. It also allows the import and export of the Configuration from one device to another, useful for setting up backup equipment.
+
+    Options common to both Receivers and TX Modules:
+
+    - Binding Phrase: Type in your Binding Phrase here if you want to update it from either the factory setting or from an earlier flashed setting.
+
+        !!! abstract "It's Blank!"
+            This field doesn't store the plain text Binding Phrase. If you see it blank like shown, do not worry. The next field, UID, has the information.
+
+    - UID: As you type in your Binding Phrase in the field above, this read-only field will update with the UID translation. This is what actually gets saved in your device.
+
+    - Regulatory Domain: This only applies to the 900MHz system. This field allows users to change the Regulatory Domain for their device.
+
+        !!! abstract "What about 2.4GHz?"
+            The EU_CE Regulatory Domain setting is a Compile-time option and the LBT code needs to be baked in for it to work properly.
+    
+    - WiFi "Auto On" Interval (in seconds): This field allows you to change how soon WiFi automatically activates when the device is powered up and it's not getting a valid CRSF signal (for TX Modules) or sync packets (for Receivers).
+
+    === "Receiver Options"
+
+        <figure markdown>
+            ![Web UI Banner](../assets/images/web-options-rx.png)
+            <figcaption>ExpressLRS Receiver Options Tab</figcaption>
+        </figure>
+
+        - UART Baud: The baud rate to which the receiver will send and receive signals to or from a Flight Controller or other serially connected device. Under normal circumstances, this setting should be left at the default 420000 baud.
+        - Exception: If you are running KISS/Kiss Ultra firmware set the receiver's UART baud rate to 400000, as KISS uses this baud rate for CRSF.
+
+        - Invert TX Pin: This setting should also be left disabled or unchecked under normal circumstances. It inverts the CRSF signal coming out of the TX pin of the receiver.
+        - Receivers that will be connected to an SBUS pad on Flight Controllers without extra uninverted RX pads should enable this setting. Additionally the command `set serialrx_inverted = on` will be needed in the Flight Controller configuration.
+
+        - Lock on First Connection: This setting speeds up the reconnection of a Receiver and TX Module if you don't ever change your RF Mode/Packet Rate.
+
+    === "TX Module Options"
+
+        <figure markdown>
+            ![Web UI Banner](../assets/images/web-options-tx.png)
+            <figcaption>ExpressLRS TX Module Options Tab</figcaption>
+        </figure>
+
+        - TLM Report Interval: This setting controls how often Telemetry packets are sent back to the radio. 240LU is the default setting and is already fast for EdgeTX or OpenTX.
+
+        - UART Inverted: Keep this enabled or checked if you're using your TX module on an OpenTX or EdgeTX Radio. The S.Port pins in External Module bays are inverted bidirectional pins.
+
+        - Fan Runtime (in seconds): This setting controls how long the fan on the TX Module will keep spinning even after the current Transmit Power of the module is already Lower than the Fan Threshold Lua Script setting.
+
+    ### The WiFi Tab
+
+    <figure markdown>
+    ![Web UI Banner](../assets/images/web-homenetwork.png)
+    <figcaption>ExpressLRS Web UI WiFi Tab</figcaption>
+    </figure>
+
+    ### The Model Tab
+
+    <figure markdown>
+    ![Web UI Banner](../assets/images/web-rxmodel.png)
+    <figcaption>ExpressLRS Receiver Web UI Model Tab</figcaption>
+    </figure>
+
+    <figure markdown>
+    ![Web UI Banner](../assets/images/web-pwmoutput.png)
+    <figcaption>ExpressLRS PWM Receiver Web UI Output Settings</figcaption>
+    </figure>
+
+    ### The Buttons Tab
+
+    This section is available for External TX modules with two Mode buttons:
+
+    - the RadioMaster Ranger
+    - the RadioMaster Bandit
+    - the RadioMaster Nomad
+    - the BetaFPV Super G
+
+    <figure markdown>
+    ![Web UI Banner](../assets/images/web-buttonsTX.png)
+    <figcaption>ExpressLRS TX Module Buttons Tab</figcaption>
+    </figure>
+
+    ### The Update Tab
+
+    === "Receiver Update Tab"
+        <figure markdown>
+        ![Web UI Banner](../assets/images/web-update-rx.png)
+        <figcaption>ExpressLRS Receiver Update Tab</figcaption>
+        </figure>
+
+    === "TX Module Update Tab"
+        <figure markdown>
+        ![Web UI Banner](../assets/images/web-update-tx.png)
+        <figcaption>ExpressLRS TX Module Update Tab</figcaption>
+        </figure>
 
 [Lua Script]: ../assets/images/lua1.jpg
 [Lua Running]: ../assets/images/lua/config-bw.png
