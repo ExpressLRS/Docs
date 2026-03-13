@@ -150,6 +150,7 @@ LiPo
 LinkStatistics
 LinkStats
 LinkFlow
+Linux
 LoRa
 Lua
 MAVLink
