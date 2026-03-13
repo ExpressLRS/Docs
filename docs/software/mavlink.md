@@ -245,7 +245,7 @@ The Backpack supports two WiFi modes:
 
 1. Power on the craft so that the TX and RX have an active link
 
-1. Make sure no firewall is blocking UDP traffic (e.g. linux disable `ufw`, android select "use network as is")
+1. Make sure no firewall is blocking UDP traffic (e.g. Linux: disable `ufw`, Android: select "use network as is")
 
 1. Configure your GCS software:
 
