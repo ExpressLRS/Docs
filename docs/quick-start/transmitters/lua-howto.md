@@ -375,6 +375,10 @@ The Other Devices folder, if present, allows changing the configuration of other
 If the connected receiver is a PWM receiver, you will also have options to set Output Mapping and Failsafe Position. Pressing the `Output Mapping` control will open the output mapping sub-menu.
 
 <figure markdown>
+![Receiver Diversity](../../assets/images/lua/lua-otherRX-diversity.png)
+</figure>
+
+<figure markdown>
 ![Output Mapping](../../assets/images/lua/lua-otherRX-mapping.png)
 </figure>
 
@@ -392,11 +396,6 @@ Pressing the `[Set Failsafe Pos]` button will bring up the failsafe setting menu
 
 If you are using a version of ExpressLRS earlier than 4.0, you will also see an `Rx Mode` field which will let you select the receiver's diversity mode. In 4.0, this is negotiated between transmitter module and receiver and thus the field is missing.
 
-<figure markdown>
-![Receiver Diversity](../../assets/images/lua/lua-otherRX-diversity.png)
-</figure>
-
-If the receiver
 <figure markdown>
 ![Receiver Gemini](../../assets/images/lua/lua-otherRX-gemini.png)
 </figure>
