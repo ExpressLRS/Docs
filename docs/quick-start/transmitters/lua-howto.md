@@ -372,9 +372,29 @@ The Other Devices folder, if present, allows changing the configuration of other
 ![Receiver Single](../../assets/images/lua/lua-otherRX-single.png)
 </figure>
 
+If the connected receiver is a PWM receiver, you will also have options to set Output Mapping and Failsafe Position. Pressing the `Output Mapping` control will open the output mapping sub-menu.
+
 <figure markdown>
 ![Receiver Diversity](../../assets/images/lua/lua-otherRX-diversity.png)
 </figure>
+
+<figure markdown>
+![Output Mapping](../../assets/images/lua/lua-otherRX-mapping.png)
+</figure>
+
+The controls here are similar to what you see on the Connections tab in the [Web UI](../webui/#connections-tab). So,
+* `Output Ch` selects the actual PWM channel you are managing. When you change this value, the other inputs will be changed to the current values configured in the receiver for that channel and you can view or change them.
+* `Input Ch` selects which over-the-air channel to route to the selected output. For example, if you are using traditional Channel 5 ARM but you don't want to lose the use of PWM Output 5, you can map input channel 6 to output channel 5.
+* `Output Mode` selects the output frame rate. 50Hz is default but some servos allow 100Hz or other values. You can also select other protocols, such as Serial (if the receiver supports Serial out on that channel, DSHOT, etc.)
+* `Invert` selects whether to invert the output.
+
+Pressing the `[Set Failsafe Pos]` button will bring up the failsafe setting menu. This allows you to set the positions the PWM channels will move to if the receiver loses signal. Note that, unlike in the Web UI, you can only set the failsafe values to the current channel positions.
+
+<figure markdown>
+![Failsafe](../../assets/images/lua/lua-otherRX-failsafe.png)
+</figure>
+
+If you are using a version of ExpressLRS earlier than 4.0, you will also see an `Rx Mode` field which will let you select the receiver's diversity mode. In 4.0, this is negotiated between transmitter module and receiver and thus the field is missing.
 
 <figure markdown>
 ![Receiver Gemini](../../assets/images/lua/lua-otherRX-gemini.png)
