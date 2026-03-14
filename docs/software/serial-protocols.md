@@ -112,7 +112,7 @@ SBUS has been added mainly for legacy hardware that doesn't support CRSF or flig
 
 The protocol is mainly for control packets, and thus, it does not have Flight Controller Telemetry. Different manufacturers using SBUS as their control protocol uses their own Telemetry Protocols.
 
-If you can use CRSF Protocol, use it, especially those already using flight controllers and firmwares with CRSF support.
+If you can use CRSF Protocol, use it, especially those already using flight controllers and firmware with CRSF support.
 
 ## SUMD Notes
 
