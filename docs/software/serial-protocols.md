@@ -108,7 +108,7 @@ Some non-PWM receivers like the RadioMaster RP4TD have spare pins exposed. The p
 
 ## SBUS Notes
 
-SBUS has been added mainly for legacy hardware that doesn't support CRSF as well as flight stabilizers running solely via SBUS input. It's as basic as it can go, only requiring the TX pin to be wired into an RX pin.
+SBUS has been added mainly for legacy hardware that doesn't support CRSF or flight stabilizers requiring SBUS input. It's as basic as it can go, only requiring the TX pin to be wired into an RX pin.
 
 The protocol is mainly for control packets, and thus, it does not have Flight Controller Telemetry. Different manufacturers using SBUS as their control protocol uses their own Telemetry Protocols.
 
