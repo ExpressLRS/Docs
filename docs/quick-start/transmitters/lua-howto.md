@@ -433,7 +433,7 @@ This setting is available on ExpressLRS 3.5.0 and onwards. See [PR 2605](https:/
 `SBUS Failsafe` is used to set the behavior of a receiver using SBUS protocol for output. The following options are available:
 
 * `No Pulses` - When a failsafe occurs, the receiver will stop sending any messages.
-* `Last Pos` - When a failsafe occurs, the receiver will keep sending the last channel positions it received.
+* `Last Pos` - When a failsafe occurs, the receiver will keep sending the last channel positions it received along with the Failsafe bit at 9ms interval.
 
 ### Antenna Mode
 
@@ -448,6 +448,8 @@ The `Receiver Mode` setting is only available for True Diversity receivers. Thes
 
 * `Gemini` - Receive on two RX antennas simultaneously at different frequency 40MHz apart (for 2.4GHz) or ~10MHz apart (for 900MHz). Best used when you have a Gemini-capable TX Module.
 * `Diversity` - Both Antennas will be active. Receiver will switch to the antenna with better RSSI.
+
+Starting with ExpressLRS 4.0, this setting is now automatically set, depending on the TX module's capabilities and settings.
 
 ### Tlm Power
 

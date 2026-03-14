@@ -280,7 +280,7 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
 
     ### Serial Tab
 
-    This tab allows users to change the serial protocol and baudrate of a UART-based receiver. See [Serial Protocols](../software/serial-protocols.md) for more information.
+    This tab allows users to change the serial protocol and baudrate of a UART-based receiver or a PWM receiver configured or set with pins for serial output. See [Serial Protocols](../software/serial-protocols.md) for more information.
 
     <figure markdown>
     ![Connections Tab](../assets/images/webui/serial.png)
