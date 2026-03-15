@@ -108,7 +108,7 @@ Some non-PWM receivers like the RadioMaster RP4TD have spare pins exposed. The p
 
 ## SBUS Notes
 
-If your hardware has CRSF protocol support, use the CRSF protocol. Most flight controller firmwares have CRSF protocol support.
+If your hardware has CRSF protocol support, use the CRSF protocol. Most flight controller firmware have CRSF protocol support.
 
 SBUS has been added mainly for legacy hardware that doesn't support CRSF or flight stabilizers requiring SBUS input. It's as basic as it can go, only requiring the TX pin to be wired into an RX pin.
 
