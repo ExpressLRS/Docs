@@ -20,8 +20,8 @@ protect its name and identity.**
 ## **What Happened**
 
 Imagine spending years building an open-source project, only to find someone else trying to claim its name. On **August
-25th, 2025**, we were notified that an individual, Christopher Henry Sauer (also known as “Christina Sauer”, “Chris
-Sauer”, radiomistress) had applied to register *ExpressLRS* as a trademark in **China** (Application No. 84786671).
+25th, 2025**, we were notified that an individual named Christina Sauer had applied to register *ExpressLRS* as a 
+trademark in **China** (Application No. 84786671).
 
 On **August 27th, 2025**, this individual also registered the domain name expresslrs[.]dev.
 
