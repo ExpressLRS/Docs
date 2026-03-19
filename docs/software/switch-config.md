@@ -19,13 +19,13 @@ This table summarizes the switch configuration modes, available channel switch p
 | 3   | Sticks | **Normal<br/>Range** | **Normal<br/>Range** | **CRSF Ext<br/>Limits** | CRSF Ext<br/>Limits<sup>H</sup> | **CRSF Ext<br/>Limits** |
 | 4   | Sticks | **Normal<br/>Range** | **Normal<br/>Range** | **CRSF Ext<br/>Limits** | CRSF Ext<br/>Limits<sup>H</sup> | **CRSF Ext<br/>Limits** |
 | 5 | Aux 1 | **2-pos<br/>Arm** | **2-pos<br/>Arm** | **CRSF Ext<br/>Limits<br/>Arm*** | CRSF Ext<br/>Limits<sup>H</sup><br/>**Arm*** | CRSF Ext<br/>Limits<sup>H</sup><br/>**Arm*** |
-| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64/128<br/>-pos*<sup>RR</sup> | **CRSF Ext<br/>Limits** | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
-| 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64/128<br/>-pos*<sup>RR</sup> | **CRSF Ext<br/>Limits** | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
-| 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64/128<br/>-pos*<sup>RR</sup> | **CRSF Ext<br/>Limits** | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
-| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64/128<br/>-pos*<sup>RR</sup> | - | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
-| 10  | Aux 6 | *6-pos*<sup>RR</sup> | *64/128<br/>-pos*<sup>RR</sup> | - | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
-| 11  | Aux 7 | *6-pos*<sup>RR</sup> | *64/128<br/>-pos*<sup>RR</sup> | - | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
-| 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64/128<br/>-pos*<sup>RR</sup> | - | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
+| 6   | Aux 2 | *6-pos*<sup>RR</sup> | *64-pos*<sup>RR</sup> | **CRSF Ext<br/>Limits** | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
+| 7   | Aux 3 | *6-pos*<sup>RR</sup> | *64-pos*<sup>RR</sup> | **CRSF Ext<br/>Limits** | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
+| 8   | Aux 4 | *6-pos*<sup>RR</sup> | *64-pos*<sup>RR</sup> | **CRSF Ext<br/>Limits** | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
+| 9   | Aux 5 | *6-pos*<sup>RR</sup> | *64-pos*<sup>RR</sup> | - | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
+| 10  | Aux 6 | *6-pos*<sup>RR</sup> | *64-pos*<sup>RR</sup> | - | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
+| 11  | Aux 7 | *6-pos*<sup>RR</sup> | *64-pos*<sup>RR</sup> | - | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
+| 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64-pos*<sup>RR</sup> | - | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
 | 13  | Aux 9 | - | - | - | CRSF Ext<br/>Limits<sup>H</sup> | - |
 | 14  | Aux 10 | **2-pos<br/>Arm*** | **2-pos<br/>Arm*** | **2-pos<br/>Arm*** | CRSF Ext<br/>Limits<sup>H</sup> | **2-pos<br/>Arm*** |
 | 15  | Aux 11 | - | - | - | CRSF Ext<br/>Limits<sup>H</sup> | - |
@@ -40,7 +40,7 @@ This table summarizes the switch configuration modes, available channel switch p
 |:---:| --- |
 | **Normal Range** | 10-bit or 1024 positions mapped to PWM 988us to 2012us (1 bit = 1us) |
 | **CRSF Ext Limits** | 10-bit or 1024 positions mapped to PWM 885us to 2115us (1 bit = 1.23046875us) |
-| **64 / 128-pos** | The bit depth is dependent on the selected telemetry ratio. For a telemetry ratio of 1:2 and 1:4 these channels are 6-bit/64 pos. For all other ratios, these channels are 7-bit/128 pos. The 7-bit/128 positions is 12.5% the resolution of 10-bit, and 6-bit/64 positions is 6.25% the resolution of 10-bit. This may not be enough resolution for a head tracker but definitely enough for flight modes, flaps, gear, etc. |
+| **64-pos** | 6-bit which is good for flight modes, flaps, gear, etc. |
 | **16-pos** | 4-bit which is good for flight modes, flaps, gear, etc. |
 | **6-pos** | 3-bit which is good for flight modes, flaps, gear, etc. |
 | **2-pos** | 1-bit for Arm, ~1000us is the **disarmed** state and ~2000us is the **armed** state (see the explanations below of why the armed state is very important for safety and performance) |
@@ -104,7 +104,7 @@ In **Hybrid** mode, AUX8 / Chan12 is 4-bit / 16-position and is mapped to the PW
 | Approx.&nbsp;Chan&nbsp;Input&nbsp;PWM&nbsp;(us) | 988 | 1056 | 1125 | 1193 | 1261 | 1329 | 1398 | 1466 | 1534 | 1602 | 1671 | 1739 | 1807 | 1875 | 1944 | 2012 | 
 | Chan&nbsp;Output&nbsp;PWM&nbsp;(us) | 1000 | 1066 | 1133 | 1200 | 1266 | 1333 | 1400 | 1467 | 1533 | 1600 | 1666 | 1733 | 1800 | 1866 | 1933 | 2000 |
 
-In **Wide** mode, AUX2-AUX8 / Chan6-12 are 6-bit / 64-position for telemetry ratios of 1:2 and 1:4. For all other telemetry ratios, these 7 switches are 7-bit / 128-position. It takes 8 packets to send the complete set of switches before cycling back to AUX2 (one more than **Hybrid**). **Wide** uses the 8th slot to transmit extra data to the receiver, including the current transmitter power. This is the only switch mode which can show the transmitter power `TPwr` on the flight controller's OSD. These behave more like traditional channels although with lower precision. You can tell you're operating in **Wide** mode when a switch in the middle position shows up as 1503 instead of 1500.
+In **Wide** mode, AUX2-AUX8 / Chan6-12 are 6-bit / 64-position. It takes 8 packets to send the complete set of switches before cycling back to AUX2 (one more than **Hybrid**). **Wide** uses the 8th slot to transmit extra data to the receiver, including the current transmitter power. Note that in ExpressLRS 3.x, Wide switch mode is 64-position for telemetry ratios 1:2 and 1:4, but 128-position for all other telemetry ratios.
 
 If using ArduPilot in **Wide** mode you will see that the channel outputs don't line up very well with the standard -100% (988us) to +100% (2012us) output range in EdgeTX / OpenTX when using a 6-position selector as input. Both the first two and the last two positions get binned into Mode 1 and Mode 6 respectively. To get the full 6 ArduPilot modes, go to the Outputs page on the OpenTX model setup and set the min / max for the channels to -75% / +75%.
 
