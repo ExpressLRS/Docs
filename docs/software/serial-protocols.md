@@ -106,6 +106,12 @@ Some non-PWM receivers like the RadioMaster RP4TD have spare pins exposed. The p
 ![non-PWM receiver](../assets/images/Serial2-4.png)
 </figure>
 
+## SBUS Notes
+
+If your hardware has CRSF protocol support, use the CRSF protocol. Most flight controller firmware have CRSF protocol support.
+
+SBUS has been added for legacy hardware that doesn't support CRSF or flight stabilizers requiring SBUS input. The protocol only have control packets and does not have Flight Controller Telemetry. Different manufacturers using SBUS as their control protocol use their own Telemetry Protocols.
+
 ## SUMD Notes
 
 SUMD is the Graupner HoTT bus protocol used to transmit multiple channel data over a single serial line. It transports up to 16 full res channels at a rate of 100Hz and is mainly used to provide digital channel data to Flybarless Control Systems for helicopters and older Flight Controllers.
