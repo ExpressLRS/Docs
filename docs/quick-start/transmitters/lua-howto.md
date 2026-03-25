@@ -137,6 +137,7 @@ The following options will be available:
 
 - 900MHz
 
+<a name="packet-rate-and-telemetry-ratio"></a>
 ### Packet Rate and Telemetry Ratio
 
 <figure markdown>
@@ -382,7 +383,7 @@ If the connected receiver is a PWM receiver, you will also have options to set O
 ![Output Mapping](../../assets/images/lua/lua-otherRX-mapping.png)
 </figure>
 
-The controls here are similar to what you see on the Connections tab in the [Web UI](../webui/#connections-tab). So,
+The controls here are similar to what you see on the Connections tab in the [Web UI](../webui.md#connections-tab). So,
 
 * `Output Ch` - selects the actual PWM channel you are managing. When you change this value, the other inputs will be changed to the current values configured in the receiver for that channel and you can view or change them.
 * `Input Ch` - selects which over-the-air channel to route to the selected output. For example, if you are using traditional Channel 5 ARM but you don't want to lose the use of PWM Output 5, you can map input channel 6 to output channel 5.

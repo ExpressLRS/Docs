@@ -15,6 +15,7 @@ template: main.html
 
     Updating to 3.x via UART or ETX Passthrough doesn't require 2.5.2 firmware or the Repartitioner.
 
+<a name="via-wifi"></a>
 === "via WiFi"
 
     <figure markdown>

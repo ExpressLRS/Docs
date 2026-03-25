@@ -14,6 +14,7 @@ It is still recommended that you update your gear to the latest firmware version
 ## Transmitter Module Firmware Version
 There are three methods to determine what firmware version you currently have on your Transmitter module
 
+<a name="via-lua-script"></a>
 === "via Lua Script"
 
     1. Press the ++"SYS"++ Key on your Radio.

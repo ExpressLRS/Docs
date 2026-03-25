@@ -125,7 +125,7 @@ Our initial timeline has been heavily delayed through the delivery of hardware t
 
 **Results**
 
-[A number of PRs were merged](https://github.com/ExpressLRS/Docs/pulls?q=is%3Apr+author%3AAghaSaad04) by the Technical Writer, which include major technical topics/issues such as [Crystal Oscillator (XO) Frequency Error](https://github.com/ExpressLRS/Docs/pull/256).  However key beginner documents were difficult without hardware for our writer to have hands on experience with.
+[A number of PRs were merged](https://github.com/ExpressLRS/Docs/pulls?q=is%3Apr+author%3AAghaSaad04) by the Technical Writer, which include major technical topics/issues such as [Crystal Oscillator (XO) Frequency Error](https://github.com/ExpressLRS/ExpressLRS/pull/256).  However key beginner documents were difficult without hardware for our writer to have hands on experience with.
 
 **Metrics**
 

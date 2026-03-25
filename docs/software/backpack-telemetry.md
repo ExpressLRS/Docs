@@ -13,7 +13,7 @@ Version 3.4+ of ELRS introduces a new option in the Backpack section of the ELRS
 <figcaption>Sentinel Integration</figcaption>
 </figure>
 
-This capability is particularly useful for devices like the Sentinel Antenna Tracker, which can subscribe to ESPNOW telemetry packets and read GPS data from the telemetry feed. See [the Sentinel product page](https://www.virtualpilot.co.uk/index.php?route=product/product&product_id=59)
+This capability is particularly useful for devices like the Sentinel Antenna Tracker, which can subscribe to ESPNOW telemetry packets and read GPS data from the telemetry feed. See [the Sentinel product page](https://virtualpilot.co.uk/)
 
 ## Prerequisites
 - ELRS transmitter and receiver with the latest firmware.

@@ -6,7 +6,7 @@ description: ExpressLRS can be configured as a bi-directional transparent serial
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
 
 !!! note "NOTE"
-    With the addition of [MAVLink](../mavlink/) support in ELRS 3.5, it is no longer recommended to use Airport for MAVLink telemetry. Please see the [MAVLink](../mavlink/) page for more info.
+    With the addition of [MAVLink](mavlink.md) support in ELRS 3.5, it is no longer recommended to use Airport for MAVLink telemetry. Please see the [MAVLink](mavlink.md) page for more info.
 	
 ## Description
 

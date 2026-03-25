@@ -93,6 +93,7 @@ template: main.html
 
     13. With the [ExpressLRS Lua Script] in the System Menu's Tools page, verify if the firmware version has been updated.
 
+<a name="via-stlink"></a>
 === "via STLink"
 
     <figure markdown>

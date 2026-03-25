@@ -51,7 +51,7 @@ Caution: don't use Continuous Wave mode for longer periods of time to avoid exce
 
 ### Measuring relative XO error between a TX-RX pair
 
-You'll need to use "Manual mode" in the configurator to enable a special debug mode. In addition to this debug mode flag, you should add any other user defines you need to get your TX/RX to connect (check the [user defines section](https://www.expresslrs.org/3.0/software/user-defines/)).
+You'll need to use "Manual mode" in the configurator to enable a special debug mode. In addition to this debug mode flag, you should add any other user defines you need to get your TX/RX to connect (check the [user defines section](https://www.expresslrs.org/software/user-defines/)).
 
 For example, this might look like (which is safe to just copy-paste in general):
 

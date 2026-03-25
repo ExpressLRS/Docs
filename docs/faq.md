@@ -42,7 +42,7 @@ hide:
 ## <span class="custom-heading" data-id="7">What is required to achieve a 1000 Hz update rate on 2.4 GHz?</span>
 
 ??? faq "What is required to achieve a 1000 Hz packet rate on 2.4 GHz?"
-    In order to achieve the fastest packet rate, your radio must be running a supported [firmware](quick-start/transmitters/tx-prep.md#radio-operating-system), set to a minimum [hardware baud rate](quick-start/transmitters/tx-prep.md#serial-baud-rate) of 921000, and be connected to a serial ELRS receiver (SPI receivers do not support the FLRC modes required). Also make absolutely sure [ADC filter](quick-start/transmitters/tx-prep.md#adc-filter) is disabled on your radio, and that you have applied the appropriate RC Link [Preset](https://betaflight.com/docs/wiki/configurator/presets-tab) in Betaflight. 
+    In order to achieve the fastest packet rate, your radio must be running a supported [firmware](quick-start/transmitters/tx-prep.md#radio-operating-system), set to a minimum [hardware baud rate](quick-start/transmitters/tx-prep.md#serial-baud-rate) of 921000, and be connected to a serial ELRS receiver (SPI receivers do not support the FLRC modes required). Also make absolutely sure [ADC filter](quick-start/transmitters/tx-prep.md#adc-filter) is disabled on your radio, and that you have applied the appropriate RC Link [Preset](https://betaflight.com/docs/wiki/app/presets-tab) in Betaflight. 
 
     You can use the ELRS lua to check your current packet rate and ensure the radio mixer sync is working properly. See [Using the Lua Script](quick-start/transmitters/lua-howto.md) for more details.
 

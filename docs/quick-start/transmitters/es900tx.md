@@ -324,6 +324,7 @@ template: main.html
         13. On your Radio, the `WiFi Running` screen should disappear and should be back to the WiFi Connectivity Menu of the ExpressLRS Lua Script.
         14. Long-press the ++"RTN"++ Key to exit the ExpressLRS Lua Script. Then reload it to check for the ExpressLRS Firmware version and verify your TX module has been updated.
 
+<a name="via-uart"></a>
 === "via UART"
 
     <figure markdown>

@@ -96,19 +96,19 @@ To install the correct 'RC Link Preset', follow these steps in **Betaflight Conf
 
 1. Select the **Preset** tab
 1. In the preset tab, select **Save Backup** and save a backup to a safe location before applying any preset.
-1. Search for 'ExpressLRS' and select the Link Preset that matches your [Packet Rate](../transmitters/lua-howto.md#packet-rate-and-telemetry-ratio). If no direct match is available, choose the closest preset below your packet rate.
+1. Search for 'ExpressLRS' and select the Link Preset that matches your [Packet Rate](transmitters/lua-howto.md#packet-rate-and-telemetry-ratio). If no direct match is available, choose the closest preset below your packet rate.
 
-    ![Presets Home](../../assets/images/preset_home.png)
+    ![Presets Home](../assets/images/preset_home.png)
 
 1. Read through the options by selecting the dropdown list. NOTE: These are all optional, if none of them apply to your circumstances, it is OK to leave everything unticked.
 
 1. Select 'Pick' to stage the preset:
 
-    ![Presets Pick](../../assets/images/preset_pick.png)
+    ![Presets Pick](../assets/images/preset_pick.png)
     
 1. Select **Save and Reboot** to apply the preset:
 
-    ![Presets Save](../../assets/images/preset_save.png)
+    ![Presets Save](../assets/images/preset_save.png)
 
 ## Blackbox
 
