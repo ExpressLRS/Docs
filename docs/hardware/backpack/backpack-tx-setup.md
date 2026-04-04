@@ -28,8 +28,8 @@ Applies to: Older TX modules that have DIP switches or jumper pins, e.g. `Happym
 
 For older TX modules like the Happymodel TX Modules, you will need to move the jumpers or DIP switches into the correct position before flashing the firmware. Please see the USB/UART Flashing section of your particular TX Module for the jumper or DIP switch position.
 
-- [ES24TX Jumpers](../../quick-start/transmitters/es24tx.md/#via-uart)
-- [ES900TX Jumpers](../../quick-start/transmitters/es900tx.md/#via-uart)
+- [ES24TX Jumpers](../../quick-start/transmitters/es24tx.md#via-uart)
+- [ES900TX Jumpers](../../quick-start/transmitters/es900tx.md#via-uart)
 
 You need to activate the `Backpack Flashing` jumper or DIP switch (middle pair). Opening up the module enclosure will be needed as well to access the Buttons on the modules. Make sure your computer recognizes your TX module as a `USB to UART Bridge`. Windows drivers are linked in the Flashing Guides.
 
@@ -87,7 +87,7 @@ Applies to: All TX modules that have a Backpack (this method assumes that the Ba
 
 ### Flashing via WiFi (older NamimnoRC Gen1 TX Modules)
 
-For the First Generation NamimnoRC TX modules (No OLED), you will have to first `Build` the Backpack firmware. Once built, grab the `backpack.bin` file from the folder that the ExpressLRS Configurator opened. Open the URL http://elrs_tx.local on your browser and scroll down to where the **WiFi Backpack Firmware Update** section is (shown in the image below). If the page isn't loading, make sure you have followed the Wifi Flashing guide for these modules (see [Flashing Guide](../../quick-start/transmitters/flash2400.md/#via-wifi)).
+For the First Generation NamimnoRC TX modules (No OLED), you will have to first `Build` the Backpack firmware. Once built, grab the `backpack.bin` file from the folder that the ExpressLRS Configurator opened. Open the URL http://elrs_tx.local on your browser and scroll down to where the **WiFi Backpack Firmware Update** section is (shown in the image below). If the page isn't loading, make sure you have followed the Wifi Flashing guide for these modules (see [Flashing Guide](../../quick-start/transmitters/flash2400.md#via-wifi)).
 
 <figure markdown>
 ![Wifi Backpack](../../assets/images/backpackwifi.png)
