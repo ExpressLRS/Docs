@@ -1,0 +1,487 @@
+/*
+ * ExpressLRS Homepage Sections
+ * All classes prefixed with .mdx- to match existing convention
+ */
+
+/* ==========================================================================
+   Section Base Styles
+   ========================================================================== */
+
+.mdx-features,
+.mdx-partners,
+.mdx-community,
+.mdx-support,
+.mdx-news {
+  padding: 4rem 0;
+}
+
+.mdx-features > .md-grid,
+.mdx-partners > .md-grid,
+.mdx-community > .md-grid,
+.mdx-support > .md-grid,
+.mdx-news > .md-grid {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+@media screen and (max-width: 29.9375em) {
+  .mdx-features,
+  .mdx-partners,
+  .mdx-community,
+  .mdx-support,
+  .mdx-news {
+    padding: 2.5rem 0;
+  }
+}
+
+/* ==========================================================================
+   Section 1: Why ExpressLRS — Feature Grid
+   ========================================================================== */
+
+.mdx-features {
+  background-color: var(--md-default-bg-color);
+  margin-top: -2rem !important;
+  padding-top: 0 !important;
+}
+
+.mdx-features__heading {
+  text-align: center;
+  margin-top: 0 !important;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.mdx-features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 30em) {
+  .mdx-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .mdx-features__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mdx-features__item {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.mdx-features__item:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.mdx-features__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--md-primary-fg-color);
+}
+
+.mdx-features__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.mdx-features__item h3 {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.mdx-features__item p {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   Section 2: Trusted by Leading Brands — Partner Logo Grid
+   ========================================================================== */
+
+.mdx-partners {
+  background-color: var(--md-footer-bg-color, #1e1e1e);
+  color: var(--md-footer-fg-color, #fff);
+}
+
+.mdx-partners__heading {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--md-footer-fg-color, #fff);
+}
+
+.mdx-partners__subheading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+.mdx-partners__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mdx-partners__logo {
+  height: 2rem;
+  width: 7rem;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.5;
+  filter: brightness(0) invert(1);
+  mix-blend-mode: screen;
+  transition: opacity 0.2s;
+}
+
+.mdx-partners__logo:hover {
+  opacity: 0.9;
+}
+
+.mdx-partners__logo--md {
+  height: 1.7rem !important;
+}
+
+.mdx-partners__logo--sm {
+  height: 1.5rem !important;
+}
+
+.mdx-partners__logo--xs {
+  height: 1.2rem !important;
+}
+
+.mdx-partners__more {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.mdx-partners__cta {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.mdx-partners__cta a {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.mdx-partners__cta a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Section 3: Join the Community
+   ========================================================================== */
+
+.mdx-community {
+  background-color: var(--md-default-bg-color);
+}
+
+.mdx-community__heading {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.mdx-community__subheading {
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 2.5rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.9rem;
+}
+
+.mdx-community__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 60em) {
+  .mdx-community__grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.mdx-community__card {
+  display: block;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  text-decoration: none;
+  color: var(--md-default-fg-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mdx-community__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.mdx-community__card-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.mdx-community__card--discord .mdx-community__card-icon {
+  color: #5865F2;
+}
+
+.mdx-community__card--facebook .mdx-community__card-icon {
+  color: #1877F2;
+}
+
+.mdx-community__card--github .mdx-community__card-icon {
+  color: var(--md-default-fg-color);
+}
+
+.mdx-community__card-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.mdx-community__card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.mdx-community__card p {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  margin: 0 0 1rem;
+}
+
+.mdx-community__cta {
+  font-weight: 600;
+  color: var(--md-accent-fg-color);
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   Section 4: Support the Project
+   ========================================================================== */
+
+.mdx-support {
+  background-color: var(--md-footer-bg-color, #1e1e1e);
+  color: var(--md-footer-fg-color, #fff);
+}
+
+.mdx-support__heading {
+  font-weight: 700;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  color: var(--md-footer-fg-color, #fff);
+}
+
+.mdx-support__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 60em) {
+  .mdx-support__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.mdx-support__text {
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.7;
+  max-width: 28rem;
+}
+
+.mdx-support__text p {
+  margin: 0;
+}
+
+.mdx-support__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 30em) {
+  .mdx-support__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mdx-support__card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.mdx-support__card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.mdx-support__card-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto 0.75rem;
+}
+
+.mdx-support__card-logo svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.mdx-support__card-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.mdx-support__card-desc {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.mdx-support__card-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--md-accent-fg-color);
+  color: #1e1e1e !important;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+  box-sizing: border-box;
+}
+
+.mdx-support__card-btn:hover {
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   Section 5: Latest News
+   ========================================================================== */
+
+.mdx-news {
+  background-color: var(--md-default-bg-color);
+}
+
+.mdx-news__heading {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.mdx-news__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 60em) {
+  .mdx-news__list {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+  }
+}
+
+.mdx-news__item {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  text-decoration: none;
+  color: var(--md-default-fg-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mdx-news__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.mdx-news__date {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.5rem;
+}
+
+.mdx-news__category {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+.mdx-news__title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.mdx-news__cta {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.mdx-news__cta a {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.mdx-news__cta a:hover {
+  text-decoration: underline;
+}

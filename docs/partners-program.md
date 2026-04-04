@@ -4,7 +4,7 @@ hide:
   - navigation
 ---
 
-# Partners program
+# Partners Program
 
 Interested in developing ExpressLRS-compatible hardware or collaborating with our project?
 

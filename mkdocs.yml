@@ -2,9 +2,9 @@ site_name: ExpressLRS
 site_url: https://www.expresslrs.org/
 site_author: ExpressLRS
 site_description: >-
-  ExpressLRS aims to provide the best completely open, high refresh radio
-  control link while maintaining a maximum achievable range at that rate with
-  low latency. Vast support of hardware in both 900 MHz and 2.4 GHz frequencies.
+  ExpressLRS is a fully open radio control link built for maximum
+  range, speed, and data throughput. Wide hardware support across both
+  900 MHz and 2.4 GHz frequencies.
 
 # Repository
 repo_name: ExpressLRS/ExpressLRS
@@ -63,6 +63,9 @@ theme:
   logo: assets/images/logotype.svg
 
 # Plugins
+hooks:
+  - overrides/hooks/blog_posts.py
+
 plugins:
   - blog:
       enabled: true
@@ -98,6 +101,7 @@ plugins:
 extra_css:
   - assets/stylesheets/main.css
   - assets/stylesheets/colors.css
+  - assets/stylesheets/home.css
 
 # Analytics
 extra:
