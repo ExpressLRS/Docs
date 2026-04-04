@@ -89,12 +89,6 @@
   padding: 1.5rem;
   border-radius: 0.5rem;
   border: 1px solid var(--md-default-fg-color--lightest);
-  transition: box-shadow 0.2s, border-color 0.2s;
-}
-
-.mdx-features__item:hover {
-  border-color: var(--md-accent-fg-color);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .mdx-features__icon {
@@ -532,11 +526,6 @@
 
 [data-md-color-scheme="default"] .mdx-features__item {
   border-color: rgba(255, 255, 255, 0.12);
-}
-
-[data-md-color-scheme="default"] .mdx-features__item:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 [data-md-color-scheme="default"] .mdx-features__item h3 {
