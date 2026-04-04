@@ -101,7 +101,7 @@
   width: 2.5rem;
   height: 2.5rem;
   margin-bottom: 0.75rem;
-  color: var(--md-primary-fg-color);
+  color: var(--md-accent-fg-color);
 }
 
 .mdx-features__icon svg {
@@ -367,11 +367,14 @@
 }
 
 .mdx-support__card {
+  display: block;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 0.5rem;
   padding: 2rem 1.5rem;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none !important;
+  color: var(--md-footer-fg-color, #fff) !important;
   transition: border-color 0.2s, background-color 0.2s;
 }
 
@@ -510,4 +513,81 @@
 
 .mdx-news__cta a:hover {
   text-decoration: underline;
+}
+
+/* ==========================================================================
+   Light Theme Overrides
+   ========================================================================== */
+
+/* --- Features section: dark background in light mode --- */
+
+[data-md-color-scheme="default"] .mdx-features {
+  background-color: hsla(0, 0%, 15%, 1);
+  color: rgba(255, 255, 255, 0.87);
+}
+
+[data-md-color-scheme="default"] .mdx-features__heading {
+  color: #fff;
+}
+
+[data-md-color-scheme="default"] .mdx-features__item {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-md-color-scheme="default"] .mdx-features__item:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+[data-md-color-scheme="default"] .mdx-features__item h3 {
+  color: #fff;
+}
+
+[data-md-color-scheme="default"] .mdx-features__item p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Tinted section backgrounds --- */
+
+[data-md-color-scheme="default"] .mdx-community {
+  background-color: #f8f8f6;
+}
+
+[data-md-color-scheme="default"] .mdx-news {
+  background-color: #f4f7fb;
+  padding-bottom: 6rem;
+  margin-bottom: -2rem;
+}
+
+/* --- Better card styling for Community --- */
+
+[data-md-color-scheme="default"] .mdx-community__card {
+  background-color: #ffffff;
+  border-color: #e2e6ed;
+  box-shadow: 0 1px 3px rgba(73, 107, 184, 0.06);
+}
+
+[data-md-color-scheme="default"] .mdx-community__card:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 12px 32px rgba(73, 107, 184, 0.14);
+}
+
+/* --- Better card styling for News --- */
+
+[data-md-color-scheme="default"] .mdx-news__item {
+  background-color: #ffffff;
+  border-color: #e2e6ed;
+  box-shadow: 0 1px 3px rgba(73, 107, 184, 0.06);
+}
+
+[data-md-color-scheme="default"] .mdx-news__item:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 8px 24px rgba(73, 107, 184, 0.12);
+}
+
+/* --- Softer news category badges --- */
+
+[data-md-color-scheme="default"] .mdx-news__category {
+  background-color: rgba(73, 107, 184, 0.1);
+  color: var(--md-primary-fg-color);
 }
