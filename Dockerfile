@@ -1,16 +1,4 @@
-FROM squidfunk/mkdocs-material:9.6.19
-RUN apk add \
-    build-base \
-    libxml2-dev \
-    libxslt \
-    libxslt-dev \
-    dumb-init
+FROM zensical/zensical:0.0.32
 
-WORKDIR /docs
-COPY ./Makefile ./Makefile
-RUN make install-python-packages
-
-EXPOSE 8000
-
-ENTRYPOINT ["dumb-init"]
-CMD ["mkdocs", "serve", "--livereload", "--dev-addr=0.0.0.0:8000"]
+# WORKDIR, EXPOSE 8000, ENTRYPOINT and the default
+# `serve --dev-addr=0.0.0.0:8000` CMD are inherited from the base image.

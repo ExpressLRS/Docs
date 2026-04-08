@@ -1,19 +1,21 @@
-.PHONY: install-python-packages
-install-python-packages:
-	pip install \
-      "mkdocs-minify-plugin==0.8.0" \
-      "mkdocs-redirects==1.2.2" \
-      "mkdocs-static-i18n==1.3.0" \
-      "mkdocs-git-committers-plugin-2==2.5.0" \
-      "mkdocs-git-revision-date-localized-plugin==1.4.5" \
-      "cairosvg==2.8.1" \
-      "jinja2==3.1.6"
+# Host-only convenience wrappers around `docker compose`.
+# CI invokes `docker compose` directly and never calls `make`.
 
+.PHONY: install build run serve site shell
 
-.PHONY: build
+install:
+	pip install "zensical==0.0.32"
+
 build:
 	docker compose build
 
-.PHONY: run
-run:
+run: serve
+
+serve:
 	docker compose up
+
+site:
+	docker compose run --rm docs build --clean
+
+shell:
+	docker compose run --rm --entrypoint sh docs

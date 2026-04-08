@@ -1,0 +1,287 @@
+[project]
+site_name = "ExpressLRS"
+site_url = "https://www.expresslrs.org/"
+site_author = "ExpressLRS"
+site_description = """
+ExpressLRS is a fully open radio control link built for maximum range, \
+speed, and data throughput. Wide hardware support across both 900 MHz \
+and 2.4 GHz frequencies.\
+"""
+copyright = "Copyright &copy; 2018–2026 ExpressLRS LLC"
+
+# Repository — used by content.action.edit / content.action.view
+repo_name = "ExpressLRS/ExpressLRS"
+repo_url  = "https://github.com/ExpressLRS/ExpressLRS/releases/"
+edit_uri  = "https://github.com/ExpressLRS/Docs/tree/master/docs/"
+
+extra_css = [
+    "assets/stylesheets/main.css",
+    "assets/stylesheets/colors.css",
+    "assets/stylesheets/home.css",
+]
+
+extra_javascript = [
+    "assets/javascripts/binding-phrase.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js",
+    "assets/javascripts/tablesort.js",
+    "assets/javascripts/mathjax.js",
+    "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+]
+
+# ---------------------------------------------------------------------------
+# Navigation — ported 1:1 from mkdocs.yml
+# ---------------------------------------------------------------------------
+nav = [
+    { "Home" = "index.md" },
+    { "Quick Start" = [
+        { "Getting Started" = "quick-start/getting-started.md" },
+        { "Installing the Configurator" = "quick-start/installing-configurator.md" },
+        { "Firmware Options" = "quick-start/firmware-options.md" },
+        { "The Web UI" = "quick-start/webui.md" },
+        { "Transmitters" = [
+            { "Radio Preparation" = "quick-start/transmitters/tx-prep.md" },
+            { "Checking FW Version" = "quick-start/transmitters/firmware-version.md" },
+            { "Typical Updating Steps" = "quick-start/transmitters/updating.md" },
+            { "Updating Transmitters" = [
+                { "Axisflying Thor" = "quick-start/transmitters/axisflying-thor.md" },
+                { "BetaFPV 2.4GHz" = "quick-start/transmitters/betafpv2400.md" },
+                { "BetaFPV 900MHz" = "quick-start/transmitters/betafpv900.md" },
+                { "BetaFPV LR3 Pro" = "quick-start/transmitters/betafpvlr3pro.md" },
+                { "EMAX 2.4GHz" = "quick-start/transmitters/emax2400.md" },
+                { "EMAX 900MHz" = "quick-start/transmitters/emax900.md" },
+                { "Frsky R9 Modules" = "quick-start/transmitters/frsky-r9modules.md" },
+                { "Happymodel ES24TX" = "quick-start/transmitters/es24tx.md" },
+                { "Happymodel ES900TX" = "quick-start/transmitters/es900tx.md" },
+                { "HGLRC Hermes" = "quick-start/transmitters/hglrc-hermes.md" },
+                { "iFlight Commando" = "quick-start/transmitters/iflight-commando.md" },
+                { "IMRC Ghost" = "quick-start/transmitters/ghost2400.md" },
+                { "Internal RadioMaster" = "quick-start/transmitters/rm-internal.md" },
+                { "Internal Jumper T-Pro" = "quick-start/transmitters/aion-internal.md" },
+                { "Internal Jumper TLite V2" = "quick-start/transmitters/jumper-internal.md" },
+                { "Internal Jumper T14/T15" = "quick-start/transmitters/jumper-t14-t15-internal.md" },
+                { "Internal Jumper T20" = "quick-start/transmitters/jumper-t20-internal.md" },
+                { "Jumper Aion Nano" = "quick-start/transmitters/jumper-aion.md" },
+                { "NamimnoRC Flash" = "quick-start/transmitters/flash2400.md" },
+                { "NamimnoRC Voyager" = "quick-start/transmitters/voyager900.md" },
+                { "Radiomaster Bandit" = "quick-start/transmitters/rm-bandit.md" },
+                { "Radiomaster Ranger" = "quick-start/transmitters/rm-ranger.md" },
+                { "Siyi FM30" = "quick-start/transmitters/siyifm30.md" },
+                { "Vantac Lite" = "quick-start/transmitters/vantac-lite.md" },
+                { "DIY 900TX" = "quick-start/transmitters/diy900.md" },
+                { "DIY 2400TX" = "quick-start/transmitters/diy2400.md" },
+            ] },
+            { "The ExpressLRS Lua Script" = "quick-start/transmitters/lua-howto.md" },
+        ] },
+        { "Receivers" = [
+            { "Receiver Wiring" = "quick-start/receivers/wiring-up.md" },
+            { "Configuring FC" = "quick-start/receivers/configuring-fc.md" },
+            { "Checking FW Version" = "quick-start/receivers/firmware-version.md" },
+            { "Typical Updating Steps" = "quick-start/receivers/updating.md" },
+            { "Updating Receivers" = [
+                { "Axisflying Thor" = "quick-start/receivers/axisflying-thor.md" },
+                { "BetaFPV Lite/Nano/AIO 2.4GHz" = "quick-start/receivers/betafpv2400.md" },
+                { "BetaFPV Nano 900MHz" = "quick-start/receivers/betafpv900.md" },
+                { "BetaFPV SuperD 2.4GHz" = "quick-start/receivers/betafpv-superd.md" },
+                { "BetaFPV SuperD 900MHz" = "quick-start/receivers/betafpv-superd900.md" },
+                { "Foxeer LNA & Lite 2.4GHz" = "quick-start/receivers/foxeer2400.md" },
+                { "Frsky R9" = "quick-start/receivers/r9.md" },
+                { "GEPRC Nano & Dual 2.4GHz" = "quick-start/receivers/geprc2400.md" },
+                { "GEPRC Nano & Dual 900MHz" = "quick-start/receivers/geprc900.md" },
+                { "Happymodel EP" = "quick-start/receivers/hmep2400.md" },
+                { "Happymodel PP" = "quick-start/receivers/hmpp2400.md" },
+                { "Happymodel ES900RX" = "quick-start/receivers/hmes900.md" },
+                { "HGLRC Hermes 2.4GHz" = "quick-start/receivers/hglrc-hermes2400.md" },
+                { "HGLRC Hermes 900MHz" = "quick-start/receivers/hglrc-hermes900.md" },
+                { "iFlight 2.4GHz" = "quick-start/receivers/iflight2400.md" },
+                { "iFlight 900MHz" = "quick-start/receivers/iflight900.md" },
+                { "IMRC Ghost" = "quick-start/receivers/ghost2400.md" },
+                { "Jumper Aion Nano" = "quick-start/receivers/jumper-aion.md" },
+                { "Jumper R9 Mini" = "quick-start/receivers/jumper900.md" },
+                { "Matek R24" = "quick-start/receivers/matek2400.md" },
+                { "NamimnoRC Flash" = "quick-start/receivers/flash2400.md" },
+                { "NamimnoRC Voyager" = "quick-start/receivers/voyager900.md" },
+                { "RadioMaster RP" = "quick-start/receivers/radiomaster-rp-2400.md" },
+                { "Siyi FR Mini" = "quick-start/receivers/siyiFRmini.md" },
+                { "Vantac" = "quick-start/receivers/vantac2400.md" },
+                { "DIY 900RX" = "quick-start/receivers/diy900.md" },
+                { "DIY 2400RX" = "quick-start/receivers/diy2400.md" },
+            ] },
+        ] },
+        { "Post-Flash" = [
+            { "LED Status" = "quick-start/led-status.md" },
+            { "Binding ExpressLRS" = "quick-start/binding.md" },
+            { "Before First Flight" = "quick-start/pre-1stflight.md" },
+            { "Ardupilot Setup" = "quick-start/ardupilot-setup.md" },
+        ] },
+        { "Troubleshooting" = "quick-start/troubleshooting.md" },
+        { "Unbricking" = "quick-start/unbricking.md" },
+    ] },
+    { "Software" = [
+        { "Obsolete Defines" = "software/obsolete-defines.md" },
+        { "OpenOCD for STLink" = "software/open-ocd.md" },
+        { "PIO STLink Fix" = "software/stlink-fix.md" },
+        { "Switch Configs" = "software/switch-config.md" },
+        { "Toolchain Setup" = "software/toolchain-install.md" },
+        { "User Defines" = "software/user-defines.md" },
+        { "Updating" = [
+            { "Betaflight Passthrough" = "software/updating/betaflight-passthrough.md" },
+            { "Wifi Updating" = "software/updating/wifi-updating.md" },
+        ] },
+        { "Features" = [
+            { "AirPort" = "software/airport.md" },
+            { "Dynamic Transmit Power" = "software/dynamic-transmit-power.md" },
+            { "Gemini" = "software/gemini.md" },
+            { "Loan Model" = "software/loan-model.md" },
+            { "MAVLink" = "software/mavlink.md" },
+            { "MFD Crossbow Tracker Integration" = "software/mfd-crossbow.md" },
+            { "Model Matching" = "software/model-config-match.md" },
+            { "Receiver Serial Protocols" = "software/serial-protocols.md" },
+            { "Sentinel Tracker Integration" = "software/backpack-telemetry.md" },
+            { "Serial VTX" = "software/serialvtx.md" },
+            { "Team Racing" = "software/teamracing.md" },
+            { "Trainer (Head Tracking) Input" = "software/trainer-input.md" },
+        ] },
+        { "Testing" = [
+            { "CRC Testing" = "software/testing/crc-testing.md" },
+            { "RX Testing" = "software/testing/rx-scoreboard.md" },
+            { "Unit Testing" = "software/testing/unit-testing.md" },
+        ] },
+    ] },
+    { "Hardware" = [
+        { "Hardware Selection" = "hardware/hardware-selection.md" },
+        { "R9M Inverter Mod" = "hardware/inverter-mod.md" },
+        { "R9M Fan Mod" = "hardware/fan-mod.md" },
+        { "Troubleshooting the X9D(+)" = "hardware/x9d-troubleshooting.md" },
+        { "Crystal Oscillator (XO) Frequency Error" = "hardware/crystal-frequency-error.md" },
+        { "SMD Antenna" = "hardware/smd-antenna.md" },
+        { "PWM Receivers" = "hardware/pwm-receivers.md" },
+        { "SPI Receivers" = "hardware/spi-receivers.md" },
+        { "ESP Backpacks" = [
+            { "Backpack Info" = "hardware/backpack/esp-backpack.md" },
+            { "Tx Backpack Setup" = "hardware/backpack/backpack-tx-setup.md" },
+            { "VRx Backpack Setup" = "hardware/backpack/backpack-vrx-setup.md" },
+            { "HDZero Goggle VRx Backpack" = "hardware/backpack/hdzero-goggles.md" },
+        ] },
+        { "Special Targets" = [
+            { "DIY Receiver" = "hardware/special-targets/diy-rx.md" },
+            { "DIY Transmitter" = "hardware/special-targets/diy-tx.md" },
+            { "Nuclear Targets" = "hardware/special-targets/nuclear-hardware.md" },
+        ] },
+    ] },
+    { "Info" = [
+        { "Glossary" = "info/glossary.md" },
+        { "Signal Health" = "info/signal-health.md" },
+        { "Telemetry Bandwidth" = "info/telem-bandwidth.md" },
+        { "Init Rate" = "info/init-rate.md" },
+        { "Long Range Competition" = "info/long-range.md" },
+        { "Advance Technical Info" = "info/advance-technical-info.md" },
+        { "Privacy Policy" = "info/privacy-policy.md" },
+        { "Licenses" = "info/licenses.md" },
+        { "Terms & Conditions" = "info/terms-and-conditions.md" },
+    ] },
+    { "FAQ" = "faq.md" },
+    { "Blog" = [
+        { "Blog" = "blog/index.md" },
+    ] },
+    { "Partners Program" = "partners-program.md" },
+    { "Contact Us" = "contact-us.md" },
+]
+
+# ---------------------------------------------------------------------------
+# Theme
+# ---------------------------------------------------------------------------
+[project.theme]
+# TODO: re-enable `custom_dir = "overrides"` once the partials in
+# overrides/ (header, footer, copyright, home.html, blog.html) are ported
+# to Zensical's template context. The mkdocs-material variables they
+# reference (e.g. config.extra.social, page.meta) don't exist in Zensical
+# yet — enabling custom_dir floods the build with template errors.
+language   = "en"
+favicon    = "assets/favicon.png"
+logo       = "assets/images/logotype.svg"
+
+features = [
+    "announce.dismiss",
+    "navigation.sections",
+    "navigation.tabs",
+    "navigation.footer",
+    "navigation.tracking",
+    "navigation.indexes",
+    "search.highlight",
+    "search.suggest",
+    "toc.follow",
+    "content.action.edit",
+    "content.action.view",
+]
+
+[project.theme.font]
+text = "Roboto"
+code = "Roboto Mono"
+
+# Dark mode (default — matches the historical ExpressLRS palette)
+[[project.theme.palette]]
+media  = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+# Light mode
+[[project.theme.palette]]
+media  = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+# ---------------------------------------------------------------------------
+# Extra
+# ---------------------------------------------------------------------------
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/ExpressLRS/"
+name = "See the Github Repo"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = "https://discord.gg/dS6ReFY"
+name = "Check out the Discord"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/facebook"
+link = "https://www.facebook.com/groups/636441730280366"
+name = "Join the Facebook Group"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/twitter"
+link = "https://twitter.com/expresslrs"
+name = "We're on Twitter too!"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/instagram"
+link = "https://instagram.com/expresslrs"
+name = "Follow us on Instagram"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/circle-dollar-to-slot"
+link = "https://opencollective.com/expresslrs"
+name = "Send a Donation!"
+
+# ---------------------------------------------------------------------------
+# TODO — Zensical equivalents not yet wired up. The user accepted feature
+# loss during migration; track these as follow-ups:
+#
+#   * blog plugin           (mkdocs-material insiders blog/posts/*)
+#   * tags plugin
+#   * minify plugin
+#   * git-revision-date-localized
+#   * git-committers
+#   * redirects.yml         (mkdocs-redirects redirect_maps — see redirects.yml)
+#   * Google Analytics + cookie consent banner (project.extra.analytics / .consent)
+#   * overrides/hooks/blog_posts.py (injects recent posts into homepage)
+#   * pymdownx markdown extensions — Zensical's markdown_extensions surface is
+#     not yet documented; verify before re-enabling. Previous list:
+#       admonition, abbr, attr_list, def_list, footnotes, meta, md_in_html,
+#       tables, toc(permalink), pymdownx.{arithmatex, betterem, caret, critic,
+#       details, emoji, highlight, inlinehilite, keys, magiclink, mark,
+#       smartsymbols, superfences(mermaid), tabbed, tasklist, tilde}
+# ---------------------------------------------------------------------------
