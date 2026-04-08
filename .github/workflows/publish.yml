@@ -3,61 +3,36 @@ on:
   push:
     branches:
       - master
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout latest push
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
+          python-version: "3.11"
 
-      - name: Setup Python env
-        uses: actions/setup-python@v5
+      - name: Install Zensical
+        run: make install
+
+      - name: Build site
+        run: zensical build --clean
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          python-version: 3.9.16
+          path: site
 
-      - name: Set up build cache
-        uses: actions/cache/restore@v4
-        with:
-          key: docs-${{ hashfiles('.cache/**') }}
-          path: .cache
-          restore-keys: |
-            docs-
-
-      - name: Setup Github
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git pull
-          git checkout master
-
-      - name: Install Dependencies
-        run: |
-          make install-python-packages
-          sudo apt-get install pngquant
-
-      - name: Install MkDocs Insiders
-        if: github.event.repository.fork == false
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: pip install --upgrade git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.6.14-insiders-4.53.16
-
-      - name: Deploy Release Version
-        run: |
-          mkdocs gh-deploy --force --config-file mkdocs-insiders.yml
-
-      - name: Deploy to Server
-        run: |
-          git checkout gh-pages
-          git remote set-url --push origin https://actions:$GITHUB_TOKEN@github.com/ExpressLRS/Docs
-          git push -f origin gh-pages
-
-      - name: Save build cache
-        uses: actions/cache/save@v4
-        with:
-          key: docs-${{ hashfiles('.cache/**') }}
-          path: .cache
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
