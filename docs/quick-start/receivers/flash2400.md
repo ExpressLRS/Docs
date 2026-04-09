@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for NamimnoRC Flash 2.4GHz receiver variants (ESP and STM32).
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

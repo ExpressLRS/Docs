@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Building custom ESP-based ExpressLRS receivers for 2.4GHz and 900MHz.
 ---
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
 

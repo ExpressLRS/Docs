@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: The Nuclear RX — an ultra-compact 2.4GHz DIY receiver with 20x20 mounting.
 ---
 
 ![HW Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/hardware.png)

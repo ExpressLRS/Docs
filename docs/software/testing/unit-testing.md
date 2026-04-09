@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Running ExpressLRS unit tests with PlatformIO and the native platform.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)

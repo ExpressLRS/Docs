@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for Jumper T20 internal 2.4GHz and 900MHz transmitters with Gemini support.
 ---
 
 <figure markdown>

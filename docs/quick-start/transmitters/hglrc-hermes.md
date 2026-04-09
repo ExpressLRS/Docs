@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the HGLRC Hermes 2.4GHz TX module via WiFi, UART, or EdgeTX passthrough.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

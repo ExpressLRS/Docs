@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for ImmersionRC Ghost Atto and Zepto 2.4GHz STM32 receivers via STLink.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

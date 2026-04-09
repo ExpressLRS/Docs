@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Updating ExpressLRS devices over WiFi using hotspot, home network, or auto-update methods.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)

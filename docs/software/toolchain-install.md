@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Setting up VSCode, PlatformIO, and Git for ExpressLRS firmware development.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)

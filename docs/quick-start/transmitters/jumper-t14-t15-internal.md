@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for Jumper T14 and T15 internal 2.4GHz and 900MHz transmitters.
 ---
 
 <figure markdown>

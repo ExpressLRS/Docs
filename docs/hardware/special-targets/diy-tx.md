@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Building custom ESP-based ExpressLRS transmitter modules for JR and lite bays.
 ---
 
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)

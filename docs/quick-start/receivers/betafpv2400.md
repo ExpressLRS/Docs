@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for BetaFPV Lite, Nano, and AIO 2.4GHz receivers.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

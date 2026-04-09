@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Updating ExpressLRS receivers via Betaflight serial passthrough.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)

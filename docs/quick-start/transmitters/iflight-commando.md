@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for iFlight Commando 2.4GHz and 900MHz TX modules.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Using OpenOCD on Linux to unlock STLink-based receivers for flashing.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
