@@ -4,7 +4,9 @@ RUN apk add \
     libxml2-dev \
     libxslt \
     libxslt-dev \
-    dumb-init
+    dumb-init \
+    aspell \
+    aspell-en
 
 WORKDIR /docs
 COPY ./Makefile ./Makefile
