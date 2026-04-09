@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: CRC-14 bit error detection stress test results for the ExpressLRS packet protocol.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)

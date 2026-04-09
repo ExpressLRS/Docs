@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the NamimnoRC Voyager 900MHz STM32-based TX module.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

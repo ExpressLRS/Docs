@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the EMAX 900MHz TX module with pre-installed 3.x firmware.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

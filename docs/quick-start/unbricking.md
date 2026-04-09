@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Recovery guide for soft-bricked ESP-based ExpressLRS receivers using the factory bootloader.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)

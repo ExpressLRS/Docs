@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the NamimnoRC Flash 2.4GHz OLED TX module.
 ---
 
 <figure markdown>

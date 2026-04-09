@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for FrSky R9M and R9M Lite Pro STM32-based 900MHz TX modules.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

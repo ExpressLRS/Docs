@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the SIYI FR Mini STM32-based receiver via STLink.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Partner with ExpressLRS to develop compatible hardware and join the official ecosystem.
 hide:
   - navigation
 ---
