@@ -11,9 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+      - name: Install aspell
+        run: sudo apt-get install -y aspell aspell-en
+      - name: Install Python packages
+        run: make install-python-packages
       - name: Check Spelling
-        uses: rojopolis/spellcheck-github-actions@0.36.0
-        with:
-          config_path: .spellcheck.yml
-          task_name: Markdown
+        run: make spellcheck

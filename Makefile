@@ -7,13 +7,13 @@ install-python-packages:
       "mkdocs-git-committers-plugin-2==2.5.0" \
       "mkdocs-git-revision-date-localized-plugin==1.4.5" \
       "cairosvg==2.8.1" \
-      "jinja2==3.1.6"
-
+      "jinja2==3.1.6" \
+      "pyspelling==2.12.1"
 
 .PHONY: build
 build:
-	docker compose build
+	mkdocs build
 
-.PHONY: run
-run:
-	docker compose up
+.PHONY: spellcheck
+spellcheck:
+	pyspelling --config .spellcheck.yml --spellchecker aspell --name Markdown
