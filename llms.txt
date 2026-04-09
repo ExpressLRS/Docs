@@ -1,0 +1,153 @@
+# ExpressLRS
+
+> ExpressLRS is a fully open radio control link built for maximum range, speed, and data throughput. Wide hardware support across both 900 MHz and 2.4 GHz frequencies.
+
+## Home
+
+- [Home](https://www.expresslrs.org/)
+
+## Quick Start
+
+- [Getting Started](https://www.expresslrs.org/quick-start/getting-started/): Start your ExpressLRS experience here! This is the most comprehensive guide to get you flying on ExpressLRS.
+- [Installing the Configurator](https://www.expresslrs.org/quick-start/installing-configurator/): The ExpressLRS Configurator has made improvements on ExpressLRS accessibility. It is an invaluable tool to get your ExpressLRS Device up-to-date.
+- [Firmware Options](https://www.expresslrs.org/quick-start/firmware-options/): Get your ExpressLRS Devices setup as you deemed fit! Customize your Receivers and Transmitter Modules per your needs with the Firmware Options.
+- [The Web UI](https://www.expresslrs.org/quick-start/webui/): The ExpressLRS Web UI is an essential part of the ExpressLRS ecosystem. WiFi Updates and Configuration can be done through it.
+- [Radio Preparation](https://www.expresslrs.org/quick-start/transmitters/tx-prep/): Get your Radio Handset prepared for ExpressLRS with this setup guide.
+- [Checking FW Version](https://www.expresslrs.org/quick-start/transmitters/firmware-version/): Get to know your ExpressLRS TX Module Firmware Version.
+- [Typical Updating Steps](https://www.expresslrs.org/quick-start/transmitters/updating/): General Guidelines for ExpressLRS TX Module firmware updating.
+- [Axisflying Thor](https://www.expresslrs.org/quick-start/transmitters/axisflying-thor/): Flashing guide for the Axisflying Thor 2.4GHz TX module via WiFi, UART, or EdgeTX passthrough.
+- [BetaFPV 2.4GHz](https://www.expresslrs.org/quick-start/transmitters/betafpv2400/): Flashing guide for BetaFPV 2.4GHz TX modules via WiFi, UART, or EdgeTX passthrough.
+- [BetaFPV 900MHz](https://www.expresslrs.org/quick-start/transmitters/betafpv900/): Flashing guide for BetaFPV 900MHz TX modules via WiFi, UART, or EdgeTX passthrough.
+- [BetaFPV LR3 Pro](https://www.expresslrs.org/quick-start/transmitters/betafpvlr3pro/): Flashing guide for the BetaFPV LR3 Pro internal 2.4GHz transmitter.
+- [EMAX 2.4GHz](https://www.expresslrs.org/quick-start/transmitters/emax2400/): Flashing guide for the EMAX 2.4GHz TX module with pre-installed 3.x firmware.
+- [EMAX 900MHz](https://www.expresslrs.org/quick-start/transmitters/emax900/): Flashing guide for the EMAX 900MHz TX module with pre-installed 3.x firmware.
+- [Frsky R9 Modules](https://www.expresslrs.org/quick-start/transmitters/frsky-r9modules/): Flashing guide for FrSky R9M and R9M Lite Pro STM32-based 900MHz TX modules.
+- [Happymodel ES24TX](https://www.expresslrs.org/quick-start/transmitters/es24tx/): Flashing guide for Happymodel ES24TX 2.4GHz TX module variants (Lite, Slim Pro, Pro).
+- [Happymodel ES900TX](https://www.expresslrs.org/quick-start/transmitters/es900tx/): Flashing guide for the Happymodel ES900TX 900MHz TX module via WiFi, UART, or EdgeTX passthrough.
+- [HGLRC Hermes](https://www.expresslrs.org/quick-start/transmitters/hglrc-hermes/): Flashing guide for the HGLRC Hermes 2.4GHz TX module via WiFi, UART, or EdgeTX passthrough.
+- [iFlight Commando](https://www.expresslrs.org/quick-start/transmitters/iflight-commando/): Flashing guide for iFlight Commando 2.4GHz and 900MHz TX modules.
+- [IMRC Ghost](https://www.expresslrs.org/quick-start/transmitters/ghost2400/): Flashing guide for the ImmersionRC Ghost 2.4GHz STM32-based TX module via STLink.
+- [Internal RadioMaster](https://www.expresslrs.org/quick-start/transmitters/rm-internal/): Flashing guide for RadioMaster internal 2.4GHz transmitters via WiFi, UART, or EdgeTX passthrough.
+- [Internal Jumper T-Pro](https://www.expresslrs.org/quick-start/transmitters/aion-internal/): Flashing guide for Jumper T-Pro internal 2.4GHz and 900MHz transmitters.
+- [Internal Jumper TLite V2](https://www.expresslrs.org/quick-start/transmitters/jumper-internal/): Flashing guide for Jumper TLite V2 internal 2.4GHz and 900MHz transmitters.
+- [Internal Jumper T14/T15](https://www.expresslrs.org/quick-start/transmitters/jumper-t14-t15-internal/): Flashing guide for Jumper T14 and T15 internal 2.4GHz and 900MHz transmitters.
+- [Internal Jumper T20](https://www.expresslrs.org/quick-start/transmitters/jumper-t20-internal/): Flashing guide for Jumper T20 internal 2.4GHz and 900MHz transmitters with Gemini support.
+- [Jumper Aion Nano](https://www.expresslrs.org/quick-start/transmitters/jumper-aion/): Flashing guide for the Jumper Aion Nano 2.4GHz TX module via WiFi, UART, or EdgeTX passthrough.
+- [NamimnoRC Flash](https://www.expresslrs.org/quick-start/transmitters/flash2400/): Flashing guide for the NamimnoRC Flash 2.4GHz OLED TX module.
+- [NamimnoRC Voyager](https://www.expresslrs.org/quick-start/transmitters/voyager900/): Flashing guide for the NamimnoRC Voyager 900MHz STM32-based TX module.
+- [Radiomaster Bandit](https://www.expresslrs.org/quick-start/transmitters/rm-bandit/): Flashing guide for the RadioMaster Bandit 2.4GHz TX module with pre-installed 3.x firmware.
+- [Radiomaster Ranger](https://www.expresslrs.org/quick-start/transmitters/rm-ranger/): Flashing guide for the RadioMaster Ranger 900MHz TX module with pre-installed 3.x firmware.
+- [Siyi FM30](https://www.expresslrs.org/quick-start/transmitters/siyifm30/): Flashing guide for the SIYI FM30 STM32-based TX module via STLink.
+- [Vantac Lite](https://www.expresslrs.org/quick-start/transmitters/vantac-lite/): Flashing guide for the Vantac Lite 2.4GHz TX module via WiFi, UART, or EdgeTX passthrough.
+- [DIY 900TX](https://www.expresslrs.org/quick-start/transmitters/diy900/): Flashing guide for DIY 900MHz TX builds using ESP32 with SX127x RF chips.
+- [DIY 2400TX](https://www.expresslrs.org/quick-start/transmitters/diy2400/): Flashing guide for DIY 2.4GHz TX builds using ESP32 with SX1280 RF chips.
+- [The ExpressLRS Lua Script](https://www.expresslrs.org/quick-start/transmitters/lua-howto/): Here is a simple ExpressLRS Lua Script guide explaining the different options.
+- [Receiver Wiring](https://www.expresslrs.org/quick-start/receivers/wiring-up/): Let's get your ExpressLRS Receiver connected to your flight controller.
+- [Configuring FC](https://www.expresslrs.org/quick-start/receivers/configuring-fc/): Configure your Flight Controller for ExpressLRS with the help of this guide.
+- [Checking FW Version](https://www.expresslrs.org/quick-start/receivers/firmware-version/): Get to know your ExpressLRS Receiver Firmware Version.
+- [Typical Updating Steps](https://www.expresslrs.org/quick-start/receivers/updating/): General Guidelines for ExpressLRS Receiver firmware updating.
+- [Axisflying Thor](https://www.expresslrs.org/quick-start/receivers/axisflying-thor/): Flashing guide for the Axisflying Thor 2.4GHz receiver via WiFi, Passthrough, or UART.
+- [BetaFPV Lite/Nano/AIO 2.4GHz](https://www.expresslrs.org/quick-start/receivers/betafpv2400/): Flashing guide for BetaFPV Lite, Nano, and AIO 2.4GHz receivers.
+- [BetaFPV Nano 900MHz](https://www.expresslrs.org/quick-start/receivers/betafpv900/): Flashing guide for the BetaFPV Nano 900MHz receiver via WiFi or Passthrough.
+- [BetaFPV SuperD 2.4GHz](https://www.expresslrs.org/quick-start/receivers/betafpv-superd/): Flashing guide for the BetaFPV SuperD 2.4GHz diversity receiver.
+- [BetaFPV SuperD 900MHz](https://www.expresslrs.org/quick-start/receivers/betafpv-superd900/): Flashing guide for the BetaFPV SuperD 900MHz diversity receiver.
+- [Foxeer LNA & Lite 2.4GHz](https://www.expresslrs.org/quick-start/receivers/foxeer2400/): Flashing guide for Foxeer LNA and Lite 2.4GHz receivers via WiFi or Passthrough.
+- [Frsky R9](https://www.expresslrs.org/quick-start/receivers/r9/): Flashing guide for FrSky R9 STM32-based 900MHz receivers via bootloader or STLink.
+- [GEPRC Nano & Dual 2.4GHz](https://www.expresslrs.org/quick-start/receivers/geprc2400/): Flashing guide for GEPRC Nano and Dual 2.4GHz receivers via WiFi or Passthrough.
+- [GEPRC Nano & Dual 900MHz](https://www.expresslrs.org/quick-start/receivers/geprc900/): Flashing guide for GEPRC Nano and Dual 900MHz receivers via WiFi or Passthrough.
+- [Happymodel EP](https://www.expresslrs.org/quick-start/receivers/hmep2400/): Flashing guide for the Happymodel EP 2.4GHz receiver via WiFi or Passthrough.
+- [Happymodel PP](https://www.expresslrs.org/quick-start/receivers/hmpp2400/): Flashing guide for the Happymodel PP STM32-based 2.4GHz receiver via UART.
+- [Happymodel ES900RX](https://www.expresslrs.org/quick-start/receivers/hmes900/): Flashing guide for the Happymodel ES900RX 900MHz receiver via WiFi or Passthrough.
+- [HGLRC Hermes 2.4GHz](https://www.expresslrs.org/quick-start/receivers/hglrc-hermes2400/): Flashing guide for the HGLRC Hermes 2.4GHz receiver via WiFi or Passthrough.
+- [HGLRC Hermes 900MHz](https://www.expresslrs.org/quick-start/receivers/hglrc-hermes900/): Flashing guide for the HGLRC Hermes 900MHz receiver via WiFi or Passthrough.
+- [iFlight 2.4GHz](https://www.expresslrs.org/quick-start/receivers/iflight2400/): Flashing guide for iFlight 2.4GHz Dipole and SMD receiver variants.
+- [iFlight 900MHz](https://www.expresslrs.org/quick-start/receivers/iflight900/): Flashing guide for the iFlight 900MHz Dipole receiver via WiFi or Passthrough.
+- [IMRC Ghost](https://www.expresslrs.org/quick-start/receivers/ghost2400/): Flashing guide for ImmersionRC Ghost Atto and Zepto 2.4GHz STM32 receivers via STLink.
+- [Jumper Aion Nano](https://www.expresslrs.org/quick-start/receivers/jumper-aion/): Flashing guide for the Jumper Aion Mini and Nano 2.4GHz receivers.
+- [Jumper R9 Mini](https://www.expresslrs.org/quick-start/receivers/jumper900/): Flashing guide for the Jumper R9 Mini STM32-based 900MHz receiver via STLink.
+- [Matek R24](https://www.expresslrs.org/quick-start/receivers/matek2400/): Flashing guide for Matek R24-D Diversity and R24-S SMD 2.4GHz receivers.
+- [NamimnoRC Flash](https://www.expresslrs.org/quick-start/receivers/flash2400/): Flashing guide for NamimnoRC Flash 2.4GHz receiver variants (ESP and STM32).
+- [NamimnoRC Voyager](https://www.expresslrs.org/quick-start/receivers/voyager900/): Flashing guide for NamimnoRC Voyager 900MHz receiver variants (ESP and STM32).
+- [RadioMaster RP](https://www.expresslrs.org/quick-start/receivers/radiomaster-rp-2400/): Flashing guide for RadioMaster RP1 and RP2 2.4GHz receivers via WiFi or Passthrough.
+- [Siyi FR Mini](https://www.expresslrs.org/quick-start/receivers/siyiFRmini/): Flashing guide for the SIYI FR Mini STM32-based receiver via STLink.
+- [Vantac](https://www.expresslrs.org/quick-start/receivers/vantac2400/): Flashing guide for the Vantac 2.4GHz receiver via WiFi or Passthrough.
+- [DIY 900RX](https://www.expresslrs.org/quick-start/receivers/diy900/): Flashing guide for DIY 900MHz receivers using ESP8285 with SX127x RF chips.
+- [DIY 2400RX](https://www.expresslrs.org/quick-start/receivers/diy2400/): Flashing guide for DIY 2.4GHz receivers with ESP8285 and STM32 options.
+- [LED Status](https://www.expresslrs.org/quick-start/led-status/): The LEDs on both the ExpressLRS Receivers and Transmitter Modules are very helpful diagnostic tool in determining the current status of the device.
+- [Binding ExpressLRS](https://www.expresslrs.org/quick-start/binding/): Binding ExpressLRS is easy! With the Binding Phrase, no button presses are needed! Manual Binding is also available if pressing buttons is your thing.
+- [Before First Flight](https://www.expresslrs.org/quick-start/pre-1stflight/): What's the Bench Test? How to set Aux1 for Arming? RSSI dBm and Link Quality on the OSD? Setting up ExpressLRS Telemetry? You're in the right place!
+- [Ardupilot Setup](https://www.expresslrs.org/quick-start/ardupilot-setup/): ExpressLRS can be used with ArduPilot! This guide got you covered with the correct ArduPilot Parameters.
+- [Troubleshooting](https://www.expresslrs.org/quick-start/troubleshooting/): Stuck on your ExpressLRS setup? Let us help you with that! Here's some troubleshooting tips to get you unstuck.
+- [Unbricking](https://www.expresslrs.org/quick-start/unbricking/): Recovery guide for soft-bricked ESP-based ExpressLRS receivers using the factory bootloader.
+
+## Software
+
+- [Obsolete Defines](https://www.expresslrs.org/software/obsolete-defines/): Archive of removed or superseded firmware defines with removal versions and replacements.
+- [OpenOCD for STLink](https://www.expresslrs.org/software/open-ocd/): Using OpenOCD on Linux to unlock STLink-based receivers for flashing.
+- [PIO STLink Fix](https://www.expresslrs.org/software/stlink-fix/): Fixing PlatformIO's outdated STLink tool to support STM32L-based receivers.
+- [Switch Configs](https://www.expresslrs.org/software/switch-config/): To optimize the performance of ExpressLRS, it has different Switch Modes explained in detail here.
+- [Toolchain Setup](https://www.expresslrs.org/software/toolchain-install/): Setting up VSCode, PlatformIO, and Git for ExpressLRS firmware development.
+- [User Defines](https://www.expresslrs.org/software/user-defines/): User Defines are firmware flags akin to the Firmware Options. You can use these defines with the Manual Mode in the ExpressLRS Configurator.
+- [Betaflight Passthrough](https://www.expresslrs.org/software/updating/betaflight-passthrough/): Updating ExpressLRS receivers via Betaflight serial passthrough.
+- [Wifi Updating](https://www.expresslrs.org/software/updating/wifi-updating/): Updating ExpressLRS devices over WiFi using hotspot, home network, or auto-update methods.
+- [AirPort](https://www.expresslrs.org/software/airport/): ExpressLRS can be configured as a bi-directional transparent serial data link, over the air.
+- [Dynamic Transmit Power](https://www.expresslrs.org/software/dynamic-transmit-power/): ExpressLRS can limit its transmit power to the level it needs to maintain good Signal Health.
+- [Gemini](https://www.expresslrs.org/software/gemini/): ExpressLRS Gemini is a Dual Channel 2.4GHz and/or 900MHz System.
+- [Loan Model](https://www.expresslrs.org/software/loan-model/): Lend your ExpressLRS models to your friends without having to reflash Binding Phrase every time.
+- [MAVLink](https://www.expresslrs.org/software/mavlink/): ExpressLRS Bi-directional MAVLink support
+- [MFD Crossbow Tracker Integration](https://www.expresslrs.org/software/mfd-crossbow/): ExpressLRS Backpack integration with the MFD Crossbow AAT.
+- [Model Matching](https://www.expresslrs.org/software/model-config-match/): ExpressLRS can retain a per-Model configuration eliminating the need to tweak your settings every time you change models in the radio.
+- [Receiver Serial Protocols](https://www.expresslrs.org/software/serial-protocols/): Receiver serial protocol for PWM and regular serial receivers.
+- [Sentinel Tracker Integration](https://www.expresslrs.org/software/backpack-telemetry/): ExpressLRS Backpack can forward telemetry data to third party systems via ESPNOW.
+- [Serial VTX](https://www.expresslrs.org/software/serialvtx/): Serial VTX Control
+- [Team Racing](https://www.expresslrs.org/software/teamracing/): TeamRacing allows selection between multiple connected models, failsafing all unselected models.
+- [Trainer (Head Tracking) Input](https://www.expresslrs.org/software/trainer-input/): ExpressLRS Bi-directional MAVLink support
+- [CRC Testing](https://www.expresslrs.org/software/testing/crc-testing/): CRC-14 bit error detection stress test results for the ExpressLRS packet protocol.
+- [RX Testing](https://www.expresslrs.org/software/testing/rx-scoreboard/): Using the RX Scoreboard debug feature to visualize packet reception per cycle.
+- [Unit Testing](https://www.expresslrs.org/software/testing/unit-testing/): Running ExpressLRS unit tests with PlatformIO and the native platform.
+
+## Hardware
+
+- [Hardware Selection](https://www.expresslrs.org/hardware/hardware-selection/): Which ExpressLRS (ELRS) Hardware to buy? What's the difference between ExpressLRS Hardware?
+- [R9M Inverter Mod](https://www.expresslrs.org/hardware/inverter-mod/): A short guide on how to add a resistor for the R9M ACCST Inverter Mod.
+- [R9M Fan Mod](https://www.expresslrs.org/hardware/fan-mod/): A short guide on how to add a fan on your FrSky R9M module flashed with ExpressLRS.
+- [Troubleshooting the X9D(+)](https://www.expresslrs.org/hardware/x9d-troubleshooting/): If you're having issues with your FrSky X9D or QX7 while using ExpressLRS, check this page out!
+- [Crystal Oscillator (XO) Frequency Error](https://www.expresslrs.org/hardware/crystal-frequency-error/): A short guide to control the Crystal Oscillator frequency error within the tolerable amount.
+- [SMD Antenna](https://www.expresslrs.org/hardware/smd-antenna/): Some ExpressLRS receivers uses a "ceramic" antenna. Here's some info about them.
+- [PWM Receivers](https://www.expresslrs.org/hardware/pwm-receivers/): ExpressLRS supports PWM output without the need of converters.
+- [SPI Receivers](https://www.expresslrs.org/hardware/spi-receivers/): All-in-one Flight Controllers were released with ExpressLRS receivers using SPI connection.
+- [Backpack Info](https://www.expresslrs.org/hardware/backpack/esp-backpack/): The ExpressLRS Backpack opens up new possibilities, like hands-off tuning of your FPV Goggles.
+- [Tx Backpack Setup](https://www.expresslrs.org/hardware/backpack/backpack-tx-setup/): How to setup, flash, and update your ExpressLRS Transmitter Backpack.
+- [VRx Backpack Setup](https://www.expresslrs.org/hardware/backpack/backpack-vrx-setup/): How to connect, setup, flash, and update your ExpressLRS Goggle VRX Backpack.
+- [HDZero Goggle VRx Backpack](https://www.expresslrs.org/hardware/backpack/hdzero-goggles/): How to setup, flash, and update your HDZero Goggles ExpressLRS Backpack.
+- [DIY Receiver](https://www.expresslrs.org/hardware/special-targets/diy-rx/): Building custom ESP-based ExpressLRS receivers for 2.4GHz and 900MHz.
+- [DIY Transmitter](https://www.expresslrs.org/hardware/special-targets/diy-tx/): Building custom ESP-based ExpressLRS transmitter modules for JR and lite bays.
+- [Nuclear Targets](https://www.expresslrs.org/hardware/special-targets/nuclear-hardware/): The Nuclear RX — an ultra-compact 2.4GHz DIY receiver with 20x20 mounting.
+
+## Info
+
+- [Glossary](https://www.expresslrs.org/info/glossary/): Glossary of ExpressLRS terms, abbreviations, and technical concepts.
+- [Signal Health](https://www.expresslrs.org/info/signal-health/): Know what your LQ and RSSI dBm values mean. Prevent a failsafe by knowing when to turn back!
+- [Telemetry Bandwidth](https://www.expresslrs.org/info/telem-bandwidth/): Telemetry burst mode bandwidth allocation across packet rates and telemetry ratios.
+- [Init Rate](https://www.expresslrs.org/info/init-rate/): ExpressLRS Init Rate or the Packet Rate that the receiver will start checking for the Sync Packet.
+- [Long Range Competition](https://www.expresslrs.org/info/long-range/): ExpressLRS boasts a great range at any given packet rate. Here's what others reached with their aircraft.
+- [Advance Technical Info](https://www.expresslrs.org/info/advance-technical-info/): Technical debugging reference for LUA status codes and debug logging defines.
+- [Privacy Policy](https://www.expresslrs.org/info/privacy-policy/): Privacy policy
+- [Licenses](https://www.expresslrs.org/info/licenses/): Licenses & Trademarks
+- [Terms & Conditions](https://www.expresslrs.org/info/terms-and-conditions/): Terms and Conditions
+
+## FAQ
+
+- [FAQ](https://www.expresslrs.org/faq/): We answer the most commonly asked questions here.
+
+## Blog
+
+- [Blog](https://www.expresslrs.org/blog/): ExpressLRS project news, updates, and announcements.
+
+## Partners Program
+
+- [Partners Program](https://www.expresslrs.org/partners-program/): Partner with ExpressLRS to develop compatible hardware and join the official ecosystem.
+
+## Contact Us
+
+- [Contact Us](https://www.expresslrs.org/contact-us/): Contact ExpressLRS for inquiries, partnerships, or community support.
