@@ -420,6 +420,8 @@ omnidirectional
 ong
 openocd
 OpenOCD
+fpv
+heggy
 overvoltage
 pF
 params
