@@ -84,7 +84,7 @@
 
 - [Obsolete Defines](https://www.expresslrs.org/software/obsolete-defines/): Archive of removed or superseded firmware defines with removal versions and replacements.
 - [OpenOCD for STLink](https://www.expresslrs.org/software/open-ocd/): Using OpenOCD on Linux to unlock STLink-based receivers for flashing.
-- [PIO STLink Fix](https://www.expresslrs.org/software/stlink-fix/): Fixing PlatformIO's outdated STLink tool to support STM32L-based receivers.
+- [PIO STLink Fix](https://www.expresslrs.org/software/stlink-fix/): Fixing the outdated STLink tool in PlatformIO to support STM32L-based receivers.
 - [Switch Configs](https://www.expresslrs.org/software/switch-config/): To optimize the performance of ExpressLRS, it has different Switch Modes explained in detail here.
 - [Toolchain Setup](https://www.expresslrs.org/software/toolchain-install/): Setting up VSCode, PlatformIO, and Git for ExpressLRS firmware development.
 - [User Defines](https://www.expresslrs.org/software/user-defines/): User Defines are firmware flags akin to the Firmware Options. You can use these defines with the Manual Mode in the ExpressLRS Configurator.
