@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: Fixing PlatformIO's outdated STLink tool to support STM32L-based receivers.
+description: Fixing the outdated STLink tool in PlatformIO to support STM32L-based receivers.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)

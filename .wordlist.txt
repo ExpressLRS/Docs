@@ -419,6 +419,7 @@ octocat
 omnidirectional
 ong
 openocd
+OpenOCD
 overvoltage
 pF
 params
