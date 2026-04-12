@@ -110,6 +110,9 @@ The minimum versions to use this feature are:
     1. In the Receiver tab, set the Receiver type to `Serial (via UART)` and the `Serial Receiver Provider` to `MAVLINK`.
     1. Save and reboot the flight controller.
 
+!!! note "NOTE: ArduPilot parameters"
+    The `x` in the ArduPilot `SRx_` parameters does **not** need to be the same `x` as the in the `SERIALx` parameters. Often they are the same but that must not always be true. In case of doubt you have to figure this out by trial and error or just set all of them to the same value.
+
 ## Handset Setup
 
 Once your flight controller and ExpressLRS hardware are configured for MAVLink, you should have RC control of your craft from your handset. Setup your RC and switch channels as normal in the EdgeTX model screens.
