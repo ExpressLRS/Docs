@@ -74,6 +74,9 @@ def on_pre_build(config, **kwargs):
                     product_name = config.get("product_name", "")
                     if re.match(r"^(generic|diy)\b", product_name, re.IGNORECASE):
                         continue
+                    platform = config.get("platform", "")
+                    if platform.lower().startswith("stm"):
+                        continue
 
                     pid = f"{vendor}:{radio_key}:{target}"
                     category = _category_from_radio_key(radio_key)
