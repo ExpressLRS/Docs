@@ -6,6 +6,10 @@
 
 - [Home](https://www.expresslrs.org/)
 
+## Product Finder
+
+- [Product Finder](https://www.expresslrs.org/product-finder/): Find ExpressLRS-compatible hardware by manufacturer, type, band, power, and more.
+
 ## Quick Start
 
 - [Getting Started](https://www.expresslrs.org/quick-start/getting-started/): Start your ExpressLRS experience here! This is the most comprehensive guide to get you flying on ExpressLRS.

@@ -1,0 +1,401 @@
+/*
+ * ExpressLRS Product Finder
+ * All classes prefixed with .pf- to avoid collisions
+ */
+
+/* ==========================================================================
+   Page Layout
+   ========================================================================== */
+
+.pf-main {
+  background-color: var(--md-default-bg-color);
+  padding: 1.5rem 0 4rem;
+}
+
+.pf-main > .md-grid {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+/* ==========================================================================
+   Page Heading
+   ========================================================================== */
+
+.pf-heading {
+  margin-bottom: 1.25rem;
+}
+
+.pf-heading h1 {
+  margin-bottom: 0.25rem;
+}
+
+.pf-heading p {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+}
+
+#pf-stats {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+/* ==========================================================================
+   Two-Column Layout
+   ========================================================================== */
+
+.pf-layout {
+  display: grid;
+  grid-template-columns: 13.5rem 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media screen and (max-width: 59.9375em) {
+  .pf-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Filters Sidebar
+   ========================================================================== */
+
+.pf-filters {
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.pf-filters__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.pf-filters__header h2 {
+  margin: 0;
+}
+
+.pf-filters__grid {
+  display: grid;
+  gap: 0.6rem;
+}
+
+/* Field styling */
+
+.pf-field {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.pf-field label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+
+.pf-field input,
+.pf-field select {
+  width: 100%;
+  padding: 0.38rem 0.5rem;
+  font-size: 0.78rem;
+  font-family: inherit;
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.pf-field input:focus,
+.pf-field select:focus {
+  border-color: var(--md-primary-fg-color);
+}
+
+.pf-field select:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Reset button */
+
+.pf-btn-reset {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--md-primary-fg-color);
+  background: transparent;
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.pf-btn-reset:hover {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+/* ==========================================================================
+   Active Filter Chips
+   ========================================================================== */
+
+.pf-active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.pf-active-filters:empty {
+  display: none;
+  margin: 0;
+}
+
+.pf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  background: rgba(73, 107, 184, 0.1);
+  color: var(--md-primary-fg-color);
+  white-space: nowrap;
+}
+
+.pf-chip__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.9rem;
+  height: 0.9rem;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.pf-chip__close:hover {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Summary
+   ========================================================================== */
+
+.pf-summary {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  margin: 0 0 0.75rem;
+}
+
+.pf-summary:empty {
+  display: none;
+}
+
+/* ==========================================================================
+   Results — Vendor Groups
+   ========================================================================== */
+
+.pf-vendor-group {
+  margin-bottom: 1.75rem;
+}
+
+.pf-vendor-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.6rem !important;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.pf-vendor-count {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.1rem 0.45rem;
+  border-radius: 1rem;
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+}
+
+/* ==========================================================================
+   Product Cards
+   ========================================================================== */
+
+.pf-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.65rem;
+}
+
+.pf-card {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+
+.pf-card--rx {
+  border-left: 3px solid rgba(73, 107, 184, 0.5);
+}
+
+.pf-card--tx {
+  border-left: 3px solid rgba(159, 199, 111, 0.6);
+}
+
+.pf-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.pf-card__vendor {
+  margin: 0;
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.pf-card__name {
+  margin: 0.1rem 0 0 !important;
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.pf-card__badge {
+  flex-shrink: 0;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 1rem;
+  white-space: nowrap;
+}
+
+.pf-card--rx .pf-card__badge {
+  background: rgba(73, 107, 184, 0.12);
+  color: var(--md-primary-fg-color);
+}
+
+.pf-card--tx .pf-card__badge {
+  background: rgba(159, 199, 111, 0.15);
+  color: #4c7c23;
+}
+
+/* Spec pills */
+
+.pf-card__specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pf-pill {
+  display: inline-flex;
+  gap: 0.3rem;
+  align-items: baseline;
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+.pf-pill__label {
+  color: var(--md-default-fg-color--light);
+}
+
+.pf-pill__value {
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+/* Empty state */
+
+.pf-empty {
+  padding: 2rem;
+  border: 1px dashed var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   Light Theme Overrides
+   ========================================================================== */
+
+[data-md-color-scheme="default"] .pf-filters {
+  background: #fff;
+}
+
+[data-md-color-scheme="default"] .pf-card {
+  background: #fff;
+}
+
+[data-md-color-scheme="default"] .pf-main {
+  background-color: #f8f8f6;
+}
+
+/* ==========================================================================
+   Dark (Slate) Theme Overrides
+   ========================================================================== */
+
+[data-md-color-scheme="slate"] .pf-card--rx .pf-card__badge {
+  background: rgba(95, 139, 243, 0.15);
+  color: #8ab4ff;
+}
+
+[data-md-color-scheme="slate"] .pf-card--tx .pf-card__badge {
+  background: rgba(166, 207, 116, 0.15);
+  color: #b5db7e;
+}
+
+[data-md-color-scheme="slate"] .pf-chip {
+  background: rgba(95, 139, 243, 0.12);
+  color: #8ab4ff;
+}
+
+[data-md-color-scheme="slate"] .pf-card--rx {
+  border-left-color: rgba(95, 139, 243, 0.5);
+}
+
+[data-md-color-scheme="slate"] .pf-card--tx {
+  border-left-color: rgba(166, 207, 116, 0.5);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media screen and (max-width: 59.9375em) {
+  .pf-filters {
+    position: static;
+  }
+  .pf-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
