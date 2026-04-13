@@ -117,7 +117,7 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
 
     3. Load the Web UI on your browser. The address depends on how the Receiver is connected:
         
-        *   **Access Point Mode:** If you are connected to the `ExpressLRS RX` WiFi hotspot, use [http://10.0.0.1/](http://10.0.0.1/).
+        *   **Access Point Mode:** While connected to the `ExpressLRS RX` hotspot, almost any hostname (e.g., [http://elrs_rx.local/](http://elrs_rx.local/)) should resolve to the Web UI. However, if your browser or OS doesn't redirect automatically, use [http://10.0.0.1/](http://10.0.0.1/) as a direct fallback.
 
             !!! Note
                 This IP address is also often used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
@@ -125,9 +125,9 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
                 We recommend disconnecting from the network first or trying a different device instead, e.g. smartphone or tablet.
 
             !!! Note
-                On some devices a network login prompt might pop up. Clicking this will often show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ manually in your browser instead.
+                On some devices a network login prompt might pop up. Clicking this will often show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ (or http://elrs_rx.local/) manually in your browser instead.
 
-        *   **Home WiFi Mode:** If the Receiver is connected to your local network, use [http://elrs_rx.local/](http://elrs_rx.local/).
+        *   **Home WiFi Mode:** If the Receiver is connected to your local network, use [http://elrs_rx.local/](http://elrs_rx.local/). (Note: Hostnames also work in Access Point Mode).
 
             !!! Note
                 If your browser cannot resolve this address, chances are mDNS is not set up and working on your computer or network.
@@ -194,7 +194,7 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
 
     3. Load the Web UI on your browser. The address depends on how the TX Module is connected:
         
-        *   **Access Point Mode:** If you are connected to the `ExpressLRS TX` WiFi hotspot, use [http://10.0.0.1/](http://10.0.0.1/).
+        *   **Access Point Mode:** While connected to the `ExpressLRS TX` hotspot, almost any hostname (e.g., [http://elrs_tx.local/](http://elrs_tx.local/)) should resolve to the Web UI. However, if your browser or OS doesn't redirect automatically, use [http://10.0.0.1/](http://10.0.0.1/) as a direct fallback.
 
             !!! Note
                 This IP address is also often used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
@@ -202,9 +202,9 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
                 We recommend disconnecting from the network first or trying a different device instead, e.g. smartphone or tablet.
 
             !!! Note
-                On some devices a network login prompt might pop up. Clicking this will often show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ manually in your browser instead.
+                On some devices a network login prompt might pop up. Clicking this may show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ (or http://elrs_tx.local/) manually in your browser instead.
 
-        *   **Home WiFi Mode:** If the TX Module is connected to your local network, use [http://elrs_tx.local/](http://elrs_tx.local/).
+        *   **Home WiFi Mode:** If the TX Module is connected to your local network, use [http://elrs_tx.local/](http://elrs_tx.local/). (Note: Hostnames also work in Access Point Mode).
 
             !!! Note
                 If your browser cannot resolve this address, chances are mDNS is not set up and working on your computer or network.
