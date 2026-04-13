@@ -1,5 +1,5 @@
 ---
-title: "Beyond the Bench: The Evolution of Mobile Flashing with ELRS Mobile"
+title: "Introducing ELRS Mobile"
 date: 2026-03-21
 categories:
   - Community Projects
@@ -8,57 +8,46 @@ authors:
 slug: introducing-elrs-mobile
 ---
 
-# Beyond the Bench: The Evolution of Mobile Flashing with ELRS Mobile
+**Introducing ELRS Mobile** 
 
-## Pillars of the Ecosystem
+## **How It All Started**
 
-The ExpressLRS ecosystem has been anchored by two reliable utilities that serve as a standard for link configuration. The ExpressLRS Configurator and Web Flasher provide high levels of stability and comprehensive hardware validation for bench-top device configuration. These tools offer the foundational reliability pilots have come to depend on when preparing builds in a controlled environment.
+When ExpressLRS 4.0 was released, I decided to upgrade my fleet to the new firmware. I fly both fixed wings and multirotors that are scattered throughout the basement. I tried to be methodical with the updates, bringing each aircraft to the workbench for upgrade using the ExpressLRS Configurator. I got the transmitters updated, planes updated and multirotors updated, or so I thought. I had several good flying sessions using 4.0. Then, about a week after the mass upgrade session, I got to my flying spot with a quad that had somehow been missed. It was still on 3.6.3. I didn’t have a laptop, and with no cell coverage, I couldn’t even attempt an OTA upgrade using the Web Flasher on my phone. I had to pack up and head home, totally losing a perfect flying day.
 
-However, as the ecosystem matures, edge cases arise that expose the limitations of these desktop-centric workflows. While these desktop tools offer foundational reliability, a significant usability gap emerges in the field. Transitioning from the workbench to the flying site can introduce technical friction points that impede device configuration.
+I decided there had to be a solution for situations like this, and I was wrong. I couldn’t find anything that allowed for completely offline flashing from a mobile device. I could use the WebFlasher and Configurator to flash while disconnected from the internet, but I would need a laptop and they weren’t really designed for that. 
 
-## In-Field Usability Gaps
+I went down the rabbit hole looking at how the Web Flasher and Configurator worked. I needed to know how the firmware was accessed and assembled for each individual target. After getting a basic understanding of how things worked, I decided that the Web Flasher would be a good candidate to use as a basis for a Flutter App. 
 
-* **Connectivity Conflicts:** Operating systems are designed to prioritize Internet connectivity. When a pilot connects to the internal access point of an ELRS device, the operating system attempts to drop the connection in order to find an active connection to the internet via a cellular signal or another WiFi network.  
+The app would need to meet a few requirements:
 
-* **Connectivity Dependency:** Options for flashing firmware from a mobile device are limited by the necessity of an active internet connection. They require that connection to download the appropriate firmware prior to flashing.
+1. Completely offline firmware caching and flashing  
+2. Quick and easy connection to the ELRS device, both on WiFi mode and AP mode  
+3. Saving the Binding Phrase and WiFi credentials between sessions to prevent needing to re-enter them after each flash.   
+4. Have access to the device’s WebUI so changes could be made to the device configuration without reflashing. 
 
-These technical gaps often relegate firmware updates to bench-only operations, potentially ending a flying day early if the pilot encounters an issue like firmware mismatch that was overlooked before leaving for the field.
+## **Building a Mobile-First Flasher**
 
-## Introducing ELRS Mobile
+Starting with these four requirements and my experience in Flutter, I set out to begin creating ELRS Mobile targeting iOS and Android devices. Using the Web Flasher as an example I was able to recreate the logic in Dart/Flutter giving rise to a cross-platform, mobile first tool that stores and assembles firmware completely offline. 
 
-Having experienced a lost flying day due to overlooking mismatched firmware versions, I decided to address these technical gaps. ELRS Mobile is a modern, cross-platform application built on the Flutter framework providing a native experience for both iOS and Android.
+ELRS Mobile has the following capabilities:
 
-Licensed under GPLv3, this application is an independent, community-driven initiative designed for ExpressLRS 3.x and 4.x firmware. It represents a radical shift in how pilots can interact with their hardware in low to no connectivity environments.
+* WiFi Flashing: Over-the-Air flashing for ELRS receivers and transmitters, whether connected to home WiFi or via the devices Access Point.   
+* Offline Firmware Caching: You can download and store complete versions of ExpressLRS firmware for every hardware target. The app defaults to a 2 version limit, but you can up that limit if you need to.   
+* Firmware Assembly: With the firmware and target information stored locally the app assembles the appropriate firmware, based on the target selected by the user, on your phone before flashing. You can even save the assembled firmware if you have a special use case.   
+* Network Discovery: The app utilizes mDNS and other OS level networking services to automatically discover the ELRS device on your local wifi or in Access Point mode.   
+* Device Configuration: You can access the WebUI for your ELRS Device directly from the app to make changes to the configuration without needing to flash new firmware. 
 
-The app's firmware assembly and flashing logic are heavily based on the work done on the official Web Flasher. By taking the proven browser-based logic and porting it into a native Flutter application I was able to wrap that core functionality in a layer of mobile-specific stability. ELRS Mobile takes the best parts of the Web Flasher and optimizes them for the unique hardware and OS constraints of a smartphone.
+**Real-World Testing**
 
-## The Advantage of ELRS Mobile
+Since getting the first functional version working on my phone I have flashed and re-flashed dozens of receivers and transmitters making sure things work as expected. Through this process I have noticed a few things about flashing from the app and how it has affected my workflow. 
 
-ELRS Mobile directly addresses the technical friction points encountered in the field by leveraging native mobile OS features for stability and independence.
+* Speed: Flashing from the app is surprisingly fast. Because the app's Firmware Manager permanently caches the generic firmware binaries and hardware targets directly on your phone's local storage, there is zero waiting around. The app just grabs the files already sitting on your phone, assembles the firmware, and pushes the update over Wi-Fi in seconds.  
+* Convenience: Sometimes it's just easier to use your phone instead of booting up a laptop. Even when I'm at home, I find myself using the app for quick OTA updates at the workbench because I don't have to hunt down my laptop or load up the desktop configurator.  
+* Connectivity Deserts: Where I live, cell coverage is spotty at best and non-existent in a lot of places. If you are in a dead zone, the web flasher doesn’t work because you can't download the payload. As long as you remember to sync the firmware to your local cache while you have a solid data connection, the app has everything it needs to assemble the binary and flash the hardware completely offline.
 
-Being built with Flutter, ELRS Mobile provides a 1:1 native experience in both iOS and Android. It isn’t a web-wrapper, but a self-contained utility with a defined architectural difference: **No Internet or Laptop Required.**
+Since the initial public release on March 15th, 2026, ELRS Mobile has seen steady growth with over 500 installs in the first month. The reach is global, with users in 59 countries. This has definitely exceeded my expectations and am looking forward to the coming months. 
 
-* **Local Firmware Assembly:** The app caches the official hardware targets and firmware components from the official ExpressLRS target definitions when you have a reliable internet connection. After selecting a target and hitting the ‘Flash’ button, the app assembles the unified firmware binary directly on your phone. You can be in a total dead zone with zero connectivity and still flash your hardware.  
+## **What’s Next**
 
-* **Interface Binding:** To combat mobile operating systems dropping Wi-Fi connections that lack internet access, the app employs native interface binding. This implementation forces the mobile device to maintain the connection to and route traffic through the ELRS device’s access point. This ensures a stable, persistent connection during the OTA upload process.  
+ELRS Mobile isn’t a replacement for the desktop or web based flashing tools. It’s just another tool in your toolbox that adds a little more flexibility when working with ExpressLRS devices. It’s an independent, free and open sourced community project built by a pilot for pilots. Development is active and ongoing. I am working on improving the Device Configuration integrations and exploring translation options for the global user base. If you are interested in contributing to the project, please visit the [GitHub repository](https://github.com/wbhinton/ELRS-Mobile). The more involvement there is the better we can make the app. You can learn more about ELRS Mobile and how to use it by visiting the website at [elrsmobile.com](http://elrsmobile.com). If you just want to try the app, head over the [Google PlayStore](https://play.google.com/store/apps/details?id=io.datarx.elrsmobile) or [Apple App Store](https://apps.apple.com/us/app/elrs-mobile/id6760490014).
 
-* **Network Discovery:** The app uses mDNS to automatically scan the network for active ELRS hardware. If the app doesn’t find a device at elrs\_rx.local or elrs\_tx.local, it automatically falls back to the default IP for the ELRS access point (10.0.0.1). This eliminates the need for pilots to manually hunt for IP Addresses.
-
-## Device Configuration
-
-Beyond flashing, ELRS Mobile provides essential device configuration via a simple, integrated webview of the ELRS Web UI. The long-term goal is a complete, native integration of all configuration options. For now, this feature provides immediate on-the-go access to settings.
-
-## The Workflow: Four Steps to Flash
-
-1. **Sync Firmware (Offline Prep):** While on home Wi-Fi or cell network, the user performs a one-touch sync to download the latest hardware targets and firmware using the app’s firmware manager. This step is critical for enabling the app’s offline firmware flashing capabilities.  
-
-2. **Connect & Discover Device:** Power on the RX or TX and join the appropriate network. The app’s mDNS discovery will automatically identify the device whether it is on home Wi-Fi or the internal access point.  
-
-3. **Select Target & Configure:** Select your firmware target on the flashing screen. Select the available firmware version you would like to flash. Then enter your binding phrase and Wi-Fi credentials (stored locally on the device and never shared).  
-
-4. **Flash & Upload:** Initiate the firmware assembly and OTA upload by tapping the ‘Flash’ button. The app handles all of the binary patching locally, then uploads it to the device.
-
-
-ELRS Mobile is available for download on the [App Store](https://apps.apple.com/us/app/elrs-mobile/id6760490014) and [Google Play Store](https://play.google.com/store/apps/details?id=io.datarx.elrsmobile). Please visit the [ELRS-Mobile GitHub repository](https://github.com/wbhinton/ELRS-Mobile) to report issues, contribute to the codebase or review the documentation for the app. You can also view the [User Guide](https://elrsmobile.com/user_guide) for more detailed instructions.
-
-Created and maintained for the FPV community, ELRS Mobile ensures your flying day never ends early due to a firmware mismatch. Download it today and focus on the flight.
