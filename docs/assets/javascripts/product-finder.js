@@ -44,6 +44,7 @@
     els.activeFilters = document.getElementById("pf-active-filters");
     els.container = document.getElementById("pf-results-container");
     els.stats = document.getElementById("pf-stats");
+    els.statsPopover = document.getElementById("pf-stats-popover");
   }
 
   // -----------------------------------------------------------------------
@@ -141,6 +142,56 @@
     specs.unshift(["Band", bandLabel(product.radio_band)]);
     if (product.pwm_outputs != null) specs.push(["PWM", String(product.pwm_outputs)]);
     return specs;
+  }
+
+  // -----------------------------------------------------------------------
+  // Stats
+  // -----------------------------------------------------------------------
+
+  function countBy(items, valueFn) {
+    var counts = {};
+    items.forEach(function (item) {
+      var val = valueFn(item);
+      if (!val) return;
+      counts[val] = (counts[val] || 0) + 1;
+    });
+    return Object.keys(counts)
+      .map(function (k) { return { label: k, count: counts[k] }; })
+      .sort(function (a, b) { return b.count - a.count || a.label.localeCompare(b.label); });
+  }
+
+  function radioChipLabel(product) {
+    if (product.firmware_target && product.firmware_target.indexOf("LR1121") !== -1) return "LR1121";
+    if (product.radio_band === "2400") return "SX1280";
+    if (product.radio_band === "900") return "SX127x";
+    return null;
+  }
+
+  function renderStatsPopover(products) {
+    var deviceTypes = countBy(products, function (p) { return p.device_class; });
+    var mcus = countBy(products, function (p) { return p.platform ? p.platform.toUpperCase() : null; });
+    var chips = countBy(products, radioChipLabel);
+    var diversity = countBy(products, function (p) { return p.diversity_type ? diversityLabel(p.diversity_type) : null; });
+
+    var sections = [
+      { title: "Device Types", items: deviceTypes, labelFn: function (l) { return categoryLabel(l) || l; } },
+      { title: "MCUs", items: mcus },
+      { title: "Radio Chips", items: chips },
+      { title: "Diversity", items: diversity },
+    ];
+
+    var html = sections.map(function (section) {
+      if (!section.items.length) return "";
+      var chips = section.items.map(function (item) {
+        var label = section.labelFn ? section.labelFn(item.label) : item.label;
+        return '<span class="pf-stat-chip">' + escapeHtml(label) +
+          ' <span class="pf-stat-chip__count">' + item.count + '</span></span>';
+      }).join("");
+      return '<div class="pf-stats-section"><p class="pf-stats-title">' +
+        escapeHtml(section.title) + '</p><div class="pf-stats-chips">' + chips + '</div></div>';
+    }).join("");
+
+    els.statsPopover.innerHTML = '<p class="pf-stats-popover__title">Interesting Stats<button class="pf-stats-popover__close" id="pf-stats-close">&times;</button></p>' + html;
   }
 
   // -----------------------------------------------------------------------
@@ -443,6 +494,23 @@
     els.screen.addEventListener("change", onFilterChange);
     els.reset.addEventListener("click", onReset);
     els.activeFilters.addEventListener("click", onChipClose);
+
+    // Stats popover: tap to toggle on touch devices
+    var statsWrap = els.stats.parentElement;
+    els.stats.addEventListener("click", function (e) {
+      e.stopPropagation();
+      statsWrap.classList.toggle("pf-stats-open");
+    });
+    document.addEventListener("click", function (e) {
+      if (!statsWrap.contains(e.target)) {
+        statsWrap.classList.remove("pf-stats-open");
+      }
+    });
+    els.statsPopover.addEventListener("click", function (e) {
+      if (e.target.closest(".pf-stats-popover__close")) {
+        statsWrap.classList.remove("pf-stats-open");
+      }
+    });
   }
 
   // -----------------------------------------------------------------------
@@ -470,6 +538,7 @@
         els.stats.textContent = catalog.length + " products from " + Object.keys(vendorSet).length + " manufacturers.";
 
         populateDynamicFilters();
+        renderStatsPopover(catalog);
         syncDomFromFilters();
         renderResults();
       })
