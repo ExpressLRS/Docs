@@ -85,6 +85,149 @@
   gap: 0.6rem;
 }
 
+/* Stats tooltip */
+
+.pf-stats-wrap {
+  position: relative;
+  display: inline;
+}
+
+.pf-stats-trigger {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  cursor: default;
+  border-bottom: 1px dashed var(--md-default-fg-color--light);
+}
+
+.pf-stats-popover {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.5rem);
+  z-index: 10;
+  width: min(22rem, 80vw);
+  padding: 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+/* Mobile: show as centered modal with backdrop */
+@media screen and (max-width: 59.9375em) {
+  .pf-stats-wrap.pf-stats-open .pf-stats-popover {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(24rem, calc(100vw - 2rem));
+    z-index: 100;
+  }
+
+  .pf-stats-wrap.pf-stats-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.pf-stats-wrap.pf-stats-open .pf-stats-popover {
+  display: block;
+}
+
+@media (hover: hover) {
+  .pf-stats-wrap:hover .pf-stats-popover {
+    display: block;
+  }
+}
+
+.pf-stats-popover__title {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  background: linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+  color: #fff !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pf-stats-popover__close {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.8;
+}
+
+.pf-stats-popover__close:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 59.9375em) {
+  .pf-stats-popover__close {
+    display: block;
+  }
+}
+
+.pf-stats-section {
+  padding: 0 0.75rem;
+}
+
+.pf-stats-section:first-of-type {
+  padding-top: 0.65rem;
+}
+
+.pf-stats-section:last-of-type {
+  padding-bottom: 0.75rem;
+}
+
+.pf-stats-section + .pf-stats-section {
+  margin-top: 0.5rem;
+}
+
+.pf-stats-title {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  margin: 0 0 0.3rem;
+}
+
+.pf-stats-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.pf-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.65rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 1rem;
+  white-space: nowrap;
+  color: var(--md-default-fg-color);
+}
+
+.pf-stat-chip__count {
+  font-weight: 700;
+  padding-left: 0.3rem;
+  border-left: 1px solid var(--md-default-fg-color--lightest);
+}
+
 /* Field styling */
 
 .pf-field {
