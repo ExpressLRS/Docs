@@ -66,6 +66,7 @@ theme:
 hooks:
   - overrides/hooks/blog_posts.py
   - overrides/hooks/llms_txt.py
+  - overrides/hooks/product_catalog.py
 
 plugins:
   - blog:
@@ -103,6 +104,7 @@ extra_css:
   - assets/stylesheets/main.css
   - assets/stylesheets/colors.css
   - assets/stylesheets/home.css
+  - assets/stylesheets/product-finder.css
 
 # Analytics
 extra:
@@ -205,6 +207,7 @@ markdown_extensions:
 # Navigation
 nav:
   - Home: index.md
+  - Product Finder: product-finder.md
   - Quick Start:
       - Getting Started: quick-start/getting-started.md
       - Installing the Configurator: quick-start/installing-configurator.md

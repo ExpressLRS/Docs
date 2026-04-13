@@ -115,6 +115,16 @@
   font-size: 0.8rem;
 }
 
+.mdx-features__item a.mdx-features__link {
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mdx-features__item a.mdx-features__link:hover {
+  text-decoration: underline;
+}
+
 /* ==========================================================================
    Section 2: Trusted by Leading Brands — Partner Logo Grid
    ========================================================================== */
@@ -197,6 +207,26 @@
   font-weight: 600;
   font-size: 0.85rem;
   text-decoration: none;
+  margin: 0 0.75rem;
+}
+
+.mdx-partners__btn {
+  display: inline-block !important;
+  padding: 0.5rem 1.25rem !important;
+  background: transparent !important;
+  color: var(--md-accent-fg-color) !important;
+  border: 1px solid var(--md-accent-fg-color);
+  border-radius: 0.25rem;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.mdx-partners__btn:hover {
+  background-color: var(--md-accent-fg-color) !important;
+  color: #1e1e1e !important;
+  text-decoration: none !important;
 }
 
 .mdx-partners__cta a:hover {
