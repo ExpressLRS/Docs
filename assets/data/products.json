@@ -1236,102 +1236,6 @@
     "diversity_type": "single"
   },
   {
-    "id": "frsky:rx_900:r9slim",
-    "vendor": "frsky",
-    "vendor_name": "Frsky",
-    "product_name": "FrSky R9 Slim 900MHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "900",
-    "firmware_target": "Frsky_RX_R9SLIM",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "frsky:rx_900:r9slim-plus",
-    "vendor": "frsky",
-    "vendor_name": "Frsky",
-    "product_name": "FrSky R9 Slim Plus 900MHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "900",
-    "firmware_target": "Frsky_RX_R9SLIMPLUS",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "frsky:rx_900:r9slim-plus-ota",
-    "vendor": "frsky",
-    "vendor_name": "Frsky",
-    "product_name": "FrSky R9 Slim Plus OTA 900MHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "900",
-    "firmware_target": "Frsky_RX_R9SLIMPLUS_OTA",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "frsky:tx_900:r9m",
-    "vendor": "frsky",
-    "vendor_name": "Frsky",
-    "product_name": "FrSky R9M 900MHz TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "900",
-    "firmware_target": "Frsky_TX_R9M",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "frsky:tx_900:r9m-lite",
-    "vendor": "frsky",
-    "vendor_name": "Frsky",
-    "product_name": "FrSky R9M Lite 900MHz TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "900",
-    "firmware_target": "Frsky_TX_R9M_LITE",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "frsky:tx_900:r9m-lite-pro",
-    "vendor": "frsky",
-    "vendor_name": "Frsky",
-    "product_name": "FrSky R9M Lite Pro 900MHz TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "900",
-    "firmware_target": "Frsky_TX_R9M_LITE_PRO",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "frsky:rx_900:r9mm",
-    "vendor": "frsky",
-    "vendor_name": "Frsky",
-    "product_name": "FrSky R9MM/Mini 900MHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "900",
-    "firmware_target": "Frsky_RX_R9MM_R9MINI",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "frsky:rx_900:r9mx",
-    "vendor": "frsky",
-    "vendor_name": "Frsky",
-    "product_name": "FrSky R9MX 900MHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "900",
-    "firmware_target": "Frsky_RX_R9MX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
     "id": "geprc:rx_dual:dual",
     "vendor": "geprc",
     "vendor_name": "GEPRC",
@@ -1887,42 +1791,6 @@
     "diversity_type": "single"
   },
   {
-    "id": "happymodel:rx_900:es915",
-    "vendor": "happymodel",
-    "vendor_name": "Happymodel",
-    "product_name": "HappyModel ES915 RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "900",
-    "firmware_target": "HappyModel_RX_ES915RX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "happymodel:tx_900:es915",
-    "vendor": "happymodel",
-    "vendor_name": "Happymodel",
-    "product_name": "HappyModel ES915 TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "900",
-    "firmware_target": "HappyModel_TX_ES915TX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "happymodel:rx_2400:pp",
-    "vendor": "happymodel",
-    "vendor_name": "Happymodel",
-    "product_name": "HappyModel PP 2.4GHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "2400",
-    "firmware_target": "HappyModel_PP_2400_RX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
     "id": "helloradio:tx_2400:v14",
     "vendor": "helloradio",
     "vendor_name": "HelloRadio",
@@ -2027,42 +1895,6 @@
     "diversity_type": "gemini"
   },
   {
-    "id": "imrc:tx_2400:ghost",
-    "vendor": "imrc",
-    "vendor_name": "ImmersionRC",
-    "product_name": "Ghost 2.4GHz TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "2400",
-    "firmware_target": "GHOST_2400_TX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "imrc:rx_2400:atto",
-    "vendor": "imrc",
-    "vendor_name": "ImmersionRC",
-    "product_name": "Ghost Atto 2.4GHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "2400",
-    "firmware_target": "GHOST_ATTO_2400_RX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "imrc:tx_2400:ghost_lite",
-    "vendor": "imrc",
-    "vendor_name": "ImmersionRC",
-    "product_name": "Ghost Lite 2.4GHz TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "2400",
-    "firmware_target": "GHOST_2400_TX_LITE",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
     "id": "jhemcu:rx_2400:dual",
     "vendor": "jhemcu",
     "vendor_name": "JHEMCU",
@@ -2088,18 +1920,6 @@
     "platform": "esp8285",
     "min_power_value": 10,
     "max_power_value": 10,
-    "diversity_type": "single"
-  },
-  {
-    "id": "jumper:rx_900:mini",
-    "vendor": "jumper",
-    "vendor_name": "Jumper",
-    "product_name": "Jumper 900 Mini RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "900",
-    "firmware_target": "Jumper_RX_R900MINI",
-    "platform": "stm32",
     "diversity_type": "single"
   },
   {
@@ -2475,18 +2295,6 @@
     "diversity_type": "antenna"
   },
   {
-    "id": "namimnorc:tx_2400:flash_stm",
-    "vendor": "namimnorc",
-    "vendor_name": "NamimnoRC",
-    "product_name": "NamimnoRC Flash 2.4GHz TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "2400",
-    "firmware_target": "NamimnoRC_FLASH_2400_TX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
     "id": "namimnorc:rx_2400:flash",
     "vendor": "namimnorc",
     "vendor_name": "NamimnoRC",
@@ -2517,30 +2325,6 @@
     "diversity_type": "single"
   },
   {
-    "id": "namimnorc:rx_2400:flash_stm",
-    "vendor": "namimnorc",
-    "vendor_name": "NamimnoRC",
-    "product_name": "NamimnoRC Flash STM 2.4GHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "2400",
-    "firmware_target": "NamimnoRC_FLASH_2400_RX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "namimnorc:tx_900:voyager_stm",
-    "vendor": "namimnorc",
-    "vendor_name": "NamimnoRC",
-    "product_name": "NamimnoRC Voyager 900MHz TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "900",
-    "firmware_target": "NamimnoRC_VOYAGER_900_TX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
     "id": "namimnorc:rx_900:voyager",
     "vendor": "namimnorc",
     "vendor_name": "NamimnoRC",
@@ -2568,18 +2352,6 @@
     "screen_type": "oled",
     "min_power_value": 25,
     "max_power_value": 2000,
-    "diversity_type": "single"
-  },
-  {
-    "id": "namimnorc:rx_900:voyager_stm",
-    "vendor": "namimnorc",
-    "vendor_name": "NamimnoRC",
-    "product_name": "NamimnoRC Voyager STM 900MHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "900",
-    "firmware_target": "NamimnoRC_VOYAGER_900_RX",
-    "platform": "stm32",
     "diversity_type": "single"
   },
   {
@@ -3433,42 +3205,6 @@
     "min_power_value": 10,
     "max_power_value": 50,
     "diversity_type": "gemini"
-  },
-  {
-    "id": "siyi:tx_2400:fm30",
-    "vendor": "siyi",
-    "vendor_name": "SIYI",
-    "product_name": "SIYI FM30 2.4GHz TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "2400",
-    "firmware_target": "FM30_TX",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "siyi:rx_2400:mini",
-    "vendor": "siyi",
-    "vendor_name": "SIYI",
-    "product_name": "SIYI FM30 Mini 2.4GHz RX",
-    "category": "rx",
-    "device_class": "receiver",
-    "radio_band": "2400",
-    "firmware_target": "FM30_RX_MINI",
-    "platform": "stm32",
-    "diversity_type": "single"
-  },
-  {
-    "id": "siyi:tx_2400:rx_as_tx",
-    "vendor": "siyi",
-    "vendor_name": "SIYI",
-    "product_name": "SIYI FM30 Mini 2.4GHz RX as TX",
-    "category": "tx",
-    "device_class": "transmitter_module",
-    "radio_band": "2400",
-    "firmware_target": "FM30_RX_MINI_AS_TX",
-    "platform": "stm32",
-    "diversity_type": "single"
   },
   {
     "id": "spracing:rx_2400:rxg1",
