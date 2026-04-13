@@ -453,6 +453,7 @@ spammy
 stl
 stlink
 th
+toc
 toolchain
 tx
 txbp
