@@ -1,0 +1,115 @@
+{% extends "main.html" %}
+
+{% block tabs %} {{ super() }}
+
+<style>
+  .md-header {
+    position: relative;
+  }
+  .md-main__inner {
+    margin: 0;
+  }
+  .md-content {
+    display: none;
+  }
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+      display: none;
+    }
+  }
+</style>
+
+<section class="pf-main">
+  <div class="md-grid md-typeset">
+
+    <!-- Page heading -->
+    <div class="pf-heading">
+      <h1>Product Finder</h1>
+      <p>Every device listed here is officially supported - tested and approved by the ExpressLRS development team. <span id="pf-stats"></span></p>
+    </div>
+
+    <div class="pf-layout">
+
+      <!-- Filters sidebar -->
+      <div class="pf-filters">
+        <div class="pf-filters__header">
+          <h2>Filters</h2>
+          <button type="button" class="pf-btn-reset" id="pf-reset">Reset</button>
+        </div>
+        <div class="pf-filters__grid">
+          <div class="pf-field">
+            <label for="pf-search">Search</label>
+            <input type="text" id="pf-search" placeholder="Manufacturer, product name..." autocomplete="off" />
+          </div>
+          <div class="pf-field">
+            <label for="pf-vendor">Manufacturer</label>
+            <select id="pf-vendor"><option value="">Any manufacturer</option></select>
+          </div>
+          <div class="pf-field">
+            <label for="pf-classification">Product Type</label>
+            <select id="pf-classification">
+              <option value="">Any type</option>
+              <option value="receiver">Receiver</option>
+              <option value="transmitter_module">TX Module</option>
+              <option value="radio_handset">Radio</option>
+            </select>
+          </div>
+          <div class="pf-field">
+            <label for="pf-band">Frequency</label>
+            <select id="pf-band">
+              <option value="">Any frequency</option>
+              <option value="2400">2.4GHz</option>
+              <option value="900">900MHz</option>
+              <option value="dual">Dual-band</option>
+            </select>
+          </div>
+          <div class="pf-field">
+            <label for="pf-min-power">Min TX Power</label>
+            <select id="pf-min-power"><option value="">Any power</option></select>
+          </div>
+          <div class="pf-field">
+            <label for="pf-diversity">Antenna</label>
+            <select id="pf-diversity">
+              <option value="">Any setup</option>
+              <option value="single">Single</option>
+              <option value="antenna">Antenna Diversity</option>
+              <option value="gemini">Gemini (True Diversity)</option>
+            </select>
+          </div>
+          <div class="pf-field">
+            <label for="pf-min-pwm">Min PWM Outputs</label>
+            <select id="pf-min-pwm"><option value="">Any PWM</option></select>
+          </div>
+          <div class="pf-field">
+            <label for="pf-screen">Display</label>
+            <select id="pf-screen">
+              <option value="">Any display</option>
+              <option value="none">None</option>
+              <option value="oled">OLED</option>
+              <option value="tft">TFT</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="pf-results">
+        <p id="pf-summary" class="pf-summary">Loading catalog...</p>
+        <div id="pf-active-filters" class="pf-active-filters"></div>
+        <div id="pf-results-container"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="{{ 'assets/javascripts/product-finder.js' | url }}" defer></script>
+
+{% endblock %}
+
+{% block content %}{% endblock %}

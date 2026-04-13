@@ -1,0 +1,37 @@
+{
+  "defaults": {
+    "status": "active"
+  },
+  "products": {
+    "axis:tx_2400:thor": {
+      "notes": "External 2.4GHz module with a built-in display profile."
+    },
+    "betafpv:tx_900:micro900": {
+      "notes": "900MHz external micro module."
+    },
+    "betafpv:tx_2400:nano2g4": {
+      "notes": "Compact external 2.4GHz nano module."
+    },
+    "betafpv:tx_2400:nanov2": {
+      "notes": "Updated external 2.4GHz nano module."
+    },
+    "betafpv:tx_2400:micro2g4": {
+      "notes": "External micro module with a small display."
+    },
+    "betafpv:tx_2400:micro1w": {
+      "notes": "1W external micro module."
+    },
+    "betafpv:rx_900:superp": {
+      "notes": "High-channel-count PWM receiver."
+    },
+    "betafpv:rx_2400:pwmp": {
+      "notes": "PWM receiver for fixed-wing and surface use."
+    },
+    "happymodel:rx_2400:epw6": {
+      "notes": "6-channel PWM receiver."
+    },
+    "jumper:tx_2400:nano": {
+      "notes": "External nano-sized module."
+    }
+  }
+}
