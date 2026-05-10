@@ -16,6 +16,9 @@ Once we receive your inquiry, our team will establish a direct line of communica
 the next steps. We’ll work with you throughout the process to ensure a smooth path to compatibility and official
 support.
 
+!!! tip "Talk to us early"
+    The best time to reach out is **before** you finalize a design or commit to tooling. Early collaboration helps us flag compatibility and hardware-spec questions while changes are still cheap, saves you time and rework down the line, and keeps the experience consistent for the pilots who will fly your product.
+
 Let’s build something great together.
 
 ## Press Kit
