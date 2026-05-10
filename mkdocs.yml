@@ -33,7 +33,7 @@ theme:
     - navigation.tabs
     - navigation.footer
     - navigation.tracking
-    - navigation.indexes
+    - navigation.path
     - search.highlight
     - search.suggest
     - toc.follow
@@ -74,6 +74,10 @@ plugins:
       blog_toc: true
       post_date_format: long
       post_url_date_format: yyyy/MM/dd
+  - social:
+      cards_layout_options:
+        background_color: "#5f8bf3"
+        color: "#FFFFFF"
   - search:
       lang: en
   - tags: { }
