@@ -7,9 +7,17 @@ description: ExpressLRS Gemini is a Dual Channel 2.4GHz and/or 900MHz System.
 
 ## What is Gemini?
 
-Gemini is a dual channel 2.4GHz and/or 900MHz (and potentially other low-band frequencies) transmission mode that leverages true diversity hardware to maximize LQ. This page covers single-band Gemini mode, which uses diversity hardware to transmit in multiple channels within the same band (e.g. 2.4GHz or 900MHz). There is also a dual-band mode, Gemini Xrossband or GemX, which is capable of transmitting on both 2.4GHz and 900MHz bands simultaneously. Please see the [PR here](https://github.com/ExpressLRS/ExpressLRS/pull/2540) for more info while the documentation is updated. 
+Gemini is a dual channel 2.4GHz and/or 900MHz (and potentially other low-band frequencies) transmission mode that leverages true diversity hardware to maximize LQ.
 
-In Gemini Mode, a TX module simultaneously transmits a packet in two frequencies 40MHz apart for 2.4GHz and ~10MHz apart for 900MHz users.  The packet separation used is half of the frequency domain selected and will vary a little. A true diversity Receiver is used to receive both packets simultaneously. Transmitting on 2 separate frequencies provides better interference avoidance and/or mitigation, in a similar way DVDA does by sending repeat packets sequentially on different frequencies. This means, the Receiver has an increased chance of receiving the packet. This results in a much higher and stable LQ.
+There's single-band Gemini; which uses diversity hardware to transmit in multiple channels within the same band (2.4GHz or 900MHz) and there's also Gemini Xrossband (Crossband; i.e. dual-band) which is capable of transmitting on both 2.4GHz and 900MHz bands simultaneously using two LR1121 transceivers.
+
+In single-band Gemini Mode, a TX module simultaneously transmits a packet in two frequencies 40MHz apart for 2.4GHz and ~10MHz apart for 900MHz users. The packet separation used is half of the frequency domain selected and will vary a little.
+
+In dual-band GemX Mode (e.g. X150 or X100 Full Res), a TX module transmits a packet in SubGHz (900MHz) via Antenna 1 and in 2.4GHz via Antenna 2. 
+
+A true diversity Receiver is used to receive both packets simultaneously.
+
+Transmitting on 2 separate frequencies provides better interference avoidance and/or mitigation, in a similar way DVDA does by sending repeat packets sequentially on different frequencies. This means, the Receiver has an increased chance of receiving the packet. This results in a much higher and stable LQ.
 
 ## Setup
 
@@ -57,6 +65,12 @@ No. The packet sensitivity remains the same for the RF Mode (or Packet Rate) use
 <figure markdown>
 ![Gemini Info](../assets/images/gemini-sunjun.png)
 </figure>
+
+## Gemini Xrossband
+
+Gemini Xrossband or GemX is capable of transmitting on both 2.4GHz and 900MHz bands simultaneously. It is available to ExpressLRS devices with 2 LR1121 RF chipsets. In X-modes (X100 Full Res or X150), one RF circuit (typically designated as Antenna 1) operates in SubGHz (mainly 900MHz) and the other (typically designated as Antenna 2) operates in 2.4GHz. In X-modes, Antenna Mode option will be locked to `Gemini` since you need both RF paths to be working simultaneously. 
+
+A GemX-capable receiver will be required for this mode, and any single-band receiver will not get a sync.
 
 ## Is there antenna switching with Gemini? Can Antenna 1 of Receiver talk with Antenna 2 of TX if they are in the same polarization during a flight?
 
