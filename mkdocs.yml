@@ -9,7 +9,7 @@ site_description: >-
 # Repository
 repo_name: ExpressLRS/ExpressLRS
 repo_url: https://github.com/ExpressLRS/ExpressLRS/releases/
-edit_uri: "https://github.com/ExpressLRS/Docs/tree/master/docs/"
+edit_uri: "https://github.com/ExpressLRS/Docs/edit/master/docs/"
 
 # Copyright
 copyright: Copyright &copy;  2018–2025 ExpressLRS LLC
