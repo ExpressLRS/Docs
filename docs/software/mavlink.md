@@ -82,6 +82,9 @@ The minimum versions to use this feature are:
     1. Configure all `SRx_` parameters to be `1`, except for `SRx_ADSB`, `SRx_PARAMS`, `SRx_RAW_CTRL` that should stay `0` (otherwise yaapu will see a few sensors only and GCS might not be able to connect) 
     1. Save parameters and reboot the flight controller
 
+    !!! note "NOTE: ArduPilot parameters"
+        The `x` in the ArduPilot `SRx_` parameters does **not** need to be the same `x` as the in the `SERIALx` parameters. Often they are the same but that must not always be true. In case of doubt you have to figure this out by trial and error or just set all of them to the same value.
+
 === "PX4"
     For the below steps, when a UART connection is mentioned, it will be written as `SER_TELx`. Replace `x` with the UART number you are using.
 
