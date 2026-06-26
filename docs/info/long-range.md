@@ -32,11 +32,12 @@ Anyone can add an entry to the table, and entries should include the:
     | Max Dist. (km) | Packet Rate (Hz) | TX Power (mW) | Type | Failsafe at Max Range? | Pilot Handle  | Link to DVR                                         |
     |----------------|------------------|---------------|------|------------------------|---------------|-----------------------------------------------------|
     | 101.3          | 50               | 2000          | Wing | No                     | Snipes        | [Link](https://www.youtube.com/watch?v=IjQYLyvai6s) |
+    | 56.1           | 50               | 1000          | Wing | Yes                    | Schalonsus    | [Link](https://youtu.be/rbDNEWChHI0)                |
     | 43.7           | 150              | 250           | Wing | No                     | Slickshot     | [Link](https://youtu.be/Fidq5O3IvZs)                |
     | 40.6           | 50               | 25            | Wing | No                     | Shawn U       | [Link](https://youtu.be/TmSVSCLTUGI)                |
     | 35.0           | 250              | 100           | Wing | No                     | Snipes        | [Link](https://youtu.be/dBmTRhgVcyY)                |
     | 20.0           | 150              | 100           | Wing | Yes                    | Pairan        | [Link](https://youtu.be/B9-AItJ9WS0)                |
-    | 18.9           | 150              | 50            | Wing | yes                    | TitanDynamics | [Link](https://youtu.be/LPDKBW9XNKM)                |
+    | 18.9           | 150              | 50            | Wing | Yes                    | TitanDynamics | [Link](https://youtu.be/LPDKBW9XNKM)                |
     | 17.1           | 50               | 10            | Wing | No                     | Denks         | [Link](https://youtu.be/VEkl7GaNszs)                |
     | 16.1           | 50               | 250           | Quad | No                     | heggy_fpv     | [Link](https://youtu.be/Bnn1VuwmEgQ)                |
     | 13.2           | 150              | 500           | Quad | No                     | FelipeCris    | [Link](https://youtu.be/kLlY8maZRrQ)                |
