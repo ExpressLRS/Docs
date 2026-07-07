@@ -14,13 +14,17 @@ Dynamic Power allows the TX module to lower its output power from the configured
 
 ### How to configure Dynamic Power
 
-In the ELRS Lua script, select `> TX Power`. There are three configurable elements.
+In the ELRS Lua script, select `> TX Power`. There are four configurable elements.
 
 * `Max Power`: The output power will never exceed this power output level in any situation.
 * `Dynamic`: Three options are available.
     - `Off`: Fixed power, always set power to the configured `Max Power` output.
     - `Dyn`: Dynamic power is enabled.
     - `AUX9`-`AUX12`: Dynamic power is enabled only when this AUX channel is `high`, and power is fixed to the `Max Power` when `low`. [Demo Video](https://www.youtube.com/watch?v=wdPWw2xu8Ig)
+* `Ramp-Up`: Controls how readily Dynamic Power raises transmit power *and* how reluctant it is to lower power again afterward (see [Ramp-Up (Raise/Lower Aggressiveness)](#ramp-up-raiselower-aggressiveness)). Three options are available.
+    - `Normal`: Default behavior.
+    - `Aggressive`: Raises power sooner/more readily in response to degrading signal or missed telemetry, and requires a better signal than `Normal` before lowering power again.
+    - `Very Aggressive`: Raises power even sooner/more readily than `Aggressive`, and requires an even better signal before lowering. Uses more power on average, and keeps it up longer once raised, in exchange for a faster reaction to degrading link quality and less back-and-forth power churn.
 * `Fan Thresh`: Fan threshold. If the module has a fan, it will be enabled starting at this power level after a short delay.
 
 Another important setting is to make sure your craft is **armed** on AUX1=`high` (~2000us). See [Switch Modes](switch-config.md) for more information about AUX channels.
@@ -38,6 +42,8 @@ For non-FLRC modes, Dynamic Power uses the average signal to noise ratio (SNR) r
 For FLRC modes (packet rates beginning with `F` or `D`) Dynamic Power averages the last few RSSI dBm readings from the RX. If the RSSI is >= -83dBm, the transmit power is lowered by one level.
 
 For both algorithms, the power will only be lowered if the link quality (LQ) is 95% or higher.
+
+These specific numbers (-83dBm, 95% LQ, and the per-rate SNR values) are the `Normal` `Ramp-Up` preset. `Aggressive`/`Very Aggressive` require correspondingly better signal before lowering &mdash; see [Ramp-Up (Raise/Lower Aggressiveness)](#ramp-up-raiselower-aggressiveness).
 
 ### Raising Power
 
@@ -62,6 +68,26 @@ In addition to the slow power ramp up, three LQ-based conditions will raise the 
 3. If telemetry is lost entirely with the arm switch high. Any time the TX is "disconnected" while armed, the power will jump to the max.
 
 Finally, if reported LQ is below 85% and no other condition has been met this period, increase the power one level.
+
+### Ramp-Up (Raise/Lower Aggressiveness)
+
+The `Ramp-Up` setting adjusts the raising logic above *and* its matching lowering logic together: as the preset gets more aggressive, power raises sooner (at a better signal than it otherwise would), while the corresponding lower threshold moves the opposite way, requiring an even better signal before backing off. The raise/lower pair is moved together deliberately so the gap between them does not shrink as the preset escalates &mdash; a bigger swing between the two thresholds means fewer borderline readings can trigger both a raise and (moments later) a lower, i.e. less power "churn," on top of the faster reaction to a genuinely degrading link. There is no lowering counterpart for the missed-telemetry mechanism, since that mechanism never lowers power itself.
+
+The table below shows real, absolute numbers rather than raw offsets, using the same reference rates already used earlier on this page (F500 for FLRC/RSSI, 250Hz LoRa @2.4GHz for the pre-statistics SNR default) so the values are easy to put in perspective. RSSI sensitivity and the per-rate SNR table values differ by packet rate, so on a different rate the same *offsets* apply on top of a different starting number &mdash; see the footnote below the table.
+
+| Mechanism | Normal | Aggressive | Very Aggressive |
+|---|---|---|---|
+| Missed-telemetry raise delay (see [Raising Power](#raising-power)), for 250Hz (LoRa @2.4GHz) at its default `1:64` telemetry ratio (4ms OTA period &times; 64 = 256ms nominal LinkStats period) | 512ms (full debounce, waits for a 2nd miss) | 384ms (reacts partway into the 2nd period) | 256ms (reacts on the 1st miss, every time) |
+| RSSI-based raise / lower thresholds, for F500 (FLRC), &minus;104dBm sensitivity | &minus;89 / &minus;83dBm (6dB gap) | &minus;85 / &minus;79dBm (6dB gap) | &minus;81 / &minus;75dBm (6dB gap) |
+| SNR-based raise / lower thresholds, pre-statistics default, for 250Hz (LoRa @2.4GHz), before the 48-sample SNR window fills | 3.0 / 9.5dB (6.5dB gap) | 4.0 / 10.5dB (6.5dB gap) | 5.0 / 11.5dB (6.5dB gap) |
+| SNR-based raise / lower thresholds, statistically-derived, once the SNR window is full (relative to your own flight's live SNR mean/jitter &mdash; there's no fixed absolute number here) | mean &minus;3.25&sigma; / mean +0.5&sigma; (3.75&sigma; span) | mean &minus;2.5&sigma; / mean +1.25&sigma; (3.75&sigma; span) | mean &minus;1.75&sigma; / mean +2.0&sigma; (3.75&sigma; span) |
+| LQ-based fallback raise threshold / LQ required to permit any lowering | 85% / 95% LQ (10-point gap) | 90% / 97% LQ (7-point gap) | 93% / 98% LQ (5-point gap) |
+
+On a different packet rate, the RSSI row shifts with that rate's own RXsensitivity (always +15/+21/+19/+25/+23/+29dB above it for Normal/Aggressive/Very Aggressive respectively), and the pre-statistics SNR row shifts with that rate's own compiled table value (always +0/+0, +1/+1, +2/+2dB above it). The missed-telemetry row scales the same way with whatever air rate and telemetry ratio you've actually configured (nominal period = OTA packet period &times; telemetry ratio denominator, with a 512ms floor on the Normal-preset baseline) &mdash; the delay is always exactly 2.0&times;/1.5&times;/1.0&times; that nominal period.
+
+For RSSI and the pre-statistics SNR default, the raise/lower gap is provably constant (both sides get the exact same offset). For the statistically-derived SNR threshold, the total raise-to-lower span (in standard deviations of your own flight's SNR jitter) is also held constant at 3.75&sigma;, just shifted so the raise point sits closer to your average and the lower point sits further above it. The LQ-based pair is the one exception on two counts: because LQ is bounded at 100%, the gap still narrows somewhat at `Very Aggressive` (10 &rarr; 7 &rarr; 5 points) &mdash; there simply isn't unlimited headroom left to push both thresholds apart as they approach the ceiling &mdash; and neither side steps in perfectly linear increments: the lowering-permission threshold (+2, +1) stops at 98% rather than the linear-but-stricter 99%, and the raise threshold (+5, +3) stops at 93% rather than the linear 95%, precisely to keep that gap from narrowing to a 3-point cliff that fired too readily on ordinary link noise. Every raise threshold also carries a runtime floor at least 1 unit below its paired lower threshold as a defensive backstop, though with the values above it never actually needs to clamp anything.
+
+A caveat worth knowing before picking `Very Aggressive`: the LQ-based fallback (93% raise trigger, 5 points below the 98%-LQ-to-lower requirement) and the statistically-derived SNR raise (1.75&sigma; below your flight's own rolling average, which under typical jitter is satisfied by chance roughly 1 in 25 samples even on a healthy link) both sit closer to ordinary link noise than the other presets' thresholds do, so they can trigger &mdash; and then take a while to permit lowering again &mdash; somewhat more often in busy 2.4GHz environments (multi-pilot events, WiFi-congested venues) even without real signal degradation. This isn't a bug &mdash; the algorithm still only ever raises power in response to something real, never drops the link over it &mdash; but it does mean `Very Aggressive` can keep the TX at higher average power for extended stretches more than the name's "one more notch" framing suggests.
 
 ## Notes
 
