@@ -3489,6 +3489,20 @@
     "diversity_type": "single"
   },
   {
+    "id": "upoint:rx_2400:nano",
+    "vendor": "upoint",
+    "vendor_name": "UPOINT",
+    "product_name": "UPOINT Nano 2.4G RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "2400",
+    "firmware_target": "Unified_ESP32C3_2400_RX",
+    "platform": "esp32-c3",
+    "min_power_value": 10,
+    "max_power_value": 100,
+    "diversity_type": "single"
+  },
+  {
     "id": "vantac:rx_2400:plain",
     "vendor": "vantac",
     "vendor_name": "Vantac",
