@@ -291,42 +291,44 @@ The **Uplink (TX→RX)** column assumes RC channels are also being sent (the nor
 
 #### 2.4GHz
 
-| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Uplink (TX→RX) | Uplink (no RC) | Chip sets      |
-|-------------|:--------------:|:----------:|:----------------:|:--------------:|:--------------:|----------------|
-| 50Hz        |   -115 dBm     |    8 B     |    ~110 B/s      |    ~60 B/s     |    ~120 B/s    | SX128x, LR1121 |
-| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |   ~220 B/s     |    ~445 B/s    | SX128x, LR1121 |
-| 150Hz       |   -112 dBm     |    8 B     |    ~350 B/s      |   ~180 B/s     |    ~360 B/s    | SX128x, LR1121 |
-| 250Hz       |   -108 dBm     |    8 B     |    ~590 B/s      |   ~300 B/s     |    ~595 B/s    | SX128x, LR1121 |
-| 333Hz Full  |   -105 dBm     |   13 B     |   ~1470 B/s      |   ~735 B/s     |   ~1475 B/s    | SX128x, LR1121 |
-| 500Hz       |   -105 dBm     |    8 B     |   ~1185 B/s      |   ~595 B/s     |   ~1190 B/s    | SX128x, LR1121 |
-| F500        |   -104 dBm     |    8 B     |   ~1185 B/s      |   ~595 B/s     |   ~1190 B/s    | SX128x         |
-| F1000       |   -104 dBm     |    8 B     |   ~2375 B/s      |  ~1190 B/s     |   ~2385 B/s    | SX128x         |
-| D250        |   -104 dBm     |    8 B     |    ~595 B/s      |   ~300 B/s     |    ~595 B/s    | SX128x         |
-| D500        |   -104 dBm     |    8 B     |   ~1190 B/s      |   ~595 B/s     |   ~1190 B/s    | SX128x         |
-| K1000       |   -103 dBm     |    8 B     |   ~2375 B/s      |  ~1190 B/s     |   ~2385 B/s    | LR1121         |
-| DK500       |   -103 dBm     |    8 B     |   ~1190 B/s      |   ~595 B/s     |   ~1190 B/s    | LR1121         |
-| DK250       |   -103 dBm     |    8 B     |    ~595 B/s      |   ~300 B/s     |    ~595 B/s    | LR1121         |
+| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Downlink (Gemini)[^gemini] | Uplink (TX→RX) | Uplink (no RC) | Chip sets      |
+|-------------|:--------------:|:----------:|:----------------:|:--------------------------:|:--------------:|:--------------:|----------------|
+| 50Hz        |   -115 dBm     |    8 B     |    ~110 B/s      |         ~225 B/s           |    ~60 B/s     |    ~120 B/s    | SX128x, LR1121 |
+| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |         ~870 B/s           |   ~220 B/s     |    ~445 B/s    | SX128x, LR1121 |
+| 150Hz       |   -112 dBm     |    8 B     |    ~350 B/s      |         ~700 B/s           |   ~180 B/s     |    ~360 B/s    | SX128x, LR1121 |
+| 250Hz       |   -108 dBm     |    8 B     |    ~590 B/s      |        ~1175 B/s           |   ~300 B/s     |    ~595 B/s    | SX128x, LR1121 |
+| 333Hz Full  |   -105 dBm     |   13 B     |   ~1470 B/s      |        ~2935 B/s           |   ~735 B/s     |   ~1475 B/s    | SX128x, LR1121 |
+| 500Hz       |   -105 dBm     |    8 B     |   ~1185 B/s      |        ~2370 B/s           |   ~595 B/s     |   ~1190 B/s    | SX128x, LR1121 |
+| F500        |   -104 dBm     |    8 B     |   ~1185 B/s      |        ~2370 B/s           |   ~595 B/s     |   ~1190 B/s    | SX128x         |
+| F1000       |   -104 dBm     |    8 B     |   ~2375 B/s      |        ~4755 B/s           |  ~1190 B/s     |   ~2385 B/s    | SX128x         |
+| D250        |   -104 dBm     |    8 B     |    ~595 B/s      |        ~1190 B/s           |   ~300 B/s     |    ~595 B/s    | SX128x         |
+| D500        |   -104 dBm     |    8 B     |   ~1190 B/s      |        ~2375 B/s           |   ~595 B/s     |   ~1190 B/s    | SX128x         |
+| K1000       |   -103 dBm     |    8 B     |   ~2375 B/s      |        ~4755 B/s           |  ~1190 B/s     |   ~2385 B/s    | LR1121         |
+| DK500       |   -103 dBm     |    8 B     |   ~1190 B/s      |        ~2375 B/s           |   ~595 B/s     |   ~1190 B/s    | LR1121         |
+| DK250       |   -103 dBm     |    8 B     |    ~595 B/s      |        ~1190 B/s           |   ~300 B/s     |    ~595 B/s    | LR1121         |
 
 #### 900MHz
 
-| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Uplink (TX→RX) | Uplink (no RC) | Chip sets      |
-|-------------|:--------------:|:----------:|:----------------:|:--------------:|:--------------:|----------------|
-| 25Hz        |   -123 dBm     |    8 B     |     ~50 B/s      |    ~30 B/s     |     ~60 B/s    | SX127x, LR1121 |
-| 50Hz        |   -120 dBm     |    8 B     |    ~110 B/s      |    ~60 B/s     |    ~120 B/s    | SX127x, LR1121 |
-| D50Hz       |   -112 dBm     |    8 B     |    ~115 B/s      |    ~60 B/s     |    ~120 B/s    | SX127x, LR1121 |
-| 100Hz       |   -117 dBm     |    8 B     |    ~230 B/s      |   ~120 B/s     |    ~240 B/s    | SX127x, LR1121 |
-| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |   ~220 B/s     |    ~445 B/s    | SX127x, LR1121 |
-| 200Hz       |   -112 dBm     |    8 B     |    ~470 B/s      |   ~240 B/s     |    ~475 B/s    | SX127x, LR1121 |
-| 200Hz Full  |   -111 dBm     |   13 B     |    ~880 B/s      |   ~445 B/s     |    ~885 B/s    | LR1121         |
-| 250Hz       |   -111 dBm     |    8 B     |    ~590 B/s      |   ~300 B/s     |    ~595 B/s    | LR1121         |
-| K1000 Full  |   -101 dBm     |   13 B     |   ~4420 B/s      |  ~2215 B/s     |   ~4430 B/s    | LR1121         |
+| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Downlink (Gemini)[^gemini] | Uplink (TX→RX) | Uplink (no RC) | Chip sets      |
+|-------------|:--------------:|:----------:|:----------------:|:--------------------------:|:--------------:|:--------------:|----------------|
+| 25Hz        |   -123 dBm     |    8 B     |     ~50 B/s      |         ~105 B/s           |    ~30 B/s     |     ~60 B/s    | SX127x, LR1121 |
+| 50Hz        |   -120 dBm     |    8 B     |    ~110 B/s      |         ~225 B/s           |    ~60 B/s     |    ~120 B/s    | SX127x, LR1121 |
+| D50Hz       |   -112 dBm     |    8 B     |    ~115 B/s      |         ~235 B/s           |    ~60 B/s     |    ~120 B/s    | SX127x, LR1121 |
+| 100Hz       |   -117 dBm     |    8 B     |    ~230 B/s      |         ~460 B/s           |   ~120 B/s     |    ~240 B/s    | SX127x, LR1121 |
+| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |         ~870 B/s           |   ~220 B/s     |    ~445 B/s    | SX127x, LR1121 |
+| 200Hz       |   -112 dBm     |    8 B     |    ~470 B/s      |         ~940 B/s           |   ~240 B/s     |    ~475 B/s    | SX127x, LR1121 |
+| 200Hz Full  |   -111 dBm     |   13 B     |    ~880 B/s      |        ~1760 B/s           |   ~445 B/s     |    ~885 B/s    | LR1121         |
+| 250Hz       |   -111 dBm     |    8 B     |    ~590 B/s      |        ~1175 B/s           |   ~300 B/s     |    ~595 B/s    | LR1121         |
+| K1000 Full  |   -101 dBm     |   13 B     |   ~4420 B/s      |        ~8845 B/s           |  ~2215 B/s     |   ~4430 B/s    | LR1121         |
 
 #### Dual Band (LR1121)
 
+Dual band always runs Gemini (one radio per band), so the downlink figures below already include the doubling.
+
 | Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Uplink (TX→RX) | Uplink (no RC) | Chip sets      |
 |-------------|:--------------:|:----------:|:----------------:|:--------------:|:--------------:|----------------|
-| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |   ~220 B/s     |    ~445 B/s    | LR1121 (dual)  |
-| 150Hz       |   -112 dBm     |    8 B     |    ~350 B/s      |   ~180 B/s     |    ~360 B/s    | LR1121 (dual)  |
+| 100Hz Full  |   -112 dBm     |   13 B     |    ~870 B/s      |   ~220 B/s     |    ~445 B/s    | LR1121 (dual)  |
+| 150Hz       |   -112 dBm     |    8 B     |    ~700 B/s      |   ~180 B/s     |    ~360 B/s    | LR1121 (dual)  |
 
 ??? info "How these numbers are calculated"
     MAVLink mode forces a 1:2 telemetry ratio, so half of all packet slots are the downlink (telemetry) and half are the uplink. On the uplink, MAVLink data packets alternate with RC channel packets, and the uplink data is only acknowledged on telemetry packets — so the uplink gets roughly a quarter of the slots while the downlink gets half.
@@ -338,11 +340,14 @@ The **Uplink (TX→RX)** column assumes RC channels are also being sent (the nor
     P_dl  = ((P - 4) + B·P) / (B + 1)             # one LinkStats frame (4 B) per B data frames
 
     Downlink [B/s]       = (F / 2) · U(P) · (P_dl / P)
+    Downlink (Gemini)    = 2 · Downlink        # two radios send different halves
     Uplink [B/s]         = (F / 4) · U(P)     # shared with RC channel packets
     Uplink (no RC) [B/s] = (F / 2) · U(P)     # standalone, full uplink available
     ```
 
     The acknowledgement is the single `stubbornAck` bit carried in each packet's header (no extra bytes).
+
+[^gemini]: Downlink rate on dual-radio hardware running **Gemini** mode (needs two same-band radios and the Gemini antenna mode). The two radios send different halves of the telemetry stream instead of redundant copies, doubling the downlink. Uplink is unaffected. Dual-band modes always run Gemini, so their downlink figures already include this.
 
 ## Advanced Features
 
