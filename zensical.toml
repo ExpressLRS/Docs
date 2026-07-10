@@ -18,6 +18,7 @@ extra_css = [
     "assets/stylesheets/main.css",
     "assets/stylesheets/colors.css",
     "assets/stylesheets/home.css",
+    "assets/stylesheets/product-finder.css",
 ]
 
 extra_javascript = [
@@ -34,6 +35,7 @@ extra_javascript = [
 # ---------------------------------------------------------------------------
 nav = [
     { "Home" = "index.md" },
+    { "Product Finder" = "product-finder.md" },
     { "Quick Start" = [
         { "Getting Started" = "quick-start/getting-started.md" },
         { "Installing the Configurator" = "quick-start/installing-configurator.md" },
@@ -280,10 +282,10 @@ name = "Send a Donation!"
 #   * Google Analytics + cookie consent banner (project.extra.analytics / .consent)
 #   * overrides/hooks/blog_posts.py (injects recent posts into homepage)
 #   * overrides/hooks/llms_txt.py (generates llms.txt / llms-full.txt)
-#   * product finder page (docs/product-finder.md, excluded below) — rendered
-#     by overrides/hooks/product_catalog.py + overrides/product-finder.html +
-#     product-finder.css, none of which Zensical runs yet. Re-add the nav
-#     entry and extra_css when ported.
+#   * product finder — works, but the mkdocs override template is inlined
+#     as raw HTML in docs/product-finder.md (Zensical has no per-page
+#     `template:` frontmatter yet), and assets/data/products.json must be
+#     generated before the build: python3 overrides/hooks/product_catalog.py
 #   * pymdownx markdown extensions — Zensical's markdown_extensions surface is
 #     not yet documented; verify before re-enabling. Previous list:
 #       admonition, abbr, attr_list, def_list, footnotes, meta, md_in_html,

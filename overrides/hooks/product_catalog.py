@@ -6,6 +6,11 @@ the Product Finder page.
 
 Skips the build if products.json already exists. Delete the file to
 force a refresh.
+
+Runs as an mkdocs hook (on_pre_build) or as a standalone script for
+builders like Zensical that have no hook support:
+
+    python3 overrides/hooks/product_catalog.py
 """
 
 import json
@@ -251,3 +256,8 @@ def _read_layout(hardware_dir, layout_file, category):
 
 def _compact(record):
     return {k: record[k] for k in COMPACT_FIELDS if record.get(k) is not None and record.get(k) != ""}
+
+
+if __name__ == "__main__":
+    _repo_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    on_pre_build({"docs_dir": os.path.join(_repo_root, "docs")})
