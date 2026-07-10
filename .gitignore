@@ -150,3 +150,6 @@ docs/assets/data/products.json
 
 # Generated homepage Latest News partial (overrides/hooks/blog_posts.py)
 overrides/partials/recent-posts.html
+
+# Local scratch notes
+TODO.md
