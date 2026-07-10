@@ -29,22 +29,11 @@ ExpressLRS provides full bi-directional [MAVLink](https://mavlink.io/en/) suppor
 
 To start using MAVLink, you just need one ESP based ELRS transmitter, and one ESP based ELRS receiver. The majority of recent ELRS hardware is ESP based, and will be compatible with MAVLink. An easy way to check is, if the RX/TX have WiFi, then it is ESP based. STM32 based hardware cannot support running MAVLink mode.
 
-!!! danger "900MHz Performance Warning"
-    **It is STRONGLY suggested that you avoid using MAVLink mode with single-band 900MHz hardware. If you are planning to use 915/868MHz ELRS hardware, MAVLink will be SIGNIFICANTLY slower than with 2.4GHz or dual-band 900MHz.** This is due to the much lower data rates available on legacy 900MHz hardware.
-    
-    **Expected performance on legacy (single-band) 900MHz:**
-    
-    - At the 200Hz packet rate with 1:2 telemetry ratio: ~400 bps (bits per second)
-    - At 100Hz Full packet rate with 1:2 telemetry ratio: ~400 bps
-    - At any of the lower rates: Unusable data speeds, don't even bother.
-    - Parameter downloading at 200Hz takes **2+ minutes**
-    
-    For comparison, with dual-band hardware at K1000Hz (which still uses the 900mhz band) the data rate is ~4000 bps, and parameter download takes ~4 seconds.
-    
-    **Recommendation:** Use 2.4GHz or dual-band (LR1121) hardware for MAVLink whenever possible. If you must use the older 900MHz hardware, be prepared for very slow data transfers.
+!!! note "NOTE: Performance"
+    **Recommendation:** Use 2.4GHz or dual-band-capable (LR1121) hardware for MAVLink whenever possible. If you must use the older 900MHz (SX127X) hardware, be prepared for slow data transfers.
 
 !!! note "NOTE: Internal TX modules"
-    If you are using an internal TX module (e.g. a TX16S with internal ELRS), you will be required to use the TX Backpack to connect to you GCS via WiFi (USB cable between the TX and the PC is not an option for internal modules). See WiFi Connectivity below.
+    If you are using an internal TX module (e.g. a TX16S with internal ELRS), you will be required to use the TX Backpack to connect to your GCS via WiFi (USB cable between the TX and the PC is not an option for internal modules). See WiFi Connectivity below.
 
 ## Flashing ELRS for MAVLink
 
@@ -298,47 +287,46 @@ Suggested settings:
 
 The tables below give the estimated MAVLink data capacity for every packet rate, using the packet-rate names as they appear in the ELRS Lua script. Higher rates and the *Full* modes (which use the larger 13-byte over-the-air packet) carry more MAVLink data.
 
-!!! note "These are theoretical maximums"
-    The figures are the link-layer capacity for a lossless, fully-saturated link with MAVLink mode's fixed 1:2 telemetry ratio. Real-world goodput is lower — often several times lower — because of MAVLink protocol overhead, the stop-and-wait retransmit behaviour, and packet loss at range. Use them to compare modes, not as guaranteed rates. Uplink assumes RC channels are also being sent (the normal case); running standalone with no RC roughly doubles the uplink figure.
+The **Uplink (TX→RX)** column assumes RC channels are also being sent (the normal case), where MAVLink shares the uplink with RC packets. The **Uplink (no RC)** column is the higher rate available when running standalone with no handset/RC, so the full uplink is available to MAVLink.
 
 #### 2.4GHz
 
-| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Uplink (TX→RX) | Chip sets      |
-|-------------|:--------------:|:----------:|:----------------:|:--------------:|----------------|
-| 50Hz        |   -115 dBm     |    8 B     |    ~110 B/s      |    ~60 B/s     | SX128x, LR1121 |
-| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |   ~220 B/s     | SX128x, LR1121 |
-| 150Hz       |   -112 dBm     |    8 B     |    ~350 B/s      |   ~180 B/s     | SX128x, LR1121 |
-| 250Hz       |   -108 dBm     |    8 B     |    ~590 B/s      |   ~300 B/s     | SX128x, LR1121 |
-| 333Hz Full  |   -105 dBm     |   13 B     |   ~1470 B/s      |   ~735 B/s     | SX128x, LR1121 |
-| 500Hz       |   -105 dBm     |    8 B     |   ~1185 B/s      |   ~595 B/s     | SX128x, LR1121 |
-| F500        |   -104 dBm     |    8 B     |   ~1185 B/s      |   ~595 B/s     | SX128x         |
-| F1000       |   -104 dBm     |    8 B     |   ~2375 B/s      |  ~1190 B/s     | SX128x         |
-| D250        |   -104 dBm     |    8 B     |    ~595 B/s      |   ~300 B/s     | SX128x         |
-| D500        |   -104 dBm     |    8 B     |   ~1190 B/s      |   ~595 B/s     | SX128x         |
-| K1000       |   -103 dBm     |    8 B     |   ~2375 B/s      |  ~1190 B/s     | LR1121         |
-| DK500       |   -103 dBm     |    8 B     |   ~1190 B/s      |   ~595 B/s     | LR1121         |
-| DK250       |   -103 dBm     |    8 B     |    ~595 B/s      |   ~300 B/s     | LR1121         |
+| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Uplink (TX→RX) | Uplink (no RC) | Chip sets      |
+|-------------|:--------------:|:----------:|:----------------:|:--------------:|:--------------:|----------------|
+| 50Hz        |   -115 dBm     |    8 B     |    ~110 B/s      |    ~60 B/s     |    ~120 B/s    | SX128x, LR1121 |
+| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |   ~220 B/s     |    ~445 B/s    | SX128x, LR1121 |
+| 150Hz       |   -112 dBm     |    8 B     |    ~350 B/s      |   ~180 B/s     |    ~360 B/s    | SX128x, LR1121 |
+| 250Hz       |   -108 dBm     |    8 B     |    ~590 B/s      |   ~300 B/s     |    ~595 B/s    | SX128x, LR1121 |
+| 333Hz Full  |   -105 dBm     |   13 B     |   ~1470 B/s      |   ~735 B/s     |   ~1475 B/s    | SX128x, LR1121 |
+| 500Hz       |   -105 dBm     |    8 B     |   ~1185 B/s      |   ~595 B/s     |   ~1190 B/s    | SX128x, LR1121 |
+| F500        |   -104 dBm     |    8 B     |   ~1185 B/s      |   ~595 B/s     |   ~1190 B/s    | SX128x         |
+| F1000       |   -104 dBm     |    8 B     |   ~2375 B/s      |  ~1190 B/s     |   ~2385 B/s    | SX128x         |
+| D250        |   -104 dBm     |    8 B     |    ~595 B/s      |   ~300 B/s     |    ~595 B/s    | SX128x         |
+| D500        |   -104 dBm     |    8 B     |   ~1190 B/s      |   ~595 B/s     |   ~1190 B/s    | SX128x         |
+| K1000       |   -103 dBm     |    8 B     |   ~2375 B/s      |  ~1190 B/s     |   ~2385 B/s    | LR1121         |
+| DK500       |   -103 dBm     |    8 B     |   ~1190 B/s      |   ~595 B/s     |   ~1190 B/s    | LR1121         |
+| DK250       |   -103 dBm     |    8 B     |    ~595 B/s      |   ~300 B/s     |    ~595 B/s    | LR1121         |
 
 #### 900MHz
 
-| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Uplink (TX→RX) | Chip sets      |
-|-------------|:--------------:|:----------:|:----------------:|:--------------:|----------------|
-| 25Hz        |   -123 dBm     |    8 B     |     ~50 B/s      |    ~30 B/s     | SX127x, LR1121 |
-| 50Hz        |   -120 dBm     |    8 B     |    ~110 B/s      |    ~60 B/s     | SX127x, LR1121 |
-| D50Hz       |   -112 dBm     |    8 B     |    ~115 B/s      |    ~60 B/s     | SX127x, LR1121 |
-| 100Hz       |   -117 dBm     |    8 B     |    ~230 B/s      |   ~120 B/s     | SX127x, LR1121 |
-| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |   ~220 B/s     | SX127x, LR1121 |
-| 200Hz       |   -112 dBm     |    8 B     |    ~470 B/s      |   ~240 B/s     | SX127x, LR1121 |
-| 200Hz Full  |   -111 dBm     |   13 B     |    ~880 B/s      |   ~445 B/s     | LR1121         |
-| 250Hz       |   -111 dBm     |    8 B     |    ~590 B/s      |   ~300 B/s     | LR1121         |
-| K1000 Full  |   -101 dBm     |   13 B     |   ~4420 B/s      |  ~2215 B/s     | LR1121         |
+| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Uplink (TX→RX) | Uplink (no RC) | Chip sets      |
+|-------------|:--------------:|:----------:|:----------------:|:--------------:|:--------------:|----------------|
+| 25Hz        |   -123 dBm     |    8 B     |     ~50 B/s      |    ~30 B/s     |     ~60 B/s    | SX127x, LR1121 |
+| 50Hz        |   -120 dBm     |    8 B     |    ~110 B/s      |    ~60 B/s     |    ~120 B/s    | SX127x, LR1121 |
+| D50Hz       |   -112 dBm     |    8 B     |    ~115 B/s      |    ~60 B/s     |    ~120 B/s    | SX127x, LR1121 |
+| 100Hz       |   -117 dBm     |    8 B     |    ~230 B/s      |   ~120 B/s     |    ~240 B/s    | SX127x, LR1121 |
+| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |   ~220 B/s     |    ~445 B/s    | SX127x, LR1121 |
+| 200Hz       |   -112 dBm     |    8 B     |    ~470 B/s      |   ~240 B/s     |    ~475 B/s    | SX127x, LR1121 |
+| 200Hz Full  |   -111 dBm     |   13 B     |    ~880 B/s      |   ~445 B/s     |    ~885 B/s    | LR1121         |
+| 250Hz       |   -111 dBm     |    8 B     |    ~590 B/s      |   ~300 B/s     |    ~595 B/s    | LR1121         |
+| K1000 Full  |   -101 dBm     |   13 B     |   ~4420 B/s      |  ~2215 B/s     |   ~4430 B/s    | LR1121         |
 
 #### Dual Band (LR1121)
 
-| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Uplink (TX→RX) | Chip sets      |
-|-------------|:--------------:|:----------:|:----------------:|:--------------:|----------------|
-| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |   ~220 B/s     | LR1121 (dual)  |
-| 150Hz       |   -112 dBm     |    8 B     |    ~350 B/s      |   ~180 B/s     | LR1121 (dual)  |
+| Packet Rate | RX Sensitivity | OTA Packet | Downlink (RX→TX) | Uplink (TX→RX) | Uplink (no RC) | Chip sets      |
+|-------------|:--------------:|:----------:|:----------------:|:--------------:|:--------------:|----------------|
+| 100Hz Full  |   -112 dBm     |   13 B     |    ~435 B/s      |   ~220 B/s     |    ~445 B/s    | LR1121 (dual)  |
+| 150Hz       |   -112 dBm     |    8 B     |    ~350 B/s      |   ~180 B/s     |    ~360 B/s    | LR1121 (dual)  |
 
 ??? info "How these numbers are calculated"
     MAVLink mode forces a 1:2 telemetry ratio, so half of all packet slots are the downlink (telemetry) and half are the uplink. On the uplink, MAVLink data packets alternate with RC channel packets, and the uplink data is only acknowledged on telemetry packets — so the uplink gets roughly a quarter of the slots while the downlink gets half.
@@ -349,11 +337,12 @@ The tables below give the estimated MAVLink data capacity for every packet rate,
     U(P)  = 62 / ceil(64 / P)                     # 2-byte message header + partial-chunk framing
     P_dl  = ((P - 4) + B·P) / (B + 1)             # one LinkStats frame (4 B) per B data frames
 
-    Downlink [B/s] = (F / 2) · U(P) · (P_dl / P)
-    Uplink   [B/s] = (F / 4) · U(P)
+    Downlink [B/s]       = (F / 2) · U(P) · (P_dl / P)
+    Uplink [B/s]         = (F / 4) · U(P)     # shared with RC channel packets
+    Uplink (no RC) [B/s] = (F / 2) · U(P)     # standalone, full uplink available
     ```
 
-    The acknowledgement is the single `stubbornAck` bit carried in each packet's header (no extra bytes). RX sensitivity values are taken from the ELRS packet-rate menu. These are ceilings; loss and MAVLink protocol overhead reduce delivered goodput.
+    The acknowledgement is the single `stubbornAck` bit carried in each packet's header (no extra bytes).
 
 ## Advanced Features
 
