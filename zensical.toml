@@ -241,6 +241,41 @@ toggle.name = "Switch to dark mode"
 # ---------------------------------------------------------------------------
 # Extra
 # ---------------------------------------------------------------------------
+[project.extra.analytics]
+provider = "google"
+property = "G-VMF2B5BYJZ"
+
+[project.extra.analytics.feedback]
+title = "Was this page helpful?"
+
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/emoticon-happy-outline"
+name = "This page was helpful"
+data = 1
+note = "Thanks for your feedback!"
+
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/emoticon-sad-outline"
+name = "This page could be improved"
+data = 0
+note = """
+Thanks for your feedback! Help us improve this page by using our \
+<a href="https://discord.gg/expresslrs" target="_blank" rel="noopener">discord server</a>!\
+"""
+
+[project.extra.consent]
+title = "Cookie consent"
+description = """
+We use cookies to recognize your repeated visits and preferences, as well \
+as to measure the effectiveness of our documentation and whether users \
+find what they're searching for. With your consent, you're helping us to \
+make our documentation better.\
+"""
+actions = ["accept", "manage", "reject"]
+
+[project.extra.consent.analytics]
+name = "Google Analytics"
+
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/ExpressLRS/"
@@ -272,31 +307,32 @@ link = "https://opencollective.com/expresslrs"
 name = "Send a Donation!"
 
 # ---------------------------------------------------------------------------
-# TODO — Zensical equivalents not yet wired up. The user accepted feature
-# loss during migration; track these as follow-ups:
+# TODO — blocked on upstream Zensical support (all "planned" in the
+# Zensical backlog, see https://zensical.org/compatibility/plugins/):
 #
-#   * blog plugin           (mkdocs-material insiders blog/posts/*)
+#   * blog plugin — posts render as plain pages, but blog/index.md has no
+#     post listing, archive, or category pages yet
 #   * tags plugin
-#   * minify plugin
-#   * git-revision-date-localized
-#   * git-committers
-#   * redirects.yml         (mkdocs-redirects redirect_maps — see redirects.yml)
 #   * social cards plugin  (cards_layout_options background #5f8bf3)
-#   * Google Analytics + cookie consent banner (project.extra.analytics / .consent)
-#   * overrides/hooks/blog_posts.py (injects recent posts into homepage —
-#     without it the "Latest News" section on the homepage is skipped)
-#   * overrides/hooks/llms_txt.py (generates llms.txt / llms-full.txt)
+#   * minify plugin        (HTML output is currently unminified)
+#   * git-revision-date-localized + git-committers (page footer dates and
+#     contributor avatars)
 #
-# Working via custom_dir/overrides (no follow-up needed):
-#   * homepage (overrides/home.html via `template:` frontmatter) and the
-#     announcement banner (overrides/main.html)
-#   * product finder (overrides/product-finder.html); assets/data/
-#     products.json must be generated before the build:
-#     python3 overrides/hooks/product_catalog.py  (or `make catalog`)
-#   * pymdownx markdown extensions — Zensical's markdown_extensions surface is
-#     not yet documented; verify before re-enabling. Previous list:
-#       admonition, abbr, attr_list, def_list, footnotes, meta, md_in_html,
-#       tables, toc(permalink), pymdownx.{arithmatex, betterem, caret, critic,
-#       details, emoji, highlight, inlinehilite, keys, magiclink, mark,
-#       smartsymbols, superfences(mermaid), tabbed, tasklist, tilde}
+# Handled outside Zensical until its module system ships — the mkdocs
+# hooks in overrides/hooks/ also run as standalone scripts, wired into
+# .github/workflows/publish.yml and `make site`:
+#   * product_catalog.py  (before build)  → docs/assets/data/products.json
+#   * blog_posts.py       (before build)  → overrides/partials/
+#     recent-posts.html, included by home.html for the Latest News section
+#   * llms_txt.py         (after build)   → site/llms.txt
+#   * redirects.py        (after build)   → meta-refresh stubs from
+#     redirects.yml (mkdocs-redirects equivalent)
+#
+# Working natively (verified):
+#   * template overrides via custom_dir (home.html, main.html announcement
+#     banner, product-finder.html, partials/)
+#   * Google Analytics, cookie consent, and the feedback widget via
+#     project.extra above
+#   * pymdownx markdown extensions (admonitions, tabs, keys, emoji,
+#     arithmatex, critic/mark, superfences+mermaid) render out of the box
 # ---------------------------------------------------------------------------

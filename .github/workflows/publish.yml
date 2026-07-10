@@ -21,11 +21,18 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v8
 
-      - name: Generate product catalog
-        run: python3 overrides/hooks/product_catalog.py
+      - name: Generate product catalog and homepage news
+        run: |
+          uv run python overrides/hooks/product_catalog.py
+          uv run python overrides/hooks/blog_posts.py
 
       - name: Build site
         run: uv run zensical build --clean
+
+      - name: Generate llms.txt and redirect stubs
+        run: |
+          uv run python overrides/hooks/llms_txt.py
+          uv run python overrides/hooks/redirects.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
