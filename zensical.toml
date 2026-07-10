@@ -327,12 +327,4 @@ name = "Send a Donation!"
 #   * llms_txt.py         (after build)   → site/llms.txt
 #   * redirects.py        (after build)   → meta-refresh stubs from
 #     redirects.yml (mkdocs-redirects equivalent)
-#
-# Working natively (verified):
-#   * template overrides via custom_dir (home.html, main.html announcement
-#     banner, product-finder.html, partials/)
-#   * Google Analytics, cookie consent, and the feedback widget via
-#     project.extra above
-#   * pymdownx markdown extensions (admonitions, tabs, keys, emoji,
-#     arithmatex, critic/mark, superfences+mermaid) render out of the box
 # ---------------------------------------------------------------------------
