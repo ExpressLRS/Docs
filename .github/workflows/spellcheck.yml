@@ -15,6 +15,6 @@ jobs:
       - name: Install aspell
         run: sudo apt-get install -y aspell aspell-en
       - name: Install uv
-        uses: astral-sh/setup-uv@v8
+        uses: astral-sh/setup-uv@v8.3.2
       - name: Check Spelling
         run: uv run --group spellcheck pyspelling --config .spellcheck.yml --spellchecker aspell --name Markdown
