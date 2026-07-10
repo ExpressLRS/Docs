@@ -4,7 +4,7 @@
 .PHONY: install build run serve site shell spellcheck
 
 install:
-	pip install "zensical==0.0.32"
+	pip install "zensical==0.0.50"
 
 build:
 	zensical build --clean
