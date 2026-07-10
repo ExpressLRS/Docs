@@ -29,5 +29,6 @@ shell:
 catalog:
 	docker compose run --rm --entrypoint python3 docs overrides/hooks/product_catalog.py
 
+# Needs aspell + aspell-en installed on the host
 spellcheck:
-	pyspelling --config .spellcheck.yml --spellchecker aspell --name Markdown
+	uv run --group spellcheck pyspelling --config .spellcheck.yml --spellchecker aspell --name Markdown
