@@ -194,11 +194,7 @@ nav = [
 # Theme
 # ---------------------------------------------------------------------------
 [project.theme]
-# TODO: re-enable `custom_dir = "overrides"` once the partials in
-# overrides/ (header, footer, copyright, home.html, blog.html) are ported
-# to Zensical's template context. The mkdocs-material variables they
-# reference (e.g. config.extra.social, page.meta) don't exist in Zensical
-# yet — enabling custom_dir floods the build with template errors.
+custom_dir = "overrides"
 language   = "en"
 favicon    = "assets/favicon.png"
 logo       = "assets/images/logotype.svg"
@@ -223,15 +219,19 @@ code = "Roboto Mono"
 
 # Dark mode (default — matches the historical ExpressLRS palette)
 [[project.theme.palette]]
-media  = "(prefers-color-scheme: dark)"
-scheme = "slate"
+media   = "(prefers-color-scheme: dark)"
+scheme  = "slate"
+primary = "expresslrs-dark"
+accent  = "expresslrs-dark"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 
 # Light mode
 [[project.theme.palette]]
-media  = "(prefers-color-scheme: light)"
-scheme = "default"
+media   = "(prefers-color-scheme: light)"
+scheme  = "default"
+primary = "expresslrs"
+accent  = "expresslrs"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
@@ -280,12 +280,16 @@ name = "Send a Donation!"
 #   * redirects.yml         (mkdocs-redirects redirect_maps — see redirects.yml)
 #   * social cards plugin  (cards_layout_options background #5f8bf3)
 #   * Google Analytics + cookie consent banner (project.extra.analytics / .consent)
-#   * overrides/hooks/blog_posts.py (injects recent posts into homepage)
+#   * overrides/hooks/blog_posts.py (injects recent posts into homepage —
+#     without it the "Latest News" section on the homepage is skipped)
 #   * overrides/hooks/llms_txt.py (generates llms.txt / llms-full.txt)
-#   * product finder — works, but the mkdocs override template is inlined
-#     as raw HTML in docs/product-finder.md (Zensical has no per-page
-#     `template:` frontmatter yet), and assets/data/products.json must be
-#     generated before the build: python3 overrides/hooks/product_catalog.py
+#
+# Working via custom_dir/overrides (no follow-up needed):
+#   * homepage (overrides/home.html via `template:` frontmatter) and the
+#     announcement banner (overrides/main.html)
+#   * product finder (overrides/product-finder.html); assets/data/
+#     products.json must be generated before the build:
+#     python3 overrides/hooks/product_catalog.py  (or `make catalog`)
 #   * pymdownx markdown extensions — Zensical's markdown_extensions surface is
 #     not yet documented; verify before re-enabling. Previous list:
 #       admonition, abbr, attr_list, def_list, footnotes, meta, md_in_html,
