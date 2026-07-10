@@ -18,15 +18,11 @@ jobs:
 
       - uses: actions/configure-pages@v5
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install Zensical
-        run: make install
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8
 
       - name: Build site
-        run: zensical build --clean
+        run: uv run zensical build --clean
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
