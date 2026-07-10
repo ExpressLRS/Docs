@@ -194,6 +194,9 @@ nav = [
 # Theme
 # ---------------------------------------------------------------------------
 [project.theme]
+# "classic" matches the Material for MkDocs look the site has always had;
+# Zensical's default "modern" variant restyles the header/nav.
+variant    = "classic"
 custom_dir = "overrides"
 language   = "en"
 favicon    = "assets/favicon.png"
@@ -223,7 +226,7 @@ media   = "(prefers-color-scheme: dark)"
 scheme  = "slate"
 primary = "expresslrs-dark"
 accent  = "expresslrs-dark"
-toggle.icon = "lucide/moon"
+toggle.icon = "material/weather-night"
 toggle.name = "Switch to light mode"
 
 # Light mode
@@ -232,7 +235,7 @@ media   = "(prefers-color-scheme: light)"
 scheme  = "default"
 primary = "expresslrs"
 accent  = "expresslrs"
-toggle.icon = "lucide/sun"
+toggle.icon = "material/weather-sunny"
 toggle.name = "Switch to dark mode"
 
 # ---------------------------------------------------------------------------
