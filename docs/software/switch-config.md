@@ -28,8 +28,8 @@ This table summarizes the switch configuration modes, available channel switch p
 | 12  | Aux 8 | *16-pos*<sup>RR</sup> | *64-pos*<sup>RR</sup> | - | CRSF Ext<br/>Limits<sup>H</sup> | CRSF Ext<br/>Limits<sup>H</sup> |
 | 13  | Aux 9 | - | - | - | CRSF Ext<br/>Limits<sup>H</sup> | - |
 | 14  | Aux 10 | **2-pos<br/>Arm*** | **2-pos<br/>Arm*** | **2-pos<br/>Arm*** | CRSF Ext<br/>Limits<sup>H</sup> | **2-pos<br/>Arm*** |
-| 15  | Aux 11 | - | - | - | CRSF Ext<br/>Limits<sup>H</sup> | - |
-| 16  | Aux 12 | - | - | - | CRSF Ext<br/>Limits<sup>H</sup> | - |
+| 15  | Aux 11 | LQ% | LQ% | LQ% | CRSF Ext<br/>Limits<sup>H</sup> | LQ% |
+| 16  | Aux 12 | RSSI% | RSSI% | RSSI% | CRSF Ext<br/>Limits<sup>H</sup> | RSSI% |
 |  | Packet <br/>Rates | 50 thru <br/>F1000 | 50 thru <br/>F1000 | Full Res <br/>Only | Full Res <br/>Only | Full Res <br/>Only |
 
 <small>* v4.0 changes, with the introduction of the new arming methods</small>
@@ -44,6 +44,8 @@ This table summarizes the switch configuration modes, available channel switch p
 | **16-pos** | 4-bit which is good for flight modes, flaps, gear, etc. |
 | **6-pos** | 3-bit which is good for flight modes, flaps, gear, etc. |
 | **2-pos** | 1-bit for Arm, ~1000us is the **disarmed** state and ~2000us is the **armed** state (see the explanations below of why the armed state is very important for safety and performance) |
+| **LQ%** | Link Quality % (RQly) expressed as a value 988us to 2012us |
+| **RSSI%** | RSSI dBm % (1RSS/2RSS) expressed as a value 988us to 2012us |
 
 
 !!! warning "WARNING" 

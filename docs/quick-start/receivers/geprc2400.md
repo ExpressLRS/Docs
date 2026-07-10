@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for GEPRC Nano and Dual 2.4GHz receivers via WiFi or Passthrough.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Telemetry burst mode bandwidth allocation across packet rates and telemetry ratios.
 ---
 
 ![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)

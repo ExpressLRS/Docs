@@ -144,3 +144,6 @@ cython_debug/
 
 Dockerfile.insiders
 .vscode/settings.json
+
+# Generated product catalog
+docs/assets/data/products.json

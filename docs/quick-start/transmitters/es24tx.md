@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for Happymodel ES24TX 2.4GHz TX module variants (Lite, Slim Pro, Pro).
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

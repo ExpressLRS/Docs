@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for RadioMaster internal 2.4GHz transmitters via WiFi, UART, or EdgeTX passthrough.
 ---
 
 <figure markdown>

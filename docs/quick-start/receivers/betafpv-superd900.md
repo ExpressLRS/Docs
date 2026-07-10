@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the BetaFPV SuperD 900MHz diversity receiver.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

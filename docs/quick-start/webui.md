@@ -294,6 +294,16 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
     ![Buttons Tab](../assets/images/webui/buttons.png)
     </figure>
 
+    The actions that can be performed are:
+
+    - None (the button does nothing; useful if a user only wants a single action on the button)
+    - Increase Power (Increments the power output by one notch i.e. 25 -> 50mW, 50 -> 100mW etc)
+    - Go to VTX Band Menu (Jumps directly to the menu on the TFT/OLED display, if present)
+    - Go to VTX Channel Menu (Jumps directly to the menu on the TFT/OLED display, if present)
+    - Send VTX Settings (Sends the current VTX admin settings to the FC/Backpack)
+    - Start WiFi (Immediately starts WiFi mode)
+    - Enter Binding Mode (Tells the TX to start sending bind messages)
+
     ### Import/Export Tab
 
     This tab allows you to Export or Import TX Module per-model Configuration. See [Model Config Matching](../software/model-config-match.md).
@@ -438,6 +448,16 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
     ![Web UI Banner](../assets/images/web-buttonsTX.png)
     <figcaption>ExpressLRS TX Module Buttons Tab</figcaption>
     </figure>
+
+    The actions that can be performed are:
+
+    - None (the button does nothing; useful if a user only wants a single action on the button)
+    - Increase Power (Increments the power output by one notch i.e. 25 -> 50mW, 50 -> 100mW etc)
+    - Go to VTX Band Menu (Jumps directly to the menu on the TFT/OLED display, if present)
+    - Go to VTX Channel Menu (Jumps directly to the menu on the TFT/OLED display, if present)
+    - Send VTX Settings (Sends the current VTX admin settings to the FC/Backpack)
+    - Start WiFi (Immediately starts WiFi mode)
+    - Enter Binding Mode (Tells the TX to start sending bind messages)
 
     ### The Update Tab
 

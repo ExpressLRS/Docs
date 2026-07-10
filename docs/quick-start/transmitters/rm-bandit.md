@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the RadioMaster Bandit 2.4GHz TX module with pre-installed 3.x firmware.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

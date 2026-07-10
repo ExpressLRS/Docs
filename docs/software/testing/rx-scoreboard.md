@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Using the RX Scoreboard debug feature to visualize packet reception per cycle.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)

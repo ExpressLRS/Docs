@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Glossary of ExpressLRS terms, abbreviations, and technical concepts.
 ---
 
 ![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)

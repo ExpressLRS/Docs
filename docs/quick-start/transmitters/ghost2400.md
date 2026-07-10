@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the ImmersionRC Ghost 2.4GHz STM32-based TX module via STLink.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

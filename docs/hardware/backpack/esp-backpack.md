@@ -27,7 +27,9 @@ An off-the-shelf VRX Backpack has also appeared from Happymodel: the [EP82](http
 See the tables below for a partial list of supported devices:
 
 !!! info "Backpack Requirement"
-    All new ExpressLRS TX releases after October 10th, 2023 require a TX backpack to be integrated into the hardware
+    All new ExpressLRS TX releases after October 10th, 2023 require a TX backpack to be integrated into the hardware.
+
+    The list below is not definitive nor exhaustive. 
 
 ### Supported TX-Backpack Targets
 
@@ -60,6 +62,11 @@ See the tables below for a partial list of supported devices:
 | QuadKopters 2.4 TX | ❌ Not compatible  |
 | SIYI FM30 | ❌ Not compatible  |
 | DIY TX  | ✔️ Fully supported with the addition of an ESP8285  |
+
+!!! info "Receiving Backpacks"
+    ALL ESP-based ExpressLRS Receivers can be converted into Receiving Backpacks.
+
+    The list below is not definitive nor exhaustive.
 
 ### Supported VRX-Backpack Targets
 

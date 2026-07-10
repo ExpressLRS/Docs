@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for Jumper T-Pro internal 2.4GHz and 900MHz transmitters.
 ---
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)

@@ -215,7 +215,7 @@ RDP
 retransmission
 RFMD
 RGB
-RQLY
+RQly
 RSNR
 RSS
 RSSI
@@ -247,6 +247,7 @@ SMD
 SNR
 SPH
 SPI
+Schalonsus
 SPRacing
 SRXL
 SSID
@@ -348,6 +349,8 @@ brushless
 btn
 bugfixes
 callout
+chipset
+chipsets
 commanderguy
 comms
 config
@@ -419,6 +422,9 @@ octocat
 omnidirectional
 ong
 openocd
+OpenOCD
+fpv
+heggy
 overvoltage
 pF
 params
@@ -450,6 +456,7 @@ spammy
 stl
 stlink
 th
+toc
 toolchain
 tx
 txbp
@@ -568,3 +575,4 @@ injunctive
 counsel
 Rotorflight
 X-Band
+heggy_fpv

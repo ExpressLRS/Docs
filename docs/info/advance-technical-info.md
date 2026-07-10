@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Technical debugging reference for LUA status codes and debug logging defines.
 ---
 
 ![Info Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/information.png)

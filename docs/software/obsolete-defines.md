@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Archive of removed or superseded firmware defines with removal versions and replacements.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)

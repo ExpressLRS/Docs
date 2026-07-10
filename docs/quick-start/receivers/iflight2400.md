@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for iFlight 2.4GHz Dipole and SMD receiver variants.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

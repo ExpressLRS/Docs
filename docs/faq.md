@@ -10,7 +10,7 @@ hide:
 ## <span class="custom-heading" data-id="1">Why ExpressLRS?</span>
 
 ??? faq "Why ExpressLRS?"
-    ExpressLRS is a high-performance, open-source radio control protocol built from the ground up to be an extremely fast (<strong>E</strong>xpress), extremely sensitive (<strong>L</strong>ong <strong>R</strong>ange) <strong>S</strong>ystem. ELRS uses Semtech `SX12xx` LoRa transceivers and a lightweight, highly optimized over-the-air (OTA) protocol to provide superior performance compared to legacy RC links. While ExpressLRS started with DIY and repurposed hardware, a large number of manufacturers are now producing high-quality, low-cost transmitters and receivers to make it easy for anyone to get started!
+    ExpressLRS is a high-performance, open-source radio control protocol built from the ground up to be an extremely fast (<strong>E</strong>xpress), extremely sensitive (<strong>L</strong>ong <strong>R</strong>ange) <strong>S</strong>ystem. ELRS uses Semtech `SX12xx` or `LR1121` transceivers and a lightweight, highly optimized over-the-air (OTA) protocol to provide superior performance compared to legacy RC links. While ExpressLRS started with DIY and repurposed hardware, a large number of manufacturers are now producing high-quality, low-cost transmitters and receivers to make it easy for anyone to get started!
 ## <span class="custom-heading" data-id="2">How does ExpressLRS compare to other systems?</span>
 
 ??? faq "How does ExpressLRS compare to other systems?"
@@ -65,9 +65,9 @@ hide:
 ??? faq "Is my binding phrase a secret?"
     No, just like what channel your VTX is on is not a secret. If everyone kept their VTX channel a secret, the chances of you blasting someone out of the sky accidentally is high. The binding phrase is *not* used for security, it is used to prevent collisions. Specifically, the binding phrase is hashed and used to seed the random number generator that determines the frequency hopping pattern. Thus, each binding phrase results in a unique hopping pattern, minimizing the likelihood of collisions with other users.  To provide the best chance of not interfering with other pilots and them not interfering with you, be sure you're not using the same dumb bind phrase as someone else. Express your style with a hilarious or saucy bind phrase.
 
-## <span class="custom-heading" data-id="10">What does RQLY, TQLY, RSSI x2, SNR x2 mean?</span>
+## <span class="custom-heading" data-id="10">What does RQly, TQLY, RSSI x2, SNR x2 mean?</span>
 
-??? faq "What do RQLY, TQLY, RSSI x2, SNR x2 mean?"
+??? faq "What do RQly, TQLY, RSSI x2, SNR x2 mean?"
 
     | Datapoint| Description   |   Range | Info |
     |------|-----------------------------------------|---|---|

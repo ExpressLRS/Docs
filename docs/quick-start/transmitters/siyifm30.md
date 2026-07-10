@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the SIYI FM30 STM32-based TX module via STLink.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

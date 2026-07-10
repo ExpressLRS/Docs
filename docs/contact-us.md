@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Contact ExpressLRS for inquiries, partnerships, or community support.
 hide:
   - navigation
 ---

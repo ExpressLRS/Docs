@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the Happymodel ES900TX 900MHz TX module via WiFi, UART, or EdgeTX passthrough.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for Jumper TLite V2 internal 2.4GHz and 900MHz transmitters.
 ---
 
 <figure markdown>

@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the Jumper R9 Mini STM32-based 900MHz receiver via STLink.
 ---
 
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-hardware/master/img/quick-start.png)

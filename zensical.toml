@@ -12,12 +12,13 @@ copyright = "Copyright &copy; 2018–2026 ExpressLRS LLC"
 # Repository — used by content.action.edit / content.action.view
 repo_name = "ExpressLRS/ExpressLRS"
 repo_url  = "https://github.com/ExpressLRS/ExpressLRS/releases/"
-edit_uri  = "https://github.com/ExpressLRS/Docs/tree/master/docs/"
+edit_uri  = "https://github.com/ExpressLRS/Docs/edit/master/docs/"
 
 extra_css = [
     "assets/stylesheets/main.css",
     "assets/stylesheets/colors.css",
     "assets/stylesheets/home.css",
+    "assets/stylesheets/product-finder.css",
 ]
 
 extra_javascript = [
@@ -34,6 +35,7 @@ extra_javascript = [
 # ---------------------------------------------------------------------------
 nav = [
     { "Home" = "index.md" },
+    { "Product Finder" = "product-finder.md" },
     { "Quick Start" = [
         { "Getting Started" = "quick-start/getting-started.md" },
         { "Installing the Configurator" = "quick-start/installing-configurator.md" },
@@ -207,7 +209,7 @@ features = [
     "navigation.tabs",
     "navigation.footer",
     "navigation.tracking",
-    "navigation.indexes",
+    "navigation.path",
     "search.highlight",
     "search.suggest",
     "toc.follow",
@@ -276,8 +278,13 @@ name = "Send a Donation!"
 #   * git-revision-date-localized
 #   * git-committers
 #   * redirects.yml         (mkdocs-redirects redirect_maps — see redirects.yml)
+#   * social cards plugin  (cards_layout_options background #5f8bf3)
 #   * Google Analytics + cookie consent banner (project.extra.analytics / .consent)
 #   * overrides/hooks/blog_posts.py (injects recent posts into homepage)
+#   * overrides/hooks/llms_txt.py (generates llms.txt / llms-full.txt)
+#   * overrides/hooks/product_catalog.py + overrides/product-finder.html
+#     (product finder page — nav entry + CSS are wired up, but the page is
+#     rendered by an mkdocs hook that Zensical doesn't run yet)
 #   * pymdownx markdown extensions — Zensical's markdown_extensions surface is
 #     not yet documented; verify before re-enabling. Previous list:
 #       admonition, abbr, attr_list, def_list, footnotes, meta, md_in_html,

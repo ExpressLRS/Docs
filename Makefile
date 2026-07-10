@@ -1,13 +1,13 @@
 # Host-only convenience wrappers around `docker compose`.
 # CI invokes `docker compose` directly and never calls `make`.
 
-.PHONY: install build run serve site shell
+.PHONY: install build run serve site shell spellcheck
 
 install:
 	pip install "zensical==0.0.32"
 
 build:
-	docker compose build
+	zensical build --clean
 
 run: serve
 
@@ -19,3 +19,6 @@ site:
 
 shell:
 	docker compose run --rm --entrypoint sh docs
+
+spellcheck:
+	pyspelling --config .spellcheck.yml --spellchecker aspell --name Markdown

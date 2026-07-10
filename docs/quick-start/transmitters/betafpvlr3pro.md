@@ -1,5 +1,6 @@
 ---
 template: main.html
+description: Flashing guide for the BetaFPV LR3 Pro internal 2.4GHz transmitter.
 ---
 
 ![Setup-Banner](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png)
