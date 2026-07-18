@@ -2453,6 +2453,21 @@
     "diversity_type": "single"
   },
   {
+    "id": "oxbot:tx_2400:r1",
+    "vendor": "oxbot",
+    "vendor_name": "Oxbot",
+    "product_name": "Oxbot R1 2.4GHz TX",
+    "category": "tx",
+    "device_class": "radio_handset",
+    "radio_band": "2400",
+    "firmware_target": "Unified_ESP32_2400_TX",
+    "platform": "esp32",
+    "tx_type": "internal",
+    "min_power_value": 10,
+    "max_power_value": 500,
+    "diversity_type": "single"
+  },
+  {
     "id": "quadkopters:tx_2400:jr",
     "vendor": "quadkopters",
     "vendor_name": "QuadKopters",
