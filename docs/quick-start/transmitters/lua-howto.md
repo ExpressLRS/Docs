@@ -503,6 +503,10 @@ For more information, see [PWM Receivers](../../hardware/pwm-receivers.md) page.
 This option is available on ExpressLRS 3.4.0 and newer. See the details [here](https://github.com/ExpressLRS/ExpressLRS/pull/2542).
 
 * `Returnable` - Introduced in ExpressLRS 3.5.0. It is used to allow models to be safely loaned from a fleet if unbound OTA. A Binding Phrase must be set for this to work properly. see [PR 2744](https://github.com/ExpressLRS/ExpressLRS/pull/2744) for details.
+* `Administered` - Introduced in ExpressLRS 3.5.4. The receiver will not enter Bind Mode by any method. The `Enter Bind Mode` command, the bind button action, and the three power-cycle method all have no effect. Binding information can only be changed from the receiver WebUI. This is intended for a fleet where the binding must not be changed at the field.
+
+!!! warning "Warning"
+	A receiver set to `Administered` will not enter Bind Mode even when it is not bound to a transmitter. The WebUI is the only way to change its binding. Make sure you can reach the WebUI, either through auto WiFi mode or a configured Home WiFi network, before you select `Administered`. If you cannot reach the WebUI you must re-flash the receiver over UART to recover it.
 
 ### Enter Bind Mode command
 
