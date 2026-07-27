@@ -2177,6 +2177,21 @@
     "diversity_type": "single"
   },
   {
+    "id": "jumper:tx_900:t-pro",
+    "vendor": "jumper",
+    "vendor_name": "Jumper",
+    "product_name": "Jumper AION T-Pro 900M TX",
+    "category": "tx",
+    "device_class": "radio_handset",
+    "radio_band": "900",
+    "firmware_target": "Unified_ESP32_900_TX",
+    "platform": "esp32",
+    "tx_type": "internal",
+    "min_power_value": 250,
+    "max_power_value": 1000,
+    "diversity_type": "single"
+  },
+  {
     "id": "jumper:tx_2400:t-pros",
     "vendor": "jumper",
     "vendor_name": "Jumper",
@@ -2188,6 +2203,21 @@
     "platform": "esp32",
     "tx_type": "internal",
     "min_power_value": 25,
+    "max_power_value": 1000,
+    "diversity_type": "single"
+  },
+  {
+    "id": "jumper:tx_900:t-pros",
+    "vendor": "jumper",
+    "vendor_name": "Jumper",
+    "product_name": "Jumper AION T-ProS 900M TX",
+    "category": "tx",
+    "device_class": "radio_handset",
+    "radio_band": "900",
+    "firmware_target": "Unified_ESP32_900_TX",
+    "platform": "esp32",
+    "tx_type": "internal",
+    "min_power_value": 250,
     "max_power_value": 1000,
     "diversity_type": "single"
   },
@@ -2205,36 +2235,6 @@
     "min_power_value": 10,
     "max_power_value": 500,
     "diversity_type": "gemini"
-  },
-  {
-    "id": "jumper:tx_900:t-pro",
-    "vendor": "jumper",
-    "vendor_name": "Jumper",
-    "product_name": "Jumper T-Pro 900M TX",
-    "category": "tx",
-    "device_class": "radio_handset",
-    "radio_band": "900",
-    "firmware_target": "Unified_ESP32_900_TX",
-    "platform": "esp32",
-    "tx_type": "internal",
-    "min_power_value": 250,
-    "max_power_value": 1000,
-    "diversity_type": "single"
-  },
-  {
-    "id": "jumper:tx_900:t-pros",
-    "vendor": "jumper",
-    "vendor_name": "Jumper",
-    "product_name": "Jumper T-ProS 900M TX",
-    "category": "tx",
-    "device_class": "radio_handset",
-    "radio_band": "900",
-    "firmware_target": "Unified_ESP32_900_TX",
-    "platform": "esp32",
-    "tx_type": "internal",
-    "min_power_value": 250,
-    "max_power_value": 1000,
-    "diversity_type": "single"
   },
   {
     "id": "matek:rx_2400:r24d",
