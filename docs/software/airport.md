@@ -26,6 +26,17 @@ A TX module can connect via USB to a laptop, and RX modules (or those flashed us
 * **ExpressLRS TX module**: A dedicated external TX module is required for the data link. The TX should ideally have an external USB port to make it easy to attach to a computer (assuming a computer is the desired endpoint for the data link). It is also favorable to use a module with a screen and a 5-way button, which makes packet rate and power selection easier. The TX should use an ESP-based microcontroller (for access to the WebUI).
 * **ExpressLRS RX**: Any ExpressLRS ESP-based receiver is compatible with AirPort (technically STM-based receivers can work too, but it will be harder to set up and is therefore not covered in this guide). Receivers with higher telemetry power output (i.e. 100mW telemetry power) will provide better results.
 
+!!! warning "DIP switches and jumper pins"
+    Some TX modules have DIP switches or jumper pins that select how the USB port is connected to the components inside the module. The Happymodel ES24TX and ES900TX families and the BetaFPV Micro modules are examples.
+
+    AirPort sends and receives its serial data over the USB port of the TX module, so these modules must have the USB port routed to the main microcontroller. This is the same position that is used to flash the TX module over USB/UART, and it is **not** the `Normal Operation` position.
+
+    If the switches are in the wrong position, the COM port will either not appear on the computer or will appear but carry no data. The link itself will look healthy, so check the switches before you look for a configuration fault.
+
+    The correct position is different on each module, so use the USB/UART flashing section of the guide for your module. See [Typical Updating Steps](../quick-start/transmitters/updating.md) or the page for your specific module.
+
+    Return the switches to `Normal Operation` when you have finished with AirPort. The module will not drive the Backpack correctly if they are left in the flashing position.
+
 !!! tip "Frequency band" 
       If you plan to use two side-by-side ELRS links on the craft (one for RC and one for telemetry), it is HIGHLY recommended to use different frequencies for each link. For example, you will see good results with RC on 2.4GHz and AirPort on 900MHz. The range will be severely reduced if both RC and AirPort are on the same frequency band.
 
