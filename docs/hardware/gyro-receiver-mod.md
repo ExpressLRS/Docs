@@ -64,3 +64,10 @@ Any receiver based on the ESP32 chip, with an accessible I2C or SPI bus. Example
 === "Serial console"
 
     TK
+
+## Troubleshooting
+
+TK
+
+??? faq "If the gyro is enabled, why is status not OK?"
+    TK
