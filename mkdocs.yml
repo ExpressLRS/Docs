@@ -318,14 +318,14 @@ nav:
           - RX Testing: software/testing/rx-scoreboard.md
           - Unit Testing: software/testing/unit-testing.md
   - Hardware:
-      - Hardware Selection: hardware/hardware-selection.md
-      - R9M Inverter Mod: hardware/inverter-mod.md
-      - R9M Fan Mod: hardware/fan-mod.md
-      - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
       - Crystal Oscillator (XO) Frequency Error: hardware/crystal-frequency-error.md
-      - SMD Antenna: hardware/smd-antenna.md
+      - Hardware Selection: hardware/hardware-selection.md
       - PWM Receivers: hardware/pwm-receivers.md
+      - R9M Fan Mod: hardware/fan-mod.md
+      - R9M Inverter Mod: hardware/inverter-mod.md
+      - SMD Antenna: hardware/smd-antenna.md
       - SPI Receivers: hardware/spi-receivers.md
+      - Troubleshooting the X9D(+): hardware/x9d-troubleshooting.md
       - ESP Backpacks:
           - Backpack Info: hardware/backpack/esp-backpack.md
           - Tx Backpack Setup: hardware/backpack/backpack-tx-setup.md
