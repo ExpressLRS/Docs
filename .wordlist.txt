@@ -131,6 +131,7 @@ Hotspot
 IPEX
 ImmersionRC
 ImpulseRC
+IMU
 Init
 Ironman
 JHEMCU
