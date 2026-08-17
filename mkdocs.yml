@@ -319,6 +319,7 @@ nav:
           - Unit Testing: software/testing/unit-testing.md
   - Hardware:
       - Crystal Oscillator (XO) Frequency Error: hardware/crystal-frequency-error.md
+      - Gyro: hardware/gyro.md
       - Hardware Selection: hardware/hardware-selection.md
       - PWM Receivers: hardware/pwm-receivers.md
       - R9M Fan Mod: hardware/fan-mod.md
