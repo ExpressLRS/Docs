@@ -303,6 +303,7 @@ nav:
           - AirPort: software/airport.md
           - Dynamic Transmit Power: software/dynamic-transmit-power.md
           - Gemini: software/gemini.md
+          - Gyro: software/gyro.md
           - Loan Model: software/loan-model.md
           - MAVLink: software/mavlink.md
           - MFD Crossbow Tracker Integration: software/mfd-crossbow.md

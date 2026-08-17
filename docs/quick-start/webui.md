@@ -312,6 +312,10 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
     ![Import/Export Tab](../assets/images/webui/import-export.png)
     </figure>
 
+    ### Gyro Tab
+
+    This tab allows users to configure receivers with an _inertial measurement unit_ (IMU) / gyro to stabilize aircraft wihout a flight controller. See [Gyro](../software/gyro.md) for more information.
+
     ### WiFi Tab
 
     This tab lets you change the device' WiFi network connectivity and how it will behave when it is in WiFi mode.
