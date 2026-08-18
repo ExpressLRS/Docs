@@ -241,7 +241,7 @@ When stick priority is set to `60%`, the gyro gain is still applied fully when t
 
 #### Gains
 
-Define how much of the maxiumum travel the gyro should use. With higher gains, the gyro deflects the surfaces more, up to `100%` of their maximum travel.
+Define how much of the maximum travel the gyro should use. With higher gains, the gyro deflects the surfaces more, up to `100%` of their maximum travel.
 
 ### Envelope Mode
 
@@ -265,7 +265,7 @@ The maximum pitching and banking angles, in degrees.
 
 #### Gains
 
-Define how much of the maxiumum travel the gyro should use. With higher gains, the gyro will bring the aircraft back within the pitching and banking limits more agressively. A value of `35%` is a good starting point.
+Define how much of the maximum travel the gyro should use. With higher gains, the gyro will bring the aircraft back within the pitching and banking limits more aggressively. A value of `35%` is a good starting point.
 
 ### Auto-level Mode
 
@@ -275,7 +275,7 @@ The gyro keeps the aircraft flying level when the sticks are centered. It also p
 
 Move the stick 50% of the maximum travel, the aircraft will bank/pitch 50% of the **angle limit**.
 
-Example: if **limit roll** is set to `70deg`, and the aileron stick is helf way out, the aircraft will fly at a `35deg` banking angle.
+Example: if **limit roll** is set to `70deg`, and the aileron stick is half way out, the aircraft will fly at a `35deg` banking angle.
 
 #### Use Rate
 
@@ -293,4 +293,4 @@ The maximum pitching and banking angles, in degrees.
 
 #### Gains
 
-Define how much of the maxiumum travel the gyro should use. With higher gains, the gyro will bring the aircraft to level more agressively when the sticks are released. A value of `35%` is a good starting point.
+Define how much of the maximum travel the gyro should use. With higher gains, the gyro will bring the aircraft to level more aggressively when the sticks are released. A value of `35%` is a good starting point.
