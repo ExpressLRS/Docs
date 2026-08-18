@@ -20,14 +20,32 @@ This guide explains how to attach a DIY board to an existing receiver.
 
 ### Receivers
 
-Any receiver based on the ESP32 chip, with an accessible I2C or SPI bus. Example: BetaFPV Super-P, RadioMaster ER6 or ER8 (via PWM pins).
+Any supported receiver based on the ESP32 chip, with an accessible I2C or SPI bus. Example: BetaFPV Super-P, RadioMaster ER6, ER8, even ER6GV (via PWM pins).
+
+??? Info "Finding supported ESP32 receivers. (click/tap to expand)"
+    In the [official targets list](https://github.com/ExpressLRS/Targets/blob/master/targets.json), the field `"platform": "esp32"` indicates that the receiver is based on an ESP32 chip.
+
+    If the receiver has PWM pins or multiple UART pads, those may be remapped as I2C or SPI pins.
+
+## Receiver configuration
+
+=== "WebUI"
+
+    TK
+
+=== "Target file"
+
+    TK
 
 ## Wiring
 
 
 === "I2C"
 
-    TK
+    - The `SCL` pad on the <abbr title="Inertial Measurement Unit">IMU</abbr> board must be connected to the `SCL` pin on the receiver.
+    - The `SDA` pad on the <abbr title="Inertial Measurement Unit">IMU</abbr> board must be connected to the `SDA` pin on the receiver.
+    - The `VCC` pad on the <abbr title="Inertial Measurement Unit">IMU</abbr> board must be connected to a `+` pin on the receiver.
+    - The `GND` pad on the <abbr title="Inertial Measurement Unit">IMU</abbr> board must be connected to a `-` pin on the receiver.
 
 === "SPI"
 
@@ -45,17 +63,11 @@ Any receiver based on the ESP32 chip, with an accessible I2C or SPI bus. Example
   <figcaption>RadioMaster ER6GV with MPU6050 over I2C via PWM pins</figcaption>
 </figure>
 
-## Receiver configuration
+## Testing
 
 === "WebUI"
 
     TK
-
-=== "Target file"
-
-    TK
-
-## Testing
 
 === "Lua script"
 

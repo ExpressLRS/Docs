@@ -314,7 +314,7 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
 
     ### Gyro Tab
 
-    This tab allows users to configure receivers with an _inertial measurement unit_ (IMU) / gyro to stabilize aircraft wihout a flight controller. See [Gyro](../software/gyro.md) for more information.
+    This tab allows users to configure receivers with an _inertial measurement unit_ (IMU) / gyro to stabilize aircraft without a flight controller. See [Gyro](../software/gyro.md) for more information.
 
     ### WiFi Tab
 
