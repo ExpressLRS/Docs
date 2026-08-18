@@ -73,6 +73,7 @@ EL
 ELRS
 EMAX
 EP
+ER6GV
 ESC
 ESCs
 ESPnow
@@ -153,6 +154,7 @@ LinkStats
 LinkFlow
 Linux
 LoRa
+LSM6Dxx
 Lua
 MAVLink
 MCU
@@ -171,6 +173,7 @@ Microbeast
 MK
 Mobula
 ModelMatch
+MPU6050
 Multicopter
 Multicopters
 MultiGP
