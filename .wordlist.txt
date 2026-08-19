@@ -57,6 +57,7 @@ DMX
 DSHOT
 DVDA
 DX
+Dxx
 DaBit
 Denks
 Dev
@@ -79,6 +80,7 @@ ESCs
 ESPnow
 ESPxxxx
 ETX
+Elevon
 EdgeTX
 Espressif
 ExpressLRS
@@ -114,6 +116,7 @@ GND
 GPIO
 GSoD
 Graupner
+GV
 GX
 HD
 HDZero
@@ -163,6 +166,8 @@ MDL
 MFD
 MHz
 MOSFET
+MPU
+MPU6050
 MSP
 MX
 MacOS
@@ -173,7 +178,6 @@ Microbeast
 MK
 Mobula
 ModelMatch
-MPU6050
 Multicopter
 Multicopters
 MultiGP
