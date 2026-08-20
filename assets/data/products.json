@@ -1368,6 +1368,20 @@
     "diversity_type": "single"
   },
   {
+    "id": "geprc:rx_900:nanov3",
+    "vendor": "geprc",
+    "vendor_name": "GEPRC",
+    "product_name": "GEPRC Nano 900MHz V3 RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "900",
+    "firmware_target": "Unified_ESP32C3_LR1121_RX",
+    "platform": "esp32-c3",
+    "min_power_value": 10,
+    "max_power_value": 100,
+    "diversity_type": "single"
+  },
+  {
     "id": "geprc:rx_2400:nano-td",
     "vendor": "geprc",
     "vendor_name": "GEPRC",
@@ -1879,6 +1893,21 @@
     "min_power_value": 10,
     "max_power_value": 1000,
     "diversity_type": "single"
+  },
+  {
+    "id": "helloradio:tx_dual:v15",
+    "vendor": "helloradio",
+    "vendor_name": "HelloRadio",
+    "product_name": "HelloRadio IntV15 2.4/900 TX",
+    "category": "tx",
+    "device_class": "radio_handset",
+    "radio_band": "dual",
+    "firmware_target": "Unified_ESP32_LR1121_TX",
+    "platform": "esp32",
+    "tx_type": "internal",
+    "min_power_value": 10,
+    "max_power_value": 1000,
+    "diversity_type": "gemini"
   },
   {
     "id": "holybro:rx_dual:zephyr",
@@ -2842,6 +2871,21 @@
     "diversity_type": "gemini"
   },
   {
+    "id": "radiomaster:tx_2400:gx15",
+    "vendor": "radiomaster",
+    "vendor_name": "RadioMaster",
+    "product_name": "RadioMaster GX15 Gemini Internal 2.4GHz TX",
+    "category": "tx",
+    "device_class": "radio_handset",
+    "radio_band": "2400",
+    "firmware_target": "Unified_ESP32_2400_TX",
+    "platform": "esp32",
+    "tx_type": "internal",
+    "min_power_value": 10,
+    "max_power_value": 250,
+    "diversity_type": "gemini"
+  },
+  {
     "id": "radiomaster:tx_2400:mt12",
     "vendor": "radiomaster",
     "vendor_name": "RadioMaster",
@@ -3024,7 +3068,7 @@
     "id": "radiomaster:tx_2400:tx12",
     "vendor": "radiomaster",
     "vendor_name": "RadioMaster",
-    "product_name": "RadioMaster TX12 Internal 2.4GHz TX",
+    "product_name": "RadioMaster TX12 MK2 Internal 2.4GHz TX",
     "category": "tx",
     "device_class": "radio_handset",
     "radio_band": "2400",
@@ -3054,7 +3098,7 @@
     "id": "radiomaster:tx_2400:tx16s",
     "vendor": "radiomaster",
     "vendor_name": "RadioMaster",
-    "product_name": "RadioMaster TX16S Internal 2.4GHz TX",
+    "product_name": "RadioMaster TX16S MK2 Internal 2.4GHz TX",
     "category": "tx",
     "device_class": "radio_handset",
     "radio_band": "2400",
@@ -3515,6 +3559,20 @@
     "platform": "esp32-c3",
     "min_power_value": 10,
     "max_power_value": 100,
+    "diversity_type": "single"
+  },
+  {
+    "id": "upoint:rx_900:upoint_900_nano_rx",
+    "vendor": "upoint",
+    "vendor_name": "UPOINT",
+    "product_name": "UPOINT Nano 900M RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "900",
+    "firmware_target": "Unified_ESP32C3_900_RX",
+    "platform": "esp32-c3",
+    "min_power_value": 10,
+    "max_power_value": 50,
     "diversity_type": "single"
   },
   {

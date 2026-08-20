@@ -105,7 +105,7 @@
 - [Sentinel Tracker Integration](https://www.expresslrs.org/software/backpack-telemetry/): ExpressLRS Backpack can forward telemetry data to third party systems via ESPNOW.
 - [Serial VTX](https://www.expresslrs.org/software/serialvtx/): Serial VTX Control
 - [Team Racing](https://www.expresslrs.org/software/teamracing/): TeamRacing allows selection between multiple connected models, failsafing all unselected models.
-- [Trainer (Head Tracking) Input](https://www.expresslrs.org/software/trainer-input/): ExpressLRS Bi-directional MAVLink support
+- [Trainer (Head Tracking) Input](https://www.expresslrs.org/software/trainer-input/): Receive channel data from external sources.
 - [CRC Testing](https://www.expresslrs.org/software/testing/crc-testing/): CRC-14 bit error detection stress test results for the ExpressLRS packet protocol.
 - [RX Testing](https://www.expresslrs.org/software/testing/rx-scoreboard/): Using the RX Scoreboard debug feature to visualize packet reception per cycle.
 - [Unit Testing](https://www.expresslrs.org/software/testing/unit-testing/): Running ExpressLRS unit tests with PlatformIO and the native platform.

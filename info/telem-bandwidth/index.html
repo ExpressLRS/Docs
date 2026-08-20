@@ -24,8 +24,8 @@ int main(void)
   for (uint8_t rate=RATE_500HZ; rate&lt;RATE_4HZ; ++rate)
   {
     uint32_t hz = RateEnumToHz((expresslrs_RFrates_e)rate);
-    printf(&quot;| Air Rate | Telem Ratio | Telem Interval (ms) | Packets/second | Bandwidth (no Burst) | Bandwidth (Burst)\n&quot;);
-    if (rate == RATE_500HZ) printf(&quot;|---|---|---|---|---|---|\n&quot;);
+    printf("| Air Rate | Telem Ratio | Telem Interval (ms) | Packets/second | Bandwidth (no Burst) | Bandwidth (Burst)\n");
+    if (rate == RATE_500HZ) printf("|---|---|---|---|---|---|\n");
     for (uint8_t ratio=TLM_RATIO_1_128; ratio&lt;TLM_RATIO_ENUM_MAX; ++ratio)
     {
       uint32_t tlmRatio = TLMratioEnumToValue((expresslrs_tlm_ratio_e)ratio);
@@ -38,7 +38,7 @@ int main(void)
       else
         tlmBurst = 1;
 
-      printf(&quot;%u | 1:%u | %u | %.1f | %u | %.0fbps | %.0fbps\n&quot;,
+      printf("%u | 1:%u | %u | %.1f | %u | %.0fbps | %.0fbps\n",
         hz, tlmRatio, telemInterval, telemPps, tlmBurst, telemPps*1/2*5*8,
         5*8*telemPps*tlmBurst/(tlmBurst+1));
     }
