@@ -263,6 +263,7 @@ LNAs
 LoRa
 LQ
 LQI
+LSM
 LSM6Dxx
 lua
 Lua
@@ -538,6 +539,7 @@ USPTO
 V14
 V16
 Vantac
+vario
 Vario
 Vario
 VBAT
