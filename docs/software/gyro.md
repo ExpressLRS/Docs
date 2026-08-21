@@ -69,18 +69,11 @@ If your gyro is too sensitive even when the **gyro gain** is low, it could be us
     - Slow aircraft, on the contrary, might require a higher multiplier: `1.5x` or `2x`
     - For testing on the bench, you might need to increase the **rate gain multiplier** in order to see the surfaces move! (`2x`)
 
-### Gyro mode switch
+### Gyro mode switch map
 
 Define which gyro [**modes**](#gyro-mode-tuning) are activated by the **gyro mode** channel.
 
-The gyro mode switch can be defined as a 2, 3, 5 or 6-position switch in the **gyro mode** channel settings (see [Channel functions](#channel-functions)). A typical three-position switch will use `-100`,`0`,`+100` channel values.
-
-??? tip "EdgeTX: Want a custom number of positions? (click/tap to expand)"
-    Two, three and six positions are well covered by typical EdgeTX hardware.
-
-    In addition, using EdgeTX _special functions_ allows to combine multiple switches to operate the **gyro mode** channel.
-
-    Example with 4 positions: use the 5-position switch type, and set `-50=Off`, `0=Rate`, `+50=Envelope`, `+100=Auto-Level` in the gyro. On your transmitter, a 3-pos switch with a _weight_ of `50%` will take care of the first three. To activate `Auto-Level`, create a _special function_ on another switch (ex. `SH`) to override the **gyro mode** channel to `+100`.
+The number of positions of the gyro mode switch can be defined in the **gyro mode** channel settings (see [Channel functions](#channel-functions)).
 
 === "WebUI"
 
@@ -222,14 +215,14 @@ Allows to confirm that the gyro [**orientation**](#orientation) settings, and th
 - **Master**: when multiple channels are assigned the same _function_, the value of the **master** channel will be taken into account by the gyro to calculate the output.
 - **Invert**: whether the output of the channel should be inverted.
 - **Min/Mid/Max**: center value and limits of the PWM output (in milliseconds).
-- Gyro mode **switch type**: choose between a 2, 3, 5 or 6-position gyro mode switch.
+- Gyro mode **switch type**: choose between a 2, 3, 4, 5, and 6-position gyro mode switch.
 
 #### Gyro functions
 
 - **Aileron**, **Elevator**, **Rudder** outputs
 - **Elevon** output (`Elevon`, `Elevon R`): Elevator + Aileron mix (left and right)
 - **V-Tail** output (`V-Tail`, `V-Tail R`): Elevator + Rudder mix (left and right)
-- **Gyro Mode**: incoming channel that commands the [**gyro mode** switch](#gyro-mode-switch).
+- **Gyro Mode**: incoming channel that commands the [**gyro mode** switch](#gyro-mode-switch-map).
 - **Gyro Gain**: incoming channel that defines the **gyro gain** value.
 
 ??? Tip "Elevon/V-Tail configuration advice (click/tap to expand)"
@@ -359,3 +352,7 @@ Combines Hover with **Rate mode** behavior for wind rejection.
 #### Gains
 
 Define how much of the maximum output travel the gyro should use. With higher gains, the gyro will bring the aircraft to hover more aggressively when the sticks are released. A value of `35%` is a good starting point.
+
+## Advanced gyro mode tuning
+
+TK
