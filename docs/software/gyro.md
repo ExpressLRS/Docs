@@ -7,7 +7,7 @@ description: Use an ExpressLRS receiver as a stabilizer for aircraft without a f
 
 ## Overview
 
-ExpressLRS receivers that are equipped with an _inertial measurement unit_ (IMU) / gyro can provide stabilization for aircraft without a flight controller. A DIY gyro can also be added to some receivers, see [Gyro Receiver Mod](../hardware/gyro-receiver-mod.md) for details.
+ExpressLRS receivers that are equipped with an _inertial measurement unit_ (IMU) / gyro can provide stabilization for aircraft without a flight controller. A <abbr title="Do It Yourself">DIY</abbr> gyro can also be added to some receivers, see [Gyro Receiver Mod](../hardware/gyro-receiver-mod.md) for details.
 
 !!! Note
     Use the ExpressLRS Product Finder to list supported receivers with a gyro! https://www.expresslrs.org/product-finder/?search=gyro&classification=receiver
@@ -65,19 +65,22 @@ If your gyro is too sensitive even when the **gyro gain** is low, it could be us
 !!! Note
     Always start testing with a low **gyro gain**.
 
-    - <abbr title="Electric Ducted Fan">EDF</abbr> and fast planes can benefit from a low **rate gain multiplier**: `0.5x`
-    - Slow planes, on the contrary, might require a higher multiplier: `1.5x` or `2x`
+    - <abbr title="Electric Ducted Fan">EDF</abbr> and fast aircraft can benefit from a low **rate gain multiplier**: `0.5x`
+    - Slow aircraft, on the contrary, might require a higher multiplier: `1.5x` or `2x`
     - For testing on the bench, you might need to increase the **rate gain multiplier** in order to see the surfaces move! (`2x`)
 
-### 5-position switch map
+### Gyro mode switch
 
-Define which gyro [**modes**](#gyro-mode-tuning) are activated by the **gyro mode** channel (see [Channel functions](#channel-functions)). A typical three-position switch will use `-100`,`0`,`+100`.
+Define which gyro [**modes**](#gyro-mode-tuning) are activated by the **gyro mode** channel.
 
+The gyro mode switch can be defined as a 2, 3, 5 or 6-position switch in the **gyro mode** channel settings (see [Channel functions](#channel-functions)). A typical three-position switch will use `-100`,`0`,`+100` channel values.
 
-??? tip "EdgeTX: Want more than 3 positions? (click/tap to expand)"
-    If you want all 5 positions, setup the **gyro mode** channel with a 3-pos switch to a _weight_ of `50%`. That will give you `-50`,`0`,`+50`.  Use _special functions_ to activate the `-100` or `+100` values as needed.
+??? tip "EdgeTX: Want a custom number of positions? (click/tap to expand)"
+    Two, three and six positions are well covered by typical EdgeTX hardware.
 
-    Example with 4 positions: set `-50=Off`, `0=Rate`, `+50=Envelope`, `+100=Auto-Level`. Your 3-pos witch will take care of the first three. To activate `Auto-Level`, create a _special function_ on another switch (ex. `SH`) to override the **gyro mode** channel to `+100`.
+    In addition, using EdgeTX _special functions_ allows to combine multiple switches to operate the **gyro mode** channel.
+
+    Example with 4 positions: use the 5-position switch type, and set `-50=Off`, `0=Rate`, `+50=Envelope`, `+100=Auto-Level` in the gyro. On your transmitter, a 3-pos switch with a _weight_ of `50%` will take care of the first three. To activate `Auto-Level`, create a _special function_ on another switch (ex. `SH`) to override the **gyro mode** channel to `+100`.
 
 === "WebUI"
 
@@ -117,7 +120,9 @@ Indicates whether the receiver is connected to the transmitter.
     The [**endpoint calibration**](#endpoint-calibration) wizard requires a connection to the transmitter.
 
 !!! Info
-    ExpressLRS versions that provide Gyro support allow the receiver to connect to the transmitter while in WiFi mode. While in WiFi mode, turn on your transmitter as usual for the receiver to connect.
+    ExpressLRS versions that provide Gyro support allow the receiver to start the WiFi while connected to the transmitter.
+
+    While the receiver is connected to the transmitter, open the ExpressLRS Lua script, in `Other devices` select your receiver. Then `Enable Web Config` to start the Wifi, and access the WebUI as you usually do.
 
 ### Orientation settings
 
@@ -217,13 +222,14 @@ Allows to confirm that the gyro [**orientation**](#orientation) settings, and th
 - **Master**: when multiple channels are assigned the same _function_, the value of the **master** channel will be taken into account by the gyro to calculate the output.
 - **Invert**: whether the output of the channel should be inverted.
 - **Min/Mid/Max**: center value and limits of the PWM output (in milliseconds).
+- Gyro mode **switch type**: choose between a 2, 3, 5 or 6-position gyro mode switch.
 
 #### Gyro functions
 
 - **Aileron**, **Elevator**, **Rudder** outputs
 - **Elevon** output (`Elevon`, `Elevon R`): Elevator + Aileron mix (left and right)
 - **V-Tail** output (`V-Tail`, `V-Tail R`): Elevator + Rudder mix (left and right)
-- **Gyro Mode**: incoming channel that commands the [**gyro mode** switch](#5-position-switch-map).
+- **Gyro Mode**: incoming channel that commands the [**gyro mode** switch](#gyro-mode-switch).
 - **Gyro Gain**: incoming channel that defines the **gyro gain** value.
 
 ??? Tip "Elevon/V-Tail configuration advice (click/tap to expand)"
@@ -264,11 +270,11 @@ Records the center value and maximum range of the incoming channels, so that the
 
 _Also known as: wind rejection mode, stabilized mode_
 
-The gyro corrects movements of the plane that are not the result of stick inputs.
+The gyro corrects movements of the aircraft that are not the result of stick inputs.
 
 #### Stick Priority
 
-A variable gain that depends on the stick deflection. The gyro gain decreases as the stick deflection increases. The **Stick priority** value defines at which point of the stick travel the gyro gain reaches zero.
+A variable gain that depends on the stick deflection. The gyro gain decreases as the stick deflection increases. The **stick priority** value defines at which point of the stick travel the gyro gain reaches zero.
 
 By default, **stick priority** value is `100%`. At stick center, gyro gain is fully applied, and starts declining as the stick deflection increases. When the stick reaches 50% of its travel, the gyro gain has been reduced by half, and at full stick deflection (`100%` of travel) the gyro gain is zero.
 
@@ -312,7 +318,7 @@ Combines Auto-Level with **Rate mode** behavior for wind rejection.
 
 #### Trims
 
-Only apply to Auto-Level mode, and ensure that the aircraft is flying level when the sticks are centered.
+Ensure that the aircraft is flying level when the sticks are centered.
 
 On the _pitch_ axis, positive(+) brings the nose up, negative (-) brings nose down. On the _roll_ axis, positive(+) causes banking to the left.
 
@@ -323,3 +329,33 @@ The maximum pitching and banking angles, in degrees.
 #### Gains
 
 Define how much of the maximum output travel the gyro should use. With higher gains, the gyro will bring the aircraft to level more aggressively when the sticks are released. A value of `35%` is a good starting point.
+
+### Launch
+
+The gyro keeps the aircraft climbing at a set pitching angle, and a level banking angle when the sticks are centered.
+
+#### Use Rate
+
+Combines Launch with **Rate mode** behavior for wind rejection.
+
+#### Trims
+
+Ensure that the aircraft is climbing at a set pitching angle, and a level banking angle when the sticks are centered.
+
+On the _pitch_ axis, positive(+) brings the nose up, negative (-) brings nose down. On the _roll_ axis, positive(+) causes banking to the left.
+
+#### Gains
+
+Define how much of the maximum output travel the gyro should use. With higher gains, the gyro will bring the aircraft to a stable climb more aggressively when the sticks are released. A value of `35%` is a good starting point.
+
+### Hover
+
+The gyro keeps the aircraft flying in a vertical hover position when the sticks are centered.
+
+#### Use Rate
+
+Combines Hover with **Rate mode** behavior for wind rejection.
+
+#### Gains
+
+Define how much of the maximum output travel the gyro should use. With higher gains, the gyro will bring the aircraft to hover more aggressively when the sticks are released. A value of `35%` is a good starting point.
