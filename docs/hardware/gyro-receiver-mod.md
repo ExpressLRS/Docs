@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: A short guide on how to add an IMU / gyro to an ExpressLRS receiver.
+description: A guide on how to add an IMU / gyro to an ExpressLRS receiver.
 ---
 
 ![Hardware-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/hardware.png)
@@ -9,7 +9,7 @@ description: A short guide on how to add an IMU / gyro to an ExpressLRS receiver
 
 ExpressLRS receivers that are equipped with an _inertial measurement unit_ (IMU) / gyro can provide stabilization for aircraft without a flight controller. See [Gyro](../software/gyro.md) for details.
 
-This guide explains how to attach a DIY board to an existing receiver.
+This guide explains how to attach a <abbr title="Do It Yourself">DIY</abbr> board to an existing receiver.
 
 ## Supported hardware
 
@@ -67,7 +67,9 @@ Any supported receiver based on the ESP32 chip, with an accessible I2C or SPI bu
 
 === "WebUI"
 
-    TK
+    Start the WebUI on the receiver and go to the `Gyro` tab.
+
+    Image TK
 
 === "Lua script"
 
@@ -75,11 +77,58 @@ Any supported receiver based on the ESP32 chip, with an accessible I2C or SPI bu
 
 === "Serial console"
 
+    The IMU detection and gyro initialization is logged to the serial monitor.
+
+    1. Connect the receiver equipped with the IMU board to a computer, using an FTDI adapter (USB/Serial converter).
+    2. Open a serial monitor at 115200 baud.
+       Example: `sudo minicom --device /dev/ttyUSB0 --baudrate 115200`
+    3. Restart the receiver to capture the gyro initialization.
+       Example output:
+       ```
+         [...]
+         Starting wire on SCL 18, SDA 23
+         SPI: gpio_sck :-1, gpio_miso: -1, gpio_mosi: -1, gpio_nss: -1, gpio_int -1
+         Initializing PWM output: ch: 0, pin: 14
+         Initializing PWM output: ch: 0, pin: 1
+         Initializing PWM output: ch: 0, pin: 3
+         Initializing PWM output: ch: 3, pin: 15
+       > Starting I2C Gyro on SCL 2, SDA 4
+       > Detecting MPU6050 (Address 0x68)
+       > Gyro Id returned = 0x38
+       > Gyro Init
+       > Gyro Config Load
+       > Gyro Config: version 9
+         Detected baro: SPL06
+         UID=(11, 22, 33, 44, 55, 66) ModelId=255
+         Primary Domain ISM2G4, 80 channels, sync=40
+         Hal Init
+         SX1280 Reset
+         SX1280 Ready!
+         SX1280 Begin
+         RFAMP_hal Init
+         Use TX pin: 26
+         Read Vers sx1280 #1: 43447
+         Enabling DCDC regulator
+         SetPower: 21
+         Config LoRa hwTimer Init
+       > RxPratameters.registerParameters(): Setting up GYRO LUA
+       > RxPratameters.registerParameters(): GYRO LUA Done
+       > Gyro Start
+       > Gyro AHRS Start
+         [...]
+       ```
+
     TK
 
 ## Troubleshooting
 
-TK
-
 ??? faq "If the gyro is enabled, why is status not OK?"
-    TK
+    - Check the gyro [**orientation settings**](../software/gyro.md#orientation-settings), and [**level calibration**](../software/gyro.md#level-calibration).
+    - Check the [**endpoint calibration**](../software/gyro.md#endpoint-calibration).
+    - If using a <abbr title="Do It Yourself">DIY</abbr> board, check that it is connected to the correct I2C or SPI port. (Example: <abbr title="Do It Yourself">DIY</abbr> receivers with an integrated vario may use a distinct I2C bus for the vario and the gyro.)
+
+??? faq "Why do Aileron and Elevator functions seem coupled?"
+    In **Auto-Level** mode, assuming that sticks are centered, if the elevator moves when the aircraft banks, or the ailerons move when the aircraft pitches up or down, the physical **orientation** of the IMU might not be aligned on the aircraft axes of rotation. See known limitations in [Orientation settings](../software/gyro.md#orientation-settings).
+
+??? faq "Two PWM channels are not working!"
+    When the debugging options are used, the pins used by the debug UART are disconnected. Build the firmware again without the `-DDEBUG_LOG` or `-DDEBUG_RCVR_LINKSTATS` options.
