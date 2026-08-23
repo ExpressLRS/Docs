@@ -212,7 +212,7 @@ Allows to confirm that the gyro [**orientation**](#orientation) settings, and th
 
 - **Channel**: both the incoming channel (from the transmitter) and the output channel (on the PWM receiver pins). _The transmitter setup and receiver setup must match. Mixing channels on the receiver is not possible._
 - **Function**: the [**gyro function**](#gyro-functions) assigned to that channel output.
-- **Master**: when multiple channels are assigned the same _function_, the value of the **master** channel will be taken into account by the gyro to calculate the output.
+- **Primary**: when multiple channels are assigned the same _function_, the value of the **primary** channel will be taken into account by the gyro to calculate the output.
 - **Invert**: whether the output of the channel should be inverted.
 - **Min/Mid/Max**: center value and limits of the PWM output (in milliseconds).
 - Gyro mode **switch type**: choose between a 2, 3, 4, 5, and 6-position gyro mode switch.
@@ -271,7 +271,7 @@ A variable gain that depends on the stick deflection. The gyro gain decreases as
 
 By default, **stick priority** value is `100%`. At stick center, gyro gain is fully applied, and starts declining as the stick deflection increases. When the stick reaches 50% of its travel, the gyro gain has been reduced by half, and at full stick deflection (`100%` of travel) the gyro gain is zero.
 
-When stick priority is set to `60%`, the gyro gain is still applied fully when the stick is centered. It is reduced by half when the stick reaches `30%` of its travel, and reaches zero when the stick reaches `60%` of its travel.
+When stick priority is set to `75%`, the gyro gain is still applied fully when the stick is centered. It is reduced by half when the stick reaches `37.5%` of its travel, and reaches zero when the stick reaches `75%` of its travel.
 
 #### Gains
 
@@ -353,6 +353,6 @@ Combines Hover with **Rate mode** behavior for wind rejection.
 
 Define how much of the maximum output travel the gyro should use. With higher gains, the gyro will bring the aircraft to hover more aggressively when the sticks are released. A value of `35%` is a good starting point.
 
-## Advanced gyro mode tuning
+## Advanced (PIDs)
 
 TK
