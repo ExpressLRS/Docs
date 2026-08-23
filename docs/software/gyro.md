@@ -23,7 +23,7 @@ How those parameters are balanced can be controlled by:
 
 - the [**stick priority**](#stick-priority) setting
 - the adjustable [**gyro gain**](#gyro-functions) value
-- the [**rate gain multiplier**](#rate-gain-multiplier) setting
+- the [**rate gain multiplier**](#gain-multiplier) setting
 - the **gain** settings that are configurable for each axis in each _gyro mode_ (see [Gyro mode tuning](#gyro-mode-tuning))
 
 This guide explains how to configure the receiver, and what to expect from each of the available _gyro modes_.
@@ -46,34 +46,11 @@ When the gyro is disabled, the receiver works normally without Gyro functionalit
 
     TK
 
-### Rate gain multiplier
-
-The **rate gain multiplier** adjusts the sensitivity of the gyro in **rate mode**, in order to allow the **gyro gain** to provide a meaningful adjusting range (see [Channel functions](#channel-functions)). A value of `1x` is usually a good starting point.
-
-If your gyro is too sensitive even when the **gyro gain** is low, it could be useful to lower the sensitivity (`0.5x`). On the contrary, if you reach 100% of the **gyro gain**, it may be useful to increase the sensitivity (`1.5x`, `2x`).
-
-=== "WebUI"
-
-    Start the WebUI on the receiver and go to the `Gyro` tab. In the `Main Setup` panel, select the desired **rate gain multiplier**.
-
-    Image TK
-
-=== "Lua script"
-
-    TK
-
-!!! Note
-    Always start testing with a low **gyro gain**.
-
-    - <abbr title="Electric Ducted Fan">EDF</abbr> and fast aircraft can benefit from a low **rate gain multiplier**: `0.5x`
-    - Slow aircraft, on the contrary, might require a higher multiplier: `1.5x` or `2x`
-    - For testing on the bench, you might need to increase the **rate gain multiplier** in order to see the surfaces move! (`2x`)
-
 ### Gyro mode switch map
 
 Define which gyro [**modes**](#gyro-mode-tuning) are activated by the **gyro mode** channel.
 
-The number of positions of the gyro mode switch can be defined in the **gyro mode** channel settings (see [Channel functions](#channel-functions)).
+The number of positions of the gyro mode switch is defined by the **switch type**l settings. (Choose between a 2, 3, 4, 5, and 6-position gyro mode switch.)
 
 === "WebUI"
 
@@ -215,7 +192,6 @@ Allows to confirm that the gyro [**orientation**](#orientation) settings, and th
 - **Primary**: when multiple channels are assigned the same _function_, the value of the **primary** channel will be taken into account by the gyro to calculate the output.
 - **Invert**: whether the output of the channel should be inverted.
 - **Min/Mid/Max**: center value and limits of the PWM output (in milliseconds).
-- Gyro mode **switch type**: choose between a 2, 3, 4, 5, and 6-position gyro mode switch.
 
 #### Gyro functions
 
@@ -264,6 +240,29 @@ Records the center value and maximum range of the incoming channels, so that the
 _Also known as: wind rejection mode, stabilized mode_
 
 The gyro corrects movements of the aircraft that are not the result of stick inputs.
+
+### Gain multiplier
+
+The **rate gain multiplier** adjusts the sensitivity of the gyro in **rate mode**, in order to allow the **gyro gain** to provide a meaningful adjusting range (see [Channel functions](#channel-functions)). A value of `1x` is usually a good starting point.
+
+If your gyro is too sensitive even when the **gyro gain** is low, it could be useful to lower the sensitivity (`0.5x`). On the contrary, if you reach 100% of the **gyro gain**, it may be useful to increase the sensitivity (`1.5x`, `2x`).
+
+=== "WebUI"
+
+    Start the WebUI on the receiver and go to the `Gyro` tab. In the `Main Setup` panel, select the desired **rate gain multiplier**.
+
+    Image TK
+
+=== "Lua script"
+
+    TK
+
+!!! Note
+    Always start testing with a low **gyro gain**.
+
+    - <abbr title="Electric Ducted Fan">EDF</abbr> and fast aircraft can benefit from a low **rate gain multiplier**: `0.5x`
+    - Slow aircraft, on the contrary, might require a higher multiplier: `1.5x` or `2x`
+    - For testing on the bench, you might need to increase the **rate gain multiplier** in order to see the surfaces move! (`2x`)
 
 #### Stick Priority
 
