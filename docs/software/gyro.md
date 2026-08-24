@@ -44,23 +44,43 @@ When the gyro is disabled, the receiver works normally without Gyro functionalit
 
 === "Lua script"
 
-    TK
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+
+    Enable Gyro  On
+    ```
 
 ### Gyro mode switch map
 
 Define which gyro [**modes**](#gyro-mode-tuning) are activated by the **gyro mode** channel.
 
-The number of positions of the gyro mode switch is defined by the **switch type**l settings. (Choose between a 2, 3, 4, 5, and 6-position gyro mode switch.)
+The number of positions of the gyro mode switch is defined by the **switch type** settings. (Choose between a 2, 3, 4, 5, and 6-position gyro mode switch.)
 
 === "WebUI"
 
-    Start the WebUI on the receiver and go to the `Gyro` tab. In the `Main Setup` panel, select the desired modes for each of the channel positions.
+    Start the WebUI on the receiver and go to the `Gyro` tab. In the `Main Setup` panel, select the desired type, and modes for each of the channel positions.
 
     Image TK
 
 === "Lua script"
 
-    TK
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Main Setup
+    > Gyro Mode Switch
+
+    Switch Pos. 3
+    -- Functions --
+    Position 1   Off
+    Position 2   Rate
+    Position 3   Auto-Level
+    ```
 
 ## Status
 
@@ -72,7 +92,16 @@ The number of positions of the gyro mode switch is defined by the **switch type*
 
 === "Lua script"
 
-    TK
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+
+    Enable Gyro  On
+    v1.19 / 9    !Orient.
+    IMU MPU6050  re=0;ie=0
+    ```
 
 ### IMU type
 
@@ -83,6 +112,8 @@ Displays the name of the sensor, along with some debugging information.
 Indicates when the sensor was detected and initialized correctly. Also indicates when the [**orientation settings**](#orientation-settings), and the [**level calibration**](#level-calibration) are missing.
 
 ### Link
+
+_Applies to the WebUI only._
 
 Indicates whether the receiver is connected to the transmitter.
 
@@ -109,11 +140,22 @@ For best results, the **orientation settings** should be updated every time the 
 
     Start the WebUI on the receiver and go to the `Gyro` tab. In the `Status` panel, press `Orientation Wizard`.
 
-    TK
+    Image TK
 
 === "Lua script"
 
-    TK
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Calibration
+    > Orientation
+
+      [Detect Orientation]
+    Level        Lbl Up(Z+)
+    Nose down    WRONG
+    ```
 
 ### Level calibration
 
@@ -123,11 +165,19 @@ In order to interpret the measurements from the <abbr title="Inertial Measuement
 
     Start the WebUI on the receiver and go to the `Gyro` tab. In the `Status` panel, press `Level Cal`.
 
-    TK
+    Image TK
 
 === "Lua script"
 
-    TK
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Calibration
+
+      [Level Calibration]
+    ```
 
 ### Live attitude view
 
@@ -175,15 +225,76 @@ Allows to confirm that the gyro [**orientation**](#orientation) settings, and th
 
 ### Channel functions
 
+#### Quick setup
+
+The _quick setup_ allows to quickly pre-populate a list of channels for a few typical aircraft configurations. That initial setup can then be adjusted manually if necessary.
+
+=== "WebUI"
+
+    Start the WebUI on the receiver and go to the `Gyro` tab. In the `Channel Functions & Limits` panel, press the `Quick setup` button to start the wizard.
+
+    Image TK
+
+=== "Lua script"
+
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Main Setup
+    > Quick setup
+
+    Wing type ->  2-Ail
+    Tail type ->  V-Tail
+      [Apply]
+    ```
+
+#### Manual setup
+
 === "WebUI"
 
     Start the WebUI on the receiver and go to the `Gyro` tab. The `Channel Functions & Limits` panel allow to define and configure channel functions.
 
-    TK
+    Image TK
 
 === "Lua script"
 
-    TK
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Main Setup
+    > Channel Functions
+
+    Channel ->   1
+    Function     Aileron
+    ```
+
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Main Setup
+    > Channel Functions
+
+    Channel ->   4
+    Function     VTail_Inv
+    ```
+
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Main Setup
+    > Channel Functions
+
+    Channel ->   9
+    Function     Gain
+    ```
 
 #### Settings
 
@@ -221,7 +332,15 @@ Records the center value and maximum range of the incoming channels, so that the
 
 === "Lua script"
 
-    TK
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Main Setup
+
+      [Stick Calibration]
+    ```
 
 ## Gyro mode tuning
 
@@ -233,7 +352,44 @@ Records the center value and maximum range of the incoming channels, so that the
 
 === "Lua script"
 
-    TK
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Gyro Modes
+    > Tuning
+
+    Mode ->       Rate
+    Stck priority 100%
+    Gain mult.    1x
+    -- Gains --
+    Roll gain     30
+    Pitch gain    40
+    Yaw gain      50
+    ```
+
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Gyro Modes
+    > Tuning
+
+    Mode ->       Auto-Level
+    Use Rate      On
+    -- Angles --
+    Pitch limit    40 deg
+    Roll limit     70 deg
+    -- Trims --
+    Pitch trim    0 deg (+Up)
+    Roll trim     0 deg (+Lft)
+    -- Gains --
+    Roll gain     30
+    Pitch gain    40
+    Yaw gain      50
+    ```
 
 ### Rate Mode
 
@@ -246,16 +402,6 @@ The gyro corrects movements of the aircraft that are not the result of stick inp
 The **rate gain multiplier** adjusts the sensitivity of the gyro in **rate mode**, in order to allow the **gyro gain** to provide a meaningful adjusting range (see [Channel functions](#channel-functions)). A value of `1x` is usually a good starting point.
 
 If your gyro is too sensitive even when the **gyro gain** is low, it could be useful to lower the sensitivity (`0.5x`). On the contrary, if you reach 100% of the **gyro gain**, it may be useful to increase the sensitivity (`1.5x`, `2x`).
-
-=== "WebUI"
-
-    Start the WebUI on the receiver and go to the `Gyro` tab. In the `Main Setup` panel, select the desired **rate gain multiplier**.
-
-    Image TK
-
-=== "Lua script"
-
-    TK
 
 !!! Note
     Always start testing with a low **gyro gain**.
@@ -354,4 +500,61 @@ Define how much of the maximum output travel the gyro should use. With higher ga
 
 ## Advanced (PIDs)
 
-TK
+=== "WebUI"
+
+    Start the WebUI on the receiver and go to the `Gyro` tab. The `Advanced (PIDs)` panel displays the tuning parameters for each gyro mode.
+
+    Image TK
+
+=== "Lua script"
+
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Gyro Modes
+    > Advanced (PIDs)
+
+    Mode group -> Rate
+    Axis ->       Roll
+    P gain     35 (x0.01)
+    I gain     0 (x0.01)
+    D gain     10 (x0.01)
+    ```
+
+    ```
+    ExpressLRS
+    > Other devices
+    [RM ER6-GV]
+    > Gyro
+    > Gyro Modes
+    > Advanced (PIDs)
+
+    Mode group -> AHRS
+    P gain     20 (x0.1)
+    I gain     0 (x0.1)
+    LPF freq.  1Hz
+    ```
+
+### Rate
+
+#### P gain
+#### I gain
+#### D gain
+
+### Level
+
+_Applies to the following **gyro modes**: Envelope, Auto-Level, Launch, Hover._
+
+#### P gain
+#### I gain
+#### D gain
+
+### AHRS
+
+The Artificial Horizon Reference System (AHRS)...
+
+#### P gain
+#### I gain
+#### Low-pass filter (LPF)
