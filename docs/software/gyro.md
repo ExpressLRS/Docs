@@ -47,7 +47,7 @@ When the gyro is disabled, the receiver works normally without Gyro functionalit
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
 
     Enable Gyro  On
@@ -70,7 +70,7 @@ The number of positions of the gyro mode switch is defined by the **switch type*
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Main Setup
     > Gyro Mode Switch
@@ -95,7 +95,7 @@ The number of positions of the gyro mode switch is defined by the **switch type*
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
 
     Enable Gyro  On
@@ -147,7 +147,7 @@ For best results, the **orientation settings** should be updated every time the 
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Calibration
     > Orientation
@@ -172,7 +172,7 @@ In order to interpret the measurements from the <abbr title="Inertial Measuement
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Calibration
 
@@ -240,7 +240,7 @@ The _quick setup_ allows to quickly pre-populate a list of channels for a few ty
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Main Setup
     > Quick setup
@@ -263,7 +263,7 @@ The _quick setup_ allows to quickly pre-populate a list of channels for a few ty
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Main Setup
     > Channel Functions
@@ -275,7 +275,7 @@ The _quick setup_ allows to quickly pre-populate a list of channels for a few ty
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Main Setup
     > Channel Functions
@@ -287,7 +287,7 @@ The _quick setup_ allows to quickly pre-populate a list of channels for a few ty
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Main Setup
     > Channel Functions
@@ -335,7 +335,7 @@ Records the center value and maximum range of the incoming channels, so that the
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Main Setup
 
@@ -355,7 +355,7 @@ Records the center value and maximum range of the incoming channels, so that the
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Gyro Modes
     > Tuning
@@ -372,7 +372,7 @@ Records the center value and maximum range of the incoming channels, so that the
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Gyro Modes
     > Tuning
@@ -511,7 +511,7 @@ Define how much of the maximum output travel the gyro should use. With higher ga
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Gyro Modes
     > Advanced (PIDs)
@@ -526,7 +526,7 @@ Define how much of the maximum output travel the gyro should use. With higher ga
     ```
     ExpressLRS
     > Other devices
-    [RM ER6-GV]
+    [RM ER6-GV+IMU]
     > Gyro
     > Gyro Modes
     > Advanced (PIDs)
