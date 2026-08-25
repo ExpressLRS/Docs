@@ -500,6 +500,8 @@ Define how much of the maximum output travel the gyro should use. With higher ga
 
 ## Advanced (PIDs)
 
+TK
+
 === "WebUI"
 
     Start the WebUI on the receiver and go to the `Gyro` tab. The `Advanced (PIDs)` panel displays the tuning parameters for each gyro mode.
@@ -539,6 +541,8 @@ Define how much of the maximum output travel the gyro should use. With higher ga
 
 ### Rate
 
+TK
+
 #### P gain
 #### I gain
 #### D gain
@@ -547,13 +551,15 @@ Define how much of the maximum output travel the gyro should use. With higher ga
 
 _Applies to the following **gyro modes**: Envelope, Auto-Level, Launch, Hover._
 
+TK
+
 #### P gain
 #### I gain
 #### D gain
 
 ### AHRS
 
-The Artificial Horizon Reference System (AHRS)...
+The Artificial Horizon Reference System (AHRS)... TK
 
 #### P gain
 #### I gain
