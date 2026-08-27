@@ -13,3 +13,8 @@ authors:
     name: MUSTARDTIGER
     description: ExpressLRS contributor & maintainer
     avatar: https://github.com/mustardtigerfpv.png
+
+  wbhinton:
+    name: Weston Hinton
+    description: Developer of ELRS Mobile
+    avatar: https://github.com/wbhinton.png
