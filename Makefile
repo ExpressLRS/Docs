@@ -1,19 +1,34 @@
-.PHONY: install-python-packages
-install-python-packages:
-	pip install \
-      "mkdocs-minify-plugin==0.8.0" \
-      "mkdocs-redirects==1.2.2" \
-      "mkdocs-static-i18n==1.3.0" \
-      "mkdocs-git-committers-plugin-2==2.5.0" \
-      "mkdocs-git-revision-date-localized-plugin==1.4.5" \
-      "cairosvg==2.8.1" \
-      "jinja2==3.1.6" \
-      "pyspelling==2.12.1"
+# Host-only convenience wrappers around `docker compose`.
+# CI invokes `docker compose` directly and never calls `make`.
 
-.PHONY: build
+.PHONY: install build run serve site shell spellcheck catalog
+
+install:
+	pip install "zensical==0.0.50"
+
 build:
-	mkdocs build
+	zensical build --clean
 
-.PHONY: spellcheck
+run: serve
+
+serve:
+	docker compose up
+
+# Full pipeline, mirrors .github/workflows/publish.yml
+site:
+	docker compose run --rm --entrypoint sh docs -c "\
+	  python3 overrides/hooks/product_catalog.py && \
+	  python3 overrides/hooks/blog_posts.py && \
+	  zensical build --clean && \
+	  python3 overrides/hooks/llms_txt.py && \
+	  python3 overrides/hooks/redirects.py"
+
+shell:
+	docker compose run --rm --entrypoint sh docs
+
+catalog:
+	docker compose run --rm --entrypoint python3 docs overrides/hooks/product_catalog.py
+
+# Needs aspell + aspell-en installed on the host
 spellcheck:
-	pyspelling --config .spellcheck.yml --spellchecker aspell --name Markdown
+	uv run --group spellcheck pyspelling --config .spellcheck.yml --spellchecker aspell --name Markdown

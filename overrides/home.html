@@ -243,7 +243,9 @@
   </div>
 </section>
 
-<!-- Section: Latest News -->
+<!-- Section: Latest News. Under mkdocs, recent_posts comes from the
+     blog_posts.py hook; under Zensical (no hooks) the same script runs
+     standalone and pre-renders partials/recent-posts.html instead. -->
 {% if recent_posts %}
 <section class="mdx-news">
   <div class="md-grid md-typeset">
@@ -262,6 +264,8 @@
     </div>
   </div>
 </section>
+{% else %}
+{% include "partials/recent-posts.html" ignore missing %}
 {% endif %}
 
 {% endblock %}
