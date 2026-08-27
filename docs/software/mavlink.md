@@ -64,8 +64,15 @@ The minimum versions to use this feature are:
 
 ## Flight Controller Setup
 
-=== "ArduPilot"
-    For the below steps, when a UART connection is mentioned, it will be written as `SERIALx`. Replace `x` with the UART number you are using.
+=== "ArduPilot >= v4.7.0"
+    For the below steps, when a UART connection is mentioned, it will be written as `SERIALx`. Replace `x` with the UART number you are using. For step 2, it would probably be `MAV2`. Check [this](https://ardupilot.org/copter/docs/common-mavlink-configuration.html#mavlink-advanced-configuration) eplaination from the Ardupilot Wiki
+
+    1. Configure `SERIALx_PROTOCOL=2`, `SERIALx_BAUD=460`, and `RSSI_TYPE=5`
+    1. Configure all `MAVx_` parameters to be `1`, except for `MAVx_ADSB`, `MAVx_PARAMS`, `MAVx_RAW_CTRL` that should stay `0` (otherwise yaapu will see a few sensors only and GCS might not be able to connect) 
+    1. Save parameters and reboot the flight controller
+
+=== "ArduPilot <= 4.6.3"
+    For the below steps, when a UART connection is mentioned, it will be written as `SERIALx`. Replace `x` with the UART number you are using. For step 2, it would probably be `SR2`. Check [this](https://ardupilot.org/copter/docs/common-mavlink-configuration.html#mavlink-advanced-configuration) eplaination from the Ardupilot Wiki. Note: Since v4.7.0 Ardupilot renamed `SRx` to `MAVx`+1 so please read this link as `SRx`-1 if you need to keep on your version.
 
     1. Configure `SERIALx_PROTOCOL=2`, `SERIALx_BAUD=460`, and `RSSI_TYPE=5`
     1. Configure all `SRx_` parameters to be `1`, except for `SRx_ADSB`, `SRx_PARAMS`, `SRx_RAW_CTRL` that should stay `0` (otherwise yaapu will see a few sensors only and GCS might not be able to connect) 
