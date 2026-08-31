@@ -318,13 +318,13 @@ The _quick setup_ allows to quickly pre-populate a list of channels for a few ty
     Then assign the `V-Tail R`/`Elevon R` function to correct the _rudder/aileron_ direction on the channel that needs it.
 
 
-### Endpoint calibration
+### Channel calibration
 
 Records the center value and maximum range of the incoming channels, so that the gyro outputs don't risk damaging mechanical links.
 
 === "WebUI"
 
-    Start the WebUI on the receiver and go to the `Gyro` tab. In the `Channel Functions & Limits` panel press the `ENDPOINT CAL` button.
+    Start the WebUI on the receiver and go to the `Gyro` tab. In the `Channel Functions & Limits` panel press the `CHANNEL CAL` button.
 
     First center the sticks and `CAPTURE CENTERS`. Then move the sticks across the totality of their range and `FINISH CALIBRATION`.
 
@@ -339,7 +339,7 @@ Records the center value and maximum range of the incoming channels, so that the
     > Gyro
     > Main Setup
 
-      [Stick Calibration]
+      [Channel Calibration]
     ```
 
 ## Gyro mode tuning
