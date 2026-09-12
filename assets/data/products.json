@@ -2251,6 +2251,36 @@
     "diversity_type": "single"
   },
   {
+    "id": "jumper:tx_dual:t15pro",
+    "vendor": "jumper",
+    "vendor_name": "Jumper",
+    "product_name": "Jumper AION T15 DUO TX",
+    "category": "tx",
+    "device_class": "radio_handset",
+    "radio_band": "dual",
+    "firmware_target": "Unified_ESP32_LR1121_TX",
+    "platform": "esp32",
+    "tx_type": "internal",
+    "min_power_value": 10,
+    "max_power_value": 1000,
+    "diversity_type": "single"
+  },
+  {
+    "id": "jumper:tx_dual:t22pro",
+    "vendor": "jumper",
+    "vendor_name": "Jumper",
+    "product_name": "Jumper AION T22 DUO TX",
+    "category": "tx",
+    "device_class": "radio_handset",
+    "radio_band": "dual",
+    "firmware_target": "Unified_ESP32_LR1121_TX",
+    "platform": "esp32",
+    "tx_type": "internal",
+    "min_power_value": 10,
+    "max_power_value": 1000,
+    "diversity_type": "single"
+  },
+  {
     "id": "jumper:tx_2400:t-20-gemini",
     "vendor": "jumper",
     "vendor_name": "Jumper",
@@ -2264,6 +2294,20 @@
     "min_power_value": 10,
     "max_power_value": 500,
     "diversity_type": "gemini"
+  },
+  {
+    "id": "konex:rx_2400:aio",
+    "vendor": "konex",
+    "vendor_name": "Konex",
+    "product_name": "Konex FC 2.4GHz RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "2400",
+    "firmware_target": "Unified_ESP32C3_2400_RX",
+    "platform": "esp32-c3",
+    "min_power_value": 10,
+    "max_power_value": 10,
+    "diversity_type": "single"
   },
   {
     "id": "matek:rx_2400:r24d",
@@ -3310,6 +3354,20 @@
     "diversity_type": "single"
   },
   {
+    "id": "stphobby:rx_2400:nano",
+    "vendor": "stphobby",
+    "vendor_name": "STPHOBBY",
+    "product_name": "STPHOBBY Nano 2.4G RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "2400",
+    "firmware_target": "Unified_ESP32C3_2400_RX",
+    "platform": "esp32-c3",
+    "min_power_value": 10,
+    "max_power_value": 100,
+    "diversity_type": "single"
+  },
+  {
     "id": "skyguy:rx_2400:max",
     "vendor": "skyguy",
     "vendor_name": "SkyGuy",
@@ -3618,6 +3676,20 @@
     "min_power_value": 10,
     "max_power_value": 10,
     "diversity_type": "single"
+  },
+  {
+    "id": "zerodrag:rx_dual:single",
+    "vendor": "zerodrag",
+    "vendor_name": "ZeroDrag",
+    "product_name": "Zerodrag C3 900/2400 Dual Band RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "dual",
+    "firmware_target": "Unified_ESP32C3_LR1121_RX",
+    "platform": "esp32-c3",
+    "min_power_value": 10,
+    "max_power_value": 100,
+    "diversity_type": "antenna"
   },
   {
     "id": "atomrc:rx_2400:atomrc",
