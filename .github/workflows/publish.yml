@@ -3,6 +3,13 @@ on:
   push:
     branches:
       - master
+  # Rebuild daily so the product catalog picks up targets.json changes
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+concurrency:
+  group: publish
+  cancel-in-progress: false
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
