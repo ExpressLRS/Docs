@@ -448,6 +448,20 @@ The `Antenna Mode` setting is only available for Receivers with Antenna Diversit
 * `Diversity` - Both Antennas will be active. Receiver will switch to the antenna with better RSSI.
 * `Ant1/Ant2` - Only one antenna will be enabled (for both RC command reception and Telemetry sending).
 
+### Antenna Group
+
+Introduced in ExpressLRS 4.1. The `Ant. Group` setting selects which set of antenna ports the receiver uses. These options are available:
+
+* `External` - Use the external antenna connectors.
+* `Builtin` - Use the antennas built into the receiver board.
+
+The setting drives a pin that controls an antenna switch on the receiver, and the pin is refreshed continuously, so a change takes effect at once and no reboot is needed. The choice is stored with the model and is kept across power cycles.
+
+`Ant. Group` is separate from `Antenna Mode`. `Ant. Group` selects which ports are connected to the radio, and `Antenna Mode` selects how the receiver uses the ports it has.
+
+!!! note "Note"
+    This setting only appears on receivers whose hardware defines an antenna group pin. Most receivers do not have one, so the setting is not shown.
+
 ### Receiver Mode
 
 The `Receiver Mode` setting is only available for True Diversity receivers. These options are available:
