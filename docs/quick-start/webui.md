@@ -234,6 +234,13 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
     ### Information Tab
     This Tab will show the basic information about the device, including Hardware name, Firmware version, GitHub commit hash, Radio Chip, Regulatory Domain, Binding UID and any options that's been changed from the default or flashed settings.
 
+    The `WiFi State` row shows how the device is connected. In Home WiFi mode it shows `Client` and the network name. In Access Point mode it shows `AP mode`. Where the device can measure it, the row also shows the WiFi signal strength in dBm followed by a short description of the quality.
+
+    A weak WiFi signal makes a firmware upload slow, and can make it fail part way through. If the value is worse than -80dBm, move the device closer to the router, or use the Access Point instead of Home WiFi, before you use the Update Tab.
+
+    !!! note "Note"
+        The signal strength means different things in the two modes. In Home WiFi mode it is how well the device hears your router. In Access Point mode it is how well the device hears the one connected client, and it is not shown at all on ESP8285 devices.
+
     <figure markdown>
     ![Information Tab](../assets/images/webui/information.png)
     </figure>
@@ -316,6 +323,8 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
 
     This tab lets you change the device' WiFi network connectivity and how it will behave when it is in WiFi mode.
 
+    The password field has an eye button at its right edge. Use it to show the stored Home WiFi password in plain text, which is useful to check a password that does not connect. The password becomes readable by anyone who can see the screen, so hide it again before you show the page to someone else or share a screenshot.
+
     <figure markdown>
     ![WiFi Tab](../assets/images/webui/wifi.png)
     </figure>
@@ -338,6 +347,27 @@ ExpressLRS 4.0 improves upon this with a new layout allowing for more sections o
     <figure markdown>
     ![HW Layout Tab](../assets/images/webui/hardware.png)
     </figure>
+
+    ### Voltage Calibration
+
+    Introduced in ExpressLRS 4.1. This tab appears on receivers that have at least one voltage source defined in the Hardware Layout. It runs a wizard that measures your receiver against a known voltage and works out the correct scale and offset, so the battery voltage reported over telemetry matches reality.
+
+    You need an adjustable power supply, or a battery and a multimeter, to give the receiver a voltage you already know.
+
+    Select the source to calibrate, then work through the four steps:
+
+    1. **High Voltage**. Apply a voltage near the top of the range you want to measure, type the actual value in millivolts, and capture it.
+    2. **Low Voltage**. Apply a lower known voltage, type the actual value in millivolts, and capture it.
+    3. **No Voltage**. Disconnect the source and capture the idle reading. Skip this step if the source is always connected.
+    4. **Review**. The wizard shows the calculated offset and scale, and how far the fit is from your two known points. Reconnect the source, check the live reading, then save.
+
+    The receiver reboots when the calibration is saved. On ESP32 receivers the wizard also tries each available input attenuation and keeps the one that gives the best result without the reading going off scale.
+
+    !!! warning "Warning"
+        Do not apply a voltage above what the receiver is designed for. The voltage divider on the board sets that limit, and the wizard cannot protect the hardware. Check the specification for your receiver first.
+
+    !!! note "Note"
+        The calibration is stored in the Hardware Layout, so it is kept when the settings are exported and restored. Flashing a device and choosing not to keep the existing configuration will discard it.
 
     ### Continuous Wave
 
