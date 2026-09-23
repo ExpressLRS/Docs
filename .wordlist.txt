@@ -15,6 +15,7 @@ Axisflying
 BETAFPV
 BLE
 BLHeli
+Backlight
 Bayck
 Bardwell
 Baudrate
@@ -51,6 +52,7 @@ Cura
 DBR
 DFU
 DIY
+DIO
 DJI
 DMA
 DMX
@@ -111,6 +113,7 @@ GEPRC
 GH
 GND
 GPIO
+GRB
 GSoD
 Graupner
 GX
@@ -143,6 +146,7 @@ LBT
 LDO
 LEDs
 LNA
+LM
 LNAs
 LQ
 LQI
@@ -160,6 +164,8 @@ MDL
 MFD
 MHz
 MOSFET
+MISO
+MOSI
 MSP
 MX
 MacOS
@@ -176,6 +182,7 @@ MultiGP
 NDA
 NPN
 NRST
+NSS
 Namimno
 NamimnoRC
 Nano
@@ -191,6 +198,7 @@ OneBit
 OpenTX
 OpenTX's
 PCBs
+PDET
 PID
 PIO
 PIO's
@@ -214,17 +222,20 @@ QuadKopters
 RDP
 retransmission
 RFMD
+RFO
 RGB
 RQly
 RSNR
 RSS
 RSSI
 RST
+RTC
 RTN
 RTTTL
 RXI
 RXLOSS
 RXes
+RXEN
 RXs
 RadioMaster
 RainSun
@@ -236,6 +247,9 @@ Repo
 Rox
 Runcam
 SBUS
+SCK
+SCL
+SDA
 SD
 SDG
 SDR
@@ -248,11 +262,14 @@ SNR
 SPH
 SPI
 Schalonsus
+Schmitt
 SPRacing
 SRXL
+SSD
 SSID
 STL
 STLink
+STK
 STM
 SUMD
 SWCLK
@@ -281,6 +298,8 @@ SuperD
 SuperP
 SuperG
 TCXO
+TFT
+TACHO
 TeamRace
 TeamRacing
 TLite
@@ -288,6 +307,7 @@ TQLY
 TTGo
 TX's
 TXes
+TXEN
 TXs
 Taranis
 Taufik
@@ -306,6 +326,8 @@ Unbricking
 Uncommented
 Uplink
 VBAT
+VBat
+VSrc
 VCC
 VDD
 VIN
@@ -315,6 +337,9 @@ VRX
 VSCode
 VSCode's
 VTX
+VPD
+VREF
+VTx
 Vantac
 Velocidrone
 Vergara
@@ -323,6 +348,7 @@ V16
 V14
 Walksnail
 WebSocket
+WS
 Webflasher
 WebUI
 Wifi
@@ -374,6 +400,7 @@ dropdown
 edgetx
 elrs
 ethernet
+efuse
 exe
 expresslrs
 facebook
@@ -396,6 +423,7 @@ iFlight
 iNav
 integrations
 io
+inductor
 ish
 json
 jitter
@@ -407,6 +435,7 @@ leaderboard
 lua
 mA
 mW
+mV
 mainboard
 maybenikhil
 md
@@ -462,6 +491,7 @@ tx
 txbp
 txt
 uncomment
+uH
 uninversion
 uninverted
 unmodded
@@ -516,6 +546,7 @@ Pwr
 pitmode
 HV
 DAC
+DACWRITE
 Bidirectionality
 VTXes
 OpenVTX
@@ -576,3 +607,4 @@ counsel
 Rotorflight
 X-Band
 heggy_fpv
+DCDC
