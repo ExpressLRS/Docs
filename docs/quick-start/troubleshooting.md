@@ -203,6 +203,16 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 
     To ensure that the WiFi flashing is finished properly, **wait until the LED on the receiver blinks slowly** (indicating it's looking for a TX bind) before pulling off power.
 
+### <span class="custom-heading" data-id="24">I cannot reach http://elrs_tx.local or http://elrs_rx.local</span>
+
+??? Note "I cannot reach http://elrs_tx.local or http://elrs_rx.local"
+    This is usually because mDNS is not working on your network or device. 
+    
+    *   **Verify Connection:** Ensure your device (phone/laptop) is on the **same** WiFi network as the ExpressLRS device.
+    *   **OS Support:** While most modern OSs support mDNS, some older versions of Windows or specific Linux configurations might not. 
+    *   **Router Settings:** Some routers block multicast traffic between wireless clients (often called "AP Isolation" or "Client Isolation"). Disable this setting if possible.
+    *   **Use the IP Address:** If the `.local` address doesn't work, you can always use the IP address. If the device is in AP mode (hotspot), it's always `http://10.0.0.1/`. If it's on your home WiFi, check your router's DHCP list for a device named `elrs`.
+
 If you have other questions or concerns, or maybe you need further help that is not covered by this Guide, head over to our Discord Channel or Facebook Group!
 
 <span style="padding-left:10%; display:inline; text-align:center">[ExpressLRS Discord :fontawesome-brands-discord:](https://discord.gg/dS6ReFY){ .md-button }</span>

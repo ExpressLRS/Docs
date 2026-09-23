@@ -6,6 +6,8 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
 ![Setup-Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/quick-start.png)
 
 ## How to get to the Web UI
+
+
 === "Receivers"
    
     1. Put your Receiver into WiFi Mode.
@@ -113,8 +115,9 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
 
         <br clear="right" />
 
-    3. Load the Web UI on your browser using these addresses:
-        - http://10.0.0.1/ - If you have connected to the `ExpressLRS RX` Access Point
+    3. Load the Web UI on your browser. The address depends on how the Receiver is connected:
+        
+        *   **Access Point Mode:** While connected to the `ExpressLRS RX` hotspot, almost any hostname (e.g., [http://elrs_rx.local/](http://elrs_rx.local/)) should resolve to the Web UI. However, if your browser or OS doesn't redirect automatically, use [http://10.0.0.1/](http://10.0.0.1/) as a direct fallback.
 
             !!! Note
                 This IP address is also often used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
@@ -122,25 +125,25 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
                 We recommend disconnecting from the network first or trying a different device instead, e.g. smartphone or tablet.
 
             !!! Note
-                On some devices a network login prompt might pop up. Clicking this will often show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ manually in your browser instead.
+                On some devices a network login prompt might pop up. Clicking this will often show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ (or http://elrs_rx.local/) manually in your browser instead.
 
-        - http://elrs_rx.local - If you have previously set your Home WiFi SSID and Password into your Receiver when you flashed it.
+        *   **Home WiFi Mode:** If the Receiver is connected to your local network, use [http://elrs_rx.local/](http://elrs_rx.local/). (Note: Hostnames also work in Access Point Mode).
 
             !!! Note
-                If your browser cannot resolve this address, chances are MDNS is not set up and working on your computer or network.
+                If your browser cannot resolve this address, chances are mDNS is not set up and working on your computer or network.
 
             ??? tip "Use the IP Address instead! (click/tap to expand)"
                 === "The `arp` Command"
-
-                    1. Open up a Command Prompt window on your computer.
+                    1. Open a terminal or command prompt on your computer.
                     2. Execute the command `arp -a` which will list all the devices in the Network.
-                    3. Try each of the IP Addresses marked as `Dynamic` as a URL in your Browser until you get to the ExpressLRS Web UI.
+                    3. Look for the list of dynamic IP addresses. On most networks, ExpressLRS devices will appear with a MAC address starting with `30-ae-a4`, `24-4c-6a`, or `84-f3-eb` (standard Espressif/ESP prefixes).
+                    4. Try each of these IP addresses in your browser until you reach the ExpressLRS Web UI.
 
                 === "Router DHCP List"
-                    1. Log in to your Router dashboard.
-                    2. Check the DHCP List and look for the "elrs" device.
-                    3. Take note of the IP Address given by your router.
-                    4. Use this IP address in your Browser as the URL.
+                    1. Log in to your router's web interface (usually `192.168.1.1` or `192.168.0.1`).
+                    2. Navigate to the "Attached Devices" or "DHCP Client List" section.
+                    3. Look for a device named `elrs-rx`. If the name isn't showing up, look for a device with an "Espressif" manufacturer tag.
+                    4. Use the IP address assigned to this device in your browser.
     
 === "TX Modules"
 
@@ -189,8 +192,9 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
 
         <br clear="right" />
 
-    3. Load the Web UI on your browser using these addresses:
-        - http://10.0.0.1/ - If you have connected to the `ExpressLRS TX` Access Point
+    3. Load the Web UI on your browser. The address depends on how the TX Module is connected:
+        
+        *   **Access Point Mode:** While connected to the `ExpressLRS TX` hotspot, almost any hostname (e.g., [http://elrs_tx.local/](http://elrs_tx.local/)) should resolve to the Web UI. However, if your browser or OS doesn't redirect automatically, use [http://10.0.0.1/](http://10.0.0.1/) as a direct fallback.
 
             !!! Note
                 This IP address is also often used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
@@ -198,25 +202,25 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
                 We recommend disconnecting from the network first or trying a different device instead, e.g. smartphone or tablet.
 
             !!! Note
-                On some devices a network login prompt might pop up. Clicking this will often show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ manually in your browser instead.
+                On some devices a network login prompt might pop up. Clicking this may show an incomplete version of the webui that won't behave as expected. Please navigate to http://10.0.0.1/ (or http://elrs_tx.local/) manually in your browser instead.
 
-        - http://elrs_tx.local - If you have previously set your Home WiFi SSID and Password into your TX Module when you flashed it.
+        *   **Home WiFi Mode:** If the TX Module is connected to your local network, use [http://elrs_tx.local/](http://elrs_tx.local/). (Note: Hostnames also work in Access Point Mode).
 
             !!! Note
-                If your browser cannot resolve this address, chances are MDNS is not set up and working on your computer or network.
+                If your browser cannot resolve this address, chances are mDNS is not set up and working on your computer or network.
 
             ??? tip "Use the IP Address instead! (click/tap to expand)"
                 === "The `arp` Command"
-
-                    1. Open up a Command Prompt window on your computer.
+                    1. Open a terminal or command prompt on your computer.
                     2. Execute the command `arp -a` which will list all the devices in the Network.
-                    3. Try each of the IP Addresses marked as `Dynamic` as a URL in your Browser until you get to the ExpressLRS Web UI.
+                    3. Look for the list of dynamic IP addresses. On most networks, ExpressLRS devices will appear with a MAC address starting with `30-ae-a4`, `24-4c-6a`, or `84-f3-eb` (standard Espressif/ESP prefixes).
+                    4. Try each of these IP addresses in your browser until you reach the ExpressLRS Web UI.
 
                 === "Router DHCP List"
-                    1. Log in to your Router dashboard.
-                    2. Check the DHCP List and look for the "elrs" device.
-                    3. Take note of the IP Address given by your router.
-                    4. Use this IP address in your Browser as the URL.
+                    1. Log in to your router's web interface (usually `192.168.1.1` or `192.168.0.1`).
+                    2. Navigate to the "Attached Devices" or "DHCP Client List" section.
+                    3. Look for a device named `elrs-tx`. If the name isn't showing up, look for a device with an "Espressif" manufacturer tag.
+                    4. Use the IP address assigned to this device in your browser.
 
 ## The ExpressLRS Web UI Explained
 

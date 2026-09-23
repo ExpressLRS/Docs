@@ -17,6 +17,7 @@ Below you can find a list of terms you might not be sure about, as well as some 
 - `LQ`: Link Quality, percentage of expected packets received. Our preferred method of measuring the quality of the control link
 - `Lua`: Means "Moon" in Portuguese. As such, Lua is the correct way to write and not all uppercase. The ExpressLRS Lua script can be installed on a OpenTX radio, to easily alter TX parameters like Packet rate, Telemetry ratio and Output power. But also shows if the radio (OpenTX) is communicating correctly with the module. ( e.g. 0:50, 0:150, 0:200 and so on.)
 - `MCU`: Micro Controller Unit, generally denotes an embedded system controller as opposed to big iron CPU
+- `mDNS`: Multicast DNS. It allows for hostnames (like `elrs_rx.local` or `elrs_tx.local`) to be resolved into IP addresses on a local network without the need for a dedicated DNS server.
 - `OSD`: On Screen Display, refer to [this page for instructions for setup in BF](../quick-start/pre-1stflight.md#rssi-and-link-quality)
 - `OTA`: Update your device `Over The Air` (WiFi)
 - `OTX`: OpenTX

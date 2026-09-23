@@ -104,14 +104,14 @@ There are three methods to determine what firmware version you currently have on
         <br clear="right" />
 
     3. Load the Web UI on your browser using these addresses:
-        - http://10.0.0.1/ -If you have connected to the `ExpressLRS TX` Access Point
+        - [http://10.0.0.1/](http://10.0.0.1/) or [http://elrs_tx.local/](http://elrs_tx.local/) - If you are connected to the `ExpressLRS TX` Access Point.
             
             !!! Note
-                This IP address is also often used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
+                The IP address `10.0.0.1` is also often used by some routers. Computers with an ethernet connection to their routers will find that this page doesn't load the ExpressLRS Web UI and instead loads their router or ISP modem configuration dashboards.
 
                 We recommend disconnecting from the network first or trying a different device instead, e.g. smartphone or tablet.
         
-        - http://elrs_tx.local - If you have previously set your Home WiFi SSID and Password into your TX Module when you flashed it.
+        - [http://elrs_tx.local/](http://elrs_tx.local/) - If you have previously set your Home WiFi SSID and Password into your TX Module and it's connected to your local network.
 
             !!! Note
                 If your browser cannot resolve this address, chances are MDNS is not set up and working on your computer or network.
