@@ -168,6 +168,19 @@ If you use 200Hz and 1:2 Tlm ratio the stars will not even blink because the upd
 ![Fast update rate](https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/wiki-from-discord/fast.gif)
 </figure>
 
+### ExpressLRS Telemetry Widget
+
+Once your sensors are discovered, you can show them on the handset home screen with the [ExpressLRS Telemetry Widget](https://github.com/ExpressLRS/ElrsTelemWidget). This is an official ExpressLRS project. It shows the ExpressLRS link statistics next to the common Betaflight and iNav values, so you can check the state of the link without opening the telemetry page.
+
+To install it, copy the `src/WIDGETS/ELRST` folder from that repository into the `WIDGETS/` folder on your handset SD card. The card must then hold the file `WIDGETS/ELRST/main.lua`. Discover your sensors first, then press the telemetry key, go to the widget setup page, and add the `ELRS Telem` widget to a free space. If you add the widget before the sensors are discovered, restart the handset after you discover them.
+
+A correct sensor discovery gives 17 sensors with Betaflight, and 23 with iNav when a GPS is fitted. Use this as a check that your telemetry is set up properly.
+
+The same repository holds function scripts that let you bind from a switch. Attach `ELRSb.lua`, `ELRSu.lua`, or `ELRSt.lua` to a Special Function.
+
+!!! note "Note"
+    The widget repository gives its tested configuration as a RadioMaster TX16S with EdgeTX 2.5. There is no current compatibility list for later handsets or later EdgeTX versions, so report any problem you find on the widget repository.
+
 ## MSP
 
 To configure Betaflight from your transmitter it's possible to use the Betaflight lua scripts. If you are having trouble, make sure you are running the latest [Betaflight nightly lua](https://github.com/betaflight/betaflight-tx-lua-scripts-nightlies/releases). 
