@@ -2735,6 +2735,36 @@
     "diversity_type": "gemini"
   },
   {
+    "id": "radiomaster:rx_dual:er12",
+    "vendor": "radiomaster",
+    "vendor_name": "RadioMaster",
+    "product_name": "RadioMaster ER12 Dual Band True Diversity RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "dual",
+    "firmware_target": "Unified_ESP32S3_LR1121_RX",
+    "platform": "esp32-s3",
+    "min_power_value": 10,
+    "max_power_value": 100,
+    "pwm_outputs": 12,
+    "diversity_type": "gemini"
+  },
+  {
+    "id": "radiomaster:rx_dual:er16",
+    "vendor": "radiomaster",
+    "vendor_name": "RadioMaster",
+    "product_name": "RadioMaster ER16 Dual Band True Diversity RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "dual",
+    "firmware_target": "Unified_ESP32S3_LR1121_RX",
+    "platform": "esp32-s3",
+    "min_power_value": 10,
+    "max_power_value": 100,
+    "pwm_outputs": 16,
+    "diversity_type": "gemini"
+  },
+  {
     "id": "radiomaster:rx_2400:er3",
     "vendor": "radiomaster",
     "vendor_name": "RadioMaster",
@@ -2748,6 +2778,21 @@
     "max_power_value": 10,
     "pwm_outputs": 3,
     "diversity_type": "single"
+  },
+  {
+    "id": "radiomaster:rx_dual:er3p",
+    "vendor": "radiomaster",
+    "vendor_name": "RadioMaster",
+    "product_name": "RadioMaster ER3pro Dual Band True Diversity RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "dual",
+    "firmware_target": "Unified_ESP32_LR1121_RX",
+    "platform": "esp32",
+    "min_power_value": 10,
+    "max_power_value": 100,
+    "pwm_outputs": 3,
+    "diversity_type": "gemini"
   },
   {
     "id": "radiomaster:rx_2400:er4",
