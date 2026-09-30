@@ -2484,6 +2484,20 @@
     "diversity_type": "antenna"
   },
   {
+    "id": "newbeedrone:rx_2400:rsv2",
+    "vendor": "newbeedrone",
+    "vendor_name": "NewBeeDrone",
+    "product_name": "NewBeeDrone Quadversity Receiver 2.4GHz RX",
+    "category": "rx",
+    "device_class": "receiver",
+    "radio_band": "2400",
+    "firmware_target": "Unified_ESP32C3_2400_RX",
+    "platform": "esp32-c3",
+    "min_power_value": 10,
+    "max_power_value": 100,
+    "diversity_type": "antenna"
+  },
+  {
     "id": "omp:rx_2400:ofs3",
     "vendor": "omp",
     "vendor_name": "OMPHOBBY",
