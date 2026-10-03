@@ -200,6 +200,21 @@ post_url_date_format = "yyyy/MM/dd"
 
 [project.plugins.tags]
 
+[project.plugins.rss]
+match_path = "blog/posts/.*"
+categories = ["categories"]
+
+# CI checks out shallow, so git dates would all be the latest commit
+[project.plugins.rss.date_from_meta]
+as_creation = "date"
+as_update = "date"
+
+[project.plugins.rss.feeds_filenames]
+rss_created = "feed.xml"
+json_created = "feed.json"
+rss_updated = "feed-updated.xml"
+json_updated = "feed-updated.json"
+
 [project.plugins.social.cards_layout_options]
 background_color = "#5f8bf3"
 color = "#FFFFFF"
@@ -576,6 +591,11 @@ name = "We're on Twitter too!"
 icon = "fontawesome/brands/instagram"
 link = "https://instagram.com/expresslrs"
 name = "Follow us on Instagram"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/rss"
+link = "/feed.xml"
+name = "Subscribe to the blog"
 
 [[project.extra.social]]
 icon = "fontawesome/solid/circle-dollar-to-slot"
