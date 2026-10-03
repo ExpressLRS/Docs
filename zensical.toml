@@ -14,6 +14,8 @@ repo_name = "ExpressLRS/ExpressLRS"
 repo_url  = "https://github.com/ExpressLRS/ExpressLRS/releases/"
 edit_uri  = "https://github.com/ExpressLRS/Docs/edit/master/docs/"
 
+strict = true
+
 extra_css = [
     "assets/stylesheets/main.css",
     "assets/stylesheets/colors.css",
@@ -189,6 +191,43 @@ nav = [
     { "Partners Program" = "partners-program.md" },
     { "Contact Us" = "contact-us.md" },
 ]
+
+# ---------------------------------------------------------------------------
+# Markdown extensions — ported from mkdocs.yml; replaces Zensical's defaults
+# ---------------------------------------------------------------------------
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.betterem.smart_enable = "all"
+pymdownx.caret = {}
+pymdownx.critic = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink.repo_url_shorthand = true
+pymdownx.magiclink.user = "ExpressLRS"
+pymdownx.magiclink.repo = "ExpressLRS"
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences.custom_fences = [
+    { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+# Slugged tab ids keep links like firmware-version.md#via-lua-script working
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.slugify = { object = "pymdownx.slugs.slugify", kwds = { case = "lower" } }
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
 
 # ---------------------------------------------------------------------------
 # Plugins
