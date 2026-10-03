@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: ExpressLRS Bi-directional MAVLink support
+description: Receive channel data from external sources.
 ---
 
 ![Software Banner](https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/software.png)
@@ -33,6 +33,7 @@ Scroll down to "HT Enable" and set this to "On"
 ![HT Enable](../assets/screenshots/ht-enable.png)
 
 ### Direct Channel Output
+
 As mentioned above ExpressLRS can override channels directly being sent to the receiver.
 To achieve this, set the "HT Start Channel" to a value from "Aux1" to "Aux10".
 
