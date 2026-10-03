@@ -5,7 +5,7 @@ description = "ExpressLRS documentation site"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "zensical==0.0.50",
+    "zensical==0.0.67",
 ]
 
 [dependency-groups]

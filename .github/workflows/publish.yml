@@ -29,10 +29,8 @@ jobs:
       - name: Build site
         run: uv run zensical build --clean
 
-      - name: Generate llms.txt and redirect stubs
-        run: |
-          uv run python overrides/hooks/llms_txt.py
-          uv run python overrides/hooks/redirects.py
+      - name: Generate llms.txt
+        run: uv run python overrides/hooks/llms_txt.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

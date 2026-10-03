@@ -4,7 +4,7 @@
 .PHONY: install build run serve site shell spellcheck catalog
 
 install:
-	pip install "zensical==0.0.50"
+	pip install "zensical==0.0.67"
 
 build:
 	zensical build --clean
@@ -20,8 +20,7 @@ site:
 	  python3 overrides/hooks/product_catalog.py && \
 	  python3 overrides/hooks/blog_posts.py && \
 	  zensical build --clean && \
-	  python3 overrides/hooks/llms_txt.py && \
-	  python3 overrides/hooks/redirects.py"
+	  python3 overrides/hooks/llms_txt.py"
 
 shell:
 	docker compose run --rm --entrypoint sh docs
