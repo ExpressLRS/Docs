@@ -68,7 +68,7 @@ The minimum versions to use this feature are:
     For the below steps, when a UART connection is mentioned, it will be written as `SERIALx`. Replace `x` with the UART number you are using.
 
     1. Configure `SERIALx_PROTOCOL=2`, `SERIALx_BAUD=460`, and `RSSI_TYPE=5`
-    1. Configure all `SRx_` parameters to be `1`, except for `SRx_ADSB`, `SRx_PARAMS`, `SRx_RAW_CTRL` that should stay `0` (otherwise yaapu will see a few sensors only and GCS might not be able to connect) 
+    1. Configure all `SRx_` or `MAVx_` parameters corresponding to your receiver serial port to be `1`, except for `ADSB`, `PARAMS`, and `RAW_CTRL` that should stay `0` (otherwise yaapu will see a few sensors only and GCS might not be able to connect) 
     1. Save parameters and reboot the flight controller
 
 === "PX4"
