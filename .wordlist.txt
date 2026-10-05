@@ -55,6 +55,7 @@ DJI
 DMA
 DMX
 DSHOT
+DShot
 DVDA
 DX
 DaBit
@@ -248,6 +249,7 @@ SNR
 SPH
 SPI
 Schalonsus
+Schmitt
 SPRacing
 SRXL
 SSID
