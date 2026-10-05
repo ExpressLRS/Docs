@@ -14,8 +14,13 @@ ExpressLRS receivers can communicate using a variety of serial protocols:
 - SUMD
 - DJI RS2 Pro (Modified SBUS with pre-configured limits)
 - HoTT Telemetry
+- MAVLink
+- DisplayPort
+- GPS
 - Tramp
 - SmartAudio
+
+Not every protocol is available on both serial interfaces. `Tramp` and `SmartAudio` are only available on Serial2. `MAVLink` is only available on Serial 1.
 
 ## Receiver Protocol Selection
 
@@ -269,3 +274,40 @@ Example adapter cable setup for ESP8285 PWM receivers like the Happymodel EPW6:
 <figure markdown>
 ![SuperP 2](../assets/images/HoTT-TLM-P6.png)
 </figure>
+
+## GPS Notes
+
+Available since ExpressLRS 4.0. A serial GPS can be connected directly to a receiver. The receiver reads the NMEA output of the GPS and sends the position to the handset as CRSF telemetry. The flight controller is not involved, so this also works on a model that has no GPS of its own, and on a model that has no flight controller at all.
+
+Select `GPS` as the protocol on Serial 1 or on Serial2. Serial2 is only available on ESP32 receivers.
+
+### Wiring
+
+Only one data wire is needed. Connect the TX pin of the GPS to the Serial RX pin of the receiver. The receiver never sends anything to the GPS, so the Serial TX pin of the receiver can be left unconnected.
+
+Check the voltage and current rating of the GPS module before you connect it to a supply.
+
+### Baud Rate
+
+The receiver opens the port at 115200 baud, 8N1. The receiver does not detect the baud rate, and the rate cannot be changed.
+
+!!! warning "Warning"
+	Most GPS modules leave the factory set to 9600 baud. Set the module to 115200 baud and save the setting to the module before you connect it to the receiver. A module left at 9600 baud will produce no telemetry.
+
+### Supported Sentences
+
+The receiver reads three NMEA sentences. The talker ID is not checked, so `$GP`, `$GN`, and other prefixes are all accepted.
+
+| Sentence | Values used |
+|---|---|
+| `GGA` | Latitude, longitude, satellites in use, altitude |
+| `VTG` | Heading, ground speed |
+| `RMC` | Date and time |
+
+A `GGA` sentence sends the position telemetry frame. A `VTG` sentence does not send a frame of its own, because its values are carried in the next `GGA` frame. An `RMC` sentence sends the GPS time frame, which gives the date and time to the handset.
+
+A sentence with a bad NMEA checksum is discarded. Any other sentence type is ignored.
+
+### Telemetry Bandwidth
+
+Each `GGA` sentence produces one telemetry frame, so a GPS set to 10Hz uses much more of the telemetry budget than the same GPS set to 1Hz. If the link carries other telemetry as well, lower the output rate of the GPS or select a faster `Telem Ratio`. See [Telemetry Bandwidth](../info/telem-bandwidth.md) for more information.

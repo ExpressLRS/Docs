@@ -419,6 +419,7 @@ The `Protocol` setting controls the output of the connected receiver. The follow
 * `DisplayPort` - For controlling (primarily) DJI Air units to take them out of Low Power mode. New in ExpressLRS 4.0.
 * `HoTT Telemetry` - Allows to use Graupner HoTT enabled telemetry sensors (Graupner and 3rd party)
 * `MAVLINK` - Introduced on ExpressLRS 3.5.0, it allows the receiver to output native MAVLink into a flight controller. See the [MAVLink](../../software/mavlink.md) page for more details.
+* `GPS` - Introduced on ExpressLRS 4.0, it lets you connect a serial GPS directly to the receiver. The receiver reads the NMEA output and sends the position to the handset as telemetry, with no flight controller needed. The port runs at 115200 baud. See the [GPS Notes](../../software/serial-protocols.md#gps-notes) for wiring and setup.
 
 For more information, see [Receiver Serial Protocols](../../software/serial-protocols.md)
 
@@ -426,7 +427,7 @@ For more information, see [Receiver Serial Protocols](../../software/serial-prot
 
 The `Protocol 2` setting is only available for ESP32-based receivers. This include the True Diversity ones like the RP4TD, Super D, Super P and EP Dual. These receivers have a second UART that can be used for the same purpose as the main UART. Note that not all of the ESP32-based receivers have the extra UART pads or pins exposed for easy use.
 
-It has the same options as the setting above with these additional ones:
+It has the same options as the setting above, except for `MAVLINK`, which is only available on the main UART. It also has these additional ones:
 
 * `Tramp` - If you want to control a VTX using Tramp protocol directly through the ExpressLRS Lua Script's VTX Admin.
 * `SmartAudio` - If you want to control a VTX using SmartAudio protocol directly through the ExpressLRS Lua Script's VTX Admin.
