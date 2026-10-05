@@ -38,6 +38,7 @@ jobs:
       - name: Build site
         run: uv run zensical build --clean
         env:
+          PYTHONPATH: overrides/hooks  # zensical.toml loads git_info from here
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # git_info committer lookups
 
       - name: Generate llms.txt

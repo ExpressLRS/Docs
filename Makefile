@@ -1,13 +1,16 @@
-# Host-only convenience wrappers around `docker compose`.
-# CI invokes `docker compose` directly and never calls `make`.
+# Host-only convenience wrappers around `uv` and `docker compose`.
+# CI invokes `uv` directly and never calls `make`.
 
 .PHONY: install build run serve site shell spellcheck catalog
 
+# zensical.toml loads git_info from here
+export PYTHONPATH := overrides/hooks
+
 install:
-	pip install "zensical==0.0.67"
+	uv sync
 
 build:
-	zensical build --clean
+	uv run zensical build --clean
 
 run: serve
 
