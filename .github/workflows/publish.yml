@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0  # git_info needs full history for page dates
 
       - uses: actions/configure-pages@v5
 
@@ -35,6 +37,8 @@ jobs:
 
       - name: Build site
         run: uv run zensical build --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # git_info committer lookups
 
       - name: Generate llms.txt
         run: uv run python overrides/hooks/llms_txt.py

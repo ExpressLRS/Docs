@@ -28,6 +28,7 @@ extra_javascript = [
     "https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/sorts/tablesort.number.min.js",
     "assets/javascripts/tablesort.js",
+    "assets/javascripts/timeago.js",
     "assets/javascripts/mathjax.js",
     "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
 ]
@@ -656,3 +657,9 @@ name = "Send a Donation!"
 #   * llms_txt.py         (after build)   → site/llms.txt, built from the nav
 #     and page descriptions (the native llmstxt plugin can't read either)
 # ---------------------------------------------------------------------------
+
+# Replaces git-revision-date-localized + git-committers (overrides/hooks/git_info.py)
+[project.markdown_extensions.git_info]
+repository = "ExpressLRS/Docs"
+type = "timeago"
+committers = true
