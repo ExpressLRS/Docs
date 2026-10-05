@@ -308,6 +308,7 @@ nav:
           - MFD Crossbow Tracker Integration: software/mfd-crossbow.md
           - Model Matching: software/model-config-match.md
           - Receiver Serial Protocols: software/serial-protocols.md
+          - RX as TX: software/rx-as-tx.md
           - Sentinel Tracker Integration: software/backpack-telemetry.md
           - Serial VTX: software/serialvtx.md
           - Team Racing: software/teamracing.md
