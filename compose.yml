@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     dns_search: ''
+    environment:
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}  # git_info committer lookups, set in .env
     networks:
       - net
     ports:
