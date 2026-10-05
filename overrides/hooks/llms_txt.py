@@ -1,4 +1,11 @@
-"""Hook to generate llms.txt at build time from the nav configuration."""
+"""Hook to generate llms.txt at build time from the nav configuration.
+
+Runs as an mkdocs hook (on_post_build) or as a standalone script for
+builders like Zensical that have no hook support — run it after the
+site has been built:
+
+    python3 overrides/hooks/llms_txt.py
+"""
 
 import os
 import yaml
@@ -116,3 +123,20 @@ def _format_link(title, url, description=None):
     if description:
         return f"- [{title}]({url}): {description}"
     return f"- [{title}]({url})"
+
+
+if __name__ == "__main__":
+    import tomllib
+
+    _repo_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    with open(os.path.join(_repo_root, "zensical.toml"), "rb") as f:
+        _project = tomllib.load(f)["project"]
+    on_post_build({
+        "site_name": _project["site_name"],
+        "site_url": _project["site_url"],
+        "site_description": _project.get("site_description", ""),
+        "docs_dir": os.path.join(_repo_root, "docs"),
+        "site_dir": os.path.join(_repo_root, "site"),
+        "nav": _project["nav"],
+    })
+    print("llms_txt: wrote site/llms.txt")
