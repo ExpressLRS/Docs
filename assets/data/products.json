@@ -3740,7 +3740,7 @@
     "id": "zerodrag:rx_dual:single",
     "vendor": "zerodrag",
     "vendor_name": "ZeroDrag",
-    "product_name": "Zerodrag C3 900/2400 Dual Band RX",
+    "product_name": "Zerodrag Nexus Duo 900/2400 Dual Band RX",
     "category": "rx",
     "device_class": "receiver",
     "radio_band": "dual",
