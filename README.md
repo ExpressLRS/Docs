@@ -37,7 +37,7 @@ Then you need to build your container:
 docker compose build
 ```
 
-and start mkdocs server:
+and start the Zensical server:
 
 ```
 docker compose up
