@@ -1,6 +1,8 @@
 // This code helps in linking Table of content with Admonition title
 
-var elements = document.getElementsByClassName('custom-heading');
+// Zensical copies heading markup into the sidebar TOC, so match only the
+// headings in the page body or the TOC entries get removed along with them
+var elements = document.querySelectorAll(':is(h1, h2, h3, h4, h5, h6) > .custom-heading');
   
 for (var i = 0; i < elements.length; i++) {
     var ele = elements[i];
@@ -18,6 +20,6 @@ for (var i = 0; i < elements.length; i++) {
 }
 
 // Removing all custom headings
-while (elements.length) {
-    elements[0].parentElement.remove();
+for (var i = 0; i < elements.length; i++) {
+    elements[i].parentElement.remove();
 }

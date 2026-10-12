@@ -1,18 +1,10 @@
-FROM squidfunk/mkdocs-material:9.7.6
-RUN apk add \
-    build-base \
-    libxml2-dev \
-    libxslt \
-    libxslt-dev \
-    dumb-init \
-    aspell \
-    aspell-en
+FROM zensical/zensical:0.0.67
 
-WORKDIR /docs
-COPY ./Makefile ./Makefile
-RUN make install-python-packages
+# WORKDIR, EXPOSE 8000, ENTRYPOINT and the default
+# `serve --dev-addr=0.0.0.0:8000` CMD are inherited from the base image.
 
-EXPOSE 8000
+# git_info reads page dates and committers from git
+RUN apk add --no-cache git
 
-ENTRYPOINT ["dumb-init"]
-CMD ["mkdocs", "serve", "--livereload", "--dev-addr=0.0.0.0:8000"]
+# Lets zensical.toml load the git_info Markdown extension
+ENV PYTHONPATH=/docs/overrides/hooks

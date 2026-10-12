@@ -32,7 +32,7 @@ Using the latest [Betaflight Configurator](https://github.com/betaflight/betafli
 If your Flight Controller model is not in the list above, consult your Flight Controller manufacturer for details.
 
 !!! info "NOTE"
-    The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../quick-start/receivers/hmes900.md/#updating-your-receiver-firmware-es915rxes868rx) instead.
+    The Happymodel Mobula6 900MHz AIO with the CrazyF4 ELRS FC (Target: CRAZYBEEF4DX) doesn't use an SPI ExpressLRS receiver. Check the page for [ES915RX](../quick-start/receivers/hmes900.md#updating-your-receiver-firmware-es915rxes868rx) instead.
     
     Likewise, the [v2.0 BetaFPV F4 1S 5A](https://betafpv.com/collections/brushless-flight-controller/products/f4-1s-5a-aio-brushless-flight-controller-elrs-2-4g) comes with an on-board UART-based ExpressLRS Receiver and doesn't use the SPI ExpressLRS implementation. Use the `BETAFPV AIO 2400 RX` Device target.
 
