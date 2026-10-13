@@ -50,6 +50,7 @@ CubeProgrammer
 Cura
 DBR
 DFU
+DHCP
 DIY
 DJI
 DMA
@@ -157,6 +158,7 @@ MAVLink
 MCU
 MCUs
 MDL
+MDNS
 MFD
 MHz
 MOSFET
@@ -312,6 +314,7 @@ VIN
 VM
 VMain
 VRX
+VRx
 VSCode
 VSCode's
 VTX
@@ -388,6 +391,8 @@ fontawesome
 fullres
 FullRes
 github
+hostname
+hostnames
 hotspot
 html
 http
