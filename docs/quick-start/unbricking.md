@@ -99,6 +99,33 @@ Follow the steps below very closely to recover your "bricked" Receiver.
 <iframe width="640" height="390" src="https://www.youtube.com/embed/jYLwaWBkM_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
+## Full Chip Erase
+
+If a normal reflash completes but the device still misbehaves, the stored settings are the next thing to suspect. A full chip erase wipes the whole flash before the new firmware is written, so the device starts from a clean state.
+
+Use it when:
+
+- The device boots into a loop, or keeps returning to WiFi mode, after a flash that reported success.
+- You flashed the wrong target onto the device and settings from that target are still present.
+- Binding, model match, or output settings behave in a way that does not match what the Web UI shows.
+
+To do it, tick `Erase before flash` in the `Flashing Options` list of the ExpressLRS Configurator, then flash as normal.
+
+The option only appears for flashing methods that can erase:
+
+| Flashing method | `Erase before flash` |
+|---|---|
+| UART | Available |
+| EdgeTX Passthrough | Available |
+| Betaflight Passthrough | Available on ESP8285 devices only |
+| WiFi | Not available |
+
+!!! warning "Warning"
+    A full chip erase removes everything the device has stored. The binding phrase, the model settings, the output and serial configuration, and any customised Hardware Layout are all lost, and none of them can be recovered afterwards. Export your settings from the Import/Export tab of the Web UI first if the device still starts far enough to reach it.
+
+!!! note "Note"
+    A chip erase cannot brick the device. The factory bootloader described at the top of this page is not part of the erasable flash, so UART recovery is always available afterwards.
+
 ## What about the TX?
 
 Most ESP-based ExpressLRS TX Modules either have the via UART Flashing Procedure or the via ETX Passthrough Flashing method available to them. Use any of these other methods to recover your ESP-based TX Module. 
