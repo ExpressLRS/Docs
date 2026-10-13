@@ -43,6 +43,27 @@ Now that you have some basic info, connect your receiver to any free UART on you
 ![Receiver-to-FC Wiring](../../assets/images/receiver-wiring-to-FC.png)
 </figure>
 
+### Powering the Receiver
+
+A receiver draws far more current while it sends telemetry than while it only listens, and the amount rises with the `Tlm Power` setting. A receiver with a power amplifier, set to a high telemetry power, can ask for more current in short bursts than a small flight controller regulator can supply.
+
+When that happens the supply voltage dips, the receiver resets, and the link drops and recovers. This looks exactly like a radio problem, so it is easy to spend a long time on antennas and packet rates when the cause is the 5v rail.
+
+Two things point to the supply rather than the link:
+
+- The problem follows the `Tlm Power` setting instead of the distance. Lower `Tlm Power` and see whether it stops.
+- The receiver restarts, rather than only losing packets. A restart shows as the LED returning to its startup or waiting pattern.
+
+To avoid it:
+
+- Use a 5v pad that comes from a regulator with enough capacity, not from a rail shared with several other loads.
+- Keep the power wires short, and do not use thinner wire than the receiver came with. A long thin wire drops voltage under a current spike.
+- If your model needs high telemetry power, consider feeding the receiver from its own regulator rather than the flight controller.
+- Raise `Tlm Power` one step at a time and test after each step, instead of setting maximum straight away.
+
+!!! note "MatchTX"
+    With `Tlm Power` set to `MatchTX`, the receiver follows the power the transmitter reports. Dynamic Power raises the transmitter power when the link gets worse, so the receiver draws the most current at exactly the moment the link is already struggling. If a marginal supply is going to fail, this is when it fails.
+
 Check for shorts between pads and clean up flux or any soldering residue if you have soldered the receiver yourself. 
 
 !!! warning "Not so fast!"
