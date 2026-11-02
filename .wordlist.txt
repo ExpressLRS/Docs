@@ -466,7 +466,11 @@ sourceforge
 spammy
 stl
 stlink
+<<<<<<< HEAD
 table'd
+=======
+subtrim
+>>>>>>> d1926ff5b (Appease the spellchecker!)
 th
 toc
 toolchain
