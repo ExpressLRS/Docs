@@ -29,23 +29,46 @@ Another important setting is to make sure your craft is **armed** on AUX1=`high`
 
 ### Starting Power
 
-On module power up with Dynamic Power enabled, transmit power is set to the minimum supported power.
+With Dynamic Power enabled, the TX sets the transmit power to the minimum supported power when the radio parameters are reset and the model is disarmed. This happens on module power up, and also after a configuration change that reloads the radio parameters, such as a change to the packet rate, to `Max Power`, or to the selected model.
+
+If the model is armed, the power is not dropped. The TX raises the power to the configured `Max Power` only if the current power is lower. This stops a configuration change from reducing the power during a flight.
+
+With Dynamic Power disabled, the same reset sets the transmit power to the configured `Max Power`.
 
 ### Lowering Power
 
-For non-FLRC modes, Dynamic Power uses the average signal to noise ratio (SNR) reported by the receiver. If the SNR is above a threshold, the power will be lowered by one level. SNR is used because it takes into account interference (the "noise" in signal-to-noise) and is not affected by receivers with LNAs, which boost RSSI dBm. The thresholds for lowering the power are specific to each packet rate. For example, 250Hz (LoRa) will lower the power if SNR is >= 9.5 but 150Hz (LoRa) will lower power if the SNR is >= 8.5.
+For non-FLRC modes, Dynamic Power uses the signal to noise ratio (SNR) reported by the receiver. If the SNR is above a threshold, the power will be lowered by one level. SNR is used because it takes into account interference (the "noise" in signal-to-noise) and is not affected by receivers with LNAs, which boost RSSI dBm.
 
-For FLRC modes (packet rates beginning with `F` or `D`) Dynamic Power averages the last few RSSI dBm readings from the RX. If the RSSI is >= -83dBm, the transmit power is lowered by one level.
+Before ExpressLRS 4.0, this threshold was a fixed value for each packet rate. Since ExpressLRS 4.0 the TX measures the SNR of the link and calculates the threshold from it. The TX keeps the last 48 SNR readings and calculates their mean and standard deviation. In ExpressLRS 4.1 the threshold to lower power is:
+
+`mean + 0.5 x standard deviation`
+
+A reading is only added to the window while the instantaneous LQ is 99% or higher, so a poor link does not distort the statistics. The window is cleared when the packet rate changes. Until the window is full, the TX uses the fixed value for the packet rate listed on the [Signal Health](../info/signal-health.md) page.
+
+For FLRC modes (packet rates beginning with `F` or `D`) Dynamic Power averages the last few RSSI dBm readings from the RX. If the RSSI is above -83dBm, the transmit power is lowered by one level.
 
 For both algorithms, the power will only be lowered if the link quality (LQ) is 95% or higher.
 
 ### Raising Power
 
-The opposite of the "lowering power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. The algorithms are the same as for lowering power, except with different thresholds. Examples:
+The opposite of the "lowering power" algorithm is also in place, to raise power as needed slowly such as when flying away on a long range flight. The algorithms are the same as for lowering power, except with different thresholds.
 
-  * 250Hz (LoRa) raise power if SNR <= 3.0
-  * 150Hz (LoRa) raise power if SNR <= 0.0
-  * F500 (FLRC) raise power if RSSI <= -89 dBm. Note that all FLRC modes use this same limit.
+For non-FLRC modes the threshold to raise power is calculated from the same window of SNR readings:
+
+`mean - (scale x standard deviation)`
+
+`scale` depends on the instantaneous LQ. It is 3.25 at 100% LQ and falls as LQ drops, reaching 0.25 at 85% LQ. It stays at 0.25 below 85% LQ. A lower LQ therefore moves the threshold up and makes the TX add power sooner. The threshold to raise power is always held at least 1dB below the threshold to lower power.
+
+The TX only raises power on SNR when the signal is weak. At least one of these conditions must be true:
+
+  * RSSI is within 21dB of the receiver sensitivity limit for the packet rate
+  * The average LQ is 95% or lower
+
+More than one power level can be added in a single telemetry update. Each level is expected to gain about 2dB of SNR, so the TX adds levels until the expected SNR is above the threshold or `Max Power` is reached.
+
+For FLRC modes, the power is raised if the average RSSI is within 15dB of the receiver sensitivity limit. For example, F500 raises power if RSSI <= -89 dBm. All FLRC modes use this same limit.
+
+Until the window of SNR readings is full, the fixed value for the packet rate listed on the [Signal Health](../info/signal-health.md) page is used instead. For example, 250Hz (LoRa) starts by raising power if SNR <= 3.0, and 150Hz (LoRa) starts by raising power if SNR <= 0.0.
 
 To be proactive when telemetry is not received, Dynamic Power will also increase power one level for each missed telemetry packet, starting when two are missed back to back.
 
@@ -57,11 +80,17 @@ To be proactive when telemetry is not received, Dynamic Power will also increase
 
 In addition to the slow power ramp up, three LQ-based conditions will raise the power immediately to the maximum configured value.
 
-1. If the LQ ever drops below the hard limit (50% LQ), the power will jump to the max.
+1. If the LQ ever drops to the hard limit (50% LQ) or below, the power will jump to the max.
 2. If the LQ drops suddenly in a single telemetry update compared to the moving average. This is intended to react to flying behind a structure where the LQ suddenly takes a hit and is expected to drop further. Example: LQ is running 100% (as ExpressLRS does under most conditions) and the TX receives a telemetry packet with 80% LQ, the power will jump to the max.
 3. If telemetry is lost entirely with the arm switch high. Any time the TX is "disconnected" while armed, the power will jump to the max.
 
-Finally, if reported LQ is below 85% and no other condition has been met this period, increase the power one level.
+Finally, if reported LQ is 85% or below and no other condition has been met this period, increase the power one level.
+
+### Receiver Overload Protection
+
+If the receiver reports an RSSI of -5dBm or higher, the TX lowers the power by one level. A signal this strong can saturate the receiver front end. This check runs each time telemetry is received, and it applies even when Dynamic Power is disabled. It is the usual reason for the power to drop when the model is on the bench next to the transmitter.
+
+With Dynamic Power disabled, the power returns to the configured `Max Power` after the reported RSSI falls to -20dBm or lower.
 
 ## Notes
 
