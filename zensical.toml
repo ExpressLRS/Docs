@@ -545,6 +545,7 @@ features = [
     "toc.follow",
     "content.action.edit",
     "content.action.view",
+    "content.tooltips",
 ]
 
 [project.theme.font]
