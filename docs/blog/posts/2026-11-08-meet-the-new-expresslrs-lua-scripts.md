@@ -14,9 +14,9 @@ The ExpressLRS Lua script has had a major overhaul. It loads faster, colour radi
 
 <!-- more -->
 
-## A new home and release cycle
+## A new home and updated priorities
 
-For years the Lua script was a single `elrs.lua` file in the main firmware repository, and it only changed when the firmware did. The scripts now live in [ExpressLRS/Lua](https://github.com/ExpressLRS/Lua) and are released on their own, starting with v1.0. That means fixes and new features can reach your radio without waiting for the next firmware release.
+Since its inception, the Lua script was a single `elrs.lua` file with a design focus on memory optimization and a single-file install. These priorities meant there was rarely a reason to upgrade, as very little functionality was added over the years: there just wasn't space for it. The scripts now live in [ExpressLRS/Lua](https://github.com/ExpressLRS/Lua) and are designed for rich and expanding functionality, which can be released as needed without waiting for the next ExpressLRS firmware version.
 
 Every [release](https://github.com/ExpressLRS/Lua/releases) is a single zip that you extract onto your SD card, and it contains all of the tools and widgets below.
 
