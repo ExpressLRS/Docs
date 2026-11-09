@@ -8,10 +8,12 @@ AIOs
 Agha
 Aion
 AirPort
+AliExpress
 Analytics
 ArduPilot
 Atto
 Axisflying
+bando
 BETAFPV
 BLE
 BLHeli
@@ -29,6 +31,7 @@ BoxPro
 Bri'ish
 Börner
 CCPA
+CFR
 CLI
 CLK
 COMs
@@ -133,6 +136,8 @@ ImmersionRC
 ImpulseRC
 Init
 Ironman
+ITAR
+jammer
 JHEMCU
 JLCPCB
 JST
@@ -152,6 +157,7 @@ LinkStats
 LinkFlow
 Linux
 LoRa
+lossy
 Lua
 MAVLink
 MCU
@@ -301,6 +307,7 @@ UDP
 UFL
 UI
 UID
+UIDs
 USB's
 Unbricking
 Uncommented
@@ -347,6 +354,7 @@ bootloader
 brainer
 brushless
 btn
+btw
 bugfixes
 callout
 chipset
@@ -359,9 +367,11 @@ counterflow
 counterintuitive
 crc
 ctzsnooze
+cybersecurity
 dBm
 de
 deadbyte
+deadbyte's
 degC
 desolder
 desync
@@ -383,6 +393,7 @@ failsafes
 failsafing
 faq
 febbyeka
+fearmongering
 flybarless
 fontawesome
 fullres
@@ -455,6 +466,7 @@ sourceforge
 spammy
 stl
 stlink
+table'd
 th
 toc
 toolchain
@@ -462,6 +474,7 @@ tx
 txbp
 txt
 uncomment
+unencrypted
 uninversion
 uninverted
 unmodded
@@ -576,3 +589,4 @@ counsel
 Rotorflight
 X-Band
 heggy_fpv
+zomg
