@@ -180,6 +180,7 @@ Multicopter
 Multicopters
 MultiGP
 NDA
+NMEA
 NPN
 NRST
 Namimno
