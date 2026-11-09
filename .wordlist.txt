@@ -590,3 +590,5 @@ Rotorflight
 X-Band
 heggy_fpv
 zomg
+wimalopaan
+CapnBry
