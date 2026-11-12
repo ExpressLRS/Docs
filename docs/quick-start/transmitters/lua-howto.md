@@ -307,6 +307,15 @@ This section contains all the WiFi-related functions.
 
 * `Enable VRX WiFi` will put the VRX [Backpack](https://github.com/ExpressLRS/Backpack) that is bound and connected to the onboard TX Backpack into WiFi mode to facilitate updating via WiFi.
 
+### Receiver Firmware (ESP32 TXes Only)
+
+!!! warning "Test builds only"
+    This folder only exists in the test builds of ExpressLRS and EdgeTX described on [this page](../../software/rx-sd-update.md).
+
+* `Update Receiver` sends firmware from the radio's SD card to the connected receiver. It asks for confirmation first.
+
+* `Sync from WiFi` downloads receiver firmware to the radio's SD card over WiFi.
+
 ### Backpack Options
 
 The parameters in this folder enables you to change the Backpack-related parameters.
