@@ -17,8 +17,8 @@ Your radio's SD card can hold receiver firmware, and your TX module can push it 
 
 There are two actions, both in the ExpressLRS Lua script under `Receiver Firmware`:
 
-* `Sync from WiFi` joins your WiFi from the TX module, downloads receiver firmware and stores it on the radio's SD card. Nothing on the receiver changes.
-* `Update Receiver` takes the matching firmware from the SD card and sends it to the connected receiver. It takes about 10 to 15 seconds.
+* `Sync from WiFi` joins your WiFi from the TX module, downloads receiver firmware and stores it on the radio's SD card. Nothing on the receiver changes. The menu shows the network it will use, for example `Sync from WiFi (HomeNet)`.
+* `Update Receiver` takes the matching firmware from the SD card and sends it to the receiver. It takes about 10 to 20 seconds. A connected receiver is updated right away; one that isn't connected is updated when you power it on (see [Updating a receiver that won't connect](#updating-a-receiver-that-wont-connect)).
 
 You can skip `Sync from WiFi` and copy the firmware onto the card yourself. See [Getting the images](#getting-the-images).
 
@@ -29,7 +29,7 @@ You can skip `Sync from WiFi` and copy the firmware onto the card yourself. See 
 * **TX module** with an ESP32-family chip (ESP32, ESP32-S3 or ESP32-C3), running the ExpressLRS build linked above. It was developed on an ESP32-S3 module. ESP8285 and STM32 TX modules don't have the feature.
 * **Receiver** with an ESP32-family chip or an ESP8285, running the same ExpressLRS build. STM32 receivers are not supported.
 * **A binding phrase** set on both the TX module and the receiver, and the same on both. The TX module works out the receiver's address from it. Receivers bound with the Bind button are not covered.
-* **The receiver powered and connected** to your TX module (the `C` on the Lua script's title bar), and **disarmed**.
+* **The receiver** either connected to your TX module (the `C` on the Lua script's title bar), or within reach so you can power it on during the update. Either way **disarmed**.
 * **An SD card** in the radio. While the radio is in USB storage mode it won't offer the card to the TX module.
 * **WiFi** on the 2.4 GHz band, but only if you use `Sync from WiFi`.
 
@@ -141,7 +141,7 @@ When you run `Update Receiver`, the receiver tells the TX module its image key. 
 | ESP8285 2.4 GHz | `esp8285-2400` |
 | ESP8285 900 MHz | `esp8285-900` |
 
-If you aren't sure, run `Update Receiver` with no image on the card. The error names the key, for example `no image for esp8285-2400`.
+If you aren't sure, run `Update Receiver` with no image on the card. The error names the key, for example `No esp8285-2400 image on SD - sync first`.
 
 ### Images you built yourself
 
@@ -157,7 +157,7 @@ A normal build file isn't what goes on the card. Every build ends with a blank b
 
 Before you start, check these:
 
-* The receiver is powered and the radio shows the link as connected.
+* The receiver is powered and the radio shows the link as connected. If it won't connect, see [Updating a receiver that won't connect](#updating-a-receiver-that-wont-connect).
 * The aircraft is disarmed and the props are off. Both the radio and the receiver refuse to start an update when armed.
 * The right image is on the card.
 
@@ -211,12 +211,32 @@ The result box says `RX updated to <file name>`, where the file name is the imag
 
 The receiver reboots into the new firmware. The ESP8285 unpacks the new image as it starts, so it can take a little longer to come back. When the link comes back, the receiver is bound to your TX module as before and keeps its settings. Check the version in the Lua script, see [Checking the receiver firmware version](../quick-start/receivers/firmware-version.md).
 
-If anything goes wrong before the receiver confirms the image, it stays on the old firmware. It restarts by itself after 30 seconds without a packet from the TX module.
+If anything goes wrong before the receiver confirms the image, it stays on the old firmware. The TX module tells it to restart right away, so the link comes back within a few seconds. If the TX module can't reach it any more, the receiver restarts by itself after 30 seconds.
+
+### Updating a receiver that won't connect
+
+Every receiver with this feature listens for the TX module for a moment each time it powers on. That's how you reach a receiver that can't connect: one on a different major version than your TX module, one with settings that don't match, or one that's simply off.
+
+1. Make sure the receiver is **powered off**.
+2. Run `Update Receiver` as above. With no receiver connected, the radio shows `Power on the receiver now`.
+
+    <figure markdown>
+    ![Waiting for the receiver to power on](../assets/images/rx-sd-update/update-poweron.png)
+    </figure>
+
+3. Power the receiver on within 30 seconds, close to the radio. The update starts on its own and runs as usual.
+
+If nothing answers within 30 seconds the radio shows `Receiver not found at power-on`. Check that the receiver has the same binding phrase as the TX module and runs firmware with this feature, then try again.
+
+!!! tip "Changing major versions"
+    A receiver on a new major version can't connect to a TX module on the old one, and the other way around. The order that keeps everything flying: update the receivers first while they still connect, then update the TX module. If you get it the other way round, use the power-on method above.
+
+Listening at power-on doesn't slow down connecting: the receiver stops the moment it hears its TX module, and on the bench it connected just as fast with it as without it.
 
 ## Run a sync
 
 1. Open the Lua script and go to `Receiver Firmware`.
-2. Select `Sync from WiFi` and press ++enter++. There is no confirmation because sync only writes to the SD card.
+2. Select `Sync from WiFi` and press ++enter++. The name in brackets is the network it will join: the last one a sync used, or the home network set on the TX module. There is no confirmation because sync only writes to the SD card.
 
     <figure markdown>
     ![Sync from WiFi selected](../assets/images/rx-sd-update/lua-folder-sync.png)
@@ -245,20 +265,23 @@ The message shows up either in a box on the radio, or in the Lua script's `Recei
 | Message | Meaning and fix |
 | --- | --- |
 | `Busy` | A session is already running. Wait for it to end. |
-| `No answer from radio` | The radio didn't offer the card within 3 seconds. Common reasons: the radio doesn't run the EdgeTX build above, the arming switch is on, or the radio is in USB storage mode. Fix that and try again. |
-| `Module refused: Armed` | The aircraft is armed. Disarm. |
-| `Module refused: No receiver` or `No receiver connected` | The TX module has no link to a receiver. Power the receiver and wait for the `C` in the Lua title bar. |
-| `Module refused: RX no ack` or `Receiver did not respond` | The receiver did not acknowledge the update command. Possible reasons: it runs firmware without this feature, or the link is too weak. Move closer and try again. If it keeps happening, flash the receiver the old way once. |
+| `No answer - needs EdgeTX with SD support` | The radio didn't answer within 3 seconds. It doesn't run an EdgeTX version with this feature, see [What you need](#what-you-need). |
+| `Radio: armed` | The radio's arming switch for this module is on. Disarm. |
+| `Radio: USB storage is on` | The radio is connected to a computer as a USB drive. Unplug it or eject the drive. |
+| `Radio: no SD card` | Put an SD card in the radio. |
+| `Module refused: Armed` | The TX module sees the aircraft as armed (channel 5 high). Disarm. |
+| `Module refused: RX firmware too old?` or `Receiver didn't respond - firmware too old?` | The receiver is connected but ignored the update command. It most likely runs firmware from before this feature: flash it the old way once. A very weak link can do the same, so move closer and try again first. |
 | `No answer from module`, `Module stopped answering`, `Module not ready`, `Module port busy` | The radio lost the TX module. Check that the module is powered and that the CRSF settings in the model are right (see [Radio Preparation](../quick-start/transmitters/tx-prep.md)). Power cycle the module and try again. |
-| `HELLO failed` | The TX module couldn't talk to the radio's card service. The radio most likely doesn't run the right EdgeTX build. |
+| `Radio didn't answer` | The TX module couldn't talk to the radio's card service. Power cycle both and try again. |
 
 ### Update Receiver fails
 
 | Message | Meaning and fix |
 | --- | --- |
-| `Receiver did not answer (xx:xx tx ok N fail N)` | The receiver never answered over ESP-NOW within 10 seconds. The usual reasons are the receiver being armed (channel 5 high), a different binding phrase on the receiver (or none), a receiver too far from the TX module, or a receiver without this feature. Check each, then try again. `xx:xx` is the end of the address the TX module looked for. |
-| `no image for <key>` | There is no `.bin` or `.bin.gz` in `/ELRS/FIRMWARE/<key>/`. ESP8285 receivers only accept `.bin.gz`. Get the image with `Sync from WiFi` or copy it. |
-| `Can't open image` | The file can't be read, or it isn't a valid gzip file. Copy it to the card again. |
+| `Receiver not found` | The receiver took the update command but never answered over ESP-NOW within 10 seconds, usually because it's too far from the TX module. Move it closer and try again. |
+| `Receiver not found at power-on` | Nothing answered while the radio showed `Power on the receiver now`. Check that the receiver was powered on in time, has the same binding phrase as the TX module, and runs firmware with this feature. |
+| `No <key> image on SD - sync first` | There is no `.bin` or `.bin.gz` in `/ELRS/FIRMWARE/<key>/`. ESP8285 receivers only accept `.bin.gz`. Get the image with `Sync from WiFi` or copy it. |
+| `Can't read image from SD` | The file can't be read, or it isn't a valid gzip file. Copy it to the card again. |
 | `Image too big for RX` | The image doesn't fit the receiver. Check that it's the right image for that receiver. ESP8285 receivers have room for about 430 KB of gzip file. |
 | `RX refused the image` | The receiver couldn't prepare for the image. It's either too big or the receiver has no room for it. Make sure it's the right key. |
 | `Transfer failed` | The transfer broke off, usually because the radio link dropped out. Put the receiver closer to the TX module and try again. Check the SD card if it keeps happening. |
@@ -281,7 +304,7 @@ The message shows up either in a box on the radio, or in the Lua script's `Recei
 
 ## Limits
 
-* The receiver must already run firmware with this feature. The first install is done another way.
+* The receiver must already run firmware with this feature. The first install is done another way. After that, it can be updated even when it can't connect, by powering it on during the update.
 * A receiver without a binding phrase, or with a different one than the TX module, can't be reached.
 * The aircraft must be disarmed. A running update means no link and no control.
 * Only ESP32-family and ESP8285 receivers, and only ESP32-family TX modules.
