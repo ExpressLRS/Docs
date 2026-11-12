@@ -17,7 +17,7 @@ Your radio's SD card can hold receiver firmware, and your TX module can push it 
 
 There are two actions, both in the ExpressLRS Lua script under `Receiver Firmware`:
 
-* `Sync from WiFi` joins your WiFi from the TX module, downloads receiver firmware and stores it on the radio's SD card. Nothing on the receiver changes. The menu shows the network it will use, for example `Sync from WiFi (HomeNet)`.
+* `Sync from WiFi` joins your home WiFi from the TX module, downloads the receiver firmware that matches the TX module's own firmware, and stores it on the radio's SD card. Nothing on the receiver changes. The menu shows the network, for example `Sync from WiFi (HomeNet)`.
 * `Update Receiver` takes the matching firmware from the SD card and sends it to the receiver. It takes about 10 to 20 seconds. A connected receiver is updated right away; one that isn't connected is updated when you power it on (see [Updating a receiver that won't connect](#updating-a-receiver-that-wont-connect)).
 
 You can skip `Sync from WiFi` and copy the firmware onto the card yourself. See [Getting the images](#getting-the-images).
@@ -31,7 +31,7 @@ You can skip `Sync from WiFi` and copy the firmware onto the card yourself. See 
 * **A binding phrase** set on both the TX module and the receiver, and the same on both. The TX module works out the receiver's address from it. Receivers bound with the Bind button are not covered.
 * **The receiver** either connected to your TX module (the `C` on the Lua script's title bar), or within reach so you can power it on during the update. Either way **disarmed**.
 * **An SD card** in the radio. While the radio is in USB storage mode it won't offer the card to the TX module.
-* **WiFi** on the 2.4 GHz band, but only if you use `Sync from WiFi`.
+* **Your home WiFi set on the TX module**, for `Sync from WiFi`. That's the same `WiFi SSID` and `WiFi password` you set in the ExpressLRS Configurator or the module's web page for home network updates. It has to be a 2.4 GHz network.
 
 !!! note "The first install is the old way"
     The receiver has to already be running firmware that includes this feature. Flash it once with the Configurator, WiFi or passthrough as usual. After that, updates can come from the SD card.
@@ -42,7 +42,6 @@ Everything lives in an `ELRS` folder at the top level of the card. The radio onl
 
 ```
 /ELRS/
-    WIFI.TXT
     FIRMWARE/
         manifest.json
         esp32-2400/
@@ -51,38 +50,28 @@ Everything lives in an `ELRS` folder at the top level of the card. The radio onl
             4.1.0.bin.gz
 ```
 
-You create `/ELRS/` and `WIFI.TXT` yourself. The radio creates `/ELRS/` when the first session starts. `FIRMWARE/` and everything under it is created by `Sync from WiFi`, or by you if you copy images by hand.
-
-### WIFI.TXT
-
-You only need this file for `Sync from WiFi`. Plain text, one value per line:
-
-```
-MyHomeWiFi
-my-wifi-password
-http://192.168.1.50:8088/manifest.json
-```
-
-1. Line 1: the WiFi network name.
-2. Line 2: the password.
-3. Line 3 (optional): the URL of the manifest, see below.
-
-Notes:
-
-* The file must stay under 255 bytes.
-* Blank lines are skipped, so the network needs a password. Open networks don't work with this file.
-* The URL has to start with `http://`. `https://` is not supported.
-* Without line 3, the TX module uses the URL from the last sync that finished with no failures. If there is none, you get `no manifest URL set`.
-* Without `WIFI.TXT`, the TX module falls back to the home WiFi name and password flashed into its own firmware options.
+There's nothing to set up by hand. The radio creates `/ELRS/` when the first session starts, and `Sync from WiFi` fills `FIRMWARE/`.
 
 ## Getting the images
 
 ### Option 1: Sync from WiFi
 
-The TX module downloads a **manifest**, a small JSON file that lists the images. Then it downloads each image in the list, checks its SHA-256 and saves it on the card. Images that are already on the card with the right size are skipped.
+This is the normal way. The TX module joins your home WiFi and downloads the receiver images that were built together with **its own firmware**. Every ExpressLRS build publishes them next to the firmware itself, so whatever version your TX module runs, the receivers get the matching one. Images already on the card are skipped.
 
-!!! info "Not decided yet: where the manifest lives"
-    There is no official manifest or download host yet. Until there is, you need to host the manifest and the images yourself, on a PC or a NAS that your WiFi can reach. Any web server works, including `python -m http.server`.
+So updating everything is two steps: update the TX module the way you always do, then run `Sync from WiFi`. After that, update each receiver whenever it suits you.
+
+!!! note "Builds you made yourself"
+    Images are only published for builds made by ExpressLRS. A TX module running a firmware you compiled yourself finds nothing and shows `No RX images published for this TX build`. See [For developers](#for-developers) to point it at your own images.
+
+### For developers
+
+To sync from somewhere else, for example images from your own build served on your PC, put a file called `WIFI.TXT` in `/ELRS/` whose first line is the URL of a manifest:
+
+```
+http://192.168.1.50:8088/manifest.json
+```
+
+The URL has to start with `http://`. The TX module still joins its home network. Delete the file to go back to the published images.
 
 A manifest looks like this:
 
@@ -109,7 +98,8 @@ A manifest looks like this:
 * Each name under `images` is an [image key](#which-image-goes-to-which-receiver). Only list the keys you need.
 * `file` is a path relative to the manifest's own URL, or a full `http://` URL.
 * `size` is the size in bytes of the file as downloaded. `sha256` is its SHA-256 as 64 hex characters.
-* `version` and the key may only use letters, digits, `.`, `_` and `-`, up to 24 characters. An entry that breaks this is counted as failed.
+* The key and `version` may only use letters, digits, `.`, `_` and `-`. Keys can be up to 18 characters and versions up to 24. An entry that breaks this is counted as failed.
+* `python/rx_sd_release.py` in the ExpressLRS repository makes the images and the manifest from a build folder, the same way the official builds do.
 
 On the card, an image is stored as `/ELRS/FIRMWARE/<key>/<version>.bin.gz`. A copy of the manifest is saved as `/ELRS/FIRMWARE/manifest.json` when every image arrived. Download problems never leave a half-written image under its real name. A download in progress is called `<version>.bin.gz.part` and gets deleted if it fails.
 
@@ -126,7 +116,9 @@ The file can have any name as long as it ends in `.bin` or `.bin.gz` and the fol
 
 ### Which image goes to which receiver
 
-When you run `Update Receiver`, the receiver tells the TX module its image key. The TX module looks in `/ELRS/FIRMWARE/<key>/` and takes **the last file in alphabetical order**. The sort is by text, not by version number, so `4.9.0` sorts after `4.10.0`. Keep one image per folder and the question goes away.
+When you run `Update Receiver`, the receiver tells the TX module its image key. The TX module takes the image the last `Sync from WiFi` stored for that key. If you copied images by hand and never synced, it takes **the last file in alphabetical order** in `/ELRS/FIRMWARE/<key>/`. That sort is by text, not by version number, so `4.9.0` sorts after `4.10.0`: keep one image per folder.
+
+Receivers built for the EU (LBT) on 2.4 GHz have their own images, under the same key with `-lbt` added, for example `esp32-2400-lbt`. They never get the FCC image, and the other way around.
 
 | Receiver | Image key |
 | --- | --- |
@@ -150,8 +142,7 @@ A normal build file isn't what goes on the card. Every build ends with a blank b
 * **ESP32-family:** cut the block off the end of the image.
 * **ESP8285:** cut it off and put an erased block (2704 bytes of `0xFF`) in its place, then gzip the result. The receiver keeps a copy of its own block and puts it back after the new firmware on its first boot, so it ends up configured exactly as before.
 
-!!! info "Not decided yet: tooling"
-    The script that does this is not published yet, and a release pipeline that produces card-ready images doesn't exist. If you build your own images today, you need to do this step by hand or ask in the ExpressLRS Discord.
+`python/rx_sd_release.py` in the ExpressLRS repository does both, see [For developers](#for-developers).
 
 ## Run an update
 
@@ -229,14 +220,14 @@ Every receiver with this feature listens for the TX module for a moment each tim
 If nothing answers within 30 seconds the radio shows `Receiver not found at power-on`. Check that the receiver has the same binding phrase as the TX module and runs firmware with this feature, then try again.
 
 !!! tip "Changing major versions"
-    A receiver on a new major version can't connect to a TX module on the old one, and the other way around. The order that keeps everything flying: update the receivers first while they still connect, then update the TX module. If you get it the other way round, use the power-on method above.
+    Receivers on an older major version can't connect to a TX module on a newer one. That's fine: update the TX module, run `Sync from WiFi`, then update each receiver with the power-on method above whenever you get to it.
 
 Listening at power-on doesn't slow down connecting: the receiver stops the moment it hears its TX module, and on the bench it connected just as fast with it as without it.
 
 ## Run a sync
 
 1. Open the Lua script and go to `Receiver Firmware`.
-2. Select `Sync from WiFi` and press ++enter++. The name in brackets is the network it will join: the last one a sync used, or the home network set on the TX module. There is no confirmation because sync only writes to the SD card.
+2. Select `Sync from WiFi` and press ++enter++. The name in brackets is the home network set on the TX module. There is no confirmation because sync only writes to the SD card.
 
     <figure markdown>
     ![Sync from WiFi selected](../assets/images/rx-sd-update/lua-folder-sync.png)
@@ -295,10 +286,10 @@ The message shows up either in a box on the radio, or in the Lua script's `Recei
 
 | Message | Meaning and fix |
 | --- | --- |
-| `no WiFi network set` | There is no `WIFI.TXT` and no home network in the TX module's options. See [WIFI.TXT](#wifitxt). |
-| `no manifest URL set` | Add the manifest URL as line 3 of `WIFI.TXT`. |
-| `could not join <network>` | The TX module couldn't join within 20 seconds. Check the name and password in `WIFI.TXT`, and that the network is 2.4 GHz and in range. |
-| `manifest GET <code>` | The server answered the manifest request with that HTTP code, for example `404` for a wrong path. A negative code means the server couldn't be reached at all. |
+| `No home WiFi set on the TX module` | Set `WiFi SSID` and `WiFi password` for the TX module in the Configurator or on its web page, see [What you need](#what-you-need). |
+| `could not join <network>` | The TX module couldn't join within 20 seconds. Check the home WiFi name and password set on the TX module, and that the network is 2.4 GHz and in range. |
+| `No RX images published for this TX build` | The TX module runs a firmware ExpressLRS didn't build (your own, or a pull request build that has since been cleaned up). Flash an official build, or see [For developers](#for-developers). |
+| `manifest GET <code>` | The server answered the manifest request with that HTTP code. A negative code means it couldn't be reached at all: check that your home network has internet access. |
 | `bad manifest` | The file isn't valid JSON, or has no `images` object. |
 | `Synced ..., <n> failed` | Some images didn't arrive. The usual reasons are a wrong path, a wrong `size` or `sha256` in the manifest, or an invalid key or version name. The images that did arrive stay on the card. Fix the manifest and run it again. |
 
@@ -308,6 +299,6 @@ The message shows up either in a box on the radio, or in the Lua script's `Recei
 * A receiver without a binding phrase, or with a different one than the TX module, can't be reached.
 * The aircraft must be disarmed. A running update means no link and no control.
 * Only ESP32-family and ESP8285 receivers, and only ESP32-family TX modules.
-* WiFi sync works over plain `http://` on 2.4 GHz networks that need a password.
-* There is no official manifest host and no official image build yet.
+* WiFi sync uses the TX module's home network, on 2.4 GHz, over plain `http://`.
+* Receiver images are published for official ExpressLRS builds only.
 * Only tested on a RadioMaster TX16S MK1.
