@@ -24,6 +24,7 @@ You can skip `Sync from WiFi` and copy the firmware onto the card yourself. See 
 
 ## What you need
 
+* **The current `elrs.lua` script** from the ExpressLRS repository, in `/SCRIPTS/TOOLS/` on the radio. Delete old copies such as `ELRS.lua`, `elrsV2.lua` and `elrsV3.lua`. See [the Lua script guide](../quick-start/transmitters/lua-howto.md#installing-the-lua-script).
 * **EdgeTX** radio running the build linked above. It was developed on a RadioMaster TX16S MK1 (480x272 color screen). Radios with other screens use a simpler popup. That hasn't been tested.
 * **TX module** with an ESP32-family chip (ESP32, ESP32-S3 or ESP32-C3), running the ExpressLRS build linked above. It was developed on an ESP32-S3 module. ESP8285 and STM32 TX modules don't have the feature.
 * **Receiver** with an ESP32-family chip or an ESP8285, running the same ExpressLRS build. STM32 receivers are not supported.
@@ -162,14 +163,19 @@ Before you start, check these:
 
 Steps:
 
-1. Press ++"SYS"++, open `Tools` and run the `ExpressLRS` Lua script.
+1. Press ++"SYS"++, open `Tools`, then `Apps`, and run the `ExpressLRS` Lua script.
+
+    <figure markdown>
+    ![ExpressLRS in the Apps list](../assets/images/rx-sd-update/tools-apps.png)
+    </figure>
+
 2. Scroll to `Receiver Firmware` and press ++enter++.
 
     <figure markdown>
     ![Lua main screen with Receiver Firmware selected](../assets/images/rx-sd-update/lua-main.png)
     </figure>
 
-3. Select `Update Receiver` and press ++enter++.
+3. The folder's title bar reads `Receiver Firmware`. Select `Update Receiver` and press ++enter++.
 
     <figure markdown>
     ![Receiver Firmware folder](../assets/images/rx-sd-update/lua-folder.png)
