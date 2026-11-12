@@ -148,7 +148,7 @@ If you aren't sure, run `Update Receiver` with no image on the card. The error n
 A normal build file isn't what goes on the card. Every build ends with a blank block where the Configurator or the flasher writes the binding phrase, WiFi options and hardware layout. For the SD card update, the receiver keeps its own copy of those, so the image must not carry a blank one:
 
 * **ESP32-family:** cut the block off the end of the image.
-* **ESP8285:** cut it off and put an erased block (2704 bytes of `0xFF`) in its place, then gzip the result. The receiver carries its options, hardware layout and product name across the update in its flash storage.
+* **ESP8285:** cut it off and put an erased block (2704 bytes of `0xFF`) in its place, then gzip the result. The receiver keeps a copy of its own block and puts it back after the new firmware on its first boot, so it ends up configured exactly as before.
 
 !!! info "Not decided yet: tooling"
     The script that does this is not published yet, and a release pipeline that produces card-ready images doesn't exist. If you build your own images today, you need to do this step by hand or ask in the ExpressLRS Discord.
