@@ -118,7 +118,7 @@ The file can have any name as long as it ends in `.bin` or `.bin.gz` and the fol
 
 When you run `Update Receiver`, the receiver tells the TX module its image key. The TX module takes the image the last `Sync from WiFi` stored for that key. If you copied images by hand and never synced, it takes **the last file in alphabetical order** in `/ELRS/FIRMWARE/<key>/`. That sort is by text, not by version number, so `4.9.0` sorts after `4.10.0`: keep one image per folder.
 
-Receivers built for the EU (LBT) on 2.4 GHz have their own images, under the same key with `-lbt` added, for example `esp32-2400-lbt`. They never get the FCC image, and the other way around.
+Receivers built for the EU (LBT) on 2.4 GHz have their own images, under the same key with `-lbt` added, for example `esp32-2400-lbt`. A TX module only syncs images for its own build: an EU TX module fetches the `-lbt` images, any other fetches the rest. A receiver from the other region can still connect to your TX module, but `Update Receiver` won't change its region: it tells you so instead. To update one, copy its `-lbt` (or non-LBT) image onto the card yourself.
 
 | Receiver | Image key |
 | --- | --- |
@@ -271,6 +271,7 @@ The message shows up either in a box on the radio, or in the Lua script's `Recei
 | --- | --- |
 | `Receiver not found` | The receiver took the update command but never answered over ESP-NOW within 10 seconds, usually because it's too far from the TX module. Move it closer and try again. |
 | `Receiver not found at power-on` | Nothing answered while the radio showed `Power on the receiver now`. Check that the receiver was powered on in time, has the same binding phrase as the TX module, and runs firmware with this feature. |
+| `LBT receiver - this TX only syncs FCC` (or the other way around) | The receiver was built for another region than your TX module, so a sync never brings its image. Copy the image for its region onto the card by hand, see [Which image goes to which receiver](#which-image-goes-to-which-receiver). |
 | `No <key> image on SD - sync first` | There is no `.bin` or `.bin.gz` in `/ELRS/FIRMWARE/<key>/`. ESP8285 receivers only accept `.bin.gz`. Get the image with `Sync from WiFi` or copy it. |
 | `Can't read image from SD` | The file can't be read, or it isn't a valid gzip file. Copy it to the card again. |
 | `Image too big for RX` | The image doesn't fit the receiver. Check that it's the right image for that receiver. ESP8285 receivers have room for about 430 KB of gzip file. |
