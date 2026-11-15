@@ -15,6 +15,7 @@
     search: "",
     classification: "",
     band: "",
+    mcu: "",
     vendor: "",
     screen: "",
     diversity: "",
@@ -35,6 +36,7 @@
     els.vendor = document.getElementById("pf-vendor");
     els.classification = document.getElementById("pf-classification");
     els.band = document.getElementById("pf-band");
+    els.mcu = document.getElementById("pf-mcu");
     els.minPower = document.getElementById("pf-min-power");
     els.diversity = document.getElementById("pf-diversity");
     els.minPwm = document.getElementById("pf-min-pwm");
@@ -55,6 +57,7 @@
     search: "search",
     classification: "classification",
     band: "band",
+    mcu: "mcu",
     vendor: "vendor",
     screen: "screen",
     diversity: "diversity",
@@ -94,6 +97,23 @@
     return { "2400": "2.4GHz", "900": "900MHz", dual: "Dual-band" }[value] || value;
   }
 
+  // Exact chip name for display, e.g. "esp32-c3" -> "ESP32-C3"
+  function mcuLabel(product) {
+    return product.platform ? String(product.platform).toUpperCase() : null;
+  }
+
+  // MCU family used by the filter: ESP32-C3/S3 variants count as "esp32"
+  function mcuFamily(product) {
+    var platform = String(product.platform || "").toLowerCase();
+    if (platform.indexOf("esp32") === 0) return "esp32";
+    if (platform.indexOf("esp8285") === 0 || platform.indexOf("esp8266") === 0) return "esp8285";
+    return platform || null;
+  }
+
+  function mcuFamilyLabel(value) {
+    return { esp32: "ESP32", esp8285: "ESP8285" }[value] || String(value).toUpperCase();
+  }
+
   function categoryLabel(value) {
     return {
       receiver: "Receiver",
@@ -129,6 +149,8 @@
     var power = powerDisplay(product);
     if (power) specs.push(["Power", power]);
     if (product.diversity_type) specs.push(["Diversity", diversityLabel(product.diversity_type)]);
+    var mcu = mcuLabel(product);
+    if (mcu) specs.push(["MCU", mcu]);
 
     if (product.category === "tx") {
       specs.unshift(["Band", bandLabel(product.radio_band)]);
@@ -169,7 +191,7 @@
 
   function renderStatsPopover(products) {
     var deviceTypes = countBy(products, function (p) { return p.device_class; });
-    var mcus = countBy(products, function (p) { return p.platform ? p.platform.toUpperCase() : null; });
+    var mcus = countBy(products, mcuLabel);
     var chips = countBy(products, radioChipLabel);
     var diversity = countBy(products, function (p) { return p.diversity_type ? diversityLabel(p.diversity_type) : null; });
 
@@ -215,6 +237,7 @@
     }
     if (filters.classification && product.device_class !== filters.classification) return false;
     if (filters.band && product.radio_band !== filters.band) return false;
+    if (filters.mcu && mcuFamily(product) !== filters.mcu) return false;
     if (filters.vendor && product.vendor !== filters.vendor) return false;
     if (filters.screen) {
       if (product.device_class !== "transmitter_module") return false;
@@ -339,6 +362,7 @@
       search: "Search",
       classification: "Product Type",
       band: "Frequency",
+      mcu: "MCU",
       vendor: "Manufacturer",
       screen: "Display",
       diversity: "Antenna",
@@ -350,6 +374,7 @@
       switch (key) {
         case "classification": return categoryLabel(filters[key]);
         case "band": return bandLabel(filters[key]);
+        case "mcu": return mcuFamilyLabel(filters[key]);
         case "vendor":
           var match = catalog.find(function (p) { return p.vendor === filters[key]; });
           return match ? match.vendor_name : titleCase(filters[key]);
@@ -437,6 +462,7 @@
     filters.vendor = els.vendor.value;
     filters.classification = els.classification.value;
     filters.band = els.band.value;
+    filters.mcu = els.mcu.value;
     filters.minPower = els.minPower.value;
     filters.diversity = els.diversity.value;
     filters.minPwm = els.minPwm.value;
@@ -448,6 +474,7 @@
     els.vendor.value = filters.vendor;
     els.classification.value = filters.classification;
     els.band.value = filters.band;
+    els.mcu.value = filters.mcu;
     els.minPower.value = filters.minPower;
     els.diversity.value = filters.diversity;
     els.minPwm.value = filters.minPwm;
@@ -488,6 +515,7 @@
     els.vendor.addEventListener("change", onFilterChange);
     els.classification.addEventListener("change", onFilterChange);
     els.band.addEventListener("change", onFilterChange);
+    els.mcu.addEventListener("change", onFilterChange);
     els.minPower.addEventListener("change", onFilterChange);
     els.diversity.addEventListener("change", onFilterChange);
     els.minPwm.addEventListener("change", onFilterChange);
