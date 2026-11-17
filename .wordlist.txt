@@ -467,6 +467,7 @@ spammy
 stl
 stlink
 table'd
+subtrim
 th
 toc
 toolchain
