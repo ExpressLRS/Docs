@@ -22,13 +22,15 @@ There are two actions, both in the ExpressLRS Lua script under `Receiver Firmwar
 
 You can skip `Sync from WiFi` and copy the firmware onto the card yourself. See [Getting the images](#getting-the-images).
 
+`Bind`, at the top of the Lua script, uses this too: a new receiver gets bound, and offered the update if it needs one. See [Binding a new receiver](#binding-a-new-receiver).
+
 ## What you need
 
 * **The current `elrs.lua` script** from the ExpressLRS repository, in `/SCRIPTS/TOOLS/` on the radio. Delete old copies such as `ELRS.lua`, `elrsV2.lua` and `elrsV3.lua`. See [the Lua script guide](../quick-start/transmitters/lua-howto.md#installing-the-lua-script).
 * **An EdgeTX radio** running the build linked above. The feature was developed on a RadioMaster TX16S MK1 (480x272 color screen). Radios with other screens show a simpler popup, which has not been tested.
 * **A TX module** with an ESP32-family chip (ESP32, ESP32-S3 or ESP32-C3) running the ExpressLRS build linked above. It was developed on an ESP32-S3 module. ESP8285 and STM32 TX modules don't have this feature.
 * **A receiver** with an ESP32-family chip or an ESP8285, running the same ExpressLRS build. STM32 receivers are not supported.
-* **The same binding phrase** on the TX module and the receiver. Receivers bound with the Bind button are not covered.
+* **The receiver bound to the TX module**, with the same binding phrase or with `Bind`.
 * **The receiver** either connected to your TX module (the `C` on the Lua script's title bar), or close enough that you can power it on during the update. Either way, the aircraft must be **disarmed**.
 * **An SD card** in the radio. While the radio is in USB storage mode, the card is not available to the TX module.
 * **Your home WiFi set on the TX module**, for `Sync from WiFi`. Use the same `WiFi SSID` and `WiFi password` you set in the ExpressLRS Configurator or on the module's web page. The network must be 2.4 GHz.
@@ -87,7 +89,7 @@ The file can have any name, as long as it ends in `.bin` or `.bin.gz` and the fo
 
 When you run `Update Receiver`, the TX module finds out which kind of receiver it is talking to and uses the image for that image key. It uses the image that the last `Sync from WiFi` saved for that key. If you copied images by hand and never synced, it uses **the last file in alphabetical order** in `/ELRS/FIRMWARE/<key>/`. That sort is by text, not by version number, so `4.9.0` sorts after `4.10.0`. Keep one image per folder.
 
-Receivers built for the EU (LBT) on 2.4 GHz have their own images, with `-lbt` added to the key, for example `esp32-2400-lbt`. An EU TX module syncs the `-lbt` images, and any other TX module syncs the rest. A receiver from the other region can still connect to your TX module, but `Update Receiver` won't change its region and tells you so. To update one, copy its `-lbt` (or non-LBT) image onto the card yourself.
+Receivers set up for the EU (LBT) on 2.4 GHz use the same images as everyone else. LBT is part of the receiver's own settings, and an update keeps it.
 
 | Receiver | Image key |
 | --- | --- |
@@ -179,10 +181,23 @@ When a receiver with this feature powers on, it listens for its TX module for a 
 
 3. Power the receiver on within 30 seconds, close to the radio. The update starts on its own and runs as usual.
 
-If nothing answers in time, the radio shows `Receiver not found at power-on`. Check that the receiver has the same binding phrase as the TX module and runs firmware with this feature, then try again.
+A receiver in bind mode answers too, bound or not. The radio shows `Found <name>` for 3 seconds, so you can press ++exit++ if it's the wrong one, then updates it and binds it to your TX module.
+
+If nothing answers in time, the radio shows `Receiver not found at power-on`. Check that the receiver is bound to this TX module, or in bind mode, and runs firmware with this feature, then try again.
 
 !!! tip "Changing major versions"
     Receivers on an older major version can't connect to a TX module on a newer one. That's fine: update the TX module, run `Sync from WiFi`, then update each receiver with the power-on method above whenever you get to it.
+
+### Binding a new receiver
+
+`Bind` in the Lua script first looks for a receiver in bind mode that has this feature, for about a second. If one answers, it's bound straight away. Receivers without this feature bind the usual way.
+
+If the receiver runs different firmware than your TX module, the script asks `Update <name> to <version>?`.
+
+* Press ++enter++ to update it now. The update runs as usual.
+* Press ++exit++ to keep the firmware it has. It stays bound. A receiver on another major version can't connect until it's updated, and the script says so.
+
+That makes setting up a new receiver one step: power it on in bind mode, then press `Bind`. If several receivers are in bind mode nearby, the first one to answer is bound, and its name is in the question.
 
 ## Run a sync
 
@@ -230,8 +245,7 @@ The message appears either in a box on the radio, or in the Lua script's `Receiv
 | Message | Meaning and fix |
 | --- | --- |
 | `Receiver not found` | The receiver got the update command but didn't answer during the update. It is usually too far from the TX module. Move it closer and try again. |
-| `Receiver not found at power-on` | Nothing answered after `Power on the receiver now`. Check that the receiver was powered on in time, has the same binding phrase as the TX module, and runs firmware with this feature. |
-| `LBT receiver - this TX only syncs FCC` (or the other way around) | The receiver was built for another region than your TX module, so a sync never brings its image. Copy the image for its region onto the card by hand. See [Which image goes to which receiver](#which-image-goes-to-which-receiver). |
+| `Receiver not found at power-on` | Nothing answered after `Power on the receiver now`. Check that the receiver was powered on in time, is bound to this TX module or in bind mode, and runs firmware with this feature. |
 | `No <key> image on SD - sync first` | There is no `.bin` or `.bin.gz` file in `/ELRS/FIRMWARE/<key>/`. ESP8285 receivers only accept `.bin.gz`. Get the image with `Sync from WiFi`, or copy it onto the card. |
 | `Can't read image from SD` | The file can't be read, or it isn't a valid gzip file. Copy it to the card again. |
 | `Image too big for RX` | The image doesn't fit the receiver. Check that it's the right image for that receiver. ESP8285 receivers accept a gzip file of up to about 430 KB. |
@@ -257,7 +271,7 @@ The message appears either in a box on the radio, or in the Lua script's `Receiv
 ## Limits
 
 * The receiver must already run firmware with this feature. The first install is done another way. After that, it can be updated even when it can't connect, by powering it on during the update.
-* A receiver without a binding phrase, or with a different one than the TX module, can't be reached.
+* A receiver bound to a different TX module can't be reached, unless you put it in bind mode first.
 * The aircraft must be disarmed. A running update means no link and no control.
 * Only ESP32-family and ESP8285 receivers, and only ESP32-family TX modules.
 * `Sync from WiFi` uses the TX module's home network, which must be 2.4 GHz. It downloads over an unencrypted `http://` connection.
