@@ -218,6 +218,23 @@ description: The ExpressLRS Web UI is an essential part of the ExpressLRS ecosys
                     3. Take note of the IP Address given by your router.
                     4. Use this IP address in your Browser as the URL.
 
+### Device Hostnames and Access Points
+
+Each ExpressLRS device that has a Web UI uses its own hostname and its own Access Point name. Use this table to find the correct name for the device you want to configure.
+
+| Device | Hostname | Access Point |
+|---|---|---|
+| Transmitter module | `elrs_tx.local` | `ExpressLRS TX` |
+| Receiver | `elrs_rx.local` | `ExpressLRS RX` |
+| TX Backpack | `elrs_txbp.local` | Changes with the selected service |
+| VRx Backpack | `elrs_vrx.local` | `ExpressLRS VRx Backpack` |
+| Antenna Tracker Backpack | `elrs_aat.local` | `ExpressLRS AAT Backpack` |
+| Timer Backpack | `elrs_timer.local` | `ExpressLRS Timer Backpack` |
+
+The Access Point password is `expresslrs` on all of these devices. When you are connected to the Access Point, the Web UI is at `http://10.0.0.1/`.
+
+A `.local` hostname only works when the device is connected to your Home WiFi network, and only if MDNS works on your computer and on your network. If the name does not resolve, use the `arp` command or your router DHCP list as described above.
+
 ## The ExpressLRS Web UI Explained
 
 The ExpressLRS Web UI is an essential part of the ExpressLRS ecosystem. In earlier versions of the project, its main use is for updating the ExpressLRS firmware and logging or debugging (on select hardware).
