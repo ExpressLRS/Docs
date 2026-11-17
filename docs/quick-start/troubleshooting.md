@@ -67,6 +67,10 @@ description: Stuck on your ExpressLRS setup? Let us help you with that! Here's s
 ### <span class="custom-heading" data-id="7">I am getting Telemetry Lost/Recovered and is getting annoying</span>
 
 ??? Note "I am getting Telemetry Lost/Recovered and is getting annoying"
+    ExpressLRS 4.1 and newer already delay this callout. When telemetry stops, the module keeps reporting the last known Link Quality to the handset for a short time before it reports the loss. The delay is scaled by the Link Quality measured just before the loss: about 3 seconds at 100% LQ, less as the LQ drops, and no delay at all at 50% LQ or below. A link that was healthy therefore has to stay down for about 3 seconds before you hear anything, so a short dropout no longer produces a callout.
+
+    This means that on 4.1 and newer, a callout you do hear is a real loss of telemetry for longer than that delay. Use the causes below to find it.
+
     There's a handful of reasons why this is occurring, and if you have newer handset/radio, it shouldn't happen at all unless you're flying very far away using a receiver without an amplifier for its Telemetry signal (e.g. the EP receivers).
 
     - You're on an X9D(+) or a QX7 with subpar inverter chips. Check [this page](../hardware/x9d-troubleshooting.md) on how to remedy it.
