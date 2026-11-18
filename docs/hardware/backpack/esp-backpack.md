@@ -114,6 +114,35 @@ For the VRX Backpack, you will need to first update the firmware on the ESP devi
 
 ## Backpack Usage
 
+### Accessing Backpack Web Interfaces
+
+When a Backpack is connected to your home WiFi network, you can
+access its web interface using a local hostname instead of its IP
+address. The hostname depends on the Backpack type:
+
+| Backpack type | Local address |
+| --- | --- |
+| Transmitter (TX) Backpack | `http://elrs_txbp.local/` |
+| Antenna Tracker (AAT) Backpack | `http://elrs_aat.local/` |
+| Video Receiver (VRX) Backpack | `http://elrs_vrx.local/` |
+| Timer Backpack | `http://elrs_timer.local/` |
+
+These addresses use multicast DNS (mDNS). Your computer or mobile
+device must be on the same local network as the Backpack, and the
+network must support mDNS resolution.
+
+If the hostname does not resolve, check that the Backpack is
+connected to your home WiFi network. You can also find its assigned
+IP address in your router's connected-device list.
+
+When connected directly to a Backpack's own WiFi access point
+instead of home WiFi, use `http://10.0.0.1/` to access its web
+interface.
+
+For detailed setup instructions, see the
+[TX Backpack Setup](backpack-tx-setup.md) and
+[VRX Backpack Setup](backpack-vrx-setup.md) guides.
+
 ### LED Status codes
 
 * Solid - The backpack is powered up and ready to receive packets.
